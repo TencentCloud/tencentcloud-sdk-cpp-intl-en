@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Targets Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Real server list.
+                     * @return Targets Real server list.
                      * 
                      */
                     std::vector<ClassicalTarget> GetTargets() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Real server list.
                      */
                     std::vector<ClassicalTarget> m_targets;
                     bool m_targetsHasBeenSet;

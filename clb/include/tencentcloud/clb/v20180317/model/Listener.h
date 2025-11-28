@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Listener protocol
-                     * @return Protocol Listener protocol
+                     * 获取Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+                     * @return Protocol Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Listener protocol
-                     * @param _protocol Listener protocol
+                     * 设置Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+                     * @param _protocol Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Listener port
-                     * @return Port Listener port
+                     * 获取Listener port. value range: 1-65535.
+                     * @return Port Listener port. value range: 1-65535.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Listener port
-                     * @param _port Listener port
+                     * 设置Listener port. value range: 1-65535.
+                     * @param _port Listener port. value range: 1-65535.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -185,18 +185,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence time
+                     * 获取Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SessionExpireTime Session persistence time
+                     * @return SessionExpireTime Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
-                     * 设置Session persistence time
+                     * 设置Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sessionExpireTime Session persistence time
+                     * @param _sessionExpireTime Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -210,19 +210,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+                     * @return SniSwitch Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
                      * 
                      */
                     int64_t GetSniSwitch() const;
 
                     /**
-                     * 设置Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _sniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+                     * @param _sniSwitch Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
                      * 
                      */
                     void SetSniSwitch(const int64_t& _sniSwitch);
@@ -261,18 +257,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _listenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -286,18 +278,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -310,19 +298,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndPort End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End port of the port range. value range: 2-65535.
+                     * @return EndPort End port of the port range. value range: 2-65535.
                      * 
                      */
                     int64_t GetEndPort() const;
 
                     /**
-                     * 设置End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endPort End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End port of the port range. value range: 2-65535.
+                     * @param _endPort End port of the port range. value range: 2-65535.
                      * 
                      */
                     void SetEndPort(const int64_t& _endPort);
@@ -335,18 +319,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndPortHasBeenSet() const;
 
                     /**
-                     * 获取Real server type
+                     * 获取Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetType Real server type
+                     * @return TargetType Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetType() const;
 
                     /**
-                     * 设置Real server type
+                     * 设置Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetType Real server type
+                     * @param _targetType Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -385,19 +369,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetGroupHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+                     * @return SessionType Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
                      * 
                      */
                     std::string GetSessionType() const;
 
                     /**
-                     * 设置Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+                     * @param _sessionType Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
                      * 
                      */
                     void SetSessionType(const std::string& _sessionType);
@@ -435,19 +415,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KeepaliveEnableHasBeenSet() const;
 
                     /**
-                     * 获取Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Toa Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Supports Nat64 CLB TCP listeners only
+                     * @return Toa Supports Nat64 CLB TCP listeners only
                      * 
                      */
                     bool GetToa() const;
 
                     /**
-                     * 设置Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _toa Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Supports Nat64 CLB TCP listeners only
+                     * @param _toa Supports Nat64 CLB TCP listeners only
                      * 
                      */
                     void SetToa(const bool& _toa);
@@ -460,19 +436,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ToaHasBeenSet() const;
 
                     /**
-                     * 获取Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @return DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      * 
                      */
                     bool GetDeregisterTargetRst() const;
 
                     /**
-                     * 设置Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _deregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @param _deregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      * 
                      */
                     void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
@@ -485,19 +457,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DeregisterTargetRstHasBeenSet() const;
 
                     /**
-                     * 获取Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return AttrFlags Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Describes the attributes of the listener.
+                     * @return AttrFlags Describes the attributes of the listener.
                      * 
                      */
                     std::vector<std::string> GetAttrFlags() const;
 
                     /**
-                     * 设置Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _attrFlags Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Describes the attributes of the listener.
+                     * @param _attrFlags Describes the attributes of the listener.
                      * 
                      */
                     void SetAttrFlags(const std::vector<std::string>& _attrFlags);
@@ -535,19 +503,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TargetGroupListHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+                     * @return MaxConn Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
                      * 
                      */
                     int64_t GetMaxConn() const;
 
                     /**
-                     * 设置Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+                     * @param _maxConn Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
                      * 
                      */
                     void SetMaxConn(const int64_t& _maxConn);
@@ -560,19 +524,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool MaxConnHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+                     * @return MaxCps Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
                      * 
                      */
                     int64_t GetMaxCps() const;
 
                     /**
-                     * 设置Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+                     * @param _maxCps Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
                      * 
                      */
                     void SetMaxCps(const int64_t& _maxCps);
@@ -610,15 +570,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IdleConnectTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+                     * @return RescheduleInterval Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
                      * 
                      */
                     uint64_t GetRescheduleInterval() const;
 
                     /**
-                     * 设置Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+                     * @param _rescheduleInterval Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
                      * 
                      */
                     void SetRescheduleInterval(const uint64_t& _rescheduleInterval);
@@ -630,6 +590,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool RescheduleIntervalHasBeenSet() const;
 
+                    /**
+                     * 获取Data compression mode.
+                     * @return DataCompressMode Data compression mode.
+                     * 
+                     */
+                    std::string GetDataCompressMode() const;
+
+                    /**
+                     * 设置Data compression mode.
+                     * @param _dataCompressMode Data compression mode.
+                     * 
+                     */
+                    void SetDataCompressMode(const std::string& _dataCompressMode);
+
+                    /**
+                     * 判断参数 DataCompressMode 是否已赋值
+                     * @return DataCompressMode 是否已赋值
+                     * 
+                     */
+                    bool DataCompressModeHasBeenSet() const;
+
+                    /**
+                     * 获取Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+                     * @return RescheduleStartTime Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+                     * 
+                     */
+                    int64_t GetRescheduleStartTime() const;
+
+                    /**
+                     * 设置Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+                     * @param _rescheduleStartTime Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+                     * 
+                     */
+                    void SetRescheduleStartTime(const int64_t& _rescheduleStartTime);
+
+                    /**
+                     * 判断参数 RescheduleStartTime 是否已赋值
+                     * @return RescheduleStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleStartTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -639,13 +641,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Listener protocol
+                     * Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Listener port
+                     * Listener port. value range: 1-65535.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
@@ -671,15 +673,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Session persistence time
+                     * Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;
@@ -693,27 +694,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
 
                     /**
                      * Listener creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * End port of a port range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * End port of the port range. value range: 2-65535.
                      */
                     int64_t m_endPort;
                     bool m_endPortHasBeenSet;
 
                     /**
-                     * Real server type
+                     * Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetType;
@@ -727,8 +725,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_targetGroupHasBeenSet;
 
                     /**
-                     * Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
                      */
                     std::string m_sessionType;
                     bool m_sessionTypeHasBeenSet;
@@ -741,22 +738,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_keepaliveEnableHasBeenSet;
 
                     /**
-                     * Only the NAT64 CLB TCP listeners are supported.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Supports Nat64 CLB TCP listeners only
                      */
                     bool m_toa;
                     bool m_toaHasBeenSet;
 
                     /**
-                     * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      */
                     bool m_deregisterTargetRst;
                     bool m_deregisterTargetRstHasBeenSet;
 
                     /**
-                     * Attribute of listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Describes the attributes of the listener.
                      */
                     std::vector<std::string> m_attrFlags;
                     bool m_attrFlagsHasBeenSet;
@@ -769,15 +763,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_targetGroupListHasBeenSet;
 
                     /**
-                     * Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
                      */
                     int64_t m_maxConn;
                     bool m_maxConnHasBeenSet;
 
                     /**
-                     * Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;
@@ -790,10 +782,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_idleConnectTimeoutHasBeenSet;
 
                     /**
-                     * Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
                      */
                     uint64_t m_rescheduleInterval;
                     bool m_rescheduleIntervalHasBeenSet;
+
+                    /**
+                     * Data compression mode.
+                     */
+                    std::string m_dataCompressMode;
+                    bool m_dataCompressModeHasBeenSet;
+
+                    /**
+                     * Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+                     */
+                    int64_t m_rescheduleStartTime;
+                    bool m_rescheduleStartTimeHasBeenSet;
 
                 };
             }

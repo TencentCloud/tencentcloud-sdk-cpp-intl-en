@@ -59,9 +59,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Message ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MsgId Message ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMsgId() const;
@@ -83,7 +83,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Message ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgId;
                     bool m_msgIdHasBeenSet;

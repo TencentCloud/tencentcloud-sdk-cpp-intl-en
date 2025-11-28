@@ -88,6 +88,27 @@ namespace TencentCloud
                      */
                     bool VpcIdHasBeenSet() const;
 
+                    /**
+                     * 获取Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+                     * @return NumericalVpcId Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+                     * 
+                     */
+                    int64_t GetNumericalVpcId() const;
+
+                    /**
+                     * 设置Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+                     * @param _numericalVpcId Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+                     * 
+                     */
+                    void SetNumericalVpcId(const int64_t& _numericalVpcId);
+
+                    /**
+                     * 判断参数 NumericalVpcId 是否已赋值
+                     * @return NumericalVpcId 是否已赋值
+                     * 
+                     */
+                    bool NumericalVpcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +122,12 @@ namespace TencentCloud
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
+
+                    /**
+                     * Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+                     */
+                    int64_t m_numericalVpcId;
+                    bool m_numericalVpcIdHasBeenSet;
 
                 };
             }

@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceVersion Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance version.
+                     * @return InstanceVersion Instance version.
                      * 
                      */
                     std::string GetInstanceVersion() const;
 
                     /**
-                     * 设置Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceVersion Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance version.
+                     * @param _instanceVersion Instance version.
                      * 
                      */
                     void SetInstanceVersion(const std::string& _instanceVersion);
@@ -304,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -349,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpecNameHasBeenSet() const;
 
                     /**
-                     * 获取The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return MaxRetention The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum configurable message retention time, in hours
+                     * @return MaxRetention Maximum configurable message retention time, in hours
                      * 
                      */
                     int64_t GetMaxRetention() const;
 
                     /**
-                     * 设置The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _maxRetention The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum configurable message retention time, in hours
+                     * @param _maxRetention Maximum configurable message retention time, in hours
                      * 
                      */
                     void SetMaxRetention(const int64_t& _maxRetention);
@@ -374,19 +362,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MaxRetentionHasBeenSet() const;
 
                     /**
-                     * 获取The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return MinRetention The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum configurable message retention time, in hours
+                     * @return MinRetention Minimum configurable message retention time, in hours
                      * 
                      */
                     int64_t GetMinRetention() const;
 
                     /**
-                     * 设置The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _minRetention The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum configurable message retention time, in hours
+                     * @param _minRetention Minimum configurable message retention time, in hours
                      * 
                      */
                     void SetMinRetention(const int64_t& _minRetention);
@@ -399,19 +383,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MinRetentionHasBeenSet() const;
 
                     /**
-                     * 获取Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return Retention Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance message retention time, in hours
+                     * @return Retention Instance message retention time, in hours
                      * 
                      */
                     int64_t GetRetention() const;
 
                     /**
-                     * 设置Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _retention Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance message retention time, in hours
+                     * @param _retention Instance message retention time, in hours
                      * 
                      */
                     void SetRetention(const int64_t& _retention);
@@ -422,6 +402,48 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool RetentionHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable ACL authentication.
+                     * @return AclEnabled Whether to enable ACL authentication.
+                     * 
+                     */
+                    bool GetAclEnabled() const;
+
+                    /**
+                     * 设置Whether to enable ACL authentication.
+                     * @param _aclEnabled Whether to enable ACL authentication.
+                     * 
+                     */
+                    void SetAclEnabled(const bool& _aclEnabled);
+
+                    /**
+                     * 判断参数 AclEnabled 是否已赋值
+                     * @return AclEnabled 是否已赋值
+                     * 
+                     */
+                    bool AclEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Destruction time.
+                     * @return DestroyTime Destruction time.
+                     * 
+                     */
+                    uint64_t GetDestroyTime() const;
+
+                    /**
+                     * 设置Destruction time.
+                     * @param _destroyTime Destruction time.
+                     * 
+                     */
+                    void SetDestroyTime(const uint64_t& _destroyTime);
+
+                    /**
+                     * 判断参数 DestroyTime 是否已赋值
+                     * @return DestroyTime 是否已赋值
+                     * 
+                     */
+                    bool DestroyTimeHasBeenSet() const;
 
                 private:
 
@@ -438,8 +460,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance version.
                      */
                     std::string m_instanceVersion;
                     bool m_instanceVersionHasBeenSet;
@@ -500,7 +521,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
@@ -512,25 +532,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_specNameHasBeenSet;
 
                     /**
-                     * The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Maximum configurable message retention time, in hours
                      */
                     int64_t m_maxRetention;
                     bool m_maxRetentionHasBeenSet;
 
                     /**
-                     * The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Minimum configurable message retention time, in hours
                      */
                     int64_t m_minRetention;
                     bool m_minRetentionHasBeenSet;
 
                     /**
-                     * Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Instance message retention time, in hours
                      */
                     int64_t m_retention;
                     bool m_retentionHasBeenSet;
+
+                    /**
+                     * Whether to enable ACL authentication.
+                     */
+                    bool m_aclEnabled;
+                    bool m_aclEnabledHasBeenSet;
+
+                    /**
+                     * Destruction time.
+                     */
+                    uint64_t m_destroyTime;
+                    bool m_destroyTimeHasBeenSet;
 
                 };
             }

@@ -44,15 +44,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Environment/namespace name (required).
-                     * @return EnvironmentId Environment/namespace name (required).
+                     * 获取Pulsar cluster ID
+                     * @return ClusterId Pulsar cluster ID
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Environment (namespace) name.
+                     * @return EnvironmentId Environment (namespace) name.
                      * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
-                     * 设置Environment/namespace name (required).
-                     * @param _environmentId Environment/namespace name (required).
+                     * 设置Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
                      * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
@@ -105,27 +126,6 @@ namespace TencentCloud
                      * 
                      */
                     bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取Pulsar cluster ID (required).
-                     * @return ClusterId Pulsar cluster ID (required).
-                     * 
-                     */
-                    std::string GetClusterId() const;
-
-                    /**
-                     * 设置Pulsar cluster ID (required).
-                     * @param _clusterId Pulsar cluster ID (required).
-                     * 
-                     */
-                    void SetClusterId(const std::string& _clusterId);
-
-                    /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
-                     * 
-                     */
-                    bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Role name.
@@ -184,7 +184,13 @@ Required: No
                 private:
 
                     /**
-                     * Environment/namespace name (required).
+                     * Pulsar cluster ID
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Environment (namespace) name.
                      */
                     std::string m_environmentId;
                     bool m_environmentIdHasBeenSet;
@@ -200,12 +206,6 @@ Required: No
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
-
-                    /**
-                     * Pulsar cluster ID (required).
-                     */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
 
                     /**
                      * Role name.

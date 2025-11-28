@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance region
-                     * @return LoadBalancerRegion CLB instance region
+                     * 获取The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
+                     * @return LoadBalancerRegion The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLoadBalancerRegion() const;
 
                     /**
-                     * 设置CLB instance region
-                     * @param _loadBalancerRegion CLB instance region
+                     * 设置The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
+                     * @param _loadBalancerRegion The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
                      * 
                      */
                     void SetLoadBalancerRegion(const std::string& _loadBalancerRegion);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * CLB instance region
+                     * The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
                      */
                     std::string m_loadBalancerRegion;
                     bool m_loadBalancerRegionHasBeenSet;

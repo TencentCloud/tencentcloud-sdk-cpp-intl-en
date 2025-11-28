@@ -86,10 +86,8 @@ namespace TencentCloud
                     bool PartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Remarks (up to 128 characters).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks (up to 128 characters).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks, within 128 characters.
+                     * @return Remark Remarks, within 128 characters.
                      * 
                      */
                     std::string GetRemark() const;
@@ -102,18 +100,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取0: General message;
-1: Globally sequential message;
-2: Partitionally sequential message;
-3: Retry letter topic;
-4: Dead letter topic.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TopicType 0: General message;
-1: Globally sequential message;
-2: Partitionally sequential message;
-3: Retry letter topic;
-4: Dead letter topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: standard message.
+Global sequential message.
+2: local ordered messages.
+Specifies the retry queue.
+4: dead letter queue.
+                     * @return TopicType 0: standard message.
+Global sequential message.
+2: local ordered messages.
+Specifies the retry queue.
+4: dead letter queue.
                      * 
                      */
                     uint64_t GetTopicType() const;
@@ -146,19 +142,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_partitionsHasBeenSet;
 
                     /**
-                     * Remarks (up to 128 characters).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Remarks, within 128 characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 0: General message;
-1: Globally sequential message;
-2: Partitionally sequential message;
-3: Retry letter topic;
-4: Dead letter topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: standard message.
+Global sequential message.
+2: local ordered messages.
+Specifies the retry queue.
+4: dead letter queue.
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;

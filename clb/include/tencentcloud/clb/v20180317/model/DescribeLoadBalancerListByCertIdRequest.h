@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server or client certificate ID
-                     * @return CertIds Server or client certificate ID
+                     * 获取Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
+                     * @return CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
                      * 
                      */
                     std::vector<std::string> GetCertIds() const;
 
                     /**
-                     * 设置Server or client certificate ID
-                     * @param _certIds Server or client certificate ID
+                     * 设置Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
+                     * @param _certIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
                      * 
                      */
                     void SetCertIds(const std::vector<std::string>& _certIds);
@@ -66,7 +70,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Server or client certificate ID
+                     * Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
                      */
                     std::vector<std::string> m_certIds;
                     bool m_certIdsHasBeenSet;

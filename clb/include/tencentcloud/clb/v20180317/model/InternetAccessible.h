@@ -101,15 +101,47 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BandwidthpkgSubType Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BandwidthpkgSubType Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBandwidthpkgSubType() const;
 
                     /**
-                     * 设置Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bandwidthpkgSubType Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bandwidthpkgSubType Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBandwidthpkgSubType(const std::string& _bandwidthpkgSubType);
@@ -139,7 +171,15 @@ namespace TencentCloud
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bandwidth package type, for example BGP (multi-line).
+Type as follows:.
+SINGLEISP: single isp.
+BGP: multi-line.
+HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bandwidthpkgSubType;
                     bool m_bandwidthpkgSubTypeHasBeenSet;

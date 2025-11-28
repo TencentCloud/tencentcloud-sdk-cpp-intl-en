@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranId Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Order ID.
+                     * @return TranId Order ID.
                      * 
                      */
                     std::string GetTranId() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Order ID.
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
                      * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
+#include <tencentcloud/tdmq/v20200217/model/CertificateInfo.h>
 
 
 namespace TencentCloud
@@ -398,6 +400,123 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxBandWidthHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CreateTime Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _createTime Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillingLabelVersion Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillingLabelVersion() const;
+
+                    /**
+                     * 设置Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billingLabelVersion Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillingLabelVersion(const std::string& _billingLabelVersion);
+
+                    /**
+                     * 判断参数 BillingLabelVersion 是否已赋值
+                     * @return BillingLabelVersion 是否已赋值
+                     * 
+                     */
+                    bool BillingLabelVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Custom tenant.
+                     * @return Tenant Custom tenant.
+                     * 
+                     */
+                    std::string GetTenant() const;
+
+                    /**
+                     * 设置Custom tenant.
+                     * @param _tenant Custom tenant.
+                     * 
+                     */
+                    void SetTenant(const std::string& _tenant);
+
+                    /**
+                     * 判断参数 Tenant 是否已赋值
+                     * @return Tenant 是否已赋值
+                     * 
+                     */
+                    bool TenantHasBeenSet() const;
+
+                    /**
+                     * 获取Certificate list of the cluster.
+                     * @return CertificateList Certificate list of the cluster.
+                     * 
+                     */
+                    std::vector<CertificateInfo> GetCertificateList() const;
+
+                    /**
+                     * 设置Certificate list of the cluster.
+                     * @param _certificateList Certificate list of the cluster.
+                     * 
+                     */
+                    void SetCertificateList(const std::vector<CertificateInfo>& _certificateList);
+
+                    /**
+                     * 判断参数 CertificateList 是否已赋值
+                     * @return CertificateList 是否已赋值
+                     * 
+                     */
+                    bool CertificateListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -499,6 +618,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_maxBandWidth;
                     bool m_maxBandWidthHasBeenSet;
+
+                    /**
+                     * Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billingLabelVersion;
+                    bool m_billingLabelVersionHasBeenSet;
+
+                    /**
+                     * Custom tenant.
+                     */
+                    std::string m_tenant;
+                    bool m_tenantHasBeenSet;
+
+                    /**
+                     * Certificate list of the cluster.
+                     */
+                    std::vector<CertificateInfo> m_certificateList;
+                    bool m_certificateListHasBeenSet;
 
                 };
             }

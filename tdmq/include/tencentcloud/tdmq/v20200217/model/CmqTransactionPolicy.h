@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FirstQueryInterval First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取First recheck time.
+                     * @return FirstQueryInterval First recheck time.
                      * 
                      */
                     uint64_t GetFirstQueryInterval() const;
 
                     /**
-                     * 设置First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _firstQueryInterval First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置First recheck time.
+                     * @param _firstQueryInterval First recheck time.
                      * 
                      */
                     void SetFirstQueryInterval(const uint64_t& _firstQueryInterval);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FirstQueryIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxQueryCount Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum query times.
+                     * @return MaxQueryCount Maximum query times.
                      * 
                      */
                     uint64_t GetMaxQueryCount() const;
 
                     /**
-                     * 设置Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxQueryCount Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum query times.
+                     * @param _maxQueryCount Maximum query times.
                      * 
                      */
                     void SetMaxQueryCount(const uint64_t& _maxQueryCount);
@@ -99,15 +91,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * First recheck time.
                      */
                     uint64_t m_firstQueryInterval;
                     bool m_firstQueryIntervalHasBeenSet;
 
                     /**
-                     * Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum query times.
                      */
                     uint64_t m_maxQueryCount;
                     bool m_maxQueryCountHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+                     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param _loadBalancerId CLB instance ID
+                     * 设置ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+                     * @param _loadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+                     * @return ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param _listenerId CLB listener ID
+                     * 设置ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+                     * @param _listenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
-                     * @return Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+                     * 获取Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+                     * @return Domain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
-                     * @param _domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+                     * 设置Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+                     * @param _domain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -150,15 +150,19 @@ namespace TencentCloud
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
-                     * @return Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * 获取Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+                     * @return Http2 Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
                      * 
                      */
                     bool GetHttp2() const;
 
                     /**
-                     * 设置Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
-                     * @param _http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * 设置Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+                     * @param _http2 Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
                      * 
                      */
                     void SetHttp2(const bool& _http2);
@@ -171,15 +175,19 @@ namespace TencentCloud
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-                     * @return DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * 获取Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+                     * @return DefaultServer Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
                      * 
                      */
                     bool GetDefaultServer() const;
 
                     /**
-                     * 设置Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-                     * @param _defaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * 设置Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+                     * @param _defaultServer Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
                      * 
                      */
                     void SetDefaultServer(const bool& _defaultServer);
@@ -192,15 +200,19 @@ namespace TencentCloud
                     bool DefaultServerHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
-                     * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     * 获取Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
+                     * @return Quic Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
                      * 
                      */
                     bool GetQuic() const;
 
                     /**
-                     * 设置Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
-                     * @param _quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     * 设置Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
+                     * @param _quic Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
                      * 
                      */
                     void SetQuic(const bool& _quic);
@@ -278,19 +290,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID
+                     * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB listener ID
+                     * ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+                     * Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -308,19 +320,22 @@ namespace TencentCloud
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
                      */
                     bool m_http2;
                     bool m_http2HasBeenSet;
 
                     /**
-                     * Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
                      */
                     bool m_defaultServer;
                     bool m_defaultServerHasBeenSet;
 
                     /**
-                     * Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     * Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
                      */
                     bool m_quic;
                     bool m_quicHasBeenSet;

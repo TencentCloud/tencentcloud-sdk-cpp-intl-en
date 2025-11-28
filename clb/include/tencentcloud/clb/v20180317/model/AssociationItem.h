@@ -247,6 +247,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ListenerNameHasBeenSet() const;
 
+                    /**
+                     * 获取Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+                     * @return Weight Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+                     * 
+                     */
+                    uint64_t GetWeight() const;
+
+                    /**
+                     * 设置Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+                     * @param _weight Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+                     * 
+                     */
+                    void SetWeight(const uint64_t& _weight);
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     * 
+                     */
+                    bool WeightHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced routing rule ID.
+                     * @return RuleId Advanced routing rule ID.
+                     * 
+                     */
+                    std::string GetRuleId() const;
+
+                    /**
+                     * 设置Advanced routing rule ID.
+                     * @param _ruleId Advanced routing rule ID.
+                     * 
+                     */
+                    void SetRuleId(const std::string& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     * 
+                     */
+                    bool RuleIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -305,6 +347,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
+
+                    /**
+                     * Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+                     */
+                    uint64_t m_weight;
+                    bool m_weightHasBeenSet;
+
+                    /**
+                     * Advanced routing rule ID.
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
 
                 };
             }

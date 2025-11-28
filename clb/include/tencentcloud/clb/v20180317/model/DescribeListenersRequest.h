@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID.
-                     * @return LoadBalancerId CLB instance ID.
+                     * 获取ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+                     * @return LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID.
-                     * @param _loadBalancerId CLB instance ID.
+                     * 设置ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+                     * @param _loadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of CLB listener IDs to query (100 IDs at most).
-                     * @return ListenerIds Array of CLB listener IDs to query (100 IDs at most).
+                     * 获取Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
+                     * @return ListenerIds Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
                      * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
-                     * 设置Array of CLB listener IDs to query (100 IDs at most).
-                     * @param _listenerIds Array of CLB listener IDs to query (100 IDs at most).
+                     * 设置Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
+                     * @param _listenerIds Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
                      * 
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Port of the listeners to be queried
-                     * @return Port Port of the listeners to be queried
+                     * 获取Port of listener to query. value range: 1-65535.
+                     * @return Port Port of listener to query. value range: 1-65535.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port of the listeners to be queried
-                     * @param _port Port of the listeners to be queried
+                     * 设置Port of listener to query. value range: 1-65535.
+                     * @param _port Port of listener to query. value range: 1-65535.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -129,13 +129,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID.
+                     * ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Array of CLB listener IDs to query (100 IDs at most).
+                     * Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
                      */
                     std::vector<std::string> m_listenerIds;
                     bool m_listenerIdsHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Port of the listeners to be queried
+                     * Port of listener to query. value range: 1-65535.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

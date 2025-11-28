@@ -41,6 +41,10 @@
 #include <tencentcloud/tdmq/v20200217/model/CreateEnvironmentResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateEnvironmentRoleRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateEnvironmentRoleResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateProClusterRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateProClusterResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQBindingRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQBindingResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQUserRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQUserResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQVipInstanceRequest.h>
@@ -49,12 +53,18 @@
 #include <tencentcloud/tdmq/v20200217/model/CreateRabbitMQVirtualHostResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQClusterResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQEnvironmentRoleRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQEnvironmentRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQRoleRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQVipInstanceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQVipInstanceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRoleRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateSubscriptionRequest.h>
@@ -73,6 +83,12 @@
 #include <tencentcloud/tdmq/v20200217/model/DeleteEnvironmentRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteEnvironmentsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteEnvironmentsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteProClusterRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteProClusterResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQBindingRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQBindingResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQPermissionRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQPermissionResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQUserRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQUserResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQVipInstanceRequest.h>
@@ -81,12 +97,18 @@
 #include <tencentcloud/tdmq/v20200217/model/DeleteRabbitMQVirtualHostResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQClusterResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQEnvironmentRolesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQEnvironmentRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQGroupRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQGroupResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQNamespaceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQNamespaceResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQRolesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQTopicRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQTopicResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQVipInstanceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQVipInstanceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRolesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteSubscriptionsRequest.h>
@@ -101,8 +123,6 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeClusterDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeClustersRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeClustersResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqDeadLetterSourceQueuesRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqDeadLetterSourceQueuesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueueDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueueDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueuesRequest.h>
@@ -119,6 +139,12 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMqMsgTraceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMqMsgTraceResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMsgRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMsgResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMsgTraceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeMsgTraceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublishersRequest.h>
@@ -127,28 +153,60 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstanceDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstancesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstancesResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQBindingsRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQBindingsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQExchangesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQExchangesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQNodeListRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQNodeListResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQPermissionRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQPermissionResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQQueueDetailRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQQueueDetailResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQQueuesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQQueuesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQUserRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQUserResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstanceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstanceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstancesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstancesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVirtualHostRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVirtualHostResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVirtualHostListRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVirtualHostListResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQEnvironmentRolesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQEnvironmentRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQMsgRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQMsgResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQMsgTraceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQMsgTraceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQNamespacesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQNamespacesResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQProducersRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQProducersResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQPublicAccessMonitorDataRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQPublicAccessMonitorDataResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQPublicAccessPointRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQPublicAccessPointResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQRolesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQRolesResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopUsagesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopUsagesResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicMsgsRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicMsgsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicStatsRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicStatsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsByGroupRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsByGroupResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstanceDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstanceDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstancesRequest.h>
@@ -157,8 +215,12 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeSubscriptionsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeSubscriptionsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeTopicMsgsRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeTopicMsgsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeTopicsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeTopicsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ExportRocketMQMessageDetailRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ExportRocketMQMessageDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyClusterResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyCmqQueueAttributeRequest.h>
@@ -171,18 +233,28 @@
 #include <tencentcloud/tdmq/v20200217/model/ModifyEnvironmentAttributesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyEnvironmentRoleRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyEnvironmentRoleResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyPublicNetworkSecurityPolicyRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyPublicNetworkSecurityPolicyResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQPermissionRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQPermissionResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQUserRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQUserResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQVirtualHostRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRabbitMQVirtualHostResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQClusterResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQEnvironmentRoleRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQEnvironmentRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQGroupRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQGroupResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQInstanceRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQInstanceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQInstanceSpecRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQInstanceSpecResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQNamespaceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQNamespaceResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQRoleRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQTopicRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRocketMQTopicResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyRoleRequest.h>
@@ -197,6 +269,8 @@
 #include <tencentcloud/tdmq/v20200217/model/ResetMsgSubOffsetByTimestampResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ResetRocketMQConsumerOffSetRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ResetRocketMQConsumerOffSetResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/RetryRocketMQDlqMessageRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/RetryRocketMQDlqMessageResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/RewindCmqQueueRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/RewindCmqQueueResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/SendBatchMessagesRequest.h>
@@ -209,6 +283,8 @@
 #include <tencentcloud/tdmq/v20200217/model/SendMsgResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/SendRocketMQMessageRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/SendRocketMQMessageResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/SetRocketMQPublicAccessPointRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/SetRocketMQPublicAccessPointResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/UnbindCmqDeadLetterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/UnbindCmqDeadLetterResponse.h>
 
@@ -252,6 +328,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateEnvironmentRoleResponse> CreateEnvironmentRoleOutcome;
                 typedef std::future<CreateEnvironmentRoleOutcome> CreateEnvironmentRoleOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateEnvironmentRoleRequest&, CreateEnvironmentRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEnvironmentRoleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProClusterResponse> CreateProClusterOutcome;
+                typedef std::future<CreateProClusterOutcome> CreateProClusterOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateProClusterRequest&, CreateProClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRabbitMQBindingResponse> CreateRabbitMQBindingOutcome;
+                typedef std::future<CreateRabbitMQBindingOutcome> CreateRabbitMQBindingOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRabbitMQBindingRequest&, CreateRabbitMQBindingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRabbitMQBindingAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRabbitMQUserResponse> CreateRabbitMQUserOutcome;
                 typedef std::future<CreateRabbitMQUserOutcome> CreateRabbitMQUserOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRabbitMQUserRequest&, CreateRabbitMQUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRabbitMQUserAsyncHandler;
@@ -264,15 +346,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRocketMQClusterResponse> CreateRocketMQClusterOutcome;
                 typedef std::future<CreateRocketMQClusterOutcome> CreateRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQClusterRequest&, CreateRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQEnvironmentRoleResponse> CreateRocketMQEnvironmentRoleOutcome;
+                typedef std::future<CreateRocketMQEnvironmentRoleOutcome> CreateRocketMQEnvironmentRoleOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQEnvironmentRoleRequest&, CreateRocketMQEnvironmentRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQEnvironmentRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQGroupResponse> CreateRocketMQGroupOutcome;
                 typedef std::future<CreateRocketMQGroupOutcome> CreateRocketMQGroupOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQGroupRequest&, CreateRocketMQGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQNamespaceResponse> CreateRocketMQNamespaceOutcome;
                 typedef std::future<CreateRocketMQNamespaceOutcome> CreateRocketMQNamespaceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQNamespaceRequest&, CreateRocketMQNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQNamespaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQRoleResponse> CreateRocketMQRoleOutcome;
+                typedef std::future<CreateRocketMQRoleOutcome> CreateRocketMQRoleOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQRoleRequest&, CreateRocketMQRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQTopicResponse> CreateRocketMQTopicOutcome;
                 typedef std::future<CreateRocketMQTopicOutcome> CreateRocketMQTopicOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQTopicRequest&, CreateRocketMQTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQVipInstanceResponse> CreateRocketMQVipInstanceOutcome;
+                typedef std::future<CreateRocketMQVipInstanceOutcome> CreateRocketMQVipInstanceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQVipInstanceRequest&, CreateRocketMQVipInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQVipInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRoleResponse> CreateRoleOutcome;
                 typedef std::future<CreateRoleOutcome> CreateRoleOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRoleRequest&, CreateRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRoleAsyncHandler;
@@ -300,6 +391,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteEnvironmentsResponse> DeleteEnvironmentsOutcome;
                 typedef std::future<DeleteEnvironmentsOutcome> DeleteEnvironmentsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteEnvironmentsRequest&, DeleteEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEnvironmentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteProClusterResponse> DeleteProClusterOutcome;
+                typedef std::future<DeleteProClusterOutcome> DeleteProClusterOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteProClusterRequest&, DeleteProClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRabbitMQBindingResponse> DeleteRabbitMQBindingOutcome;
+                typedef std::future<DeleteRabbitMQBindingOutcome> DeleteRabbitMQBindingOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteRabbitMQBindingRequest&, DeleteRabbitMQBindingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRabbitMQBindingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRabbitMQPermissionResponse> DeleteRabbitMQPermissionOutcome;
+                typedef std::future<DeleteRabbitMQPermissionOutcome> DeleteRabbitMQPermissionOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteRabbitMQPermissionRequest&, DeleteRabbitMQPermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRabbitMQPermissionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRabbitMQUserResponse> DeleteRabbitMQUserOutcome;
                 typedef std::future<DeleteRabbitMQUserOutcome> DeleteRabbitMQUserOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRabbitMQUserRequest&, DeleteRabbitMQUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRabbitMQUserAsyncHandler;
@@ -312,15 +412,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRocketMQClusterResponse> DeleteRocketMQClusterOutcome;
                 typedef std::future<DeleteRocketMQClusterOutcome> DeleteRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQClusterRequest&, DeleteRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRocketMQEnvironmentRolesResponse> DeleteRocketMQEnvironmentRolesOutcome;
+                typedef std::future<DeleteRocketMQEnvironmentRolesOutcome> DeleteRocketMQEnvironmentRolesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQEnvironmentRolesRequest&, DeleteRocketMQEnvironmentRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQEnvironmentRolesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRocketMQGroupResponse> DeleteRocketMQGroupOutcome;
                 typedef std::future<DeleteRocketMQGroupOutcome> DeleteRocketMQGroupOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQGroupRequest&, DeleteRocketMQGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRocketMQNamespaceResponse> DeleteRocketMQNamespaceOutcome;
                 typedef std::future<DeleteRocketMQNamespaceOutcome> DeleteRocketMQNamespaceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQNamespaceRequest&, DeleteRocketMQNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQNamespaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRocketMQRolesResponse> DeleteRocketMQRolesOutcome;
+                typedef std::future<DeleteRocketMQRolesOutcome> DeleteRocketMQRolesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQRolesRequest&, DeleteRocketMQRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQRolesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRocketMQTopicResponse> DeleteRocketMQTopicOutcome;
                 typedef std::future<DeleteRocketMQTopicOutcome> DeleteRocketMQTopicOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQTopicRequest&, DeleteRocketMQTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRocketMQVipInstanceResponse> DeleteRocketMQVipInstanceOutcome;
+                typedef std::future<DeleteRocketMQVipInstanceOutcome> DeleteRocketMQVipInstanceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DeleteRocketMQVipInstanceRequest&, DeleteRocketMQVipInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRocketMQVipInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRolesResponse> DeleteRolesOutcome;
                 typedef std::future<DeleteRolesOutcome> DeleteRolesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRolesRequest&, DeleteRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRolesAsyncHandler;
@@ -342,9 +451,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
                 typedef std::future<DescribeClustersOutcome> DescribeClustersOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeClustersRequest&, DescribeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClustersAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCmqDeadLetterSourceQueuesResponse> DescribeCmqDeadLetterSourceQueuesOutcome;
-                typedef std::future<DescribeCmqDeadLetterSourceQueuesOutcome> DescribeCmqDeadLetterSourceQueuesOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeCmqDeadLetterSourceQueuesRequest&, DescribeCmqDeadLetterSourceQueuesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqDeadLetterSourceQueuesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCmqQueueDetailResponse> DescribeCmqQueueDetailOutcome;
                 typedef std::future<DescribeCmqQueueDetailOutcome> DescribeCmqQueueDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeCmqQueueDetailRequest&, DescribeCmqQueueDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqQueueDetailAsyncHandler;
@@ -369,6 +475,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
                 typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMqMsgTraceResponse> DescribeMqMsgTraceOutcome;
+                typedef std::future<DescribeMqMsgTraceOutcome> DescribeMqMsgTraceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeMqMsgTraceRequest&, DescribeMqMsgTraceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMqMsgTraceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMsgResponse> DescribeMsgOutcome;
+                typedef std::future<DescribeMsgOutcome> DescribeMsgOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeMsgRequest&, DescribeMsgOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMsgAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMsgTraceResponse> DescribeMsgTraceOutcome;
+                typedef std::future<DescribeMsgTraceOutcome> DescribeMsgTraceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeMsgTraceRequest&, DescribeMsgTraceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMsgTraceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePublisherSummaryResponse> DescribePublisherSummaryOutcome;
                 typedef std::future<DescribePublisherSummaryOutcome> DescribePublisherSummaryOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribePublisherSummaryRequest&, DescribePublisherSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublisherSummaryAsyncHandler;
@@ -381,39 +496,87 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePulsarProInstancesResponse> DescribePulsarProInstancesOutcome;
                 typedef std::future<DescribePulsarProInstancesOutcome> DescribePulsarProInstancesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribePulsarProInstancesRequest&, DescribePulsarProInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePulsarProInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQBindingsResponse> DescribeRabbitMQBindingsOutcome;
+                typedef std::future<DescribeRabbitMQBindingsOutcome> DescribeRabbitMQBindingsOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQBindingsRequest&, DescribeRabbitMQBindingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQBindingsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQExchangesResponse> DescribeRabbitMQExchangesOutcome;
+                typedef std::future<DescribeRabbitMQExchangesOutcome> DescribeRabbitMQExchangesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQExchangesRequest&, DescribeRabbitMQExchangesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQExchangesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRabbitMQNodeListResponse> DescribeRabbitMQNodeListOutcome;
                 typedef std::future<DescribeRabbitMQNodeListOutcome> DescribeRabbitMQNodeListOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQNodeListRequest&, DescribeRabbitMQNodeListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQNodeListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQPermissionResponse> DescribeRabbitMQPermissionOutcome;
+                typedef std::future<DescribeRabbitMQPermissionOutcome> DescribeRabbitMQPermissionOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQPermissionRequest&, DescribeRabbitMQPermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQPermissionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQQueueDetailResponse> DescribeRabbitMQQueueDetailOutcome;
+                typedef std::future<DescribeRabbitMQQueueDetailOutcome> DescribeRabbitMQQueueDetailOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQQueueDetailRequest&, DescribeRabbitMQQueueDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQQueueDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQQueuesResponse> DescribeRabbitMQQueuesOutcome;
+                typedef std::future<DescribeRabbitMQQueuesOutcome> DescribeRabbitMQQueuesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQQueuesRequest&, DescribeRabbitMQQueuesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQQueuesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRabbitMQUserResponse> DescribeRabbitMQUserOutcome;
                 typedef std::future<DescribeRabbitMQUserOutcome> DescribeRabbitMQUserOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQUserRequest&, DescribeRabbitMQUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRabbitMQVipInstanceResponse> DescribeRabbitMQVipInstanceOutcome;
+                typedef std::future<DescribeRabbitMQVipInstanceOutcome> DescribeRabbitMQVipInstanceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQVipInstanceRequest&, DescribeRabbitMQVipInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQVipInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRabbitMQVipInstancesResponse> DescribeRabbitMQVipInstancesOutcome;
                 typedef std::future<DescribeRabbitMQVipInstancesOutcome> DescribeRabbitMQVipInstancesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQVipInstancesRequest&, DescribeRabbitMQVipInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQVipInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRabbitMQVirtualHostResponse> DescribeRabbitMQVirtualHostOutcome;
                 typedef std::future<DescribeRabbitMQVirtualHostOutcome> DescribeRabbitMQVirtualHostOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQVirtualHostRequest&, DescribeRabbitMQVirtualHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQVirtualHostAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRabbitMQVirtualHostListResponse> DescribeRabbitMQVirtualHostListOutcome;
-                typedef std::future<DescribeRabbitMQVirtualHostListOutcome> DescribeRabbitMQVirtualHostListOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQVirtualHostListRequest&, DescribeRabbitMQVirtualHostListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQVirtualHostListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQClusterResponse> DescribeRocketMQClusterOutcome;
                 typedef std::future<DescribeRocketMQClusterOutcome> DescribeRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQClusterRequest&, DescribeRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQClustersResponse> DescribeRocketMQClustersOutcome;
                 typedef std::future<DescribeRocketMQClustersOutcome> DescribeRocketMQClustersOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQClustersRequest&, DescribeRocketMQClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQEnvironmentRolesResponse> DescribeRocketMQEnvironmentRolesOutcome;
+                typedef std::future<DescribeRocketMQEnvironmentRolesOutcome> DescribeRocketMQEnvironmentRolesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQEnvironmentRolesRequest&, DescribeRocketMQEnvironmentRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQEnvironmentRolesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQGroupsResponse> DescribeRocketMQGroupsOutcome;
                 typedef std::future<DescribeRocketMQGroupsOutcome> DescribeRocketMQGroupsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQGroupsRequest&, DescribeRocketMQGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQMsgResponse> DescribeRocketMQMsgOutcome;
                 typedef std::future<DescribeRocketMQMsgOutcome> DescribeRocketMQMsgOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQMsgRequest&, DescribeRocketMQMsgOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQMsgAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQMsgTraceResponse> DescribeRocketMQMsgTraceOutcome;
+                typedef std::future<DescribeRocketMQMsgTraceOutcome> DescribeRocketMQMsgTraceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQMsgTraceRequest&, DescribeRocketMQMsgTraceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQMsgTraceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQNamespacesResponse> DescribeRocketMQNamespacesOutcome;
                 typedef std::future<DescribeRocketMQNamespacesOutcome> DescribeRocketMQNamespacesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQNamespacesRequest&, DescribeRocketMQNamespacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQNamespacesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQProducersResponse> DescribeRocketMQProducersOutcome;
+                typedef std::future<DescribeRocketMQProducersOutcome> DescribeRocketMQProducersOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQProducersRequest&, DescribeRocketMQProducersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQProducersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQPublicAccessMonitorDataResponse> DescribeRocketMQPublicAccessMonitorDataOutcome;
+                typedef std::future<DescribeRocketMQPublicAccessMonitorDataOutcome> DescribeRocketMQPublicAccessMonitorDataOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQPublicAccessMonitorDataRequest&, DescribeRocketMQPublicAccessMonitorDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQPublicAccessMonitorDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQPublicAccessPointResponse> DescribeRocketMQPublicAccessPointOutcome;
+                typedef std::future<DescribeRocketMQPublicAccessPointOutcome> DescribeRocketMQPublicAccessPointOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQPublicAccessPointRequest&, DescribeRocketMQPublicAccessPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQPublicAccessPointAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQRolesResponse> DescribeRocketMQRolesOutcome;
+                typedef std::future<DescribeRocketMQRolesOutcome> DescribeRocketMQRolesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQRolesRequest&, DescribeRocketMQRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQRolesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQTopUsagesResponse> DescribeRocketMQTopUsagesOutcome;
+                typedef std::future<DescribeRocketMQTopUsagesOutcome> DescribeRocketMQTopUsagesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopUsagesRequest&, DescribeRocketMQTopUsagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopUsagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQTopicResponse> DescribeRocketMQTopicOutcome;
+                typedef std::future<DescribeRocketMQTopicOutcome> DescribeRocketMQTopicOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicRequest&, DescribeRocketMQTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQTopicMsgsResponse> DescribeRocketMQTopicMsgsOutcome;
+                typedef std::future<DescribeRocketMQTopicMsgsOutcome> DescribeRocketMQTopicMsgsOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicMsgsRequest&, DescribeRocketMQTopicMsgsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicMsgsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQTopicStatsResponse> DescribeRocketMQTopicStatsOutcome;
+                typedef std::future<DescribeRocketMQTopicStatsOutcome> DescribeRocketMQTopicStatsOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicStatsRequest&, DescribeRocketMQTopicStatsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicStatsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQTopicsResponse> DescribeRocketMQTopicsOutcome;
                 typedef std::future<DescribeRocketMQTopicsOutcome> DescribeRocketMQTopicsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicsRequest&, DescribeRocketMQTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQTopicsByGroupResponse> DescribeRocketMQTopicsByGroupOutcome;
+                typedef std::future<DescribeRocketMQTopicsByGroupOutcome> DescribeRocketMQTopicsByGroupOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicsByGroupRequest&, DescribeRocketMQTopicsByGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicsByGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQVipInstanceDetailResponse> DescribeRocketMQVipInstanceDetailOutcome;
                 typedef std::future<DescribeRocketMQVipInstanceDetailOutcome> DescribeRocketMQVipInstanceDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQVipInstanceDetailRequest&, DescribeRocketMQVipInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQVipInstanceDetailAsyncHandler;
@@ -426,9 +589,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSubscriptionsResponse> DescribeSubscriptionsOutcome;
                 typedef std::future<DescribeSubscriptionsOutcome> DescribeSubscriptionsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeSubscriptionsRequest&, DescribeSubscriptionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubscriptionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTopicMsgsResponse> DescribeTopicMsgsOutcome;
+                typedef std::future<DescribeTopicMsgsOutcome> DescribeTopicMsgsOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeTopicMsgsRequest&, DescribeTopicMsgsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicMsgsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopicsResponse> DescribeTopicsOutcome;
                 typedef std::future<DescribeTopicsOutcome> DescribeTopicsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeTopicsRequest&, DescribeTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportRocketMQMessageDetailResponse> ExportRocketMQMessageDetailOutcome;
+                typedef std::future<ExportRocketMQMessageDetailOutcome> ExportRocketMQMessageDetailOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ExportRocketMQMessageDetailRequest&, ExportRocketMQMessageDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportRocketMQMessageDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClusterResponse> ModifyClusterOutcome;
                 typedef std::future<ModifyClusterOutcome> ModifyClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyClusterRequest&, ModifyClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterAsyncHandler;
@@ -447,6 +616,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyEnvironmentRoleResponse> ModifyEnvironmentRoleOutcome;
                 typedef std::future<ModifyEnvironmentRoleOutcome> ModifyEnvironmentRoleOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyEnvironmentRoleRequest&, ModifyEnvironmentRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyEnvironmentRoleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyPublicNetworkSecurityPolicyResponse> ModifyPublicNetworkSecurityPolicyOutcome;
+                typedef std::future<ModifyPublicNetworkSecurityPolicyOutcome> ModifyPublicNetworkSecurityPolicyOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ModifyPublicNetworkSecurityPolicyRequest&, ModifyPublicNetworkSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPublicNetworkSecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRabbitMQPermissionResponse> ModifyRabbitMQPermissionOutcome;
+                typedef std::future<ModifyRabbitMQPermissionOutcome> ModifyRabbitMQPermissionOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ModifyRabbitMQPermissionRequest&, ModifyRabbitMQPermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRabbitMQPermissionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRabbitMQUserResponse> ModifyRabbitMQUserOutcome;
                 typedef std::future<ModifyRabbitMQUserOutcome> ModifyRabbitMQUserOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRabbitMQUserRequest&, ModifyRabbitMQUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRabbitMQUserAsyncHandler;
@@ -456,15 +631,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyRocketMQClusterResponse> ModifyRocketMQClusterOutcome;
                 typedef std::future<ModifyRocketMQClusterOutcome> ModifyRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQClusterRequest&, ModifyRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRocketMQEnvironmentRoleResponse> ModifyRocketMQEnvironmentRoleOutcome;
+                typedef std::future<ModifyRocketMQEnvironmentRoleOutcome> ModifyRocketMQEnvironmentRoleOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQEnvironmentRoleRequest&, ModifyRocketMQEnvironmentRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQEnvironmentRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRocketMQGroupResponse> ModifyRocketMQGroupOutcome;
                 typedef std::future<ModifyRocketMQGroupOutcome> ModifyRocketMQGroupOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQGroupRequest&, ModifyRocketMQGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRocketMQInstanceResponse> ModifyRocketMQInstanceOutcome;
+                typedef std::future<ModifyRocketMQInstanceOutcome> ModifyRocketMQInstanceOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQInstanceRequest&, ModifyRocketMQInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRocketMQInstanceSpecResponse> ModifyRocketMQInstanceSpecOutcome;
                 typedef std::future<ModifyRocketMQInstanceSpecOutcome> ModifyRocketMQInstanceSpecOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQInstanceSpecRequest&, ModifyRocketMQInstanceSpecOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQInstanceSpecAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRocketMQNamespaceResponse> ModifyRocketMQNamespaceOutcome;
                 typedef std::future<ModifyRocketMQNamespaceOutcome> ModifyRocketMQNamespaceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQNamespaceRequest&, ModifyRocketMQNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQNamespaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRocketMQRoleResponse> ModifyRocketMQRoleOutcome;
+                typedef std::future<ModifyRocketMQRoleOutcome> ModifyRocketMQRoleOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQRoleRequest&, ModifyRocketMQRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRocketMQTopicResponse> ModifyRocketMQTopicOutcome;
                 typedef std::future<ModifyRocketMQTopicOutcome> ModifyRocketMQTopicOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyRocketMQTopicRequest&, ModifyRocketMQTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRocketMQTopicAsyncHandler;
@@ -486,6 +670,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetRocketMQConsumerOffSetResponse> ResetRocketMQConsumerOffSetOutcome;
                 typedef std::future<ResetRocketMQConsumerOffSetOutcome> ResetRocketMQConsumerOffSetOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ResetRocketMQConsumerOffSetRequest&, ResetRocketMQConsumerOffSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetRocketMQConsumerOffSetAsyncHandler;
+                typedef Outcome<Core::Error, Model::RetryRocketMQDlqMessageResponse> RetryRocketMQDlqMessageOutcome;
+                typedef std::future<RetryRocketMQDlqMessageOutcome> RetryRocketMQDlqMessageOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::RetryRocketMQDlqMessageRequest&, RetryRocketMQDlqMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryRocketMQDlqMessageAsyncHandler;
                 typedef Outcome<Core::Error, Model::RewindCmqQueueResponse> RewindCmqQueueOutcome;
                 typedef std::future<RewindCmqQueueOutcome> RewindCmqQueueOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::RewindCmqQueueRequest&, RewindCmqQueueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RewindCmqQueueAsyncHandler;
@@ -504,6 +691,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SendRocketMQMessageResponse> SendRocketMQMessageOutcome;
                 typedef std::future<SendRocketMQMessageOutcome> SendRocketMQMessageOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::SendRocketMQMessageRequest&, SendRocketMQMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendRocketMQMessageAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetRocketMQPublicAccessPointResponse> SetRocketMQPublicAccessPointOutcome;
+                typedef std::future<SetRocketMQPublicAccessPointOutcome> SetRocketMQPublicAccessPointOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::SetRocketMQPublicAccessPointRequest&, SetRocketMQPublicAccessPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetRocketMQPublicAccessPointAsyncHandler;
                 typedef Outcome<Core::Error, Model::UnbindCmqDeadLetterResponse> UnbindCmqDeadLetterOutcome;
                 typedef std::future<UnbindCmqDeadLetterOutcome> UnbindCmqDeadLetterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::UnbindCmqDeadLetterRequest&, UnbindCmqDeadLetterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindCmqDeadLetterAsyncHandler;
@@ -592,6 +782,24 @@ namespace TencentCloud
                 CreateEnvironmentRoleOutcomeCallable CreateEnvironmentRoleCallable(const Model::CreateEnvironmentRoleRequest& request);
 
                 /**
+                 *This api is used to create a professional cluster with prepayment via api calls.
+                 * @param req CreateProClusterRequest
+                 * @return CreateProClusterOutcome
+                 */
+                CreateProClusterOutcome CreateProCluster(const Model::CreateProClusterRequest &request);
+                void CreateProClusterAsync(const Model::CreateProClusterRequest& request, const CreateProClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProClusterOutcomeCallable CreateProClusterCallable(const Model::CreateProClusterRequest& request);
+
+                /**
+                 *This API is used to create a TDMQ for RabbitMQ routing relationship.
+                 * @param req CreateRabbitMQBindingRequest
+                 * @return CreateRabbitMQBindingOutcome
+                 */
+                CreateRabbitMQBindingOutcome CreateRabbitMQBinding(const Model::CreateRabbitMQBindingRequest &request);
+                void CreateRabbitMQBindingAsync(const Model::CreateRabbitMQBindingRequest& request, const CreateRabbitMQBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRabbitMQBindingOutcomeCallable CreateRabbitMQBindingCallable(const Model::CreateRabbitMQBindingRequest& request);
+
+                /**
                  *This API is used to create a TDMQ for RabbitMQ user.
                  * @param req CreateRabbitMQUserRequest
                  * @return CreateRabbitMQUserOutcome
@@ -601,7 +809,7 @@ namespace TencentCloud
                 CreateRabbitMQUserOutcomeCallable CreateRabbitMQUserCallable(const Model::CreateRabbitMQUserRequest& request);
 
                 /**
-                 *This API is used to create a TDMQ for RabbitMQ exclusive instance.
+                 *This API is used to create a RabbitMQ managed instance.
                  * @param req CreateRabbitMQVipInstanceRequest
                  * @return CreateRabbitMQVipInstanceOutcome
                  */
@@ -628,6 +836,15 @@ namespace TencentCloud
                 CreateRocketMQClusterOutcomeCallable CreateRocketMQClusterCallable(const Model::CreateRocketMQClusterRequest& request);
 
                 /**
+                 *Creates environment role authorization
+                 * @param req CreateRocketMQEnvironmentRoleRequest
+                 * @return CreateRocketMQEnvironmentRoleOutcome
+                 */
+                CreateRocketMQEnvironmentRoleOutcome CreateRocketMQEnvironmentRole(const Model::CreateRocketMQEnvironmentRoleRequest &request);
+                void CreateRocketMQEnvironmentRoleAsync(const Model::CreateRocketMQEnvironmentRoleRequest& request, const CreateRocketMQEnvironmentRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQEnvironmentRoleOutcomeCallable CreateRocketMQEnvironmentRoleCallable(const Model::CreateRocketMQEnvironmentRoleRequest& request);
+
+                /**
                  *This API is used to create a RocketMQ consumer group.
                  * @param req CreateRocketMQGroupRequest
                  * @return CreateRocketMQGroupOutcome
@@ -646,6 +863,15 @@ namespace TencentCloud
                 CreateRocketMQNamespaceOutcomeCallable CreateRocketMQNamespaceCallable(const Model::CreateRocketMQNamespaceRequest& request);
 
                 /**
+                 *This API is used to create a role.
+                 * @param req CreateRocketMQRoleRequest
+                 * @return CreateRocketMQRoleOutcome
+                 */
+                CreateRocketMQRoleOutcome CreateRocketMQRole(const Model::CreateRocketMQRoleRequest &request);
+                void CreateRocketMQRoleAsync(const Model::CreateRocketMQRoleRequest& request, const CreateRocketMQRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQRoleOutcomeCallable CreateRocketMQRoleCallable(const Model::CreateRocketMQRoleRequest& request);
+
+                /**
                  *This API is used to create a RocketMQ topic.
                  * @param req CreateRocketMQTopicRequest
                  * @return CreateRocketMQTopicOutcome
@@ -653,6 +879,15 @@ namespace TencentCloud
                 CreateRocketMQTopicOutcome CreateRocketMQTopic(const Model::CreateRocketMQTopicRequest &request);
                 void CreateRocketMQTopicAsync(const Model::CreateRocketMQTopicRequest& request, const CreateRocketMQTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateRocketMQTopicOutcomeCallable CreateRocketMQTopicCallable(const Model::CreateRocketMQTopicRequest& request);
+
+                /**
+                 *This API is used to create a RocketMQ Exclusive Edition instance.
+                 * @param req CreateRocketMQVipInstanceRequest
+                 * @return CreateRocketMQVipInstanceOutcome
+                 */
+                CreateRocketMQVipInstanceOutcome CreateRocketMQVipInstance(const Model::CreateRocketMQVipInstanceRequest &request);
+                void CreateRocketMQVipInstanceAsync(const Model::CreateRocketMQVipInstanceRequest& request, const CreateRocketMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQVipInstanceOutcomeCallable CreateRocketMQVipInstanceCallable(const Model::CreateRocketMQVipInstanceRequest& request);
 
                 /**
                  *This API is used to create a role.
@@ -736,6 +971,33 @@ namespace TencentCloud
                 DeleteEnvironmentsOutcomeCallable DeleteEnvironmentsCallable(const Model::DeleteEnvironmentsRequest& request);
 
                 /**
+                 *This API is used to delete a professional cluster with prepayment via API calls.
+                 * @param req DeleteProClusterRequest
+                 * @return DeleteProClusterOutcome
+                 */
+                DeleteProClusterOutcome DeleteProCluster(const Model::DeleteProClusterRequest &request);
+                void DeleteProClusterAsync(const Model::DeleteProClusterRequest& request, const DeleteProClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProClusterOutcomeCallable DeleteProClusterCallable(const Model::DeleteProClusterRequest& request);
+
+                /**
+                 *This API is used to unbind RabbitMQ routing relationships.
+                 * @param req DeleteRabbitMQBindingRequest
+                 * @return DeleteRabbitMQBindingOutcome
+                 */
+                DeleteRabbitMQBindingOutcome DeleteRabbitMQBinding(const Model::DeleteRabbitMQBindingRequest &request);
+                void DeleteRabbitMQBindingAsync(const Model::DeleteRabbitMQBindingRequest& request, const DeleteRabbitMQBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRabbitMQBindingOutcomeCallable DeleteRabbitMQBindingCallable(const Model::DeleteRabbitMQBindingRequest& request);
+
+                /**
+                 *This API is used to delete RabbitMQ permissions.
+                 * @param req DeleteRabbitMQPermissionRequest
+                 * @return DeleteRabbitMQPermissionOutcome
+                 */
+                DeleteRabbitMQPermissionOutcome DeleteRabbitMQPermission(const Model::DeleteRabbitMQPermissionRequest &request);
+                void DeleteRabbitMQPermissionAsync(const Model::DeleteRabbitMQPermissionRequest& request, const DeleteRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRabbitMQPermissionOutcomeCallable DeleteRabbitMQPermissionCallable(const Model::DeleteRabbitMQPermissionRequest& request);
+
+                /**
                  *This API is used to delete a TDMQ for RabbitMQ user.
                  * @param req DeleteRabbitMQUserRequest
                  * @return DeleteRabbitMQUserOutcome
@@ -745,7 +1007,7 @@ namespace TencentCloud
                 DeleteRabbitMQUserOutcomeCallable DeleteRabbitMQUserCallable(const Model::DeleteRabbitMQUserRequest& request);
 
                 /**
-                 *This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+                 *This API is used to delete a RabbitMQ managed instance.
                  * @param req DeleteRabbitMQVipInstanceRequest
                  * @return DeleteRabbitMQVipInstanceOutcome
                  */
@@ -772,6 +1034,15 @@ namespace TencentCloud
                 DeleteRocketMQClusterOutcomeCallable DeleteRocketMQClusterCallable(const Model::DeleteRocketMQClusterRequest& request);
 
                 /**
+                 *Deletes environment role authorization
+                 * @param req DeleteRocketMQEnvironmentRolesRequest
+                 * @return DeleteRocketMQEnvironmentRolesOutcome
+                 */
+                DeleteRocketMQEnvironmentRolesOutcome DeleteRocketMQEnvironmentRoles(const Model::DeleteRocketMQEnvironmentRolesRequest &request);
+                void DeleteRocketMQEnvironmentRolesAsync(const Model::DeleteRocketMQEnvironmentRolesRequest& request, const DeleteRocketMQEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRocketMQEnvironmentRolesOutcomeCallable DeleteRocketMQEnvironmentRolesCallable(const Model::DeleteRocketMQEnvironmentRolesRequest& request);
+
+                /**
                  *This API is used to delete a RocketMQ consumer group.
                  * @param req DeleteRocketMQGroupRequest
                  * @return DeleteRocketMQGroupOutcome
@@ -790,6 +1061,15 @@ namespace TencentCloud
                 DeleteRocketMQNamespaceOutcomeCallable DeleteRocketMQNamespaceCallable(const Model::DeleteRocketMQNamespaceRequest& request);
 
                 /**
+                 *Deletes roles. Batch deletion is supported.
+                 * @param req DeleteRocketMQRolesRequest
+                 * @return DeleteRocketMQRolesOutcome
+                 */
+                DeleteRocketMQRolesOutcome DeleteRocketMQRoles(const Model::DeleteRocketMQRolesRequest &request);
+                void DeleteRocketMQRolesAsync(const Model::DeleteRocketMQRolesRequest& request, const DeleteRocketMQRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRocketMQRolesOutcomeCallable DeleteRocketMQRolesCallable(const Model::DeleteRocketMQRolesRequest& request);
+
+                /**
                  *This API is used to delete a RocketMQ topic.
                  * @param req DeleteRocketMQTopicRequest
                  * @return DeleteRocketMQTopicOutcome
@@ -797,6 +1077,15 @@ namespace TencentCloud
                 DeleteRocketMQTopicOutcome DeleteRocketMQTopic(const Model::DeleteRocketMQTopicRequest &request);
                 void DeleteRocketMQTopicAsync(const Model::DeleteRocketMQTopicRequest& request, const DeleteRocketMQTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteRocketMQTopicOutcomeCallable DeleteRocketMQTopicCallable(const Model::DeleteRocketMQTopicRequest& request);
+
+                /**
+                 *This API is used to delete a RocketMQ Exclusive Edition instance.
+                 * @param req DeleteRocketMQVipInstanceRequest
+                 * @return DeleteRocketMQVipInstanceOutcome
+                 */
+                DeleteRocketMQVipInstanceOutcome DeleteRocketMQVipInstance(const Model::DeleteRocketMQVipInstanceRequest &request);
+                void DeleteRocketMQVipInstanceAsync(const Model::DeleteRocketMQVipInstanceRequest& request, const DeleteRocketMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRocketMQVipInstanceOutcomeCallable DeleteRocketMQVipInstanceCallable(const Model::DeleteRocketMQVipInstanceRequest& request);
 
                 /**
                  *This API is used to delete one or multiple roles.
@@ -860,15 +1149,6 @@ namespace TencentCloud
                 DescribeClustersOutcome DescribeClusters(const Model::DescribeClustersRequest &request);
                 void DescribeClustersAsync(const Model::DescribeClustersRequest& request, const DescribeClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClustersOutcomeCallable DescribeClustersCallable(const Model::DescribeClustersRequest& request);
-
-                /**
-                 *This API is used to enumerate the source queues of a CMQ dead letter queue.
-                 * @param req DescribeCmqDeadLetterSourceQueuesRequest
-                 * @return DescribeCmqDeadLetterSourceQueuesOutcome
-                 */
-                DescribeCmqDeadLetterSourceQueuesOutcome DescribeCmqDeadLetterSourceQueues(const Model::DescribeCmqDeadLetterSourceQueuesRequest &request);
-                void DescribeCmqDeadLetterSourceQueuesAsync(const Model::DescribeCmqDeadLetterSourceQueuesRequest& request, const DescribeCmqDeadLetterSourceQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCmqDeadLetterSourceQueuesOutcomeCallable DescribeCmqDeadLetterSourceQueuesCallable(const Model::DescribeCmqDeadLetterSourceQueuesRequest& request);
 
                 /**
                  *This API is used to query the details of a CMQ queue.
@@ -943,6 +1223,33 @@ namespace TencentCloud
                 DescribeEnvironmentsOutcomeCallable DescribeEnvironmentsCallable(const Model::DescribeEnvironmentsRequest& request);
 
                 /**
+                 *Queries message trajectory
+                 * @param req DescribeMqMsgTraceRequest
+                 * @return DescribeMqMsgTraceOutcome
+                 */
+                DescribeMqMsgTraceOutcome DescribeMqMsgTrace(const Model::DescribeMqMsgTraceRequest &request);
+                void DescribeMqMsgTraceAsync(const Model::DescribeMqMsgTraceRequest& request, const DescribeMqMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMqMsgTraceOutcomeCallable DescribeMqMsgTraceCallable(const Model::DescribeMqMsgTraceRequest& request);
+
+                /**
+                 *This API is used to get message details.
+                 * @param req DescribeMsgRequest
+                 * @return DescribeMsgOutcome
+                 */
+                DescribeMsgOutcome DescribeMsg(const Model::DescribeMsgRequest &request);
+                void DescribeMsgAsync(const Model::DescribeMsgRequest& request, const DescribeMsgAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMsgOutcomeCallable DescribeMsgCallable(const Model::DescribeMsgRequest& request);
+
+                /**
+                 *Queries message trajectory
+                 * @param req DescribeMsgTraceRequest
+                 * @return DescribeMsgTraceOutcome
+                 */
+                DescribeMsgTraceOutcome DescribeMsgTrace(const Model::DescribeMsgTraceRequest &request);
+                void DescribeMsgTraceAsync(const Model::DescribeMsgTraceRequest& request, const DescribeMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMsgTraceOutcomeCallable DescribeMsgTraceCallable(const Model::DescribeMsgTraceRequest& request);
+
+                /**
                  *This API is used to obtain message production overview information.
                  * @param req DescribePublisherSummaryRequest
                  * @return DescribePublisherSummaryOutcome
@@ -979,13 +1286,58 @@ namespace TencentCloud
                 DescribePulsarProInstancesOutcomeCallable DescribePulsarProInstancesCallable(const Model::DescribePulsarProInstancesRequest& request);
 
                 /**
-                 *This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+                 *This API is used to query the list of RabbitMQ route relations.
+                 * @param req DescribeRabbitMQBindingsRequest
+                 * @return DescribeRabbitMQBindingsOutcome
+                 */
+                DescribeRabbitMQBindingsOutcome DescribeRabbitMQBindings(const Model::DescribeRabbitMQBindingsRequest &request);
+                void DescribeRabbitMQBindingsAsync(const Model::DescribeRabbitMQBindingsRequest& request, const DescribeRabbitMQBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQBindingsOutcomeCallable DescribeRabbitMQBindingsCallable(const Model::DescribeRabbitMQBindingsRequest& request);
+
+                /**
+                 *This API is used to query the list of TDMQ for RabbitMQ exchanges.
+                 * @param req DescribeRabbitMQExchangesRequest
+                 * @return DescribeRabbitMQExchangesOutcome
+                 */
+                DescribeRabbitMQExchangesOutcome DescribeRabbitMQExchanges(const Model::DescribeRabbitMQExchangesRequest &request);
+                void DescribeRabbitMQExchangesAsync(const Model::DescribeRabbitMQExchangesRequest& request, const DescribeRabbitMQExchangesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQExchangesOutcomeCallable DescribeRabbitMQExchangesCallable(const Model::DescribeRabbitMQExchangesRequest& request);
+
+                /**
+                 *This API is used to query the RabbitMQ managed node list.
                  * @param req DescribeRabbitMQNodeListRequest
                  * @return DescribeRabbitMQNodeListOutcome
                  */
                 DescribeRabbitMQNodeListOutcome DescribeRabbitMQNodeList(const Model::DescribeRabbitMQNodeListRequest &request);
                 void DescribeRabbitMQNodeListAsync(const Model::DescribeRabbitMQNodeListRequest& request, const DescribeRabbitMQNodeListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRabbitMQNodeListOutcomeCallable DescribeRabbitMQNodeListCallable(const Model::DescribeRabbitMQNodeListRequest& request);
+
+                /**
+                 *This API is used to query the list of TDMQ for RabbitMQ permissions.
+                 * @param req DescribeRabbitMQPermissionRequest
+                 * @return DescribeRabbitMQPermissionOutcome
+                 */
+                DescribeRabbitMQPermissionOutcome DescribeRabbitMQPermission(const Model::DescribeRabbitMQPermissionRequest &request);
+                void DescribeRabbitMQPermissionAsync(const Model::DescribeRabbitMQPermissionRequest& request, const DescribeRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQPermissionOutcomeCallable DescribeRabbitMQPermissionCallable(const Model::DescribeRabbitMQPermissionRequest& request);
+
+                /**
+                 *This API is used to query the details of RabbitMQ queues.
+                 * @param req DescribeRabbitMQQueueDetailRequest
+                 * @return DescribeRabbitMQQueueDetailOutcome
+                 */
+                DescribeRabbitMQQueueDetailOutcome DescribeRabbitMQQueueDetail(const Model::DescribeRabbitMQQueueDetailRequest &request);
+                void DescribeRabbitMQQueueDetailAsync(const Model::DescribeRabbitMQQueueDetailRequest& request, const DescribeRabbitMQQueueDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQQueueDetailOutcomeCallable DescribeRabbitMQQueueDetailCallable(const Model::DescribeRabbitMQQueueDetailRequest& request);
+
+                /**
+                 *This API is used to query the list of TDMQ for RabbitMQ queues.
+                 * @param req DescribeRabbitMQQueuesRequest
+                 * @return DescribeRabbitMQQueuesOutcome
+                 */
+                DescribeRabbitMQQueuesOutcome DescribeRabbitMQQueues(const Model::DescribeRabbitMQQueuesRequest &request);
+                void DescribeRabbitMQQueuesAsync(const Model::DescribeRabbitMQQueuesRequest& request, const DescribeRabbitMQQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQQueuesOutcomeCallable DescribeRabbitMQQueuesCallable(const Model::DescribeRabbitMQQueuesRequest& request);
 
                 /**
                  *This API is used to query the list of TDMQ for RabbitMQ users.
@@ -997,7 +1349,16 @@ namespace TencentCloud
                 DescribeRabbitMQUserOutcomeCallable DescribeRabbitMQUserCallable(const Model::DescribeRabbitMQUserRequest& request);
 
                 /**
-                 *This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+                 *This API is used to obtain information about one RabbitMQ managed instance.
+                 * @param req DescribeRabbitMQVipInstanceRequest
+                 * @return DescribeRabbitMQVipInstanceOutcome
+                 */
+                DescribeRabbitMQVipInstanceOutcome DescribeRabbitMQVipInstance(const Model::DescribeRabbitMQVipInstanceRequest &request);
+                void DescribeRabbitMQVipInstanceAsync(const Model::DescribeRabbitMQVipInstanceRequest& request, const DescribeRabbitMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRabbitMQVipInstanceOutcomeCallable DescribeRabbitMQVipInstanceCallable(const Model::DescribeRabbitMQVipInstanceRequest& request);
+
+                /**
+                 *This API is used to query the RabbitMQ managed instance list of user purchases.
                  * @param req DescribeRabbitMQVipInstancesRequest
                  * @return DescribeRabbitMQVipInstancesOutcome
                  */
@@ -1013,15 +1374,6 @@ namespace TencentCloud
                 DescribeRabbitMQVirtualHostOutcome DescribeRabbitMQVirtualHost(const Model::DescribeRabbitMQVirtualHostRequest &request);
                 void DescribeRabbitMQVirtualHostAsync(const Model::DescribeRabbitMQVirtualHostRequest& request, const DescribeRabbitMQVirtualHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRabbitMQVirtualHostOutcomeCallable DescribeRabbitMQVirtualHostCallable(const Model::DescribeRabbitMQVirtualHostRequest& request);
-
-                /**
-                 *This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
-                 * @param req DescribeRabbitMQVirtualHostListRequest
-                 * @return DescribeRabbitMQVirtualHostListOutcome
-                 */
-                DescribeRabbitMQVirtualHostListOutcome DescribeRabbitMQVirtualHostList(const Model::DescribeRabbitMQVirtualHostListRequest &request);
-                void DescribeRabbitMQVirtualHostListAsync(const Model::DescribeRabbitMQVirtualHostListRequest& request, const DescribeRabbitMQVirtualHostListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRabbitMQVirtualHostListOutcomeCallable DescribeRabbitMQVirtualHostListCallable(const Model::DescribeRabbitMQVirtualHostListRequest& request);
 
                 /**
                  *This API is used to get the information of a specific RocketMQ cluster.
@@ -1042,6 +1394,15 @@ namespace TencentCloud
                 DescribeRocketMQClustersOutcomeCallable DescribeRocketMQClustersCallable(const Model::DescribeRocketMQClustersRequest& request);
 
                 /**
+                 *Obtains the namespace role list
+                 * @param req DescribeRocketMQEnvironmentRolesRequest
+                 * @return DescribeRocketMQEnvironmentRolesOutcome
+                 */
+                DescribeRocketMQEnvironmentRolesOutcome DescribeRocketMQEnvironmentRoles(const Model::DescribeRocketMQEnvironmentRolesRequest &request);
+                void DescribeRocketMQEnvironmentRolesAsync(const Model::DescribeRocketMQEnvironmentRolesRequest& request, const DescribeRocketMQEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQEnvironmentRolesOutcomeCallable DescribeRocketMQEnvironmentRolesCallable(const Model::DescribeRocketMQEnvironmentRolesRequest& request);
+
+                /**
                  *This API is used to get the list of RocketMQ consumer groups.
                  * @param req DescribeRocketMQGroupsRequest
                  * @return DescribeRocketMQGroupsOutcome
@@ -1060,6 +1421,15 @@ namespace TencentCloud
                 DescribeRocketMQMsgOutcomeCallable DescribeRocketMQMsgCallable(const Model::DescribeRocketMQMsgRequest& request);
 
                 /**
+                 *Queries message trajectory
+                 * @param req DescribeRocketMQMsgTraceRequest
+                 * @return DescribeRocketMQMsgTraceOutcome
+                 */
+                DescribeRocketMQMsgTraceOutcome DescribeRocketMQMsgTrace(const Model::DescribeRocketMQMsgTraceRequest &request);
+                void DescribeRocketMQMsgTraceAsync(const Model::DescribeRocketMQMsgTraceRequest& request, const DescribeRocketMQMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQMsgTraceOutcomeCallable DescribeRocketMQMsgTraceCallable(const Model::DescribeRocketMQMsgTraceRequest& request);
+
+                /**
                  *This API is used to get the list of RocketMQ namespaces.
                  * @param req DescribeRocketMQNamespacesRequest
                  * @return DescribeRocketMQNamespacesOutcome
@@ -1069,6 +1439,78 @@ namespace TencentCloud
                 DescribeRocketMQNamespacesOutcomeCallable DescribeRocketMQNamespacesCallable(const Model::DescribeRocketMQNamespacesRequest& request);
 
                 /**
+                 *This API is used to query the producer client list under a specified topic in RocketMQ.
+                 * @param req DescribeRocketMQProducersRequest
+                 * @return DescribeRocketMQProducersOutcome
+                 */
+                DescribeRocketMQProducersOutcome DescribeRocketMQProducers(const Model::DescribeRocketMQProducersRequest &request);
+                void DescribeRocketMQProducersAsync(const Model::DescribeRocketMQProducersRequest& request, const DescribeRocketMQProducersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQProducersOutcomeCallable DescribeRocketMQProducersCallable(const Model::DescribeRocketMQProducersRequest& request);
+
+                /**
+                 *This API is used to pull public network metric monitoring data from TCOP. Currently, only inbound bandwidth and outbound bandwidth metrics from client to LB are supported.
+                 * @param req DescribeRocketMQPublicAccessMonitorDataRequest
+                 * @return DescribeRocketMQPublicAccessMonitorDataOutcome
+                 */
+                DescribeRocketMQPublicAccessMonitorDataOutcome DescribeRocketMQPublicAccessMonitorData(const Model::DescribeRocketMQPublicAccessMonitorDataRequest &request);
+                void DescribeRocketMQPublicAccessMonitorDataAsync(const Model::DescribeRocketMQPublicAccessMonitorDataRequest& request, const DescribeRocketMQPublicAccessMonitorDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQPublicAccessMonitorDataOutcomeCallable DescribeRocketMQPublicAccessMonitorDataCallable(const Model::DescribeRocketMQPublicAccessMonitorDataRequest& request);
+
+                /**
+                 *This API is used to query the public network access information of RocketMQ instances.
+                 * @param req DescribeRocketMQPublicAccessPointRequest
+                 * @return DescribeRocketMQPublicAccessPointOutcome
+                 */
+                DescribeRocketMQPublicAccessPointOutcome DescribeRocketMQPublicAccessPoint(const Model::DescribeRocketMQPublicAccessPointRequest &request);
+                void DescribeRocketMQPublicAccessPointAsync(const Model::DescribeRocketMQPublicAccessPointRequest& request, const DescribeRocketMQPublicAccessPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQPublicAccessPointOutcomeCallable DescribeRocketMQPublicAccessPointCallable(const Model::DescribeRocketMQPublicAccessPointRequest& request);
+
+                /**
+                 *Obtains the list of roles
+                 * @param req DescribeRocketMQRolesRequest
+                 * @return DescribeRocketMQRolesOutcome
+                 */
+                DescribeRocketMQRolesOutcome DescribeRocketMQRoles(const Model::DescribeRocketMQRolesRequest &request);
+                void DescribeRocketMQRolesAsync(const Model::DescribeRocketMQRolesRequest& request, const DescribeRocketMQRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQRolesOutcomeCallable DescribeRocketMQRolesCallable(const Model::DescribeRocketMQRolesRequest& request);
+
+                /**
+                 *Used to obtain the RocketMQ metric sorting list, such as sorting topics under a cluster instance by the most occupied storage space.
+                 * @param req DescribeRocketMQTopUsagesRequest
+                 * @return DescribeRocketMQTopUsagesOutcome
+                 */
+                DescribeRocketMQTopUsagesOutcome DescribeRocketMQTopUsages(const Model::DescribeRocketMQTopUsagesRequest &request);
+                void DescribeRocketMQTopUsagesAsync(const Model::DescribeRocketMQTopUsagesRequest& request, const DescribeRocketMQTopUsagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQTopUsagesOutcomeCallable DescribeRocketMQTopUsagesCallable(const Model::DescribeRocketMQTopUsagesRequest& request);
+
+                /**
+                 *This API is used to obtain RocketMQ topic details.
+                 * @param req DescribeRocketMQTopicRequest
+                 * @return DescribeRocketMQTopicOutcome
+                 */
+                DescribeRocketMQTopicOutcome DescribeRocketMQTopic(const Model::DescribeRocketMQTopicRequest &request);
+                void DescribeRocketMQTopicAsync(const Model::DescribeRocketMQTopicRequest& request, const DescribeRocketMQTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQTopicOutcomeCallable DescribeRocketMQTopicCallable(const Model::DescribeRocketMQTopicRequest& request);
+
+                /**
+                 *Query RocketMQ messages.
+                 * @param req DescribeRocketMQTopicMsgsRequest
+                 * @return DescribeRocketMQTopicMsgsOutcome
+                 */
+                DescribeRocketMQTopicMsgsOutcome DescribeRocketMQTopicMsgs(const Model::DescribeRocketMQTopicMsgsRequest &request);
+                void DescribeRocketMQTopicMsgsAsync(const Model::DescribeRocketMQTopicMsgsRequest& request, const DescribeRocketMQTopicMsgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQTopicMsgsOutcomeCallable DescribeRocketMQTopicMsgsCallable(const Model::DescribeRocketMQTopicMsgsRequest& request);
+
+                /**
+                 *This API is used to obtain the topic production details list.
+                 * @param req DescribeRocketMQTopicStatsRequest
+                 * @return DescribeRocketMQTopicStatsOutcome
+                 */
+                DescribeRocketMQTopicStatsOutcome DescribeRocketMQTopicStats(const Model::DescribeRocketMQTopicStatsRequest &request);
+                void DescribeRocketMQTopicStatsAsync(const Model::DescribeRocketMQTopicStatsRequest& request, const DescribeRocketMQTopicStatsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQTopicStatsOutcomeCallable DescribeRocketMQTopicStatsCallable(const Model::DescribeRocketMQTopicStatsRequest& request);
+
+                /**
                  *This API is used to get the list of RocketMQ topics.
                  * @param req DescribeRocketMQTopicsRequest
                  * @return DescribeRocketMQTopicsOutcome
@@ -1076,6 +1518,15 @@ namespace TencentCloud
                 DescribeRocketMQTopicsOutcome DescribeRocketMQTopics(const Model::DescribeRocketMQTopicsRequest &request);
                 void DescribeRocketMQTopicsAsync(const Model::DescribeRocketMQTopicsRequest& request, const DescribeRocketMQTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRocketMQTopicsOutcomeCallable DescribeRocketMQTopicsCallable(const Model::DescribeRocketMQTopicsRequest& request);
+
+                /**
+                 *Obtains the list of topics subscribed under a specified consumer group
+                 * @param req DescribeRocketMQTopicsByGroupRequest
+                 * @return DescribeRocketMQTopicsByGroupOutcome
+                 */
+                DescribeRocketMQTopicsByGroupOutcome DescribeRocketMQTopicsByGroup(const Model::DescribeRocketMQTopicsByGroupRequest &request);
+                void DescribeRocketMQTopicsByGroupAsync(const Model::DescribeRocketMQTopicsByGroupRequest& request, const DescribeRocketMQTopicsByGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQTopicsByGroupOutcomeCallable DescribeRocketMQTopicsByGroupCallable(const Model::DescribeRocketMQTopicsByGroupRequest& request);
 
                 /**
                  *This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
@@ -1114,6 +1565,15 @@ namespace TencentCloud
                 DescribeSubscriptionsOutcomeCallable DescribeSubscriptionsCallable(const Model::DescribeSubscriptionsRequest& request);
 
                 /**
+                 *This API is used to query messages.
+                 * @param req DescribeTopicMsgsRequest
+                 * @return DescribeTopicMsgsOutcome
+                 */
+                DescribeTopicMsgsOutcome DescribeTopicMsgs(const Model::DescribeTopicMsgsRequest &request);
+                void DescribeTopicMsgsAsync(const Model::DescribeTopicMsgsRequest& request, const DescribeTopicMsgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTopicMsgsOutcomeCallable DescribeTopicMsgsCallable(const Model::DescribeTopicMsgsRequest& request);
+
+                /**
                  *This API is used to get the list of topics under an environment.
                  * @param req DescribeTopicsRequest
                  * @return DescribeTopicsOutcome
@@ -1121,6 +1581,15 @@ namespace TencentCloud
                 DescribeTopicsOutcome DescribeTopics(const Model::DescribeTopicsRequest &request);
                 void DescribeTopicsAsync(const Model::DescribeTopicsRequest& request, const DescribeTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTopicsOutcomeCallable DescribeTopicsCallable(const Model::DescribeTopicsRequest& request);
+
+                /**
+                 *Export the RocketMQ message details.
+                 * @param req ExportRocketMQMessageDetailRequest
+                 * @return ExportRocketMQMessageDetailOutcome
+                 */
+                ExportRocketMQMessageDetailOutcome ExportRocketMQMessageDetail(const Model::ExportRocketMQMessageDetailRequest &request);
+                void ExportRocketMQMessageDetailAsync(const Model::ExportRocketMQMessageDetailRequest& request, const ExportRocketMQMessageDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportRocketMQMessageDetailOutcomeCallable ExportRocketMQMessageDetailCallable(const Model::ExportRocketMQMessageDetailRequest& request);
 
                 /**
                  *This API is used to update a cluster.
@@ -1177,6 +1646,24 @@ namespace TencentCloud
                 ModifyEnvironmentRoleOutcomeCallable ModifyEnvironmentRoleCallable(const Model::ModifyEnvironmentRoleRequest& request);
 
                 /**
+                 *This API is used to modify the public network security policy for pulsar Pro Edition.
+                 * @param req ModifyPublicNetworkSecurityPolicyRequest
+                 * @return ModifyPublicNetworkSecurityPolicyOutcome
+                 */
+                ModifyPublicNetworkSecurityPolicyOutcome ModifyPublicNetworkSecurityPolicy(const Model::ModifyPublicNetworkSecurityPolicyRequest &request);
+                void ModifyPublicNetworkSecurityPolicyAsync(const Model::ModifyPublicNetworkSecurityPolicyRequest& request, const ModifyPublicNetworkSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPublicNetworkSecurityPolicyOutcomeCallable ModifyPublicNetworkSecurityPolicyCallable(const Model::ModifyPublicNetworkSecurityPolicyRequest& request);
+
+                /**
+                 *This API is used to modify RabbitMQ permissions.
+                 * @param req ModifyRabbitMQPermissionRequest
+                 * @return ModifyRabbitMQPermissionOutcome
+                 */
+                ModifyRabbitMQPermissionOutcome ModifyRabbitMQPermission(const Model::ModifyRabbitMQPermissionRequest &request);
+                void ModifyRabbitMQPermissionAsync(const Model::ModifyRabbitMQPermissionRequest& request, const ModifyRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRabbitMQPermissionOutcomeCallable ModifyRabbitMQPermissionCallable(const Model::ModifyRabbitMQPermissionRequest& request);
+
+                /**
                  *This API is used to modify a TDMQ for RabbitMQ user.
                  * @param req ModifyRabbitMQUserRequest
                  * @return ModifyRabbitMQUserOutcome
@@ -1204,6 +1691,15 @@ namespace TencentCloud
                 ModifyRocketMQClusterOutcomeCallable ModifyRocketMQClusterCallable(const Model::ModifyRocketMQClusterRequest& request);
 
                 /**
+                 *Modifies environment role authorization
+                 * @param req ModifyRocketMQEnvironmentRoleRequest
+                 * @return ModifyRocketMQEnvironmentRoleOutcome
+                 */
+                ModifyRocketMQEnvironmentRoleOutcome ModifyRocketMQEnvironmentRole(const Model::ModifyRocketMQEnvironmentRoleRequest &request);
+                void ModifyRocketMQEnvironmentRoleAsync(const Model::ModifyRocketMQEnvironmentRoleRequest& request, const ModifyRocketMQEnvironmentRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRocketMQEnvironmentRoleOutcomeCallable ModifyRocketMQEnvironmentRoleCallable(const Model::ModifyRocketMQEnvironmentRoleRequest& request);
+
+                /**
                  *This API is used to update a RocketMQ consumer group.
                  * @param req ModifyRocketMQGroupRequest
                  * @return ModifyRocketMQGroupOutcome
@@ -1211,6 +1707,15 @@ namespace TencentCloud
                 ModifyRocketMQGroupOutcome ModifyRocketMQGroup(const Model::ModifyRocketMQGroupRequest &request);
                 void ModifyRocketMQGroupAsync(const Model::ModifyRocketMQGroupRequest& request, const ModifyRocketMQGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyRocketMQGroupOutcomeCallable ModifyRocketMQGroupCallable(const Model::ModifyRocketMQGroupRequest& request);
+
+                /**
+                 *Modify the RocketMQ dedicated instance.
+                 * @param req ModifyRocketMQInstanceRequest
+                 * @return ModifyRocketMQInstanceOutcome
+                 */
+                ModifyRocketMQInstanceOutcome ModifyRocketMQInstance(const Model::ModifyRocketMQInstanceRequest &request);
+                void ModifyRocketMQInstanceAsync(const Model::ModifyRocketMQInstanceRequest& request, const ModifyRocketMQInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRocketMQInstanceOutcomeCallable ModifyRocketMQInstanceCallable(const Model::ModifyRocketMQInstanceRequest& request);
 
                 /**
                  *This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
@@ -1229,6 +1734,15 @@ namespace TencentCloud
                 ModifyRocketMQNamespaceOutcome ModifyRocketMQNamespace(const Model::ModifyRocketMQNamespaceRequest &request);
                 void ModifyRocketMQNamespaceAsync(const Model::ModifyRocketMQNamespaceRequest& request, const ModifyRocketMQNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyRocketMQNamespaceOutcomeCallable ModifyRocketMQNamespaceCallable(const Model::ModifyRocketMQNamespaceRequest& request);
+
+                /**
+                 *Modifies roles
+                 * @param req ModifyRocketMQRoleRequest
+                 * @return ModifyRocketMQRoleOutcome
+                 */
+                ModifyRocketMQRoleOutcome ModifyRocketMQRole(const Model::ModifyRocketMQRoleRequest &request);
+                void ModifyRocketMQRoleAsync(const Model::ModifyRocketMQRoleRequest& request, const ModifyRocketMQRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRocketMQRoleOutcomeCallable ModifyRocketMQRoleCallable(const Model::ModifyRocketMQRoleRequest& request);
 
                 /**
                  *This API is used to update a RocketMQ topic.
@@ -1267,27 +1781,26 @@ namespace TencentCloud
                 PublishCmqMsgOutcomeCallable PublishCmqMsgCallable(const Model::PublishCmqMsgRequest& request);
 
                 /**
-                 *Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
+                 *This API is used to receive messages sent to a specified Partitioned Topic. It supports only Partitioned Topic type. When there are no messages in the Partitioned Topic but the API is still called, it throws a ReceiveTimeout exception.
 
-Instructions on how to use `BatchReceivePolicy`:
+This API is used to batch receive policies.
 
-`BatchReceive` has three parameters:
+This API is used to provide the following three parameters:.
 
-● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
-● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.
-● `Timeout`: The maximum timeout period (in milliseconds) of calling `Receive` when `BatchReceive` is used.
+MaxNumMessages: The maximum number of messages returned by the Receive API each time when using BatchReceive.
+MaxNumBytes: the maximum size of messages returned by the Receive API in a single BatchReceive operation, in bytes.
+Timeout: The maximum timeout period for each Receive API call when using BatchReceive is how long, in MS.
 
-By default, if you don’t specify any of the three parameters, the `BatchReceive` feature is disabled; if one of the three parameter values is above zero, `BatchReceive` is enabled. `BatchReceive` will be disabled when any of the three parameter values reaches the threshold you specify.
+This API is used to disable the BatchReceive feature if none of the three parameters are specified. If any one of the three parameters has a value greater than 0, BatchReceive is enabled. BatchReceive completes when reaching the threshold specified in any one of the three parameters.
 
-Note: The values of both `MaxNumMessages` and `MaxNumBytes` are subject to the value of `ReceiveQueueSize`. If the values of `ReceiveQueueSize` and `MaxNumMessages` are 5 and 10, respectively, you can receive up to five rather than 10 messages when `BatchReceive` is used.
+Note: MaxNumMessages and MaxNumBytes are subject to the size of ReceiveQueueSize for each receipt of messages. If ReceiveQueueSize is set to 5 and MaxNumMessages is set to 10, then BatchReceive will receive at most 5 messages at once rather than 10.
 
 
 
-The API configured with `BatchReceivePolicy` returns multiple messages at a time.
+This API is used to return multiple messages at one time.
 
-1. These messages are separated by “###”. After receiving them, you can separate them with split tools in different languages.
-2. MessageIDs are separated by “###”. After receiving the messages, you can separate the MessageIDs with split tools in different languages, so that you can obtain the `MessageID` field information required for calling the `AcknowledgeMessage` API.
-
+This API is used to Split multiple messages with the special character '###', allowing the business side to use Split tools in different languages to separate messages after receiving them.
+Multiple MessageIDs use the special character '###' to separate with each other. After receiving the message, the business side can leverage the Split tool provided by different languages to separate different messages. (Used for filling in the necessary MessageID field information when calling the AcknowledgeMessage API.).
                  * @param req ReceiveMessageRequest
                  * @return ReceiveMessageOutcome
                  */
@@ -1312,6 +1825,15 @@ The API configured with `BatchReceivePolicy` returns multiple messages at a time
                 ResetRocketMQConsumerOffSetOutcome ResetRocketMQConsumerOffSet(const Model::ResetRocketMQConsumerOffSetRequest &request);
                 void ResetRocketMQConsumerOffSetAsync(const Model::ResetRocketMQConsumerOffSetRequest& request, const ResetRocketMQConsumerOffSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetRocketMQConsumerOffSetOutcomeCallable ResetRocketMQConsumerOffSetCallable(const Model::ResetRocketMQConsumerOffSetRequest& request);
+
+                /**
+                 *Resend the RocketMQ dead letter messages.
+                 * @param req RetryRocketMQDlqMessageRequest
+                 * @return RetryRocketMQDlqMessageOutcome
+                 */
+                RetryRocketMQDlqMessageOutcome RetryRocketMQDlqMessage(const Model::RetryRocketMQDlqMessageRequest &request);
+                void RetryRocketMQDlqMessageAsync(const Model::RetryRocketMQDlqMessageRequest& request, const RetryRocketMQDlqMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RetryRocketMQDlqMessageOutcomeCallable RetryRocketMQDlqMessageCallable(const Model::RetryRocketMQDlqMessageRequest& request);
 
                 /**
                  *This API is used to rewind a CMQ queue.
@@ -1362,13 +1884,22 @@ The message cannot be sent to a persistent topic.
                 SendMsgOutcomeCallable SendMsgCallable(const Model::SendMsgRequest& request);
 
                 /**
-                 *This document is used to send a TDMQ for RocketMQ message.
+                 *This API is used to send messages through RocketMQ. It is only used for sending a small number of test messages from the console and does not provide SLA. Cloud API is subject to traffic throttling. In real business scenarios, use the RocketMQ SDK to send messages.
                  * @param req SendRocketMQMessageRequest
                  * @return SendRocketMQMessageOutcome
                  */
                 SendRocketMQMessageOutcome SendRocketMQMessage(const Model::SendRocketMQMessageRequest &request);
                 void SendRocketMQMessageAsync(const Model::SendRocketMQMessageRequest& request, const SendRocketMQMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SendRocketMQMessageOutcomeCallable SendRocketMQMessageCallable(const Model::SendRocketMQMessageRequest& request);
+
+                /**
+                 *This API is used to enable/disable public network access, and set the security access policy.
+                 * @param req SetRocketMQPublicAccessPointRequest
+                 * @return SetRocketMQPublicAccessPointOutcome
+                 */
+                SetRocketMQPublicAccessPointOutcome SetRocketMQPublicAccessPoint(const Model::SetRocketMQPublicAccessPointRequest &request);
+                void SetRocketMQPublicAccessPointAsync(const Model::SetRocketMQPublicAccessPointRequest& request, const SetRocketMQPublicAccessPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetRocketMQPublicAccessPointOutcomeCallable SetRocketMQPublicAccessPointCallable(const Model::SetRocketMQPublicAccessPointRequest& request);
 
                 /**
                  *This API is used to unbind a CMQ dead letter queue.

@@ -68,15 +68,39 @@ namespace TencentCloud
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取Consumption status
-                     * @return ConsumeStatus Consumption status
+                     * 获取Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
+                     * @return ConsumeStatus Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
                      * 
                      */
                     std::string GetConsumeStatus() const;
 
                     /**
-                     * 设置Consumption status
-                     * @param _consumeStatus Consumption status
+                     * 设置Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
+                     * @param _consumeStatus Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
                      * 
                      */
                     void SetConsumeStatus(const std::string& _consumeStatus);
@@ -111,18 +135,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExceptionDesc Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExceptionDesc() const;
 
                     /**
                      * 设置Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _exceptionDesc Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExceptionDesc(const std::string& _exceptionDesc);
@@ -143,7 +167,13 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool m_groupHasBeenSet;
 
                     /**
-                     * Consumption status
+                     * Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
                      */
                     std::string m_consumeStatus;
                     bool m_consumeStatusHasBeenSet;
@@ -156,7 +186,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_exceptionDesc;
                     bool m_exceptionDescHasBeenSet;

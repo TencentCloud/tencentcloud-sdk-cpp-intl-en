@@ -276,19 +276,15 @@ Enable this feature with caution if the maximum number of connections is limited
                     bool KeepaliveEnableHasBeenSet() const;
 
                     /**
-                     * 获取Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
-                     * @return DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+                     * 获取Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @return DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      * 
                      */
                     bool GetDeregisterTargetRst() const;
 
                     /**
-                     * 设置Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
-                     * @param _deregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+                     * 设置Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @param _deregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      * 
                      */
                     void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
@@ -413,15 +409,15 @@ Default value: -1, which indicates no limit.
                     bool MaxCpsHasBeenSet() const;
 
                     /**
-                     * 获取Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
-                     * @return IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+                     * 获取Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
+                     * @return IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
                      * 
                      */
                     int64_t GetIdleConnectTimeout() const;
 
                     /**
-                     * 设置Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
-                     * @param _idleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+                     * 设置Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
+                     * @param _idleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
                      * 
                      */
                     void SetIdleConnectTimeout(const int64_t& _idleConnectTimeout);
@@ -434,15 +430,15 @@ Default value: -1, which indicates no limit.
                     bool IdleConnectTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProxyProtocol 
+                     * 获取Specifies whether PP is supported for TCP_SSL and QUIC.
+                     * @return ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
                      * 
                      */
                     bool GetProxyProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _proxyProtocol 
+                     * 设置Specifies whether PP is supported for TCP_SSL and QUIC.
+                     * @param _proxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
                      * 
                      */
                     void SetProxyProtocol(const bool& _proxyProtocol);
@@ -455,15 +451,15 @@ Default value: -1, which indicates no limit.
                     bool ProxyProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
-                     * @return SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+                     * 获取Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
+                     * @return SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
                      * 
                      */
                     bool GetSnatEnable() const;
 
                     /**
-                     * 设置Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
-                     * @param _snatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+                     * 设置Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
+                     * @param _snatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
                      * 
                      */
                     void SetSnatEnable(const bool& _snatEnable);
@@ -495,6 +491,111 @@ Default value: -1, which indicates no limit.
                      * 
                      */
                     bool DataCompressModeHasBeenSet() const;
+
+                    /**
+                     * 获取Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @return RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    bool GetRescheduleTargetZeroWeight() const;
+
+                    /**
+                     * 设置Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @param _rescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    void SetRescheduleTargetZeroWeight(const bool& _rescheduleTargetZeroWeight);
+
+                    /**
+                     * 判断参数 RescheduleTargetZeroWeight 是否已赋值
+                     * @return RescheduleTargetZeroWeight 是否已赋值
+                     * 
+                     */
+                    bool RescheduleTargetZeroWeightHasBeenSet() const;
+
+                    /**
+                     * 获取Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @return RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    bool GetRescheduleUnhealthy() const;
+
+                    /**
+                     * 设置Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @param _rescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    void SetRescheduleUnhealthy(const bool& _rescheduleUnhealthy);
+
+                    /**
+                     * 判断参数 RescheduleUnhealthy 是否已赋值
+                     * @return RescheduleUnhealthy 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnhealthyHasBeenSet() const;
+
+                    /**
+                     * 获取Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @return RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    bool GetRescheduleExpandTarget() const;
+
+                    /**
+                     * 设置Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * @param _rescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     * 
+                     */
+                    void SetRescheduleExpandTarget(const bool& _rescheduleExpandTarget);
+
+                    /**
+                     * 判断参数 RescheduleExpandTarget 是否已赋值
+                     * @return RescheduleExpandTarget 是否已赋值
+                     * 
+                     */
+                    bool RescheduleExpandTargetHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+                     * @return RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+                     * 
+                     */
+                    int64_t GetRescheduleStartTime() const;
+
+                    /**
+                     * 设置Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+                     * @param _rescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+                     * 
+                     */
+                    void SetRescheduleStartTime(const int64_t& _rescheduleStartTime);
+
+                    /**
+                     * 判断参数 RescheduleStartTime 是否已赋值
+                     * @return RescheduleStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+                     * @return RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+                     * 
+                     */
+                    int64_t GetRescheduleInterval() const;
+
+                    /**
+                     * 设置Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+                     * @param _rescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+                     * 
+                     */
+                    void SetRescheduleInterval(const int64_t& _rescheduleInterval);
+
+                    /**
+                     * 判断参数 RescheduleInterval 是否已赋值
+                     * @return RescheduleInterval 是否已赋值
+                     * 
+                     */
+                    bool RescheduleIntervalHasBeenSet() const;
 
                 private:
 
@@ -564,8 +665,7 @@ Enable this feature with caution if the maximum number of connections is limited
                     bool m_keepaliveEnableHasBeenSet;
 
                     /**
-                     * Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+                     * Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
                      */
                     bool m_deregisterTargetRst;
                     bool m_deregisterTargetRstHasBeenSet;
@@ -602,19 +702,19 @@ Default value: -1, which indicates no limit.
                     bool m_maxCpsHasBeenSet;
 
                     /**
-                     * Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+                     * Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
                      */
                     int64_t m_idleConnectTimeout;
                     bool m_idleConnectTimeoutHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies whether PP is supported for TCP_SSL and QUIC.
                      */
                     bool m_proxyProtocol;
                     bool m_proxyProtocolHasBeenSet;
 
                     /**
-                     * Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+                     * Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
                      */
                     bool m_snatEnable;
                     bool m_snatEnableHasBeenSet;
@@ -624,6 +724,36 @@ Default value: -1, which indicates no limit.
                      */
                     std::string m_dataCompressMode;
                     bool m_dataCompressModeHasBeenSet;
+
+                    /**
+                     * Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     */
+                    bool m_rescheduleTargetZeroWeight;
+                    bool m_rescheduleTargetZeroWeightHasBeenSet;
+
+                    /**
+                     * Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     */
+                    bool m_rescheduleUnhealthy;
+                    bool m_rescheduleUnhealthyHasBeenSet;
+
+                    /**
+                     * Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+                     */
+                    bool m_rescheduleExpandTarget;
+                    bool m_rescheduleExpandTargetHasBeenSet;
+
+                    /**
+                     * Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+                     */
+                    int64_t m_rescheduleStartTime;
+                    bool m_rescheduleStartTimeHasBeenSet;
+
+                    /**
+                     * Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+                     */
+                    int64_t m_rescheduleInterval;
+                    bool m_rescheduleIntervalHasBeenSet;
 
                 };
             }

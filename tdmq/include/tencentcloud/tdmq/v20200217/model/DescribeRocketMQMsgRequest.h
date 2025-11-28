@@ -150,23 +150,107 @@ namespace TencentCloud
                     /**
                      * 获取The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
                      * @return QueryDlqMsg The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
-                     * 
+                     * @deprecated
                      */
                     bool GetQueryDlqMsg() const;
 
                     /**
                      * 设置The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
                      * @param _queryDlqMsg The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
-                     * 
+                     * @deprecated
                      */
                     void SetQueryDlqMsg(const bool& _queryDlqMsg);
 
                     /**
                      * 判断参数 QueryDlqMsg 是否已赋值
                      * @return QueryDlqMsg 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool QueryDlqMsgHasBeenSet() const;
+
+                    /**
+                     * 获取The value is true when querying dead letters, and only valid for RocketMQ.
+                     * @return QueryDeadLetterMessage The value is true when querying dead letters, and only valid for RocketMQ.
+                     * 
+                     */
+                    bool GetQueryDeadLetterMessage() const;
+
+                    /**
+                     * 设置The value is true when querying dead letters, and only valid for RocketMQ.
+                     * @param _queryDeadLetterMessage The value is true when querying dead letters, and only valid for RocketMQ.
+                     * 
+                     */
+                    void SetQueryDeadLetterMessage(const bool& _queryDeadLetterMessage);
+
+                    /**
+                     * 判断参数 QueryDeadLetterMessage 是否已赋值
+                     * @return QueryDeadLetterMessage 是否已赋值
+                     * 
+                     */
+                    bool QueryDeadLetterMessageHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination offset
+                     * @return Offset Pagination offset
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination offset
+                     * @param _offset Pagination offset
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination limit
+                     * @return Limit Pagination limit
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Pagination limit
+                     * @param _limit Pagination limit
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Filters consumption details based on the consumer group name.
+                     * @return FilterTrackGroup Filters consumption details based on the consumer group name.
+                     * 
+                     */
+                    std::string GetFilterTrackGroup() const;
+
+                    /**
+                     * 设置Filters consumption details based on the consumer group name.
+                     * @param _filterTrackGroup Filters consumption details based on the consumer group name.
+                     * 
+                     */
+                    void SetFilterTrackGroup(const std::string& _filterTrackGroup);
+
+                    /**
+                     * 判断参数 FilterTrackGroup 是否已赋值
+                     * @return FilterTrackGroup 是否已赋值
+                     * 
+                     */
+                    bool FilterTrackGroupHasBeenSet() const;
 
                 private:
 
@@ -205,6 +289,30 @@ namespace TencentCloud
                      */
                     bool m_queryDlqMsg;
                     bool m_queryDlqMsgHasBeenSet;
+
+                    /**
+                     * The value is true when querying dead letters, and only valid for RocketMQ.
+                     */
+                    bool m_queryDeadLetterMessage;
+                    bool m_queryDeadLetterMessageHasBeenSet;
+
+                    /**
+                     * Pagination offset
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Pagination limit
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Filters consumption details based on the consumer group name.
+                     */
+                    std::string m_filterTrackGroup;
+                    bool m_filterTrackGroupHasBeenSet;
 
                 };
             }

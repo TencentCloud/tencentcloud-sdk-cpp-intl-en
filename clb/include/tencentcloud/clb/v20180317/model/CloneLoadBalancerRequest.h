@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @return LoadBalancerId Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param _loadBalancerId CLB instance ID
+                     * 设置Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @param _loadBalancerId Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
-                     * @return LoadBalancerName Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+                     * 获取Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
+                     * @return LoadBalancerName Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
-                     * @param _loadBalancerName Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+                     * 设置Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
+                     * @param _loadBalancerName Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -164,15 +164,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SlaveZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
-                     * @return ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+                     * 获取Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * @return ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
-                     * @param _zoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+                     * 设置Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * @param _zoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -185,15 +185,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB network billing mode. This parameter is applicable only to public network CLB instances.
-                     * @return InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+                     * 获取CLB network billing mode, applicable only to public network CLB instances.
+                     * @return InternetAccessible CLB network billing mode, applicable only to public network CLB instances.
                      * 
                      */
                     InternetAccessible GetInternetAccessible() const;
 
                     /**
-                     * 设置CLB network billing mode. This parameter is applicable only to public network CLB instances.
-                     * @param _internetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+                     * 设置CLB network billing mode, applicable only to public network CLB instances.
+                     * @param _internetAccessible CLB network billing mode, applicable only to public network CLB instances.
                      * 
                      */
                     void SetInternetAccessible(const InternetAccessible& _internetAccessible);
@@ -206,15 +206,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
-                     * @return VipIsp ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
+                     * 获取It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
+                     * @return VipIsp It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
                      * 
                      */
                     std::string GetVipIsp() const;
 
                     /**
-                     * 设置ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
-                     * @param _vipIsp ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
+                     * 设置It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
+                     * @param _vipIsp It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
                      * 
                      */
                     void SetVipIsp(const std::string& _vipIsp);
@@ -227,15 +227,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool VipIspHasBeenSet() const;
 
                     /**
-                     * 获取Applies for CLB instances for a specified VIP
-                     * @return Vip Applies for CLB instances for a specified VIP
+                     * 获取Specifies the Vip to apply for cloud load balancer.
+                     * @return Vip Specifies the Vip to apply for cloud load balancer.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Applies for CLB instances for a specified VIP
-                     * @param _vip Applies for CLB instances for a specified VIP
+                     * 设置Specifies the Vip to apply for cloud load balancer.
+                     * @param _vip Specifies the Vip to apply for cloud load balancer.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -248,15 +248,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Tags a CLB instance when purchasing it
-                     * @return Tags Tags a CLB instance when purchasing it
+                     * 获取Proceed to purchase cloud load balancer and Tag it at the same time.
+                     * @return Tags Proceed to purchase cloud load balancer and Tag it at the same time.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tags a CLB instance when purchasing it
-                     * @param _tags Tags a CLB instance when purchasing it
+                     * 设置Proceed to purchase cloud load balancer and Tag it at the same time.
+                     * @param _tags Proceed to purchase cloud load balancer and Tag it at the same time.
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -269,15 +269,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated cluster information
-                     * @return ExclusiveCluster Dedicated cluster information
+                     * 获取Exclusive cluster information.
+                     * @return ExclusiveCluster Exclusive cluster information.
                      * 
                      */
                     ExclusiveCluster GetExclusiveCluster() const;
 
                     /**
-                     * 设置Dedicated cluster information
-                     * @param _exclusiveCluster Dedicated cluster information
+                     * 设置Exclusive cluster information.
+                     * @param _exclusiveCluster Exclusive cluster information.
                      * 
                      */
                     void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
@@ -290,15 +290,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ExclusiveClusterHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-                     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * 获取BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
+                     * @return BandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
                      * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
-                     * 设置Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-                     * @param _bandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * 设置BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
+                     * @param _bandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
                      * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
@@ -311,15 +311,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support binding cross-VPC IPs or cross-region IPs
-                     * @return SnatPro Whether to support binding cross-VPC IPs or cross-region IPs
+                     * 获取Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
+                     * @return SnatPro Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
                      * 
                      */
                     bool GetSnatPro() const;
 
                     /**
-                     * 设置Whether to support binding cross-VPC IPs or cross-region IPs
-                     * @param _snatPro Whether to support binding cross-VPC IPs or cross-region IPs
+                     * 设置Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
+                     * @param _snatPro Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
                      * 
                      */
                     void SetSnatPro(const bool& _snatPro);
@@ -332,15 +332,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SnatProHasBeenSet() const;
 
                     /**
-                     * 获取Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
-                     * @return SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     * 获取Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
+                     * @return SnatIps Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
                      * 
                      */
                     std::vector<SnatIp> GetSnatIps() const;
 
                     /**
-                     * 设置Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
-                     * @param _snatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     * 设置Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
+                     * @param _snatIps Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
                      * 
                      */
                     void SetSnatIps(const std::vector<SnatIp>& _snatIps);
@@ -353,15 +353,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SnatIpsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the public network CLB dedicated cluster
-                     * @return ClusterIds ID of the public network CLB dedicated cluster
+                     * 获取Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
+                     * @return ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置ID of the public network CLB dedicated cluster
-                     * @param _clusterIds ID of the public network CLB dedicated cluster
+                     * 设置Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
+                     * @param _clusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -374,15 +374,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specification of the LCU-supported instance.
-                     * @return SlaType Specification of the LCU-supported instance.
+                     * 获取Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
+                     * @return SlaType Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Specification of the LCU-supported instance.
-                     * @param _slaType Specification of the LCU-supported instance.
+                     * 设置Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
+                     * @param _slaType Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -395,15 +395,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SlaTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the STGW dedicated cluster
-                     * @return ClusterTag Tag of the STGW dedicated cluster
+                     * 获取Specifies the Tag of the Stgw exclusive cluster.
+                     * @return ClusterTag Specifies the Tag of the Stgw exclusive cluster.
                      * 
                      */
                     std::string GetClusterTag() const;
 
                     /**
-                     * 设置Tag of the STGW dedicated cluster
-                     * @param _clusterTag Tag of the STGW dedicated cluster
+                     * 设置Specifies the Tag of the Stgw exclusive cluster.
+                     * @param _clusterTag Specifies the Tag of the Stgw exclusive cluster.
                      * 
                      */
                     void SetClusterTag(const std::string& _clusterTag);
@@ -416,15 +416,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ClusterTagHasBeenSet() const;
 
                     /**
-                     * 获取Availability zones for nearby access of private network CLB instances to distribute traffic
-                     * @return Zones Availability zones for nearby access of private network CLB instances to distribute traffic
+                     * 获取Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * @return Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Availability zones for nearby access of private network CLB instances to distribute traffic
-                     * @param _zones Availability zones for nearby access of private network CLB instances to distribute traffic
+                     * 设置Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * @param _zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -437,15 +437,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
-                     * @return EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+                     * 获取The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
+                     * @return EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
                      * 
                      */
                     std::string GetEipAddressId() const;
 
                     /**
-                     * 设置Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
-                     * @param _eipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+                     * 设置The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
+                     * @param _eipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
                      * 
                      */
                     void SetEipAddressId(const std::string& _eipAddressId);
@@ -460,14 +460,14 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                 private:
 
                     /**
-                     * CLB instance ID
+                     * Specifies the clb ID. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
-Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
+                     * Specifies the name of the cloned load balancing instance. rule: 1-60 english letters, chinese characters, digits, connecting lines "-", or underscores "_".
+Note: if the name is identical to that of an existing load balancing instance in the system, the system will automatically generate a name for the created cloud load balancer instance.
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
@@ -493,85 +493,85 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool m_slaveZoneIdHasBeenSet;
 
                     /**
-                     * Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+                     * Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * CLB network billing mode. This parameter is applicable only to public network CLB instances.
+                     * CLB network billing mode, applicable only to public network CLB instances.
                      */
                     InternetAccessible m_internetAccessible;
                     bool m_internetAccessibleHasBeenSet;
 
                     /**
-                     * ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
+                     * It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
                      */
                     std::string m_vipIsp;
                     bool m_vipIspHasBeenSet;
 
                     /**
-                     * Applies for CLB instances for a specified VIP
+                     * Specifies the Vip to apply for cloud load balancer.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Tags a CLB instance when purchasing it
+                     * Proceed to purchase cloud load balancer and Tag it at the same time.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Dedicated cluster information
+                     * Exclusive cluster information.
                      */
                     ExclusiveCluster m_exclusiveCluster;
                     bool m_exclusiveClusterHasBeenSet;
 
                     /**
-                     * Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies this parameter indicates the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE).
                      */
                     std::string m_bandwidthPackageId;
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * Whether to support binding cross-VPC IPs or cross-region IPs
+                     * Specifies whether the cross-regional or cross-Vpc IP binding feature is supported.
                      */
                     bool m_snatPro;
                     bool m_snatProHasBeenSet;
 
                     /**
-                     * Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     * Enables cross-regional or cross-Vpc IP binding and creates a SnatIp.
                      */
                     std::vector<SnatIp> m_snatIps;
                     bool m_snatIpsHasBeenSet;
 
                     /**
-                     * ID of the public network CLB dedicated cluster
+                     * Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.comom/document/product/214/49278?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Specification of the LCU-supported instance.
+                     * Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
 
                     /**
-                     * Tag of the STGW dedicated cluster
+                     * Specifies the Tag of the Stgw exclusive cluster.
                      */
                     std::string m_clusterTag;
                     bool m_clusterTagHasBeenSet;
 
                     /**
-                     * Availability zones for nearby access of private network CLB instances to distribute traffic
+                     * Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
+                     * The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1).
                      */
                     std::string m_eipAddressId;
                     bool m_eipAddressIdHasBeenSet;

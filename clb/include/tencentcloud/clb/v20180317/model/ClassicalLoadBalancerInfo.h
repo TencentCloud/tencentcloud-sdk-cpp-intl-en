@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerIds List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CLB instance ID list
+                     * @return LoadBalancerIds CLB instance ID list
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerIds List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CLB instance ID list
+                     * @param _loadBalancerIds CLB instance ID list
                      * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CLB instance ID list
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;

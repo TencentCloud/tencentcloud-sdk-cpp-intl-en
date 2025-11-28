@@ -300,6 +300,152 @@ namespace TencentCloud
                      */
                     bool MaxQueuesPerTopicHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxRetention Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaxRetention() const;
+
+                    /**
+                     * 设置Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxRetention Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxRetention(const int64_t& _maxRetention);
+
+                    /**
+                     * 判断参数 MaxRetention 是否已赋值
+                     * @return MaxRetention 是否已赋值
+                     * 
+                     */
+                    bool MaxRetentionHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MinRetention Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMinRetention() const;
+
+                    /**
+                     * 设置Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _minRetention Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMinRetention(const int64_t& _minRetention);
+
+                    /**
+                     * 判断参数 MinRetention 是否已赋值
+                     * @return MinRetention 是否已赋值
+                     * 
+                     */
+                    bool MinRetentionHasBeenSet() const;
+
+                    /**
+                     * 获取Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Retention Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRetention() const;
+
+                    /**
+                     * 设置Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _retention Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRetention(const int64_t& _retention);
+
+                    /**
+                     * 判断参数 Retention 是否已赋值
+                     * @return Retention 是否已赋值
+                     * 
+                     */
+                    bool RetentionHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicNumLowerLimit Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetTopicNumLowerLimit() const;
+
+                    /**
+                     * 设置Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _topicNumLowerLimit Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTopicNumLowerLimit(const int64_t& _topicNumLowerLimit);
+
+                    /**
+                     * 判断参数 TopicNumLowerLimit 是否已赋值
+                     * @return TopicNumLowerLimit 是否已赋值
+                     * 
+                     */
+                    bool TopicNumLowerLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetTopicNumUpperLimit() const;
+
+                    /**
+                     * 设置Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _topicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTopicNumUpperLimit(const int64_t& _topicNumUpperLimit);
+
+                    /**
+                     * 判断参数 TopicNumUpperLimit 是否已赋值
+                     * @return TopicNumUpperLimit 是否已赋值
+                     * 
+                     */
+                    bool TopicNumUpperLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+                     * @return SendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+                     * 
+                     */
+                    double GetSendReceiveRatio() const;
+
+                    /**
+                     * 设置Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+                     * @param _sendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+                     * 
+                     */
+                    void SetSendReceiveRatio(const double& _sendReceiveRatio);
+
+                    /**
+                     * 判断参数 SendReceiveRatio 是否已赋值
+                     * @return SendReceiveRatio 是否已赋值
+                     * 
+                     */
+                    bool SendReceiveRatioHasBeenSet() const;
+
                 private:
 
                     /**
@@ -373,6 +519,47 @@ namespace TencentCloud
                      */
                     uint64_t m_maxQueuesPerTopic;
                     bool m_maxQueuesPerTopicHasBeenSet;
+
+                    /**
+                     * Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxRetention;
+                    bool m_maxRetentionHasBeenSet;
+
+                    /**
+                     * Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_minRetention;
+                    bool m_minRetentionHasBeenSet;
+
+                    /**
+                     * Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_retention;
+                    bool m_retentionHasBeenSet;
+
+                    /**
+                     * Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_topicNumLowerLimit;
+                    bool m_topicNumLowerLimitHasBeenSet;
+
+                    /**
+                     * Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_topicNumUpperLimit;
+                    bool m_topicNumUpperLimitHasBeenSet;
+
+                    /**
+                     * Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+                     */
+                    double m_sendReceiveRatio;
+                    bool m_sendReceiveRatioHasBeenSet;
 
                 };
             }

@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/RocketMQSubscription.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
 
 
 namespace TencentCloud
@@ -197,6 +199,152 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetNamespace() const;
+
+                    /**
+                     * 设置Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNamespace(const std::string& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastUpdateTime Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetLastUpdateTime() const;
+
+                    /**
+                     * 设置Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _lastUpdateTime Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLastUpdateTime(const int64_t& _lastUpdateTime);
+
+                    /**
+                     * 判断参数 LastUpdateTime 是否已赋值
+                     * @return LastUpdateTime 是否已赋值
+                     * 
+                     */
+                    bool LastUpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubscriptionCount Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetSubscriptionCount() const;
+
+                    /**
+                     * 设置Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subscriptionCount Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubscriptionCount(const int64_t& _subscriptionCount);
+
+                    /**
+                     * 判断参数 SubscriptionCount 是否已赋值
+                     * @return SubscriptionCount 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionCountHasBeenSet() const;
+
+                    /**
+                     * 获取Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubscriptionData Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<RocketMQSubscription> GetSubscriptionData() const;
+
+                    /**
+                     * 设置Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subscriptionData Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubscriptionData(const std::vector<RocketMQSubscription>& _subscriptionData);
+
+                    /**
+                     * 判断参数 SubscriptionData 是否已赋值
+                     * @return SubscriptionData 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionDataHasBeenSet() const;
+
+                    /**
+                     * 获取List of bound tags
+                     * @return TagList List of bound tags
+                     * 
+                     */
+                    std::vector<Tag> GetTagList() const;
+
+                    /**
+                     * 设置List of bound tags
+                     * @param _tagList List of bound tags
+                     * 
+                     */
+                    void SetTagList(const std::vector<Tag>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     * 
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -241,6 +389,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_lastUpdateTime;
+                    bool m_lastUpdateTimeHasBeenSet;
+
+                    /**
+                     * Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_subscriptionCount;
+                    bool m_subscriptionCountHasBeenSet;
+
+                    /**
+                     * Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RocketMQSubscription> m_subscriptionData;
+                    bool m_subscriptionDataHasBeenSet;
+
+                    /**
+                     * List of bound tags
+                     */
+                    std::vector<Tag> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }

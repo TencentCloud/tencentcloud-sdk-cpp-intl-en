@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  Consumer
+                * Consumer.
                 */
                 class Consumer : public AbstractModel
                 {

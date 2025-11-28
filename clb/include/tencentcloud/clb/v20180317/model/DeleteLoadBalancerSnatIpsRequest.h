@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a CLB instance, e.g., lb-12345678.
-                     * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 获取Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+                     * @return LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置Unique ID of a CLB instance, e.g., lb-12345678.
-                     * @param _loadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 设置Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+                     * @param _loadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of the SNAT IP addresses to be deleted
-                     * @return Ips Array of the SNAT IP addresses to be deleted
+                     * 获取Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
+                     * @return Ips Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
                      * 
                      */
                     std::vector<std::string> GetIps() const;
 
                     /**
-                     * 设置Array of the SNAT IP addresses to be deleted
-                     * @param _ips Array of the SNAT IP addresses to be deleted
+                     * 设置Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
+                     * @param _ips Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
                      * 
                      */
                     void SetIps(const std::vector<std::string>& _ips);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a CLB instance, e.g., lb-12345678.
+                     * Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID, such as lb-12345678.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Array of the SNAT IP addresses to be deleted
+                     * Specifies the address array of SnatIp to delete. maximum deletion supported is 20.
                      */
                     std::vector<std::string> m_ips;
                     bool m_ipsHasBeenSet;

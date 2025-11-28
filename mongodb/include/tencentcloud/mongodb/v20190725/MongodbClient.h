@@ -33,6 +33,10 @@
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceHourRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceHourResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/CreateLogDownloadTaskRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/CreateLogDownloadTaskResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeBackupDownloadTaskRequest.h>
@@ -53,6 +57,12 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeDetailedSlowLogsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeInstanceSSLRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeInstanceSSLResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeLogDownloadTasksRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeLogDownloadTasksResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeMongodbLogsRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeMongodbLogsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSecurityGroupRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSecurityGroupResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSlowLogPatternsRequest.h>
@@ -69,6 +79,8 @@
 #include <tencentcloud/mongodb/v20190725/model/InquirePriceModifyDBInstanceSpecResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/InquirePriceRenewDBInstancesRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/InquirePriceRenewDBInstancesResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/InstanceEnableSSLRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/InstanceEnableSSLResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/IsolateDBInstanceRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/ModifyDBInstanceNetworkAddressRequest.h>
@@ -89,6 +101,10 @@
 #include <tencentcloud/mongodb/v20190725/model/SetDBInstanceDeletionProtectionResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/TerminateDBInstancesRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/TerminateDBInstancesResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/UpgradeDBInstanceKernelVersionRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/UpgradeDBInstanceKernelVersionResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/UpgradeDbInstanceVersionRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/UpgradeDbInstanceVersionResponse.h>
 
 
 namespace TencentCloud
@@ -118,6 +134,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
                 typedef std::future<CreateDBInstanceHourOutcome> CreateDBInstanceHourOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::CreateDBInstanceHourRequest&, CreateDBInstanceHourOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceHourAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLogDownloadTaskResponse> CreateLogDownloadTaskOutcome;
+                typedef std::future<CreateLogDownloadTaskOutcome> CreateLogDownloadTaskOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::CreateLogDownloadTaskRequest&, CreateLogDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLogDownloadTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLogDownloadTaskResponse> DeleteLogDownloadTaskOutcome;
+                typedef std::future<DeleteLogDownloadTaskOutcome> DeleteLogDownloadTaskOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DeleteLogDownloadTaskRequest&, DeleteLogDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogDownloadTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
@@ -148,6 +170,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
                 typedef std::future<DescribeInstanceParamsOutcome> DescribeInstanceParamsOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeInstanceParamsRequest&, DescribeInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceSSLResponse> DescribeInstanceSSLOutcome;
+                typedef std::future<DescribeInstanceSSLOutcome> DescribeInstanceSSLOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeInstanceSSLRequest&, DescribeInstanceSSLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceSSLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogDownloadTasksResponse> DescribeLogDownloadTasksOutcome;
+                typedef std::future<DescribeLogDownloadTasksOutcome> DescribeLogDownloadTasksOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeLogDownloadTasksRequest&, DescribeLogDownloadTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogDownloadTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMongodbLogsResponse> DescribeMongodbLogsOutcome;
+                typedef std::future<DescribeMongodbLogsOutcome> DescribeMongodbLogsOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeMongodbLogsRequest&, DescribeMongodbLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMongodbLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSecurityGroupResponse> DescribeSecurityGroupOutcome;
                 typedef std::future<DescribeSecurityGroupOutcome> DescribeSecurityGroupOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeSecurityGroupRequest&, DescribeSecurityGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityGroupAsyncHandler;
@@ -172,6 +203,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceRenewDBInstancesResponse> InquirePriceRenewDBInstancesOutcome;
                 typedef std::future<InquirePriceRenewDBInstancesOutcome> InquirePriceRenewDBInstancesOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::InquirePriceRenewDBInstancesRequest&, InquirePriceRenewDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::InstanceEnableSSLResponse> InstanceEnableSSLOutcome;
+                typedef std::future<InstanceEnableSSLOutcome> InstanceEnableSSLOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::InstanceEnableSSLRequest&, InstanceEnableSSLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InstanceEnableSSLAsyncHandler;
                 typedef Outcome<Core::Error, Model::IsolateDBInstanceResponse> IsolateDBInstanceOutcome;
                 typedef std::future<IsolateDBInstanceOutcome> IsolateDBInstanceOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::IsolateDBInstanceRequest&, IsolateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDBInstanceAsyncHandler;
@@ -202,6 +236,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateDBInstancesResponse> TerminateDBInstancesOutcome;
                 typedef std::future<TerminateDBInstancesOutcome> TerminateDBInstancesOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::TerminateDBInstancesRequest&, TerminateDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionOutcome;
+                typedef std::future<UpgradeDBInstanceKernelVersionOutcome> UpgradeDBInstanceKernelVersionOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::UpgradeDBInstanceKernelVersionRequest&, UpgradeDBInstanceKernelVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceKernelVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeDbInstanceVersionResponse> UpgradeDbInstanceVersionOutcome;
+                typedef std::future<UpgradeDbInstanceVersionOutcome> UpgradeDbInstanceVersionOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::UpgradeDbInstanceVersionRequest&, UpgradeDbInstanceVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDbInstanceVersionAsyncHandler;
 
 
 
@@ -249,6 +289,24 @@ namespace TencentCloud
                 CreateDBInstanceHourOutcome CreateDBInstanceHour(const Model::CreateDBInstanceHourRequest &request);
                 void CreateDBInstanceHourAsync(const Model::CreateDBInstanceHourRequest& request, const CreateDBInstanceHourAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDBInstanceHourOutcomeCallable CreateDBInstanceHourCallable(const Model::CreateDBInstanceHourRequest& request);
+
+                /**
+                 *This API is used to create a log download task.
+                 * @param req CreateLogDownloadTaskRequest
+                 * @return CreateLogDownloadTaskOutcome
+                 */
+                CreateLogDownloadTaskOutcome CreateLogDownloadTask(const Model::CreateLogDownloadTaskRequest &request);
+                void CreateLogDownloadTaskAsync(const Model::CreateLogDownloadTaskRequest& request, const CreateLogDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLogDownloadTaskOutcomeCallable CreateLogDownloadTaskCallable(const Model::CreateLogDownloadTaskRequest& request);
+
+                /**
+                 *This API is used to delete a log download task.
+                 * @param req DeleteLogDownloadTaskRequest
+                 * @return DeleteLogDownloadTaskOutcome
+                 */
+                DeleteLogDownloadTaskOutcome DeleteLogDownloadTask(const Model::DeleteLogDownloadTaskRequest &request);
+                void DeleteLogDownloadTaskAsync(const Model::DeleteLogDownloadTaskRequest& request, const DeleteLogDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLogDownloadTaskOutcomeCallable DeleteLogDownloadTaskCallable(const Model::DeleteLogDownloadTaskRequest& request);
 
                 /**
                  *This API is used to query the asynchronous task status.
@@ -341,6 +399,33 @@ namespace TencentCloud
                 DescribeInstanceParamsOutcomeCallable DescribeInstanceParamsCallable(const Model::DescribeInstanceParamsRequest& request);
 
                 /**
+                 *This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+                 * @param req DescribeInstanceSSLRequest
+                 * @return DescribeInstanceSSLOutcome
+                 */
+                DescribeInstanceSSLOutcome DescribeInstanceSSL(const Model::DescribeInstanceSSLRequest &request);
+                void DescribeInstanceSSLAsync(const Model::DescribeInstanceSSLRequest& request, const DescribeInstanceSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceSSLOutcomeCallable DescribeInstanceSSLCallable(const Model::DescribeInstanceSSLRequest& request);
+
+                /**
+                 *This API is used to query a log download task.
+                 * @param req DescribeLogDownloadTasksRequest
+                 * @return DescribeLogDownloadTasksOutcome
+                 */
+                DescribeLogDownloadTasksOutcome DescribeLogDownloadTasks(const Model::DescribeLogDownloadTasksRequest &request);
+                void DescribeLogDownloadTasksAsync(const Model::DescribeLogDownloadTasksRequest& request, const DescribeLogDownloadTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogDownloadTasksOutcomeCallable DescribeLogDownloadTasksCallable(const Model::DescribeLogDownloadTasksRequest& request);
+
+                /**
+                 *This API is used to query running logs.
+                 * @param req DescribeMongodbLogsRequest
+                 * @return DescribeMongodbLogsOutcome
+                 */
+                DescribeMongodbLogsOutcome DescribeMongodbLogs(const Model::DescribeMongodbLogsRequest &request);
+                void DescribeMongodbLogsAsync(const Model::DescribeMongodbLogsRequest& request, const DescribeMongodbLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMongodbLogsOutcomeCallable DescribeMongodbLogsCallable(const Model::DescribeMongodbLogsRequest& request);
+
+                /**
                  *This API is used to query security groups bound to an instance.
                  * @param req DescribeSecurityGroupRequest
                  * @return DescribeSecurityGroupOutcome
@@ -411,6 +496,15 @@ namespace TencentCloud
                 InquirePriceRenewDBInstancesOutcome InquirePriceRenewDBInstances(const Model::InquirePriceRenewDBInstancesRequest &request);
                 void InquirePriceRenewDBInstancesAsync(const Model::InquirePriceRenewDBInstancesRequest& request, const InquirePriceRenewDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceRenewDBInstancesOutcomeCallable InquirePriceRenewDBInstancesCallable(const Model::InquirePriceRenewDBInstancesRequest& request);
+
+                /**
+                 *This API is used to set the SSL status for an instance.
+                 * @param req InstanceEnableSSLRequest
+                 * @return InstanceEnableSSLOutcome
+                 */
+                InstanceEnableSSLOutcome InstanceEnableSSL(const Model::InstanceEnableSSLRequest &request);
+                void InstanceEnableSSLAsync(const Model::InstanceEnableSSLRequest& request, const InstanceEnableSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InstanceEnableSSLOutcomeCallable InstanceEnableSSLCallable(const Model::InstanceEnableSSLRequest& request);
 
                 /**
                  *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
@@ -501,6 +595,24 @@ namespace TencentCloud
                 TerminateDBInstancesOutcome TerminateDBInstances(const Model::TerminateDBInstancesRequest &request);
                 void TerminateDBInstancesAsync(const Model::TerminateDBInstancesRequest& request, const TerminateDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TerminateDBInstancesOutcomeCallable TerminateDBInstancesCallable(const Model::TerminateDBInstancesRequest& request);
+
+                /**
+                 *This API is used to upgrade the kernel version of the database instance.
+                 * @param req UpgradeDBInstanceKernelVersionRequest
+                 * @return UpgradeDBInstanceKernelVersionOutcome
+                 */
+                UpgradeDBInstanceKernelVersionOutcome UpgradeDBInstanceKernelVersion(const Model::UpgradeDBInstanceKernelVersionRequest &request);
+                void UpgradeDBInstanceKernelVersionAsync(const Model::UpgradeDBInstanceKernelVersionRequest& request, const UpgradeDBInstanceKernelVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeDBInstanceKernelVersionOutcomeCallable UpgradeDBInstanceKernelVersionCallable(const Model::UpgradeDBInstanceKernelVersionRequest& request);
+
+                /**
+                 *This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+                 * @param req UpgradeDbInstanceVersionRequest
+                 * @return UpgradeDbInstanceVersionOutcome
+                 */
+                UpgradeDbInstanceVersionOutcome UpgradeDbInstanceVersion(const Model::UpgradeDbInstanceVersionRequest &request);
+                void UpgradeDbInstanceVersionAsync(const Model::UpgradeDbInstanceVersionRequest& request, const UpgradeDbInstanceVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeDbInstanceVersionOutcomeCallable UpgradeDbInstanceVersionCallable(const Model::UpgradeDbInstanceVersionRequest& request);
 
             };
         }

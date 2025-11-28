@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
 
 
 namespace TencentCloud
@@ -91,42 +92,42 @@ namespace TencentCloud
                     /**
                      * 获取Consumption TPS.
                      * @return TPS Consumption TPS.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetTPS() const;
 
                     /**
                      * 设置Consumption TPS.
                      * @param _tPS Consumption TPS.
-                     * 
+                     * @deprecated
                      */
                     void SetTPS(const uint64_t& _tPS);
 
                     /**
                      * 判断参数 TPS 是否已赋值
                      * @return TPS 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TPSHasBeenSet() const;
 
                     /**
                      * 获取The total number of heaped messages.
                      * @return TotalAccumulative The total number of heaped messages.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetTotalAccumulative() const;
 
                     /**
                      * 设置The total number of heaped messages.
                      * @param _totalAccumulative The total number of heaped messages.
-                     * 
+                     * @deprecated
                      */
                     void SetTotalAccumulative(const int64_t& _totalAccumulative);
 
                     /**
                      * 判断参数 TotalAccumulative 是否已赋值
                      * @return TotalAccumulative 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TotalAccumulativeHasBeenSet() const;
 
@@ -381,6 +382,98 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RetryMaxTimesHasBeenSet() const;
 
+                    /**
+                     * 获取Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetNamespace() const;
+
+                    /**
+                     * 设置Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNamespace(const std::string& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取Number of subscribed topics.
+                     * @return SubscribeTopicNum Number of subscribed topics.
+                     * 
+                     */
+                    int64_t GetSubscribeTopicNum() const;
+
+                    /**
+                     * 设置Number of subscribed topics.
+                     * @param _subscribeTopicNum Number of subscribed topics.
+                     * 
+                     */
+                    void SetSubscribeTopicNum(const int64_t& _subscribeTopicNum);
+
+                    /**
+                     * 判断参数 SubscribeTopicNum 是否已赋值
+                     * @return SubscribeTopicNum 是否已赋值
+                     * 
+                     */
+                    bool SubscribeTopicNumHasBeenSet() const;
+
+                    /**
+                     * 获取List of bound tags
+                     * @return TagList List of bound tags
+                     * 
+                     */
+                    std::vector<Tag> GetTagList() const;
+
+                    /**
+                     * 设置List of bound tags
+                     * @param _tagList List of bound tags
+                     * 
+                     */
+                    void SetTagList(const std::vector<Tag>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     * 
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -477,6 +570,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_retryMaxTimes;
                     bool m_retryMaxTimesHasBeenSet;
+
+                    /**
+                     * Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * Number of subscribed topics.
+                     */
+                    int64_t m_subscribeTopicNum;
+                    bool m_subscribeTopicNumHasBeenSet;
+
+                    /**
+                     * List of bound tags
+                     */
+                    std::vector<Tag> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }

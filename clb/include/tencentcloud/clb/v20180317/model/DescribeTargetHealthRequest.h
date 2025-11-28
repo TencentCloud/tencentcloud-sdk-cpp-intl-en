@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the listener ID list to query.
+                     * @return ListenerIds Specifies the listener ID list to query.
+                     * 
+                     */
+                    std::vector<std::string> GetListenerIds() const;
+
+                    /**
+                     * 设置Specifies the listener ID list to query.
+                     * @param _listenerIds Specifies the listener ID list to query.
+                     * 
+                     */
+                    void SetListenerIds(const std::vector<std::string>& _listenerIds);
+
+                    /**
+                     * 判断参数 ListenerIds 是否已赋值
+                     * @return ListenerIds 是否已赋值
+                     * 
+                     */
+                    bool ListenerIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the list of rule ids to be queried.
+                     * @return LocationIds Specifies the list of rule ids to be queried.
+                     * 
+                     */
+                    std::vector<std::string> GetLocationIds() const;
+
+                    /**
+                     * 设置Specifies the list of rule ids to be queried.
+                     * @param _locationIds Specifies the list of rule ids to be queried.
+                     * 
+                     */
+                    void SetLocationIds(const std::vector<std::string>& _locationIds);
+
+                    /**
+                     * 判断参数 LocationIds 是否已赋值
+                     * @return LocationIds 是否已赋值
+                     * 
+                     */
+                    bool LocationIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;
+
+                    /**
+                     * Specifies the listener ID list to query.
+                     */
+                    std::vector<std::string> m_listenerIds;
+                    bool m_listenerIdsHasBeenSet;
+
+                    /**
+                     * Specifies the list of rule ids to be queried.
+                     */
+                    std::vector<std::string> m_locationIds;
+                    bool m_locationIdsHasBeenSet;
 
                 };
             }

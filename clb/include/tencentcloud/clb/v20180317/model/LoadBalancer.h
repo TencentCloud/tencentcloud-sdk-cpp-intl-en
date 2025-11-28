@@ -97,19 +97,19 @@ namespace TencentCloud
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance network type:
-OPEN: public network; INTERNAL: private network.
-                     * @return LoadBalancerType CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+                     * 获取Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+                     * @return LoadBalancerType Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
-                     * 设置CLB instance network type:
-OPEN: public network; INTERNAL: private network.
-                     * @param _loadBalancerType CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+                     * 设置Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+                     * @param _loadBalancerType Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
                      * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
@@ -143,15 +143,15 @@ OPEN: public network; INTERNAL: private network.
                     bool ForwardHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
+                     * @return Domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
+                     * @param _domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -165,18 +165,14 @@ OPEN: public network; INTERNAL: private network.
 
                     /**
                      * 获取List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerVips List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerVips() const;
 
                     /**
                      * 设置List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _loadBalancerVips List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLoadBalancerVips(const std::vector<std::string>& _loadBalancerVips);
@@ -189,23 +185,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadBalancerVipsHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+                     * @return Status Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+                     * @param _status Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -218,19 +210,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @return CreateTime CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @param _createTime CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -243,19 +235,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StatusTime Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @return StatusTime Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     std::string GetStatusTime() const;
 
                     /**
-                     * 设置Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _statusTime Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @param _statusTime Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     void SetStatusTime(const std::string& _statusTime);
@@ -290,18 +282,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -314,19 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+                     * @return OpenBgp Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
                      * 
                      */
                     uint64_t GetOpenBgp() const;
 
                     /**
-                     * 设置Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _openBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+                     * @param _openBgp Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
                      * 
                      */
                     void SetOpenBgp(const uint64_t& _openBgp);
@@ -339,19 +323,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OpenBgpHasBeenSet() const;
 
                     /**
-                     * 获取SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Snat SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+                     * @return Snat Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
                      * 
                      */
                     bool GetSnat() const;
 
                     /**
-                     * 设置SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _snat SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+                     * @param _snat Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
                      * 
                      */
                     void SetSnat(const bool& _snat);
@@ -364,19 +344,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SnatHasBeenSet() const;
 
                     /**
-                     * 获取0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Isolation 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether isolated. 0 means not isolated. 1 means isolated.
+                     * @return Isolation Whether isolated. 0 means not isolated. 1 means isolated.
                      * 
                      */
                     uint64_t GetIsolation() const;
 
                     /**
-                     * 设置0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isolation 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether isolated. 0 means not isolated. 1 means isolated.
+                     * @param _isolation Whether isolated. 0 means not isolated. 1 means isolated.
                      * 
                      */
                     void SetIsolation(const uint64_t& _isolation);
@@ -414,19 +390,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogHasBeenSet() const;
 
                     /**
-                     * 获取Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
+                     * @return SubnetId Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
+                     * @param _subnetId Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -440,18 +412,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
                      * 设置CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -464,19 +432,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SecureGroups Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Security group of the CLB instance
+                     * @return SecureGroups Security group of the CLB instance
                      * 
                      */
                     std::vector<std::string> GetSecureGroups() const;
 
                     /**
-                     * 设置Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _secureGroups Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Security group of the CLB instance
+                     * @param _secureGroups Security group of the CLB instance
                      * 
                      */
                     void SetSecureGroups(const std::vector<std::string>& _secureGroups);
@@ -489,19 +453,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SecureGroupsHasBeenSet() const;
 
                     /**
-                     * 获取Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Basic information of real servers bound to the CLB instance
+                     * @return TargetRegionInfo Basic information of real servers bound to the CLB instance
                      * 
                      */
                     TargetRegionInfo GetTargetRegionInfo() const;
 
                     /**
-                     * 设置Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Basic information of real servers bound to the CLB instance
+                     * @param _targetRegionInfo Basic information of real servers bound to the CLB instance
                      * 
                      */
                     void SetTargetRegionInfo(const TargetRegionInfo& _targetRegionInfo);
@@ -514,19 +474,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetRegionInfoHasBeenSet() const;
 
                     /**
-                     * 获取Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+                     * @return AnycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
                      * 
                      */
                     std::string GetAnycastZone() const;
 
                     /**
-                     * 设置Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _anycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+                     * @param _anycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
                      * 
                      */
                     void SetAnycastZone(const std::string& _anycastZone);
@@ -539,19 +495,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AnycastZoneHasBeenSet() const;
 
                     /**
-                     * 获取IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AddressIPVersion IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取IP Version, ipv4 | ipv6
+                     * @return AddressIPVersion IP Version, ipv4 | ipv6
                      * 
                      */
                     std::string GetAddressIPVersion() const;
 
                     /**
-                     * 设置IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _addressIPVersion IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置IP Version, ipv4 | ipv6
+                     * @param _addressIPVersion IP Version, ipv4 | ipv6
                      * 
                      */
                     void SetAddressIPVersion(const std::string& _addressIPVersion);
@@ -564,19 +516,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AddressIPVersionHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NumericalVpcId VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetNumericalVpcId() const;
 
                     /**
-                     * 设置VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _numericalVpcId VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @param _numericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     void SetNumericalVpcId(const uint64_t& _numericalVpcId);
@@ -589,15 +537,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NumericalVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VipIsp Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVipIsp() const;
 
                     /**
-                     * 设置ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vipIsp Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVipIsp(const std::string& _vipIsp);
@@ -660,18 +632,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupZoneSetHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance isolation time
+                     * 获取Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolatedTime CLB instance isolation time
+                     * @return IsolatedTime Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
-                     * 设置CLB instance isolation time
+                     * 设置Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isolatedTime CLB instance isolation time
+                     * @param _isolatedTime Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -785,19 +761,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrepaidAttributesHasBeenSet() const;
 
                     /**
-                     * 获取Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogSetId Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log set ID of Cloud Log Service (CLS) for CLB
+                     * @return LogSetId Log set ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
-                     * 设置Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logSetId Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log set ID of Cloud Log Service (CLS) for CLB
+                     * @param _logSetId Log set ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
@@ -810,19 +782,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogTopicId Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log topic ID of Cloud Log Service (CLS) for CLB
+                     * @return LogTopicId Log topic ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
-                     * 设置Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logTopicId Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log topic ID of Cloud Log Service (CLS) for CLB
+                     * @param _logTopicId Log topic ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
@@ -886,18 +854,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDDos Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsDDos() const;
 
                     /**
                      * 设置Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isDDos Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsDDos(const bool& _isDDos);
@@ -910,19 +874,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDDosHasBeenSet() const;
 
                     /**
-                     * 获取Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigId Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom configuration IDs of CLB instances
+                     * @return ConfigId Custom configuration IDs of CLB instances
                      * 
                      */
                     std::string GetConfigId() const;
 
                     /**
-                     * 设置Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configId Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom configuration IDs of CLB instances
+                     * @param _configId Custom configuration IDs of CLB instances
                      * 
                      */
                     void SetConfigId(const std::string& _configId);
@@ -935,19 +895,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the real server allows traffic from CLB
+                     * @return LoadBalancerPassToTarget Whether the real server allows traffic from CLB
                      * 
                      */
                     bool GetLoadBalancerPassToTarget() const;
 
                     /**
-                     * 设置Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the real server allows traffic from CLB
+                     * @param _loadBalancerPassToTarget Whether the real server allows traffic from CLB
                      * 
                      */
                     void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
@@ -960,19 +916,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
                     /**
-                     * 获取Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Exclusive cluster on the private network
+                     * @return ExclusiveCluster Exclusive cluster on the private network
                      * 
                      */
                     ExclusiveCluster GetExclusiveCluster() const;
 
                     /**
-                     * 设置Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _exclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Exclusive cluster on the private network
+                     * @param _exclusiveCluster Exclusive cluster on the private network
                      * 
                      */
                     void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
@@ -985,19 +937,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExclusiveClusterHasBeenSet() const;
 
                     /**
-                     * 获取This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IPv6Mode Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIPv6Mode() const;
 
                     /**
-                     * 设置This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _iPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _iPv6Mode Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIPv6Mode(const std::string& _iPv6Mode);
@@ -1010,19 +970,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IPv6ModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnatPro Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether SnatPro is enabled.
+                     * @return SnatPro Specifies whether SnatPro is enabled.
                      * 
                      */
                     bool GetSnatPro() const;
 
                     /**
-                     * 设置Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _snatPro Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether SnatPro is enabled.
+                     * @param _snatPro Specifies whether SnatPro is enabled.
                      * 
                      */
                     void SetSnatPro(const bool& _snatPro);
@@ -1035,19 +991,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnatProHasBeenSet() const;
 
                     /**
-                     * 获取`SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnatIps `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Enables the SnatIp list after turning on SnatPro load balancing.
+                     * @return SnatIps Enables the SnatIp list after turning on SnatPro load balancing.
                      * 
                      */
                     std::vector<SnatIp> GetSnatIps() const;
 
                     /**
-                     * 设置`SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _snatIps `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Enables the SnatIp list after turning on SnatPro load balancing.
+                     * @param _snatIps Enables the SnatIp list after turning on SnatPro load balancing.
                      * 
                      */
                     void SetSnatIps(const std::vector<SnatIp>& _snatIps);
@@ -1060,15 +1012,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnatIpsHasBeenSet() const;
 
                     /**
-                     * 获取Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
+                     * @return SlaType Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _slaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
+                     * @param _slaType Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -1082,18 +1034,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsBlock Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsBlock() const;
 
                     /**
                      * 设置Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _isBlock Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsBlock(const bool& _isBlock);
@@ -1106,19 +1054,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsBlockHasBeenSet() const;
 
                     /**
-                     * 获取Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsBlockTime Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @return IsBlockTime Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     std::string GetIsBlockTime() const;
 
                     /**
-                     * 设置Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isBlockTime Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @param _isBlockTime Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     void SetIsBlockTime(const std::string& _isBlockTime);
@@ -1131,15 +1079,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsBlockTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the IP type is the local BGP
-                     * @return LocalBgp Whether the IP type is the local BGP
+                     * 获取Whether the IP type is Local BGP
+                     * @return LocalBgp Whether the IP type is Local BGP
                      * 
                      */
                     bool GetLocalBgp() const;
 
                     /**
-                     * 设置Whether the IP type is the local BGP
-                     * @param _localBgp Whether the IP type is the local BGP
+                     * 设置Whether the IP type is Local BGP
+                     * @param _localBgp Whether the IP type is Local BGP
                      * 
                      */
                     void SetLocalBgp(const bool& _localBgp);
@@ -1177,19 +1125,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ClusterTagHasBeenSet() const;
 
                     /**
-                     * 获取If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
+                     * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
                      * 
                      */
                     bool GetMixIpTarget() const;
 
                     /**
-                     * 设置If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
+                     * @param _mixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
                      * 
                      */
                     void SetMixIpTarget(const bool& _mixIpTarget);
@@ -1252,19 +1196,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NfvInfoHasBeenSet() const;
 
                     /**
-                     * 获取Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return HealthLogSetId Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Health check log set ID of Cloud Log Service (CLS) for CLB
+                     * @return HealthLogSetId Health check log set ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     std::string GetHealthLogSetId() const;
 
                     /**
-                     * 设置Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _healthLogSetId Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Health check log set ID of Cloud Log Service (CLS) for CLB
+                     * @param _healthLogSetId Health check log set ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     void SetHealthLogSetId(const std::string& _healthLogSetId);
@@ -1277,19 +1217,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool HealthLogSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return HealthLogTopicId Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Health check log topic ID of Cloud Log Service (CLS) for CLB
+                     * @return HealthLogTopicId Health check log topic ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     std::string GetHealthLogTopicId() const;
 
                     /**
-                     * 设置Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _healthLogTopicId Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Health check log topic ID of Cloud Log Service (CLS) for CLB
+                     * @param _healthLogTopicId Health check log topic ID of Cloud Log Service (CLS) for CLB
                      * 
                      */
                     void SetHealthLogTopicId(const std::string& _healthLogTopicId);
@@ -1327,19 +1263,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AttributeFlags CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+                     * @return AttributeFlags Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
                      * 
                      */
                     std::vector<std::string> GetAttributeFlags() const;
 
                     /**
-                     * 设置CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _attributeFlags CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+                     * @param _attributeFlags Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
                      * 
                      */
                     void SetAttributeFlags(const std::vector<std::string>& _attributeFlags);
@@ -1352,19 +1372,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AttributeFlagsHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the domain name of the load balancing instance.
+                     * @return LoadBalancerDomain Specifies the domain name of the load balancing instance.
                      * 
                      */
                     std::string GetLoadBalancerDomain() const;
 
                     /**
-                     * 设置Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the domain name of the load balancing instance.
+                     * @param _loadBalancerDomain Specifies the domain name of the load balancing instance.
                      * 
                      */
                     void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
@@ -1377,19 +1393,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadBalancerDomainHasBeenSet() const;
 
                     /**
-                     * 获取Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the network outbound.
+                     * @return Egress Specifies the network outbound.
                      * 
                      */
                     std::string GetEgress() const;
 
                     /**
-                     * 设置Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the network outbound.
+                     * @param _egress Specifies the network outbound.
                      * 
                      */
                     void SetEgress(const std::string& _egress);
@@ -1402,15 +1414,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool EgressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Exclusive 
+                     * 获取Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Exclusive Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExclusive() const;
 
                     /**
-                     * 设置
-                     * @param _exclusive 
+                     * 设置Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _exclusive Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExclusive(const uint64_t& _exclusive);
@@ -1421,6 +1437,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 
                      */
                     bool ExclusiveHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the number of bound backend services.
+                     * @return TargetCount Specifies the number of bound backend services.
+                     * 
+                     */
+                    uint64_t GetTargetCount() const;
+
+                    /**
+                     * 设置Specifies the number of bound backend services.
+                     * @param _targetCount Specifies the number of bound backend services.
+                     * 
+                     */
+                    void SetTargetCount(const uint64_t& _targetCount);
+
+                    /**
+                     * 判断参数 TargetCount 是否已赋值
+                     * @return TargetCount 是否已赋值
+                     * 
+                     */
+                    bool TargetCountHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the Endpoint id associated with the clb instance.
+                     * @return AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
+                     * 
+                     */
+                    std::string GetAssociateEndpoint() const;
+
+                    /**
+                     * 设置Specifies the Endpoint id associated with the clb instance.
+                     * @param _associateEndpoint Specifies the Endpoint id associated with the clb instance.
+                     * 
+                     */
+                    void SetAssociateEndpoint(const std::string& _associateEndpoint);
+
+                    /**
+                     * 判断参数 AssociateEndpoint 是否已赋值
+                     * @return AssociateEndpoint 是否已赋值
+                     * 
+                     */
+                    bool AssociateEndpointHasBeenSet() const;
 
                 private:
 
@@ -1437,8 +1495,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+                     * Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
                      */
                     std::string m_loadBalancerType;
                     bool m_loadBalancerTypeHasBeenSet;
@@ -1450,36 +1508,34 @@ OPEN: public network; INTERNAL: private network.
                     bool m_forwardHasBeenSet;
 
                     /**
-                     * Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+                     * The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
                      * List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_loadBalancerVips;
                     bool m_loadBalancerVipsHasBeenSet;
 
                     /**
-                     * CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
                      */
                     std::string m_statusTime;
                     bool m_statusTimeHasBeenSet;
@@ -1492,28 +1548,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
                      */
                     uint64_t m_openBgp;
                     bool m_openBgpHasBeenSet;
 
                     /**
-                     * SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
                      */
                     bool m_snat;
                     bool m_snatHasBeenSet;
 
                     /**
-                     * 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether isolated. 0 means not isolated. 1 means isolated.
                      */
                     uint64_t m_isolation;
                     bool m_isolationHasBeenSet;
@@ -1526,56 +1578,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logHasBeenSet;
 
                     /**
-                     * Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
                      * CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Security group of the CLB instance
                      */
                     std::vector<std::string> m_secureGroups;
                     bool m_secureGroupsHasBeenSet;
 
                     /**
-                     * Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Basic information of real servers bound to the CLB instance
                      */
                     TargetRegionInfo m_targetRegionInfo;
                     bool m_targetRegionInfoHasBeenSet;
 
                     /**
-                     * Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
                      */
                     std::string m_anycastZone;
                     bool m_anycastZoneHasBeenSet;
 
                     /**
-                     * IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * IP Version, ipv4 | ipv6
                      */
                     std::string m_addressIPVersion;
                     bool m_addressIPVersionHasBeenSet;
 
                     /**
-                     * VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      */
                     uint64_t m_numericalVpcId;
                     bool m_numericalVpcIdHasBeenSet;
 
                     /**
-                     * ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vipIsp;
                     bool m_vipIspHasBeenSet;
@@ -1595,7 +1646,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_backupZoneSetHasBeenSet;
 
                     /**
-                     * CLB instance isolation time
+                     * Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolatedTime;
@@ -1630,15 +1682,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_prepaidAttributesHasBeenSet;
 
                     /**
-                     * Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log set ID of Cloud Log Service (CLS) for CLB
                      */
                     std::string m_logSetId;
                     bool m_logSetIdHasBeenSet;
 
                     /**
-                     * Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log topic ID of Cloud Log Service (CLS) for CLB
                      */
                     std::string m_logTopicId;
                     bool m_logTopicIdHasBeenSet;
@@ -1659,75 +1709,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isDDos;
                     bool m_isDDosHasBeenSet;
 
                     /**
-                     * Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom configuration IDs of CLB instances
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;
 
                     /**
-                     * Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether the real server allows traffic from CLB
                      */
                     bool m_loadBalancerPassToTarget;
                     bool m_loadBalancerPassToTargetHasBeenSet;
 
                     /**
-                     * Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Exclusive cluster on the private network
                      */
                     ExclusiveCluster m_exclusiveCluster;
                     bool m_exclusiveClusterHasBeenSet;
 
                     /**
-                     * This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_iPv6Mode;
                     bool m_iPv6ModeHasBeenSet;
 
                     /**
-                     * Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether SnatPro is enabled.
                      */
                     bool m_snatPro;
                     bool m_snatProHasBeenSet;
 
                     /**
-                     * `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Enables the SnatIp list after turning on SnatPro load balancing.
                      */
                     std::vector<SnatIp> m_snatIps;
                     bool m_snatIpsHasBeenSet;
 
                     /**
-                     * Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+                     * Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
 
                     /**
                      * Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isBlock;
                     bool m_isBlockHasBeenSet;
 
                     /**
-                     * Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
                      */
                     std::string m_isBlockTime;
                     bool m_isBlockTimeHasBeenSet;
 
                     /**
-                     * Whether the IP type is the local BGP
+                     * Whether the IP type is Local BGP
                      */
                     bool m_localBgp;
                     bool m_localBgpHasBeenSet;
@@ -1740,8 +1785,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_clusterTagHasBeenSet;
 
                     /**
-                     * If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
                      */
                     bool m_mixIpTarget;
                     bool m_mixIpTargetHasBeenSet;
@@ -1761,15 +1805,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_nfvInfoHasBeenSet;
 
                     /**
-                     * Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Health check log set ID of Cloud Log Service (CLS) for CLB
                      */
                     std::string m_healthLogSetId;
                     bool m_healthLogSetIdHasBeenSet;
 
                     /**
-                     * Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Health check log topic ID of Cloud Log Service (CLS) for CLB
                      */
                     std::string m_healthLogTopicId;
                     bool m_healthLogTopicIdHasBeenSet;
@@ -1782,31 +1824,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
                      */
                     std::vector<std::string> m_attributeFlags;
                     bool m_attributeFlagsHasBeenSet;
 
                     /**
-                     * Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the domain name of the load balancing instance.
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;
 
                     /**
-                     * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the network outbound.
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_exclusive;
                     bool m_exclusiveHasBeenSet;
+
+                    /**
+                     * Specifies the number of bound backend services.
+                     */
+                    uint64_t m_targetCount;
+                    bool m_targetCountHasBeenSet;
+
+                    /**
+                     * Specifies the Endpoint id associated with the clb instance.
+                     */
+                    std::string m_associateEndpoint;
+                    bool m_associateEndpointHasBeenSet;
 
                 };
             }

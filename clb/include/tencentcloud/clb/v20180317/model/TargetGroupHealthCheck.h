@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Details of target group health check
                 */
                 class TargetGroupHealthCheck : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HealthSwitch 
+                     * 获取Whether to enable the health check.
+                     * @return HealthSwitch Whether to enable the health check.
                      * 
                      */
                     bool GetHealthSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _healthSwitch 
+                     * 设置Whether to enable the health check.
+                     * @param _healthSwitch Whether to enable the health check.
                      * 
                      */
                     void SetHealthSwitch(const bool& _healthSwitch);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool HealthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Protocol 
+                     * 获取Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
+                     * @return Protocol Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _protocol 
+                     * 设置Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
+                     * @param _protocol Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -89,15 +93,19 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Port 
+                     * 获取Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
+                     * @return Port Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置
-                     * @param _port 
+                     * 设置Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
+                     * @param _port Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Timeout 
+                     * 获取Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
+                     * @return Timeout Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
                      * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置
-                     * @param _timeout 
+                     * 设置Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
+                     * @param _timeout Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
                      * 
                      */
                     void SetTimeout(const int64_t& _timeout);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GapTime 
+                     * 获取Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
+                     * @return GapTime Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
                      * 
                      */
                     int64_t GetGapTime() const;
 
                     /**
-                     * 设置
-                     * @param _gapTime 
+                     * 设置Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
+                     * @param _gapTime Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
                      * 
                      */
                     void SetGapTime(const int64_t& _gapTime);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool GapTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GoodLimit 
+                     * 获取Health detection threshold. The default is 3 times. Value range: 2-10 times.
+                     * @return GoodLimit Health detection threshold. The default is 3 times. Value range: 2-10 times.
                      * 
                      */
                     int64_t GetGoodLimit() const;
 
                     /**
-                     * 设置
-                     * @param _goodLimit 
+                     * 设置Health detection threshold. The default is 3 times. Value range: 2-10 times.
+                     * @param _goodLimit Health detection threshold. The default is 3 times. Value range: 2-10 times.
                      * 
                      */
                     void SetGoodLimit(const int64_t& _goodLimit);
@@ -173,15 +181,15 @@ namespace TencentCloud
                     bool GoodLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BadLimit 
+                     * 获取Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
+                     * @return BadLimit Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
                      * 
                      */
                     int64_t GetBadLimit() const;
 
                     /**
-                     * 设置
-                     * @param _badLimit 
+                     * 设置Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
+                     * @param _badLimit Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
                      * 
                      */
                     void SetBadLimit(const int64_t& _badLimit);
@@ -194,15 +202,15 @@ namespace TencentCloud
                     bool BadLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return JumboFrame 
+                     * 获取Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
+                     * @return JumboFrame Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
                      * 
                      */
                     bool GetJumboFrame() const;
 
                     /**
-                     * 设置
-                     * @param _jumboFrame 
+                     * 设置Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
+                     * @param _jumboFrame Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
                      * 
                      */
                     void SetJumboFrame(const bool& _jumboFrame);
@@ -215,15 +223,19 @@ namespace TencentCloud
                     bool JumboFrameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpCode 
+                     * 获取Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCode Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHttpCode() const;
 
                     /**
-                     * 设置
-                     * @param _httpCode 
+                     * 设置Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCode Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCode(const int64_t& _httpCode);
@@ -236,15 +248,19 @@ namespace TencentCloud
                     bool HttpCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpCheckDomain 
+                     * 获取Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckDomain Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckDomain() const;
 
                     /**
-                     * 设置
-                     * @param _httpCheckDomain 
+                     * 设置Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckDomain Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckDomain(const std::string& _httpCheckDomain);
@@ -257,15 +273,19 @@ namespace TencentCloud
                     bool HttpCheckDomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpCheckPath 
+                     * 获取Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckPath() const;
 
                     /**
-                     * 设置
-                     * @param _httpCheckPath 
+                     * 设置Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckPath(const std::string& _httpCheckPath);
@@ -278,15 +298,19 @@ namespace TencentCloud
                     bool HttpCheckPathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpCheckMethod 
+                     * 获取Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckMethod() const;
 
                     /**
-                     * 设置
-                     * @param _httpCheckMethod 
+                     * 设置Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckMethod(const std::string& _httpCheckMethod);
@@ -299,15 +323,19 @@ namespace TencentCloud
                     bool HttpCheckMethodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ContextType 
+                     * 获取Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContextType Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContextType() const;
 
                     /**
-                     * 设置
-                     * @param _contextType 
+                     * 设置Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _contextType Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContextType(const std::string& _contextType);
@@ -320,15 +348,19 @@ namespace TencentCloud
                     bool ContextTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SendContext 
+                     * 获取CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SendContext CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSendContext() const;
 
                     /**
-                     * 设置
-                     * @param _sendContext 
+                     * 设置CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sendContext CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSendContext(const std::string& _sendContext);
@@ -341,15 +373,19 @@ namespace TencentCloud
                     bool SendContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecvContext 
+                     * 获取CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RecvContext CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRecvContext() const;
 
                     /**
-                     * 设置
-                     * @param _recvContext 
+                     * 设置CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _recvContext CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRecvContext(const std::string& _recvContext);
@@ -362,15 +398,19 @@ namespace TencentCloud
                     bool RecvContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpVersion 
+                     * 获取HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpVersion HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpVersion() const;
 
                     /**
-                     * 设置
-                     * @param _httpVersion 
+                     * 设置HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpVersion HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpVersion(const std::string& _httpVersion);
@@ -383,15 +423,19 @@ namespace TencentCloud
                     bool HttpVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtendedCode 
+                     * 获取Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtendedCode Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExtendedCode() const;
 
                     /**
-                     * 设置
-                     * @param _extendedCode 
+                     * 设置Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _extendedCode Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExtendedCode(const std::string& _extendedCode);
@@ -406,103 +450,114 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable the health check.
                      */
                     bool m_healthSwitch;
                     bool m_healthSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * 
+                     * Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * 
+                     * Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * 
+                     * Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
                      */
                     int64_t m_gapTime;
                     bool m_gapTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Health detection threshold. The default is 3 times. Value range: 2-10 times.
                      */
                     int64_t m_goodLimit;
                     bool m_goodLimitHasBeenSet;
 
                     /**
-                     * 
+                     * Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
                      */
                     int64_t m_badLimit;
                     bool m_badLimitHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
                      */
                     bool m_jumboFrame;
                     bool m_jumboFrameHasBeenSet;
 
                     /**
-                     * 
+                     * Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_httpCode;
                     bool m_httpCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckDomain;
                     bool m_httpCheckDomainHasBeenSet;
 
                     /**
-                     * 
+                     * Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckPath;
                     bool m_httpCheckPathHasBeenSet;
 
                     /**
-                     * 
+                     * Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckMethod;
                     bool m_httpCheckMethodHasBeenSet;
 
                     /**
-                     * 
+                     * Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contextType;
                     bool m_contextTypeHasBeenSet;
 
                     /**
-                     * 
+                     * CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sendContext;
                     bool m_sendContextHasBeenSet;
 
                     /**
-                     * 
+                     * CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_recvContext;
                     bool m_recvContextHasBeenSet;
 
                     /**
-                     * 
+                     * HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpVersion;
                     bool m_httpVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_extendedCode;
                     bool m_extendedCodeHasBeenSet;

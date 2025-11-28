@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Binding relationship array. A single request supports up to 20 items.
-                     * @return Associations Binding relationship array. A single request supports up to 20 items.
+                     * 获取Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
+                     * @return Associations Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
                      * 
                      */
                     std::vector<TargetGroupAssociation> GetAssociations() const;
 
                     /**
-                     * 设置Binding relationship array. A single request supports up to 20 items.
-                     * @param _associations Binding relationship array. A single request supports up to 20 items.
+                     * 设置Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
+                     * @param _associations Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
                      * 
                      */
                     void SetAssociations(const std::vector<TargetGroupAssociation>& _associations);
@@ -67,7 +75,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Binding relationship array. A single request supports up to 20 items.
+                     * Specifies the binding relationship array. the target group type should be the same.
+Specifies the maximum number of requests supported in a single request is 20.
+
                      */
                     std::vector<TargetGroupAssociation> m_associations;
                     bool m_associationsHasBeenSet;

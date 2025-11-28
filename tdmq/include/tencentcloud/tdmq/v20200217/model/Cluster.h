@@ -682,6 +682,77 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PayModeHasBeenSet() const;
 
+                    /**
+                     * 获取Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProjectId Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetProjectId() const;
+
+                    /**
+                     * 设置Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _projectId Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetProjectId(const int64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     * 
+                     */
+                    bool ProjectIdHasBeenSet() const;
+
+                    /**
+                     * 获取Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProjectName Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetProjectName() const;
+
+                    /**
+                     * 设置Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _projectName Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetProjectName(const std::string& _projectName);
+
+                    /**
+                     * 判断参数 ProjectName 是否已赋值
+                     * @return ProjectName 是否已赋值
+                     * 
+                     */
+                    bool ProjectNameHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether the pro edition instance can be upgraded.
+                     * @return UpgradeProInstance Specifies whether the pro edition instance can be upgraded.
+                     * 
+                     */
+                    bool GetUpgradeProInstance() const;
+
+                    /**
+                     * 设置Specifies whether the pro edition instance can be upgraded.
+                     * @param _upgradeProInstance Specifies whether the pro edition instance can be upgraded.
+                     * 
+                     */
+                    void SetUpgradeProInstance(const bool& _upgradeProInstance);
+
+                    /**
+                     * 判断参数 UpgradeProInstance 是否已赋值
+                     * @return UpgradeProInstance 是否已赋值
+                     * 
+                     */
+                    bool UpgradeProInstanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -862,6 +933,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
+
+                    /**
+                     * Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_projectName;
+                    bool m_projectNameHasBeenSet;
+
+                    /**
+                     * Specifies whether the pro edition instance can be upgraded.
+                     */
+                    bool m_upgradeProInstance;
+                    bool m_upgradeProInstanceHasBeenSet;
 
                 };
             }

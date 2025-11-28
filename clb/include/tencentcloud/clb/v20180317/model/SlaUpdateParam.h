@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the CLB instance
-                     * @return LoadBalancerId ID of the CLB instance
+                     * 获取CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+                     * @return LoadBalancerId CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置ID of the CLB instance
-                     * @param _loadBalancerId ID of the CLB instance
+                     * 设置CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+                     * @param _loadBalancerId CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -91,7 +95,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the CLB instance
+                     * CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;

@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicId Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _topicId Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -74,18 +70,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicName Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _topicName Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -98,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgRetentionSeconds Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+                     * @return MsgRetentionSeconds Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
                      * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
-                     * 设置Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _msgRetentionSeconds Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+                     * @param _msgRetentionSeconds Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
                      * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
@@ -123,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgRetentionSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxMsgSize Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
+                     * @return MaxMsgSize Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
                      * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
-                     * 设置Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxMsgSize Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
+                     * @param _maxMsgSize Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
                      * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
@@ -149,18 +133,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Qps Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetQps() const;
 
                     /**
                      * 设置Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _qps Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQps(const uint64_t& _qps);
@@ -173,27 +153,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FilterType Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+                     * @return FilterType Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
                      * 
                      */
                     uint64_t GetFilterType() const;
 
                     /**
-                     * 设置Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _filterType Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+                     * @param _filterType Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
                      * 
                      */
                     void SetFilterType(const uint64_t& _filterType);
@@ -206,19 +182,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+                     * @return CreateTime Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+                     * @param _createTime Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -231,19 +203,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LastModifyTime Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+                     * @return LastModifyTime The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     uint64_t GetLastModifyTime() const;
 
                     /**
-                     * 设置Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _lastModifyTime Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+                     * @param _lastModifyTime The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     void SetLastModifyTime(const uint64_t& _lastModifyTime);
@@ -256,19 +224,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LastModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgCount Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of messages in the current topic (message backlog).
+                     * @return MsgCount Number of messages in the current topic (message backlog).
                      * 
                      */
                     uint64_t GetMsgCount() const;
 
                     /**
-                     * 设置Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _msgCount Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of messages in the current topic (message backlog).
+                     * @param _msgCount Number of messages in the current topic (message backlog).
                      * 
                      */
                     void SetMsgCount(const uint64_t& _msgCount);
@@ -357,18 +321,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTenantId() const;
 
                     /**
                      * 设置Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _tenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTenantId(const std::string& _tenantId);
@@ -381,19 +341,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TenantIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the namespace name.
+                     * @return NamespaceName Specifies the namespace name.
                      * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
-                     * 设置Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _namespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the namespace name.
+                     * @param _namespaceName Specifies the namespace name.
                      * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
@@ -406,19 +362,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+                     * @return Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+                     * @param _status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -431,19 +383,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: Pulsar, 1: RocketMQ
+                     * @return BrokerType 0: Pulsar, 1: RocketMQ
                      * 
                      */
                     int64_t GetBrokerType() const;
 
                     /**
-                     * 设置Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _brokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: Pulsar, 1: RocketMQ
+                     * @param _brokerType 0: Pulsar, 1: RocketMQ
                      * 
                      */
                     void SetBrokerType(const int64_t& _brokerType);
@@ -455,69 +403,81 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BrokerTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Number of Subscriptions
+                     * @return SubscriptionCount Number of Subscriptions
+                     * 
+                     */
+                    int64_t GetSubscriptionCount() const;
+
+                    /**
+                     * 设置Number of Subscriptions
+                     * @param _subscriptionCount Number of Subscriptions
+                     * 
+                     */
+                    void SetSubscriptionCount(const int64_t& _subscriptionCount);
+
+                    /**
+                     * 判断参数 SubscriptionCount 是否已赋值
+                     * @return SubscriptionCount 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionCountHasBeenSet() const;
+
                 private:
 
                     /**
                      * Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
                      * Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
                      */
                     uint64_t m_msgRetentionSeconds;
                     bool m_msgRetentionSecondsHasBeenSet;
 
                     /**
-                     * Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
                      */
                     uint64_t m_maxMsgSize;
                     bool m_maxMsgSizeHasBeenSet;
 
                     /**
                      * Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_qps;
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
                      */
                     uint64_t m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      */
                     uint64_t m_lastModifyTime;
                     bool m_lastModifyTimeHasBeenSet;
 
                     /**
-                     * Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Number of messages in the current topic (message backlog).
                      */
                     uint64_t m_msgCount;
                     bool m_msgCountHasBeenSet;
@@ -545,31 +505,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tenantId;
                     bool m_tenantIdHasBeenSet;
 
                     /**
-                     * Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the namespace name.
                      */
                     std::string m_namespaceName;
                     bool m_namespaceNameHasBeenSet;
 
                     /**
-                     * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: Pulsar, 1: RocketMQ
                      */
                     int64_t m_brokerType;
                     bool m_brokerTypeHasBeenSet;
+
+                    /**
+                     * Number of Subscriptions
+                     */
+                    int64_t m_subscriptionCount;
+                    bool m_subscriptionCountHasBeenSet;
 
                 };
             }

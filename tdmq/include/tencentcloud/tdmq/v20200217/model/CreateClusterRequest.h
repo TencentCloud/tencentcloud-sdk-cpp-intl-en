@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
-                     * @return ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * 获取Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+                     * @return ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
-                     * @param _clusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * 设置Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+                     * @param _clusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;

@@ -198,15 +198,15 @@ Default value: UNIDIRECTIONAL.
                     bool CertContentHasBeenSet() const;
 
                     /**
-                     * 获取Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-                     * @return CertCaName Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * 获取Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+                     * @return CertCaName Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
                      * 
                      */
                     std::string GetCertCaName() const;
 
                     /**
-                     * 设置Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-                     * @param _certCaName Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * 设置Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+                     * @param _certCaName Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
                      * 
                      */
                     void SetCertCaName(const std::string& _certCaName);
@@ -219,15 +219,15 @@ Default value: UNIDIRECTIONAL.
                     bool CertCaNameHasBeenSet() const;
 
                     /**
-                     * 获取Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-                     * @return CertCaContent Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * 获取Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
+                     * @return CertCaContent Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
                      * 
                      */
                     std::string GetCertCaContent() const;
 
                     /**
-                     * 设置Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-                     * @param _certCaContent Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * 设置Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
+                     * @param _certCaContent Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
                      * 
                      */
                     void SetCertCaContent(const std::string& _certCaContent);
@@ -285,13 +285,13 @@ Default value: UNIDIRECTIONAL.
                     bool m_certContentHasBeenSet;
 
                     /**
-                     * Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
                      */
                     std::string m_certCaName;
                     bool m_certCaNameHasBeenSet;
 
                     /**
-                     * Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+                     * Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
                      */
                     std::string m_certCaContent;
                     bool m_certCaContentHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Listeners Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the listener list.
+                     * @return Listeners Specifies the listener list.
                      * 
                      */
                     std::vector<ClassicalListener> GetListeners() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the listener list.
                      */
                     std::vector<ClassicalListener> m_listeners;
                     bool m_listenersHasBeenSet;

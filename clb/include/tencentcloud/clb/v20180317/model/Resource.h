@@ -91,19 +91,15 @@ namespace TencentCloud
                     bool IspHasBeenSet() const;
 
                     /**
-                     * 获取Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return AvailabilitySet Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Available resources.
+                     * @return AvailabilitySet Available resources.
                      * 
                      */
                     std::vector<ResourceAvailability> GetAvailabilitySet() const;
 
                     /**
-                     * 设置Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _availabilitySet Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Available resources.
+                     * @param _availabilitySet Available resources.
                      * 
                      */
                     void SetAvailabilitySet(const std::vector<ResourceAvailability>& _availabilitySet);
@@ -116,19 +112,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool AvailabilitySetHasBeenSet() const;
 
                     /**
-                     * 获取ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TypeSet ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operator type info.
+                     * @return TypeSet Operator type info.
                      * 
                      */
                     std::vector<TypeInfo> GetTypeSet() const;
 
                     /**
-                     * 设置ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _typeSet ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operator type info.
+                     * @param _typeSet Operator type info.
                      * 
                      */
                     void SetTypeSet(const std::vector<TypeInfo>& _typeSet);
@@ -155,15 +147,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ispHasBeenSet;
 
                     /**
-                     * Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Available resources.
                      */
                     std::vector<ResourceAvailability> m_availabilitySet;
                     bool m_availabilitySetHasBeenSet;
 
                     /**
-                     * ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operator type info.
                      */
                     std::vector<TypeInfo> m_typeSet;
                     bool m_typeSetHasBeenSet;

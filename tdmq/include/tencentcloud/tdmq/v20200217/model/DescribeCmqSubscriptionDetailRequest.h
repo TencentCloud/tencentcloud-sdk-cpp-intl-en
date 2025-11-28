@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-                     * @return TopicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 获取Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+                     * @return TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-                     * @param _topicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 设置Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+                     * @param _topicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -126,10 +126,56 @@ namespace TencentCloud
                      */
                     bool SubscriptionNameHasBeenSet() const;
 
+                    /**
+                     * 获取Queue name. Endpoint of bound subscription
+                     * @return QueueName Queue name. Endpoint of bound subscription
+                     * 
+                     */
+                    std::string GetQueueName() const;
+
+                    /**
+                     * 设置Queue name. Endpoint of bound subscription
+                     * @param _queueName Queue name. Endpoint of bound subscription
+                     * 
+                     */
+                    void SetQueueName(const std::string& _queueName);
+
+                    /**
+                     * 判断参数 QueueName 是否已赋值
+                     * @return QueueName 是否已赋值
+                     * 
+                     */
+                    bool QueueNameHasBeenSet() const;
+
+                    /**
+                     * 获取Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+                     * @return QueryType Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+                     * 
+                     */
+                    std::string GetQueryType() const;
+
+                    /**
+                     * 设置Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+                     * @param _queryType Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+                     * 
+                     */
+                    void SetQueryType(const std::string& _queryType);
+
+                    /**
+                     * 判断参数 QueryType 是否已赋值
+                     * @return QueryType 是否已赋值
+                     * 
+                     */
+                    bool QueryTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -151,6 +197,19 @@ namespace TencentCloud
                      */
                     std::string m_subscriptionName;
                     bool m_subscriptionNameHasBeenSet;
+
+                    /**
+                     * Queue name. Endpoint of bound subscription
+                     */
+                    std::string m_queueName;
+                    bool m_queueNameHasBeenSet;
+
+                    /**
+                     * Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+                     */
+                    std::string m_queryType;
+                    bool m_queryTypeHasBeenSet;
 
                 };
             }

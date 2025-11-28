@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Listeners Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Information of real servers bound to the listener.
+                     * @return Listeners Information of real servers bound to the listener.
                      * 
                      */
                     std::vector<ListenerBackend> GetListeners() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Information of real servers bound to the listener.
                      */
                     std::vector<ListenerBackend> m_listeners;
                     bool m_listenersHasBeenSet;

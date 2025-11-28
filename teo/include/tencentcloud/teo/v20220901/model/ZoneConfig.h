@@ -44,6 +44,7 @@
 #include <tencentcloud/teo/v20220901/model/ClientIPHeaderParameters.h>
 #include <tencentcloud/teo/v20220901/model/ClientIPCountryParameters.h>
 #include <tencentcloud/teo/v20220901/model/GrpcParameters.h>
+#include <tencentcloud/teo/v20220901/model/NetworkErrorLoggingParameters.h>
 #include <tencentcloud/teo/v20220901/model/AccelerateMainlandParameters.h>
 #include <tencentcloud/teo/v20220901/model/StandardDebugParameters.h>
 
@@ -585,6 +586,31 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool GrpcHasBeenSet() const;
 
                     /**
+                     * 获取Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    NetworkErrorLoggingParameters GetNetworkErrorLogging() const;
+
+                    /**
+                     * 设置Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _networkErrorLogging Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetNetworkErrorLogging(const NetworkErrorLoggingParameters& _networkErrorLogging);
+
+                    /**
+                     * 判断参数 NetworkErrorLogging 是否已赋值
+                     * @return NetworkErrorLogging 是否已赋值
+                     * 
+                     */
+                    bool NetworkErrorLoggingHasBeenSet() const;
+
+                    /**
                      * 获取Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return AccelerateMainland Accelerate optimization and configuration in mainland china.
@@ -783,6 +809,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      */
                     GrpcParameters m_grpc;
                     bool m_grpcHasBeenSet;
+
+                    /**
+                     * Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    NetworkErrorLoggingParameters m_networkErrorLogging;
+                    bool m_networkErrorLoggingHasBeenSet;
 
                     /**
                      * Accelerate optimization and configuration in mainland china.

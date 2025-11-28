@@ -490,6 +490,106 @@ TdmqClient::CreateEnvironmentRoleOutcomeCallable TdmqClient::CreateEnvironmentRo
     return prom->get_future();
 }
 
+TdmqClient::CreateProClusterOutcome TdmqClient::CreateProCluster(const CreateProClusterRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateProCluster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateProClusterResponse rsp = CreateProClusterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateProClusterOutcome(rsp);
+        else
+            return CreateProClusterOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateProClusterOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::CreateProClusterAsync(const CreateProClusterRequest& request, const CreateProClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateProClusterRequest&;
+    using Resp = CreateProClusterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateProCluster", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::CreateProClusterOutcomeCallable TdmqClient::CreateProClusterCallable(const CreateProClusterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateProClusterOutcome>>();
+    CreateProClusterAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const CreateProClusterRequest&,
+        CreateProClusterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::CreateRabbitMQBindingOutcome TdmqClient::CreateRabbitMQBinding(const CreateRabbitMQBindingRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRabbitMQBinding");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRabbitMQBindingResponse rsp = CreateRabbitMQBindingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRabbitMQBindingOutcome(rsp);
+        else
+            return CreateRabbitMQBindingOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRabbitMQBindingOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::CreateRabbitMQBindingAsync(const CreateRabbitMQBindingRequest& request, const CreateRabbitMQBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRabbitMQBindingRequest&;
+    using Resp = CreateRabbitMQBindingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRabbitMQBinding", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::CreateRabbitMQBindingOutcomeCallable TdmqClient::CreateRabbitMQBindingCallable(const CreateRabbitMQBindingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRabbitMQBindingOutcome>>();
+    CreateRabbitMQBindingAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const CreateRabbitMQBindingRequest&,
+        CreateRabbitMQBindingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::CreateRabbitMQUserOutcome TdmqClient::CreateRabbitMQUser(const CreateRabbitMQUserRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRabbitMQUser");
@@ -690,6 +790,56 @@ TdmqClient::CreateRocketMQClusterOutcomeCallable TdmqClient::CreateRocketMQClust
     return prom->get_future();
 }
 
+TdmqClient::CreateRocketMQEnvironmentRoleOutcome TdmqClient::CreateRocketMQEnvironmentRole(const CreateRocketMQEnvironmentRoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRocketMQEnvironmentRole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRocketMQEnvironmentRoleResponse rsp = CreateRocketMQEnvironmentRoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRocketMQEnvironmentRoleOutcome(rsp);
+        else
+            return CreateRocketMQEnvironmentRoleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRocketMQEnvironmentRoleOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::CreateRocketMQEnvironmentRoleAsync(const CreateRocketMQEnvironmentRoleRequest& request, const CreateRocketMQEnvironmentRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRocketMQEnvironmentRoleRequest&;
+    using Resp = CreateRocketMQEnvironmentRoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRocketMQEnvironmentRole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::CreateRocketMQEnvironmentRoleOutcomeCallable TdmqClient::CreateRocketMQEnvironmentRoleCallable(const CreateRocketMQEnvironmentRoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRocketMQEnvironmentRoleOutcome>>();
+    CreateRocketMQEnvironmentRoleAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const CreateRocketMQEnvironmentRoleRequest&,
+        CreateRocketMQEnvironmentRoleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::CreateRocketMQGroupOutcome TdmqClient::CreateRocketMQGroup(const CreateRocketMQGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRocketMQGroup");
@@ -790,6 +940,56 @@ TdmqClient::CreateRocketMQNamespaceOutcomeCallable TdmqClient::CreateRocketMQNam
     return prom->get_future();
 }
 
+TdmqClient::CreateRocketMQRoleOutcome TdmqClient::CreateRocketMQRole(const CreateRocketMQRoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRocketMQRole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRocketMQRoleResponse rsp = CreateRocketMQRoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRocketMQRoleOutcome(rsp);
+        else
+            return CreateRocketMQRoleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRocketMQRoleOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::CreateRocketMQRoleAsync(const CreateRocketMQRoleRequest& request, const CreateRocketMQRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRocketMQRoleRequest&;
+    using Resp = CreateRocketMQRoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRocketMQRole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::CreateRocketMQRoleOutcomeCallable TdmqClient::CreateRocketMQRoleCallable(const CreateRocketMQRoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRocketMQRoleOutcome>>();
+    CreateRocketMQRoleAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const CreateRocketMQRoleRequest&,
+        CreateRocketMQRoleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::CreateRocketMQTopicOutcome TdmqClient::CreateRocketMQTopic(const CreateRocketMQTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRocketMQTopic");
@@ -832,6 +1032,56 @@ TdmqClient::CreateRocketMQTopicOutcomeCallable TdmqClient::CreateRocketMQTopicCa
         const TdmqClient*,
         const CreateRocketMQTopicRequest&,
         CreateRocketMQTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::CreateRocketMQVipInstanceOutcome TdmqClient::CreateRocketMQVipInstance(const CreateRocketMQVipInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRocketMQVipInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRocketMQVipInstanceResponse rsp = CreateRocketMQVipInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRocketMQVipInstanceOutcome(rsp);
+        else
+            return CreateRocketMQVipInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRocketMQVipInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::CreateRocketMQVipInstanceAsync(const CreateRocketMQVipInstanceRequest& request, const CreateRocketMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRocketMQVipInstanceRequest&;
+    using Resp = CreateRocketMQVipInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRocketMQVipInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::CreateRocketMQVipInstanceOutcomeCallable TdmqClient::CreateRocketMQVipInstanceCallable(const CreateRocketMQVipInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRocketMQVipInstanceOutcome>>();
+    CreateRocketMQVipInstanceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const CreateRocketMQVipInstanceRequest&,
+        CreateRocketMQVipInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1290,6 +1540,156 @@ TdmqClient::DeleteEnvironmentsOutcomeCallable TdmqClient::DeleteEnvironmentsCall
     return prom->get_future();
 }
 
+TdmqClient::DeleteProClusterOutcome TdmqClient::DeleteProCluster(const DeleteProClusterRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteProCluster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteProClusterResponse rsp = DeleteProClusterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteProClusterOutcome(rsp);
+        else
+            return DeleteProClusterOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteProClusterOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteProClusterAsync(const DeleteProClusterRequest& request, const DeleteProClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteProClusterRequest&;
+    using Resp = DeleteProClusterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteProCluster", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteProClusterOutcomeCallable TdmqClient::DeleteProClusterCallable(const DeleteProClusterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteProClusterOutcome>>();
+    DeleteProClusterAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteProClusterRequest&,
+        DeleteProClusterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DeleteRabbitMQBindingOutcome TdmqClient::DeleteRabbitMQBinding(const DeleteRabbitMQBindingRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRabbitMQBinding");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRabbitMQBindingResponse rsp = DeleteRabbitMQBindingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRabbitMQBindingOutcome(rsp);
+        else
+            return DeleteRabbitMQBindingOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRabbitMQBindingOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteRabbitMQBindingAsync(const DeleteRabbitMQBindingRequest& request, const DeleteRabbitMQBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRabbitMQBindingRequest&;
+    using Resp = DeleteRabbitMQBindingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRabbitMQBinding", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteRabbitMQBindingOutcomeCallable TdmqClient::DeleteRabbitMQBindingCallable(const DeleteRabbitMQBindingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRabbitMQBindingOutcome>>();
+    DeleteRabbitMQBindingAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteRabbitMQBindingRequest&,
+        DeleteRabbitMQBindingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DeleteRabbitMQPermissionOutcome TdmqClient::DeleteRabbitMQPermission(const DeleteRabbitMQPermissionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRabbitMQPermission");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRabbitMQPermissionResponse rsp = DeleteRabbitMQPermissionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRabbitMQPermissionOutcome(rsp);
+        else
+            return DeleteRabbitMQPermissionOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRabbitMQPermissionOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteRabbitMQPermissionAsync(const DeleteRabbitMQPermissionRequest& request, const DeleteRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRabbitMQPermissionRequest&;
+    using Resp = DeleteRabbitMQPermissionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRabbitMQPermission", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteRabbitMQPermissionOutcomeCallable TdmqClient::DeleteRabbitMQPermissionCallable(const DeleteRabbitMQPermissionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRabbitMQPermissionOutcome>>();
+    DeleteRabbitMQPermissionAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteRabbitMQPermissionRequest&,
+        DeleteRabbitMQPermissionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DeleteRabbitMQUserOutcome TdmqClient::DeleteRabbitMQUser(const DeleteRabbitMQUserRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRabbitMQUser");
@@ -1490,6 +1890,56 @@ TdmqClient::DeleteRocketMQClusterOutcomeCallable TdmqClient::DeleteRocketMQClust
     return prom->get_future();
 }
 
+TdmqClient::DeleteRocketMQEnvironmentRolesOutcome TdmqClient::DeleteRocketMQEnvironmentRoles(const DeleteRocketMQEnvironmentRolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRocketMQEnvironmentRoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRocketMQEnvironmentRolesResponse rsp = DeleteRocketMQEnvironmentRolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRocketMQEnvironmentRolesOutcome(rsp);
+        else
+            return DeleteRocketMQEnvironmentRolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRocketMQEnvironmentRolesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteRocketMQEnvironmentRolesAsync(const DeleteRocketMQEnvironmentRolesRequest& request, const DeleteRocketMQEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRocketMQEnvironmentRolesRequest&;
+    using Resp = DeleteRocketMQEnvironmentRolesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRocketMQEnvironmentRoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteRocketMQEnvironmentRolesOutcomeCallable TdmqClient::DeleteRocketMQEnvironmentRolesCallable(const DeleteRocketMQEnvironmentRolesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRocketMQEnvironmentRolesOutcome>>();
+    DeleteRocketMQEnvironmentRolesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteRocketMQEnvironmentRolesRequest&,
+        DeleteRocketMQEnvironmentRolesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DeleteRocketMQGroupOutcome TdmqClient::DeleteRocketMQGroup(const DeleteRocketMQGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRocketMQGroup");
@@ -1590,6 +2040,56 @@ TdmqClient::DeleteRocketMQNamespaceOutcomeCallable TdmqClient::DeleteRocketMQNam
     return prom->get_future();
 }
 
+TdmqClient::DeleteRocketMQRolesOutcome TdmqClient::DeleteRocketMQRoles(const DeleteRocketMQRolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRocketMQRoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRocketMQRolesResponse rsp = DeleteRocketMQRolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRocketMQRolesOutcome(rsp);
+        else
+            return DeleteRocketMQRolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRocketMQRolesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteRocketMQRolesAsync(const DeleteRocketMQRolesRequest& request, const DeleteRocketMQRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRocketMQRolesRequest&;
+    using Resp = DeleteRocketMQRolesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRocketMQRoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteRocketMQRolesOutcomeCallable TdmqClient::DeleteRocketMQRolesCallable(const DeleteRocketMQRolesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRocketMQRolesOutcome>>();
+    DeleteRocketMQRolesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteRocketMQRolesRequest&,
+        DeleteRocketMQRolesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DeleteRocketMQTopicOutcome TdmqClient::DeleteRocketMQTopic(const DeleteRocketMQTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRocketMQTopic");
@@ -1632,6 +2132,56 @@ TdmqClient::DeleteRocketMQTopicOutcomeCallable TdmqClient::DeleteRocketMQTopicCa
         const TdmqClient*,
         const DeleteRocketMQTopicRequest&,
         DeleteRocketMQTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DeleteRocketMQVipInstanceOutcome TdmqClient::DeleteRocketMQVipInstance(const DeleteRocketMQVipInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRocketMQVipInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRocketMQVipInstanceResponse rsp = DeleteRocketMQVipInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRocketMQVipInstanceOutcome(rsp);
+        else
+            return DeleteRocketMQVipInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRocketMQVipInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteRocketMQVipInstanceAsync(const DeleteRocketMQVipInstanceRequest& request, const DeleteRocketMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRocketMQVipInstanceRequest&;
+    using Resp = DeleteRocketMQVipInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRocketMQVipInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DeleteRocketMQVipInstanceOutcomeCallable TdmqClient::DeleteRocketMQVipInstanceCallable(const DeleteRocketMQVipInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRocketMQVipInstanceOutcome>>();
+    DeleteRocketMQVipInstanceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DeleteRocketMQVipInstanceRequest&,
+        DeleteRocketMQVipInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1982,56 +2532,6 @@ TdmqClient::DescribeClustersOutcomeCallable TdmqClient::DescribeClustersCallable
         const TdmqClient*,
         const DescribeClustersRequest&,
         DescribeClustersOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-TdmqClient::DescribeCmqDeadLetterSourceQueuesOutcome TdmqClient::DescribeCmqDeadLetterSourceQueues(const DescribeCmqDeadLetterSourceQueuesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeCmqDeadLetterSourceQueues");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeCmqDeadLetterSourceQueuesResponse rsp = DescribeCmqDeadLetterSourceQueuesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeCmqDeadLetterSourceQueuesOutcome(rsp);
-        else
-            return DescribeCmqDeadLetterSourceQueuesOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeCmqDeadLetterSourceQueuesOutcome(outcome.GetError());
-    }
-}
-
-void TdmqClient::DescribeCmqDeadLetterSourceQueuesAsync(const DescribeCmqDeadLetterSourceQueuesRequest& request, const DescribeCmqDeadLetterSourceQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeCmqDeadLetterSourceQueuesRequest&;
-    using Resp = DescribeCmqDeadLetterSourceQueuesResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeCmqDeadLetterSourceQueues", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-TdmqClient::DescribeCmqDeadLetterSourceQueuesOutcomeCallable TdmqClient::DescribeCmqDeadLetterSourceQueuesCallable(const DescribeCmqDeadLetterSourceQueuesRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeCmqDeadLetterSourceQueuesOutcome>>();
-    DescribeCmqDeadLetterSourceQueuesAsync(
-    request,
-    [prom](
-        const TdmqClient*,
-        const DescribeCmqDeadLetterSourceQueuesRequest&,
-        DescribeCmqDeadLetterSourceQueuesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2440,6 +2940,156 @@ TdmqClient::DescribeEnvironmentsOutcomeCallable TdmqClient::DescribeEnvironments
     return prom->get_future();
 }
 
+TdmqClient::DescribeMqMsgTraceOutcome TdmqClient::DescribeMqMsgTrace(const DescribeMqMsgTraceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMqMsgTrace");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMqMsgTraceResponse rsp = DescribeMqMsgTraceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMqMsgTraceOutcome(rsp);
+        else
+            return DescribeMqMsgTraceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMqMsgTraceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeMqMsgTraceAsync(const DescribeMqMsgTraceRequest& request, const DescribeMqMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMqMsgTraceRequest&;
+    using Resp = DescribeMqMsgTraceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMqMsgTrace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeMqMsgTraceOutcomeCallable TdmqClient::DescribeMqMsgTraceCallable(const DescribeMqMsgTraceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMqMsgTraceOutcome>>();
+    DescribeMqMsgTraceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeMqMsgTraceRequest&,
+        DescribeMqMsgTraceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeMsgOutcome TdmqClient::DescribeMsg(const DescribeMsgRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMsg");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMsgResponse rsp = DescribeMsgResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMsgOutcome(rsp);
+        else
+            return DescribeMsgOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMsgOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeMsgAsync(const DescribeMsgRequest& request, const DescribeMsgAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMsgRequest&;
+    using Resp = DescribeMsgResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMsg", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeMsgOutcomeCallable TdmqClient::DescribeMsgCallable(const DescribeMsgRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMsgOutcome>>();
+    DescribeMsgAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeMsgRequest&,
+        DescribeMsgOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeMsgTraceOutcome TdmqClient::DescribeMsgTrace(const DescribeMsgTraceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMsgTrace");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMsgTraceResponse rsp = DescribeMsgTraceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMsgTraceOutcome(rsp);
+        else
+            return DescribeMsgTraceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMsgTraceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeMsgTraceAsync(const DescribeMsgTraceRequest& request, const DescribeMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMsgTraceRequest&;
+    using Resp = DescribeMsgTraceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMsgTrace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeMsgTraceOutcomeCallable TdmqClient::DescribeMsgTraceCallable(const DescribeMsgTraceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMsgTraceOutcome>>();
+    DescribeMsgTraceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeMsgTraceRequest&,
+        DescribeMsgTraceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribePublisherSummaryOutcome TdmqClient::DescribePublisherSummary(const DescribePublisherSummaryRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribePublisherSummary");
@@ -2640,6 +3290,106 @@ TdmqClient::DescribePulsarProInstancesOutcomeCallable TdmqClient::DescribePulsar
     return prom->get_future();
 }
 
+TdmqClient::DescribeRabbitMQBindingsOutcome TdmqClient::DescribeRabbitMQBindings(const DescribeRabbitMQBindingsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQBindings");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQBindingsResponse rsp = DescribeRabbitMQBindingsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQBindingsOutcome(rsp);
+        else
+            return DescribeRabbitMQBindingsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQBindingsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQBindingsAsync(const DescribeRabbitMQBindingsRequest& request, const DescribeRabbitMQBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQBindingsRequest&;
+    using Resp = DescribeRabbitMQBindingsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQBindings", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQBindingsOutcomeCallable TdmqClient::DescribeRabbitMQBindingsCallable(const DescribeRabbitMQBindingsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQBindingsOutcome>>();
+    DescribeRabbitMQBindingsAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQBindingsRequest&,
+        DescribeRabbitMQBindingsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRabbitMQExchangesOutcome TdmqClient::DescribeRabbitMQExchanges(const DescribeRabbitMQExchangesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQExchanges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQExchangesResponse rsp = DescribeRabbitMQExchangesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQExchangesOutcome(rsp);
+        else
+            return DescribeRabbitMQExchangesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQExchangesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQExchangesAsync(const DescribeRabbitMQExchangesRequest& request, const DescribeRabbitMQExchangesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQExchangesRequest&;
+    using Resp = DescribeRabbitMQExchangesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQExchanges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQExchangesOutcomeCallable TdmqClient::DescribeRabbitMQExchangesCallable(const DescribeRabbitMQExchangesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQExchangesOutcome>>();
+    DescribeRabbitMQExchangesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQExchangesRequest&,
+        DescribeRabbitMQExchangesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribeRabbitMQNodeListOutcome TdmqClient::DescribeRabbitMQNodeList(const DescribeRabbitMQNodeListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRabbitMQNodeList");
@@ -2690,6 +3440,156 @@ TdmqClient::DescribeRabbitMQNodeListOutcomeCallable TdmqClient::DescribeRabbitMQ
     return prom->get_future();
 }
 
+TdmqClient::DescribeRabbitMQPermissionOutcome TdmqClient::DescribeRabbitMQPermission(const DescribeRabbitMQPermissionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQPermission");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQPermissionResponse rsp = DescribeRabbitMQPermissionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQPermissionOutcome(rsp);
+        else
+            return DescribeRabbitMQPermissionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQPermissionOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQPermissionAsync(const DescribeRabbitMQPermissionRequest& request, const DescribeRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQPermissionRequest&;
+    using Resp = DescribeRabbitMQPermissionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQPermission", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQPermissionOutcomeCallable TdmqClient::DescribeRabbitMQPermissionCallable(const DescribeRabbitMQPermissionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQPermissionOutcome>>();
+    DescribeRabbitMQPermissionAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQPermissionRequest&,
+        DescribeRabbitMQPermissionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRabbitMQQueueDetailOutcome TdmqClient::DescribeRabbitMQQueueDetail(const DescribeRabbitMQQueueDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQQueueDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQQueueDetailResponse rsp = DescribeRabbitMQQueueDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQQueueDetailOutcome(rsp);
+        else
+            return DescribeRabbitMQQueueDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQQueueDetailOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQQueueDetailAsync(const DescribeRabbitMQQueueDetailRequest& request, const DescribeRabbitMQQueueDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQQueueDetailRequest&;
+    using Resp = DescribeRabbitMQQueueDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQQueueDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQQueueDetailOutcomeCallable TdmqClient::DescribeRabbitMQQueueDetailCallable(const DescribeRabbitMQQueueDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQQueueDetailOutcome>>();
+    DescribeRabbitMQQueueDetailAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQQueueDetailRequest&,
+        DescribeRabbitMQQueueDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRabbitMQQueuesOutcome TdmqClient::DescribeRabbitMQQueues(const DescribeRabbitMQQueuesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQQueues");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQQueuesResponse rsp = DescribeRabbitMQQueuesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQQueuesOutcome(rsp);
+        else
+            return DescribeRabbitMQQueuesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQQueuesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQQueuesAsync(const DescribeRabbitMQQueuesRequest& request, const DescribeRabbitMQQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQQueuesRequest&;
+    using Resp = DescribeRabbitMQQueuesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQQueues", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQQueuesOutcomeCallable TdmqClient::DescribeRabbitMQQueuesCallable(const DescribeRabbitMQQueuesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQQueuesOutcome>>();
+    DescribeRabbitMQQueuesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQQueuesRequest&,
+        DescribeRabbitMQQueuesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribeRabbitMQUserOutcome TdmqClient::DescribeRabbitMQUser(const DescribeRabbitMQUserRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRabbitMQUser");
@@ -2732,6 +3632,56 @@ TdmqClient::DescribeRabbitMQUserOutcomeCallable TdmqClient::DescribeRabbitMQUser
         const TdmqClient*,
         const DescribeRabbitMQUserRequest&,
         DescribeRabbitMQUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRabbitMQVipInstanceOutcome TdmqClient::DescribeRabbitMQVipInstance(const DescribeRabbitMQVipInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRabbitMQVipInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRabbitMQVipInstanceResponse rsp = DescribeRabbitMQVipInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRabbitMQVipInstanceOutcome(rsp);
+        else
+            return DescribeRabbitMQVipInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRabbitMQVipInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRabbitMQVipInstanceAsync(const DescribeRabbitMQVipInstanceRequest& request, const DescribeRabbitMQVipInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRabbitMQVipInstanceRequest&;
+    using Resp = DescribeRabbitMQVipInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRabbitMQVipInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRabbitMQVipInstanceOutcomeCallable TdmqClient::DescribeRabbitMQVipInstanceCallable(const DescribeRabbitMQVipInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRabbitMQVipInstanceOutcome>>();
+    DescribeRabbitMQVipInstanceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRabbitMQVipInstanceRequest&,
+        DescribeRabbitMQVipInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2840,56 +3790,6 @@ TdmqClient::DescribeRabbitMQVirtualHostOutcomeCallable TdmqClient::DescribeRabbi
     return prom->get_future();
 }
 
-TdmqClient::DescribeRabbitMQVirtualHostListOutcome TdmqClient::DescribeRabbitMQVirtualHostList(const DescribeRabbitMQVirtualHostListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeRabbitMQVirtualHostList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeRabbitMQVirtualHostListResponse rsp = DescribeRabbitMQVirtualHostListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeRabbitMQVirtualHostListOutcome(rsp);
-        else
-            return DescribeRabbitMQVirtualHostListOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeRabbitMQVirtualHostListOutcome(outcome.GetError());
-    }
-}
-
-void TdmqClient::DescribeRabbitMQVirtualHostListAsync(const DescribeRabbitMQVirtualHostListRequest& request, const DescribeRabbitMQVirtualHostListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeRabbitMQVirtualHostListRequest&;
-    using Resp = DescribeRabbitMQVirtualHostListResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeRabbitMQVirtualHostList", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-TdmqClient::DescribeRabbitMQVirtualHostListOutcomeCallable TdmqClient::DescribeRabbitMQVirtualHostListCallable(const DescribeRabbitMQVirtualHostListRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeRabbitMQVirtualHostListOutcome>>();
-    DescribeRabbitMQVirtualHostListAsync(
-    request,
-    [prom](
-        const TdmqClient*,
-        const DescribeRabbitMQVirtualHostListRequest&,
-        DescribeRabbitMQVirtualHostListOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 TdmqClient::DescribeRocketMQClusterOutcome TdmqClient::DescribeRocketMQCluster(const DescribeRocketMQClusterRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRocketMQCluster");
@@ -2982,6 +3882,56 @@ TdmqClient::DescribeRocketMQClustersOutcomeCallable TdmqClient::DescribeRocketMQ
         const TdmqClient*,
         const DescribeRocketMQClustersRequest&,
         DescribeRocketMQClustersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQEnvironmentRolesOutcome TdmqClient::DescribeRocketMQEnvironmentRoles(const DescribeRocketMQEnvironmentRolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQEnvironmentRoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQEnvironmentRolesResponse rsp = DescribeRocketMQEnvironmentRolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQEnvironmentRolesOutcome(rsp);
+        else
+            return DescribeRocketMQEnvironmentRolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQEnvironmentRolesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQEnvironmentRolesAsync(const DescribeRocketMQEnvironmentRolesRequest& request, const DescribeRocketMQEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQEnvironmentRolesRequest&;
+    using Resp = DescribeRocketMQEnvironmentRolesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQEnvironmentRoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQEnvironmentRolesOutcomeCallable TdmqClient::DescribeRocketMQEnvironmentRolesCallable(const DescribeRocketMQEnvironmentRolesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQEnvironmentRolesOutcome>>();
+    DescribeRocketMQEnvironmentRolesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQEnvironmentRolesRequest&,
+        DescribeRocketMQEnvironmentRolesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3090,6 +4040,56 @@ TdmqClient::DescribeRocketMQMsgOutcomeCallable TdmqClient::DescribeRocketMQMsgCa
     return prom->get_future();
 }
 
+TdmqClient::DescribeRocketMQMsgTraceOutcome TdmqClient::DescribeRocketMQMsgTrace(const DescribeRocketMQMsgTraceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQMsgTrace");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQMsgTraceResponse rsp = DescribeRocketMQMsgTraceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQMsgTraceOutcome(rsp);
+        else
+            return DescribeRocketMQMsgTraceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQMsgTraceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQMsgTraceAsync(const DescribeRocketMQMsgTraceRequest& request, const DescribeRocketMQMsgTraceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQMsgTraceRequest&;
+    using Resp = DescribeRocketMQMsgTraceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQMsgTrace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQMsgTraceOutcomeCallable TdmqClient::DescribeRocketMQMsgTraceCallable(const DescribeRocketMQMsgTraceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQMsgTraceOutcome>>();
+    DescribeRocketMQMsgTraceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQMsgTraceRequest&,
+        DescribeRocketMQMsgTraceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribeRocketMQNamespacesOutcome TdmqClient::DescribeRocketMQNamespaces(const DescribeRocketMQNamespacesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRocketMQNamespaces");
@@ -3140,6 +4140,406 @@ TdmqClient::DescribeRocketMQNamespacesOutcomeCallable TdmqClient::DescribeRocket
     return prom->get_future();
 }
 
+TdmqClient::DescribeRocketMQProducersOutcome TdmqClient::DescribeRocketMQProducers(const DescribeRocketMQProducersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQProducers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQProducersResponse rsp = DescribeRocketMQProducersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQProducersOutcome(rsp);
+        else
+            return DescribeRocketMQProducersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQProducersOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQProducersAsync(const DescribeRocketMQProducersRequest& request, const DescribeRocketMQProducersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQProducersRequest&;
+    using Resp = DescribeRocketMQProducersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQProducers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQProducersOutcomeCallable TdmqClient::DescribeRocketMQProducersCallable(const DescribeRocketMQProducersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQProducersOutcome>>();
+    DescribeRocketMQProducersAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQProducersRequest&,
+        DescribeRocketMQProducersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQPublicAccessMonitorDataOutcome TdmqClient::DescribeRocketMQPublicAccessMonitorData(const DescribeRocketMQPublicAccessMonitorDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQPublicAccessMonitorData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQPublicAccessMonitorDataResponse rsp = DescribeRocketMQPublicAccessMonitorDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQPublicAccessMonitorDataOutcome(rsp);
+        else
+            return DescribeRocketMQPublicAccessMonitorDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQPublicAccessMonitorDataOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQPublicAccessMonitorDataAsync(const DescribeRocketMQPublicAccessMonitorDataRequest& request, const DescribeRocketMQPublicAccessMonitorDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQPublicAccessMonitorDataRequest&;
+    using Resp = DescribeRocketMQPublicAccessMonitorDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQPublicAccessMonitorData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQPublicAccessMonitorDataOutcomeCallable TdmqClient::DescribeRocketMQPublicAccessMonitorDataCallable(const DescribeRocketMQPublicAccessMonitorDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQPublicAccessMonitorDataOutcome>>();
+    DescribeRocketMQPublicAccessMonitorDataAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQPublicAccessMonitorDataRequest&,
+        DescribeRocketMQPublicAccessMonitorDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQPublicAccessPointOutcome TdmqClient::DescribeRocketMQPublicAccessPoint(const DescribeRocketMQPublicAccessPointRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQPublicAccessPoint");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQPublicAccessPointResponse rsp = DescribeRocketMQPublicAccessPointResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQPublicAccessPointOutcome(rsp);
+        else
+            return DescribeRocketMQPublicAccessPointOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQPublicAccessPointOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQPublicAccessPointAsync(const DescribeRocketMQPublicAccessPointRequest& request, const DescribeRocketMQPublicAccessPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQPublicAccessPointRequest&;
+    using Resp = DescribeRocketMQPublicAccessPointResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQPublicAccessPoint", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQPublicAccessPointOutcomeCallable TdmqClient::DescribeRocketMQPublicAccessPointCallable(const DescribeRocketMQPublicAccessPointRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQPublicAccessPointOutcome>>();
+    DescribeRocketMQPublicAccessPointAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQPublicAccessPointRequest&,
+        DescribeRocketMQPublicAccessPointOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQRolesOutcome TdmqClient::DescribeRocketMQRoles(const DescribeRocketMQRolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQRoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQRolesResponse rsp = DescribeRocketMQRolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQRolesOutcome(rsp);
+        else
+            return DescribeRocketMQRolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQRolesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQRolesAsync(const DescribeRocketMQRolesRequest& request, const DescribeRocketMQRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQRolesRequest&;
+    using Resp = DescribeRocketMQRolesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQRoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQRolesOutcomeCallable TdmqClient::DescribeRocketMQRolesCallable(const DescribeRocketMQRolesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQRolesOutcome>>();
+    DescribeRocketMQRolesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQRolesRequest&,
+        DescribeRocketMQRolesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopUsagesOutcome TdmqClient::DescribeRocketMQTopUsages(const DescribeRocketMQTopUsagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopUsages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopUsagesResponse rsp = DescribeRocketMQTopUsagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopUsagesOutcome(rsp);
+        else
+            return DescribeRocketMQTopUsagesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopUsagesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopUsagesAsync(const DescribeRocketMQTopUsagesRequest& request, const DescribeRocketMQTopUsagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQTopUsagesRequest&;
+    using Resp = DescribeRocketMQTopUsagesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQTopUsages", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQTopUsagesOutcomeCallable TdmqClient::DescribeRocketMQTopUsagesCallable(const DescribeRocketMQTopUsagesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQTopUsagesOutcome>>();
+    DescribeRocketMQTopUsagesAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQTopUsagesRequest&,
+        DescribeRocketMQTopUsagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopicOutcome TdmqClient::DescribeRocketMQTopic(const DescribeRocketMQTopicRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopic");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopicResponse rsp = DescribeRocketMQTopicResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopicOutcome(rsp);
+        else
+            return DescribeRocketMQTopicOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopicOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopicAsync(const DescribeRocketMQTopicRequest& request, const DescribeRocketMQTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQTopicRequest&;
+    using Resp = DescribeRocketMQTopicResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQTopic", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQTopicOutcomeCallable TdmqClient::DescribeRocketMQTopicCallable(const DescribeRocketMQTopicRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQTopicOutcome>>();
+    DescribeRocketMQTopicAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQTopicRequest&,
+        DescribeRocketMQTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopicMsgsOutcome TdmqClient::DescribeRocketMQTopicMsgs(const DescribeRocketMQTopicMsgsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopicMsgs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopicMsgsResponse rsp = DescribeRocketMQTopicMsgsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopicMsgsOutcome(rsp);
+        else
+            return DescribeRocketMQTopicMsgsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopicMsgsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopicMsgsAsync(const DescribeRocketMQTopicMsgsRequest& request, const DescribeRocketMQTopicMsgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQTopicMsgsRequest&;
+    using Resp = DescribeRocketMQTopicMsgsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQTopicMsgs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQTopicMsgsOutcomeCallable TdmqClient::DescribeRocketMQTopicMsgsCallable(const DescribeRocketMQTopicMsgsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQTopicMsgsOutcome>>();
+    DescribeRocketMQTopicMsgsAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQTopicMsgsRequest&,
+        DescribeRocketMQTopicMsgsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopicStatsOutcome TdmqClient::DescribeRocketMQTopicStats(const DescribeRocketMQTopicStatsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopicStats");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopicStatsResponse rsp = DescribeRocketMQTopicStatsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopicStatsOutcome(rsp);
+        else
+            return DescribeRocketMQTopicStatsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopicStatsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopicStatsAsync(const DescribeRocketMQTopicStatsRequest& request, const DescribeRocketMQTopicStatsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQTopicStatsRequest&;
+    using Resp = DescribeRocketMQTopicStatsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQTopicStats", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQTopicStatsOutcomeCallable TdmqClient::DescribeRocketMQTopicStatsCallable(const DescribeRocketMQTopicStatsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQTopicStatsOutcome>>();
+    DescribeRocketMQTopicStatsAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQTopicStatsRequest&,
+        DescribeRocketMQTopicStatsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribeRocketMQTopicsOutcome TdmqClient::DescribeRocketMQTopics(const DescribeRocketMQTopicsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRocketMQTopics");
@@ -3182,6 +4582,56 @@ TdmqClient::DescribeRocketMQTopicsOutcomeCallable TdmqClient::DescribeRocketMQTo
         const TdmqClient*,
         const DescribeRocketMQTopicsRequest&,
         DescribeRocketMQTopicsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopicsByGroupOutcome TdmqClient::DescribeRocketMQTopicsByGroup(const DescribeRocketMQTopicsByGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopicsByGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopicsByGroupResponse rsp = DescribeRocketMQTopicsByGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopicsByGroupOutcome(rsp);
+        else
+            return DescribeRocketMQTopicsByGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopicsByGroupOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopicsByGroupAsync(const DescribeRocketMQTopicsByGroupRequest& request, const DescribeRocketMQTopicsByGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRocketMQTopicsByGroupRequest&;
+    using Resp = DescribeRocketMQTopicsByGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRocketMQTopicsByGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeRocketMQTopicsByGroupOutcomeCallable TdmqClient::DescribeRocketMQTopicsByGroupCallable(const DescribeRocketMQTopicsByGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRocketMQTopicsByGroupOutcome>>();
+    DescribeRocketMQTopicsByGroupAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeRocketMQTopicsByGroupRequest&,
+        DescribeRocketMQTopicsByGroupOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3390,6 +4840,56 @@ TdmqClient::DescribeSubscriptionsOutcomeCallable TdmqClient::DescribeSubscriptio
     return prom->get_future();
 }
 
+TdmqClient::DescribeTopicMsgsOutcome TdmqClient::DescribeTopicMsgs(const DescribeTopicMsgsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopicMsgs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopicMsgsResponse rsp = DescribeTopicMsgsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopicMsgsOutcome(rsp);
+        else
+            return DescribeTopicMsgsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopicMsgsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeTopicMsgsAsync(const DescribeTopicMsgsRequest& request, const DescribeTopicMsgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTopicMsgsRequest&;
+    using Resp = DescribeTopicMsgsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopicMsgs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::DescribeTopicMsgsOutcomeCallable TdmqClient::DescribeTopicMsgsCallable(const DescribeTopicMsgsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTopicMsgsOutcome>>();
+    DescribeTopicMsgsAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const DescribeTopicMsgsRequest&,
+        DescribeTopicMsgsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::DescribeTopicsOutcome TdmqClient::DescribeTopics(const DescribeTopicsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTopics");
@@ -3432,6 +4932,56 @@ TdmqClient::DescribeTopicsOutcomeCallable TdmqClient::DescribeTopicsCallable(con
         const TdmqClient*,
         const DescribeTopicsRequest&,
         DescribeTopicsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::ExportRocketMQMessageDetailOutcome TdmqClient::ExportRocketMQMessageDetail(const ExportRocketMQMessageDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportRocketMQMessageDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportRocketMQMessageDetailResponse rsp = ExportRocketMQMessageDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportRocketMQMessageDetailOutcome(rsp);
+        else
+            return ExportRocketMQMessageDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportRocketMQMessageDetailOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ExportRocketMQMessageDetailAsync(const ExportRocketMQMessageDetailRequest& request, const ExportRocketMQMessageDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportRocketMQMessageDetailRequest&;
+    using Resp = ExportRocketMQMessageDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportRocketMQMessageDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ExportRocketMQMessageDetailOutcomeCallable TdmqClient::ExportRocketMQMessageDetailCallable(const ExportRocketMQMessageDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportRocketMQMessageDetailOutcome>>();
+    ExportRocketMQMessageDetailAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ExportRocketMQMessageDetailRequest&,
+        ExportRocketMQMessageDetailOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3740,6 +5290,106 @@ TdmqClient::ModifyEnvironmentRoleOutcomeCallable TdmqClient::ModifyEnvironmentRo
     return prom->get_future();
 }
 
+TdmqClient::ModifyPublicNetworkSecurityPolicyOutcome TdmqClient::ModifyPublicNetworkSecurityPolicy(const ModifyPublicNetworkSecurityPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyPublicNetworkSecurityPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyPublicNetworkSecurityPolicyResponse rsp = ModifyPublicNetworkSecurityPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyPublicNetworkSecurityPolicyOutcome(rsp);
+        else
+            return ModifyPublicNetworkSecurityPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyPublicNetworkSecurityPolicyOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ModifyPublicNetworkSecurityPolicyAsync(const ModifyPublicNetworkSecurityPolicyRequest& request, const ModifyPublicNetworkSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyPublicNetworkSecurityPolicyRequest&;
+    using Resp = ModifyPublicNetworkSecurityPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyPublicNetworkSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ModifyPublicNetworkSecurityPolicyOutcomeCallable TdmqClient::ModifyPublicNetworkSecurityPolicyCallable(const ModifyPublicNetworkSecurityPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyPublicNetworkSecurityPolicyOutcome>>();
+    ModifyPublicNetworkSecurityPolicyAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ModifyPublicNetworkSecurityPolicyRequest&,
+        ModifyPublicNetworkSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::ModifyRabbitMQPermissionOutcome TdmqClient::ModifyRabbitMQPermission(const ModifyRabbitMQPermissionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRabbitMQPermission");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRabbitMQPermissionResponse rsp = ModifyRabbitMQPermissionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRabbitMQPermissionOutcome(rsp);
+        else
+            return ModifyRabbitMQPermissionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRabbitMQPermissionOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ModifyRabbitMQPermissionAsync(const ModifyRabbitMQPermissionRequest& request, const ModifyRabbitMQPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRabbitMQPermissionRequest&;
+    using Resp = ModifyRabbitMQPermissionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRabbitMQPermission", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ModifyRabbitMQPermissionOutcomeCallable TdmqClient::ModifyRabbitMQPermissionCallable(const ModifyRabbitMQPermissionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRabbitMQPermissionOutcome>>();
+    ModifyRabbitMQPermissionAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ModifyRabbitMQPermissionRequest&,
+        ModifyRabbitMQPermissionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::ModifyRabbitMQUserOutcome TdmqClient::ModifyRabbitMQUser(const ModifyRabbitMQUserRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyRabbitMQUser");
@@ -3890,6 +5540,56 @@ TdmqClient::ModifyRocketMQClusterOutcomeCallable TdmqClient::ModifyRocketMQClust
     return prom->get_future();
 }
 
+TdmqClient::ModifyRocketMQEnvironmentRoleOutcome TdmqClient::ModifyRocketMQEnvironmentRole(const ModifyRocketMQEnvironmentRoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRocketMQEnvironmentRole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRocketMQEnvironmentRoleResponse rsp = ModifyRocketMQEnvironmentRoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRocketMQEnvironmentRoleOutcome(rsp);
+        else
+            return ModifyRocketMQEnvironmentRoleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRocketMQEnvironmentRoleOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ModifyRocketMQEnvironmentRoleAsync(const ModifyRocketMQEnvironmentRoleRequest& request, const ModifyRocketMQEnvironmentRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRocketMQEnvironmentRoleRequest&;
+    using Resp = ModifyRocketMQEnvironmentRoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRocketMQEnvironmentRole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ModifyRocketMQEnvironmentRoleOutcomeCallable TdmqClient::ModifyRocketMQEnvironmentRoleCallable(const ModifyRocketMQEnvironmentRoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRocketMQEnvironmentRoleOutcome>>();
+    ModifyRocketMQEnvironmentRoleAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ModifyRocketMQEnvironmentRoleRequest&,
+        ModifyRocketMQEnvironmentRoleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::ModifyRocketMQGroupOutcome TdmqClient::ModifyRocketMQGroup(const ModifyRocketMQGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyRocketMQGroup");
@@ -3932,6 +5632,56 @@ TdmqClient::ModifyRocketMQGroupOutcomeCallable TdmqClient::ModifyRocketMQGroupCa
         const TdmqClient*,
         const ModifyRocketMQGroupRequest&,
         ModifyRocketMQGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::ModifyRocketMQInstanceOutcome TdmqClient::ModifyRocketMQInstance(const ModifyRocketMQInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRocketMQInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRocketMQInstanceResponse rsp = ModifyRocketMQInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRocketMQInstanceOutcome(rsp);
+        else
+            return ModifyRocketMQInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRocketMQInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ModifyRocketMQInstanceAsync(const ModifyRocketMQInstanceRequest& request, const ModifyRocketMQInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRocketMQInstanceRequest&;
+    using Resp = ModifyRocketMQInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRocketMQInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ModifyRocketMQInstanceOutcomeCallable TdmqClient::ModifyRocketMQInstanceCallable(const ModifyRocketMQInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRocketMQInstanceOutcome>>();
+    ModifyRocketMQInstanceAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ModifyRocketMQInstanceRequest&,
+        ModifyRocketMQInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4032,6 +5782,56 @@ TdmqClient::ModifyRocketMQNamespaceOutcomeCallable TdmqClient::ModifyRocketMQNam
         const TdmqClient*,
         const ModifyRocketMQNamespaceRequest&,
         ModifyRocketMQNamespaceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::ModifyRocketMQRoleOutcome TdmqClient::ModifyRocketMQRole(const ModifyRocketMQRoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRocketMQRole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRocketMQRoleResponse rsp = ModifyRocketMQRoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRocketMQRoleOutcome(rsp);
+        else
+            return ModifyRocketMQRoleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRocketMQRoleOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::ModifyRocketMQRoleAsync(const ModifyRocketMQRoleRequest& request, const ModifyRocketMQRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRocketMQRoleRequest&;
+    using Resp = ModifyRocketMQRoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRocketMQRole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::ModifyRocketMQRoleOutcomeCallable TdmqClient::ModifyRocketMQRoleCallable(const ModifyRocketMQRoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRocketMQRoleOutcome>>();
+    ModifyRocketMQRoleAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const ModifyRocketMQRoleRequest&,
+        ModifyRocketMQRoleOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4390,6 +6190,56 @@ TdmqClient::ResetRocketMQConsumerOffSetOutcomeCallable TdmqClient::ResetRocketMQ
     return prom->get_future();
 }
 
+TdmqClient::RetryRocketMQDlqMessageOutcome TdmqClient::RetryRocketMQDlqMessage(const RetryRocketMQDlqMessageRequest &request)
+{
+    auto outcome = MakeRequest(request, "RetryRocketMQDlqMessage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RetryRocketMQDlqMessageResponse rsp = RetryRocketMQDlqMessageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RetryRocketMQDlqMessageOutcome(rsp);
+        else
+            return RetryRocketMQDlqMessageOutcome(o.GetError());
+    }
+    else
+    {
+        return RetryRocketMQDlqMessageOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::RetryRocketMQDlqMessageAsync(const RetryRocketMQDlqMessageRequest& request, const RetryRocketMQDlqMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RetryRocketMQDlqMessageRequest&;
+    using Resp = RetryRocketMQDlqMessageResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RetryRocketMQDlqMessage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::RetryRocketMQDlqMessageOutcomeCallable TdmqClient::RetryRocketMQDlqMessageCallable(const RetryRocketMQDlqMessageRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RetryRocketMQDlqMessageOutcome>>();
+    RetryRocketMQDlqMessageAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const RetryRocketMQDlqMessageRequest&,
+        RetryRocketMQDlqMessageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TdmqClient::RewindCmqQueueOutcome TdmqClient::RewindCmqQueue(const RewindCmqQueueRequest &request)
 {
     auto outcome = MakeRequest(request, "RewindCmqQueue");
@@ -4682,6 +6532,56 @@ TdmqClient::SendRocketMQMessageOutcomeCallable TdmqClient::SendRocketMQMessageCa
         const TdmqClient*,
         const SendRocketMQMessageRequest&,
         SendRocketMQMessageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TdmqClient::SetRocketMQPublicAccessPointOutcome TdmqClient::SetRocketMQPublicAccessPoint(const SetRocketMQPublicAccessPointRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetRocketMQPublicAccessPoint");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetRocketMQPublicAccessPointResponse rsp = SetRocketMQPublicAccessPointResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetRocketMQPublicAccessPointOutcome(rsp);
+        else
+            return SetRocketMQPublicAccessPointOutcome(o.GetError());
+    }
+    else
+    {
+        return SetRocketMQPublicAccessPointOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::SetRocketMQPublicAccessPointAsync(const SetRocketMQPublicAccessPointRequest& request, const SetRocketMQPublicAccessPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SetRocketMQPublicAccessPointRequest&;
+    using Resp = SetRocketMQPublicAccessPointResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SetRocketMQPublicAccessPoint", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TdmqClient::SetRocketMQPublicAccessPointOutcomeCallable TdmqClient::SetRocketMQPublicAccessPointCallable(const SetRocketMQPublicAccessPointRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SetRocketMQPublicAccessPointOutcome>>();
+    SetRocketMQPublicAccessPointAsync(
+    request,
+    [prom](
+        const TdmqClient*,
+        const SetRocketMQPublicAccessPointRequest&,
+        SetRocketMQPublicAccessPointOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

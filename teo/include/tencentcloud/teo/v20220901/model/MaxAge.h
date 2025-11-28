@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
-                     * @return MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+                     * 获取MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
+                     * @return MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
                      * 
                      */
                     int64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
-                     * @param _maxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+                     * 设置MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
+                     * @param _maxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
                      * 
                      */
                     void SetMaxAgeTime(const int64_t& _maxAgeTime);
@@ -111,8 +111,8 @@ Note: The value `0` means not to cache.
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+                     * MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
                      */
                     int64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;

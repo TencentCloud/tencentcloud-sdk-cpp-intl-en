@@ -86,15 +86,71 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
-                     * @return Filters Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
+                     * 获取Specifies the conditions for querying the availability zone resource list. detailed filter criteria are as follows:.
+- master-zone
+Filters by regional availability zone, for example: ap-guangzhou-2.
+Type: String.
+Required: No
+- ip-version
+Filter by [IP type], such as IPv4.
+Type: String.
+Required: No
+Valid values: IPv4, IPv6, IPv6_Nat.
+- isp
+Filters by [ISP type], for example: BGP.
+Type: String.
+Required: No
+Optional. valid values: BGP, CMCC (china mobile), CUCC (china unicom), CTCC (china telecom), BGP_PRO, INTERNAL (private network).
+                     * @return Filters Specifies the conditions for querying the availability zone resource list. detailed filter criteria are as follows:.
+- master-zone
+Filters by regional availability zone, for example: ap-guangzhou-2.
+Type: String.
+Required: No
+- ip-version
+Filter by [IP type], such as IPv4.
+Type: String.
+Required: No
+Valid values: IPv4, IPv6, IPv6_Nat.
+- isp
+Filters by [ISP type], for example: BGP.
+Type: String.
+Required: No
+Optional. valid values: BGP, CMCC (china mobile), CUCC (china unicom), CTCC (china telecom), BGP_PRO, INTERNAL (private network).
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
-                     * @param _filters Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
+                     * 设置Specifies the conditions for querying the availability zone resource list. detailed filter criteria are as follows:.
+- master-zone
+Filters by regional availability zone, for example: ap-guangzhou-2.
+Type: String.
+Required: No
+- ip-version
+Filter by [IP type], such as IPv4.
+Type: String.
+Required: No
+Valid values: IPv4, IPv6, IPv6_Nat.
+- isp
+Filters by [ISP type], for example: BGP.
+Type: String.
+Required: No
+Optional. valid values: BGP, CMCC (china mobile), CUCC (china unicom), CTCC (china telecom), BGP_PRO, INTERNAL (private network).
+                     * @param _filters Specifies the conditions for querying the availability zone resource list. detailed filter criteria are as follows:.
+- master-zone
+Filters by regional availability zone, for example: ap-guangzhou-2.
+Type: String.
+Required: No
+- ip-version
+Filter by [IP type], such as IPv4.
+Type: String.
+Required: No
+Valid values: IPv4, IPv6, IPv6_Nat.
+- isp
+Filters by [ISP type], for example: BGP.
+Type: String.
+Required: No
+Optional. valid values: BGP, CMCC (china mobile), CUCC (china unicom), CTCC (china telecom), BGP_PRO, INTERNAL (private network).
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -121,7 +177,21 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
+                     * Specifies the conditions for querying the availability zone resource list. detailed filter criteria are as follows:.
+- master-zone
+Filters by regional availability zone, for example: ap-guangzhou-2.
+Type: String.
+Required: No
+- ip-version
+Filter by [IP type], such as IPv4.
+Type: String.
+Required: No
+Valid values: IPv4, IPv6, IPv6_Nat.
+- isp
+Filters by [ISP type], for example: BGP.
+Type: String.
+Required: No
+Optional. valid values: BGP, CMCC (china mobile), CUCC (china unicom), CTCC (china telecom), BGP_PRO, INTERNAL (private network).
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

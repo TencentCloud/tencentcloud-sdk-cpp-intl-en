@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Function SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取SCF information
+                     * @return Function SCF information
                      * 
                      */
                     FunctionInfo GetFunction() const;
 
                     /**
-                     * 设置SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _function SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置SCF information
+                     * @param _function SCF information
                      * 
                      */
                     void SetFunction(const FunctionInfo& _function);
@@ -96,8 +92,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * SCF information
                      */
                     FunctionInfo m_function;
                     bool m_functionHasBeenSet;

@@ -75,10 +75,10 @@ namespace TencentCloud
                     bool ClusterConfigHasBeenSet() const;
 
                     /**
-                     * 获取Recent cluster usage
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterStats Recent cluster usage
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster recent usage, about to be deprecated. Use TCOP to obtain related data.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterStats Cluster recent usage, about to be deprecated. Use TCOP to obtain related data.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RocketMQClusterRecentStats GetClusterStats() const;
@@ -105,8 +105,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_clusterConfigHasBeenSet;
 
                     /**
-                     * Recent cluster usage
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Cluster recent usage, about to be deprecated. Use TCOP to obtain related data.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RocketMQClusterRecentStats m_clusterStats;
                     bool m_clusterStatsHasBeenSet;

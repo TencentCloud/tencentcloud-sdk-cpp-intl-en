@@ -73,19 +73,15 @@ namespace TencentCloud
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain name of the forwarding rule
+                     * @return Domain Domain name of the forwarding rule
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain name of the forwarding rule
+                     * @param _domain Domain name of the forwarding rule
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -98,19 +94,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Path of forwarding rules.
+                     * @return Url Path of forwarding rules.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _url Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Path of forwarding rules.
+                     * @param _url Path of forwarding rules.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -144,19 +136,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HealthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Health Check Information
+                     * @return HealthCheck Health Check Information
                      * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _healthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Health Check Information
+                     * @param _healthCheck Health Check Information
                      * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
@@ -236,19 +224,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Redirection target information of the forwarding rule
+                     * @return RewriteTarget Redirection target information of the forwarding rule
                      * 
                      */
                     RewriteTarget GetRewriteTarget() const;
 
                     /**
-                     * 设置Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Redirection target information of the forwarding rule
+                     * @param _rewriteTarget Redirection target information of the forwarding rule
                      * 
                      */
                     void SetRewriteTarget(const RewriteTarget& _rewriteTarget);
@@ -433,19 +417,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetGroupHasBeenSet() const;
 
                     /**
-                     * 获取WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WafDomainId WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取WAF instance ID.
+                     * @return WafDomainId WAF instance ID.
                      * 
                      */
                     std::string GetWafDomainId() const;
 
                     /**
-                     * 设置WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wafDomainId WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置WAF instance ID.
+                     * @param _wafDomainId WAF instance ID.
                      * 
                      */
                     void SetWafDomainId(const std::string& _wafDomainId);
@@ -458,19 +438,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WafDomainIdHasBeenSet() const;
 
                     /**
-                     * 获取TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Called server routing. valid when ForwardType is TRPC. currently not yet available.
+                     * @return TrpcCallee Called server routing. valid when ForwardType is TRPC. currently not yet available.
                      * 
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
-                     * 设置TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _trpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Called server routing. valid when ForwardType is TRPC. currently not yet available.
+                     * @param _trpcCallee Called server routing. valid when ForwardType is TRPC. currently not yet available.
                      * 
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
@@ -483,19 +459,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+                     * @return TrpcFunc TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
                      * 
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
-                     * 设置TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _trpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+                     * @param _trpcFunc TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
                      * 
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
@@ -508,15 +480,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TrpcFuncHasBeenSet() const;
 
                     /**
-                     * 获取QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+                     * @return QuicStatus QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
                      * 
                      */
                     std::string GetQuicStatus() const;
 
                     /**
-                     * 设置QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+                     * @param _quicStatus QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
                      * 
                      */
                     void SetQuicStatus(const std::string& _quicStatus);
@@ -529,19 +501,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuicStatusHasBeenSet() const;
 
                     /**
-                     * 获取List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Domains List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the domain name list of the forwarding rule.
+                     * @return Domains Specifies the domain name list of the forwarding rule.
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _domains List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the domain name list of the forwarding rule.
+                     * @param _domains Specifies the domain name list of the forwarding rule.
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -579,15 +547,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TargetGroupListHasBeenSet() const;
 
                     /**
-                     * 获取OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取OAuth configuration status.
+                     * @return OAuth OAuth configuration status.
                      * 
                      */
                     OAuth GetOAuth() const;
 
                     /**
-                     * 设置OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置OAuth configuration status.
+                     * @param _oAuth OAuth configuration status.
                      * 
                      */
                     void SetOAuth(const OAuth& _oAuth);
@@ -599,6 +567,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool OAuthHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the custom cookie name.
+                     * @return CookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    std::string GetCookieName() const;
+
+                    /**
+                     * 设置Specifies the custom cookie name.
+                     * @param _cookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    void SetCookieName(const std::string& _cookieName);
+
+                    /**
+                     * 判断参数 CookieName 是否已赋值
+                     * @return CookieName 是否已赋值
+                     * 
+                     */
+                    bool CookieNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -608,15 +597,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain name of the forwarding rule
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Path of forwarding rules.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -628,8 +615,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Health Check Information
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
@@ -654,8 +640,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Redirection target information of the forwarding rule
                      */
                     RewriteTarget m_rewriteTarget;
                     bool m_rewriteTargetHasBeenSet;
@@ -710,35 +695,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_targetGroupHasBeenSet;
 
                     /**
-                     * WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * WAF instance ID.
                      */
                     std::string m_wafDomainId;
                     bool m_wafDomainIdHasBeenSet;
 
                     /**
-                     * TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Called server routing. valid when ForwardType is TRPC. currently not yet available.
                      */
                     std::string m_trpcCallee;
                     bool m_trpcCalleeHasBeenSet;
 
                     /**
-                     * TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;
 
                     /**
-                     * QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+                     * QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
                      */
                     std::string m_quicStatus;
                     bool m_quicStatusHasBeenSet;
 
                     /**
-                     * List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the domain name list of the forwarding rule.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
@@ -751,10 +732,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_targetGroupListHasBeenSet;
 
                     /**
-                     * OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * OAuth configuration status.
                      */
                     OAuth m_oAuth;
                     bool m_oAuthHasBeenSet;
+
+                    /**
+                     * Specifies the custom cookie name.
+                     */
+                    std::string m_cookieName;
+                    bool m_cookieNameHasBeenSet;
 
                 };
             }

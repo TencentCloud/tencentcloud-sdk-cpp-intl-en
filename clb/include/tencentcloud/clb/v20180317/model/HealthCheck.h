@@ -277,22 +277,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckMethodHasBeenSet() const;
 
                     /**
-                     * 获取A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+                     * 获取Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+                     * @return CheckPort Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCheckPort() const;
 
                     /**
-                     * 设置A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+                     * 设置Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+                     * @param _checkPort Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -551,8 +547,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpCheckMethodHasBeenSet;
 
                     /**
-                     * A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+                     * Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_checkPort;

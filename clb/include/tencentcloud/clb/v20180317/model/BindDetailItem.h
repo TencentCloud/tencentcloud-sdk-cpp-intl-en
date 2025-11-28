@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ListenerId Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取ID of the listener bound to the configuration
+                     * @return ListenerId ID of the listener bound to the configuration
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _listenerId Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置ID of the listener bound to the configuration
+                     * @param _listenerId ID of the listener bound to the configuration
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -93,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Domain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Domain name bound to the configuration
+                     * @return Domain Domain name bound to the configuration
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _domain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Domain name bound to the configuration
+                     * @param _domain Domain name bound to the configuration
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -118,19 +110,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LocationId Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Rule bound to the configuration
+                     * @return LocationId Rule bound to the configuration
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _locationId Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Rule bound to the configuration
+                     * @param _locationId Rule bound to the configuration
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -143,19 +131,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ListenerName Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Listener name
+                     * @return ListenerName Listener name
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _listenerName Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Listener name
+                     * @param _listenerName Listener name
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -168,19 +152,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ListenerNameHasBeenSet() const;
 
                     /**
-                     * 获取Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Protocol Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Listener protocol
+                     * @return Protocol Listener protocol
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _protocol Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Listener protocol
+                     * @param _protocol Listener protocol
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -193,19 +173,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Vport Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Listener port
+                     * @return Vport Listener port
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vport Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Listener port
+                     * @param _vport Listener port
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -244,18 +220,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return UconfigId Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
                      * 设置Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _uconfigId Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
@@ -276,43 +248,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * ID of the listener bound to the configuration
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Domain name bound to the configuration
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Rule bound to the configuration
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Listener name
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
 
                     /**
-                     * Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Listener protocol
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Listener port
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
@@ -326,7 +292,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_uconfigId;
                     bool m_uconfigIdHasBeenSet;

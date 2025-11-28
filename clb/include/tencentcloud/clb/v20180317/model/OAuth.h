@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OAuthEnable Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+                     * @return OAuthEnable Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
                      * 
                      */
                     bool GetOAuthEnable() const;
 
                     /**
-                     * 设置Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oAuthEnable Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+                     * @param _oAuthEnable Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
                      * 
                      */
                     void SetOAuthEnable(const bool& _oAuthEnable);
@@ -68,15 +80,27 @@ namespace TencentCloud
                     bool OAuthEnableHasBeenSet() const;
 
                     /**
-                     * 获取Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OAuthFailureStatus Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
+                     * @return OAuthFailureStatus Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
                      * 
                      */
                     std::string GetOAuthFailureStatus() const;
 
                     /**
-                     * 设置Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oAuthFailureStatus Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
+                     * @param _oAuthFailureStatus Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
                      * 
                      */
                     void SetOAuthFailureStatus(const std::string& _oAuthFailureStatus);
@@ -91,13 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
                      */
                     bool m_oAuthEnable;
                     bool m_oAuthEnableHasBeenSet;
 
                     /**
-                     * Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
                      */
                     std::string m_oAuthFailureStatus;
                     bool m_oAuthFailureStatusHasBeenSet;

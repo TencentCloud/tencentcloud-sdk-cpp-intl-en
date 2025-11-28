@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Listener name.
+                     * @return ListenerName Listener name.
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _listenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Listener name.
+                     * @param _listenerName Listener name.
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -137,18 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Rules List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RuleHealth> GetRules() const;
 
                     /**
                      * 设置List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _rules List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRules(const std::vector<RuleHealth>& _rules);
@@ -169,8 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Listener name.
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
@@ -189,7 +180,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RuleHealth> m_rules;
                     bool m_rulesHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration ID.
-                     * @return UconfigId Configuration ID.
+                     * 获取Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+                     * @return UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
-                     * 设置Configuration ID.
-                     * @param _uconfigId Configuration ID.
+                     * 设置Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+                     * @param _uconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
                      * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Searches for the domain name.
-                     * @return Domain Searches for the domain name.
+                     * 获取Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+                     * @return Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Searches for the domain name.
-                     * @param _domain Searches for the domain name.
+                     * 设置Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+                     * @param _domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration ID.
+                     * Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
                      */
                     std::string m_uconfigId;
                     bool m_uconfigIdHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Searches for the domain name.
+                     * Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;

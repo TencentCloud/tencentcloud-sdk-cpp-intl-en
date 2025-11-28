@@ -73,6 +73,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Auxiliary description information, such as failure cause.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Message Auxiliary description information, such as failure cause.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     * 
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -87,6 +103,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;
+
+                    /**
+                     * Auxiliary description information, such as failure cause.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取The backend cloud functions to modify
-                     * @return FunctionTargets The backend cloud functions to modify
+                     * 获取Specifies the backend SCF service list to modify. only Event function type is supported.
+                     * @return FunctionTargets Specifies the backend SCF service list to modify. only Event function type is supported.
                      * 
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
-                     * 设置The backend cloud functions to modify
-                     * @param _functionTargets The backend cloud functions to modify
+                     * 设置Specifies the backend SCF service list to modify. only Event function type is supported.
+                     * @param _functionTargets Specifies the backend SCF service list to modify. only Event function type is supported.
                      * 
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * The backend cloud functions to modify
+                     * Specifies the backend SCF service list to modify. only Event function type is supported.
                      */
                     std::vector<FunctionTarget> m_functionTargets;
                     bool m_functionTargetsHasBeenSet;

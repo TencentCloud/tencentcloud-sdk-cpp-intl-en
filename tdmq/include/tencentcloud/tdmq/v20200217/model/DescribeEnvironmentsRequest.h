@@ -44,6 +44,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Pulsar cluster ID
+                     * @return ClusterId Pulsar cluster ID
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Fuzzy search by namespace name.
                      * @return EnvironmentId Fuzzy search by namespace name.
                      * 
@@ -107,27 +128,6 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pulsar cluster ID
-                     * @return ClusterId Pulsar cluster ID
-                     * 
-                     */
-                    std::string GetClusterId() const;
-
-                    /**
-                     * 设置Pulsar cluster ID
-                     * @param _clusterId Pulsar cluster ID
-                     * 
-                     */
-                    void SetClusterId(const std::string& _clusterId);
-
-                    /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
-                     * 
-                     */
-                    bool ClusterIdHasBeenSet() const;
-
-                    /**
                      * 获取* EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -163,6 +163,12 @@ Required: No
                 private:
 
                     /**
+                     * Pulsar cluster ID
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
                      * Fuzzy search by namespace name.
                      */
                     std::string m_environmentId;
@@ -179,12 +185,6 @@ Required: No
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
-
-                    /**
-                     * Pulsar cluster ID
-                     */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
 
                     /**
                      * * EnvironmentId

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BindIPHasBeenSet() const;
 
                     /**
-                     * 获取Port of target group instance
-                     * @return Port Port of target group instance
+                     * 获取Port of target group instance. this field is not supported for full listen target groups.
+                     * @return Port Port of target group instance. this field is not supported for full listen target groups.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Port of target group instance
-                     * @param _port Port of target group instance
+                     * 设置Port of target group instance. this field is not supported for full listen target groups.
+                     * @param _port Port of target group instance. this field is not supported for full listen target groups.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -89,15 +89,23 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Weight of target group instance
-                     * @return Weight Weight of target group instance
+                     * 获取Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+                     * @return Weight Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Weight of target group instance
-                     * @param _weight Weight of target group instance
+                     * 设置Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+                     * @param _weight Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取New port of target group instance
-                     * @return NewPort New port of target group instance
+                     * 获取The new port of the target group instance. this field is not supported for full listen target groups.
+                     * @return NewPort The new port of the target group instance. this field is not supported for full listen target groups.
                      * 
                      */
                     uint64_t GetNewPort() const;
 
                     /**
-                     * 设置New port of target group instance
-                     * @param _newPort New port of target group instance
+                     * 设置The new port of the target group instance. this field is not supported for full listen target groups.
+                     * @param _newPort The new port of the target group instance. this field is not supported for full listen target groups.
                      * 
                      */
                     void SetNewPort(const uint64_t& _newPort);
@@ -139,19 +147,21 @@ namespace TencentCloud
                     bool m_bindIPHasBeenSet;
 
                     /**
-                     * Port of target group instance
+                     * Port of target group instance. this field is not supported for full listen target groups.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Weight of target group instance
+                     * Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * New port of target group instance
+                     * The new port of the target group instance. this field is not supported for full listen target groups.
                      */
                     uint64_t m_newPort;
                     bool m_newPortHasBeenSet;

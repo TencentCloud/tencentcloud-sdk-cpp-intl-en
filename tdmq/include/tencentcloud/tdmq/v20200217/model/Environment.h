@@ -246,18 +246,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetAutoSubscriptionCreation() const;
 
                     /**
                      * 设置Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _autoSubscriptionCreation Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAutoSubscriptionCreation(const bool& _autoSubscriptionCreation);
@@ -329,7 +329,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_autoSubscriptionCreation;
                     bool m_autoSubscriptionCreationHasBeenSet;

@@ -1,0 +1,249 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TROCKET_V20230308_MODEL_TOPICCONSUMESTATS_H_
+#define TENCENTCLOUD_TROCKET_V20230308_MODEL_TOPICCONSUMESTATS_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Trocket
+    {
+        namespace V20230308
+        {
+            namespace Model
+            {
+                /**
+                * Topic consumption progress
+                */
+                class TopicConsumeStats : public AbstractModel
+                {
+                public:
+                    TopicConsumeStats();
+                    ~TopicConsumeStats() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Topic name
+                     * @return Topic Topic name
+                     * 
+                     */
+                    std::string GetTopic() const;
+
+                    /**
+                     * 设置Topic name
+                     * @param _topic Topic name
+                     * 
+                     */
+                    void SetTopic(const std::string& _topic);
+
+                    /**
+                     * 判断参数 Topic 是否已赋值
+                     * @return Topic 是否已赋值
+                     * 
+                     */
+                    bool TopicHasBeenSet() const;
+
+                    /**
+                     * 获取Topic type. valid values are as follows:.
+
+-UNSPECIFIED: unspecified.
+-NORMAL: standard message.
+-FIFO: specifies sequential messaging.
+-DELAY: specifies the delayed message.
+-Specifies the TRANSACTION message.
+                     * @return TopicType Topic type. valid values are as follows:.
+
+-UNSPECIFIED: unspecified.
+-NORMAL: standard message.
+-FIFO: specifies sequential messaging.
+-DELAY: specifies the delayed message.
+-Specifies the TRANSACTION message.
+                     * 
+                     */
+                    std::string GetTopicType() const;
+
+                    /**
+                     * 设置Topic type. valid values are as follows:.
+
+-UNSPECIFIED: unspecified.
+-NORMAL: standard message.
+-FIFO: specifies sequential messaging.
+-DELAY: specifies the delayed message.
+-Specifies the TRANSACTION message.
+                     * @param _topicType Topic type. valid values are as follows:.
+
+-UNSPECIFIED: unspecified.
+-NORMAL: standard message.
+-FIFO: specifies sequential messaging.
+-DELAY: specifies the delayed message.
+-Specifies the TRANSACTION message.
+                     * 
+                     */
+                    void SetTopicType(const std::string& _topicType);
+
+                    /**
+                     * 判断参数 TopicType 是否已赋值
+                     * @return TopicType 是否已赋值
+                     * 
+                     */
+                    bool TopicTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of topic queues per node
+                     * @return QueueNum Number of topic queues per node
+                     * 
+                     */
+                    int64_t GetQueueNum() const;
+
+                    /**
+                     * 设置Number of topic queues per node
+                     * @param _queueNum Number of topic queues per node
+                     * 
+                     */
+                    void SetQueueNum(const int64_t& _queueNum);
+
+                    /**
+                     * 判断参数 QueueNum 是否已赋值
+                     * @return QueueNum 是否已赋值
+                     * 
+                     */
+                    bool QueueNumHasBeenSet() const;
+
+                    /**
+                     * 获取Consumption heap
+                     * @return ConsumerLag Consumption heap
+                     * 
+                     */
+                    int64_t GetConsumerLag() const;
+
+                    /**
+                     * 设置Consumption heap
+                     * @param _consumerLag Consumption heap
+                     * 
+                     */
+                    void SetConsumerLag(const int64_t& _consumerLag);
+
+                    /**
+                     * 判断参数 ConsumerLag 是否已赋值
+                     * @return ConsumerLag 是否已赋值
+                     * 
+                     */
+                    bool ConsumerLagHasBeenSet() const;
+
+                    /**
+                     * 获取Subscription rule. `*` indicates subscription to all topics.
+                     * @return SubString Subscription rule. `*` indicates subscription to all topics.
+                     * 
+                     */
+                    std::string GetSubString() const;
+
+                    /**
+                     * 设置Subscription rule. `*` indicates subscription to all topics.
+                     * @param _subString Subscription rule. `*` indicates subscription to all topics.
+                     * 
+                     */
+                    void SetSubString(const std::string& _subString);
+
+                    /**
+                     * 判断参数 SubString 是否已赋值
+                     * @return SubString 是否已赋值
+                     * 
+                     */
+                    bool SubStringHasBeenSet() const;
+
+                    /**
+                     * 获取Last consumption progress update time. **It is a Unix timestamp (ms).**
+                     * @return LastUpdateTime Last consumption progress update time. **It is a Unix timestamp (ms).**
+                     * 
+                     */
+                    int64_t GetLastUpdateTime() const;
+
+                    /**
+                     * 设置Last consumption progress update time. **It is a Unix timestamp (ms).**
+                     * @param _lastUpdateTime Last consumption progress update time. **It is a Unix timestamp (ms).**
+                     * 
+                     */
+                    void SetLastUpdateTime(const int64_t& _lastUpdateTime);
+
+                    /**
+                     * 判断参数 LastUpdateTime 是否已赋值
+                     * @return LastUpdateTime 是否已赋值
+                     * 
+                     */
+                    bool LastUpdateTimeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Topic name
+                     */
+                    std::string m_topic;
+                    bool m_topicHasBeenSet;
+
+                    /**
+                     * Topic type. valid values are as follows:.
+
+-UNSPECIFIED: unspecified.
+-NORMAL: standard message.
+-FIFO: specifies sequential messaging.
+-DELAY: specifies the delayed message.
+-Specifies the TRANSACTION message.
+                     */
+                    std::string m_topicType;
+                    bool m_topicTypeHasBeenSet;
+
+                    /**
+                     * Number of topic queues per node
+                     */
+                    int64_t m_queueNum;
+                    bool m_queueNumHasBeenSet;
+
+                    /**
+                     * Consumption heap
+                     */
+                    int64_t m_consumerLag;
+                    bool m_consumerLagHasBeenSet;
+
+                    /**
+                     * Subscription rule. `*` indicates subscription to all topics.
+                     */
+                    std::string m_subString;
+                    bool m_subStringHasBeenSet;
+
+                    /**
+                     * Last consumption progress update time. **It is a Unix timestamp (ms).**
+                     */
+                    int64_t m_lastUpdateTime;
+                    bool m_lastUpdateTimeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TROCKET_V20230308_MODEL_TOPICCONSUMESTATS_H_

@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerDetailSet List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Load balancing detail list.
+                     * @return LoadBalancerDetailSet Load balancing detail list.
                      * 
                      */
                     std::vector<LoadBalancerDetail> GetLoadBalancerDetailSet() const;
@@ -83,8 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Load balancing detail list.
                      */
                     std::vector<LoadBalancerDetail> m_loadBalancerDetailSet;
                     bool m_loadBalancerDetailSetHasBeenSet;

@@ -111,15 +111,15 @@ OPEN: public network; INTERNAL: private network.
                     bool ForwardHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance name.
-                     * @return LoadBalancerName CLB instance name.
+                     * 获取Specifies the name of the clb instance. fuzzy query is supported.
+                     * @return LoadBalancerName Specifies the name of the clb instance. fuzzy query is supported.
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB instance name.
-                     * @param _loadBalancerName CLB instance name.
+                     * 设置Specifies the name of the clb instance. fuzzy query is supported.
+                     * @param _loadBalancerName Specifies the name of the clb instance. fuzzy query is supported.
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -132,15 +132,15 @@ OPEN: public network; INTERNAL: private network.
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取The domain name that Tencent Cloud assigned for the CLB instance.
-                     * @return Domain The domain name that Tencent Cloud assigned for the CLB instance.
+                     * 获取Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
+                     * @return Domain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain name that Tencent Cloud assigned for the CLB instance.
-                     * @param _domain The domain name that Tencent Cloud assigned for the CLB instance.
+                     * 设置Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
+                     * @param _domain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -258,15 +258,43 @@ OPEN: public network; INTERNAL: private network.
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
-                     * @return OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * 获取Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+                     * @return OrderBy Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
-                     * @param _orderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * 设置Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+                     * @param _orderBy Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -279,15 +307,15 @@ OPEN: public network; INTERNAL: private network.
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取1: reverse; 0: sequential. Default value: reverse by creation time |
-                     * @return OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * 获取1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+                     * @return OrderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
                      * 
                      */
                     int64_t GetOrderType() const;
 
                     /**
-                     * 设置1: reverse; 0: sequential. Default value: reverse by creation time |
-                     * @param _orderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * 设置1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+                     * @param _orderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
                      * 
                      */
                     void SetOrderType(const int64_t& _orderType);
@@ -300,15 +328,15 @@ OPEN: public network; INTERNAL: private network.
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Search field which fuzzy matches name, domain name, or VIP.
-                     * @return SearchKey Search field which fuzzy matches name, domain name, or VIP.
+                     * 获取Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+                     * @return SearchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
                      * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Search field which fuzzy matches name, domain name, or VIP.
-                     * @param _searchKey Search field which fuzzy matches name, domain name, or VIP.
+                     * 设置Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+                     * @param _searchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
                      * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
@@ -321,15 +349,15 @@ OPEN: public network; INTERNAL: private network.
                     bool SearchKeyHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
-                     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * 获取Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+                     * @return ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
-                     * @param _projectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * 设置Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+                     * @param _projectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -363,19 +391,19 @@ OPEN: public network; INTERNAL: private network.
                     bool WithRsHasBeenSet() const;
 
                     /**
-                     * 获取VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
-                     * @return VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+                     * 获取Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+                     * @return VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
-                     * @param _vpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+                     * 设置Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+                     * @param _vpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -388,15 +416,15 @@ Basic network does not support queries by VpcId.
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID, e.g., `sg-m1cc****`.
-                     * @return SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+                     * 获取Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @return SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group ID, e.g., `sg-m1cc****`.
-                     * @param _securityGroup Security group ID, e.g., `sg-m1cc****`.
+                     * 设置Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @param _securityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
@@ -454,6 +482,31 @@ Basic network does not support queries by VpcId.
                      */
                     bool FiltersHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+                     * @return AdditionalFields Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+                     * 
+                     */
+                    std::vector<std::string> GetAdditionalFields() const;
+
+                    /**
+                     * 设置Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+                     * @param _additionalFields Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+                     * 
+                     */
+                    void SetAdditionalFields(const std::vector<std::string>& _additionalFields);
+
+                    /**
+                     * 判断参数 AdditionalFields 是否已赋值
+                     * @return AdditionalFields 是否已赋值
+                     * 
+                     */
+                    bool AdditionalFieldsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -476,13 +529,13 @@ OPEN: public network; INTERNAL: private network.
                     bool m_forwardHasBeenSet;
 
                     /**
-                     * CLB instance name.
+                     * Specifies the name of the clb instance. fuzzy query is supported.
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * The domain name that Tencent Cloud assigned for the CLB instance.
+                     * Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -518,25 +571,32 @@ OPEN: public network; INTERNAL: private network.
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
                      */
                     int64_t m_orderType;
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Search field which fuzzy matches name, domain name, or VIP.
+                     * Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
 
                     /**
-                     * ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -548,14 +608,14 @@ OPEN: public network; INTERNAL: private network.
                     bool m_withRsHasBeenSet;
 
                     /**
-                     * VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+                     * Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Security group ID, e.g., `sg-m1cc****`.
+                     * Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;
@@ -572,6 +632,13 @@ Basic network does not support queries by VpcId.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+                     */
+                    std::vector<std::string> m_additionalFields;
+                    bool m_additionalFieldsHasBeenSet;
 
                 };
             }

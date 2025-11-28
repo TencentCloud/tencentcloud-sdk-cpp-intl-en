@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Remarks.
-                     * @return Remark Remarks.
+                     * 获取Description information. length limit is 128 bytes.
+                     * @return Remark Description information. length limit is 128 bytes.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks.
-                     * @param _remark Remarks.
+                     * 设置Description information. length limit is 128 bytes.
+                     * @param _remark Description information. length limit is 128 bytes.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Remarks.
+                     * Description information. length limit is 128 bytes.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

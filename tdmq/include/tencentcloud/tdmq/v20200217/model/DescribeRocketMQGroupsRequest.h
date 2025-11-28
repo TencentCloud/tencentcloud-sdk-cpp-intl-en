@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool FilterGroupHasBeenSet() const;
 
                     /**
-                     * 获取Sort by specified field. Valid values: `tps`, `accumulative`.
-                     * @return SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+                     * 获取Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
+                     * @return SortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
                      * 
                      */
                     std::string GetSortedBy() const;
 
                     /**
-                     * 设置Sort by specified field. Valid values: `tps`, `accumulative`.
-                     * @param _sortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+                     * 设置Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
+                     * @param _sortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
                      * 
                      */
                     void SetSortedBy(const std::string& _sortedBy);
@@ -252,6 +253,27 @@ namespace TencentCloud
                      */
                     bool TypesHasBeenSet() const;
 
+                    /**
+                     * 获取Tag filter
+                     * @return TagFilters Tag filter
+                     * 
+                     */
+                    std::vector<TagFilter> GetTagFilters() const;
+
+                    /**
+                     * 设置Tag filter
+                     * @param _tagFilters Tag filter
+                     * 
+                     */
+                    void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
+
+                    /**
+                     * 判断参数 TagFilters 是否已赋值
+                     * @return TagFilters 是否已赋值
+                     * 
+                     */
+                    bool TagFiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -291,7 +313,7 @@ namespace TencentCloud
                     bool m_filterGroupHasBeenSet;
 
                     /**
-                     * Sort by specified field. Valid values: `tps`, `accumulative`.
+                     * Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
                      */
                     std::string m_sortedBy;
                     bool m_sortedByHasBeenSet;
@@ -313,6 +335,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;
+
+                    /**
+                     * Tag filter
+                     */
+                    std::vector<TagFilter> m_tagFilters;
+                    bool m_tagFiltersHasBeenSet;
 
                 };
             }

@@ -65,15 +65,19 @@ namespace TencentCloud
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Information of server to be unbound
-                     * @return TargetGroupInstances Information of server to be unbound
+                     * 获取Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
+                     * @return TargetGroupInstances Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
                      * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
-                     * 设置Information of server to be unbound
-                     * @param _targetGroupInstances Information of server to be unbound
+                     * 设置Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
+                     * @param _targetGroupInstances Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
                      * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
@@ -94,7 +98,8 @@ namespace TencentCloud
                     bool m_targetGroupIdHasBeenSet;
 
                     /**
-                     * Information of server to be unbound
+                     * Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;

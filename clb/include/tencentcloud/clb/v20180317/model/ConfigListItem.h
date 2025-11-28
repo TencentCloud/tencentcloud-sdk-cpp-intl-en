@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UconfigIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration type.
-                     * @return ConfigType Configuration type.
+                     * 获取Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+                     * @return ConfigType Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
                      * 
                      */
                     std::string GetConfigType() const;
 
                     /**
-                     * 设置Configuration type.
-                     * @param _configType Configuration type.
+                     * 设置Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+                     * @param _configType Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
                      * 
                      */
                     void SetConfigType(const std::string& _configType);
@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool ConfigTypeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ConfigName Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Configuration name
+                     * @return ConfigName Configuration name
                      * 
                      */
                     std::string GetConfigName() const;
 
                     /**
-                     * 设置Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _configName Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Configuration name
+                     * @param _configName Configuration name
                      * 
                      */
                     void SetConfigName(const std::string& _configName);
@@ -135,15 +131,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ConfigContentHasBeenSet() const;
 
                     /**
-                     * 获取Creates configuration time.
-                     * @return CreateTimestamp Creates configuration time.
+                     * 获取Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @return CreateTimestamp Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     std::string GetCreateTimestamp() const;
 
                     /**
-                     * 设置Creates configuration time.
-                     * @param _createTimestamp Creates configuration time.
+                     * 设置Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @param _createTimestamp Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     void SetCreateTimestamp(const std::string& _createTimestamp);
@@ -156,15 +156,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CreateTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Modifies configuration time.
-                     * @return UpdateTimestamp Modifies configuration time.
+                     * 获取Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @return UpdateTimestamp Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     std::string GetUpdateTimestamp() const;
 
                     /**
-                     * 设置Modifies configuration time.
-                     * @param _updateTimestamp Modifies configuration time.
+                     * 设置Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
+                     * @param _updateTimestamp Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
                      * 
                      */
                     void SetUpdateTimestamp(const std::string& _updateTimestamp);
@@ -185,14 +189,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_uconfigIdHasBeenSet;
 
                     /**
-                     * Configuration type.
+                     * Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
                      */
                     std::string m_configType;
                     bool m_configTypeHasBeenSet;
 
                     /**
-                     * Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Configuration name
                      */
                     std::string m_configName;
                     bool m_configNameHasBeenSet;
@@ -204,13 +207,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_configContentHasBeenSet;
 
                     /**
-                     * Creates configuration time.
+                     * Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
                      */
                     std::string m_createTimestamp;
                     bool m_createTimestampHasBeenSet;
 
                     /**
-                     * Modifies configuration time.
+                     * Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
                      */
                     std::string m_updateTimestamp;
                     bool m_updateTimestampHasBeenSet;

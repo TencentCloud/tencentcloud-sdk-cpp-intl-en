@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @param _instanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -111,18 +111,14 @@ namespace TencentCloud
 
                     /**
                      * 获取User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return Description User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _description User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -135,19 +131,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+                     * @return Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+                     * @param _tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -222,10 +214,102 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxConnections Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaxConnections() const;
+
+                    /**
+                     * 设置Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxConnections Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxConnections(const int64_t& _maxConnections);
+
+                    /**
+                     * 判断参数 MaxConnections 是否已赋值
+                     * @return MaxConnections 是否已赋值
+                     * 
+                     */
+                    bool MaxConnectionsHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxChannels Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaxChannels() const;
+
+                    /**
+                     * 设置Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxChannels Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxChannels(const int64_t& _maxChannels);
+
+                    /**
+                     * 判断参数 MaxChannels 是否已赋值
+                     * @return MaxChannels 是否已赋值
+                     * 
+                     */
+                    bool MaxChannelsHasBeenSet() const;
+
+                    /**
+                     * 获取Creation timestamp.
+                     * @return CreateTs Creation timestamp.
+                     * 
+                     */
+                    uint64_t GetCreateTs() const;
+
+                    /**
+                     * 设置Creation timestamp.
+                     * @param _createTs Creation timestamp.
+                     * 
+                     */
+                    void SetCreateTs(const uint64_t& _createTs);
+
+                    /**
+                     * 判断参数 CreateTs 是否已赋值
+                     * @return CreateTs 是否已赋值
+                     * 
+                     */
+                    bool CreateTsHasBeenSet() const;
+
+                    /**
+                     * 获取Modification timestamp.
+                     * @return ModifyTs Modification timestamp.
+                     * 
+                     */
+                    uint64_t GetModifyTs() const;
+
+                    /**
+                     * 设置Modification timestamp.
+                     * @param _modifyTs Modification timestamp.
+                     * 
+                     */
+                    void SetModifyTs(const uint64_t& _modifyTs);
+
+                    /**
+                     * 判断参数 ModifyTs 是否已赋值
+                     * @return ModifyTs 是否已赋值
+                     * 
+                     */
+                    bool ModifyTsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -244,14 +328,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
@@ -273,6 +355,32 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxConnections;
+                    bool m_maxConnectionsHasBeenSet;
+
+                    /**
+                     * Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxChannels;
+                    bool m_maxChannelsHasBeenSet;
+
+                    /**
+                     * Creation timestamp.
+                     */
+                    uint64_t m_createTs;
+                    bool m_createTsHasBeenSet;
+
+                    /**
+                     * Modification timestamp.
+                     */
+                    uint64_t m_modifyTs;
+                    bool m_modifyTsHasBeenSet;
 
                 };
             }

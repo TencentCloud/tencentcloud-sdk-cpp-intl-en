@@ -109,6 +109,52 @@ namespace TencentCloud
                      */
                     bool NodeCountHasBeenSet() const;
 
+                    /**
+                     * 获取This flag is true if there is a scheduling task with no switchback AZs.
+                     * @return NodePermWipeFlag This flag is true if there is a scheduling task with no switchback AZs.
+                     * 
+                     */
+                    bool GetNodePermWipeFlag() const;
+
+                    /**
+                     * 设置This flag is true if there is a scheduling task with no switchback AZs.
+                     * @param _nodePermWipeFlag This flag is true if there is a scheduling task with no switchback AZs.
+                     * 
+                     */
+                    void SetNodePermWipeFlag(const bool& _nodePermWipeFlag);
+
+                    /**
+                     * 判断参数 NodePermWipeFlag 是否已赋值
+                     * @return NodePermWipeFlag 是否已赋值
+                     * 
+                     */
+                    bool NodePermWipeFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ZoneStatus Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetZoneStatus() const;
+
+                    /**
+                     * 设置Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _zoneStatus Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetZoneStatus(const std::string& _zoneStatus);
+
+                    /**
+                     * 判断参数 ZoneStatus 是否已赋值
+                     * @return ZoneStatus 是否已赋值
+                     * 
+                     */
+                    bool ZoneStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -128,6 +174,19 @@ namespace TencentCloud
                      */
                     uint64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;
+
+                    /**
+                     * This flag is true if there is a scheduling task with no switchback AZs.
+                     */
+                    bool m_nodePermWipeFlag;
+                    bool m_nodePermWipeFlagHasBeenSet;
+
+                    /**
+                     * Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_zoneStatus;
+                    bool m_zoneStatusHasBeenSet;
 
                 };
             }

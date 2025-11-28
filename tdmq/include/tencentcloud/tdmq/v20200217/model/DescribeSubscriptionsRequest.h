@@ -86,6 +86,27 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
+                     * 获取Pulsar cluster ID
+                     * @return ClusterId Pulsar cluster ID
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Offset, which defaults to 0 if left empty.
                      * @return Offset Offset, which defaults to 0 if left empty.
                      * 
@@ -169,27 +190,6 @@ namespace TencentCloud
                      */
                     bool FiltersHasBeenSet() const;
 
-                    /**
-                     * 获取Pulsar cluster ID
-                     * @return ClusterId Pulsar cluster ID
-                     * 
-                     */
-                    std::string GetClusterId() const;
-
-                    /**
-                     * 设置Pulsar cluster ID
-                     * @param _clusterId Pulsar cluster ID
-                     * 
-                     */
-                    void SetClusterId(const std::string& _clusterId);
-
-                    /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
-                     * 
-                     */
-                    bool ClusterIdHasBeenSet() const;
-
                 private:
 
                     /**
@@ -203,6 +203,12 @@ namespace TencentCloud
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
+
+                    /**
+                     * Pulsar cluster ID
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
 
                     /**
                      * Offset, which defaults to 0 if left empty.
@@ -227,12 +233,6 @@ namespace TencentCloud
                      */
                     std::vector<FilterSubscription> m_filters;
                     bool m_filtersHasBeenSet;
-
-                    /**
-                     * Pulsar cluster ID
-                     */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
 
                 };
             }

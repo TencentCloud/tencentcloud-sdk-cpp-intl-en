@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool VisibilityTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 获取Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
+                     * @return MaxMsgSize Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
                      * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
-                     * 设置Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @param _maxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 设置Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
+                     * @param _maxMsgSize Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
                      * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
@@ -427,7 +427,7 @@ namespace TencentCloud
                     bool m_visibilityTimeoutHasBeenSet;
 
                     /**
-                     * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
                      */
                     uint64_t m_maxMsgSize;
                     bool m_maxMsgSizeHasBeenSet;

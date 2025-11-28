@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZhiTong Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable VIP Direct Connect
+                     * @return ZhiTong Whether to enable VIP Direct Connect
                      * 
                      */
                     bool GetZhiTong() const;
 
                     /**
-                     * 设置Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zhiTong Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable VIP Direct Connect
+                     * @param _zhiTong Whether to enable VIP Direct Connect
                      * 
                      */
                     void SetZhiTong(const bool& _zhiTong);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TgwGroupName TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTgwGroupName() const;
 
                     /**
                      * 设置TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tgwGroupName TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTgwGroupName(const std::string& _tgwGroupName);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable VIP Direct Connect
                      */
                     bool m_zhiTong;
                     bool m_zhiTongHasBeenSet;
 
                     /**
                      * TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tgwGroupName;
                     bool m_tgwGroupNameHasBeenSet;

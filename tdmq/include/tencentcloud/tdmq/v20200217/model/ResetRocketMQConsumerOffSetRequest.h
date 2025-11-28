@@ -106,27 +106,6 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name.
-                     * @return Topic Topic name.
-                     * 
-                     */
-                    std::string GetTopic() const;
-
-                    /**
-                     * 设置Topic name.
-                     * @param _topic Topic name.
-                     * 
-                     */
-                    void SetTopic(const std::string& _topic);
-
-                    /**
-                     * 判断参数 Topic 是否已赋值
-                     * @return Topic 是否已赋值
-                     * 
-                     */
-                    bool TopicHasBeenSet() const;
-
-                    /**
                      * 获取Reset method. 0: Start from the latest offset; 1: Start from specified time point.
                      * @return Type Reset method. 0: Start from the latest offset; 1: Start from specified time point.
                      * 
@@ -146,6 +125,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Topic name.
+                     * @return Topic Topic name.
+                     * 
+                     */
+                    std::string GetTopic() const;
+
+                    /**
+                     * 设置Topic name.
+                     * @param _topic Topic name.
+                     * 
+                     */
+                    void SetTopic(const std::string& _topic);
+
+                    /**
+                     * 判断参数 Topic 是否已赋值
+                     * @return Topic 是否已赋值
+                     * 
+                     */
+                    bool TopicHasBeenSet() const;
 
                     /**
                      * 获取The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool ResetTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the reset flag is retry topic.
+                     * @return RetryFlag Whether the reset flag is retry topic.
+                     * 
+                     */
+                    bool GetRetryFlag() const;
+
+                    /**
+                     * 设置Whether the reset flag is retry topic.
+                     * @param _retryFlag Whether the reset flag is retry topic.
+                     * 
+                     */
+                    void SetRetryFlag(const bool& _retryFlag);
+
+                    /**
+                     * 判断参数 RetryFlag 是否已赋值
+                     * @return RetryFlag 是否已赋值
+                     * 
+                     */
+                    bool RetryFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -189,22 +210,28 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Topic name.
-                     */
-                    std::string m_topic;
-                    bool m_topicHasBeenSet;
-
-                    /**
                      * Reset method. 0: Start from the latest offset; 1: Start from specified time point.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
+                     * Topic name.
+                     */
+                    std::string m_topic;
+                    bool m_topicHasBeenSet;
+
+                    /**
                      * The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
                      */
                     uint64_t m_resetTimestamp;
                     bool m_resetTimestampHasBeenSet;
+
+                    /**
+                     * Whether the reset flag is retry topic.
+                     */
+                    bool m_retryFlag;
+                    bool m_retryFlagHasBeenSet;
 
                 };
             }

@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool EniIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InstanceId ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Submachine instance ID.
+                     * @return InstanceId Submachine instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _instanceId ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Submachine instance ID.
+                     * @param _instanceId Submachine instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -177,19 +173,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InstanceName Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Submachine instance name.
+                     * @return InstanceName Submachine instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _instanceName Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Submachine instance name.
+                     * @param _instanceName Submachine instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -255,15 +247,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_eniIdHasBeenSet;
 
                     /**
-                     * ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Submachine instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Submachine instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

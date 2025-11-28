@@ -47,23 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Port Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+                     * @return Port Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _port Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+                     * @param _port Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -76,19 +72,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+                     * @return Type Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+                     * @param _type Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -101,23 +93,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
+                     * @return InstanceId This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _instanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
+                     * @param _instanceId This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -151,23 +139,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+                     * @return EniIp This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
                      * 
                      */
                     std::string GetEniIp() const;
 
                     /**
-                     * 设置It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _eniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+                     * @param _eniIp This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
                      * 
                      */
                     void SetEniIp(const std::string& _eniIp);
@@ -180,15 +164,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool EniIpHasBeenSet() const;
 
                     /**
-                     * 获取Tag.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Tag.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -203,24 +187,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -232,15 +213,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_weightHasBeenSet;
 
                     /**
-                     * It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;
 
                     /**
-                     * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;

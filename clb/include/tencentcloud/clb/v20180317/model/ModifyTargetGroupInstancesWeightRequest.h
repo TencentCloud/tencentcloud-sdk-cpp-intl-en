@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of servers for which to modify weights
-                     * @return TargetGroupInstances Array of servers for which to modify weights
+                     * 获取Array of servers whose weight is to be modified. Port is a required item in this api.
+                     * @return TargetGroupInstances Array of servers whose weight is to be modified. Port is a required item in this api.
                      * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
-                     * 设置Array of servers for which to modify weights
-                     * @param _targetGroupInstances Array of servers for which to modify weights
+                     * 设置Array of servers whose weight is to be modified. Port is a required item in this api.
+                     * @param _targetGroupInstances Array of servers whose weight is to be modified. Port is a required item in this api.
                      * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_targetGroupIdHasBeenSet;
 
                     /**
-                     * Array of servers for which to modify weights
+                     * Array of servers whose weight is to be modified. Port is a required item in this api.
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;

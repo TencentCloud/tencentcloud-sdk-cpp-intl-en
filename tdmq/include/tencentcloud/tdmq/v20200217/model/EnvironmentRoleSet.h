@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnvironmentId The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _environmentId The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
@@ -74,10 +74,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     /**
                      * 获取Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Permissions Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPermissions() const;
@@ -85,10 +85,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     /**
                      * 设置Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _permissions Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPermissions(const std::vector<std::string>& _permissions);
@@ -104,7 +104,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_environmentId;
                     bool m_environmentIdHasBeenSet;
@@ -112,7 +112,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     /**
                      * Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_permissions;
                     bool m_permissionsHasBeenSet;

@@ -1,0 +1,220 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEMSGRESPONSE_H_
+#define TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEMSGRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Tdmq
+    {
+        namespace V20200217
+        {
+            namespace Model
+            {
+                /**
+                * DescribeMsg response structure.
+                */
+                class DescribeMsgResponse : public AbstractModel
+                {
+                public:
+                    DescribeMsgResponse();
+                    ~DescribeMsgResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Message attributes.
+                     * @return Properties Message attributes.
+                     * 
+                     */
+                    std::string GetProperties() const;
+
+                    /**
+                     * 判断参数 Properties 是否已赋值
+                     * @return Properties 是否已赋值
+                     * 
+                     */
+                    bool PropertiesHasBeenSet() const;
+
+                    /**
+                     * 获取Message body.
+                     * @return Body Message body.
+                     * 
+                     */
+                    std::string GetBody() const;
+
+                    /**
+                     * 判断参数 Body 是否已赋值
+                     * @return Body 是否已赋值
+                     * 
+                     */
+                    bool BodyHasBeenSet() const;
+
+                    /**
+                     * 获取Batch ID.
+                     * @return BatchId Batch ID.
+                     * 
+                     */
+                    std::string GetBatchId() const;
+
+                    /**
+                     * 判断参数 BatchId 是否已赋值
+                     * @return BatchId 是否已赋值
+                     * 
+                     */
+                    bool BatchIdHasBeenSet() const;
+
+                    /**
+                     * 获取Production time.
+                     * @return ProduceTime Production time.
+                     * 
+                     */
+                    std::string GetProduceTime() const;
+
+                    /**
+                     * 判断参数 ProduceTime 是否已赋值
+                     * @return ProduceTime 是否已赋值
+                     * 
+                     */
+                    bool ProduceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Message ID.
+                     * @return MsgId Message ID.
+                     * 
+                     */
+                    std::string GetMsgId() const;
+
+                    /**
+                     * 判断参数 MsgId 是否已赋值
+                     * @return MsgId 是否已赋值
+                     * 
+                     */
+                    bool MsgIdHasBeenSet() const;
+
+                    /**
+                     * 获取Producer name.
+                     * @return ProducerName Producer name.
+                     * 
+                     */
+                    std::string GetProducerName() const;
+
+                    /**
+                     * 判断参数 ProducerName 是否已赋值
+                     * @return ProducerName 是否已赋值
+                     * 
+                     */
+                    bool ProducerNameHasBeenSet() const;
+
+                    /**
+                     * 获取Message key
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Key Message key
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetKey() const;
+
+                    /**
+                     * 判断参数 Key 是否已赋值
+                     * @return Key 是否已赋值
+                     * 
+                     */
+                    bool KeyHasBeenSet() const;
+
+                    /**
+                     * 获取Message metadata information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Metadata Message metadata information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMetadata() const;
+
+                    /**
+                     * 判断参数 Metadata 是否已赋值
+                     * @return Metadata 是否已赋值
+                     * 
+                     */
+                    bool MetadataHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Message attributes.
+                     */
+                    std::string m_properties;
+                    bool m_propertiesHasBeenSet;
+
+                    /**
+                     * Message body.
+                     */
+                    std::string m_body;
+                    bool m_bodyHasBeenSet;
+
+                    /**
+                     * Batch ID.
+                     */
+                    std::string m_batchId;
+                    bool m_batchIdHasBeenSet;
+
+                    /**
+                     * Production time.
+                     */
+                    std::string m_produceTime;
+                    bool m_produceTimeHasBeenSet;
+
+                    /**
+                     * Message ID.
+                     */
+                    std::string m_msgId;
+                    bool m_msgIdHasBeenSet;
+
+                    /**
+                     * Producer name.
+                     */
+                    std::string m_producerName;
+                    bool m_producerNameHasBeenSet;
+
+                    /**
+                     * Message key
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_key;
+                    bool m_keyHasBeenSet;
+
+                    /**
+                     * Message metadata information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_metadata;
+                    bool m_metadataHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEMSGRESPONSE_H_

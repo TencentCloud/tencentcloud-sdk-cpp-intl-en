@@ -42,6 +42,7 @@
 #include <tencentcloud/teo/v20220901/model/Https.h>
 #include <tencentcloud/teo/v20220901/model/ClientIpCountry.h>
 #include <tencentcloud/teo/v20220901/model/Grpc.h>
+#include <tencentcloud/teo/v20220901/model/NetworkErrorLogging.h>
 #include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
 #include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 #include <tencentcloud/teo/v20220901/model/StandardDebug.h>
@@ -569,6 +570,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool GrpcHasBeenSet() const;
 
                     /**
+                     * 获取Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    NetworkErrorLogging GetNetworkErrorLogging() const;
+
+                    /**
+                     * 设置Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param _networkErrorLogging Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetNetworkErrorLogging(const NetworkErrorLogging& _networkErrorLogging);
+
+                    /**
+                     * 判断参数 NetworkErrorLogging 是否已赋值
+                     * @return NetworkErrorLogging 是否已赋值
+                     * 
+                     */
+                    bool NetworkErrorLoggingHasBeenSet() const;
+
+                    /**
                      * 获取Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ImageOptimize Image optimization configuration. 
@@ -809,6 +835,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     Grpc m_grpc;
                     bool m_grpcHasBeenSet;
+
+                    /**
+                     * Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    NetworkErrorLogging m_networkErrorLogging;
+                    bool m_networkErrorLoggingHasBeenSet;
 
                     /**
                      * Image optimization configuration. 

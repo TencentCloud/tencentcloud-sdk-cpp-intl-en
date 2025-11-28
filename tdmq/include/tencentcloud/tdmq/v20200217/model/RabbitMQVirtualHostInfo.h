@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return Description Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Vhost description information.
+                     * @return Description Vhost description information.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _description Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Vhost description information.
+                     * @param _description Vhost description information.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -115,19 +111,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Vhost tags.
+                     * @return Tags Vhost tags.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Vhost tags.
+                     * @param _tags Vhost tags.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -140,19 +132,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -165,19 +153,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return ModifyTime Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Modification time.
+                     * @return ModifyTime Modification time.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
-                     * 设置Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _modifyTime Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Modification time.
+                     * @param _modifyTime Modification time.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -190,19 +174,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return VirtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Vhost overview statistics information.
+                     * @return VirtualHostStatistics Vhost overview statistics information.
                      * 
                      */
                     RabbitMQVirtualHostStatistics GetVirtualHostStatistics() const;
 
                     /**
-                     * 设置Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _virtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Vhost overview statistics information.
+                     * @param _virtualHostStatistics Vhost overview statistics information.
                      * 
                      */
                     void SetVirtualHostStatistics(const RabbitMQVirtualHostStatistics& _virtualHostStatistics);
@@ -215,15 +195,36 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool VirtualHostStatisticsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Message trace enabling status. true: enabled; false: disabled.
+                     * @return TraceFlag Message trace enabling status. true: enabled; false: disabled.
+                     * 
+                     */
+                    bool GetTraceFlag() const;
+
+                    /**
+                     * 设置Message trace enabling status. true: enabled; false: disabled.
+                     * @param _traceFlag Message trace enabling status. true: enabled; false: disabled.
+                     * 
+                     */
+                    void SetTraceFlag(const bool& _traceFlag);
+
+                    /**
+                     * 判断参数 TraceFlag 是否已赋值
+                     * @return TraceFlag 是否已赋值
+                     * 
+                     */
+                    bool TraceFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+                     * @return Status Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+                     * @param _status Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -236,15 +237,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MessageHeapCount 
+                     * 获取Message backlog count.
+                     * @return MessageHeapCount Message backlog count.
                      * 
                      */
                     int64_t GetMessageHeapCount() const;
 
                     /**
-                     * 设置
-                     * @param _messageHeapCount 
+                     * 设置Message backlog count.
+                     * @param _messageHeapCount Message backlog count.
                      * 
                      */
                     void SetMessageHeapCount(const int64_t& _messageHeapCount);
@@ -257,15 +258,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MessageHeapCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MessageRateIn 
+                     * 获取Message input rate.
+                     * @return MessageRateIn Message input rate.
                      * 
                      */
                     double GetMessageRateIn() const;
 
                     /**
-                     * 设置
-                     * @param _messageRateIn 
+                     * 设置Message input rate.
+                     * @param _messageRateIn Message input rate.
                      * 
                      */
                     void SetMessageRateIn(const double& _messageRateIn);
@@ -278,15 +279,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MessageRateInHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MessageRateOut 
+                     * 获取Message output rate.
+                     * @return MessageRateOut Message output rate.
                      * 
                      */
                     double GetMessageRateOut() const;
 
                     /**
-                     * 设置
-                     * @param _messageRateOut 
+                     * 设置Message output rate.
+                     * @param _messageRateOut Message output rate.
                      * 
                      */
                     void SetMessageRateOut(const double& _messageRateOut);
@@ -297,6 +298,69 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool MessageRateOutHasBeenSet() const;
+
+                    /**
+                     * 获取Whether an image queue policy exists. true: Exists; false: Does not exist.
+                     * @return MirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
+                     * 
+                     */
+                    bool GetMirrorQueuePolicyFlag() const;
+
+                    /**
+                     * 设置Whether an image queue policy exists. true: Exists; false: Does not exist.
+                     * @param _mirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
+                     * 
+                     */
+                    void SetMirrorQueuePolicyFlag(const bool& _mirrorQueuePolicyFlag);
+
+                    /**
+                     * 判断参数 MirrorQueuePolicyFlag 是否已赋值
+                     * @return MirrorQueuePolicyFlag 是否已赋值
+                     * 
+                     */
+                    bool MirrorQueuePolicyFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Creation timestamp.
+                     * @return CreateTs Creation timestamp.
+                     * 
+                     */
+                    uint64_t GetCreateTs() const;
+
+                    /**
+                     * 设置Creation timestamp.
+                     * @param _createTs Creation timestamp.
+                     * 
+                     */
+                    void SetCreateTs(const uint64_t& _createTs);
+
+                    /**
+                     * 判断参数 CreateTs 是否已赋值
+                     * @return CreateTs 是否已赋值
+                     * 
+                     */
+                    bool CreateTsHasBeenSet() const;
+
+                    /**
+                     * 获取Modification timestamp.
+                     * @return ModifyTs Modification timestamp.
+                     * 
+                     */
+                    uint64_t GetModifyTs() const;
+
+                    /**
+                     * 设置Modification timestamp.
+                     * @param _modifyTs Modification timestamp.
+                     * 
+                     */
+                    void SetModifyTs(const uint64_t& _modifyTs);
+
+                    /**
+                     * 判断参数 ModifyTs 是否已赋值
+                     * @return ModifyTs 是否已赋值
+                     * 
+                     */
+                    bool ModifyTsHasBeenSet() const;
 
                 private:
 
@@ -313,63 +377,82 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Vhost description information.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Vhost tags.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Modification time.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Vhost overview statistics information.
                      */
                     RabbitMQVirtualHostStatistics m_virtualHostStatistics;
                     bool m_virtualHostStatisticsHasBeenSet;
 
                     /**
-                     * 
+                     * Message trace enabling status. true: enabled; false: disabled.
+                     */
+                    bool m_traceFlag;
+                    bool m_traceFlagHasBeenSet;
+
+                    /**
+                     * Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Message backlog count.
                      */
                     int64_t m_messageHeapCount;
                     bool m_messageHeapCountHasBeenSet;
 
                     /**
-                     * 
+                     * Message input rate.
                      */
                     double m_messageRateIn;
                     bool m_messageRateInHasBeenSet;
 
                     /**
-                     * 
+                     * Message output rate.
                      */
                     double m_messageRateOut;
                     bool m_messageRateOutHasBeenSet;
+
+                    /**
+                     * Whether an image queue policy exists. true: Exists; false: Does not exist.
+                     */
+                    bool m_mirrorQueuePolicyFlag;
+                    bool m_mirrorQueuePolicyFlagHasBeenSet;
+
+                    /**
+                     * Creation timestamp.
+                     */
+                    uint64_t m_createTs;
+                    bool m_createTsHasBeenSet;
+
+                    /**
+                     * Modification timestamp.
+                     */
+                    uint64_t m_modifyTs;
+                    bool m_modifyTsHasBeenSet;
 
                 };
             }

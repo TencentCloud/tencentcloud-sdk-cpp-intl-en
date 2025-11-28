@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicIpAddresses Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Public network IP of the real server
+                     * @return PublicIpAddresses Public network IP of the real server
                      * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
-                     * 设置Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publicIpAddresses Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Public network IP of the real server
+                     * @param _publicIpAddresses Public network IP of the real server
                      * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
@@ -135,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private network IP of the real server
+                     * @return PrivateIpAddresses Private network IP of the real server
                      * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
-                     * 设置Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Private network IP of the real server
+                     * @param _privateIpAddresses Private network IP of the real server
                      * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
@@ -160,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name of the real server
+                     * @return InstanceName Instance name of the real server
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name of the real server
+                     * @param _instanceName Instance name of the real server
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -185,23 +173,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RunFlag Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
+                     * @return RunFlag Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
                      * 
                      */
                     int64_t GetRunFlag() const;
 
                     /**
-                     * 设置Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _runFlag Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
+                     * @param _runFlag Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
                      * 
                      */
                     void SetRunFlag(const int64_t& _runFlag);
@@ -234,30 +218,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Public IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Public network IP of the real server
                      */
                     std::vector<std::string> m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;
 
                     /**
-                     * Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private network IP of the real server
                      */
                     std::vector<std::string> m_privateIpAddresses;
                     bool m_privateIpAddressesHasBeenSet;
 
                     /**
-                     * Real server instance names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name of the real server
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Real server status
-1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backend service status.
+1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
                      */
                     int64_t m_runFlag;
                     bool m_runFlagHasBeenSet;

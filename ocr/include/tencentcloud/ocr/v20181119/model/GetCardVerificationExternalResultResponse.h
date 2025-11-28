@@ -47,9 +47,11 @@ namespace TencentCloud
                     /**
                      * 获取Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
                      * @return Status Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
                      * 
                      */
@@ -139,6 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
                      */
                     std::string m_status;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @param _instanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchUserHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset
-                     * @return Offset Pagination offset
+                     * 获取Specifies the page Offset. default is 0.
+                     * @return Offset Specifies the page Offset. default is 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset
-                     * @param _offset Pagination offset
+                     * 设置Specifies the page Offset. default is 0.
+                     * @param _offset Specifies the page Offset. default is 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination limit
-                     * @return Limit Pagination limit
+                     * 获取Page Limit. default value: 20.
+                     * @return Limit Page Limit. default value: 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination limit
-                     * @param _limit Pagination limit
+                     * 设置Page Limit. default value: 20.
+                     * @param _limit Page Limit. default value: 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,19 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取User tag, which is used to filter users.
-                     * @return Tags User tag, which is used to filter users.
+                     * 获取User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+                     * @return Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置User tag, which is used to filter users.
-                     * @param _tags User tag, which is used to filter users.
+                     * 设置User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+                     * @param _tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -171,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -183,13 +187,13 @@ namespace TencentCloud
                     bool m_searchUserHasBeenSet;
 
                     /**
-                     * Pagination offset
+                     * Specifies the page Offset. default is 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination limit
+                     * Page Limit. default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -201,7 +205,8 @@ namespace TencentCloud
                     bool m_userHasBeenSet;
 
                     /**
-                     * User tag, which is used to filter users.
+                     * User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

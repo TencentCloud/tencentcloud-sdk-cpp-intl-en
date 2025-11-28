@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicList Topic list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CmqTopic> GetTopicList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Topic list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqTopic> m_topicList;
                     bool m_topicListHasBeenSet;

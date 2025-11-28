@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param _loadBalancerId CLB instance ID
+                     * 设置ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @param _loadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+                     * @return ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param _listenerId CLB listener ID
+                     * 设置ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+                     * @param _listenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the forwarding rule to be modified.
-                     * @return LocationId ID of the forwarding rule to be modified.
+                     * 获取Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+                     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置ID of the forwarding rule to be modified.
-                     * @param _locationId ID of the forwarding rule to be modified.
+                     * 设置Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+                     * @param _locationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -176,14 +176,18 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
                     /**
                      * 获取Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
                      * @return SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
                      * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
                      * 设置Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
                      * @param _sessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
                      * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
@@ -279,22 +283,43 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool OAuthHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the custom cookie name.
+                     * @return CookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    std::string GetCookieName() const;
+
+                    /**
+                     * 设置Specifies the custom cookie name.
+                     * @param _cookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    void SetCookieName(const std::string& _cookieName);
+
+                    /**
+                     * 判断参数 CookieName 是否已赋值
+                     * @return CookieName 是否已赋值
+                     * 
+                     */
+                    bool CookieNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CLB instance ID
+                     * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB listener ID
+                     * ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * ID of the forwarding rule to be modified.
+                     * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
@@ -320,6 +345,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
                     /**
                      * Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
                      */
                     int64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;
@@ -347,6 +373,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     OAuth m_oAuth;
                     bool m_oAuthHasBeenSet;
+
+                    /**
+                     * Specifies the custom cookie name.
+                     */
+                    std::string m_cookieName;
+                    bool m_cookieNameHasBeenSet;
 
                 };
             }

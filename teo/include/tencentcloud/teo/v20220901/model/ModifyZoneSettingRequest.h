@@ -39,6 +39,7 @@
 #include <tencentcloud/teo/v20220901/model/Ipv6.h>
 #include <tencentcloud/teo/v20220901/model/ClientIpCountry.h>
 #include <tencentcloud/teo/v20220901/model/Grpc.h>
+#include <tencentcloud/teo/v20220901/model/NetworkErrorLogging.h>
 #include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
 #include <tencentcloud/teo/v20220901/model/StandardDebug.h>
 #include <tencentcloud/teo/v20220901/model/JITVideoProcess.h>
@@ -535,6 +536,27 @@ The original configuration will apply if it is not specified.
                     bool GrpcHasBeenSet() const;
 
                     /**
+                     * 获取Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * @return NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    NetworkErrorLogging GetNetworkErrorLogging() const;
+
+                    /**
+                     * 设置Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * @param _networkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    void SetNetworkErrorLogging(const NetworkErrorLogging& _networkErrorLogging);
+
+                    /**
+                     * 判断参数 NetworkErrorLogging 是否已赋值
+                     * @return NetworkErrorLogging 是否已赋值
+                     * 
+                     */
+                    bool NetworkErrorLoggingHasBeenSet() const;
+
+                    /**
                      * 获取Image optimization. 
 It is disabled if this parameter is not specified.
                      * @return ImageOptimize Image optimization. 
@@ -734,6 +756,12 @@ The original configuration will apply if it is not specified.
                      */
                     Grpc m_grpc;
                     bool m_grpcHasBeenSet;
+
+                    /**
+                     * Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     */
+                    NetworkErrorLogging m_networkErrorLogging;
+                    bool m_networkErrorLoggingHasBeenSet;
 
                     /**
                      * Image optimization. 

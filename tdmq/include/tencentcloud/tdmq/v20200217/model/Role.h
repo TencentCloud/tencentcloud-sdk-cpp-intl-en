@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+                     * @return PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+                     * 
+                     */
+                    std::string GetPermType() const;
+
+                    /**
+                     * 设置Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+                     * @param _permType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+                     * 
+                     */
+                    void SetPermType(const std::string& _permType);
+
+                    /**
+                     * 判断参数 PermType 是否已赋值
+                     * @return PermType 是否已赋值
+                     * 
+                     */
+                    bool PermTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+                     */
+                    std::string m_permType;
+                    bool m_permTypeHasBeenSet;
 
                 };
             }

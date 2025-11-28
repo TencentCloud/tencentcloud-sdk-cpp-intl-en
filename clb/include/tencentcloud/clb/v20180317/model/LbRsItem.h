@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+                     * @return VpcId VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+                     * @param _vpcId VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Private network IP to be queried, which can be of the CVM or ENI.
-                     * @return PrivateIp Private network IP to be queried, which can be of the CVM or ENI.
+                     * 获取Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+                     * @return PrivateIp Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置Private network IP to be queried, which can be of the CVM or ENI.
-                     * @param _privateIp Private network IP to be queried, which can be of the CVM or ENI.
+                     * 设置Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+                     * @param _privateIp Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VPC ID
+                     * VPC ID in string format. Only string format is supported.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Private network IP to be queried, which can be of the CVM or ENI.
+                     * Specifies the private IP address for backend querying, which can be CVM or eni.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;

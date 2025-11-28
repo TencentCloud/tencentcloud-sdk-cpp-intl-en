@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TDMQ for RabbitMQ node information
+                * RabbitMQ node information.
                 */
                 class RabbitMQPrivateNode : public AbstractModel
                 {
@@ -72,19 +72,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Node status
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NodeStatus Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NodeStatus Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNodeStatus() const;
 
                     /**
-                     * 设置Node status
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _nodeStatus Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nodeStatus Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeStatus(const std::string& _nodeStatus);
@@ -206,8 +206,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nodeStatus;
                     bool m_nodeStatusHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TDMQ for RabbitMQ cluster ID
-                     * @return InstanceId TDMQ for RabbitMQ cluster ID
+                     * 获取Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TDMQ for RabbitMQ cluster ID
-                     * @param _instanceId TDMQ for RabbitMQ cluster ID
+                     * 设置Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @param _instanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset, default value 0.
+                     * @return Offset Offset, default value 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset, default value 0.
+                     * @param _offset Offset, default value 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The maximum entries per page
-                     * @return Limit The maximum entries per page
+                     * 获取Page limit. default value: 20.
+                     * @return Limit Page limit. default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum entries per page
-                     * @param _limit The maximum entries per page
+                     * 设置Page limit. default value: 20.
+                     * @param _limit Page limit. default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -128,30 +128,26 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+                     * 获取Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
-                     * @return Filters Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+                     * @return Filters Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+                     * 设置Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
-                     * @param _filters Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+                     * @param _filters Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
                      * 
                      */
@@ -165,19 +161,23 @@ It is an array type and can contain multiple filters.
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
-                     * @return SortElement Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+                     * 获取Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
+                     * @return SortElement Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
                      * 
                      */
                     std::string GetSortElement() const;
 
                     /**
-                     * 设置Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
-                     * @param _sortElement Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+                     * 设置Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
+                     * @param _sortElement Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
                      * 
                      */
                     void SetSortElement(const std::string& _sortElement);
@@ -217,19 +217,19 @@ Valid values: `ascend`, `descend`.
                 private:
 
                     /**
-                     * TDMQ for RabbitMQ cluster ID
+                     * Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset, default value 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The maximum entries per page
+                     * Page limit. default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -241,18 +241,18 @@ Valid values: `ascend`, `descend`.
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+                     * Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+                     * Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
                      */
                     std::string m_sortElement;
                     bool m_sortElementHasBeenSet;

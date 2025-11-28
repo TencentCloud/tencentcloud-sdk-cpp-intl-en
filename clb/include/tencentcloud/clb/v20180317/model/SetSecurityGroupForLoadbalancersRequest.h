@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security group ID, such as sg-12345678
-                     * @return SecurityGroup Security group ID, such as sg-12345678
+                     * 获取Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @return SecurityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group ID, such as sg-12345678
-                     * @param _securityGroup Security group ID, such as sg-12345678
+                     * 设置Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @param _securityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
@@ -89,15 +89,19 @@ DEL: unbind a security group
                     bool OperationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Array of CLB instance IDs
-                     * @return LoadBalancerIds Array of CLB instance IDs
+                     * 获取ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
+                     * @return LoadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置Array of CLB instance IDs
-                     * @param _loadBalancerIds Array of CLB instance IDs
+                     * 设置ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
+                     * @param _loadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
                      * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
@@ -112,7 +116,7 @@ DEL: unbind a security group
                 private:
 
                     /**
-                     * Security group ID, such as sg-12345678
+                     * Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;
@@ -125,7 +129,8 @@ DEL: unbind a security group
                     bool m_operationTypeHasBeenSet;
 
                     /**
-                     * Array of CLB instance IDs
+                     * ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;

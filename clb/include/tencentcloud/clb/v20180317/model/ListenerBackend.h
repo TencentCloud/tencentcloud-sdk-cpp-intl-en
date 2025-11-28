@@ -113,18 +113,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Rules Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RuleTargets> GetRules() const;
 
                     /**
                      * 设置Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _rules Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRules(const std::vector<RuleTargets>& _rules);
@@ -137,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RulesHasBeenSet() const;
 
                     /**
-                     * 获取List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+                     * @return Targets List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
                      * 
                      */
                     std::vector<Backend> GetTargets() const;
 
                     /**
-                     * 设置List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+                     * @param _targets List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
                      * 
                      */
                     void SetTargets(const std::vector<Backend>& _targets);
@@ -162,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndPort Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取End port in a port range if port range is supported, or 0 if port range is not supported
+                     * @return EndPort End port in a port range if port range is supported, or 0 if port range is not supported
                      * 
                      */
                     int64_t GetEndPort() const;
 
                     /**
-                     * 设置Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endPort Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置End port in a port range if port range is supported, or 0 if port range is not supported
+                     * @param _endPort End port in a port range if port range is supported, or 0 if port range is not supported
                      * 
                      */
                     void SetEndPort(const int64_t& _endPort);
@@ -208,21 +196,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RuleTargets> m_rules;
                     bool m_rulesHasBeenSet;
 
                     /**
-                     * List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
                      */
                     std::vector<Backend> m_targets;
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * End port in a port range if port range is supported, or 0 if port range is not supported
                      */
                     int64_t m_endPort;
                     bool m_endPortHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @param _instanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -126,10 +126,31 @@ namespace TencentCloud
                      */
                     bool TraceFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to create an image queue policy. Default value: true.
+                     * @return MirrorQueuePolicyFlag Whether to create an image queue policy. Default value: true.
+                     * 
+                     */
+                    bool GetMirrorQueuePolicyFlag() const;
+
+                    /**
+                     * 设置Whether to create an image queue policy. Default value: true.
+                     * @param _mirrorQueuePolicyFlag Whether to create an image queue policy. Default value: true.
+                     * 
+                     */
+                    void SetMirrorQueuePolicyFlag(const bool& _mirrorQueuePolicyFlag);
+
+                    /**
+                     * 判断参数 MirrorQueuePolicyFlag 是否已赋值
+                     * @return MirrorQueuePolicyFlag 是否已赋值
+                     * 
+                     */
+                    bool MirrorQueuePolicyFlagHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     bool m_traceFlag;
                     bool m_traceFlagHasBeenSet;
+
+                    /**
+                     * Whether to create an image queue policy. Default value: true.
+                     */
+                    bool m_mirrorQueuePolicyFlag;
+                    bool m_mirrorQueuePolicyFlagHasBeenSet;
 
                 };
             }

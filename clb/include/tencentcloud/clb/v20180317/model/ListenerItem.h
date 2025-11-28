@@ -162,19 +162,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EndPort End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取End port of a port range for a listener
+                     * @return EndPort End port of a port range for a listener
                      * 
                      */
                     int64_t GetEndPort() const;
 
                     /**
-                     * 设置End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _endPort End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置End port of a port range for a listener
+                     * @param _endPort End port of a port range for a listener
                      * 
                      */
                     void SetEndPort(const int64_t& _endPort);
@@ -221,8 +217,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * End port of a port range for a listener
                      */
                     int64_t m_endPort;
                     bool m_endPortHasBeenSet;

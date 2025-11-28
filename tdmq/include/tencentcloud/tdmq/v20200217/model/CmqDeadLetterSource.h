@@ -73,18 +73,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QueueName Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _queueName Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -107,7 +103,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;

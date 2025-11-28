@@ -115,31 +115,31 @@ namespace TencentCloud
                     bool OcspStaplingHasBeenSet() const;
 
                     /**
-                     * 获取Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
-                     * @return TlsVersion Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * 获取Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * @return TlsVersion Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
-                     * 设置Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
-                     * @param _tlsVersion Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * 设置Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * @param _tlsVersion Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
@@ -284,11 +284,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ocspStaplingHasBeenSet;
 
                     /**
-                     * Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      */
                     std::vector<std::string> m_tlsVersion;
                     bool m_tlsVersionHasBeenSet;

@@ -221,18 +221,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CanEditRoute Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetCanEditRoute() const;
 
                     /**
                      * 设置Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _canEditRoute Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCanEditRoute(const bool& _canEditRoute);
@@ -243,6 +243,156 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool CanEditRouteHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillingLabelVersion Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillingLabelVersion() const;
+
+                    /**
+                     * 设置Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billingLabelVersion Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillingLabelVersion(const std::string& _billingLabelVersion);
+
+                    /**
+                     * 判断参数 BillingLabelVersion 是否已赋值
+                     * @return BillingLabelVersion 是否已赋值
+                     * 
+                     */
+                    bool BillingLabelVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpireTime Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetExpireTime() const;
+
+                    /**
+                     * 设置Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expireTime Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExpireTime(const int64_t& _expireTime);
+
+                    /**
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
+                     * 
+                     */
+                    bool ExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AutoCreateTopicStatus Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetAutoCreateTopicStatus() const;
+
+                    /**
+                     * 设置Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _autoCreateTopicStatus Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAutoCreateTopicStatus(const bool& _autoCreateTopicStatus);
+
+                    /**
+                     * 判断参数 AutoCreateTopicStatus 是否已赋值
+                     * @return AutoCreateTopicStatus 是否已赋值
+                     * 
+                     */
+                    bool AutoCreateTopicStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultPartitionNumber Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetDefaultPartitionNumber() const;
+
+                    /**
+                     * 设置Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultPartitionNumber Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDefaultPartitionNumber(const int64_t& _defaultPartitionNumber);
+
+                    /**
+                     * 判断参数 DefaultPartitionNumber 是否已赋值
+                     * @return DefaultPartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool DefaultPartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+                     * @return Tenant User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+                     * 
+                     */
+                    std::string GetTenant() const;
+
+                    /**
+                     * 设置User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+                     * @param _tenant User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+                     * 
+                     */
+                    void SetTenant(const std::string& _tenant);
+
+                    /**
+                     * 判断参数 Tenant 是否已赋值
+                     * @return Tenant 是否已赋值
+                     * 
+                     */
+                    bool TenantHasBeenSet() const;
+
+                    /**
+                     * 获取Deletion protection switch flag.
+                     * @return DeleteProtection Deletion protection switch flag.
+                     * 
+                     */
+                    int64_t GetDeleteProtection() const;
+
+                    /**
+                     * 设置Deletion protection switch flag.
+                     * @param _deleteProtection Deletion protection switch flag.
+                     * 
+                     */
+                    void SetDeleteProtection(const int64_t& _deleteProtection);
+
+                    /**
+                     * 判断参数 DeleteProtection 是否已赋值
+                     * @return DeleteProtection 是否已赋值
+                     * 
+                     */
+                    bool DeleteProtectionHasBeenSet() const;
 
                 private:
 
@@ -297,10 +447,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_canEditRoute;
                     bool m_canEditRouteHasBeenSet;
+
+                    /**
+                     * Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billingLabelVersion;
+                    bool m_billingLabelVersionHasBeenSet;
+
+                    /**
+                     * Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_expireTime;
+                    bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_autoCreateTopicStatus;
+                    bool m_autoCreateTopicStatusHasBeenSet;
+
+                    /**
+                     * Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_defaultPartitionNumber;
+                    bool m_defaultPartitionNumberHasBeenSet;
+
+                    /**
+                     * User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+                     */
+                    std::string m_tenant;
+                    bool m_tenantHasBeenSet;
+
+                    /**
+                     * Deletion protection switch flag.
+                     */
+                    int64_t m_deleteProtection;
+                    bool m_deleteProtectionHasBeenSet;
 
                 };
             }

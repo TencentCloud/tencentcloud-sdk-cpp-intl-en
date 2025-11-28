@@ -44,7 +44,9 @@ Listener::Listener() :
     m_maxConnHasBeenSet(false),
     m_maxCpsHasBeenSet(false),
     m_idleConnectTimeoutHasBeenSet(false),
-    m_rescheduleIntervalHasBeenSet(false)
+    m_rescheduleIntervalHasBeenSet(false),
+    m_dataCompressModeHasBeenSet(false),
+    m_rescheduleStartTimeHasBeenSet(false)
 {
 }
 
@@ -337,6 +339,26 @@ CoreInternalOutcome Listener::Deserialize(const rapidjson::Value &value)
         m_rescheduleIntervalHasBeenSet = true;
     }
 
+    if (value.HasMember("DataCompressMode") && !value["DataCompressMode"].IsNull())
+    {
+        if (!value["DataCompressMode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Listener.DataCompressMode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataCompressMode = string(value["DataCompressMode"].GetString());
+        m_dataCompressModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("RescheduleStartTime") && !value["RescheduleStartTime"].IsNull())
+    {
+        if (!value["RescheduleStartTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Listener.RescheduleStartTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_rescheduleStartTime = value["RescheduleStartTime"].GetInt64();
+        m_rescheduleStartTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -556,6 +578,22 @@ void Listener::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         string key = "RescheduleInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rescheduleInterval, allocator);
+    }
+
+    if (m_dataCompressModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataCompressMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataCompressMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rescheduleStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RescheduleStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rescheduleStartTime, allocator);
     }
 
 }
@@ -943,5 +981,37 @@ void Listener::SetRescheduleInterval(const uint64_t& _rescheduleInterval)
 bool Listener::RescheduleIntervalHasBeenSet() const
 {
     return m_rescheduleIntervalHasBeenSet;
+}
+
+string Listener::GetDataCompressMode() const
+{
+    return m_dataCompressMode;
+}
+
+void Listener::SetDataCompressMode(const string& _dataCompressMode)
+{
+    m_dataCompressMode = _dataCompressMode;
+    m_dataCompressModeHasBeenSet = true;
+}
+
+bool Listener::DataCompressModeHasBeenSet() const
+{
+    return m_dataCompressModeHasBeenSet;
+}
+
+int64_t Listener::GetRescheduleStartTime() const
+{
+    return m_rescheduleStartTime;
+}
+
+void Listener::SetRescheduleStartTime(const int64_t& _rescheduleStartTime)
+{
+    m_rescheduleStartTime = _rescheduleStartTime;
+    m_rescheduleStartTimeHasBeenSet = true;
+}
+
+bool Listener::RescheduleStartTimeHasBeenSet() const
+{
+    return m_rescheduleStartTimeHasBeenSet;
 }
 

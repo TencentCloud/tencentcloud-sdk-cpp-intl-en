@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ConfigTypeHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default: 0.
-                     * @return Offset Pagination offset. Default: 0.
+                     * 获取Pagination offset. defaults to 0.
+                     * @return Offset Pagination offset. defaults to 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default: 0.
-                     * @param _offset Pagination offset. Default: 0.
+                     * 设置Pagination offset. defaults to 0.
+                     * @param _offset Pagination offset. defaults to 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page. Default: 20.
-                     * @return Limit Number of results per page. Default: 20.
+                     * 获取Number of results. default value: 20.
+                     * @return Limit Number of results. default value: 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page. Default: 20.
-                     * @param _limit Number of results per page. Default: 20.
+                     * 设置Number of results. default value: 20.
+                     * @param _limit Number of results. default value: 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ConfigNameHasBeenSet() const;
 
                     /**
-                     * 获取Configuration ID.
-                     * @return UconfigIds Configuration ID.
+                     * 获取Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+                     * @return UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetUconfigIds() const;
 
                     /**
-                     * 设置Configuration ID.
-                     * @param _uconfigIds Configuration ID.
+                     * 设置Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+                     * @param _uconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
                      * 
                      */
                     void SetUconfigIds(const std::vector<std::string>& _uconfigIds);
@@ -149,23 +149,55 @@ namespace TencentCloud
                     bool UconfigIdsHasBeenSet() const;
 
                     /**
-                     * 获取The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-                     * @return Filters The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+                     * 获取Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+                     * @return Filters Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-                     * @param _filters The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+                     * 设置Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+                     * @param _filters Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -186,13 +218,13 @@ namespace TencentCloud
                     bool m_configTypeHasBeenSet;
 
                     /**
-                     * Pagination offset. Default: 0.
+                     * Pagination offset. defaults to 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page. Default: 20.
+                     * Number of results. default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -204,15 +236,23 @@ namespace TencentCloud
                     bool m_configNameHasBeenSet;
 
                     /**
-                     * Configuration ID.
+                     * Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_uconfigIds;
                     bool m_uconfigIdsHasBeenSet;
 
                     /**
-                     * The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+                     * Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

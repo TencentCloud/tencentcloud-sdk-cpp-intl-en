@@ -176,6 +176,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ScalableTpsHasBeenSet() const;
 
+                    /**
+                     * 获取32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxPartitions 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetMaxPartitions() const;
+
+                    /**
+                     * 设置32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxPartitions 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxPartitions(const uint64_t& _maxPartitions);
+
+                    /**
+                     * 判断参数 MaxPartitions 是否已赋值
+                     * @return MaxPartitions 是否已赋值
+                     * 
+                     */
+                    bool MaxPartitionsHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum delayed message count for the product. 0 indicates no limit.	
+                     * @return MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+                     * 
+                     */
+                    int64_t GetMaxDelayedMessages() const;
+
+                    /**
+                     * 设置Maximum delayed message count for the product. 0 indicates no limit.	
+                     * @param _maxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+                     * 
+                     */
+                    void SetMaxDelayedMessages(const int64_t& _maxDelayedMessages);
+
+                    /**
+                     * 判断参数 MaxDelayedMessages 是否已赋值
+                     * @return MaxDelayedMessages 是否已赋值
+                     * 
+                     */
+                    bool MaxDelayedMessagesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -214,6 +264,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_scalableTps;
                     bool m_scalableTpsHasBeenSet;
+
+                    /**
+                     * 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_maxPartitions;
+                    bool m_maxPartitionsHasBeenSet;
+
+                    /**
+                     * Maximum delayed message count for the product. 0 indicates no limit.	
+                     */
+                    int64_t m_maxDelayedMessages;
+                    bool m_maxDelayedMessagesHasBeenSet;
 
                 };
             }

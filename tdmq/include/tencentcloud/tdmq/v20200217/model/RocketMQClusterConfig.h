@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/RocketMQTopicDistribution.h>
 
 
 namespace TencentCloud
@@ -47,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maximum TPS per namespace
-                     * @return MaxTpsPerNamespace Maximum TPS per namespace
-                     * 
+                     * 获取Upper limit of TPS per single namespace.
+                     * @return MaxTpsPerNamespace Upper limit of TPS per single namespace.
+                     * @deprecated
                      */
                     uint64_t GetMaxTpsPerNamespace() const;
 
                     /**
-                     * 设置Maximum TPS per namespace
-                     * @param _maxTpsPerNamespace Maximum TPS per namespace
-                     * 
+                     * 设置Upper limit of TPS per single namespace.
+                     * @param _maxTpsPerNamespace Upper limit of TPS per single namespace.
+                     * @deprecated
                      */
                     void SetMaxTpsPerNamespace(const uint64_t& _maxTpsPerNamespace);
 
                     /**
                      * 判断参数 MaxTpsPerNamespace 是否已赋值
                      * @return MaxTpsPerNamespace 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool MaxTpsPerNamespaceHasBeenSet() const;
 
@@ -260,10 +261,77 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxQueuesPerTopicHasBeenSet() const;
 
+                    /**
+                     * 获取Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicDistribution Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<RocketMQTopicDistribution> GetTopicDistribution() const;
+
+                    /**
+                     * 设置Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _topicDistribution Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTopicDistribution(const std::vector<RocketMQTopicDistribution>& _topicDistribution);
+
+                    /**
+                     * 判断参数 TopicDistribution 是否已赋值
+                     * @return TopicDistribution 是否已赋值
+                     * 
+                     */
+                    bool TopicDistributionHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of roles.
+                     * @return MaxRoleNum Maximum number of roles.
+                     * 
+                     */
+                    int64_t GetMaxRoleNum() const;
+
+                    /**
+                     * 设置Maximum number of roles.
+                     * @param _maxRoleNum Maximum number of roles.
+                     * 
+                     */
+                    void SetMaxRoleNum(const int64_t& _maxRoleNum);
+
+                    /**
+                     * 判断参数 MaxRoleNum 是否已赋值
+                     * @return MaxRoleNum 是否已赋值
+                     * 
+                     */
+                    bool MaxRoleNumHasBeenSet() const;
+
+                    /**
+                     * 获取TPS quota.
+                     * @return MaxTpsLimit TPS quota.
+                     * 
+                     */
+                    int64_t GetMaxTpsLimit() const;
+
+                    /**
+                     * 设置TPS quota.
+                     * @param _maxTpsLimit TPS quota.
+                     * 
+                     */
+                    void SetMaxTpsLimit(const int64_t& _maxTpsLimit);
+
+                    /**
+                     * 判断参数 MaxTpsLimit 是否已赋值
+                     * @return MaxTpsLimit 是否已赋值
+                     * 
+                     */
+                    bool MaxTpsLimitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Maximum TPS per namespace
+                     * Upper limit of TPS per single namespace.
                      */
                     uint64_t m_maxTpsPerNamespace;
                     bool m_maxTpsPerNamespaceHasBeenSet;
@@ -322,6 +390,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_maxQueuesPerTopic;
                     bool m_maxQueuesPerTopicHasBeenSet;
+
+                    /**
+                     * Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RocketMQTopicDistribution> m_topicDistribution;
+                    bool m_topicDistributionHasBeenSet;
+
+                    /**
+                     * Maximum number of roles.
+                     */
+                    int64_t m_maxRoleNum;
+                    bool m_maxRoleNumHasBeenSet;
+
+                    /**
+                     * TPS quota.
+                     */
+                    int64_t m_maxTpsLimit;
+                    bool m_maxTpsLimitHasBeenSet;
 
                 };
             }

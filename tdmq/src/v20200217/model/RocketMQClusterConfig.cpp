@@ -30,7 +30,10 @@ RocketMQClusterConfig::RocketMQClusterConfig() :
     m_usedGroupNumHasBeenSet(false),
     m_maxRetentionTimeHasBeenSet(false),
     m_maxLatencyTimeHasBeenSet(false),
-    m_maxQueuesPerTopicHasBeenSet(false)
+    m_maxQueuesPerTopicHasBeenSet(false),
+    m_topicDistributionHasBeenSet(false),
+    m_maxRoleNumHasBeenSet(false),
+    m_maxTpsLimitHasBeenSet(false)
 {
 }
 
@@ -139,6 +142,46 @@ CoreInternalOutcome RocketMQClusterConfig::Deserialize(const rapidjson::Value &v
         m_maxQueuesPerTopicHasBeenSet = true;
     }
 
+    if (value.HasMember("TopicDistribution") && !value["TopicDistribution"].IsNull())
+    {
+        if (!value["TopicDistribution"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterConfig.TopicDistribution` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TopicDistribution"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            RocketMQTopicDistribution item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_topicDistribution.push_back(item);
+        }
+        m_topicDistributionHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxRoleNum") && !value["MaxRoleNum"].IsNull())
+    {
+        if (!value["MaxRoleNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterConfig.MaxRoleNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxRoleNum = value["MaxRoleNum"].GetInt64();
+        m_maxRoleNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxTpsLimit") && !value["MaxTpsLimit"].IsNull())
+    {
+        if (!value["MaxTpsLimit"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterConfig.MaxTpsLimit` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxTpsLimit = value["MaxTpsLimit"].GetInt64();
+        m_maxTpsLimitHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +267,37 @@ void RocketMQClusterConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "MaxQueuesPerTopic";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxQueuesPerTopic, allocator);
+    }
+
+    if (m_topicDistributionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicDistribution";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_topicDistribution.begin(); itr != m_topicDistribution.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_maxRoleNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxRoleNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxRoleNum, allocator);
+    }
+
+    if (m_maxTpsLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxTpsLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxTpsLimit, allocator);
     }
 
 }
@@ -387,5 +461,53 @@ void RocketMQClusterConfig::SetMaxQueuesPerTopic(const uint64_t& _maxQueuesPerTo
 bool RocketMQClusterConfig::MaxQueuesPerTopicHasBeenSet() const
 {
     return m_maxQueuesPerTopicHasBeenSet;
+}
+
+vector<RocketMQTopicDistribution> RocketMQClusterConfig::GetTopicDistribution() const
+{
+    return m_topicDistribution;
+}
+
+void RocketMQClusterConfig::SetTopicDistribution(const vector<RocketMQTopicDistribution>& _topicDistribution)
+{
+    m_topicDistribution = _topicDistribution;
+    m_topicDistributionHasBeenSet = true;
+}
+
+bool RocketMQClusterConfig::TopicDistributionHasBeenSet() const
+{
+    return m_topicDistributionHasBeenSet;
+}
+
+int64_t RocketMQClusterConfig::GetMaxRoleNum() const
+{
+    return m_maxRoleNum;
+}
+
+void RocketMQClusterConfig::SetMaxRoleNum(const int64_t& _maxRoleNum)
+{
+    m_maxRoleNum = _maxRoleNum;
+    m_maxRoleNumHasBeenSet = true;
+}
+
+bool RocketMQClusterConfig::MaxRoleNumHasBeenSet() const
+{
+    return m_maxRoleNumHasBeenSet;
+}
+
+int64_t RocketMQClusterConfig::GetMaxTpsLimit() const
+{
+    return m_maxTpsLimit;
+}
+
+void RocketMQClusterConfig::SetMaxTpsLimit(const int64_t& _maxTpsLimit)
+{
+    m_maxTpsLimit = _maxTpsLimit;
+    m_maxTpsLimitHasBeenSet = true;
+}
+
+bool RocketMQClusterConfig::MaxTpsLimitHasBeenSet() const
+{
+    return m_maxTpsLimitHasBeenSet;
 }
 

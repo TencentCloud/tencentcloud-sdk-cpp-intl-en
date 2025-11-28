@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool MasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceSet List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource list.
+                     * @return ResourceSet Resource list.
                      * 
                      */
                     std::vector<Resource> GetResourceSet() const;
 
                     /**
-                     * 设置List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceSet List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource list.
+                     * @param _resourceSet Resource list.
                      * 
                      */
                     void SetResourceSet(const std::vector<Resource>& _resourceSet);
@@ -224,19 +220,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EdgeZoneHasBeenSet() const;
 
                     /**
-                     * 获取Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the network outbound.
+                     * @return Egress Specifies the network outbound.
                      * 
                      */
                     std::string GetEgress() const;
 
                     /**
-                     * 设置Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the network outbound.
+                     * @param _egress Specifies the network outbound.
                      * 
                      */
                     void SetEgress(const std::string& _egress);
@@ -257,8 +249,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_masterZoneHasBeenSet;
 
                     /**
-                     * List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource list.
                      */
                     std::vector<Resource> m_resourceSet;
                     bool m_resourceSetHasBeenSet;
@@ -301,8 +292,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_edgeZoneHasBeenSet;
 
                     /**
-                     * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the network outbound.
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;

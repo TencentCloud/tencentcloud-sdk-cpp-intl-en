@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeadLetterQueue Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDeadLetterQueue() const;
 
                     /**
                      * 设置Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _deadLetterQueue Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDeadLetterQueue(const std::string& _deadLetterQueue);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DeadLetterQueueHasBeenSet() const;
 
                     /**
-                     * 获取Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Policy Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+                     * @return Policy Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
                      * 
                      */
                     uint64_t GetPolicy() const;
 
                     /**
-                     * 设置Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _policy Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+                     * @param _policy Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
                      * 
                      */
                     void SetPolicy(const uint64_t& _policy);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PolicyHasBeenSet() const;
 
                     /**
-                     * 获取Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+                     * @return MaxTimeToLive Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
                      * 
                      */
                     uint64_t GetMaxTimeToLive() const;
 
                     /**
-                     * 设置Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+                     * @param _maxTimeToLive Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
                      * 
                      */
                     void SetMaxTimeToLive(const uint64_t& _maxTimeToLive);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxTimeToLiveHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxReceiveCount Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
+                     * @return MaxReceiveCount Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
                      * 
                      */
                     uint64_t GetMaxReceiveCount() const;
 
                     /**
-                     * 设置Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxReceiveCount Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
+                     * @param _maxReceiveCount Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
                      * 
                      */
                     void SetMaxReceiveCount(const uint64_t& _maxReceiveCount);
@@ -150,28 +134,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_deadLetterQueue;
                     bool m_deadLetterQueueHasBeenSet;
 
                     /**
-                     * Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
                      */
                     uint64_t m_policy;
                     bool m_policyHasBeenSet;
 
                     /**
-                     * Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
                      */
                     uint64_t m_maxTimeToLive;
                     bool m_maxTimeToLiveHasBeenSet;
 
                     /**
-                     * Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
                      */
                     uint64_t m_maxReceiveCount;
                     bool m_maxReceiveCountHasBeenSet;

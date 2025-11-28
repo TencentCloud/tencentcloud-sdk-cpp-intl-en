@@ -28,7 +28,11 @@ RabbitMQUser::RabbitMQUser() :
     m_tagsHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_modifyTimeHasBeenSet(false),
-    m_typeHasBeenSet(false)
+    m_typeHasBeenSet(false),
+    m_maxConnectionsHasBeenSet(false),
+    m_maxChannelsHasBeenSet(false),
+    m_createTsHasBeenSet(false),
+    m_modifyTsHasBeenSet(false)
 {
 }
 
@@ -120,6 +124,46 @@ CoreInternalOutcome RabbitMQUser::Deserialize(const rapidjson::Value &value)
         m_typeHasBeenSet = true;
     }
 
+    if (value.HasMember("MaxConnections") && !value["MaxConnections"].IsNull())
+    {
+        if (!value["MaxConnections"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RabbitMQUser.MaxConnections` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxConnections = value["MaxConnections"].GetInt64();
+        m_maxConnectionsHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxChannels") && !value["MaxChannels"].IsNull())
+    {
+        if (!value["MaxChannels"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RabbitMQUser.MaxChannels` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxChannels = value["MaxChannels"].GetInt64();
+        m_maxChannelsHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreateTs") && !value["CreateTs"].IsNull())
+    {
+        if (!value["CreateTs"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RabbitMQUser.CreateTs` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_createTs = value["CreateTs"].GetUint64();
+        m_createTsHasBeenSet = true;
+    }
+
+    if (value.HasMember("ModifyTs") && !value["ModifyTs"].IsNull())
+    {
+        if (!value["ModifyTs"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RabbitMQUser.ModifyTs` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_modifyTs = value["ModifyTs"].GetUint64();
+        m_modifyTsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -194,6 +238,38 @@ void RabbitMQUser::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_maxConnectionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxConnections";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxConnections, allocator);
+    }
+
+    if (m_maxChannelsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxChannels";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxChannels, allocator);
+    }
+
+    if (m_createTsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_createTs, allocator);
+    }
+
+    if (m_modifyTsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModifyTs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_modifyTs, allocator);
     }
 
 }
@@ -325,5 +401,69 @@ void RabbitMQUser::SetType(const string& _type)
 bool RabbitMQUser::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
+}
+
+int64_t RabbitMQUser::GetMaxConnections() const
+{
+    return m_maxConnections;
+}
+
+void RabbitMQUser::SetMaxConnections(const int64_t& _maxConnections)
+{
+    m_maxConnections = _maxConnections;
+    m_maxConnectionsHasBeenSet = true;
+}
+
+bool RabbitMQUser::MaxConnectionsHasBeenSet() const
+{
+    return m_maxConnectionsHasBeenSet;
+}
+
+int64_t RabbitMQUser::GetMaxChannels() const
+{
+    return m_maxChannels;
+}
+
+void RabbitMQUser::SetMaxChannels(const int64_t& _maxChannels)
+{
+    m_maxChannels = _maxChannels;
+    m_maxChannelsHasBeenSet = true;
+}
+
+bool RabbitMQUser::MaxChannelsHasBeenSet() const
+{
+    return m_maxChannelsHasBeenSet;
+}
+
+uint64_t RabbitMQUser::GetCreateTs() const
+{
+    return m_createTs;
+}
+
+void RabbitMQUser::SetCreateTs(const uint64_t& _createTs)
+{
+    m_createTs = _createTs;
+    m_createTsHasBeenSet = true;
+}
+
+bool RabbitMQUser::CreateTsHasBeenSet() const
+{
+    return m_createTsHasBeenSet;
+}
+
+uint64_t RabbitMQUser::GetModifyTs() const
+{
+    return m_modifyTs;
+}
+
+void RabbitMQUser::SetModifyTs(const uint64_t& _modifyTs)
+{
+    m_modifyTs = _modifyTs;
+    m_modifyTsHasBeenSet = true;
+}
+
+bool RabbitMQUser::ModifyTsHasBeenSet() const
+{
+    return m_modifyTsHasBeenSet;
 }
 

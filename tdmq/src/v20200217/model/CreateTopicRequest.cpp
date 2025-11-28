@@ -26,10 +26,14 @@ CreateTopicRequest::CreateTopicRequest() :
     m_environmentIdHasBeenSet(false),
     m_topicNameHasBeenSet(false),
     m_partitionsHasBeenSet(false),
+    m_clusterIdHasBeenSet(false),
     m_remarkHasBeenSet(false),
     m_topicTypeHasBeenSet(false),
-    m_clusterIdHasBeenSet(false),
-    m_pulsarTopicTypeHasBeenSet(false)
+    m_pulsarTopicTypeHasBeenSet(false),
+    m_msgTTLHasBeenSet(false),
+    m_unackPolicyHasBeenSet(false),
+    m_isolateConsumerEnableHasBeenSet(false),
+    m_ackTimeOutHasBeenSet(false)
 {
 }
 
@@ -64,6 +68,14 @@ string CreateTopicRequest::ToJsonString() const
         d.AddMember(iKey, m_partitions, allocator);
     }
 
+    if (m_clusterIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_remarkHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -80,20 +92,44 @@ string CreateTopicRequest::ToJsonString() const
         d.AddMember(iKey, m_topicType, allocator);
     }
 
-    if (m_clusterIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ClusterId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_pulsarTopicTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PulsarTopicType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pulsarTopicType, allocator);
+    }
+
+    if (m_msgTTLHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MsgTTL";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_msgTTL, allocator);
+    }
+
+    if (m_unackPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnackPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_unackPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isolateConsumerEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsolateConsumerEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isolateConsumerEnable, allocator);
+    }
+
+    if (m_ackTimeOutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AckTimeOut";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_ackTimeOut, allocator);
     }
 
 
@@ -152,6 +188,22 @@ bool CreateTopicRequest::PartitionsHasBeenSet() const
     return m_partitionsHasBeenSet;
 }
 
+string CreateTopicRequest::GetClusterId() const
+{
+    return m_clusterId;
+}
+
+void CreateTopicRequest::SetClusterId(const string& _clusterId)
+{
+    m_clusterId = _clusterId;
+    m_clusterIdHasBeenSet = true;
+}
+
+bool CreateTopicRequest::ClusterIdHasBeenSet() const
+{
+    return m_clusterIdHasBeenSet;
+}
+
 string CreateTopicRequest::GetRemark() const
 {
     return m_remark;
@@ -184,22 +236,6 @@ bool CreateTopicRequest::TopicTypeHasBeenSet() const
     return m_topicTypeHasBeenSet;
 }
 
-string CreateTopicRequest::GetClusterId() const
-{
-    return m_clusterId;
-}
-
-void CreateTopicRequest::SetClusterId(const string& _clusterId)
-{
-    m_clusterId = _clusterId;
-    m_clusterIdHasBeenSet = true;
-}
-
-bool CreateTopicRequest::ClusterIdHasBeenSet() const
-{
-    return m_clusterIdHasBeenSet;
-}
-
 int64_t CreateTopicRequest::GetPulsarTopicType() const
 {
     return m_pulsarTopicType;
@@ -214,6 +250,70 @@ void CreateTopicRequest::SetPulsarTopicType(const int64_t& _pulsarTopicType)
 bool CreateTopicRequest::PulsarTopicTypeHasBeenSet() const
 {
     return m_pulsarTopicTypeHasBeenSet;
+}
+
+uint64_t CreateTopicRequest::GetMsgTTL() const
+{
+    return m_msgTTL;
+}
+
+void CreateTopicRequest::SetMsgTTL(const uint64_t& _msgTTL)
+{
+    m_msgTTL = _msgTTL;
+    m_msgTTLHasBeenSet = true;
+}
+
+bool CreateTopicRequest::MsgTTLHasBeenSet() const
+{
+    return m_msgTTLHasBeenSet;
+}
+
+string CreateTopicRequest::GetUnackPolicy() const
+{
+    return m_unackPolicy;
+}
+
+void CreateTopicRequest::SetUnackPolicy(const string& _unackPolicy)
+{
+    m_unackPolicy = _unackPolicy;
+    m_unackPolicyHasBeenSet = true;
+}
+
+bool CreateTopicRequest::UnackPolicyHasBeenSet() const
+{
+    return m_unackPolicyHasBeenSet;
+}
+
+bool CreateTopicRequest::GetIsolateConsumerEnable() const
+{
+    return m_isolateConsumerEnable;
+}
+
+void CreateTopicRequest::SetIsolateConsumerEnable(const bool& _isolateConsumerEnable)
+{
+    m_isolateConsumerEnable = _isolateConsumerEnable;
+    m_isolateConsumerEnableHasBeenSet = true;
+}
+
+bool CreateTopicRequest::IsolateConsumerEnableHasBeenSet() const
+{
+    return m_isolateConsumerEnableHasBeenSet;
+}
+
+int64_t CreateTopicRequest::GetAckTimeOut() const
+{
+    return m_ackTimeOut;
+}
+
+void CreateTopicRequest::SetAckTimeOut(const int64_t& _ackTimeOut)
+{
+    m_ackTimeOut = _ackTimeOut;
+    m_ackTimeOutHasBeenSet = true;
+}
+
+bool CreateTopicRequest::AckTimeOutHasBeenSet() const
+{
+    return m_ackTimeOutHasBeenSet;
 }
 
 

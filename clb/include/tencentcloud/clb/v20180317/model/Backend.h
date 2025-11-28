@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Real server type. Valid values: CVM, ENI, CCN.
-                     * @return Type Real server type. Valid values: CVM, ENI, CCN.
+                     * 获取Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
+                     * @return Type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Real server type. Valid values: CVM, ENI, CCN.
-                     * @param _type Real server type. Valid values: CVM, ENI, CCN.
+                     * 设置Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
+                     * @param _type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Listening port of a real server
-                     * @return Port Listening port of a real server
+                     * 获取Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
+                     * @return Port Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Listening port of a real server
-                     * @param _port Listening port of a real server
+                     * 设置Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
+                     * @param _port Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -156,19 +156,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private network IP of the real server
+                     * @return PrivateIpAddresses Private network IP of the real server
                      * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
-                     * 设置Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Private network IP of the real server
+                     * @param _privateIpAddresses Private network IP of the real server
                      * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
@@ -206,19 +202,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegisteredTime Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Real server binding time
+                     * @return RegisteredTime Real server binding time
                      * 
                      */
                     std::string GetRegisteredTime() const;
 
                     /**
-                     * 设置Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _registeredTime Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Real server binding time
+                     * @param _registeredTime Real server binding time
                      * 
                      */
                     void SetRegisteredTime(const std::string& _registeredTime);
@@ -256,15 +248,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EniIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Tag.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -279,7 +271,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Real server type. Valid values: CVM, ENI, CCN.
+                     * Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -291,7 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Listening port of a real server
+                     * Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
@@ -310,8 +302,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_publicIpAddressesHasBeenSet;
 
                     /**
-                     * Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private network IP of the real server
                      */
                     std::vector<std::string> m_privateIpAddresses;
                     bool m_privateIpAddressesHasBeenSet;
@@ -324,8 +315,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Real server binding time
                      */
                     std::string m_registeredTime;
                     bool m_registeredTimeHasBeenSet;
@@ -338,7 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_eniIdHasBeenSet;
 
                     /**
-                     * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;

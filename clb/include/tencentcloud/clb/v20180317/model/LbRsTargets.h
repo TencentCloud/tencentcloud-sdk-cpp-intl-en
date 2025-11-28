@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VpcId VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取vpcId of RS
+                     * @return VpcId vpcId of RS
                      * 
                      */
                     int64_t GetVpcId() const;
 
                     /**
-                     * 设置VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vpcId VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置vpcId of RS
+                     * @param _vpcId vpcId of RS
                      * 
                      */
                     void SetVpcId(const int64_t& _vpcId);
@@ -135,19 +131,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Weight Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取RS weight
+                     * @return Weight RS weight
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _weight Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置RS weight
+                     * @param _weight RS weight
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -180,15 +172,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_portHasBeenSet;
 
                     /**
-                     * VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * vpcId of RS
                      */
                     int64_t m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * RS weight
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;

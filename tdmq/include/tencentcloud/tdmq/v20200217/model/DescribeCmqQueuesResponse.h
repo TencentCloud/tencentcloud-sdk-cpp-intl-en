@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Queue list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QueueList Queue list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CmqQueue> GetQueueList() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Queue list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqQueue> m_queueList;
                     bool m_queueListHasBeenSet;

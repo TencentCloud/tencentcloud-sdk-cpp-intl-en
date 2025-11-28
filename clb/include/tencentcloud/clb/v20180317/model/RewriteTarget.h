@@ -47,22 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * 获取Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetListenerId Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * @return TargetListenerId Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetListenerId() const;
 
                     /**
-                     * 设置Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * 设置Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetListenerId Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * @param _targetListenerId Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -76,22 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * 获取Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetLocationId Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * @return TargetLocationId Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetLocationId() const;
 
                     /**
-                     * 设置Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * 设置Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetLocationId Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * @param _targetLocationId Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -105,19 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetLocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RewriteCode Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the redirection status code.
+                     * @return RewriteCode Specifies the redirection status code.
                      * 
                      */
                     int64_t GetRewriteCode() const;
 
                     /**
-                     * 设置Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _rewriteCode Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the redirection status code.
+                     * @param _rewriteCode Specifies the redirection status code.
                      * 
                      */
                     void SetRewriteCode(const int64_t& _rewriteCode);
@@ -130,19 +118,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RewriteCodeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TakeUrl Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the matched URL is carried in redirection
+                     * @return TakeUrl Whether the matched URL is carried in redirection
                      * 
                      */
                     bool GetTakeUrl() const;
 
                     /**
-                     * 设置Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _takeUrl Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether the matched URL is carried in redirection
+                     * @param _takeUrl Whether the matched URL is carried in redirection
                      * 
                      */
                     void SetTakeUrl(const bool& _takeUrl);
@@ -155,19 +139,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TakeUrlHasBeenSet() const;
 
                     /**
-                     * 获取Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Redirection type. Manual: Manual redirection; Auto: Automatic redirection
+                     * @return RewriteType Redirection type. Manual: Manual redirection; Auto: Automatic redirection
                      * 
                      */
                     std::string GetRewriteType() const;
 
                     /**
-                     * 设置Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _rewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Redirection type. Manual: Manual redirection; Auto: Automatic redirection
+                     * @param _rewriteType Redirection type. Manual: Manual redirection; Auto: Automatic redirection
                      * 
                      */
                     void SetRewriteType(const std::string& _rewriteType);
@@ -182,38 +162,33 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetListenerId;
                     bool m_targetListenerIdHasBeenSet;
 
                     /**
-                     * Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+                     * Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetLocationId;
                     bool m_targetLocationIdHasBeenSet;
 
                     /**
-                     * Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the redirection status code.
                      */
                     int64_t m_rewriteCode;
                     bool m_rewriteCodeHasBeenSet;
 
                     /**
-                     * Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the matched URL is carried in redirection
                      */
                     bool m_takeUrl;
                     bool m_takeUrlHasBeenSet;
 
                     /**
-                     * Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Redirection type. Manual: Manual redirection; Auto: Automatic redirection
                      */
                     std::string m_rewriteType;
                     bool m_rewriteTypeHasBeenSet;

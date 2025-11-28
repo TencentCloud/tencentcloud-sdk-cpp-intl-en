@@ -28,7 +28,9 @@ DescribeRocketMQTopicsRequest::DescribeRocketMQTopicsRequest() :
     m_clusterIdHasBeenSet(false),
     m_namespaceIdHasBeenSet(false),
     m_filterTypeHasBeenSet(false),
-    m_filterNameHasBeenSet(false)
+    m_filterNameHasBeenSet(false),
+    m_filterGroupHasBeenSet(false),
+    m_tagFiltersHasBeenSet(false)
 {
 }
 
@@ -90,6 +92,29 @@ string DescribeRocketMQTopicsRequest::ToJsonString() const
         string key = "FilterName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_filterName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_filterGroupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterGroup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_filterGroup.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagFiltersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagFilters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagFilters.begin(); itr != m_tagFilters.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -194,6 +219,38 @@ void DescribeRocketMQTopicsRequest::SetFilterName(const string& _filterName)
 bool DescribeRocketMQTopicsRequest::FilterNameHasBeenSet() const
 {
     return m_filterNameHasBeenSet;
+}
+
+string DescribeRocketMQTopicsRequest::GetFilterGroup() const
+{
+    return m_filterGroup;
+}
+
+void DescribeRocketMQTopicsRequest::SetFilterGroup(const string& _filterGroup)
+{
+    m_filterGroup = _filterGroup;
+    m_filterGroupHasBeenSet = true;
+}
+
+bool DescribeRocketMQTopicsRequest::FilterGroupHasBeenSet() const
+{
+    return m_filterGroupHasBeenSet;
+}
+
+vector<TagFilter> DescribeRocketMQTopicsRequest::GetTagFilters() const
+{
+    return m_tagFilters;
+}
+
+void DescribeRocketMQTopicsRequest::SetTagFilters(const vector<TagFilter>& _tagFilters)
+{
+    m_tagFilters = _tagFilters;
+    m_tagFiltersHasBeenSet = true;
+}
+
+bool DescribeRocketMQTopicsRequest::TagFiltersHasBeenSet() const
+{
+    return m_tagFiltersHasBeenSet;
 }
 
 

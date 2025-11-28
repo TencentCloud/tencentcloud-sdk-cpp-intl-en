@@ -36,7 +36,12 @@ PulsarProInstance::PulsarProInstance() :
     m_scalableTpsHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
     m_subnetIdHasBeenSet(false),
-    m_maxBandWidthHasBeenSet(false)
+    m_maxBandWidthHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_createTimeHasBeenSet(false),
+    m_billingLabelVersionHasBeenSet(false),
+    m_tenantHasBeenSet(false),
+    m_certificateListHasBeenSet(false)
 {
 }
 
@@ -205,6 +210,76 @@ CoreInternalOutcome PulsarProInstance::Deserialize(const rapidjson::Value &value
         m_maxBandWidthHasBeenSet = true;
     }
 
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `PulsarProInstance.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
+    {
+        if (!value["CreateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PulsarProInstance.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_createTime = string(value["CreateTime"].GetString());
+        m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("BillingLabelVersion") && !value["BillingLabelVersion"].IsNull())
+    {
+        if (!value["BillingLabelVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PulsarProInstance.BillingLabelVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_billingLabelVersion = string(value["BillingLabelVersion"].GetString());
+        m_billingLabelVersionHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tenant") && !value["Tenant"].IsNull())
+    {
+        if (!value["Tenant"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PulsarProInstance.Tenant` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tenant = string(value["Tenant"].GetString());
+        m_tenantHasBeenSet = true;
+    }
+
+    if (value.HasMember("CertificateList") && !value["CertificateList"].IsNull())
+    {
+        if (!value["CertificateList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `PulsarProInstance.CertificateList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CertificateList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            CertificateInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_certificateList.push_back(item);
+        }
+        m_certificateListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -338,6 +413,60 @@ void PulsarProInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "MaxBandWidth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxBandWidth, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_billingLabelVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BillingLabelVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_billingLabelVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tenantHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tenant";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tenant.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificateListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificateList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_certificateList.begin(); itr != m_certificateList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -597,5 +726,85 @@ void PulsarProInstance::SetMaxBandWidth(const uint64_t& _maxBandWidth)
 bool PulsarProInstance::MaxBandWidthHasBeenSet() const
 {
     return m_maxBandWidthHasBeenSet;
+}
+
+vector<Tag> PulsarProInstance::GetTags() const
+{
+    return m_tags;
+}
+
+void PulsarProInstance::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool PulsarProInstance::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string PulsarProInstance::GetCreateTime() const
+{
+    return m_createTime;
+}
+
+void PulsarProInstance::SetCreateTime(const string& _createTime)
+{
+    m_createTime = _createTime;
+    m_createTimeHasBeenSet = true;
+}
+
+bool PulsarProInstance::CreateTimeHasBeenSet() const
+{
+    return m_createTimeHasBeenSet;
+}
+
+string PulsarProInstance::GetBillingLabelVersion() const
+{
+    return m_billingLabelVersion;
+}
+
+void PulsarProInstance::SetBillingLabelVersion(const string& _billingLabelVersion)
+{
+    m_billingLabelVersion = _billingLabelVersion;
+    m_billingLabelVersionHasBeenSet = true;
+}
+
+bool PulsarProInstance::BillingLabelVersionHasBeenSet() const
+{
+    return m_billingLabelVersionHasBeenSet;
+}
+
+string PulsarProInstance::GetTenant() const
+{
+    return m_tenant;
+}
+
+void PulsarProInstance::SetTenant(const string& _tenant)
+{
+    m_tenant = _tenant;
+    m_tenantHasBeenSet = true;
+}
+
+bool PulsarProInstance::TenantHasBeenSet() const
+{
+    return m_tenantHasBeenSet;
+}
+
+vector<CertificateInfo> PulsarProInstance::GetCertificateList() const
+{
+    return m_certificateList;
+}
+
+void PulsarProInstance::SetCertificateList(const vector<CertificateInfo>& _certificateList)
+{
+    m_certificateList = _certificateList;
+    m_certificateListHasBeenSet = true;
+}
+
+bool PulsarProInstance::CertificateListHasBeenSet() const
+{
+    return m_certificateListHasBeenSet;
 }
 

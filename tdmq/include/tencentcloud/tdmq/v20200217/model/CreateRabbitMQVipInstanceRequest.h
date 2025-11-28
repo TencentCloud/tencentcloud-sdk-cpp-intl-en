@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
 
 
 namespace TencentCloud
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+                     * @return VpcId vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+                     * @param _vpcId vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID
-                     * @return SubnetId VPC subnet ID
+                     * 获取The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+                     * @return SubnetId The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID
-                     * @param _subnetId VPC subnet ID
+                     * 设置The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+                     * @param _subnetId The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -127,15 +128,51 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
-                     * @return NodeSpec Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+                     * 获取Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+                     * @return NodeSpec Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
                      * 
                      */
                     std::string GetNodeSpec() const;
 
                     /**
-                     * 设置Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
-                     * @param _nodeSpec Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+                     * 设置Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+                     * @param _nodeSpec Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
                      * 
                      */
                     void SetNodeSpec(const std::string& _nodeSpec);
@@ -190,15 +227,15 @@ namespace TencentCloud
                     bool StorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable mirrored queue. Default value: `false`.
-                     * @return EnableCreateDefaultHaMirrorQueue Whether to enable mirrored queue. Default value: `false`.
+                     * 获取Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
+                     * @return EnableCreateDefaultHaMirrorQueue Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
                      * 
                      */
                     bool GetEnableCreateDefaultHaMirrorQueue() const;
 
                     /**
-                     * 设置Whether to enable mirrored queue. Default value: `false`.
-                     * @param _enableCreateDefaultHaMirrorQueue Whether to enable mirrored queue. Default value: `false`.
+                     * 设置Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
+                     * @param _enableCreateDefaultHaMirrorQueue Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
                      * 
                      */
                     void SetEnableCreateDefaultHaMirrorQueue(const bool& _enableCreateDefaultHaMirrorQueue);
@@ -211,15 +248,15 @@ namespace TencentCloud
                     bool EnableCreateDefaultHaMirrorQueueHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable auto-renewal. Default value: `true`.
-                     * @return AutoRenewFlag Whether to enable auto-renewal. Default value: `true`.
+                     * 获取Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
+                     * @return AutoRenewFlag Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
                      * 
                      */
                     bool GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether to enable auto-renewal. Default value: `true`.
-                     * @param _autoRenewFlag Whether to enable auto-renewal. Default value: `true`.
+                     * 设置Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
+                     * @param _autoRenewFlag Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
                      * 
                      */
                     void SetAutoRenewFlag(const bool& _autoRenewFlag);
@@ -252,6 +289,153 @@ namespace TencentCloud
                      */
                     bool TimeSpanHasBeenSet() const;
 
+                    /**
+                     * 获取Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+                     * @return PayMode Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+                     * 
+                     */
+                    uint64_t GetPayMode() const;
+
+                    /**
+                     * 设置Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+                     * @param _payMode Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+                     * 
+                     */
+                    void SetPayMode(const uint64_t& _payMode);
+
+                    /**
+                     * 判断参数 PayMode 是否已赋值
+                     * @return PayMode 是否已赋值
+                     * 
+                     */
+                    bool PayModeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+                     * @return ClusterVersion Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+                     * 
+                     */
+                    std::string GetClusterVersion() const;
+
+                    /**
+                     * 设置Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+                     * @param _clusterVersion Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+                     * 
+                     */
+                    void SetClusterVersion(const std::string& _clusterVersion);
+
+                    /**
+                     * 判断参数 ClusterVersion 是否已赋值
+                     * @return ClusterVersion 是否已赋值
+                     * 
+                     */
+                    bool ClusterVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the request is from the international website. Default value: false.
+                     * @return IsIntl Whether the request is from the international website. Default value: false.
+                     * 
+                     */
+                    bool GetIsIntl() const;
+
+                    /**
+                     * 设置Whether the request is from the international website. Default value: false.
+                     * @param _isIntl Whether the request is from the international website. Default value: false.
+                     * 
+                     */
+                    void SetIsIntl(const bool& _isIntl);
+
+                    /**
+                     * 判断参数 IsIntl 是否已赋值
+                     * @return IsIntl 是否已赋值
+                     * 
+                     */
+                    bool IsIntlHasBeenSet() const;
+
+                    /**
+                     * 获取Resource tag list.
+                     * @return ResourceTags Resource tag list.
+                     * 
+                     */
+                    std::vector<Tag> GetResourceTags() const;
+
+                    /**
+                     * 设置Resource tag list.
+                     * @param _resourceTags Resource tag list.
+                     * 
+                     */
+                    void SetResourceTags(const std::vector<Tag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     * 
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the public bandwidth size in Mbps.
+                     * @return Bandwidth Specifies the public bandwidth size in Mbps.
+                     * 
+                     */
+                    uint64_t GetBandwidth() const;
+
+                    /**
+                     * 设置Specifies the public bandwidth size in Mbps.
+                     * @param _bandwidth Specifies the public bandwidth size in Mbps.
+                     * 
+                     */
+                    void SetBandwidth(const uint64_t& _bandwidth);
+
+                    /**
+                     * 判断参数 Bandwidth 是否已赋值
+                     * @return Bandwidth 是否已赋值
+                     * 
+                     */
+                    bool BandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable public network access. If this parameter is not specified, the value is false by default.
+                     * @return EnablePublicAccess Whether to enable public network access. If this parameter is not specified, the value is false by default.
+                     * 
+                     */
+                    bool GetEnablePublicAccess() const;
+
+                    /**
+                     * 设置Whether to enable public network access. If this parameter is not specified, the value is false by default.
+                     * @param _enablePublicAccess Whether to enable public network access. If this parameter is not specified, the value is false by default.
+                     * 
+                     */
+                    void SetEnablePublicAccess(const bool& _enablePublicAccess);
+
+                    /**
+                     * 判断参数 EnablePublicAccess 是否已赋值
+                     * @return EnablePublicAccess 是否已赋值
+                     * 
+                     */
+                    bool EnablePublicAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+                     * @return EnableDeletionProtection Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+                     * 
+                     */
+                    bool GetEnableDeletionProtection() const;
+
+                    /**
+                     * 设置Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+                     * @param _enableDeletionProtection Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+                     * 
+                     */
+                    void SetEnableDeletionProtection(const bool& _enableDeletionProtection);
+
+                    /**
+                     * 判断参数 EnableDeletionProtection 是否已赋值
+                     * @return EnableDeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool EnableDeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -261,13 +445,13 @@ namespace TencentCloud
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID
+                     * The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -279,7 +463,16 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+                     * Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
                      */
                     std::string m_nodeSpec;
                     bool m_nodeSpecHasBeenSet;
@@ -297,13 +490,13 @@ namespace TencentCloud
                     bool m_storageSizeHasBeenSet;
 
                     /**
-                     * Whether to enable mirrored queue. Default value: `false`.
+                     * Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
                      */
                     bool m_enableCreateDefaultHaMirrorQueue;
                     bool m_enableCreateDefaultHaMirrorQueueHasBeenSet;
 
                     /**
-                     * Whether to enable auto-renewal. Default value: `true`.
+                     * Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
                      */
                     bool m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -313,6 +506,48 @@ namespace TencentCloud
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
+
+                    /**
+                     * Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+                     */
+                    uint64_t m_payMode;
+                    bool m_payModeHasBeenSet;
+
+                    /**
+                     * Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+                     */
+                    std::string m_clusterVersion;
+                    bool m_clusterVersionHasBeenSet;
+
+                    /**
+                     * Whether the request is from the international website. Default value: false.
+                     */
+                    bool m_isIntl;
+                    bool m_isIntlHasBeenSet;
+
+                    /**
+                     * Resource tag list.
+                     */
+                    std::vector<Tag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Specifies the public bandwidth size in Mbps.
+                     */
+                    uint64_t m_bandwidth;
+                    bool m_bandwidthHasBeenSet;
+
+                    /**
+                     * Whether to enable public network access. If this parameter is not specified, the value is false by default.
+                     */
+                    bool m_enablePublicAccess;
+                    bool m_enablePublicAccessHasBeenSet;
+
+                    /**
+                     * Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+                     */
+                    bool m_enableDeletionProtection;
+                    bool m_enableDeletionProtectionHasBeenSet;
 
                 };
             }

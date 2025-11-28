@@ -149,15 +149,31 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SortElement 
+                     * 获取Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+                     * @return SortElement Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
                      * 
                      */
                     std::string GetSortElement() const;
 
                     /**
-                     * 设置
-                     * @param _sortElement 
+                     * 设置Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+                     * @param _sortElement Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
                      * 
                      */
                     void SetSortElement(const std::string& _sortElement);
@@ -170,15 +186,15 @@ namespace TencentCloud
                     bool SortElementHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SortOrder 
+                     * 获取Sorting order. Valid values: ascend and descend.
+                     * @return SortOrder Sorting order. Valid values: ascend and descend.
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置
-                     * @param _sortOrder 
+                     * 设置Sorting order. Valid values: ascend and descend.
+                     * @param _sortOrder Sorting order. Valid values: ascend and descend.
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -223,13 +239,17 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
                      */
                     std::string m_sortElement;
                     bool m_sortElementHasBeenSet;
 
                     /**
-                     * 
+                     * Sorting order. Valid values: ascend and descend.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;

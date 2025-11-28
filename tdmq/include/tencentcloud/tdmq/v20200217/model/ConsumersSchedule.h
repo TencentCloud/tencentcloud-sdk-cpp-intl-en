@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetPartitions() const;
+                    int64_t GetPartitions() const;
 
                     /**
                      * 设置ID of the current partition.
@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetPartitions(const uint64_t& _partitions);
+                    void SetPartitions(const int64_t& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
@@ -194,7 +194,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * ID of the current partition.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_partitions;
+                    int64_t m_partitions;
                     bool m_partitionsHasBeenSet;
 
                     /**

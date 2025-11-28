@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MsgContentHasBeenSet() const;
 
                     /**
-                     * 获取Delay time
-                     * @return DelaySeconds Delay time
+                     * 获取Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
+                     * @return DelaySeconds Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
                      * 
                      */
                     int64_t GetDelaySeconds() const;
 
                     /**
-                     * 设置Delay time
-                     * @param _delaySeconds Delay time
+                     * 设置Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
+                     * @param _delaySeconds Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
                      * 
                      */
                     void SetDelaySeconds(const int64_t& _delaySeconds);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_msgContentHasBeenSet;
 
                     /**
-                     * Delay time
+                     * Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
                      */
                     int64_t m_delaySeconds;
                     bool m_delaySecondsHasBeenSet;

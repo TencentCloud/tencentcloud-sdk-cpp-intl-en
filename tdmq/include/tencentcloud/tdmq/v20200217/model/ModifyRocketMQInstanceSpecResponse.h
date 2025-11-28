@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Order ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return OrderId Order ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOrderId() const;
@@ -63,7 +61,6 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Order ID
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_orderId;
                     bool m_orderIdHasBeenSet;

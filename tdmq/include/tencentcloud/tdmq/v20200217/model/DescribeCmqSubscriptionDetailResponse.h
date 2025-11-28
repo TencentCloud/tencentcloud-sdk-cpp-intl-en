@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Set of subscription attributes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubscriptionSet Set of subscription attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Subscription attribute collection
+                     * @return SubscriptionSet Subscription attribute collection
                      * 
                      */
                     std::vector<CmqSubscription> GetSubscriptionSet() const;
@@ -83,8 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Set of subscription attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Subscription attribute collection
                      */
                     std::vector<CmqSubscription> m_subscriptionSet;
                     bool m_subscriptionSetHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of CLB instances sorted by outbound bandwidth from highest to lowest
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return LoadBalancerTraffic Information of CLB instances sorted by outbound bandwidth from highest to lowest
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Load balance information sorted in descending order by outbound bandwidth.
+                     * @return LoadBalancerTraffic Load balance information sorted in descending order by outbound bandwidth.
                      * 
                      */
                     std::vector<LoadBalancerTraffic> GetLoadBalancerTraffic() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Information of CLB instances sorted by outbound bandwidth from highest to lowest
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Load balance information sorted in descending order by outbound bandwidth.
                      */
                     std::vector<LoadBalancerTraffic> m_loadBalancerTraffic;
                     bool m_loadBalancerTrafficHasBeenSet;

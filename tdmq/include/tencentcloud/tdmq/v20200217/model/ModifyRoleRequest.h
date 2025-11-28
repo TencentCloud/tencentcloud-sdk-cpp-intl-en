@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/EnvironmentRoleSet.h>
 
 
 namespace TencentCloud
@@ -64,6 +65,27 @@ namespace TencentCloud
                     bool RoleNameHasBeenSet() const;
 
                     /**
+                     * 获取Cluster ID (required)
+                     * @return ClusterId Cluster ID (required)
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
                      * 
@@ -85,25 +107,46 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID (required)
-                     * @return ClusterId Cluster ID (required)
+                     * 获取Batch binds namespace information.
+                     * @return EnvironmentRoleSets Batch binds namespace information.
                      * 
                      */
-                    std::string GetClusterId() const;
+                    std::vector<EnvironmentRoleSet> GetEnvironmentRoleSets() const;
 
                     /**
-                     * 设置Cluster ID (required)
-                     * @param _clusterId Cluster ID (required)
+                     * 设置Batch binds namespace information.
+                     * @param _environmentRoleSets Batch binds namespace information.
                      * 
                      */
-                    void SetClusterId(const std::string& _clusterId);
+                    void SetEnvironmentRoleSets(const std::vector<EnvironmentRoleSet>& _environmentRoleSets);
 
                     /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
+                     * 判断参数 EnvironmentRoleSets 是否已赋值
+                     * @return EnvironmentRoleSets 是否已赋值
                      * 
                      */
-                    bool ClusterIdHasBeenSet() const;
+                    bool EnvironmentRoleSetsHasBeenSet() const;
+
+                    /**
+                     * 获取Unbinds all namespaces. set to true.
+                     * @return UnbindAllEnvironment Unbinds all namespaces. set to true.
+                     * 
+                     */
+                    bool GetUnbindAllEnvironment() const;
+
+                    /**
+                     * 设置Unbinds all namespaces. set to true.
+                     * @param _unbindAllEnvironment Unbinds all namespaces. set to true.
+                     * 
+                     */
+                    void SetUnbindAllEnvironment(const bool& _unbindAllEnvironment);
+
+                    /**
+                     * 判断参数 UnbindAllEnvironment 是否已赋值
+                     * @return UnbindAllEnvironment 是否已赋值
+                     * 
+                     */
+                    bool UnbindAllEnvironmentHasBeenSet() const;
 
                 private:
 
@@ -114,16 +157,28 @@ namespace TencentCloud
                     bool m_roleNameHasBeenSet;
 
                     /**
+                     * Cluster ID (required)
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
                      * Remarks (up to 128 characters).
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Cluster ID (required)
+                     * Batch binds namespace information.
                      */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
+                    std::vector<EnvironmentRoleSet> m_environmentRoleSets;
+                    bool m_environmentRoleSetsHasBeenSet;
+
+                    /**
+                     * Unbinds all namespaces. set to true.
+                     */
+                    bool m_unbindAllEnvironment;
+                    bool m_unbindAllEnvironmentHasBeenSet;
 
                 };
             }

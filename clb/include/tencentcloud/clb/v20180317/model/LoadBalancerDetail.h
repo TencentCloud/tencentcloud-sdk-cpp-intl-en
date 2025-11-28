@@ -93,23 +93,23 @@ namespace TencentCloud
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerType CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancerType Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
-                     * 设置CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerType CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _loadBalancerType Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
@@ -964,19 +964,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SniSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the domain name of the load balancing instance.
+                     * @return LoadBalancerDomain Specifies the domain name of the load balancing instance.
                      * 
                      */
                     std::string GetLoadBalancerDomain() const;
 
                     /**
-                     * 设置Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the domain name of the load balancing instance.
+                     * @param _loadBalancerDomain Specifies the domain name of the load balancing instance.
                      * 
                      */
                     void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
@@ -989,19 +985,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadBalancerDomainHasBeenSet() const;
 
                     /**
-                     * 获取Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the network outbound.
+                     * @return Egress Specifies the network outbound.
                      * 
                      */
                     std::string GetEgress() const;
 
                     /**
-                     * 设置Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the network outbound.
+                     * @param _egress Specifies the network outbound.
                      * 
                      */
                     void SetEgress(const std::string& _egress);
@@ -1014,15 +1006,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool EgressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AttributeFlags 
+                     * 获取Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AttributeFlags Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetAttributeFlags() const;
 
                     /**
-                     * 设置
-                     * @param _attributeFlags 
+                     * 设置Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _attributeFlags Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAttributeFlags(const std::vector<std::string>& _attributeFlags);
@@ -1035,15 +1031,23 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AttributeFlagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SlaType 
+                     * 获取Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaType Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置
-                     * @param _slaType 
+                     * 设置Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _slaType Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -1056,15 +1060,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SlaTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Exclusive 
+                     * 获取0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExclusive() const;
 
                     /**
-                     * 设置
-                     * @param _exclusive 
+                     * 设置0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExclusive(const uint64_t& _exclusive);
@@ -1091,9 +1099,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_loadBalancerType;
                     bool m_loadBalancerTypeHasBeenSet;
@@ -1335,33 +1343,35 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_sniSwitchHasBeenSet;
 
                     /**
-                     * Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the domain name of the load balancing instance.
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;
 
                     /**
-                     * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the network outbound.
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_attributeFlags;
                     bool m_attributeFlagsHasBeenSet;
 
                     /**
-                     * 
+                     * Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
 
                     /**
-                     * 
+                     * 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_exclusive;
                     bool m_exclusiveHasBeenSet;

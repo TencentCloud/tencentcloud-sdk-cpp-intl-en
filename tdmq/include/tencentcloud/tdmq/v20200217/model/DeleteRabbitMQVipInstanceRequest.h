@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+                     * @param _instanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -63,13 +63,40 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the request is from the international website. Default value: false.
+                     * @return IsIntl Whether the request is from the international website. Default value: false.
+                     * 
+                     */
+                    bool GetIsIntl() const;
+
+                    /**
+                     * 设置Whether the request is from the international website. Default value: false.
+                     * @param _isIntl Whether the request is from the international website. Default value: false.
+                     * 
+                     */
+                    void SetIsIntl(const bool& _isIntl);
+
+                    /**
+                     * 判断参数 IsIntl 是否已赋值
+                     * @return IsIntl 是否已赋值
+                     * 
+                     */
+                    bool IsIntlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether the request is from the international website. Default value: false.
+                     */
+                    bool m_isIntl;
+                    bool m_isIntlHasBeenSet;
 
                 };
             }

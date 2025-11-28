@@ -633,6 +633,123 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PulsarTopicTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgTTL Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetMsgTTL() const;
+
+                    /**
+                     * 设置Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _msgTTL Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMsgTTL(const uint64_t& _msgTTL);
+
+                    /**
+                     * 判断参数 MsgTTL 是否已赋值
+                     * @return MsgTTL 是否已赋值
+                     * 
+                     */
+                    bool MsgTTLHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+                     * @return Tenant Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+                     * 
+                     */
+                    std::string GetTenant() const;
+
+                    /**
+                     * 设置Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+                     * @param _tenant Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+                     * 
+                     */
+                    void SetTenant(const std::string& _tenant);
+
+                    /**
+                     * 判断参数 Tenant 是否已赋值
+                     * @return Tenant 是否已赋值
+                     * 
+                     */
+                    bool TenantHasBeenSet() const;
+
+                    /**
+                     * 获取Whether exception consumer isolation is enabled.
+                     * @return IsolateConsumerEnable Whether exception consumer isolation is enabled.
+                     * 
+                     */
+                    bool GetIsolateConsumerEnable() const;
+
+                    /**
+                     * 设置Whether exception consumer isolation is enabled.
+                     * @param _isolateConsumerEnable Whether exception consumer isolation is enabled.
+                     * 
+                     */
+                    void SetIsolateConsumerEnable(const bool& _isolateConsumerEnable);
+
+                    /**
+                     * 判断参数 IsolateConsumerEnable 是否已赋值
+                     * @return IsolateConsumerEnable 是否已赋值
+                     * 
+                     */
+                    bool IsolateConsumerEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the consumer Ack timeout period in seconds.
+                     * @return AckTimeOut Specifies the consumer Ack timeout period in seconds.
+                     * 
+                     */
+                    int64_t GetAckTimeOut() const;
+
+                    /**
+                     * 设置Specifies the consumer Ack timeout period in seconds.
+                     * @param _ackTimeOut Specifies the consumer Ack timeout period in seconds.
+                     * 
+                     */
+                    void SetAckTimeOut(const int64_t& _ackTimeOut);
+
+                    /**
+                     * 判断参数 AckTimeOut 是否已赋值
+                     * @return AckTimeOut 是否已赋值
+                     * 
+                     */
+                    bool AckTimeOutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -797,6 +914,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_pulsarTopicType;
                     bool m_pulsarTopicTypeHasBeenSet;
+
+                    /**
+                     * Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_msgTTL;
+                    bool m_msgTTLHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+                     */
+                    std::string m_tenant;
+                    bool m_tenantHasBeenSet;
+
+                    /**
+                     * Whether exception consumer isolation is enabled.
+                     */
+                    bool m_isolateConsumerEnable;
+                    bool m_isolateConsumerEnableHasBeenSet;
+
+                    /**
+                     * Specifies the consumer Ack timeout period in seconds.
+                     */
+                    int64_t m_ackTimeOut;
+                    bool m_ackTimeOutHasBeenSet;
 
                 };
             }

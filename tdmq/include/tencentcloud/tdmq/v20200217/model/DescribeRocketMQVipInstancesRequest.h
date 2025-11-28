@@ -44,15 +44,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query condition filter
-                     * @return Filters Query condition filter
+                     * 获取Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
+                     * @return Filters Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Query condition filter
-                     * @param _filters Query condition filter
+                     * 设置Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
+                     * @param _filters Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -109,7 +121,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query condition filter
+                     * Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -65,6 +65,27 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
+                     * 获取Pulsar cluster ID.
+                     * @return ClusterId Pulsar cluster ID.
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Pulsar cluster ID.
+                     * @param _clusterId Pulsar cluster ID.
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Fuzzy match by topic name.
                      * @return TopicName Fuzzy match by topic name.
                      * 
@@ -165,27 +186,6 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Pulsar cluster ID.
-                     * @return ClusterId Pulsar cluster ID.
-                     * 
-                     */
-                    std::string GetClusterId() const;
-
-                    /**
-                     * 设置Pulsar cluster ID.
-                     * @param _clusterId Pulsar cluster ID.
-                     * 
-                     */
-                    void SetClusterId(const std::string& _clusterId);
-
-                    /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
-                     * 
-                     */
-                    bool ClusterIdHasBeenSet() const;
-
-                    /**
                      * 获取* TopicName
 Query by topic name for exact search.
 Type: String
@@ -256,6 +256,12 @@ Required: No
                     bool m_environmentIdHasBeenSet;
 
                     /**
+                     * Pulsar cluster ID.
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
                      * Fuzzy match by topic name.
                      */
                     std::string m_topicName;
@@ -282,12 +288,6 @@ Required: No
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;
-
-                    /**
-                     * Pulsar cluster ID.
-                     */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
 
                     /**
                      * * TopicName

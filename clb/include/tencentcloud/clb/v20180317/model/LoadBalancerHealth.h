@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerName CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the name of the load balancing instance.
+                     * @return LoadBalancerName Specifies the name of the load balancing instance.
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerName CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the name of the load balancing instance.
+                     * @param _loadBalancerName Specifies the name of the load balancing instance.
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -94,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Listener list
+                     * @return Listeners Listener list
                      * 
                      */
                     std::vector<ListenerHealth> GetListeners() const;
 
                     /**
-                     * 设置List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Listener list
+                     * @param _listeners Listener list
                      * 
                      */
                     void SetListeners(const std::vector<ListenerHealth>& _listeners);
@@ -127,15 +119,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the name of the load balancing instance.
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Listener list
                      */
                     std::vector<ListenerHealth> m_listeners;
                     bool m_listenersHasBeenSet;

@@ -127,27 +127,6 @@ namespace TencentCloud
                     bool IsIdempotentHasBeenSet() const;
 
                     /**
-                     * 获取Remarks (up to 128 characters).
-                     * @return Remark Remarks (up to 128 characters).
-                     * 
-                     */
-                    std::string GetRemark() const;
-
-                    /**
-                     * 设置Remarks (up to 128 characters).
-                     * @param _remark Remarks (up to 128 characters).
-                     * 
-                     */
-                    void SetRemark(const std::string& _remark);
-
-                    /**
-                     * 判断参数 Remark 是否已赋值
-                     * @return Remark 是否已赋值
-                     * 
-                     */
-                    bool RemarkHasBeenSet() const;
-
-                    /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
                      * 
@@ -167,6 +146,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Remarks (up to 128 characters).
+                     * @return Remark Remarks (up to 128 characters).
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
@@ -237,16 +237,16 @@ namespace TencentCloud
                     bool m_isIdempotentHasBeenSet;
 
                     /**
-                     * Remarks (up to 128 characters).
-                     */
-                    std::string m_remark;
-                    bool m_remarkHasBeenSet;
-
-                    /**
                      * Pulsar cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Remarks (up to 128 characters).
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                     /**
                      * Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.

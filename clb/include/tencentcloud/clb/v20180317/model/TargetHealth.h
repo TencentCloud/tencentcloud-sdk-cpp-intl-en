@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TargetIdHasBeenSet() const;
 
                     /**
-                     * 获取Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-                     * @return HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * 获取Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
+                     * @return HealthStatusDetail Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
                      * 
                      */
                     std::string GetHealthStatusDetail() const;
 
                     /**
-                     * 设置Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-                     * @param _healthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * 设置Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
+                     * @param _healthStatusDetail Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
                      * 
                      */
                     void SetHealthStatusDetail(const std::string& _healthStatusDetail);
@@ -172,6 +172,48 @@ namespace TencentCloud
                      */
                     bool HealthStatusDetialHasBeenSet() const;
 
+                    /**
+                     * 获取Target group unique ID.
+                     * @return TargetGroupId Target group unique ID.
+                     * 
+                     */
+                    std::string GetTargetGroupId() const;
+
+                    /**
+                     * 设置Target group unique ID.
+                     * @param _targetGroupId Target group unique ID.
+                     * 
+                     */
+                    void SetTargetGroupId(const std::string& _targetGroupId);
+
+                    /**
+                     * 判断参数 TargetGroupId 是否已赋值
+                     * @return TargetGroupId 是否已赋值
+                     * 
+                     */
+                    bool TargetGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the weight of the Target.
+                     * @return Weight Specifies the weight of the Target.
+                     * 
+                     */
+                    uint64_t GetWeight() const;
+
+                    /**
+                     * 设置Specifies the weight of the Target.
+                     * @param _weight Specifies the weight of the Target.
+                     * 
+                     */
+                    void SetWeight(const uint64_t& _weight);
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     * 
+                     */
+                    bool WeightHasBeenSet() const;
+
                 private:
 
                     /**
@@ -199,7 +241,7 @@ namespace TencentCloud
                     bool m_targetIdHasBeenSet;
 
                     /**
-                     * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
                      */
                     std::string m_healthStatusDetail;
                     bool m_healthStatusDetailHasBeenSet;
@@ -209,6 +251,18 @@ namespace TencentCloud
                      */
                     std::string m_healthStatusDetial;
                     bool m_healthStatusDetialHasBeenSet;
+
+                    /**
+                     * Target group unique ID.
+                     */
+                    std::string m_targetGroupId;
+                    bool m_targetGroupIdHasBeenSet;
+
+                    /**
+                     * Specifies the weight of the Target.
+                     */
+                    uint64_t m_weight;
+                    bool m_weightHasBeenSet;
 
                 };
             }

@@ -33,7 +33,8 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_selectedWarningCodesHasBeenSet(false),
     m_extraHasBeenSet(false),
     m_sdkVersionHasBeenSet(false),
-    m_actionListHasBeenSet(false)
+    m_actionListHasBeenSet(false),
+    m_allowExpiredDocumentHasBeenSet(false)
 {
 }
 
@@ -135,6 +136,14 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "ActionList";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_allowExpiredDocumentHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllowExpiredDocument";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_allowExpiredDocument, allocator);
     }
 
 
@@ -319,6 +328,22 @@ void ApplySdkVerificationTokenRequest::SetActionList(const string& _actionList)
 bool ApplySdkVerificationTokenRequest::ActionListHasBeenSet() const
 {
     return m_actionListHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetAllowExpiredDocument() const
+{
+    return m_allowExpiredDocument;
+}
+
+void ApplySdkVerificationTokenRequest::SetAllowExpiredDocument(const bool& _allowExpiredDocument)
+{
+    m_allowExpiredDocument = _allowExpiredDocument;
+    m_allowExpiredDocumentHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::AllowExpiredDocumentHasBeenSet() const
+{
+    return m_allowExpiredDocumentHasBeenSet;
 }
 
 

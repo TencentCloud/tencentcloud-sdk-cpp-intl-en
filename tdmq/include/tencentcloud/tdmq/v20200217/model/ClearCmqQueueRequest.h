@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-                     * @return QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 获取Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
+                     * @return QueueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-                     * @param _queueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 设置Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
+                     * @param _queueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the rest may contain letters, digits, and hyphens (-).
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;

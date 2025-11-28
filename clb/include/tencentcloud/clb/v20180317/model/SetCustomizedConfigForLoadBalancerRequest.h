@@ -43,15 +43,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
-                     * @return OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * 获取Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+                     * @return OperationType Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
                      * 
                      */
                     std::string GetOperationType() const;
 
                     /**
-                     * 设置Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
-                     * @param _operationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * 设置Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+                     * @param _operationType Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
                      * 
                      */
                     void SetOperationType(const std::string& _operationType);
@@ -64,15 +84,15 @@ namespace TencentCloud
                     bool OperationTypeHasBeenSet() const;
 
                     /**
-                     * 获取This field is required except for creating custom configurations, such as "pz-1234abcd".
-                     * @return UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * 获取Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+                     * @return UconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
                      * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
-                     * 设置This field is required except for creating custom configurations, such as "pz-1234abcd".
-                     * @param _uconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * 设置Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+                     * @param _uconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
                      * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
@@ -85,15 +105,19 @@ namespace TencentCloud
                     bool UconfigIdHasBeenSet() const;
 
                     /**
-                     * 获取This field is required when creating or modifying custom configurations.
-                     * @return ConfigContent This field is required when creating or modifying custom configurations.
+                     * 获取Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+                     * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     std::string GetConfigContent() const;
 
                     /**
-                     * 设置This field is required when creating or modifying custom configurations.
-                     * @param _configContent This field is required when creating or modifying custom configurations.
+                     * 设置Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+                     * @param _configContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     void SetConfigContent(const std::string& _configContent);
@@ -106,15 +130,15 @@ namespace TencentCloud
                     bool ConfigContentHasBeenSet() const;
 
                     /**
-                     * 获取This field is required when creating or renaming custom configurations.
-                     * @return ConfigName This field is required when creating or renaming custom configurations.
+                     * 获取Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+                     * @return ConfigName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
                      * 
                      */
                     std::string GetConfigName() const;
 
                     /**
-                     * 设置This field is required when creating or renaming custom configurations.
-                     * @param _configName This field is required when creating or renaming custom configurations.
+                     * 设置Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+                     * @param _configName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
                      * 
                      */
                     void SetConfigName(const std::string& _configName);
@@ -127,15 +151,19 @@ namespace TencentCloud
                     bool ConfigNameHasBeenSet() const;
 
                     /**
-                     * 获取This field is required when binding/unbinding resources.
-                     * @return LoadBalancerIds This field is required when binding/unbinding resources.
+                     * 获取CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+                     * @return LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置This field is required when binding/unbinding resources.
-                     * @param _loadBalancerIds This field is required when binding/unbinding resources.
+                     * 设置CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+                     * @param _loadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
@@ -150,31 +178,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
                      */
                     std::string m_operationType;
                     bool m_operationTypeHasBeenSet;
 
                     /**
-                     * This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
                      */
                     std::string m_uconfigId;
                     bool m_uconfigIdHasBeenSet;
 
                     /**
-                     * This field is required when creating or modifying custom configurations.
+                     * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
                      */
                     std::string m_configContent;
                     bool m_configContentHasBeenSet;
 
                     /**
-                     * This field is required when creating or renaming custom configurations.
+                     * Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
                      */
                     std::string m_configName;
                     bool m_configNameHasBeenSet;
 
                     /**
-                     * This field is required when binding/unbinding resources.
+                     * CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;

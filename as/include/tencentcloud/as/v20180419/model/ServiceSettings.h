@@ -204,6 +204,27 @@ Default value: RECREATE.
                      */
                     bool DesiredCapacitySyncWithMaxMinSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+                     * @return PriorityScaleInUnhealthy Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+                     * 
+                     */
+                    bool GetPriorityScaleInUnhealthy() const;
+
+                    /**
+                     * 设置Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+                     * @param _priorityScaleInUnhealthy Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+                     * 
+                     */
+                    void SetPriorityScaleInUnhealthy(const bool& _priorityScaleInUnhealthy);
+
+                    /**
+                     * 判断参数 PriorityScaleInUnhealthy 是否已赋值
+                     * @return PriorityScaleInUnhealthy 是否已赋值
+                     * 
+                     */
+                    bool PriorityScaleInUnhealthyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -249,6 +270,12 @@ Default value: RECREATE.
                      */
                     bool m_desiredCapacitySyncWithMaxMinSize;
                     bool m_desiredCapacitySyncWithMaxMinSizeHasBeenSet;
+
+                    /**
+                     * Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+                     */
+                    bool m_priorityScaleInUnhealthy;
+                    bool m_priorityScaleInUnhealthyHasBeenSet;
 
                 };
             }

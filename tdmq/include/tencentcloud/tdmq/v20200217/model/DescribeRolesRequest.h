@@ -44,6 +44,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Cluster ID (required)
+                     * @return ClusterId Cluster ID (required)
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Fuzzy query by role name
                      * @return RoleName Fuzzy query by role name
                      * 
@@ -107,27 +128,6 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID (required)
-                     * @return ClusterId Cluster ID (required)
-                     * 
-                     */
-                    std::string GetClusterId() const;
-
-                    /**
-                     * 设置Cluster ID (required)
-                     * @param _clusterId Cluster ID (required)
-                     * 
-                     */
-                    void SetClusterId(const std::string& _clusterId);
-
-                    /**
-                     * 判断参数 ClusterId 是否已赋值
-                     * @return ClusterId 是否已赋值
-                     * 
-                     */
-                    bool ClusterIdHasBeenSet() const;
-
-                    /**
                      * 获取* RoleName
 Filter by role name for exact query.
 Type: String
@@ -163,6 +163,12 @@ Required: no
                 private:
 
                     /**
+                     * Cluster ID (required)
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
                      * Fuzzy query by role name
                      */
                     std::string m_roleName;
@@ -179,12 +185,6 @@ Required: no
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
-
-                    /**
-                     * Cluster ID (required)
-                     */
-                    std::string m_clusterId;
-                    bool m_clusterIdHasBeenSet;
 
                     /**
                      * * RoleName

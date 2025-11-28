@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of clusters
-                     * @return TotalCount The number of clusters
+                     * 获取Specifies the cluster node quantity.
+                     * @return TotalCount Specifies the cluster node quantity.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Cluster list
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NodeList Cluster list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Listing Cluster Nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NodeList Listing Cluster Nodes
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RabbitMQPrivateNode> GetNodeList() const;
@@ -77,14 +77,14 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * The number of clusters
+                     * Specifies the cluster node quantity.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Cluster list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Listing Cluster Nodes
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RabbitMQPrivateNode> m_nodeList;
                     bool m_nodeListHasBeenSet;

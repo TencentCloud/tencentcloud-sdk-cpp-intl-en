@@ -30,7 +30,13 @@ CreateTargetGroupRequest::CreateTargetGroupRequest() :
     m_typeHasBeenSet(false),
     m_protocolHasBeenSet(false),
     m_healthCheckHasBeenSet(false),
-    m_scheduleAlgorithmHasBeenSet(false)
+    m_scheduleAlgorithmHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_weightHasBeenSet(false),
+    m_fullListenSwitchHasBeenSet(false),
+    m_keepaliveEnableHasBeenSet(false),
+    m_sessionExpireTimeHasBeenSet(false),
+    m_ipVersionHasBeenSet(false)
 {
 }
 
@@ -111,6 +117,61 @@ string CreateTargetGroupRequest::ToJsonString() const
         string key = "ScheduleAlgorithm";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_scheduleAlgorithm.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_weightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Weight";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_weight, allocator);
+    }
+
+    if (m_fullListenSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullListenSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_fullListenSwitch, allocator);
+    }
+
+    if (m_keepaliveEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeepaliveEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_keepaliveEnable, allocator);
+    }
+
+    if (m_sessionExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_sessionExpireTime, allocator);
+    }
+
+    if (m_ipVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IpVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ipVersion.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -247,6 +308,102 @@ void CreateTargetGroupRequest::SetScheduleAlgorithm(const string& _scheduleAlgor
 bool CreateTargetGroupRequest::ScheduleAlgorithmHasBeenSet() const
 {
     return m_scheduleAlgorithmHasBeenSet;
+}
+
+vector<TagInfo> CreateTargetGroupRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateTargetGroupRequest::SetTags(const vector<TagInfo>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+uint64_t CreateTargetGroupRequest::GetWeight() const
+{
+    return m_weight;
+}
+
+void CreateTargetGroupRequest::SetWeight(const uint64_t& _weight)
+{
+    m_weight = _weight;
+    m_weightHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::WeightHasBeenSet() const
+{
+    return m_weightHasBeenSet;
+}
+
+bool CreateTargetGroupRequest::GetFullListenSwitch() const
+{
+    return m_fullListenSwitch;
+}
+
+void CreateTargetGroupRequest::SetFullListenSwitch(const bool& _fullListenSwitch)
+{
+    m_fullListenSwitch = _fullListenSwitch;
+    m_fullListenSwitchHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::FullListenSwitchHasBeenSet() const
+{
+    return m_fullListenSwitchHasBeenSet;
+}
+
+bool CreateTargetGroupRequest::GetKeepaliveEnable() const
+{
+    return m_keepaliveEnable;
+}
+
+void CreateTargetGroupRequest::SetKeepaliveEnable(const bool& _keepaliveEnable)
+{
+    m_keepaliveEnable = _keepaliveEnable;
+    m_keepaliveEnableHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::KeepaliveEnableHasBeenSet() const
+{
+    return m_keepaliveEnableHasBeenSet;
+}
+
+uint64_t CreateTargetGroupRequest::GetSessionExpireTime() const
+{
+    return m_sessionExpireTime;
+}
+
+void CreateTargetGroupRequest::SetSessionExpireTime(const uint64_t& _sessionExpireTime)
+{
+    m_sessionExpireTime = _sessionExpireTime;
+    m_sessionExpireTimeHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::SessionExpireTimeHasBeenSet() const
+{
+    return m_sessionExpireTimeHasBeenSet;
+}
+
+string CreateTargetGroupRequest::GetIpVersion() const
+{
+    return m_ipVersion;
+}
+
+void CreateTargetGroupRequest::SetIpVersion(const string& _ipVersion)
+{
+    m_ipVersion = _ipVersion;
+    m_ipVersionHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::IpVersionHasBeenSet() const
+{
+    return m_ipVersionHasBeenSet;
 }
 
 

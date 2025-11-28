@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of queried items, which defaults to 20.
-                     * @return Limit The maximum number of queried items, which defaults to 20.
+                     * 获取Maximum number of items for query. Default value: 20.
+                     * @return Limit Maximum number of items for query. Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of queried items, which defaults to 20.
-                     * @param _limit The maximum number of queried items, which defaults to 20.
+                     * 设置Maximum number of items for query. Default value: 20.
+                     * @param _limit Maximum number of items for query. Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Start offset for query
-                     * @return Offset Start offset for query
+                     * 获取Starting position of the query. Default value: 0.
+                     * @return Offset Starting position of the query. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Start offset for query
-                     * @param _offset Start offset for query
+                     * 设置Starting position of the query. Default value: 0.
+                     * @param _offset Starting position of the query. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -115,13 +115,13 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The maximum number of queried items, which defaults to 20.
+                     * Maximum number of items for query. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Start offset for query
+                     * Starting position of the query. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

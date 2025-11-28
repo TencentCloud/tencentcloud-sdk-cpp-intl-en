@@ -119,19 +119,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Targets Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Advanced routing rule ID.
+                     * @return RuleId Advanced routing rule ID.
+                     * 
+                     */
+                    std::string GetRuleId() const;
+
+                    /**
+                     * 设置Advanced routing rule ID.
+                     * @param _ruleId Advanced routing rule ID.
+                     * 
+                     */
+                    void SetRuleId(const std::string& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     * 
+                     */
+                    bool RuleIdHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates the health check status of the backend service bound to this rule.
+                     * @return Targets Indicates the health check status of the backend service bound to this rule.
                      * 
                      */
                     std::vector<TargetHealth> GetTargets() const;
 
                     /**
-                     * 设置Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _targets Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Indicates the health check status of the backend service bound to this rule.
+                     * @param _targets Indicates the health check status of the backend service bound to this rule.
                      * 
                      */
                     void SetTargets(const std::vector<TargetHealth>& _targets);
@@ -166,8 +183,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Advanced routing rule ID.
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * Indicates the health check status of the backend service bound to this rule.
                      */
                     std::vector<TargetHealth> m_targets;
                     bool m_targetsHasBeenSet;

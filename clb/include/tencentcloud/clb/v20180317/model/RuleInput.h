@@ -180,15 +180,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
-                     * @return ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+                     * 获取Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
+                     * @return ForwardType Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
                      * 
                      */
                     std::string GetForwardType() const;
 
                     /**
-                     * 设置Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
-                     * @param _forwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+                     * 设置Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
+                     * @param _forwardType Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
                      * 
                      */
                     void SetForwardType(const std::string& _forwardType);
@@ -368,6 +368,27 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool MultiCertInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the custom cookie name.
+                     * @return CookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    std::string GetCookieName() const;
+
+                    /**
+                     * 设置Specifies the custom cookie name.
+                     * @param _cookieName Specifies the custom cookie name.
+                     * 
+                     */
+                    void SetCookieName(const std::string& _cookieName);
+
+                    /**
+                     * 判断参数 CookieName 是否已赋值
+                     * @return CookieName 是否已赋值
+                     * 
+                     */
+                    bool CookieNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -408,7 +429,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+                     * Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
                      */
                     std::string m_forwardType;
                     bool m_forwardTypeHasBeenSet;
@@ -460,6 +481,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     MultiCertInfo m_multiCertInfo;
                     bool m_multiCertInfoHasBeenSet;
+
+                    /**
+                     * Specifies the custom cookie name.
+                     */
+                    std::string m_cookieName;
+                    bool m_cookieNameHasBeenSet;
 
                 };
             }

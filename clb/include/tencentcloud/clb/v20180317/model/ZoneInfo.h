@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneId Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of the AZ in numeric form, such as 100001
+                     * @return ZoneId Unique ID of the AZ in numeric form, such as 100001
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneId Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of the AZ in numeric form, such as 100001
+                     * @param _zoneId Unique ID of the AZ in numeric form, such as 100001
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of the AZ in string format, such as ap-guangzhou-1
+                     * @return Zone Unique ID of the AZ in string format, such as ap-guangzhou-1
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of the AZ in string format, such as ap-guangzhou-1
+                     * @param _zone Unique ID of the AZ in string format, such as ap-guangzhou-1
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneName AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取AZ name, such as Guangzhou 1
+                     * @return ZoneName AZ name, such as Guangzhou 1
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneName AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置AZ name, such as Guangzhou 1
+                     * @param _zoneName AZ name, such as Guangzhou 1
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ZoneRegion AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the region of the availability zone, for example: ap-guangzhou.
+                     * @return ZoneRegion Specifies the region of the availability zone, for example: ap-guangzhou.
                      * 
                      */
                     std::string GetZoneRegion() const;
 
                     /**
-                     * 设置AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _zoneRegion AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the region of the availability zone, for example: ap-guangzhou.
+                     * @param _zoneRegion Specifies the region of the availability zone, for example: ap-guangzhou.
                      * 
                      */
                     void SetZoneRegion(const std::string& _zoneRegion);
@@ -147,19 +131,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ZoneRegionHasBeenSet() const;
 
                     /**
-                     * 获取Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return LocalZone Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Indicates whether the AZ is a LocalZone az, for example: false.
+                     * @return LocalZone Indicates whether the AZ is a LocalZone az, for example: false.
                      * 
                      */
                     bool GetLocalZone() const;
 
                     /**
-                     * 设置Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _localZone Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Indicates whether the AZ is a LocalZone az, for example: false.
+                     * @param _localZone Indicates whether the AZ is a LocalZone az, for example: false.
                      * 
                      */
                     void SetLocalZone(const bool& _localZone);
@@ -172,19 +152,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool LocalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Indicates whether the AZ is an EdgeZone az, for example: false.
+                     * @return EdgeZone Indicates whether the AZ is an EdgeZone az, for example: false.
                      * 
                      */
                     bool GetEdgeZone() const;
 
                     /**
-                     * 设置Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _edgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Indicates whether the AZ is an EdgeZone az, for example: false.
+                     * @param _edgeZone Indicates whether the AZ is an EdgeZone az, for example: false.
                      * 
                      */
                     void SetEdgeZone(const bool& _edgeZone);
@@ -199,43 +175,37 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of the AZ in numeric form, such as 100001
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of the AZ in string format, such as ap-guangzhou-1
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * AZ name, such as Guangzhou 1
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the region of the availability zone, for example: ap-guangzhou.
                      */
                     std::string m_zoneRegion;
                     bool m_zoneRegionHasBeenSet;
 
                     /**
-                     * Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Indicates whether the AZ is a LocalZone az, for example: false.
                      */
                     bool m_localZone;
                     bool m_localZoneHasBeenSet;
 
                     /**
-                     * Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Indicates whether the AZ is an EdgeZone az, for example: false.
                      */
                     bool m_edgeZone;
                     bool m_edgeZoneHasBeenSet;

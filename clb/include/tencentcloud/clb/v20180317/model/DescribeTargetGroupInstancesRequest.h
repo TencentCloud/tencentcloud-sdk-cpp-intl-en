@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
-                     * @return Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+                     * 获取Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
+                     * @return Filters Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
-                     * @param _filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+                     * 设置Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
+                     * @param _filters Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+                     * Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

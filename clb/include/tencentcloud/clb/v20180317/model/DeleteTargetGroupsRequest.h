@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target group ID array
-                     * @return TargetGroupIds Target group ID array
+                     * 获取Specifies the ID array of the target group. supports up to 20 deletions.
+                     * @return TargetGroupIds Specifies the ID array of the target group. supports up to 20 deletions.
                      * 
                      */
                     std::vector<std::string> GetTargetGroupIds() const;
 
                     /**
-                     * 设置Target group ID array
-                     * @param _targetGroupIds Target group ID array
+                     * 设置Specifies the ID array of the target group. supports up to 20 deletions.
+                     * @param _targetGroupIds Specifies the ID array of the target group. supports up to 20 deletions.
                      * 
                      */
                     void SetTargetGroupIds(const std::vector<std::string>& _targetGroupIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target group ID array
+                     * Specifies the ID array of the target group. supports up to 20 deletions.
                      */
                     std::vector<std::string> m_targetGroupIds;
                     bool m_targetGroupIdsHasBeenSet;

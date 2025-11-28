@@ -86,27 +86,6 @@ namespace TencentCloud
                     bool MsgTTLHasBeenSet() const;
 
                     /**
-                     * 获取Remarks (up to 128 characters).
-                     * @return Remark Remarks (up to 128 characters).
-                     * 
-                     */
-                    std::string GetRemark() const;
-
-                    /**
-                     * 设置Remarks (up to 128 characters).
-                     * @param _remark Remarks (up to 128 characters).
-                     * 
-                     */
-                    void SetRemark(const std::string& _remark);
-
-                    /**
-                     * 判断参数 Remark 是否已赋值
-                     * @return Remark 是否已赋值
-                     * 
-                     */
-                    bool RemarkHasBeenSet() const;
-
-                    /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
                      * 
@@ -126,6 +105,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Remarks (up to 128 characters).
+                     * @return Remark Remarks (up to 128 characters).
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Message retention policy
@@ -184,16 +184,16 @@ namespace TencentCloud
                     bool m_msgTTLHasBeenSet;
 
                     /**
-                     * Remarks (up to 128 characters).
-                     */
-                    std::string m_remark;
-                    bool m_remarkHasBeenSet;
-
-                    /**
                      * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Remarks (up to 128 characters).
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                     /**
                      * Message retention policy

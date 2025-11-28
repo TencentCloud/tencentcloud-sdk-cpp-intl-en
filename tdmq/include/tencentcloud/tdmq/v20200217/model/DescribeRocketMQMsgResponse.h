@@ -115,10 +115,10 @@ namespace TencentCloud
                     bool ProducerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Consumption details of a consumer group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return MessageTracks Consumption details of a consumer group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Consumer group consumption list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MessageTracks Consumer group consumption list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RocketMQMessageTrack> GetMessageTracks() const;
@@ -132,9 +132,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Topic name displayed on the details page
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ShowTopicName Topic name displayed on the details page
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetShowTopicName() const;
@@ -145,6 +145,20 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool ShowTopicNameHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of consumer group consumption lists.
+                     * @return MessageTracksCount Total number of consumer group consumption lists.
+                     * 
+                     */
+                    int64_t GetMessageTracksCount() const;
+
+                    /**
+                     * 判断参数 MessageTracksCount 是否已赋值
+                     * @return MessageTracksCount 是否已赋值
+                     * 
+                     */
+                    bool MessageTracksCountHasBeenSet() const;
 
                 private:
 
@@ -179,18 +193,24 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool m_producerAddrHasBeenSet;
 
                     /**
-                     * Consumption details of a consumer group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Consumer group consumption list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RocketMQMessageTrack> m_messageTracks;
                     bool m_messageTracksHasBeenSet;
 
                     /**
                      * Topic name displayed on the details page
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_showTopicName;
                     bool m_showTopicNameHasBeenSet;
+
+                    /**
+                     * Total number of consumer group consumption lists.
+                     */
+                    int64_t m_messageTracksCount;
+                    bool m_messageTracksCountHasBeenSet;
 
                 };
             }

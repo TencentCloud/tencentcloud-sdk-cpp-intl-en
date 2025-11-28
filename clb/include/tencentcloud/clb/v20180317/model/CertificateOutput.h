@@ -68,6 +68,27 @@ namespace TencentCloud
                     bool SSLModeHasBeenSet() const;
 
                     /**
+                     * 获取Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+                     * @return SSLVerifyClient Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+                     * 
+                     */
+                    std::string GetSSLVerifyClient() const;
+
+                    /**
+                     * 设置Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+                     * @param _sSLVerifyClient Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+                     * 
+                     */
+                    void SetSSLVerifyClient(const std::string& _sSLVerifyClient);
+
+                    /**
+                     * 判断参数 SSLVerifyClient 是否已赋值
+                     * @return SSLVerifyClient 是否已赋值
+                     * 
+                     */
+                    bool SSLVerifyClientHasBeenSet() const;
+
+                    /**
                      * 获取Server certificate ID.
                      * @return CertId Server certificate ID.
                      * 
@@ -90,18 +111,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertCaId Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCertCaId() const;
 
                     /**
                      * 设置Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _certCaId Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCertCaId(const std::string& _certCaId);
@@ -114,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertCaIdHasBeenSet() const;
 
                     /**
-                     * 获取IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ExtCertIds IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the server certificate ID for multi-server certificate scenario expansion.
+                     * @return ExtCertIds Specifies the server certificate ID for multi-server certificate scenario expansion.
                      * 
                      */
                     std::vector<std::string> GetExtCertIds() const;
 
                     /**
-                     * 设置IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _extCertIds IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the server certificate ID for multi-server certificate scenario expansion.
+                     * @param _extCertIds Specifies the server certificate ID for multi-server certificate scenario expansion.
                      * 
                      */
                     void SetExtCertIds(const std::vector<std::string>& _extCertIds);
@@ -147,6 +160,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_sSLModeHasBeenSet;
 
                     /**
+                     * Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+                     */
+                    std::string m_sSLVerifyClient;
+                    bool m_sSLVerifyClientHasBeenSet;
+
+                    /**
                      * Server certificate ID.
                      */
                     std::string m_certId;
@@ -154,14 +173,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certCaId;
                     bool m_certCaIdHasBeenSet;
 
                     /**
-                     * IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the server certificate ID for multi-server certificate scenario expansion.
                      */
                     std::vector<std::string> m_extCertIds;
                     bool m_extCertIdsHasBeenSet;

@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FailListenerIdSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Failed to unbind error reason information.
+                     * @return Message Failed to unbind error reason information.
                      * 
                      */
                     std::string GetMessage() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_failListenerIdSetHasBeenSet;
 
                     /**
-                     * 
+                     * Failed to unbind error reason information.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

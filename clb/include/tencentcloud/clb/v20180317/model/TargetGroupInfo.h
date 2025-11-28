@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/AssociationItem.h>
 #include <tencentcloud/clb/v20180317/model/TargetGroupHealthCheck.h>
+#include <tencentcloud/clb/v20180317/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -112,19 +113,19 @@ namespace TencentCloud
                     bool TargetGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Default port of target group
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Port Default port of target group
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Port Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Default port of target group
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _port Default port of target group
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _port Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -200,15 +201,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AssociatedRuleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Protocol 
+                     * 获取Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Protocol Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _protocol 
+                     * 设置Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _protocol Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -221,15 +226,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScheduleAlgorithm 
+                     * 获取Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur>
+<Li>WRR: weighted round-robin.</li>.
+<Li>LEAST_CONN: specifies the least connection.</li>.
+<Li>IP_HASH: based on ip hash.</li>.
+</ur>
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ScheduleAlgorithm Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur>
+<Li>WRR: weighted round-robin.</li>.
+<Li>LEAST_CONN: specifies the least connection.</li>.
+<Li>IP_HASH: based on ip hash.</li>.
+</ur>
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScheduleAlgorithm() const;
 
                     /**
-                     * 设置
-                     * @param _scheduleAlgorithm 
+                     * 设置Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur>
+<Li>WRR: weighted round-robin.</li>.
+<Li>LEAST_CONN: specifies the least connection.</li>.
+<Li>IP_HASH: based on ip hash.</li>.
+</ur>
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _scheduleAlgorithm Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur>
+<Li>WRR: weighted round-robin.</li>.
+<Li>LEAST_CONN: specifies the least connection.</li>.
+<Li>IP_HASH: based on ip hash.</li>.
+</ur>
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
@@ -242,15 +275,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScheduleAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HealthCheck 
+                     * 获取Health check details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HealthCheck Health check details.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TargetGroupHealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置
-                     * @param _healthCheck 
+                     * 设置Health check details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _healthCheck Health check details.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHealthCheck(const TargetGroupHealthCheck& _healthCheck);
@@ -261,6 +298,199 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool HealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+                     * @return TargetGroupType Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+                     * 
+                     */
+                    std::string GetTargetGroupType() const;
+
+                    /**
+                     * 设置Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+                     * @param _targetGroupType Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+                     * 
+                     */
+                    void SetTargetGroupType(const std::string& _targetGroupType);
+
+                    /**
+                     * 判断参数 TargetGroupType 是否已赋值
+                     * @return TargetGroupType 是否已赋值
+                     * 
+                     */
+                    bool TargetGroupTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of rules associated with the target group.
+                     * @return AssociatedRuleCount Number of rules associated with the target group.
+                     * 
+                     */
+                    int64_t GetAssociatedRuleCount() const;
+
+                    /**
+                     * 设置Number of rules associated with the target group.
+                     * @param _associatedRuleCount Number of rules associated with the target group.
+                     * 
+                     */
+                    void SetAssociatedRuleCount(const int64_t& _associatedRuleCount);
+
+                    /**
+                     * 判断参数 AssociatedRuleCount 是否已赋值
+                     * @return AssociatedRuleCount 是否已赋值
+                     * 
+                     */
+                    bool AssociatedRuleCountHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the number of instances in the target group.
+                     * @return RegisteredInstancesCount Specifies the number of instances in the target group.
+                     * 
+                     */
+                    int64_t GetRegisteredInstancesCount() const;
+
+                    /**
+                     * 设置Specifies the number of instances in the target group.
+                     * @param _registeredInstancesCount Specifies the number of instances in the target group.
+                     * 
+                     */
+                    void SetRegisteredInstancesCount(const int64_t& _registeredInstancesCount);
+
+                    /**
+                     * 判断参数 RegisteredInstancesCount 是否已赋值
+                     * @return RegisteredInstancesCount 是否已赋值
+                     * 
+                     */
+                    bool RegisteredInstancesCountHasBeenSet() const;
+
+                    /**
+                     * 获取Tag.
+                     * @return Tag Tag.
+                     * 
+                     */
+                    std::vector<TagInfo> GetTag() const;
+
+                    /**
+                     * 设置Tag.
+                     * @param _tag Tag.
+                     * 
+                     */
+                    void SetTag(const std::vector<TagInfo>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     * 
+                     */
+                    bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Weight Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetWeight() const;
+
+                    /**
+                     * 设置Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _weight Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWeight(const uint64_t& _weight);
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     * 
+                     */
+                    bool WeightHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to listen to all target groups.
+                     * @return FullListenSwitch Specifies whether to listen to all target groups.
+                     * 
+                     */
+                    bool GetFullListenSwitch() const;
+
+                    /**
+                     * 设置Specifies whether to listen to all target groups.
+                     * @param _fullListenSwitch Specifies whether to listen to all target groups.
+                     * 
+                     */
+                    void SetFullListenSwitch(const bool& _fullListenSwitch);
+
+                    /**
+                     * 判断参数 FullListenSwitch 是否已赋值
+                     * @return FullListenSwitch 是否已赋值
+                     * 
+                     */
+                    bool FullListenSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+                     * @return KeepaliveEnable Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+                     * 
+                     */
+                    bool GetKeepaliveEnable() const;
+
+                    /**
+                     * 设置Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+                     * @param _keepaliveEnable Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+                     * 
+                     */
+                    void SetKeepaliveEnable(const bool& _keepaliveEnable);
+
+                    /**
+                     * 判断参数 KeepaliveEnable 是否已赋值
+                     * @return KeepaliveEnable 是否已赋值
+                     * 
+                     */
+                    bool KeepaliveEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+                     * @return SessionExpireTime Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+                     * 
+                     */
+                    int64_t GetSessionExpireTime() const;
+
+                    /**
+                     * 设置Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+                     * @param _sessionExpireTime Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+                     * 
+                     */
+                    void SetSessionExpireTime(const int64_t& _sessionExpireTime);
+
+                    /**
+                     * 判断参数 SessionExpireTime 是否已赋值
+                     * @return SessionExpireTime 是否已赋值
+                     * 
+                     */
+                    bool SessionExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取IP version.
+                     * @return IpVersion IP version.
+                     * 
+                     */
+                    std::string GetIpVersion() const;
+
+                    /**
+                     * 设置IP version.
+                     * @param _ipVersion IP version.
+                     * 
+                     */
+                    void SetIpVersion(const std::string& _ipVersion);
+
+                    /**
+                     * 判断参数 IpVersion 是否已赋值
+                     * @return IpVersion 是否已赋值
+                     * 
+                     */
+                    bool IpVersionHasBeenSet() const;
 
                 private:
 
@@ -283,8 +513,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_targetGroupNameHasBeenSet;
 
                     /**
-                     * Default port of target group
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
@@ -308,22 +538,86 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_associatedRuleHasBeenSet;
 
                     /**
-                     * 
+                     * Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * 
+                     * Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur>
+<Li>WRR: weighted round-robin.</li>.
+<Li>LEAST_CONN: specifies the least connection.</li>.
+<Li>IP_HASH: based on ip hash.</li>.
+</ur>
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scheduleAlgorithm;
                     bool m_scheduleAlgorithmHasBeenSet;
 
                     /**
-                     * 
+                     * Health check details.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TargetGroupHealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
+
+                    /**
+                     * Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+                     */
+                    std::string m_targetGroupType;
+                    bool m_targetGroupTypeHasBeenSet;
+
+                    /**
+                     * Number of rules associated with the target group.
+                     */
+                    int64_t m_associatedRuleCount;
+                    bool m_associatedRuleCountHasBeenSet;
+
+                    /**
+                     * Specifies the number of instances in the target group.
+                     */
+                    int64_t m_registeredInstancesCount;
+                    bool m_registeredInstancesCountHasBeenSet;
+
+                    /**
+                     * Tag.
+                     */
+                    std::vector<TagInfo> m_tag;
+                    bool m_tagHasBeenSet;
+
+                    /**
+                     * Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_weight;
+                    bool m_weightHasBeenSet;
+
+                    /**
+                     * Specifies whether to listen to all target groups.
+                     */
+                    bool m_fullListenSwitch;
+                    bool m_fullListenSwitchHasBeenSet;
+
+                    /**
+                     * Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+                     */
+                    bool m_keepaliveEnable;
+                    bool m_keepaliveEnableHasBeenSet;
+
+                    /**
+                     * Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+                     */
+                    int64_t m_sessionExpireTime;
+                    bool m_sessionExpireTimeHasBeenSet;
+
+                    /**
+                     * IP version.
+                     */
+                    std::string m_ipVersion;
+                    bool m_ipVersionHasBeenSet;
 
                 };
             }

@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Listening port of real server
-                     * @return Port Listening port of real server
+                     * 获取Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
+                     * @return Port Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Listening port of real server
-                     * @param _port Listening port of real server
+                     * 设置Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
+                     * @param _port Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PublicIpAddresses Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Public network IP of the real server
+                     * @return PublicIpAddresses Public network IP of the real server
                      * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
-                     * 设置Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _publicIpAddresses Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Public network IP of the real server
+                     * @param _publicIpAddresses Public network IP of the real server
                      * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
@@ -177,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateIpAddresses Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Private network IP of the real server
+                     * @return PrivateIpAddresses Private network IP of the real server
                      * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
-                     * 设置Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _privateIpAddresses Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Private network IP of the real server
+                     * @param _privateIpAddresses Private network IP of the real server
                      * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
@@ -202,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name of the real server
+                     * @return InstanceName Instance name of the real server
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name of the real server
+                     * @param _instanceName Instance name of the real server
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -252,19 +240,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RegisteredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EniId Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of the ENI
+                     * @return EniId Unique ID of the ENI
                      * 
                      */
                     std::string GetEniId() const;
 
                     /**
-                     * 设置Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _eniId Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of the ENI
+                     * @param _eniId Unique ID of the ENI
                      * 
                      */
                     void SetEniId(const std::string& _eniId);
@@ -277,19 +261,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EniIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ZoneId AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the availability zone ID of the backend service.
+                     * @return ZoneId Specifies the availability zone ID of the backend service.
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _zoneId AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the availability zone ID of the backend service.
+                     * @param _zoneId Specifies the availability zone ID of the backend service.
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -322,7 +302,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Listening port of real server
+                     * Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
@@ -334,22 +314,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Public network IP of the real server
                      */
                     std::vector<std::string> m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;
 
                     /**
-                     * Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Private network IP of the real server
                      */
                     std::vector<std::string> m_privateIpAddresses;
                     bool m_privateIpAddressesHasBeenSet;
 
                     /**
-                     * Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Instance name of the real server
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -362,15 +339,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_registeredTimeHasBeenSet;
 
                     /**
-                     * Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of the ENI
                      */
                     std::string m_eniId;
                     bool m_eniIdHasBeenSet;
 
                     /**
-                     * AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the availability zone ID of the backend service.
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;

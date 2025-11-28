@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取If "", it indicates that there is no error return. otherwise return specific error information.
+                     * @return ErrorMsg If "", it indicates that there is no error return. otherwise return specific error information.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -62,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * If "", it indicates that there is no error return. otherwise return specific error information.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;

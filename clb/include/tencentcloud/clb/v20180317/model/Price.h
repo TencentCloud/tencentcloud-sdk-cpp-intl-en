@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return InstancePrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Describes the instance pricing.
+                     * @return InstancePrice Describes the instance pricing.
                      * 
                      */
                     ItemPrice GetInstancePrice() const;
 
                     /**
-                     * 设置Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _instancePrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Describes the instance pricing.
+                     * @param _instancePrice Describes the instance pricing.
                      * 
                      */
                     void SetInstancePrice(const ItemPrice& _instancePrice);
@@ -125,8 +121,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Describes the instance pricing.
                      */
                     ItemPrice m_instancePrice;
                     bool m_instancePriceHasBeenSet;

@@ -40,6 +40,106 @@ ClbClient::ClbClient(const Credential &credential, const string &region, const C
 }
 
 
+ClbClient::AddCustomizedConfigOutcome ClbClient::AddCustomizedConfig(const AddCustomizedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddCustomizedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddCustomizedConfigResponse rsp = AddCustomizedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddCustomizedConfigOutcome(rsp);
+        else
+            return AddCustomizedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return AddCustomizedConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::AddCustomizedConfigAsync(const AddCustomizedConfigRequest& request, const AddCustomizedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddCustomizedConfigRequest&;
+    using Resp = AddCustomizedConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddCustomizedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::AddCustomizedConfigOutcomeCallable ClbClient::AddCustomizedConfigCallable(const AddCustomizedConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddCustomizedConfigOutcome>>();
+    AddCustomizedConfigAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const AddCustomizedConfigRequest&,
+        AddCustomizedConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClbClient::AssociateCustomizedConfigOutcome ClbClient::AssociateCustomizedConfig(const AssociateCustomizedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "AssociateCustomizedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AssociateCustomizedConfigResponse rsp = AssociateCustomizedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AssociateCustomizedConfigOutcome(rsp);
+        else
+            return AssociateCustomizedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return AssociateCustomizedConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::AssociateCustomizedConfigAsync(const AssociateCustomizedConfigRequest& request, const AssociateCustomizedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AssociateCustomizedConfigRequest&;
+    using Resp = AssociateCustomizedConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AssociateCustomizedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::AssociateCustomizedConfigOutcomeCallable ClbClient::AssociateCustomizedConfigCallable(const AssociateCustomizedConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AssociateCustomizedConfigOutcome>>();
+    AssociateCustomizedConfigAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const AssociateCustomizedConfigRequest&,
+        AssociateCustomizedConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClbClient::AssociateTargetGroupsOutcome ClbClient::AssociateTargetGroups(const AssociateTargetGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateTargetGroups");
@@ -732,6 +832,56 @@ ClbClient::CreateTopicOutcomeCallable ClbClient::CreateTopicCallable(const Creat
         const ClbClient*,
         const CreateTopicRequest&,
         CreateTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClbClient::DeleteCustomizedConfigOutcome ClbClient::DeleteCustomizedConfig(const DeleteCustomizedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCustomizedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCustomizedConfigResponse rsp = DeleteCustomizedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCustomizedConfigOutcome(rsp);
+        else
+            return DeleteCustomizedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCustomizedConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::DeleteCustomizedConfigAsync(const DeleteCustomizedConfigRequest& request, const DeleteCustomizedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCustomizedConfigRequest&;
+    using Resp = DeleteCustomizedConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCustomizedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::DeleteCustomizedConfigOutcomeCallable ClbClient::DeleteCustomizedConfigCallable(const DeleteCustomizedConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCustomizedConfigOutcome>>();
+    DeleteCustomizedConfigAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const DeleteCustomizedConfigRequest&,
+        DeleteCustomizedConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1890,6 +2040,56 @@ ClbClient::DescribeLBListenersOutcomeCallable ClbClient::DescribeLBListenersCall
     return prom->get_future();
 }
 
+ClbClient::DescribeLBOperateProtectOutcome ClbClient::DescribeLBOperateProtect(const DescribeLBOperateProtectRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLBOperateProtect");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLBOperateProtectResponse rsp = DescribeLBOperateProtectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLBOperateProtectOutcome(rsp);
+        else
+            return DescribeLBOperateProtectOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLBOperateProtectOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::DescribeLBOperateProtectAsync(const DescribeLBOperateProtectRequest& request, const DescribeLBOperateProtectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLBOperateProtectRequest&;
+    using Resp = DescribeLBOperateProtectResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLBOperateProtect", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::DescribeLBOperateProtectOutcomeCallable ClbClient::DescribeLBOperateProtectCallable(const DescribeLBOperateProtectRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLBOperateProtectOutcome>>();
+    DescribeLBOperateProtectAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const DescribeLBOperateProtectRequest&,
+        DescribeLBOperateProtectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClbClient::DescribeListenersOutcome ClbClient::DescribeListeners(const DescribeListenersRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeListeners");
@@ -2640,6 +2840,56 @@ ClbClient::DescribeTaskStatusOutcomeCallable ClbClient::DescribeTaskStatusCallab
     return prom->get_future();
 }
 
+ClbClient::DisassociateCustomizedConfigOutcome ClbClient::DisassociateCustomizedConfig(const DisassociateCustomizedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisassociateCustomizedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisassociateCustomizedConfigResponse rsp = DisassociateCustomizedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisassociateCustomizedConfigOutcome(rsp);
+        else
+            return DisassociateCustomizedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DisassociateCustomizedConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::DisassociateCustomizedConfigAsync(const DisassociateCustomizedConfigRequest& request, const DisassociateCustomizedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DisassociateCustomizedConfigRequest&;
+    using Resp = DisassociateCustomizedConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DisassociateCustomizedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::DisassociateCustomizedConfigOutcomeCallable ClbClient::DisassociateCustomizedConfigCallable(const DisassociateCustomizedConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DisassociateCustomizedConfigOutcome>>();
+    DisassociateCustomizedConfigAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const DisassociateCustomizedConfigRequest&,
+        DisassociateCustomizedConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClbClient::DisassociateTargetGroupsOutcome ClbClient::DisassociateTargetGroups(const DisassociateTargetGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DisassociateTargetGroups");
@@ -3032,6 +3282,56 @@ ClbClient::ModifyBlockIPListOutcomeCallable ClbClient::ModifyBlockIPListCallable
         const ClbClient*,
         const ModifyBlockIPListRequest&,
         ModifyBlockIPListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClbClient::ModifyCustomizedConfigOutcome ClbClient::ModifyCustomizedConfig(const ModifyCustomizedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCustomizedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCustomizedConfigResponse rsp = ModifyCustomizedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCustomizedConfigOutcome(rsp);
+        else
+            return ModifyCustomizedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCustomizedConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::ModifyCustomizedConfigAsync(const ModifyCustomizedConfigRequest& request, const ModifyCustomizedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyCustomizedConfigRequest&;
+    using Resp = ModifyCustomizedConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyCustomizedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::ModifyCustomizedConfigOutcomeCallable ClbClient::ModifyCustomizedConfigCallable(const ModifyCustomizedConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyCustomizedConfigOutcome>>();
+    ModifyCustomizedConfigAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const ModifyCustomizedConfigRequest&,
+        ModifyCustomizedConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

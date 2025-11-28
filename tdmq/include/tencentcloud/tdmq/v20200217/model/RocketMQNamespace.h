@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
-                     * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * 获取Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
+                     * @return NamespaceId Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
                      * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
-                     * 设置Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
-                     * @param _namespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * 设置Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
+                     * @param _namespaceId Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
                      * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
-                     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+                     * 获取Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
+                     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
                      * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
-                     * 设置Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
-                     * @param _ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+                     * 设置Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
+                     * @param _ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
                      * 
                      */
                     void SetTtl(const uint64_t& _ttl);
@@ -186,18 +186,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InternalEndpoint Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInternalEndpoint() const;
 
                     /**
                      * 设置Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _internalEndpoint Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInternalEndpoint(const std::string& _internalEndpoint);
@@ -212,13 +212,13 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                 private:
 
                     /**
-                     * Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
                      */
                     std::string m_namespaceId;
                     bool m_namespaceIdHasBeenSet;
 
                     /**
-                     * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+                     * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
                      */
                     uint64_t m_ttl;
                     bool m_ttlHasBeenSet;
@@ -252,7 +252,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_internalEndpoint;
                     bool m_internalEndpointHasBeenSet;

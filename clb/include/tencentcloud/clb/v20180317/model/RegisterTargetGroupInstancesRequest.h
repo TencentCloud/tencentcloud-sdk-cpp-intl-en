@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Server instance array
-                     * @return TargetGroupInstances Server instance array
+                     * 获取Server instance array. the VPC of the server and target group must be the same.
+                     * @return TargetGroupInstances Server instance array. the VPC of the server and target group must be the same.
                      * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
-                     * 设置Server instance array
-                     * @param _targetGroupInstances Server instance array
+                     * 设置Server instance array. the VPC of the server and target group must be the same.
+                     * @param _targetGroupInstances Server instance array. the VPC of the server and target group must be the same.
                      * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_targetGroupIdHasBeenSet;
 
                     /**
-                     * Server instance array
+                     * Server instance array. the VPC of the server and target group must be the same.
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;

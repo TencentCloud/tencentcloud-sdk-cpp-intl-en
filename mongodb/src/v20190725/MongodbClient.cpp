@@ -290,6 +290,106 @@ MongodbClient::CreateDBInstanceHourOutcomeCallable MongodbClient::CreateDBInstan
     return prom->get_future();
 }
 
+MongodbClient::CreateLogDownloadTaskOutcome MongodbClient::CreateLogDownloadTask(const CreateLogDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLogDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLogDownloadTaskResponse rsp = CreateLogDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLogDownloadTaskOutcome(rsp);
+        else
+            return CreateLogDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLogDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::CreateLogDownloadTaskAsync(const CreateLogDownloadTaskRequest& request, const CreateLogDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLogDownloadTaskRequest&;
+    using Resp = CreateLogDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLogDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::CreateLogDownloadTaskOutcomeCallable MongodbClient::CreateLogDownloadTaskCallable(const CreateLogDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLogDownloadTaskOutcome>>();
+    CreateLogDownloadTaskAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const CreateLogDownloadTaskRequest&,
+        CreateLogDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::DeleteLogDownloadTaskOutcome MongodbClient::DeleteLogDownloadTask(const DeleteLogDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLogDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLogDownloadTaskResponse rsp = DeleteLogDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLogDownloadTaskOutcome(rsp);
+        else
+            return DeleteLogDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLogDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DeleteLogDownloadTaskAsync(const DeleteLogDownloadTaskRequest& request, const DeleteLogDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLogDownloadTaskRequest&;
+    using Resp = DeleteLogDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLogDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::DeleteLogDownloadTaskOutcomeCallable MongodbClient::DeleteLogDownloadTaskCallable(const DeleteLogDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLogDownloadTaskOutcome>>();
+    DeleteLogDownloadTaskAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const DeleteLogDownloadTaskRequest&,
+        DeleteLogDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MongodbClient::DescribeAsyncRequestInfoOutcome MongodbClient::DescribeAsyncRequestInfo(const DescribeAsyncRequestInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAsyncRequestInfo");
@@ -790,6 +890,156 @@ MongodbClient::DescribeInstanceParamsOutcomeCallable MongodbClient::DescribeInst
     return prom->get_future();
 }
 
+MongodbClient::DescribeInstanceSSLOutcome MongodbClient::DescribeInstanceSSL(const DescribeInstanceSSLRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceSSL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceSSLResponse rsp = DescribeInstanceSSLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceSSLOutcome(rsp);
+        else
+            return DescribeInstanceSSLOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceSSLOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DescribeInstanceSSLAsync(const DescribeInstanceSSLRequest& request, const DescribeInstanceSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceSSLRequest&;
+    using Resp = DescribeInstanceSSLResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceSSL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::DescribeInstanceSSLOutcomeCallable MongodbClient::DescribeInstanceSSLCallable(const DescribeInstanceSSLRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceSSLOutcome>>();
+    DescribeInstanceSSLAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const DescribeInstanceSSLRequest&,
+        DescribeInstanceSSLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::DescribeLogDownloadTasksOutcome MongodbClient::DescribeLogDownloadTasks(const DescribeLogDownloadTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLogDownloadTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLogDownloadTasksResponse rsp = DescribeLogDownloadTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLogDownloadTasksOutcome(rsp);
+        else
+            return DescribeLogDownloadTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLogDownloadTasksOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DescribeLogDownloadTasksAsync(const DescribeLogDownloadTasksRequest& request, const DescribeLogDownloadTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLogDownloadTasksRequest&;
+    using Resp = DescribeLogDownloadTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLogDownloadTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::DescribeLogDownloadTasksOutcomeCallable MongodbClient::DescribeLogDownloadTasksCallable(const DescribeLogDownloadTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLogDownloadTasksOutcome>>();
+    DescribeLogDownloadTasksAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const DescribeLogDownloadTasksRequest&,
+        DescribeLogDownloadTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::DescribeMongodbLogsOutcome MongodbClient::DescribeMongodbLogs(const DescribeMongodbLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMongodbLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMongodbLogsResponse rsp = DescribeMongodbLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMongodbLogsOutcome(rsp);
+        else
+            return DescribeMongodbLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMongodbLogsOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DescribeMongodbLogsAsync(const DescribeMongodbLogsRequest& request, const DescribeMongodbLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMongodbLogsRequest&;
+    using Resp = DescribeMongodbLogsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMongodbLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::DescribeMongodbLogsOutcomeCallable MongodbClient::DescribeMongodbLogsCallable(const DescribeMongodbLogsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMongodbLogsOutcome>>();
+    DescribeMongodbLogsAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const DescribeMongodbLogsRequest&,
+        DescribeMongodbLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MongodbClient::DescribeSecurityGroupOutcome MongodbClient::DescribeSecurityGroup(const DescribeSecurityGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSecurityGroup");
@@ -1182,6 +1432,56 @@ MongodbClient::InquirePriceRenewDBInstancesOutcomeCallable MongodbClient::Inquir
         const MongodbClient*,
         const InquirePriceRenewDBInstancesRequest&,
         InquirePriceRenewDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::InstanceEnableSSLOutcome MongodbClient::InstanceEnableSSL(const InstanceEnableSSLRequest &request)
+{
+    auto outcome = MakeRequest(request, "InstanceEnableSSL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InstanceEnableSSLResponse rsp = InstanceEnableSSLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InstanceEnableSSLOutcome(rsp);
+        else
+            return InstanceEnableSSLOutcome(o.GetError());
+    }
+    else
+    {
+        return InstanceEnableSSLOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::InstanceEnableSSLAsync(const InstanceEnableSSLRequest& request, const InstanceEnableSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const InstanceEnableSSLRequest&;
+    using Resp = InstanceEnableSSLResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "InstanceEnableSSL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::InstanceEnableSSLOutcomeCallable MongodbClient::InstanceEnableSSLCallable(const InstanceEnableSSLRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<InstanceEnableSSLOutcome>>();
+    InstanceEnableSSLAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const InstanceEnableSSLRequest&,
+        InstanceEnableSSLOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1682,6 +1982,106 @@ MongodbClient::TerminateDBInstancesOutcomeCallable MongodbClient::TerminateDBIns
         const MongodbClient*,
         const TerminateDBInstancesRequest&,
         TerminateDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::UpgradeDBInstanceKernelVersionOutcome MongodbClient::UpgradeDBInstanceKernelVersion(const UpgradeDBInstanceKernelVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeDBInstanceKernelVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeDBInstanceKernelVersionResponse rsp = UpgradeDBInstanceKernelVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeDBInstanceKernelVersionOutcome(rsp);
+        else
+            return UpgradeDBInstanceKernelVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeDBInstanceKernelVersionOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::UpgradeDBInstanceKernelVersionAsync(const UpgradeDBInstanceKernelVersionRequest& request, const UpgradeDBInstanceKernelVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpgradeDBInstanceKernelVersionRequest&;
+    using Resp = UpgradeDBInstanceKernelVersionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpgradeDBInstanceKernelVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::UpgradeDBInstanceKernelVersionOutcomeCallable MongodbClient::UpgradeDBInstanceKernelVersionCallable(const UpgradeDBInstanceKernelVersionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpgradeDBInstanceKernelVersionOutcome>>();
+    UpgradeDBInstanceKernelVersionAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const UpgradeDBInstanceKernelVersionRequest&,
+        UpgradeDBInstanceKernelVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MongodbClient::UpgradeDbInstanceVersionOutcome MongodbClient::UpgradeDbInstanceVersion(const UpgradeDbInstanceVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeDbInstanceVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeDbInstanceVersionResponse rsp = UpgradeDbInstanceVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeDbInstanceVersionOutcome(rsp);
+        else
+            return UpgradeDbInstanceVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeDbInstanceVersionOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::UpgradeDbInstanceVersionAsync(const UpgradeDbInstanceVersionRequest& request, const UpgradeDbInstanceVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpgradeDbInstanceVersionRequest&;
+    using Resp = UpgradeDbInstanceVersionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpgradeDbInstanceVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::UpgradeDbInstanceVersionOutcomeCallable MongodbClient::UpgradeDbInstanceVersionCallable(const UpgradeDbInstanceVersionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpgradeDbInstanceVersionOutcome>>();
+    UpgradeDbInstanceVersionAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const UpgradeDbInstanceVersionRequest&,
+        UpgradeDbInstanceVersionOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

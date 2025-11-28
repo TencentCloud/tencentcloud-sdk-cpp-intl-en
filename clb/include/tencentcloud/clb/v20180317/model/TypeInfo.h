@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operator type.
+                     * @return Type Operator type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operator type.
+                     * @param _type Operator type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecAvailabilitySet Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification availability.
+                     * @return SpecAvailabilitySet Specification availability.
                      * 
                      */
                     std::vector<SpecAvailability> GetSpecAvailabilitySet() const;
 
                     /**
-                     * 设置Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specAvailabilitySet Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification availability.
+                     * @param _specAvailabilitySet Specification availability.
                      * 
                      */
                     void SetSpecAvailabilitySet(const std::vector<SpecAvailability>& _specAvailabilitySet);
@@ -100,15 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operator type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specification availability.
                      */
                     std::vector<SpecAvailability> m_specAvailabilitySet;
                     bool m_specAvailabilitySetHasBeenSet;

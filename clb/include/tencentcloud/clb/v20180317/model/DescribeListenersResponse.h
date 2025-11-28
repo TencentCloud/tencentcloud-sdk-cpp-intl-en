@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool ListenersHasBeenSet() const;
 
                     /**
-                     * 获取Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Total number of listeners (filtered by port, protocol, and listener ID).
+                     * @return TotalCount Total number of listeners (filtered by port, protocol, and listener ID).
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -83,8 +81,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_listenersHasBeenSet;
 
                     /**
-                     * Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Total number of listeners (filtered by port, protocol, and listener ID).
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

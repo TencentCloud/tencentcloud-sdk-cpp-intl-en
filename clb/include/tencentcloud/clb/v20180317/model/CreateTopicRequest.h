@@ -106,15 +106,23 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
-                     * @return Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+                     * 获取Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
+                     * @return Period Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
-                     * @param _period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+                     * 设置Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
+                     * @param _period Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -168,7 +176,9 @@ namespace TencentCloud
                     bool m_topicTypeHasBeenSet;
 
                     /**
-                     * Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+                     * Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;

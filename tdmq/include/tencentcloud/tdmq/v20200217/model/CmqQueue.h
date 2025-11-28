@@ -93,19 +93,15 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
+                     * @return Qps Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
                      * 
                      */
                     uint64_t GetQps() const;
 
                     /**
-                     * 设置Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
+                     * @param _qps Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
                      * 
                      */
                     void SetQps(const uint64_t& _qps);
@@ -119,18 +115,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Bps Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetBps() const;
 
                     /**
                      * 设置Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _bps Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBps(const uint64_t& _bps);
@@ -143,19 +135,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BpsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxDelaySeconds Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
+                     * @return MaxDelaySeconds Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
                      * 
                      */
                     uint64_t GetMaxDelaySeconds() const;
 
                     /**
-                     * 设置Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxDelaySeconds Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
+                     * @param _maxDelaySeconds Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
                      * 
                      */
                     void SetMaxDelaySeconds(const uint64_t& _maxDelaySeconds);
@@ -189,19 +177,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxMsgHeapNumHasBeenSet() const;
 
                     /**
-                     * 获取Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+                     * @return PollingWaitSeconds Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
                      * 
                      */
                     uint64_t GetPollingWaitSeconds() const;
 
                     /**
-                     * 设置Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _pollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+                     * @param _pollingWaitSeconds Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
                      * 
                      */
                     void SetPollingWaitSeconds(const uint64_t& _pollingWaitSeconds);
@@ -214,19 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PollingWaitSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+                     * @return MsgRetentionSeconds Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
                      * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
-                     * 设置Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _msgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+                     * @param _msgRetentionSeconds Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
                      * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
@@ -239,19 +219,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgRetentionSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+                     * @return VisibilityTimeout Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
                      * 
                      */
                     uint64_t GetVisibilityTimeout() const;
 
                     /**
-                     * 设置Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _visibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+                     * @param _visibilityTimeout Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
                      * 
                      */
                     void SetVisibilityTimeout(const uint64_t& _visibilityTimeout);
@@ -264,19 +240,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VisibilityTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxMsgSize Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+                     * @return MaxMsgSize Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
                      * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
-                     * 设置Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxMsgSize Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+                     * @param _maxMsgSize Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
                      * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
@@ -289,19 +261,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxMsgSizeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RewindSeconds Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+                     * @return RewindSeconds Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
                      * 
                      */
                     uint64_t GetRewindSeconds() const;
 
                     /**
-                     * 设置Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _rewindSeconds Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+                     * @param _rewindSeconds Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
                      * 
                      */
                     void SetRewindSeconds(const uint64_t& _rewindSeconds);
@@ -314,19 +282,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RewindSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+                     * @return CreateTime Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+                     * @param _createTime Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -339,19 +303,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LastModifyTime Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+                     * @return LastModifyTime The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     uint64_t GetLastModifyTime() const;
 
                     /**
-                     * 设置Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _lastModifyTime Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+                     * @param _lastModifyTime The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      * 
                      */
                     void SetLastModifyTime(const uint64_t& _lastModifyTime);
@@ -364,19 +324,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LastModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ActiveMsgNum Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of active messages (not being consumed) in queue, an approximate value.
+                     * @return ActiveMsgNum Total number of active messages (not being consumed) in queue, an approximate value.
                      * 
                      */
                     uint64_t GetActiveMsgNum() const;
 
                     /**
-                     * 设置Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _activeMsgNum Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total number of active messages (not being consumed) in queue, an approximate value.
+                     * @param _activeMsgNum Total number of active messages (not being consumed) in queue, an approximate value.
                      * 
                      */
                     void SetActiveMsgNum(const uint64_t& _activeMsgNum);
@@ -389,19 +345,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ActiveMsgNumHasBeenSet() const;
 
                     /**
-                     * 获取Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InactiveMsgNum Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of inactive messages (being consumed) in queue, an approximate value.
+                     * @return InactiveMsgNum Total number of inactive messages (being consumed) in queue, an approximate value.
                      * 
                      */
                     uint64_t GetInactiveMsgNum() const;
 
                     /**
-                     * 设置Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _inactiveMsgNum Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total number of inactive messages (being consumed) in queue, an approximate value.
+                     * @param _inactiveMsgNum Total number of inactive messages (being consumed) in queue, an approximate value.
                      * 
                      */
                     void SetInactiveMsgNum(const uint64_t& _inactiveMsgNum);
@@ -665,18 +617,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTenantId() const;
 
                     /**
                      * 设置Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _tenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTenantId(const std::string& _tenantId);
@@ -689,19 +637,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TenantIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the namespace name.
+                     * @return NamespaceName Specifies the namespace name.
                      * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
-                     * 设置Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _namespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the namespace name.
+                     * @param _namespaceName Specifies the namespace name.
                      * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
@@ -714,19 +658,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+                     * @return Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+                     * @param _status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -739,19 +679,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxUnackedMsgNum The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Maximum Number of Unacknowledged Messages
+                     * @return MaxUnackedMsgNum Maximum Number of Unacknowledged Messages
                      * 
                      */
                     int64_t GetMaxUnackedMsgNum() const;
 
                     /**
-                     * 设置The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxUnackedMsgNum The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Maximum Number of Unacknowledged Messages
+                     * @param _maxUnackedMsgNum Maximum Number of Unacknowledged Messages
                      * 
                      */
                     void SetMaxUnackedMsgNum(const int64_t& _maxUnackedMsgNum);
@@ -764,19 +700,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxUnackedMsgNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxMsgBacklogSize Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Maximum Message Backlog Size (bytes)
+                     * @return MaxMsgBacklogSize Maximum Message Backlog Size (bytes)
                      * 
                      */
                     int64_t GetMaxMsgBacklogSize() const;
 
                     /**
-                     * 设置Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxMsgBacklogSize Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Maximum Message Backlog Size (bytes)
+                     * @param _maxMsgBacklogSize Maximum Message Backlog Size (bytes)
                      * 
                      */
                     void SetMaxMsgBacklogSize(const int64_t& _maxMsgBacklogSize);
@@ -789,19 +721,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxMsgBacklogSizeHasBeenSet() const;
 
                     /**
-                     * 获取Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
+                     * @return RetentionSizeInMB Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
                      * 
                      */
                     uint64_t GetRetentionSizeInMB() const;
 
                     /**
-                     * 设置Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _retentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
+                     * @param _retentionSizeInMB Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
                      * 
                      */
                     void SetRetentionSizeInMB(const uint64_t& _retentionSizeInMB);
@@ -828,22 +756,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
                      */
                     uint64_t m_qps;
                     bool m_qpsHasBeenSet;
 
                     /**
                      * Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_bps;
                     bool m_bpsHasBeenSet;
 
                     /**
-                     * Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
                      */
                     uint64_t m_maxDelaySeconds;
                     bool m_maxDelaySecondsHasBeenSet;
@@ -855,64 +780,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_maxMsgHeapNumHasBeenSet;
 
                     /**
-                     * Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
                      */
                     uint64_t m_pollingWaitSeconds;
                     bool m_pollingWaitSecondsHasBeenSet;
 
                     /**
-                     * Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
                      */
                     uint64_t m_msgRetentionSeconds;
                     bool m_msgRetentionSecondsHasBeenSet;
 
                     /**
-                     * Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
                      */
                     uint64_t m_visibilityTimeout;
                     bool m_visibilityTimeoutHasBeenSet;
 
                     /**
-                     * Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
                      */
                     uint64_t m_maxMsgSize;
                     bool m_maxMsgSizeHasBeenSet;
 
                     /**
-                     * Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
                      */
                     uint64_t m_rewindSeconds;
                     bool m_rewindSecondsHasBeenSet;
 
                     /**
-                     * Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
                      */
                     uint64_t m_lastModifyTime;
                     bool m_lastModifyTimeHasBeenSet;
 
                     /**
-                     * Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total number of active messages (not being consumed) in queue, an approximate value.
                      */
                     uint64_t m_activeMsgNum;
                     bool m_activeMsgNumHasBeenSet;
 
                     /**
-                     * Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total number of inactive messages (being consumed) in queue, an approximate value.
                      */
                     uint64_t m_inactiveMsgNum;
                     bool m_inactiveMsgNumHasBeenSet;
@@ -989,42 +905,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tenantId;
                     bool m_tenantIdHasBeenSet;
 
                     /**
-                     * Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the namespace name.
                      */
                     std::string m_namespaceName;
                     bool m_namespaceNameHasBeenSet;
 
                     /**
-                     * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Maximum Number of Unacknowledged Messages
                      */
                     int64_t m_maxUnackedMsgNum;
                     bool m_maxUnackedMsgNumHasBeenSet;
 
                     /**
-                     * Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Maximum Message Backlog Size (bytes)
                      */
                     int64_t m_maxMsgBacklogSize;
                     bool m_maxMsgBacklogSizeHasBeenSet;
 
                     /**
-                     * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
                      */
                     uint64_t m_retentionSizeInMB;
                     bool m_retentionSizeInMBHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique CLB ID
-                     * @return LoadBalancerId Unique CLB ID
+                     * 获取Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @return LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置Unique CLB ID
-                     * @param _loadBalancerId Unique CLB ID
+                     * 设置Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+                     * @param _loadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance name
-                     * @return LoadBalancerName CLB instance name
+                     * 获取Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
+                     * @return LoadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB instance name
-                     * @param _loadBalancerName CLB instance name
+                     * 设置Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
+                     * @param _loadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -129,15 +129,27 @@ namespace TencentCloud
                     bool InternetChargeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
-                     * @return LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * 获取Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
+                     * @return LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
                      * 
                      */
                     bool GetLoadBalancerPassToTarget() const;
 
                     /**
-                     * 设置Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
-                     * @param _loadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * 设置Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
+                     * @param _loadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
                      * 
                      */
                     void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
@@ -150,15 +162,15 @@ namespace TencentCloud
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable cross-region binding 2.0
-                     * @return SnatPro Whether to enable cross-region binding 2.0
+                     * 获取Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
+                     * @return SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
                      * 
                      */
                     bool GetSnatPro() const;
 
                     /**
-                     * 设置Whether to enable cross-region binding 2.0
-                     * @param _snatPro Whether to enable cross-region binding 2.0
+                     * 设置Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
+                     * @param _snatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
                      * 
                      */
                     void SetSnatPro(const bool& _snatPro);
@@ -171,15 +183,15 @@ namespace TencentCloud
                     bool SnatProHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable deletion protection.
-                     * @return DeleteProtect Specifies whether to enable deletion protection.
+                     * 获取Specifies whether to enable deletion protection. leave it blank to keep the current setting.
+                     * @return DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
                      * 
                      */
                     bool GetDeleteProtect() const;
 
                     /**
-                     * 设置Specifies whether to enable deletion protection.
-                     * @param _deleteProtect Specifies whether to enable deletion protection.
+                     * 设置Specifies whether to enable deletion protection. leave it blank to keep the current setting.
+                     * @param _deleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
                      * 
                      */
                     void SetDeleteProtect(const bool& _deleteProtect);
@@ -192,15 +204,15 @@ namespace TencentCloud
                     bool DeleteProtectHasBeenSet() const;
 
                     /**
-                     * 获取Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
-                     * @return ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * 获取Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
+                     * @return ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
                      * 
                      */
                     bool GetModifyClassicDomain() const;
 
                     /**
-                     * 设置Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
-                     * @param _modifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * 设置Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
+                     * @param _modifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
                      * 
                      */
                     void SetModifyClassicDomain(const bool& _modifyClassicDomain);
@@ -212,16 +224,37 @@ namespace TencentCloud
                      */
                     bool ModifyClassicDomainHasBeenSet() const;
 
+                    /**
+                     * 获取The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+                     * @return AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+                     * 
+                     */
+                    std::string GetAssociateEndpoint() const;
+
+                    /**
+                     * 设置The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+                     * @param _associateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+                     * 
+                     */
+                    void SetAssociateEndpoint(const std::string& _associateEndpoint);
+
+                    /**
+                     * 判断参数 AssociateEndpoint 是否已赋值
+                     * @return AssociateEndpoint 是否已赋值
+                     * 
+                     */
+                    bool AssociateEndpointHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Unique CLB ID
+                     * Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB instance name
+                     * Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
@@ -239,28 +272,37 @@ namespace TencentCloud
                     bool m_internetChargeInfoHasBeenSet;
 
                     /**
-                     * Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
                      */
                     bool m_loadBalancerPassToTarget;
                     bool m_loadBalancerPassToTargetHasBeenSet;
 
                     /**
-                     * Whether to enable cross-region binding 2.0
+                     * Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
                      */
                     bool m_snatPro;
                     bool m_snatProHasBeenSet;
 
                     /**
-                     * Specifies whether to enable deletion protection.
+                     * Specifies whether to enable deletion protection. leave it blank to keep the current setting.
                      */
                     bool m_deleteProtect;
                     bool m_deleteProtectHasBeenSet;
 
                     /**
-                     * Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
                      */
                     bool m_modifyClassicDomain;
                     bool m_modifyClassicDomainHasBeenSet;
+
+                    /**
+                     * The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+                     */
+                    std::string m_associateEndpoint;
+                    bool m_associateEndpointHasBeenSet;
 
                 };
             }

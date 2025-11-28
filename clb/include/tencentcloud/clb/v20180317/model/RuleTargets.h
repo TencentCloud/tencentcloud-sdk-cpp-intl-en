@@ -113,18 +113,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Targets Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Backend> GetTargets() const;
 
                     /**
                      * 设置Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _targets Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTargets(const std::vector<Backend>& _targets);
@@ -137,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FunctionTargets Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the backend cloud function info.
+                     * @return FunctionTargets Describes the backend cloud function info.
                      * 
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
-                     * 设置Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _functionTargets Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes the backend cloud function info.
+                     * @param _functionTargets Describes the backend cloud function info.
                      * 
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
@@ -183,14 +175,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Backend> m_targets;
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Describes the backend cloud function info.
                      */
                     std::vector<FunctionTarget> m_functionTargets;
                     bool m_functionTargetsHasBeenSet;

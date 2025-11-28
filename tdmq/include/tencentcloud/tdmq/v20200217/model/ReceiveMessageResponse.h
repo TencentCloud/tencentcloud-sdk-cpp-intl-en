@@ -86,10 +86,8 @@ namespace TencentCloud
                     bool AckTopicHasBeenSet() const;
 
                     /**
-                     * 获取Returned error message. If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg Returned error message. If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned error message. If it is null, it means there is no error.
+                     * @return ErrorMsg Returned error message. If it is null, it means there is no error.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -102,10 +100,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取Returned subscriber name, which will be used when an acknowledgment consumer is created.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubName Returned subscriber name, which will be used when an acknowledgment consumer is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned subscriber names, used for creating Ack consumers
+                     * @return SubName Returned subscriber names, used for creating Ack consumers
                      * 
                      */
                     std::string GetSubName() const;
@@ -118,10 +114,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubNameHasBeenSet() const;
 
                     /**
-                     * 获取MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取BatchReceivePolicy specifies the messageids of multiple messages returned at one time, using '###' to distinguish different messageids.
+                     * @return MessageIDList BatchReceivePolicy specifies the messageids of multiple messages returned at one time, using '###' to distinguish different messageids.
                      * 
                      */
                     std::string GetMessageIDList() const;
@@ -134,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageIDListHasBeenSet() const;
 
                     /**
-                     * 获取Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取BatchReceivePolicy specifies the message content of multiple messages returned at one time, using '###' to distinguish different message content.
+                     * @return MessagesPayload BatchReceivePolicy specifies the message content of multiple messages returned at one time, using '###' to distinguish different message content.
                      * 
                      */
                     std::string GetMessagesPayload() const;
@@ -170,29 +162,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ackTopicHasBeenSet;
 
                     /**
-                     * Returned error message. If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returned error message. If it is null, it means there is no error.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * Returned subscriber name, which will be used when an acknowledgment consumer is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returned subscriber names, used for creating Ack consumers
                      */
                     std::string m_subName;
                     bool m_subNameHasBeenSet;
 
                     /**
-                     * MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * BatchReceivePolicy specifies the messageids of multiple messages returned at one time, using '###' to distinguish different messageids.
                      */
                     std::string m_messageIDList;
                     bool m_messageIDListHasBeenSet;
 
                     /**
-                     * Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * BatchReceivePolicy specifies the message content of multiple messages returned at one time, using '###' to distinguish different message content.
                      */
                     std::string m_messagesPayload;
                     bool m_messagesPayloadHasBeenSet;

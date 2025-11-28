@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取messageID, which must be globally unique and is the metadata information used to identify the message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MessageId messageID, which must be globally unique and is the metadata information used to identify the message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The messageID of the message is globally unique and is used to identify the message's metadata information.
+                     * @return MessageId The messageID of the message is globally unique and is used to identify the message's metadata information.
                      * 
                      */
                     std::string GetMessageId() const;
@@ -60,10 +58,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageIdHasBeenSet() const;
 
                     /**
-                     * 获取Returned error message. If an empty string is returned, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg Returned error message. If an empty string is returned, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned error message. If returned as "", it means there is no error.
+                     * @return ErrorMsg Returned error message. If returned as "", it means there is no error.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -78,15 +74,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * messageID, which must be globally unique and is the metadata information used to identify the message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The messageID of the message is globally unique and is used to identify the message's metadata information.
                      */
                     std::string m_messageId;
                     bool m_messageIdHasBeenSet;
 
                     /**
-                     * Returned error message. If an empty string is returned, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returned error message. If returned as "", it means there is no error.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
