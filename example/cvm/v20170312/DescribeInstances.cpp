@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 Tencent. All Rights Reserved.
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 using namespace TencentCloud;
 using namespace TencentCloud::Cvm::V20170312;
@@ -38,9 +39,10 @@ int main()
     TencentCloud::InitAPI();
 
     // use the sdk
-
-    string secretId = "<your secret id>";
-    string secretKey = "<your secret key>";
+    const char * sid = getenv("TENCENTCLOUD_SECRET_ID");
+    const char * skey = getenv("TENCENTCLOUD_SECRET_KEY");
+    string secretId = nullptr == sid ? "" : sid;
+    string secretKey = nullptr == skey ? "" : skey;
     Credential cred = Credential(secretId, secretKey);
 
     HttpProfile httpProfile = HttpProfile();
@@ -50,6 +52,10 @@ int main()
     ClientProfile clientProfile = ClientProfile(httpProfile);
 
     DescribeInstancesRequest req = DescribeInstancesRequest();
+    Filter respFilter;
+    respFilter.SetName("zone");
+    respFilter.SetValues({ "ap-guangzhou-1", "ap-guangzhou-2" });
+    req.SetFilters({ respFilter });
     req.SetOffset(0);
     req.SetLimit(5);
 
@@ -58,6 +64,11 @@ int main()
     // set proxy
     // NetworkProxy proxy = NetworkProxy(NetworkProxy::Type::HTTP, "localhost.proxy.com", 8080);
     // cvm_client.SetNetworkProxy(proxy);
+
+    // set headers
+    // std::map<std::string, std::string> headers;
+    // headers.insert(std::make_pair("Accept-Encoding", "gzip"));
+    // cvm_client.SetHeader(headers);
 
     auto outcome = cvm_client.DescribeInstances(req);
     if (!outcome.IsSuccess())

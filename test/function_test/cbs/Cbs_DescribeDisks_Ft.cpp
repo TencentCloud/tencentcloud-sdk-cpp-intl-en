@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 Tencent. All Rights Reserved.
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,8 +42,8 @@ namespace
 
         // use the sdk
 
-        string secretId = CUtils::GetEnv("ENV_SecretId");
-        string secretKey = CUtils::GetEnv("ENV_SecretKey");
+        string secretId = CUtils::GetEnv("TENCENTCLOUD_SECRET_ID");
+        string secretKey = CUtils::GetEnv("TENCENTCLOUD_SECRET_KEY");
         Credential cred = Credential(secretId, secretKey);
 
         HttpProfile httpProfile = HttpProfile();

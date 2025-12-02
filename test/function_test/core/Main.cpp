@@ -14,23 +14,10 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEST_FUNCTION_TEST_UTILS_H_
-#define TENCENTCLOUD_TEST_FUNCTION_TEST_UTILS_H_
+ #include <gtest/gtest.h>
 
-#include <string>
-#include <stdlib.h>
-
-class CUtils
+int main(int argc, char**argv, char**envArg)
 {
-public:
-    static std::string GetEnv(const std::string &env)
-    {
-        char* value = getenv(env.c_str());
-        if (value == nullptr) {
-            return "";
-        }
-        return std::string(value);
-    }
-};
-
-#endif // !TENCENTCLOUD_TEST_FUNCTION_TEST_UTILS_H_
+    testing::InitGoogleTest(&argc, argv);
+    return(RUN_ALL_TESTS());
+}
