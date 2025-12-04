@@ -48,15 +48,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultSet 
+                     * 获取Live streaming analysis subtask result. Valid values:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResultSet Live streaming analysis subtask result. Valid values:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<LiveStreamAiAnalysisResultItem> GetResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _resultSet 
+                     * 设置Live streaming analysis subtask result. Valid values:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resultSet Live streaming analysis subtask result. Valid values:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResultSet(const std::vector<LiveStreamAiAnalysisResultItem>& _resultSet);
@@ -71,7 +87,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Live streaming analysis subtask result. Valid values:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<LiveStreamAiAnalysisResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;

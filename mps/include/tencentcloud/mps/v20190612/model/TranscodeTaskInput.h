@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/RawTranscodeParameter.h>
 #include <tencentcloud/mps/v20190612/model/OverrideTranscodeParameter.h>
 #include <tencentcloud/mps/v20190612/model/WatermarkInput.h>
+#include <tencentcloud/mps/v20190612/model/BlindWatermarkInput.h>
 #include <tencentcloud/mps/v20190612/model/MosaicInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/NumberFormat.h>
@@ -152,6 +153,31 @@ Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool WatermarkSetHasBeenSet() const;
+
+                    /**
+                     * 获取Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BlindWatermark Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    BlindWatermarkInput GetBlindWatermark() const;
+
+                    /**
+                     * 设置Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _blindWatermark Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
+
+                    /**
+                     * 判断参数 BlindWatermark 是否已赋值
+                     * @return BlindWatermark 是否已赋值
+                     * 
+                     */
+                    bool BlindWatermarkHasBeenSet() const;
 
                     /**
                      * 获取List of blurs. Up to 10 ones can be supported.
@@ -410,6 +436,13 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
+
+                    /**
+                     * Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    BlindWatermarkInput m_blindWatermark;
+                    bool m_blindWatermarkHasBeenSet;
 
                     /**
                      * List of blurs. Up to 10 ones can be supported.

@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SegmentRecognitionItem.h>
 #include <tencentcloud/mps/v20190612/model/MediaAiAnalysisHighlightItem.h>
+#include <tencentcloud/mps/v20190612/model/LiveAiAnalysisDescriptionItem.h>
 
 
 namespace TencentCloud
@@ -52,9 +53,11 @@ namespace TencentCloud
                      * 获取Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
                      * @return Type Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
                      * 
                      */
                     std::string GetType() const;
@@ -63,9 +66,11 @@ namespace TencentCloud
                      * 设置Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
                      * @param _type Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -123,12 +128,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HighlightResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取Summary result. It is valid when Type is Description.
+                     * @return DescriptionResult Summary result. It is valid when Type is Description.
+                     * 
+                     */
+                    LiveAiAnalysisDescriptionItem GetDescriptionResult() const;
+
+                    /**
+                     * 设置Summary result. It is valid when Type is Description.
+                     * @param _descriptionResult Summary result. It is valid when Type is Description.
+                     * 
+                     */
+                    void SetDescriptionResult(const LiveAiAnalysisDescriptionItem& _descriptionResult);
+
+                    /**
+                     * 判断参数 DescriptionResult 是否已赋值
+                     * @return DescriptionResult 是否已赋值
+                     * 
+                     */
+                    bool DescriptionResultHasBeenSet() const;
+
                 private:
 
                     /**
                      * Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -145,6 +172,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MediaAiAnalysisHighlightItem> m_highlightResultSet;
                     bool m_highlightResultSetHasBeenSet;
+
+                    /**
+                     * Summary result. It is valid when Type is Description.
+                     */
+                    LiveAiAnalysisDescriptionItem m_descriptionResult;
+                    bool m_descriptionResultHasBeenSet;
 
                 };
             }

@@ -35,7 +35,8 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_actionListHasBeenSet(false),
     m_livenessRetryLimitHasBeenSet(false),
     m_livenessTimeoutHasBeenSet(false),
-    m_selectedWarningCodesHasBeenSet(false)
+    m_selectedWarningCodesHasBeenSet(false),
+    m_allowExpiredDocumentHasBeenSet(false)
 {
 }
 
@@ -194,6 +195,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_selectedWarningCodesHasBeenSet = true;
     }
 
+    if (value.HasMember("AllowExpiredDocument") && !value["AllowExpiredDocument"].IsNull())
+    {
+        if (!value["AllowExpiredDocument"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.AllowExpiredDocument` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_allowExpiredDocument = value["AllowExpiredDocument"].GetBool();
+        m_allowExpiredDocumentHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -319,6 +330,14 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "SelectedWarningCodes";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_selectedWarningCodes.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_allowExpiredDocumentHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllowExpiredDocument";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_allowExpiredDocument, allocator);
     }
 
 }
@@ -562,5 +581,21 @@ void WebVerificationConfigIntl::SetSelectedWarningCodes(const string& _selectedW
 bool WebVerificationConfigIntl::SelectedWarningCodesHasBeenSet() const
 {
     return m_selectedWarningCodesHasBeenSet;
+}
+
+bool WebVerificationConfigIntl::GetAllowExpiredDocument() const
+{
+    return m_allowExpiredDocument;
+}
+
+void WebVerificationConfigIntl::SetAllowExpiredDocument(const bool& _allowExpiredDocument)
+{
+    m_allowExpiredDocument = _allowExpiredDocument;
+    m_allowExpiredDocumentHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::AllowExpiredDocumentHasBeenSet() const
+{
+    return m_allowExpiredDocumentHasBeenSet;
 }
 

@@ -135,6 +135,39 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
+                     * 获取Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+                     * @return EraseType Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+                     * 
+                     */
+                    std::string GetEraseType() const;
+
+                    /**
+                     * 设置Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+                     * @param _eraseType Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+                     * 
+                     */
+                    void SetEraseType(const std::string& _eraseType);
+
+                    /**
+                     * 判断参数 EraseType 是否已赋值
+                     * @return EraseType 是否已赋值
+                     * 
+                     */
+                    bool EraseTypeHasBeenSet() const;
+
+                    /**
                      * 获取Filtering condition for the smart erasing template name. Length limit: 64 characters.
                      * @return Name Filtering condition for the smart erasing template name. Length limit: 64 characters.
                      * 
@@ -182,6 +215,15 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+                     */
+                    std::string m_eraseType;
+                    bool m_eraseTypeHasBeenSet;
 
                     /**
                      * Filtering condition for the smart erasing template name. Length limit: 64 characters.

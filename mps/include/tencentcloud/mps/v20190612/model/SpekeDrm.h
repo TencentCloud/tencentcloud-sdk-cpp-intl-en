@@ -130,47 +130,43 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool VectorHasBeenSet() const;
 
                     /**
-                     * 获取Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
-                     * @return EncryptionMethod Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+                     * 获取Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
+                     * @return EncryptionMethod Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
                      * 
                      */
                     std::string GetEncryptionMethod() const;
 
                     /**
-                     * 设置Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
-                     * @param _encryptionMethod Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+                     * 设置Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
+                     * @param _encryptionMethod Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
                      * 
                      */
                     void SetEncryptionMethod(const std::string& _encryptionMethod);
@@ -241,15 +237,14 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool m_vectorHasBeenSet;
 
                     /**
-                     * Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+                     * Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
                      */
                     std::string m_encryptionMethod;
                     bool m_encryptionMethodHasBeenSet;

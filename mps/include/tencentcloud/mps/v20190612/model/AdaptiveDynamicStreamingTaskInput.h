@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/WatermarkInput.h>
+#include <tencentcloud/mps/v20190612/model/BlindWatermarkInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/AddOnSubtitle.h>
 #include <tencentcloud/mps/v20190612/model/DrmInfo.h>
@@ -92,6 +93,31 @@ namespace TencentCloud
                      * 
                      */
                     bool WatermarkSetHasBeenSet() const;
+
+                    /**
+                     * 获取Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BlindWatermark Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    BlindWatermarkInput GetBlindWatermark() const;
+
+                    /**
+                     * 设置Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _blindWatermark Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
+
+                    /**
+                     * 判断参数 BlindWatermark 是否已赋值
+                     * @return BlindWatermark 是否已赋值
+                     * 
+                     */
+                    bool BlindWatermarkHasBeenSet() const;
 
                     /**
                      * 获取Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
@@ -372,6 +398,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
+
+                    /**
+                     * Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    BlindWatermarkInput m_blindWatermark;
+                    bool m_blindWatermarkHasBeenSet;
 
                     /**
                      * Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.

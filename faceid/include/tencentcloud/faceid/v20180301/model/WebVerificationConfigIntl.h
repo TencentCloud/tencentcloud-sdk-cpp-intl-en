@@ -477,6 +477,35 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     bool SelectedWarningCodesHasBeenSet() const;
 
+                    /**
+                     * 获取Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+                     * @return AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+                     * 
+                     */
+                    bool GetAllowExpiredDocument() const;
+
+                    /**
+                     * 设置Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+                     * @param _allowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+                     * 
+                     */
+                    void SetAllowExpiredDocument(const bool& _allowExpiredDocument);
+
+                    /**
+                     * 判断参数 AllowExpiredDocument 是否已赋值
+                     * @return AllowExpiredDocument 是否已赋值
+                     * 
+                     */
+                    bool AllowExpiredDocumentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -597,6 +626,14 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     std::string m_selectedWarningCodes;
                     bool m_selectedWarningCodesHasBeenSet;
+
+                    /**
+                     * Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+                     */
+                    bool m_allowExpiredDocument;
+                    bool m_allowExpiredDocumentHasBeenSet;
 
                 };
             }

@@ -25,6 +25,7 @@
 #include <tencentcloud/mps/v20190612/model/EditMediaTask.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
 #include <tencentcloud/mps/v20190612/model/BatchSubTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ExtractBlindWatermarkTask.h>
 
 
 namespace TencentCloud
@@ -193,6 +194,22 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool BatchTaskEventHasBeenSet() const;
 
+                    /**
+                     * 获取Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ExtractBlindWatermarkTask GetExtractBlindWatermarkTask() const;
+
+                    /**
+                     * 判断参数 ExtractBlindWatermarkTask 是否已赋值
+                     * @return ExtractBlindWatermarkTask 是否已赋值
+                     * 
+                     */
+                    bool ExtractBlindWatermarkTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -258,6 +275,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     BatchSubTaskResult m_batchTaskEvent;
                     bool m_batchTaskEventHasBeenSet;
+
+                    /**
+                     * Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ExtractBlindWatermarkTask m_extractBlindWatermarkTask;
+                    bool m_extractBlindWatermarkTaskHasBeenSet;
 
                 };
             }

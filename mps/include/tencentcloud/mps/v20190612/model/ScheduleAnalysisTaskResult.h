@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Task execution start time in ISO date and time format.
+                     * @return BeginProcessTime Task execution start time in ISO date and time format.
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _beginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Task execution start time in ISO date and time format.
+                     * @param _beginProcessTime Task execution start time in ISO date and time format.
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Task execution completion time in ISO date and time format.
+                     * @return FinishTime Task execution completion time in ISO date and time format.
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _finishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Task execution completion time in ISO date and time format.
+                     * @param _finishTime Task execution completion time in ISO date and time format.
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -255,13 +255,13 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * Task execution start time in ISO date and time format.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+                     * Task execution completion time in ISO date and time format.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

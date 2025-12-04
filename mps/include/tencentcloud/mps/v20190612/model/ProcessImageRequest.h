@@ -110,7 +110,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -120,7 +120,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
                      * @return OutputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -135,7 +135,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
                     /**
                      * 设置Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -145,7 +145,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
                      * @param _outputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -164,6 +164,48 @@ If not filled in, default relative path: `{inputName}.{format}`.
                      * 
                      */
                     bool OutputPathHasBeenSet() const;
+
+                    /**
+                     * 获取Unique identifier of the image processing template.
+                     * @return Definition Unique identifier of the image processing template.
+                     * 
+                     */
+                    uint64_t GetDefinition() const;
+
+                    /**
+                     * 设置Unique identifier of the image processing template.
+                     * @param _definition Unique identifier of the image processing template.
+                     * 
+                     */
+                    void SetDefinition(const uint64_t& _definition);
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     * 
+                     */
+                    bool DefinitionHasBeenSet() const;
+
+                    /**
+                     * 获取Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @param _resourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Image processing parameter.
@@ -208,7 +250,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
                     /**
                      * Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -220,6 +262,18 @@ If not filled in, default relative path: `{inputName}.{format}`.
                      */
                     std::string m_outputPath;
                     bool m_outputPathHasBeenSet;
+
+                    /**
+                     * Unique identifier of the image processing template.
+                     */
+                    uint64_t m_definition;
+                    bool m_definitionHasBeenSet;
+
+                    /**
+                     * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                     /**
                      * Image processing parameter.
