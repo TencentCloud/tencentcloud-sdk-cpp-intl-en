@@ -30,7 +30,11 @@ SubtitleConf::SubtitleConf() :
     m_targetLanguageHasBeenSet(false),
     m_fontStyleHasBeenSet(false),
     m_stateEffectModeHasBeenSet(false),
-    m_steadyStateDelayedTimeHasBeenSet(false)
+    m_steadyStateDelayedTimeHasBeenSet(false),
+    m_audioSelectorNameHasBeenSet(false),
+    m_webVTTFontStyleHasBeenSet(false),
+    m_languageCodeHasBeenSet(false),
+    m_languageDescriptionHasBeenSet(false)
 {
 }
 
@@ -146,6 +150,53 @@ CoreInternalOutcome SubtitleConf::Deserialize(const rapidjson::Value &value)
         m_steadyStateDelayedTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("AudioSelectorName") && !value["AudioSelectorName"].IsNull())
+    {
+        if (!value["AudioSelectorName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubtitleConf.AudioSelectorName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_audioSelectorName = string(value["AudioSelectorName"].GetString());
+        m_audioSelectorNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("WebVTTFontStyle") && !value["WebVTTFontStyle"].IsNull())
+    {
+        if (!value["WebVTTFontStyle"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubtitleConf.WebVTTFontStyle` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_webVTTFontStyle.Deserialize(value["WebVTTFontStyle"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_webVTTFontStyleHasBeenSet = true;
+    }
+
+    if (value.HasMember("LanguageCode") && !value["LanguageCode"].IsNull())
+    {
+        if (!value["LanguageCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubtitleConf.LanguageCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_languageCode = string(value["LanguageCode"].GetString());
+        m_languageCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("LanguageDescription") && !value["LanguageDescription"].IsNull())
+    {
+        if (!value["LanguageDescription"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubtitleConf.LanguageDescription` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_languageDescription = string(value["LanguageDescription"].GetString());
+        m_languageDescriptionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -232,6 +283,39 @@ void SubtitleConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "SteadyStateDelayedTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_steadyStateDelayedTime, allocator);
+    }
+
+    if (m_audioSelectorNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioSelectorName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_audioSelectorName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_webVTTFontStyleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebVTTFontStyle";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_webVTTFontStyle.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_languageCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LanguageCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_languageCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_languageDescriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LanguageDescription";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_languageDescription.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -395,5 +479,69 @@ void SubtitleConf::SetSteadyStateDelayedTime(const uint64_t& _steadyStateDelayed
 bool SubtitleConf::SteadyStateDelayedTimeHasBeenSet() const
 {
     return m_steadyStateDelayedTimeHasBeenSet;
+}
+
+string SubtitleConf::GetAudioSelectorName() const
+{
+    return m_audioSelectorName;
+}
+
+void SubtitleConf::SetAudioSelectorName(const string& _audioSelectorName)
+{
+    m_audioSelectorName = _audioSelectorName;
+    m_audioSelectorNameHasBeenSet = true;
+}
+
+bool SubtitleConf::AudioSelectorNameHasBeenSet() const
+{
+    return m_audioSelectorNameHasBeenSet;
+}
+
+WebVTTFontStyle SubtitleConf::GetWebVTTFontStyle() const
+{
+    return m_webVTTFontStyle;
+}
+
+void SubtitleConf::SetWebVTTFontStyle(const WebVTTFontStyle& _webVTTFontStyle)
+{
+    m_webVTTFontStyle = _webVTTFontStyle;
+    m_webVTTFontStyleHasBeenSet = true;
+}
+
+bool SubtitleConf::WebVTTFontStyleHasBeenSet() const
+{
+    return m_webVTTFontStyleHasBeenSet;
+}
+
+string SubtitleConf::GetLanguageCode() const
+{
+    return m_languageCode;
+}
+
+void SubtitleConf::SetLanguageCode(const string& _languageCode)
+{
+    m_languageCode = _languageCode;
+    m_languageCodeHasBeenSet = true;
+}
+
+bool SubtitleConf::LanguageCodeHasBeenSet() const
+{
+    return m_languageCodeHasBeenSet;
+}
+
+string SubtitleConf::GetLanguageDescription() const
+{
+    return m_languageDescription;
+}
+
+void SubtitleConf::SetLanguageDescription(const string& _languageDescription)
+{
+    m_languageDescription = _languageDescription;
+    m_languageDescriptionHasBeenSet = true;
+}
+
+bool SubtitleConf::LanguageDescriptionHasBeenSet() const
+{
+    return m_languageDescriptionHasBeenSet;
 }
 

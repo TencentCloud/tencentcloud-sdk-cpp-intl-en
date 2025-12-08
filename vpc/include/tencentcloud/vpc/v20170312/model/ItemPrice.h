@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The pay-as-you-go billing method. Unit: CNY.
-                     * @return UnitPrice The pay-as-you-go billing method. Unit: CNY.
+                     * 获取The pay-as-you-go billing method. Unit: USD.
+                     * @return UnitPrice The pay-as-you-go billing method. Unit: USD.
                      * 
                      */
                     double GetUnitPrice() const;
 
                     /**
-                     * 设置The pay-as-you-go billing method. Unit: CNY.
-                     * @param _unitPrice The pay-as-you-go billing method. Unit: CNY.
+                     * 设置The pay-as-you-go billing method. Unit: USD.
+                     * @param _unitPrice The pay-as-you-go billing method. Unit: USD.
                      * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ChargeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Original price of the prepaid product. Unit: CNY.
-                     * @return OriginalPrice Original price of the prepaid product. Unit: CNY.
+                     * 获取Original price of the prepaid product. Unit: USD.
+                     * @return OriginalPrice Original price of the prepaid product. Unit: USD.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Original price of the prepaid product. Unit: CNY.
-                     * @param _originalPrice Original price of the prepaid product. Unit: CNY.
+                     * 设置Original price of the prepaid product. Unit: USD.
+                     * @param _originalPrice Original price of the prepaid product. Unit: USD.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount price of the prepaid product. Unit: CNY.
-                     * @return DiscountPrice Discount price of the prepaid product. Unit: CNY.
+                     * 获取Discount price of the prepaid product. Unit: USD.
+                     * @return DiscountPrice Discount price of the prepaid product. Unit: USD.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discount price of the prepaid product. Unit: CNY.
-                     * @param _discountPrice Discount price of the prepaid product. Unit: CNY.
+                     * 设置Discount price of the prepaid product. Unit: USD.
+                     * @param _discountPrice Discount price of the prepaid product. Unit: USD.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The pay-as-you-go billing method. Unit: CNY.
+                     * The pay-as-you-go billing method. Unit: USD.
                      */
                     double m_unitPrice;
                     bool m_unitPriceHasBeenSet;
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_chargeUnitHasBeenSet;
 
                     /**
-                     * Original price of the prepaid product. Unit: CNY.
+                     * Original price of the prepaid product. Unit: USD.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount price of the prepaid product. Unit: CNY.
+                     * Discount price of the prepaid product. Unit: USD.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;

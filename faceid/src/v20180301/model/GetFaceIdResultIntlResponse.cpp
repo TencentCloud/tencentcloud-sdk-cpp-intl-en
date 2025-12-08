@@ -31,7 +31,8 @@ GetFaceIdResultIntlResponse::GetFaceIdResultIntlResponse() :
     m_actionVideoHasBeenSet(false),
     m_similarityHasBeenSet(false),
     m_extraHasBeenSet(false),
-    m_deviceInfoLevelHasBeenSet(false)
+    m_deviceInfoLevelHasBeenSet(false),
+    m_livenessInfoTagHasBeenSet(false)
 {
 }
 
@@ -149,6 +150,19 @@ CoreInternalOutcome GetFaceIdResultIntlResponse::Deserialize(const string &paylo
         m_deviceInfoLevelHasBeenSet = true;
     }
 
+    if (rsp.HasMember("LivenessInfoTag") && !rsp["LivenessInfoTag"].IsNull())
+    {
+        if (!rsp["LivenessInfoTag"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `LivenessInfoTag` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["LivenessInfoTag"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_livenessInfoTag.push_back((*itr).GetString());
+        }
+        m_livenessInfoTagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -221,6 +235,19 @@ string GetFaceIdResultIntlResponse::ToJsonString() const
         string key = "DeviceInfoLevel";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_deviceInfoLevel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_livenessInfoTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LivenessInfoTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_livenessInfoTag.begin(); itr != m_livenessInfoTag.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -313,6 +340,16 @@ string GetFaceIdResultIntlResponse::GetDeviceInfoLevel() const
 bool GetFaceIdResultIntlResponse::DeviceInfoLevelHasBeenSet() const
 {
     return m_deviceInfoLevelHasBeenSet;
+}
+
+vector<string> GetFaceIdResultIntlResponse::GetLivenessInfoTag() const
+{
+    return m_livenessInfoTag;
+}
+
+bool GetFaceIdResultIntlResponse::LivenessInfoTagHasBeenSet() const
+{
+    return m_livenessInfoTagHasBeenSet;
 }
 
 

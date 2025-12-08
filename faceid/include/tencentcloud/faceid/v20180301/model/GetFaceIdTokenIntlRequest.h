@@ -216,15 +216,23 @@ The default value is blink. The different action types passed in this parameter 
                     bool ActionListHasBeenSet() const;
 
                     /**
-                     * 获取ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
-                     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 获取PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
+                     * @return SdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
-                     * @param _sdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 设置PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
+                     * @param _sdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -286,7 +294,9 @@ The default value is blink. The different action types passed in this parameter 
                     bool m_actionListHasBeenSet;
 
                     /**
-                     * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;

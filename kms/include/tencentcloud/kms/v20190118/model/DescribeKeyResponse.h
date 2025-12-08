@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the attribute information of the key.
-                     * @return KeyMetadata Specifies the attribute information of the key.
+                     * 获取Specifies the key attribute information.
+                     * @return KeyMetadata Specifies the key attribute information.
                      * 
                      */
                     KeyMetadata GetKeyMetadata() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the attribute information of the key.
+                     * Specifies the key attribute information.
                      */
                     KeyMetadata m_keyMetadata;
                     bool m_keyMetadataHasBeenSet;

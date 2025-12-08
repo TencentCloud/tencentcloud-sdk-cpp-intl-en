@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/kms/v20190118/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -252,6 +253,27 @@ namespace TencentCloud
                      */
                     bool DataKeyLenHasBeenSet() const;
 
+                    /**
+                     * 获取Tag filtering conditions.
+                     * @return TagFilters Tag filtering conditions.
+                     * 
+                     */
+                    std::vector<TagFilter> GetTagFilters() const;
+
+                    /**
+                     * 设置Tag filtering conditions.
+                     * @param _tagFilters Tag filtering conditions.
+                     * 
+                     */
+                    void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
+
+                    /**
+                     * 判断参数 TagFilters 是否已赋值
+                     * @return TagFilters 是否已赋值
+                     * 
+                     */
+                    bool TagFiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +335,12 @@ namespace TencentCloud
                      */
                     uint64_t m_dataKeyLen;
                     bool m_dataKeyLenHasBeenSet;
+
+                    /**
+                     * Tag filtering conditions.
+                     */
+                    std::vector<TagFilter> m_tagFilters;
+                    bool m_tagFiltersHasBeenSet;
 
                 };
             }

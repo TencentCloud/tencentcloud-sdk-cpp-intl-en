@@ -56,6 +56,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsRequest.h
   include/tencentcloud/mdl/v20200326/model/AudioSelectorInfo.h
   include/tencentcloud/mdl/v20200326/model/LogInfo.h
+  include/tencentcloud/mdl/v20200326/model/WebVTTFontStyle.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkRequest.h
   include/tencentcloud/mdl/v20200326/model/CaptionSelector.h
   include/tencentcloud/mdl/v20200326/model/DrmSettingsInfo.h
@@ -220,6 +221,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveChannelAlertsRequest.cpp
   src/v20200326/model/AudioSelectorInfo.cpp
   src/v20200326/model/LogInfo.cpp
+  src/v20200326/model/WebVTTFontStyle.cpp
   src/v20200326/model/DescribeStreamLiveWatermarkRequest.cpp
   src/v20200326/model/CaptionSelector.cpp
   src/v20200326/model/DrmSettingsInfo.cpp

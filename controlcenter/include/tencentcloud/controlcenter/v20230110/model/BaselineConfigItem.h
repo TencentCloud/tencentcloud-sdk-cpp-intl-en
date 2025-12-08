@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Identifier A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+                     * @return Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
                      * 
                      */
                     std::string GetIdentifier() const;
 
                     /**
-                     * 设置A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _identifier A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+                     * @param _identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
                      * 
                      */
                     void SetIdentifier(const std::string& _identifier);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdentifierHasBeenSet() const;
 
                     /**
-                     * 获取Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Configuration Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account factory baseline item configuration. different baseline item configuration parameters.
+                     * @return Configuration Account factory baseline item configuration. different baseline item configuration parameters.
                      * 
                      */
                     std::string GetConfiguration() const;
 
                     /**
-                     * 设置Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configuration Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account factory baseline item configuration. different baseline item configuration parameters.
+                     * @param _configuration Account factory baseline item configuration. different baseline item configuration parameters.
                      * 
                      */
                     void SetConfiguration(const std::string& _configuration);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
                      */
                     std::string m_identifier;
                     bool m_identifierHasBeenSet;
 
                     /**
-                     * Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account factory baseline item configuration. different baseline item configuration parameters.
                      */
                     std::string m_configuration;
                     bool m_configurationHasBeenSet;

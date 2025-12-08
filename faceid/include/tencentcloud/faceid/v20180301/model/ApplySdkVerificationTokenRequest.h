@@ -332,19 +332,23 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     bool ExtraHasBeenSet() const;
 
                     /**
-                     * 获取ENHANCED: enhanced.
-BASIC: basic version (default).
-                     * @return SdkVersion ENHANCED: enhanced.
-BASIC: basic version (default).
+                     * 获取PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (default).
+                     * @return SdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (default).
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置ENHANCED: enhanced.
-BASIC: basic version (default).
-                     * @param _sdkVersion ENHANCED: enhanced.
-BASIC: basic version (default).
+                     * 设置PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (default).
+                     * @param _sdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (default).
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -524,8 +528,9 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     bool m_extraHasBeenSet;
 
                     /**
-                     * ENHANCED: enhanced.
-BASIC: basic version (default).
+                     * PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (default).
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;

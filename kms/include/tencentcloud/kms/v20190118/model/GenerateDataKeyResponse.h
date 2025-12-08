@@ -101,6 +101,34 @@ If `EncryptionPublicKey` is specified, this field will return the Base64-encoded
                      */
                     bool DataKeyIdHasBeenSet() const;
 
+                    /**
+                     * 获取Response code of the Tag operation. 0: success; 1: internal error; 2: business processing error.
+                     * @return TagCode Response code of the Tag operation. 0: success; 1: internal error; 2: business processing error.
+                     * 
+                     */
+                    uint64_t GetTagCode() const;
+
+                    /**
+                     * 判断参数 TagCode 是否已赋值
+                     * @return TagCode 是否已赋值
+                     * 
+                     */
+                    bool TagCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Response of the Tag operation.
+                     * @return TagMsg Response of the Tag operation.
+                     * 
+                     */
+                    std::string GetTagMsg() const;
+
+                    /**
+                     * 判断参数 TagMsg 是否已赋值
+                     * @return TagMsg 是否已赋值
+                     * 
+                     */
+                    bool TagMsgHasBeenSet() const;
+
                 private:
 
                     /**
@@ -127,6 +155,18 @@ If `EncryptionPublicKey` is specified, this field will return the Base64-encoded
                      */
                     std::string m_dataKeyId;
                     bool m_dataKeyIdHasBeenSet;
+
+                    /**
+                     * Response code of the Tag operation. 0: success; 1: internal error; 2: business processing error.
+                     */
+                    uint64_t m_tagCode;
+                    bool m_tagCodeHasBeenSet;
+
+                    /**
+                     * Response of the Tag operation.
+                     */
+                    std::string m_tagMsg;
+                    bool m_tagMsgHasBeenSet;
 
                 };
             }
