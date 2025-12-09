@@ -28,7 +28,8 @@ ApplyCardVerificationExternalRequest::ApplyCardVerificationExternalRequest() :
     m_imageBase64FrontHasBeenSet(false),
     m_imageBase64BackHasBeenSet(false),
     m_imageUrlFrontHasBeenSet(false),
-    m_imageUrlBackHasBeenSet(false)
+    m_imageUrlBackHasBeenSet(false),
+    m_returnHeadImageHasBeenSet(false)
 {
 }
 
@@ -85,6 +86,14 @@ string ApplyCardVerificationExternalRequest::ToJsonString() const
         string key = "ImageUrlBack";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_imageUrlBack.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_returnHeadImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReturnHeadImage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_returnHeadImage, allocator);
     }
 
 
@@ -189,6 +198,22 @@ void ApplyCardVerificationExternalRequest::SetImageUrlBack(const string& _imageU
 bool ApplyCardVerificationExternalRequest::ImageUrlBackHasBeenSet() const
 {
     return m_imageUrlBackHasBeenSet;
+}
+
+bool ApplyCardVerificationExternalRequest::GetReturnHeadImage() const
+{
+    return m_returnHeadImage;
+}
+
+void ApplyCardVerificationExternalRequest::SetReturnHeadImage(const bool& _returnHeadImage)
+{
+    m_returnHeadImage = _returnHeadImage;
+    m_returnHeadImageHasBeenSet = true;
+}
+
+bool ApplyCardVerificationExternalRequest::ReturnHeadImageHasBeenSet() const
+{
+    return m_returnHeadImageHasBeenSet;
 }
 
 

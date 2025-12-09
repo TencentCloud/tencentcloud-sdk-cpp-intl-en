@@ -332,6 +332,27 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                      */
                     bool ImageUrlBackHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to extract the ID portrait. Default value: false.
+                     * @return ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+                     * 
+                     */
+                    bool GetReturnHeadImage() const;
+
+                    /**
+                     * 设置Whether to extract the ID portrait. Default value: false.
+                     * @param _returnHeadImage Whether to extract the ID portrait. Default value: false.
+                     * 
+                     */
+                    void SetReturnHeadImage(const bool& _returnHeadImage);
+
+                    /**
+                     * 判断参数 ReturnHeadImage 是否已赋值
+                     * @return ReturnHeadImage 是否已赋值
+                     * 
+                     */
+                    bool ReturnHeadImageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -410,6 +431,12 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                      */
                     std::string m_imageUrlBack;
                     bool m_imageUrlBackHasBeenSet;
+
+                    /**
+                     * Whether to extract the ID portrait. Default value: false.
+                     */
+                    bool m_returnHeadImage;
+                    bool m_returnHeadImageHasBeenSet;
 
                 };
             }

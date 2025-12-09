@@ -204,15 +204,15 @@ namespace TencentCloud
                     bool AVTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle template configuration, only AVTemplates are valid.
-                     * @return CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+                     * 获取Subtitle template configuration.
+                     * @return CaptionTemplates Subtitle template configuration.
                      * 
                      */
                     std::vector<SubtitleConf> GetCaptionTemplates() const;
 
                     /**
-                     * 设置Subtitle template configuration, only AVTemplates are valid.
-                     * @param _captionTemplates Subtitle template configuration, only AVTemplates are valid.
+                     * 设置Subtitle template configuration.
+                     * @param _captionTemplates Subtitle template configuration.
                      * 
                      */
                     void SetCaptionTemplates(const std::vector<SubtitleConf>& _captionTemplates);
@@ -437,7 +437,7 @@ namespace TencentCloud
                     bool m_aVTemplatesHasBeenSet;
 
                     /**
-                     * Subtitle template configuration, only AVTemplates are valid.
+                     * Subtitle template configuration.
                      */
                     std::vector<SubtitleConf> m_captionTemplates;
                     bool m_captionTemplatesHasBeenSet;
