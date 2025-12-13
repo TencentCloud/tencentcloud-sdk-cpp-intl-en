@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information required for DNS resolution verification when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
                 */
                 class DnsVerification : public AbstractModel
                 {

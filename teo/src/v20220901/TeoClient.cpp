@@ -40,6 +40,56 @@ TeoClient::TeoClient(const Credential &credential, const string &region, const C
 }
 
 
+TeoClient::ApplyFreeCertificateOutcome TeoClient::ApplyFreeCertificate(const ApplyFreeCertificateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyFreeCertificate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyFreeCertificateResponse rsp = ApplyFreeCertificateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyFreeCertificateOutcome(rsp);
+        else
+            return ApplyFreeCertificateOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyFreeCertificateOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::ApplyFreeCertificateAsync(const ApplyFreeCertificateRequest& request, const ApplyFreeCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApplyFreeCertificateRequest&;
+    using Resp = ApplyFreeCertificateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApplyFreeCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::ApplyFreeCertificateOutcomeCallable TeoClient::ApplyFreeCertificateCallable(const ApplyFreeCertificateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApplyFreeCertificateOutcome>>();
+    ApplyFreeCertificateAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ApplyFreeCertificateRequest&,
+        ApplyFreeCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::BindSecurityTemplateToEntityOutcome TeoClient::BindSecurityTemplateToEntity(const BindSecurityTemplateToEntityRequest &request)
 {
     auto outcome = MakeRequest(request, "BindSecurityTemplateToEntity");
@@ -232,6 +282,56 @@ TeoClient::CheckCnameStatusOutcomeCallable TeoClient::CheckCnameStatusCallable(c
         const TeoClient*,
         const CheckCnameStatusRequest&,
         CheckCnameStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::CheckFreeCertificateVerificationOutcome TeoClient::CheckFreeCertificateVerification(const CheckFreeCertificateVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckFreeCertificateVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckFreeCertificateVerificationResponse rsp = CheckFreeCertificateVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckFreeCertificateVerificationOutcome(rsp);
+        else
+            return CheckFreeCertificateVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckFreeCertificateVerificationOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::CheckFreeCertificateVerificationAsync(const CheckFreeCertificateVerificationRequest& request, const CheckFreeCertificateVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckFreeCertificateVerificationRequest&;
+    using Resp = CheckFreeCertificateVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckFreeCertificateVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::CheckFreeCertificateVerificationOutcomeCallable TeoClient::CheckFreeCertificateVerificationCallable(const CheckFreeCertificateVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckFreeCertificateVerificationOutcome>>();
+    CheckFreeCertificateVerificationAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CheckFreeCertificateVerificationRequest&,
+        CheckFreeCertificateVerificationOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

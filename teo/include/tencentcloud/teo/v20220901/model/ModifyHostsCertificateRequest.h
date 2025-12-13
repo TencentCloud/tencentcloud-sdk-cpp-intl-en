@@ -88,27 +88,47 @@ namespace TencentCloud
                     bool HostsHasBeenSet() const;
 
                     /**
-                     * 获取Certificate configuration mode. Values:
-<li>`disable`: (Default) Do not configure the certificate</li>
-<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
-<li>`sslcert`: Configure an SSL certificate.</li>
-                     * @return Mode Certificate configuration mode. Values:
-<li>`disable`: (Default) Do not configure the certificate</li>
-<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
-<li>`sslcert`: Configure an SSL certificate.</li>
+                     * 获取Configures the server certificate mode. valid values:.
+
+- disable: without configuring server certificate.
+- eofreecert: specifies to apply for a free certificate through automatic validation and deploy it. for verification methods, see [free certificate application supported verification methods](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1).
+    - In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
+    - When a free certificate application fails, it can cause deployment failure. you can obtain the failure reason through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> .
+- eofreecert_manual: specifies the deployment of free certificates applied through DNS delegation verification or file verification. before deploying a free certificate, you need to trigger the [apply for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1)) api to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
+Note: when deploying a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> api.
+- sslcert: specifies the configuration of the managed service side certificate.
+                     * @return Mode Configures the server certificate mode. valid values:.
+
+- disable: without configuring server certificate.
+- eofreecert: specifies to apply for a free certificate through automatic validation and deploy it. for verification methods, see [free certificate application supported verification methods](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1).
+    - In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
+    - When a free certificate application fails, it can cause deployment failure. you can obtain the failure reason through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> .
+- eofreecert_manual: specifies the deployment of free certificates applied through DNS delegation verification or file verification. before deploying a free certificate, you need to trigger the [apply for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1)) api to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
+Note: when deploying a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> api.
+- sslcert: specifies the configuration of the managed service side certificate.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Certificate configuration mode. Values:
-<li>`disable`: (Default) Do not configure the certificate</li>
-<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
-<li>`sslcert`: Configure an SSL certificate.</li>
-                     * @param _mode Certificate configuration mode. Values:
-<li>`disable`: (Default) Do not configure the certificate</li>
-<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
-<li>`sslcert`: Configure an SSL certificate.</li>
+                     * 设置Configures the server certificate mode. valid values:.
+
+- disable: without configuring server certificate.
+- eofreecert: specifies to apply for a free certificate through automatic validation and deploy it. for verification methods, see [free certificate application supported verification methods](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1).
+    - In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
+    - When a free certificate application fails, it can cause deployment failure. you can obtain the failure reason through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> .
+- eofreecert_manual: specifies the deployment of free certificates applied through DNS delegation verification or file verification. before deploying a free certificate, you need to trigger the [apply for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1)) api to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
+Note: when deploying a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> api.
+- sslcert: specifies the configuration of the managed service side certificate.
+                     * @param _mode Configures the server certificate mode. valid values:.
+
+- disable: without configuring server certificate.
+- eofreecert: specifies to apply for a free certificate through automatic validation and deploy it. for verification methods, see [free certificate application supported verification methods](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1).
+    - In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
+    - When a free certificate application fails, it can cause deployment failure. you can obtain the failure reason through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> .
+- eofreecert_manual: specifies the deployment of free certificates applied through DNS delegation verification or file verification. before deploying a free certificate, you need to trigger the [apply for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1)) api to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
+Note: when deploying a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> api.
+- sslcert: specifies the configuration of the managed service side certificate.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -196,15 +216,15 @@ Default value: `none`.
                     bool ClientCertInfoHasBeenSet() const;
 
                     /**
-                     * 获取Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
-                     * @return UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * 获取Specifies the certificate carried during EO node origin-pull for origin-pull mutual authentication handshake, off by default. leave blank to indicate retaining the original configuration. this configuration is currently in closed beta testing for the allowlist feature. if you need to use it, please contact us (https://www.tencentcloud.comom/online?from_cn_redirect=1-service).
+                     * @return UpstreamCertInfo Specifies the certificate carried during EO node origin-pull for origin-pull mutual authentication handshake, off by default. leave blank to indicate retaining the original configuration. this configuration is currently in closed beta testing for the allowlist feature. if you need to use it, please contact us (https://www.tencentcloud.comom/online?from_cn_redirect=1-service).
                      * 
                      */
                     UpstreamCertInfo GetUpstreamCertInfo() const;
 
                     /**
-                     * 设置Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
-                     * @param _upstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * 设置Specifies the certificate carried during EO node origin-pull for origin-pull mutual authentication handshake, off by default. leave blank to indicate retaining the original configuration. this configuration is currently in closed beta testing for the allowlist feature. if you need to use it, please contact us (https://www.tencentcloud.comom/online?from_cn_redirect=1-service).
+                     * @param _upstreamCertInfo Specifies the certificate carried during EO node origin-pull for origin-pull mutual authentication handshake, off by default. leave blank to indicate retaining the original configuration. this configuration is currently in closed beta testing for the allowlist feature. if you need to use it, please contact us (https://www.tencentcloud.comom/online?from_cn_redirect=1-service).
                      * 
                      */
                     void SetUpstreamCertInfo(const UpstreamCertInfo& _upstreamCertInfo);
@@ -231,10 +251,15 @@ Default value: `none`.
                     bool m_hostsHasBeenSet;
 
                     /**
-                     * Certificate configuration mode. Values:
-<li>`disable`: (Default) Do not configure the certificate</li>
-<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
-<li>`sslcert`: Configure an SSL certificate.</li>
+                     * Configures the server certificate mode. valid values:.
+
+- disable: without configuring server certificate.
+- eofreecert: specifies to apply for a free certificate through automatic validation and deploy it. for verification methods, see [free certificate application supported verification methods](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1).
+    - In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
+    - When a free certificate application fails, it can cause deployment failure. you can obtain the failure reason through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> .
+- eofreecert_manual: specifies the deployment of free certificates applied through DNS delegation verification or file verification. before deploying a free certificate, you need to trigger the [apply for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1)) api to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
+Note: when deploying a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.comom/document/product/1552/124806?from_cn_redirect=1)'>check free certificate application result</a> api.
+- sslcert: specifies the configuration of the managed service side certificate.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
@@ -261,7 +286,7 @@ Default value: `none`.
                     bool m_clientCertInfoHasBeenSet;
 
                     /**
-                     * Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * Specifies the certificate carried during EO node origin-pull for origin-pull mutual authentication handshake, off by default. leave blank to indicate retaining the original configuration. this configuration is currently in closed beta testing for the allowlist feature. if you need to use it, please contact us (https://www.tencentcloud.comom/online?from_cn_redirect=1-service).
                      */
                     UpstreamCertInfo m_upstreamCertInfo;
                     bool m_upstreamCertInfoHasBeenSet;

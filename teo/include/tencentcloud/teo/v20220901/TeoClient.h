@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/teo/v20220901/model/ApplyFreeCertificateRequest.h>
+#include <tencentcloud/teo/v20220901/model/ApplyFreeCertificateResponse.h>
 #include <tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityRequest.h>
 #include <tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityResponse.h>
 #include <tencentcloud/teo/v20220901/model/BindSharedCNAMERequest.h>
@@ -31,6 +33,8 @@
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/CheckFreeCertificateVerificationRequest.h>
+#include <tencentcloud/teo/v20220901/model/CheckFreeCertificateVerificationResponse.h>
 #include <tencentcloud/teo/v20220901/model/ConfirmMultiPathGatewayOriginACLRequest.h>
 #include <tencentcloud/teo/v20220901/model/ConfirmMultiPathGatewayOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/ConfirmOriginACLUpdateRequest.h>
@@ -421,6 +425,9 @@ namespace TencentCloud
                 TeoClient(const Credential &credential, const std::string &region);
                 TeoClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyFreeCertificateResponse> ApplyFreeCertificateOutcome;
+                typedef std::future<ApplyFreeCertificateOutcome> ApplyFreeCertificateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ApplyFreeCertificateRequest&, ApplyFreeCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyFreeCertificateAsyncHandler;
                 typedef Outcome<Core::Error, Model::BindSecurityTemplateToEntityResponse> BindSecurityTemplateToEntityOutcome;
                 typedef std::future<BindSecurityTemplateToEntityOutcome> BindSecurityTemplateToEntityOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::BindSecurityTemplateToEntityRequest&, BindSecurityTemplateToEntityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSecurityTemplateToEntityAsyncHandler;
@@ -433,6 +440,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckCnameStatusResponse> CheckCnameStatusOutcome;
                 typedef std::future<CheckCnameStatusOutcome> CheckCnameStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CheckCnameStatusRequest&, CheckCnameStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCnameStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckFreeCertificateVerificationResponse> CheckFreeCertificateVerificationOutcome;
+                typedef std::future<CheckFreeCertificateVerificationOutcome> CheckFreeCertificateVerificationOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CheckFreeCertificateVerificationRequest&, CheckFreeCertificateVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckFreeCertificateVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::ConfirmMultiPathGatewayOriginACLResponse> ConfirmMultiPathGatewayOriginACLOutcome;
                 typedef std::future<ConfirmMultiPathGatewayOriginACLOutcome> ConfirmMultiPathGatewayOriginACLOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ConfirmMultiPathGatewayOriginACLRequest&, ConfirmMultiPathGatewayOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmMultiPathGatewayOriginACLAsyncHandler;
@@ -1001,6 +1011,25 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used to apply for a free certificate. If you need to proceed with DNS delegated verification or file verification, you can call this API to initiate the certificate application and obtain the corresponding verification content based on the application method. The order for API calls is as follows:.
+Step 1: Call ApplyFreeCertificate, specify the verification method for free certificate application, and obtain the verification content.
+Step 2: Configure the corresponding domain as verification content.
+Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
+Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
+
+The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1). 
+description:.
+- Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
+- If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
+- A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
+                 * @param req ApplyFreeCertificateRequest
+                 * @return ApplyFreeCertificateOutcome
+                 */
+                ApplyFreeCertificateOutcome ApplyFreeCertificate(const Model::ApplyFreeCertificateRequest &request);
+                void ApplyFreeCertificateAsync(const Model::ApplyFreeCertificateRequest& request, const ApplyFreeCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyFreeCertificateOutcomeCallable ApplyFreeCertificateCallable(const Model::ApplyFreeCertificateRequest& request);
+
+                /**
                  *This API is used to bind/unbind a domain name to/from a specific policy template. 
                  * @param req BindSecurityTemplateToEntityRequest
                  * @return BindSecurityTemplateToEntityOutcome
@@ -1035,6 +1064,16 @@ namespace TencentCloud
                 CheckCnameStatusOutcome CheckCnameStatus(const Model::CheckCnameStatusRequest &request);
                 void CheckCnameStatusAsync(const Model::CheckCnameStatusRequest& request, const CheckCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckCnameStatusOutcomeCallable CheckCnameStatusCallable(const Model::CheckCnameStatusRequest& request);
+
+                /**
+                 *This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
+This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.comom/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+                 * @param req CheckFreeCertificateVerificationRequest
+                 * @return CheckFreeCertificateVerificationOutcome
+                 */
+                CheckFreeCertificateVerificationOutcome CheckFreeCertificateVerification(const Model::CheckFreeCertificateVerificationRequest &request);
+                void CheckFreeCertificateVerificationAsync(const Model::CheckFreeCertificateVerificationRequest& request, const CheckFreeCertificateVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckFreeCertificateVerificationOutcomeCallable CheckFreeCertificateVerificationCallable(const Model::CheckFreeCertificateVerificationRequest& request);
 
                 /**
                  *This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.

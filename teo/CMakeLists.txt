@@ -380,6 +380,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupContentRequest.h
   include/tencentcloud/teo/v20220901/model/SwitchConfig.h
   include/tencentcloud/teo/v20220901/model/IdentifyZoneResponse.h
+  include/tencentcloud/teo/v20220901/model/DescribeSecurityAPIServiceRequest.h
   include/tencentcloud/teo/v20220901/model/UpstreamRequestQueryString.h
   include/tencentcloud/teo/v20220901/model/DeleteJustInTimeTranscodeTemplatesRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyLoadBalancerResponse.h
@@ -445,11 +446,11 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DeleteMultiPathGatewayRequest.h
   include/tencentcloud/teo/v20220901/model/DeleteCustomErrorPageRequest.h
   include/tencentcloud/teo/v20220901/model/CustomField.h
-  include/tencentcloud/teo/v20220901/model/DescribeSecurityAPIServiceRequest.h
+  include/tencentcloud/teo/v20220901/model/BotManagedRule.h
   include/tencentcloud/teo/v20220901/model/CacheKeyHeader.h
   include/tencentcloud/teo/v20220901/model/DeleteZoneRequest.h
   include/tencentcloud/teo/v20220901/model/RangeOriginPullParameters.h
-  include/tencentcloud/teo/v20220901/model/BotManagedRule.h
+  include/tencentcloud/teo/v20220901/model/ApplyFreeCertificateResponse.h
   include/tencentcloud/teo/v20220901/model/CurrentOriginACL.h
   include/tencentcloud/teo/v20220901/model/SecurityConfig.h
   include/tencentcloud/teo/v20220901/model/CreateSecurityIPGroupRequest.h
@@ -688,6 +689,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/UpstreamURLRewriteParameters.h
   include/tencentcloud/teo/v20220901/model/DescribeL4ProxyResponse.h
   include/tencentcloud/teo/v20220901/model/ModifyHostsCertificateRequest.h
+  include/tencentcloud/teo/v20220901/model/ModifyOriginACLRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h
   include/tencentcloud/teo/v20220901/model/DeleteAccelerationDomainsRequest.h
   include/tencentcloud/teo/v20220901/model/RenewPlanResponse.h
@@ -754,7 +756,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/SecurityPolicy.h
   include/tencentcloud/teo/v20220901/model/AscriptionInfo.h
   include/tencentcloud/teo/v20220901/model/ModifySecurityClientAttesterResponse.h
-  include/tencentcloud/teo/v20220901/model/ModifyOriginACLRequest.h
+  include/tencentcloud/teo/v20220901/model/CheckFreeCertificateVerificationResponse.h
   include/tencentcloud/teo/v20220901/model/FirstPartConfig.h
   include/tencentcloud/teo/v20220901/model/Waf.h
   include/tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleRequest.h
@@ -901,6 +903,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/ContentIdentifier.h
   include/tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageResponse.h
   include/tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayOriginACLRequest.h
+  include/tencentcloud/teo/v20220901/model/ApplyFreeCertificateRequest.h
   include/tencentcloud/teo/v20220901/model/StatusCodeCacheParameters.h
   include/tencentcloud/teo/v20220901/model/RewriteAction.h
   include/tencentcloud/teo/v20220901/model/TemplateScope.h
@@ -981,6 +984,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplatesResponse.h
   include/tencentcloud/teo/v20220901/model/Quota.h
   include/tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h
+  include/tencentcloud/teo/v20220901/model/CheckFreeCertificateVerificationRequest.h
   include/tencentcloud/teo/v20220901/model/DetectLengthLimitCondition.h
   include/tencentcloud/teo/v20220901/model/ModifySecurityAPIResourceResponse.h
   include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupResponse.h
@@ -1372,6 +1376,7 @@ set(teo_src
   src/v20220901/model/DescribeSecurityIPGroupContentRequest.cpp
   src/v20220901/model/SwitchConfig.cpp
   src/v20220901/model/IdentifyZoneResponse.cpp
+  src/v20220901/model/DescribeSecurityAPIServiceRequest.cpp
   src/v20220901/model/UpstreamRequestQueryString.cpp
   src/v20220901/model/DeleteJustInTimeTranscodeTemplatesRequest.cpp
   src/v20220901/model/ModifyLoadBalancerResponse.cpp
@@ -1437,11 +1442,11 @@ set(teo_src
   src/v20220901/model/DeleteMultiPathGatewayRequest.cpp
   src/v20220901/model/DeleteCustomErrorPageRequest.cpp
   src/v20220901/model/CustomField.cpp
-  src/v20220901/model/DescribeSecurityAPIServiceRequest.cpp
+  src/v20220901/model/BotManagedRule.cpp
   src/v20220901/model/CacheKeyHeader.cpp
   src/v20220901/model/DeleteZoneRequest.cpp
   src/v20220901/model/RangeOriginPullParameters.cpp
-  src/v20220901/model/BotManagedRule.cpp
+  src/v20220901/model/ApplyFreeCertificateResponse.cpp
   src/v20220901/model/CurrentOriginACL.cpp
   src/v20220901/model/SecurityConfig.cpp
   src/v20220901/model/CreateSecurityIPGroupRequest.cpp
@@ -1680,6 +1685,7 @@ set(teo_src
   src/v20220901/model/UpstreamURLRewriteParameters.cpp
   src/v20220901/model/DescribeL4ProxyResponse.cpp
   src/v20220901/model/ModifyHostsCertificateRequest.cpp
+  src/v20220901/model/ModifyOriginACLRequest.cpp
   src/v20220901/model/ModifyOriginGroupResponse.cpp
   src/v20220901/model/DeleteAccelerationDomainsRequest.cpp
   src/v20220901/model/RenewPlanResponse.cpp
@@ -1746,7 +1752,7 @@ set(teo_src
   src/v20220901/model/SecurityPolicy.cpp
   src/v20220901/model/AscriptionInfo.cpp
   src/v20220901/model/ModifySecurityClientAttesterResponse.cpp
-  src/v20220901/model/ModifyOriginACLRequest.cpp
+  src/v20220901/model/CheckFreeCertificateVerificationResponse.cpp
   src/v20220901/model/FirstPartConfig.cpp
   src/v20220901/model/Waf.cpp
   src/v20220901/model/CreateApplicationProxyRuleRequest.cpp
@@ -1893,6 +1899,7 @@ set(teo_src
   src/v20220901/model/ContentIdentifier.cpp
   src/v20220901/model/CreateCustomizeErrorPageResponse.cpp
   src/v20220901/model/DescribeMultiPathGatewayOriginACLRequest.cpp
+  src/v20220901/model/ApplyFreeCertificateRequest.cpp
   src/v20220901/model/StatusCodeCacheParameters.cpp
   src/v20220901/model/RewriteAction.cpp
   src/v20220901/model/TemplateScope.cpp
@@ -1973,6 +1980,7 @@ set(teo_src
   src/v20220901/model/DescribeWebSecurityTemplatesResponse.cpp
   src/v20220901/model/Quota.cpp
   src/v20220901/model/CheckCnameStatusRequest.cpp
+  src/v20220901/model/CheckFreeCertificateVerificationRequest.cpp
   src/v20220901/model/DetectLengthLimitCondition.cpp
   src/v20220901/model/ModifySecurityAPIResourceResponse.cpp
   src/v20220901/model/DescribeSecurityIPGroupResponse.cpp

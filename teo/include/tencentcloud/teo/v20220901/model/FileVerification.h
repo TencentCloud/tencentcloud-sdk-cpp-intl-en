@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information required for verifying via a file. It's applicable to sites connected via CNAMEs.
+                * Information required for HTTP access verification file when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
                 */
                 class FileVerification : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
-                     * @return Path EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+                     * 获取EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+                     * @return Path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
-                     * @param _path EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+                     * 设置EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+                     * @param _path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+                     * EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
