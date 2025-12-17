@@ -163,6 +163,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/ScheduleRecognitionTaskResult.h
   include/tencentcloud/mps/v20190612/model/ImageProcessTaskOutput.h
   include/tencentcloud/mps/v20190612/model/ComposeTargetInfo.h
+  include/tencentcloud/mps/v20190612/model/TaskStatData.h
   include/tencentcloud/mps/v20190612/model/MediaProcessTaskInput.h
   include/tencentcloud/mps/v20190612/model/DisableScheduleRequest.h
   include/tencentcloud/mps/v20190612/model/AiAnalysisTaskHorizontalToVerticalResult.h
@@ -386,6 +387,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/DeleteAsrHotwordsResponse.h
   include/tencentcloud/mps/v20190612/model/SmartSubtitleTaskAsrFullTextSegmentItem.h
   include/tencentcloud/mps/v20190612/model/QualityControlItem.h
+  include/tencentcloud/mps/v20190612/model/TaskStatDataItem.h
   include/tencentcloud/mps/v20190612/model/LiveStreamAsrFullTextRecognitionResult.h
   include/tencentcloud/mps/v20190612/model/AiReviewPornOcrTaskOutput.h
   include/tencentcloud/mps/v20190612/model/CreateAsrHotwordsRequest.h
@@ -416,6 +418,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/AiRecognitionTaskObjectResultOutput.h
   include/tencentcloud/mps/v20190612/model/AiAnalysisTaskDelLogoOutput.h
   include/tencentcloud/mps/v20190612/model/DescribeBatchTaskDetailRequest.h
+  include/tencentcloud/mps/v20190612/model/DescribeUsageDataResponse.h
   include/tencentcloud/mps/v20190612/model/AiReviewProhibitedAsrTaskOutput.h
   include/tencentcloud/mps/v20190612/model/LiveStreamFaceRecognitionResult.h
   include/tencentcloud/mps/v20190612/model/LiveStreamAiReviewResultInfo.h
@@ -448,6 +451,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/S3OutputStorage.h
   include/tencentcloud/mps/v20190612/model/CosFileUploadTrigger.h
   include/tencentcloud/mps/v20190612/model/AiReviewPoliticalAsrTaskOutput.h
+  include/tencentcloud/mps/v20190612/model/SpecificationDataItem.h
   include/tencentcloud/mps/v20190612/model/TEHDConfigForUpdate.h
   include/tencentcloud/mps/v20190612/model/ModifyPersonSampleRequest.h
   include/tencentcloud/mps/v20190612/model/AsrFullTextConfigureInfo.h
@@ -562,6 +566,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/AiAnalysisTaskHeadTailInput.h
   include/tencentcloud/mps/v20190612/model/DescribeTranscodeTemplatesRequest.h
   include/tencentcloud/mps/v20190612/model/DescribeSmartSubtitleTemplatesResponse.h
+  include/tencentcloud/mps/v20190612/model/DescribeUsageDataRequest.h
   include/tencentcloud/mps/v20190612/model/SchedulesInfo.h
   include/tencentcloud/mps/v20190612/model/DisableWorkflowRequest.h
   include/tencentcloud/mps/v20190612/model/FrameRateWithDenConfig.h
@@ -799,6 +804,7 @@ set(mps_src
   src/v20190612/model/ScheduleRecognitionTaskResult.cpp
   src/v20190612/model/ImageProcessTaskOutput.cpp
   src/v20190612/model/ComposeTargetInfo.cpp
+  src/v20190612/model/TaskStatData.cpp
   src/v20190612/model/MediaProcessTaskInput.cpp
   src/v20190612/model/DisableScheduleRequest.cpp
   src/v20190612/model/AiAnalysisTaskHorizontalToVerticalResult.cpp
@@ -1022,6 +1028,7 @@ set(mps_src
   src/v20190612/model/DeleteAsrHotwordsResponse.cpp
   src/v20190612/model/SmartSubtitleTaskAsrFullTextSegmentItem.cpp
   src/v20190612/model/QualityControlItem.cpp
+  src/v20190612/model/TaskStatDataItem.cpp
   src/v20190612/model/LiveStreamAsrFullTextRecognitionResult.cpp
   src/v20190612/model/AiReviewPornOcrTaskOutput.cpp
   src/v20190612/model/CreateAsrHotwordsRequest.cpp
@@ -1052,6 +1059,7 @@ set(mps_src
   src/v20190612/model/AiRecognitionTaskObjectResultOutput.cpp
   src/v20190612/model/AiAnalysisTaskDelLogoOutput.cpp
   src/v20190612/model/DescribeBatchTaskDetailRequest.cpp
+  src/v20190612/model/DescribeUsageDataResponse.cpp
   src/v20190612/model/AiReviewProhibitedAsrTaskOutput.cpp
   src/v20190612/model/LiveStreamFaceRecognitionResult.cpp
   src/v20190612/model/LiveStreamAiReviewResultInfo.cpp
@@ -1084,6 +1092,7 @@ set(mps_src
   src/v20190612/model/S3OutputStorage.cpp
   src/v20190612/model/CosFileUploadTrigger.cpp
   src/v20190612/model/AiReviewPoliticalAsrTaskOutput.cpp
+  src/v20190612/model/SpecificationDataItem.cpp
   src/v20190612/model/TEHDConfigForUpdate.cpp
   src/v20190612/model/ModifyPersonSampleRequest.cpp
   src/v20190612/model/AsrFullTextConfigureInfo.cpp
@@ -1198,6 +1207,7 @@ set(mps_src
   src/v20190612/model/AiAnalysisTaskHeadTailInput.cpp
   src/v20190612/model/DescribeTranscodeTemplatesRequest.cpp
   src/v20190612/model/DescribeSmartSubtitleTemplatesResponse.cpp
+  src/v20190612/model/DescribeUsageDataRequest.cpp
   src/v20190612/model/SchedulesInfo.cpp
   src/v20190612/model/DisableWorkflowRequest.cpp
   src/v20190612/model/FrameRateWithDenConfig.cpp

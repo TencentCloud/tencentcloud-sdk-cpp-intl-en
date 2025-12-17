@@ -281,6 +281,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7CacheDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL7OriginPullDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL7OriginPullDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataRequest.h>
@@ -812,6 +814,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTimingL7CacheDataResponse> DescribeTimingL7CacheDataOutcome;
                 typedef std::future<DescribeTimingL7CacheDataOutcome> DescribeTimingL7CacheDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7CacheDataRequest&, DescribeTimingL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL7OriginPullDataResponse> DescribeTimingL7OriginPullDataOutcome;
+                typedef std::future<DescribeTimingL7OriginPullDataOutcome> DescribeTimingL7OriginPullDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7OriginPullDataRequest&, DescribeTimingL7OriginPullDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7OriginPullDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopL7AnalysisDataResponse> DescribeTopL7AnalysisDataOutcome;
                 typedef std::future<DescribeTopL7AnalysisDataOutcome> DescribeTopL7AnalysisDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTopL7AnalysisDataRequest&, DescribeTopL7AnalysisDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7AnalysisDataAsyncHandler;
@@ -2210,6 +2215,15 @@ This API is used to return post-protection traffic request data by default. User
                 DescribeTimingL7CacheDataOutcome DescribeTimingL7CacheData(const Model::DescribeTimingL7CacheDataRequest &request);
                 void DescribeTimingL7CacheDataAsync(const Model::DescribeTimingL7CacheDataRequest& request, const DescribeTimingL7CacheDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTimingL7CacheDataOutcomeCallable DescribeTimingL7CacheDataCallable(const Model::DescribeTimingL7CacheDataRequest& request);
+
+                /**
+                 *This API is used to query time series data for layer-7 domain services' origin-pull data.
+                 * @param req DescribeTimingL7OriginPullDataRequest
+                 * @return DescribeTimingL7OriginPullDataOutcome
+                 */
+                DescribeTimingL7OriginPullDataOutcome DescribeTimingL7OriginPullData(const Model::DescribeTimingL7OriginPullDataRequest &request);
+                void DescribeTimingL7OriginPullDataAsync(const Model::DescribeTimingL7OriginPullDataRequest& request, const DescribeTimingL7OriginPullDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL7OriginPullDataOutcomeCallable DescribeTimingL7OriginPullDataCallable(const Model::DescribeTimingL7OriginPullDataRequest& request);
 
                 /**
                  *This API is used to query the top N data of the L7 domain name business by specified dimension.

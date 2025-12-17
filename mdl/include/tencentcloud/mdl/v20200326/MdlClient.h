@@ -33,6 +33,8 @@
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLivePlanResponse.h>
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkRequest.h>
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h>
+#include <tencentcloud/mdl/v20200326/model/CreateWatermarkDetectionRequest.h>
+#include <tencentcloud/mdl/v20200326/model/CreateWatermarkDetectionResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputRequest.h>
@@ -73,6 +75,10 @@
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionsRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionsResponse.h>
 #include <tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlRequest.h>
 #include <tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelRequest.h>
@@ -118,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamLiveWatermarkResponse> CreateStreamLiveWatermarkOutcome;
                 typedef std::future<CreateStreamLiveWatermarkOutcome> CreateStreamLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::CreateStreamLiveWatermarkRequest&, CreateStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLiveWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateWatermarkDetectionResponse> CreateWatermarkDetectionOutcome;
+                typedef std::future<CreateWatermarkDetectionOutcome> CreateWatermarkDetectionOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::CreateWatermarkDetectionRequest&, CreateWatermarkDetectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWatermarkDetectionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamLiveChannelResponse> DeleteStreamLiveChannelOutcome;
                 typedef std::future<DeleteStreamLiveChannelOutcome> DeleteStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DeleteStreamLiveChannelRequest&, DeleteStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLiveChannelAsyncHandler;
@@ -178,6 +187,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveWatermarksResponse> DescribeStreamLiveWatermarksOutcome;
                 typedef std::future<DescribeStreamLiveWatermarksOutcome> DescribeStreamLiveWatermarksOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveWatermarksRequest&, DescribeStreamLiveWatermarksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveWatermarksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWatermarkDetectionResponse> DescribeWatermarkDetectionOutcome;
+                typedef std::future<DescribeWatermarkDetectionOutcome> DescribeWatermarkDetectionOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeWatermarkDetectionRequest&, DescribeWatermarkDetectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWatermarkDetectionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWatermarkDetectionsResponse> DescribeWatermarkDetectionsOutcome;
+                typedef std::future<DescribeWatermarkDetectionsOutcome> DescribeWatermarkDetectionsOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeWatermarkDetectionsRequest&, DescribeWatermarkDetectionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWatermarkDetectionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetAbWatermarkPlayUrlResponse> GetAbWatermarkPlayUrlOutcome;
                 typedef std::future<GetAbWatermarkPlayUrlOutcome> GetAbWatermarkPlayUrlOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::GetAbWatermarkPlayUrlRequest&, GetAbWatermarkPlayUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAbWatermarkPlayUrlAsyncHandler;
@@ -249,6 +264,15 @@ namespace TencentCloud
                 CreateStreamLiveWatermarkOutcome CreateStreamLiveWatermark(const Model::CreateStreamLiveWatermarkRequest &request);
                 void CreateStreamLiveWatermarkAsync(const Model::CreateStreamLiveWatermarkRequest& request, const CreateStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateStreamLiveWatermarkOutcomeCallable CreateStreamLiveWatermarkCallable(const Model::CreateStreamLiveWatermarkRequest& request);
+
+                /**
+                 *Create a watermark detection task
+                 * @param req CreateWatermarkDetectionRequest
+                 * @return CreateWatermarkDetectionOutcome
+                 */
+                CreateWatermarkDetectionOutcome CreateWatermarkDetection(const Model::CreateWatermarkDetectionRequest &request);
+                void CreateWatermarkDetectionAsync(const Model::CreateWatermarkDetectionRequest& request, const CreateWatermarkDetectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateWatermarkDetectionOutcomeCallable CreateWatermarkDetectionCallable(const Model::CreateWatermarkDetectionRequest& request);
 
                 /**
                  *This API is used to delete a StreamLive channel.
@@ -429,6 +453,24 @@ namespace TencentCloud
                 DescribeStreamLiveWatermarksOutcome DescribeStreamLiveWatermarks(const Model::DescribeStreamLiveWatermarksRequest &request);
                 void DescribeStreamLiveWatermarksAsync(const Model::DescribeStreamLiveWatermarksRequest& request, const DescribeStreamLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamLiveWatermarksOutcomeCallable DescribeStreamLiveWatermarksCallable(const Model::DescribeStreamLiveWatermarksRequest& request);
+
+                /**
+                 *Describe watermark detection task
+                 * @param req DescribeWatermarkDetectionRequest
+                 * @return DescribeWatermarkDetectionOutcome
+                 */
+                DescribeWatermarkDetectionOutcome DescribeWatermarkDetection(const Model::DescribeWatermarkDetectionRequest &request);
+                void DescribeWatermarkDetectionAsync(const Model::DescribeWatermarkDetectionRequest& request, const DescribeWatermarkDetectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWatermarkDetectionOutcomeCallable DescribeWatermarkDetectionCallable(const Model::DescribeWatermarkDetectionRequest& request);
+
+                /**
+                 *Batch Describe watermark detection task
+                 * @param req DescribeWatermarkDetectionsRequest
+                 * @return DescribeWatermarkDetectionsOutcome
+                 */
+                DescribeWatermarkDetectionsOutcome DescribeWatermarkDetections(const Model::DescribeWatermarkDetectionsRequest &request);
+                void DescribeWatermarkDetectionsAsync(const Model::DescribeWatermarkDetectionsRequest& request, const DescribeWatermarkDetectionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWatermarkDetectionsOutcomeCallable DescribeWatermarkDetectionsCallable(const Model::DescribeWatermarkDetectionsRequest& request);
 
                 /**
                  *Get AB watermark play url.

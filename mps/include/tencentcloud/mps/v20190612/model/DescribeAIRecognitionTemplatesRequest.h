@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID filter of video content recognition templates. Array length limit: 10.
-                     * @return Definitions Unique ID filter of video content recognition templates. Array length limit: 10.
+                     * 获取Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
+                     * @return Definitions Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Unique ID filter of video content recognition templates. Array length limit: 10.
-                     * @param _definitions Unique ID filter of video content recognition templates. Array length limit: 10.
+                     * 设置Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
+                     * @param _definitions Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -158,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID filter of video content recognition templates. Array length limit: 10.
+                     * Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;

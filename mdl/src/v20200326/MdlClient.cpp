@@ -290,6 +290,56 @@ MdlClient::CreateStreamLiveWatermarkOutcomeCallable MdlClient::CreateStreamLiveW
     return prom->get_future();
 }
 
+MdlClient::CreateWatermarkDetectionOutcome MdlClient::CreateWatermarkDetection(const CreateWatermarkDetectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateWatermarkDetection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateWatermarkDetectionResponse rsp = CreateWatermarkDetectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateWatermarkDetectionOutcome(rsp);
+        else
+            return CreateWatermarkDetectionOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateWatermarkDetectionOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::CreateWatermarkDetectionAsync(const CreateWatermarkDetectionRequest& request, const CreateWatermarkDetectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateWatermarkDetectionRequest&;
+    using Resp = CreateWatermarkDetectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateWatermarkDetection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MdlClient::CreateWatermarkDetectionOutcomeCallable MdlClient::CreateWatermarkDetectionCallable(const CreateWatermarkDetectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateWatermarkDetectionOutcome>>();
+    CreateWatermarkDetectionAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateWatermarkDetectionRequest&,
+        CreateWatermarkDetectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MdlClient::DeleteStreamLiveChannelOutcome MdlClient::DeleteStreamLiveChannel(const DeleteStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamLiveChannel");
@@ -1282,6 +1332,106 @@ MdlClient::DescribeStreamLiveWatermarksOutcomeCallable MdlClient::DescribeStream
         const MdlClient*,
         const DescribeStreamLiveWatermarksRequest&,
         DescribeStreamLiveWatermarksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MdlClient::DescribeWatermarkDetectionOutcome MdlClient::DescribeWatermarkDetection(const DescribeWatermarkDetectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWatermarkDetection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWatermarkDetectionResponse rsp = DescribeWatermarkDetectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWatermarkDetectionOutcome(rsp);
+        else
+            return DescribeWatermarkDetectionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWatermarkDetectionOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeWatermarkDetectionAsync(const DescribeWatermarkDetectionRequest& request, const DescribeWatermarkDetectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWatermarkDetectionRequest&;
+    using Resp = DescribeWatermarkDetectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWatermarkDetection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MdlClient::DescribeWatermarkDetectionOutcomeCallable MdlClient::DescribeWatermarkDetectionCallable(const DescribeWatermarkDetectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWatermarkDetectionOutcome>>();
+    DescribeWatermarkDetectionAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeWatermarkDetectionRequest&,
+        DescribeWatermarkDetectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MdlClient::DescribeWatermarkDetectionsOutcome MdlClient::DescribeWatermarkDetections(const DescribeWatermarkDetectionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWatermarkDetections");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWatermarkDetectionsResponse rsp = DescribeWatermarkDetectionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWatermarkDetectionsOutcome(rsp);
+        else
+            return DescribeWatermarkDetectionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWatermarkDetectionsOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeWatermarkDetectionsAsync(const DescribeWatermarkDetectionsRequest& request, const DescribeWatermarkDetectionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWatermarkDetectionsRequest&;
+    using Resp = DescribeWatermarkDetectionsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWatermarkDetections", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MdlClient::DescribeWatermarkDetectionsOutcomeCallable MdlClient::DescribeWatermarkDetectionsCallable(const DescribeWatermarkDetectionsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWatermarkDetectionsOutcome>>();
+    DescribeWatermarkDetectionsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeWatermarkDetectionsRequest&,
+        DescribeWatermarkDetectionsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

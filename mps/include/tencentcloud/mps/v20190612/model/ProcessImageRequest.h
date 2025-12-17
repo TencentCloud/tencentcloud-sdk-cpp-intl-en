@@ -167,14 +167,18 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
                     /**
                      * 获取Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
                      * @return Definition Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
                      * @param _definition Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -265,6 +269,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
                     /**
                      * Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -6490,6 +6490,56 @@ TeoClient::DescribeTimingL7CacheDataOutcomeCallable TeoClient::DescribeTimingL7C
     return prom->get_future();
 }
 
+TeoClient::DescribeTimingL7OriginPullDataOutcome TeoClient::DescribeTimingL7OriginPullData(const DescribeTimingL7OriginPullDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTimingL7OriginPullData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTimingL7OriginPullDataResponse rsp = DescribeTimingL7OriginPullDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTimingL7OriginPullDataOutcome(rsp);
+        else
+            return DescribeTimingL7OriginPullDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTimingL7OriginPullDataOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeTimingL7OriginPullDataAsync(const DescribeTimingL7OriginPullDataRequest& request, const DescribeTimingL7OriginPullDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTimingL7OriginPullDataRequest&;
+    using Resp = DescribeTimingL7OriginPullDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimingL7OriginPullData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeTimingL7OriginPullDataOutcomeCallable TeoClient::DescribeTimingL7OriginPullDataCallable(const DescribeTimingL7OriginPullDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTimingL7OriginPullDataOutcome>>();
+    DescribeTimingL7OriginPullDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTimingL7OriginPullDataRequest&,
+        DescribeTimingL7OriginPullDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::DescribeTopL7AnalysisDataOutcome TeoClient::DescribeTopL7AnalysisData(const DescribeTopL7AnalysisDataRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTopL7AnalysisData");
