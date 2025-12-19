@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool FirstHasBeenSet() const;
 
                     /**
-                     * 获取Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Second Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Second secondary server information.
+                     * @return Second Second secondary server information.
                      * 
                      */
                     SlaveInstanceInfo GetSecond() const;
 
                     /**
-                     * 设置Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _second Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Second secondary server information.
+                     * @param _second Second secondary server information.
                      * 
                      */
                     void SetSecond(const SlaveInstanceInfo& _second);
@@ -102,8 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_firstHasBeenSet;
 
                     /**
-                     * Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Second secondary server information.
                      */
                     SlaveInstanceInfo m_second;
                     bool m_secondHasBeenSet;

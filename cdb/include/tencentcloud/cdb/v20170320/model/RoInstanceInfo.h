@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
-                     * @return HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+                     * 获取Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
+                     * @return HourFeeStatus Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
                      * 
                      */
                     int64_t GetHourFeeStatus() const;
 
                     /**
-                     * 设置Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
-                     * @param _hourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+                     * 设置Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
+                     * @param _hourFeeStatus Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
                      * 
                      */
                     void SetHourFeeStatus(const int64_t& _hourFeeStatus);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool DeadlineTimeHasBeenSet() const;
 
                     /**
-                     * 获取RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
-                     * @return PayType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+                     * 获取Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+                     * @return PayType Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
                      * 
                      */
                     int64_t GetPayType() const;
 
                     /**
-                     * 设置RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
-                     * @param _payType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+                     * 设置Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+                     * @param _payType Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
                      * 
                      */
                     void SetPayType(const int64_t& _payType);
@@ -528,6 +528,27 @@ namespace TencentCloud
                      * 
                      */
                     bool PayTypeHasBeenSet() const;
+
+                    /**
+                     * 获取RO replication delay status.
+                     * @return ReplicationStatus RO replication delay status.
+                     * 
+                     */
+                    std::string GetReplicationStatus() const;
+
+                    /**
+                     * 设置RO replication delay status.
+                     * @param _replicationStatus RO replication delay status.
+                     * 
+                     */
+                    void SetReplicationStatus(const std::string& _replicationStatus);
+
+                    /**
+                     * 判断参数 ReplicationStatus 是否已赋值
+                     * @return ReplicationStatus 是否已赋值
+                     * 
+                     */
+                    bool ReplicationStatusHasBeenSet() const;
 
                 private:
 
@@ -592,7 +613,7 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+                     * Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
                      */
                     int64_t m_hourFeeStatus;
                     bool m_hourFeeStatusHasBeenSet;
@@ -664,10 +685,16 @@ namespace TencentCloud
                     bool m_deadlineTimeHasBeenSet;
 
                     /**
-                     * RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+                     * Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;
+
+                    /**
+                     * RO replication delay status.
+                     */
+                    std::string m_replicationStatus;
+                    bool m_replicationStatusHasBeenSet;
 
                 };
             }

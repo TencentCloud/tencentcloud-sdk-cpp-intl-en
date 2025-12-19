@@ -30,6 +30,8 @@
 #include <tencentcloud/cdb/v20170320/model/MasterInfo.h>
 #include <tencentcloud/cdb/v20170320/model/DrInfo.h>
 #include <tencentcloud/cdb/v20170320/model/TagInfoItem.h>
+#include <tencentcloud/cdb/v20170320/model/ClusterInfo.h>
+#include <tencentcloud/cdb/v20170320/model/AnalysisNodeInfo.h>
 
 
 namespace TencentCloud
@@ -116,19 +118,15 @@ namespace TencentCloud
                     bool InitFlagHasBeenSet() const;
 
                     /**
-                     * 获取VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+                     * @return RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
                      * 
                      */
                     RoVipInfo GetRoVipInfo() const;
 
                     /**
-                     * 设置VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+                     * @param _roVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
                      * 
                      */
                     void SetRoVipInfo(const RoVipInfo& _roVipInfo);
@@ -204,19 +202,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaveInfo Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Secondary server information.
+                     * @return SlaveInfo Secondary server information.
                      * 
                      */
                     SlaveInfo GetSlaveInfo() const;
 
                     /**
-                     * 设置Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _slaveInfo Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Secondary server information.
+                     * @param _slaveInfo Secondary server information.
                      * 
                      */
                     void SetSlaveInfo(const SlaveInfo& _slaveInfo);
@@ -313,19 +307,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtectModeHasBeenSet() const;
 
                     /**
-                     * 获取Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoGroups Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed information about the read-only group.
+                     * @return RoGroups Detailed information about the read-only group.
                      * 
                      */
                     std::vector<RoGroup> GetRoGroups() const;
 
                     /**
-                     * 设置Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roGroups Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detailed information about the read-only group.
+                     * @param _roGroups Detailed information about the read-only group.
                      * 
                      */
                     void SetRoGroups(const std::vector<RoGroup>& _roGroups);
@@ -485,19 +475,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MasterInfo Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed information about the primary instance.
+                     * @return MasterInfo Detailed information about the primary instance.
                      * 
                      */
                     MasterInfo GetMasterInfo() const;
 
                     /**
-                     * 设置Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _masterInfo Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detailed information about the primary instance.
+                     * @param _masterInfo Detailed information about the primary instance.
                      * 
                      */
                     void SetMasterInfo(const MasterInfo& _masterInfo);
@@ -573,19 +559,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DrInfo Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed information about the disaster recovery instance.
+                     * @return DrInfo Detailed information about the disaster recovery instance.
                      * 
                      */
                     std::vector<DrInfo> GetDrInfo() const;
 
                     /**
-                     * 设置Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _drInfo Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detailed information about the disaster recovery instance.
+                     * @param _drInfo Detailed information about the disaster recovery instance.
                      * 
                      */
                     void SetDrInfo(const std::vector<DrInfo>& _drInfo);
@@ -871,19 +853,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeviceClass Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Physical server model.
+                     * @return DeviceClass Physical server model.
                      * 
                      */
                     std::string GetDeviceClass() const;
 
                     /**
-                     * 设置Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deviceClass Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Physical server model.
+                     * @param _deviceClass Physical server model.
                      * 
                      */
                     void SetDeviceClass(const std::string& _deviceClass);
@@ -896,19 +874,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DeviceClassHasBeenSet() const;
 
                     /**
-                     * 获取Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DeployGroupId Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Placement group ID.
+                     * @return DeployGroupId Placement group ID.
                      * 
                      */
                     std::string GetDeployGroupId() const;
 
                     /**
-                     * 设置Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _deployGroupId Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Placement group ID.
+                     * @param _deployGroupId Placement group ID.
                      * 
                      */
                     void SetDeployGroupId(const std::string& _deployGroupId);
@@ -921,19 +895,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DeployGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneId AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取AZ ID.
+                     * @return ZoneId AZ ID.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneId AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置AZ ID.
+                     * @param _zoneId AZ ID.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -967,19 +937,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceNodesHasBeenSet() const;
 
                     /**
-                     * 获取List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TagList List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag list.
+                     * @return TagList Tag list.
                      * 
                      */
                     std::vector<TagInfoItem> GetTagList() const;
 
                     /**
-                     * 设置List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tagList List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag list.
+                     * @param _tagList Tag list.
                      * 
                      */
                     void SetTagList(const std::vector<TagInfoItem>& _tagList);
@@ -992,19 +958,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EngineType Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Engine type.
+                     * @return EngineType Engine type.
                      * 
                      */
                     std::string GetEngineType() const;
 
                     /**
-                     * 设置Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _engineType Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Engine type.
+                     * @param _engineType Engine type.
                      * 
                      */
                     void SetEngineType(const std::string& _engineType);
@@ -1017,19 +979,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EngineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxDelayTime Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum delay threshold.
+                     * @return MaxDelayTime Maximum delay threshold.
                      * 
                      */
                     int64_t GetMaxDelayTime() const;
 
                     /**
-                     * 设置Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxDelayTime Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum delay threshold.
+                     * @param _maxDelayTime Maximum delay threshold.
                      * 
                      */
                     void SetMaxDelayTime(const int64_t& _maxDelayTime);
@@ -1042,15 +1000,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxDelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
-                     * @return DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * 获取Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+                     * @return DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
-                     * @param _diskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * 设置Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+                     * @param _diskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -1061,6 +1035,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Current number of CPU cores for scale-out.
+                     * @return ExpandCpu Current number of CPU cores for scale-out.
+                     * 
+                     */
+                    int64_t GetExpandCpu() const;
+
+                    /**
+                     * 设置Current number of CPU cores for scale-out.
+                     * @param _expandCpu Current number of CPU cores for scale-out.
+                     * 
+                     */
+                    void SetExpandCpu(const int64_t& _expandCpu);
+
+                    /**
+                     * 判断参数 ExpandCpu 是否已赋值
+                     * @return ExpandCpu 是否已赋值
+                     * 
+                     */
+                    bool ExpandCpuHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster Edition instance node information.
+                     * @return ClusterInfo Cluster Edition instance node information.
+                     * 
+                     */
+                    std::vector<ClusterInfo> GetClusterInfo() const;
+
+                    /**
+                     * 设置Cluster Edition instance node information.
+                     * @param _clusterInfo Cluster Edition instance node information.
+                     * 
+                     */
+                    void SetClusterInfo(const std::vector<ClusterInfo>& _clusterInfo);
+
+                    /**
+                     * 判断参数 ClusterInfo 是否已赋值
+                     * @return ClusterInfo 是否已赋值
+                     * 
+                     */
+                    bool ClusterInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Analysis engine node list.
+                     * @return AnalysisNodeInfos Analysis engine node list.
+                     * 
+                     */
+                    std::vector<AnalysisNodeInfo> GetAnalysisNodeInfos() const;
+
+                    /**
+                     * 设置Analysis engine node list.
+                     * @param _analysisNodeInfos Analysis engine node list.
+                     * 
+                     */
+                    void SetAnalysisNodeInfos(const std::vector<AnalysisNodeInfo>& _analysisNodeInfos);
+
+                    /**
+                     * 判断参数 AnalysisNodeInfos 是否已赋值
+                     * @return AnalysisNodeInfos 是否已赋值
+                     * 
+                     */
+                    bool AnalysisNodeInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+                     * @return DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+                     * 
+                     */
+                    uint64_t GetDeviceBandwidth() const;
+
+                    /**
+                     * 设置Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+                     * @param _deviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+                     * 
+                     */
+                    void SetDeviceBandwidth(const uint64_t& _deviceBandwidth);
+
+                    /**
+                     * 判断参数 DeviceBandwidth 是否已赋值
+                     * @return DeviceBandwidth 是否已赋值
+                     * 
+                     */
+                    bool DeviceBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+                     * @return DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+                     * 
+                     */
+                    std::string GetDestroyProtect() const;
+
+                    /**
+                     * 设置Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+                     * @param _destroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+                     * 
+                     */
+                    void SetDestroyProtect(const std::string& _destroyProtect);
+
+                    /**
+                     * 判断参数 DestroyProtect 是否已赋值
+                     * @return DestroyProtect 是否已赋值
+                     * 
+                     */
+                    bool DestroyProtectHasBeenSet() const;
 
                 private:
 
@@ -1083,8 +1162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_initFlagHasBeenSet;
 
                     /**
-                     * VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
                      */
                     RoVipInfo m_roVipInfo;
                     bool m_roVipInfoHasBeenSet;
@@ -1108,8 +1186,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Secondary server information.
                      */
                     SlaveInfo m_slaveInfo;
                     bool m_slaveInfoHasBeenSet;
@@ -1139,8 +1216,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protectModeHasBeenSet;
 
                     /**
-                     * Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed information about the read-only group.
                      */
                     std::vector<RoGroup> m_roGroups;
                     bool m_roGroupsHasBeenSet;
@@ -1188,8 +1264,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed information about the primary instance.
                      */
                     MasterInfo m_masterInfo;
                     bool m_masterInfoHasBeenSet;
@@ -1213,8 +1288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed information about the disaster recovery instance.
                      */
                     std::vector<DrInfo> m_drInfo;
                     bool m_drInfoHasBeenSet;
@@ -1298,22 +1372,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Physical server model.
                      */
                     std::string m_deviceClass;
                     bool m_deviceClassHasBeenSet;
 
                     /**
-                     * Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Placement group ID.
                      */
                     std::string m_deployGroupId;
                     bool m_deployGroupIdHasBeenSet;
 
                     /**
-                     * AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * AZ ID.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -1325,31 +1396,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNodesHasBeenSet;
 
                     /**
-                     * List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Tag list.
                      */
                     std::vector<TagInfoItem> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Engine type.
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;
 
                     /**
-                     * Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum delay threshold.
                      */
                     int64_t m_maxDelayTime;
                     bool m_maxDelayTimeHasBeenSet;
 
                     /**
-                     * Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Current number of CPU cores for scale-out.
+                     */
+                    int64_t m_expandCpu;
+                    bool m_expandCpuHasBeenSet;
+
+                    /**
+                     * Cluster Edition instance node information.
+                     */
+                    std::vector<ClusterInfo> m_clusterInfo;
+                    bool m_clusterInfoHasBeenSet;
+
+                    /**
+                     * Analysis engine node list.
+                     */
+                    std::vector<AnalysisNodeInfo> m_analysisNodeInfos;
+                    bool m_analysisNodeInfosHasBeenSet;
+
+                    /**
+                     * Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+                     */
+                    uint64_t m_deviceBandwidth;
+                    bool m_deviceBandwidthHasBeenSet;
+
+                    /**
+                     * Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+                     */
+                    std::string m_destroyProtect;
+                    bool m_destroyProtectHasBeenSet;
 
                 };
             }

@@ -70,14 +70,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
                      * @return RoGroupId Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
                      * 
                      */
                     std::string GetRoGroupId() const;
 
                     /**
                      * 设置Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
                      * @param _roGroupId Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
                      * 
                      */
                     void SetRoGroupId(const std::string& _roGroupId);
@@ -132,15 +136,15 @@ namespace TencentCloud
                     bool RoOfflineDelayHasBeenSet() const;
 
                     /**
-                     * 获取Latency threshold
-                     * @return RoMaxDelayTime Latency threshold
+                     * 获取Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+                     * @return RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
                      * 
                      */
                     int64_t GetRoMaxDelayTime() const;
 
                     /**
-                     * 设置Latency threshold
-                     * @param _roMaxDelayTime Latency threshold
+                     * 设置Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+                     * @param _roMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
                      * 
                      */
                     void SetRoMaxDelayTime(const int64_t& _roMaxDelayTime);
@@ -279,19 +283,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UniqVpcId VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Virtual Private Cloud (VPC) ID.
+                     * @return UniqVpcId Virtual Private Cloud (VPC) ID.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _uniqVpcId VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Virtual Private Cloud (VPC) ID.
+                     * @param _uniqVpcId Virtual Private Cloud (VPC) ID.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -305,18 +305,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UniqSubnetId Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _uniqSubnetId Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -329,19 +325,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RoGroupRegion Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Region of the read-only group.
+                     * @return RoGroupRegion Region of the read-only group.
                      * 
                      */
                     std::string GetRoGroupRegion() const;
 
                     /**
-                     * 设置Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _roGroupRegion Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Region of the read-only group.
+                     * @param _roGroupRegion Region of the read-only group.
                      * 
                      */
                     void SetRoGroupRegion(const std::string& _roGroupRegion);
@@ -354,19 +346,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RoGroupRegionHasBeenSet() const;
 
                     /**
-                     * 获取Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RoGroupZone Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取AZ of the read-only group.
+                     * @return RoGroupZone AZ of the read-only group.
                      * 
                      */
                     std::string GetRoGroupZone() const;
 
                     /**
-                     * 设置Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _roGroupZone Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置AZ of the read-only group.
+                     * @param _roGroupZone AZ of the read-only group.
                      * 
                      */
                     void SetRoGroupZone(const std::string& _roGroupZone);
@@ -379,19 +367,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RoGroupZoneHasBeenSet() const;
 
                     /**
-                     * 获取Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DelayReplicationTime Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+                     * @return DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
                      * 
                      */
                     int64_t GetDelayReplicationTime() const;
 
                     /**
-                     * 设置Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _delayReplicationTime Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+                     * @param _delayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
                      * 
                      */
                     void SetDelayReplicationTime(const int64_t& _delayReplicationTime);
@@ -413,6 +397,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
                      */
                     std::string m_roGroupId;
                     bool m_roGroupIdHasBeenSet;
@@ -430,7 +415,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_roOfflineDelayHasBeenSet;
 
                     /**
-                     * Latency threshold
+                     * Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
                      */
                     int64_t m_roMaxDelayTime;
                     bool m_roMaxDelayTimeHasBeenSet;
@@ -472,36 +457,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_vportHasBeenSet;
 
                     /**
-                     * VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Virtual Private Cloud (VPC) ID.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
                      * Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Region of the read-only group.
                      */
                     std::string m_roGroupRegion;
                     bool m_roGroupRegionHasBeenSet;
 
                     /**
-                     * Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * AZ of the read-only group.
                      */
                     std::string m_roGroupZone;
                     bool m_roGroupZoneHasBeenSet;
 
                     /**
-                     * Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
                      */
                     int64_t m_delayReplicationTime;
                     bool m_delayReplicationTimeHasBeenSet;

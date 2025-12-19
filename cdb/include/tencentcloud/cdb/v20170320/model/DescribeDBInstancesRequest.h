@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
-                     * @return PayTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+                     * 获取Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+                     * @return PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
                      * 
                      */
                     std::vector<uint64_t> GetPayTypes() const;
 
                     /**
-                     * 设置Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
-                     * @param _payTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+                     * 设置Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+                     * @param _payTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
                      * 
                      */
                     void SetPayTypes(const std::vector<uint64_t>& _payTypes);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
-                     * 获取Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
-                     * @return TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+                     * 获取Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+                     * @return TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
                      * 
                      */
                     std::vector<uint64_t> GetTaskStatus() const;
 
                     /**
-                     * 设置Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
-                     * @param _taskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+                     * 设置Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+                     * @param _taskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
                      * 
                      */
                     void SetTaskStatus(const std::vector<uint64_t>& _taskStatus);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool CdbErrorsHasBeenSet() const;
 
                     /**
-                     * 获取Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
-                     * @return OrderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+                     * 获取Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+                     * @return OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
-                     * @param _orderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+                     * 设置Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+                     * @param _orderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
-                     * @return OrderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+                     * 获取Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+                     * @return OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
                      * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
-                     * @param _orderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+                     * 设置Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+                     * @param _orderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
                      * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
@@ -401,15 +401,19 @@ namespace TencentCloud
                     bool OrderDirectionHasBeenSet() const;
 
                     /**
-                     * 获取Whether security group ID is used as a filter
-                     * @return WithSecurityGroup Whether security group ID is used as a filter
+                     * 获取Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
+                     * @return WithSecurityGroup Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
                      * 
                      */
                     int64_t GetWithSecurityGroup() const;
 
                     /**
-                     * 设置Whether security group ID is used as a filter
-                     * @param _withSecurityGroup Whether security group ID is used as a filter
+                     * 设置Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
+                     * @param _withSecurityGroup Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
                      * 
                      */
                     void SetWithSecurityGroup(const int64_t& _withSecurityGroup);
@@ -695,15 +699,19 @@ namespace TencentCloud
                     bool UniqSubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tag key value
-                     * @return Tags Tag key value
+                     * 获取Tag key value.
+Note that tags cannot be queried for instances being created.
+                     * @return Tags Tag key value.
+Note that tags cannot be queried for instances being created.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag key value
-                     * @param _tags Tag key value
+                     * 设置Tag key value.
+Note that tags cannot be queried for instances being created.
+                     * @param _tags Tag key value.
+Note that tags cannot be queried for instances being created.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -758,15 +766,15 @@ namespace TencentCloud
                     bool ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Database engine type
-                     * @return EngineTypes Database engine type
+                     * 获取Database engine type. Valid values: InnoDB; RocksDB.
+                     * @return EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
                      * 
                      */
                     std::vector<std::string> GetEngineTypes() const;
 
                     /**
-                     * 设置Database engine type
-                     * @param _engineTypes Database engine type
+                     * 设置Database engine type. Valid values: InnoDB; RocksDB.
+                     * @param _engineTypes Database engine type. Valid values: InnoDB; RocksDB.
                      * 
                      */
                     void SetEngineTypes(const std::vector<std::string>& _engineTypes);
@@ -777,6 +785,27 @@ namespace TencentCloud
                      * 
                      */
                     bool EngineTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * @return QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * 
+                     */
+                    bool GetQueryClusterInfo() const;
+
+                    /**
+                     * 设置Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * @param _queryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * 
+                     */
+                    void SetQueryClusterInfo(const bool& _queryClusterInfo);
+
+                    /**
+                     * 判断参数 QueryClusterInfo 是否已赋值
+                     * @return QueryClusterInfo 是否已赋值
+                     * 
+                     */
+                    bool QueryClusterInfoHasBeenSet() const;
 
                 private:
 
@@ -823,7 +852,7 @@ namespace TencentCloud
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+                     * Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
                      */
                     std::vector<uint64_t> m_payTypes;
                     bool m_payTypesHasBeenSet;
@@ -835,7 +864,7 @@ namespace TencentCloud
                     bool m_instanceNamesHasBeenSet;
 
                     /**
-                     * Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+                     * Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
                      */
                     std::vector<uint64_t> m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -871,19 +900,20 @@ namespace TencentCloud
                     bool m_cdbErrorsHasBeenSet;
 
                     /**
-                     * Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+                     * Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+                     * Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;
 
                     /**
-                     * Whether security group ID is used as a filter
+                     * Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
                      */
                     int64_t m_withSecurityGroup;
                     bool m_withSecurityGroupHasBeenSet;
@@ -967,7 +997,8 @@ namespace TencentCloud
                     bool m_uniqSubnetIdsHasBeenSet;
 
                     /**
-                     * Tag key value
+                     * Tag key value.
+Note that tags cannot be queried for instances being created.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -985,10 +1016,16 @@ namespace TencentCloud
                     bool m_proxyIdsHasBeenSet;
 
                     /**
-                     * Database engine type
+                     * Database engine type. Valid values: InnoDB; RocksDB.
                      */
                     std::vector<std::string> m_engineTypes;
                     bool m_engineTypesHasBeenSet;
+
+                    /**
+                     * Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     */
+                    bool m_queryClusterInfo;
+                    bool m_queryClusterInfoHasBeenSet;
 
                 };
             }
