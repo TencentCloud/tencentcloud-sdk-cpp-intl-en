@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the bound ENI
-                     * @return NetworkInterfaceId The ID of the bound ENI
+                     * 获取Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+                     * @return NetworkInterfaceId Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
                      * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
-                     * 设置The ID of the bound ENI
-                     * @param _networkInterfaceId The ID of the bound ENI
+                     * 设置Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+                     * @param _networkInterfaceId Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
                      * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
-                     * 获取The private IP of the bound resources
-                     * @return PrivateAddressIp The private IP of the bound resources
+                     * 获取Bound resource internal ip. null means no bound resource internal ip.
+                     * @return PrivateAddressIp Bound resource internal ip. null means no bound resource internal ip.
                      * 
                      */
                     std::string GetPrivateAddressIp() const;
 
                     /**
-                     * 设置The private IP of the bound resources
-                     * @param _privateAddressIp The private IP of the bound resources
+                     * 设置Bound resource internal ip. null means no bound resource internal ip.
+                     * @param _privateAddressIp Bound resource internal ip. null means no bound resource internal ip.
                      * 
                      */
                     void SetPrivateAddressIp(const std::string& _privateAddressIp);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool EipAlgTypeHasBeenSet() const;
 
                     /**
-                     * 获取The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
-                     * @return InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+                     * 获取EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+                     * @return InternetServiceProvider EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
                      * 
                      */
                     std::string GetInternetServiceProvider() const;
 
                     /**
-                     * 设置The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
-                     * @param _internetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+                     * 设置EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+                     * @param _internetServiceProvider EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
                      * 
                      */
                     void SetInternetServiceProvider(const std::string& _internetServiceProvider);
@@ -364,15 +364,23 @@ namespace TencentCloud
                     bool InternetServiceProviderHasBeenSet() const;
 
                     /**
-                     * 获取Whether the EIP is in a local BGP.
-                     * @return LocalBgp Whether the EIP is in a local BGP.
+                     * 获取Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
+                     * @return LocalBgp Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
                      * 
                      */
                     bool GetLocalBgp() const;
 
                     /**
-                     * 设置Whether the EIP is in a local BGP.
-                     * @param _localBgp Whether the EIP is in a local BGP.
+                     * 设置Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
+                     * @param _localBgp Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
                      * 
                      */
                     void SetLocalBgp(const bool& _localBgp);
@@ -475,19 +483,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TagSet List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the Tag list associated with the elastic IP.
+                     * @return TagSet Specifies the Tag list associated with the elastic IP.
                      * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
-                     * 设置List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tagSet List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the Tag list associated with the elastic IP.
+                     * @param _tagSet Specifies the Tag list associated with the elastic IP.
                      * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
@@ -500,19 +504,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DeadlineDate The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return DeadlineDate Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     std::string GetDeadlineDate() const;
 
                     /**
-                     * 设置The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _deadlineDate The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _deadlineDate Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetDeadlineDate(const std::string& _deadlineDate);
@@ -525,19 +533,51 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DeadlineDateHasBeenSet() const;
 
                     /**
-                     * 获取The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return InstanceType The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
+                     * @return InstanceType Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _instanceType The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _instanceType Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -650,19 +690,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+                     * @return UnVpcId Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
                      * 
                      */
                     std::string GetUnVpcId() const;
 
                     /**
-                     * 设置Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param _unVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+                     * @param _unVpcId Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
                      * 
                      */
                     void SetUnVpcId(const std::string& _unVpcId);
@@ -675,19 +711,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool UnVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
-                     * @return DedicatedClusterId Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+                     * 获取Specifies the unique ID of the CDC.
+                     * @return DedicatedClusterId Specifies the unique ID of the CDC.
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
-                     * @param _dedicatedClusterId Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+                     * 设置Specifies the unique ID of the CDC.
+                     * @param _dedicatedClusterId Specifies the unique ID of the CDC.
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -738,13 +770,13 @@ Note: This field may return 'null', indicating that no valid value was found.
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * The ID of the bound ENI
+                     * Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
                      */
                     std::string m_networkInterfaceId;
                     bool m_networkInterfaceIdHasBeenSet;
 
                     /**
-                     * The private IP of the bound resources
+                     * Bound resource internal ip. null means no bound resource internal ip.
                      */
                     std::string m_privateAddressIp;
                     bool m_privateAddressIpHasBeenSet;
@@ -786,13 +818,15 @@ Note: This field may return 'null', indicating that no valid value was found.
                     bool m_eipAlgTypeHasBeenSet;
 
                     /**
-                     * The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+                     * EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
                      */
                     std::string m_internetServiceProvider;
                     bool m_internetServiceProviderHasBeenSet;
 
                     /**
-                     * Whether the EIP is in a local BGP.
+                     * Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
                      */
                     bool m_localBgp;
                     bool m_localBgpHasBeenSet;
@@ -822,22 +856,30 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_internetChargeTypeHasBeenSet;
 
                     /**
-                     * List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the Tag list associated with the elastic IP.
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_deadlineDate;
                     bool m_deadlineDateHasBeenSet;
 
                     /**
-                     * The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -871,15 +913,13 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+                     * Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
                      */
                     std::string m_unVpcId;
                     bool m_unVpcIdHasBeenSet;
 
                     /**
-                     * Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+                     * Specifies the unique ID of the CDC.
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;

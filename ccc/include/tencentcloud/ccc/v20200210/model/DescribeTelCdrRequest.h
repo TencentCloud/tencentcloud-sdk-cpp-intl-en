@@ -85,69 +85,6 @@ namespace TencentCloud
                     bool EndTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Instance id (deprecated).
-                     * @return InstanceId Instance id (deprecated).
-                     * @deprecated
-                     */
-                    int64_t GetInstanceId() const;
-
-                    /**
-                     * 设置Instance id (deprecated).
-                     * @param _instanceId Instance id (deprecated).
-                     * @deprecated
-                     */
-                    void SetInstanceId(const int64_t& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * @deprecated
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
-                    /**
-                     * 获取Maximum number of returned entries (deprecated).
-                     * @return Limit Maximum number of returned entries (deprecated).
-                     * 
-                     */
-                    int64_t GetLimit() const;
-
-                    /**
-                     * 设置Maximum number of returned entries (deprecated).
-                     * @param _limit Maximum number of returned entries (deprecated).
-                     * 
-                     */
-                    void SetLimit(const int64_t& _limit);
-
-                    /**
-                     * 判断参数 Limit 是否已赋值
-                     * @return Limit 是否已赋值
-                     * 
-                     */
-                    bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取Offset (deprecated).
-                     * @return Offset Offset (deprecated).
-                     * 
-                     */
-                    int64_t GetOffset() const;
-
-                    /**
-                     * 设置Offset (deprecated).
-                     * @param _offset Offset (deprecated).
-                     * 
-                     */
-                    void SetOffset(const int64_t& _offset);
-
-                    /**
-                     * 判断参数 Offset 是否已赋值
-                     * @return Offset 是否已赋值
-                     * 
-                     */
-                    bool OffsetHasBeenSet() const;
-
-                    /**
                      * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
@@ -211,6 +148,69 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
+                     * 获取Instance id (deprecated).
+                     * @return InstanceId Instance id (deprecated).
+                     * @deprecated
+                     */
+                    int64_t GetInstanceId() const;
+
+                    /**
+                     * 设置Instance id (deprecated).
+                     * @param _instanceId Instance id (deprecated).
+                     * @deprecated
+                     */
+                    void SetInstanceId(const int64_t& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * @deprecated
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of returned entries (deprecated).
+                     * @return Limit Maximum number of returned entries (deprecated).
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Maximum number of returned entries (deprecated).
+                     * @param _limit Maximum number of returned entries (deprecated).
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Offset (deprecated).
+                     * @return Offset Offset (deprecated).
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset (deprecated).
+                     * @param _offset Offset (deprecated).
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
                      * 获取Filter by phone number.
                      * @return Phones Filter by phone number.
                      * 
@@ -267,24 +267,6 @@ namespace TencentCloud
                     bool m_endTimeStampHasBeenSet;
 
                     /**
-                     * Instance id (deprecated).
-                     */
-                    int64_t m_instanceId;
-                    bool m_instanceIdHasBeenSet;
-
-                    /**
-                     * Maximum number of returned entries (deprecated).
-                     */
-                    int64_t m_limit;
-                    bool m_limitHasBeenSet;
-
-                    /**
-                     * Offset (deprecated).
-                     */
-                    int64_t m_offset;
-                    bool m_offsetHasBeenSet;
-
-                    /**
                      * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
@@ -301,6 +283,24 @@ namespace TencentCloud
                      */
                     int64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;
+
+                    /**
+                     * Instance id (deprecated).
+                     */
+                    int64_t m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Maximum number of returned entries (deprecated).
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Offset (deprecated).
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                     /**
                      * Filter by phone number.

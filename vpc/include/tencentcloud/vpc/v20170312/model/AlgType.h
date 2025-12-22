@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether FTP ALG is enabled
-                     * @return Ftp Whether FTP ALG is enabled
+                     * 获取Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+                     * @return Ftp Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
                      * 
                      */
                     bool GetFtp() const;
 
                     /**
-                     * 设置Whether FTP ALG is enabled
-                     * @param _ftp Whether FTP ALG is enabled
+                     * 设置Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+                     * @param _ftp Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
                      * 
                      */
                     void SetFtp(const bool& _ftp);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool FtpHasBeenSet() const;
 
                     /**
-                     * 获取Whether SIP ALG is enabled
-                     * @return Sip Whether SIP ALG is enabled
+                     * 获取Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
+                     * @return Sip Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
                      * 
                      */
                     bool GetSip() const;
 
                     /**
-                     * 设置Whether SIP ALG is enabled
-                     * @param _sip Whether SIP ALG is enabled
+                     * 设置Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
+                     * @param _sip Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
                      * 
                      */
                     void SetSip(const bool& _sip);
@@ -91,13 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether FTP ALG is enabled
+                     * Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
                      */
                     bool m_ftp;
                     bool m_ftpHasBeenSet;
 
                     /**
-                     * Whether SIP ALG is enabled
+                     * Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
                      */
                     bool m_sip;
                     bool m_sipHasBeenSet;

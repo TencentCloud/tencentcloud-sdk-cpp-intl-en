@@ -22,7 +22,9 @@ using namespace std;
 
 ChannelAlertInfos::ChannelAlertInfos() :
     m_pipeline0HasBeenSet(false),
-    m_pipeline1HasBeenSet(false)
+    m_pipeline1HasBeenSet(false),
+    m_pipelineAActiveAlertsHasBeenSet(false),
+    m_pipelineBActiveAlertsHasBeenSet(false)
 {
 }
 
@@ -71,6 +73,26 @@ CoreInternalOutcome ChannelAlertInfos::Deserialize(const rapidjson::Value &value
         m_pipeline1HasBeenSet = true;
     }
 
+    if (value.HasMember("PipelineAActiveAlerts") && !value["PipelineAActiveAlerts"].IsNull())
+    {
+        if (!value["PipelineAActiveAlerts"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ChannelAlertInfos.PipelineAActiveAlerts` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_pipelineAActiveAlerts = value["PipelineAActiveAlerts"].GetInt64();
+        m_pipelineAActiveAlertsHasBeenSet = true;
+    }
+
+    if (value.HasMember("PipelineBActiveAlerts") && !value["PipelineBActiveAlerts"].IsNull())
+    {
+        if (!value["PipelineBActiveAlerts"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ChannelAlertInfos.PipelineBActiveAlerts` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_pipelineBActiveAlerts = value["PipelineBActiveAlerts"].GetInt64();
+        m_pipelineBActiveAlertsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -108,6 +130,22 @@ void ChannelAlertInfos::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         }
     }
 
+    if (m_pipelineAActiveAlertsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineAActiveAlerts";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pipelineAActiveAlerts, allocator);
+    }
+
+    if (m_pipelineBActiveAlertsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineBActiveAlerts";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pipelineBActiveAlerts, allocator);
+    }
+
 }
 
 
@@ -141,5 +179,37 @@ void ChannelAlertInfos::SetPipeline1(const vector<ChannelPipelineAlerts>& _pipel
 bool ChannelAlertInfos::Pipeline1HasBeenSet() const
 {
     return m_pipeline1HasBeenSet;
+}
+
+int64_t ChannelAlertInfos::GetPipelineAActiveAlerts() const
+{
+    return m_pipelineAActiveAlerts;
+}
+
+void ChannelAlertInfos::SetPipelineAActiveAlerts(const int64_t& _pipelineAActiveAlerts)
+{
+    m_pipelineAActiveAlerts = _pipelineAActiveAlerts;
+    m_pipelineAActiveAlertsHasBeenSet = true;
+}
+
+bool ChannelAlertInfos::PipelineAActiveAlertsHasBeenSet() const
+{
+    return m_pipelineAActiveAlertsHasBeenSet;
+}
+
+int64_t ChannelAlertInfos::GetPipelineBActiveAlerts() const
+{
+    return m_pipelineBActiveAlerts;
+}
+
+void ChannelAlertInfos::SetPipelineBActiveAlerts(const int64_t& _pipelineBActiveAlerts)
+{
+    m_pipelineBActiveAlerts = _pipelineBActiveAlerts;
+    m_pipelineBActiveAlertsHasBeenSet = true;
+}
+
+bool ChannelAlertInfos::PipelineBActiveAlertsHasBeenSet() const
+{
+    return m_pipelineBActiveAlertsHasBeenSet;
 }
 

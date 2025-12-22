@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Task ID
+                     * @return TaskId Task ID
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Task ID
+                     * @param _taskId Task ID
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Types of testing
+                     * @return Type Types of testing
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Types of testing
+                     * @param _type Types of testing
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return State 
+                     * 获取State
+                     * @return State State
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置
-                     * @param _state 
+                     * 设置State
+                     * @param _state State
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Result 
+                     * 获取Result
+                     * @return Result Result
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
-                     * 设置
-                     * @param _result 
+                     * 设置Result
+                     * @param _result Result
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrorCode 
+                     * 获取Error code
+                     * @return ErrorCode Error code
                      * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
-                     * 设置
-                     * @param _errorCode 
+                     * 设置Error code
+                     * @param _errorCode Error code
                      * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrorMsg 
+                     * 获取Error message
+                     * @return ErrorMsg Error message
                      * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
-                     * 设置
-                     * @param _errorMsg 
+                     * 设置Error message
+                     * @param _errorMsg Error message
                      * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputInfo 
+                     * 获取Input information
+                     * @return InputInfo Input information
                      * 
                      */
                     AbWatermarkInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _inputInfo 
+                     * 设置Input information
+                     * @param _inputInfo Input information
                      * 
                      */
                     void SetInputInfo(const AbWatermarkInputInfo& _inputInfo);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskNotifyConfig 
+                     * 获取Task notification configuration
+                     * @return TaskNotifyConfig Task notification configuration
                      * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
-                     * 设置
-                     * @param _taskNotifyConfig 
+                     * 设置Task notification configuration
+                     * @param _taskNotifyConfig Task notification configuration
                      * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Create time
+                     * @return CreateTime Create time
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Create time
+                     * @param _createTime Create time
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取Update time
+                     * @return UpdateTime Update time
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置Update time
+                     * @param _updateTime Update time
                      * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputFileInfo 
+                     * 获取Input file information
+                     * @return InputFileInfo Input file information
                      * 
                      */
                     InputFileInfo GetInputFileInfo() const;
 
                     /**
-                     * 设置
-                     * @param _inputFileInfo 
+                     * 设置Input file information
+                     * @param _inputFileInfo Input file information
                      * 
                      */
                     void SetInputFileInfo(const InputFileInfo& _inputFileInfo);
@@ -283,67 +283,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task ID
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Types of testing
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * State
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * 
+                     * Result
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * 
+                     * Error code
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * 
+                     * Input information
                      */
                     AbWatermarkInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Task notification configuration
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Create time
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Update time
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Input file information
                      */
                     InputFileInfo m_inputFileInfo;
                     bool m_inputFileInfoHasBeenSet;

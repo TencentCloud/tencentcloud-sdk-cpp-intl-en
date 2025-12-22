@@ -311,9 +311,9 @@ VoIP user client timeout.
 
 Audio dial-in 503 VoIP user client error.
 
-Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
 
-English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * @return EndStatus EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
 **Scenario**	EndStatus	EndStatusString	Status description.
@@ -386,9 +386,9 @@ VoIP user client timeout.
 
 Audio dial-in 503 VoIP user client error.
 
-Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
 
-English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * 
                      */
                     int64_t GetEndStatus() const;
@@ -466,9 +466,9 @@ VoIP user client timeout.
 
 Audio dial-in 503 VoIP user client error.
 
-Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
 
-English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * @param _endStatus EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
 **Scenario**	EndStatus	EndStatusString	Status description.
@@ -541,9 +541,9 @@ VoIP user client timeout.
 
 Audio dial-in 503 VoIP user client error.
 
-Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
 
-English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * 
                      */
                     void SetEndStatus(const int64_t& _endStatus);
@@ -1296,9 +1296,9 @@ VoIP user client timeout.
 
 Audio dial-in 503 VoIP user client error.
 
-Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
 
-English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      */
                     int64_t m_endStatus;
                     bool m_endStatusHasBeenSet;

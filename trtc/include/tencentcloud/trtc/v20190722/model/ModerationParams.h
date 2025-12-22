@@ -191,15 +191,15 @@ Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: 
                     bool ModerationSupplierParamHasBeenSet() const;
 
                     /**
-                     * 获取Whether to save the hit file. 0: not save by default; 1: save.
-                     * @return SaveModerationFile Whether to save the hit file. 0: not save by default; 1: save.
+                     * 获取Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
+                     * @return SaveModerationFile Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
                      * 
                      */
                     uint64_t GetSaveModerationFile() const;
 
                     /**
-                     * 设置Whether to save the hit file. 0: not save by default; 1: save.
-                     * @param _saveModerationFile Whether to save the hit file. 0: not save by default; 1: save.
+                     * 设置Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
+                     * @param _saveModerationFile Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
                      * 
                      */
                     void SetSaveModerationFile(const uint64_t& _saveModerationFile);
@@ -296,7 +296,7 @@ Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: 
                     bool m_moderationSupplierParamHasBeenSet;
 
                     /**
-                     * Whether to save the hit file. 0: not save by default; 1: save.
+                     * Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
                      */
                     uint64_t m_saveModerationFile;
                     bool m_saveModerationFileHasBeenSet;

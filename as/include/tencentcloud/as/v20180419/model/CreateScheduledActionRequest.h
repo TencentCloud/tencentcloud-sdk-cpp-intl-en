@@ -93,27 +93,6 @@ namespace TencentCloud
                     bool ScheduledActionNameHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * @return MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * 
-                     */
-                    uint64_t GetMaxSize() const;
-
-                    /**
-                     * 设置The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * @param _maxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * 
-                     */
-                    void SetMaxSize(const uint64_t& _maxSize);
-
-                    /**
-                     * 判断参数 MaxSize 是否已赋值
-                     * @return MaxSize 是否已赋值
-                     * 
-                     */
-                    bool MaxSizeHasBeenSet() const;
-
-                    /**
                      * 获取The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * @return MinSize The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * 
@@ -133,6 +112,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MinSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * @return StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * @param _startTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The desired number of instances set for the auto scaling group when the scheduled task is triggered.
@@ -156,25 +156,25 @@ namespace TencentCloud
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-                     * @return StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 获取The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * @return MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * 
                      */
-                    std::string GetStartTime() const;
+                    uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-                     * @param _startTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 设置The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * @param _maxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * 
                      */
-                    void SetStartTime(const std::string& _startTime);
+                    void SetMaxSize(const uint64_t& _maxSize);
 
                     /**
-                     * 判断参数 StartTime 是否已赋值
-                     * @return StartTime 是否已赋值
+                     * 判断参数 MaxSize 是否已赋值
+                     * @return MaxSize 是否已赋值
                      * 
                      */
-                    bool StartTimeHasBeenSet() const;
+                    bool MaxSizeHasBeenSet() const;
 
                     /**
                      * 获取End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br><br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
@@ -218,6 +218,51 @@ namespace TencentCloud
                      */
                     bool RecurrenceHasBeenSet() const;
 
+                    /**
+                     * 获取Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+                     * @return DisableUpdateDesiredCapacity Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+                     * 
+                     */
+                    bool GetDisableUpdateDesiredCapacity() const;
+
+                    /**
+                     * 设置Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+                     * @param _disableUpdateDesiredCapacity Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+                     * 
+                     */
+                    void SetDisableUpdateDesiredCapacity(const bool& _disableUpdateDesiredCapacity);
+
+                    /**
+                     * 判断参数 DisableUpdateDesiredCapacity 是否已赋值
+                     * @return DisableUpdateDesiredCapacity 是否已赋值
+                     * 
+                     */
+                    bool DisableUpdateDesiredCapacityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,16 +280,16 @@ namespace TencentCloud
                     bool m_scheduledActionNameHasBeenSet;
 
                     /**
-                     * The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     */
-                    uint64_t m_maxSize;
-                    bool m_maxSizeHasBeenSet;
-
-                    /**
                      * The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
                      */
                     uint64_t m_minSize;
                     bool m_minSizeHasBeenSet;
+
+                    /**
+                     * Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
 
                     /**
                      * The desired number of instances set for the auto scaling group when the scheduled task is triggered.
@@ -253,10 +298,10 @@ namespace TencentCloud
                     bool m_desiredCapacityHasBeenSet;
 
                     /**
-                     * Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
                      */
-                    std::string m_startTime;
-                    bool m_startTimeHasBeenSet;
+                    uint64_t m_maxSize;
+                    bool m_maxSizeHasBeenSet;
 
                     /**
                      * End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br><br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
@@ -269,6 +314,18 @@ namespace TencentCloud
                      */
                     std::string m_recurrence;
                     bool m_recurrenceHasBeenSet;
+
+                    /**
+                     * Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+                     */
+                    bool m_disableUpdateDesiredCapacity;
+                    bool m_disableUpdateDesiredCapacityHasBeenSet;
 
                 };
             }

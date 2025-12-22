@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Input type, optional URL/COS, currently only supports URL
+
+                     * @return Type Input type, optional URL/COS, currently only supports URL
+
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Input type, optional URL/COS, currently only supports URL
+
+                     * @param _type Input type, optional URL/COS, currently only supports URL
+
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UrlInputInfo 
+                     * 获取URL input information
+                     * @return UrlInputInfo URL input information
                      * 
                      */
                     UrlInputInfo GetUrlInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _urlInputInfo 
+                     * 设置URL input information
+                     * @param _urlInputInfo URL input information
                      * 
                      */
                     void SetUrlInputInfo(const UrlInputInfo& _urlInputInfo);
@@ -92,13 +96,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input type, optional URL/COS, currently only supports URL
+
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * URL input information
                      */
                     UrlInputInfo m_urlInputInfo;
                     bool m_urlInputInfoHasBeenSet;

@@ -89,6 +89,48 @@ namespace TencentCloud
                      */
                     bool Pipeline1HasBeenSet() const;
 
+                    /**
+                     * 获取Pipeline 0 total active alarm count
+                     * @return PipelineAActiveAlerts Pipeline 0 total active alarm count
+                     * 
+                     */
+                    int64_t GetPipelineAActiveAlerts() const;
+
+                    /**
+                     * 设置Pipeline 0 total active alarm count
+                     * @param _pipelineAActiveAlerts Pipeline 0 total active alarm count
+                     * 
+                     */
+                    void SetPipelineAActiveAlerts(const int64_t& _pipelineAActiveAlerts);
+
+                    /**
+                     * 判断参数 PipelineAActiveAlerts 是否已赋值
+                     * @return PipelineAActiveAlerts 是否已赋值
+                     * 
+                     */
+                    bool PipelineAActiveAlertsHasBeenSet() const;
+
+                    /**
+                     * 获取Pipeline 1 total active alarm count
+                     * @return PipelineBActiveAlerts Pipeline 1 total active alarm count
+                     * 
+                     */
+                    int64_t GetPipelineBActiveAlerts() const;
+
+                    /**
+                     * 设置Pipeline 1 total active alarm count
+                     * @param _pipelineBActiveAlerts Pipeline 1 total active alarm count
+                     * 
+                     */
+                    void SetPipelineBActiveAlerts(const int64_t& _pipelineBActiveAlerts);
+
+                    /**
+                     * 判断参数 PipelineBActiveAlerts 是否已赋值
+                     * @return PipelineBActiveAlerts 是否已赋值
+                     * 
+                     */
+                    bool PipelineBActiveAlertsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +144,18 @@ namespace TencentCloud
                      */
                     std::vector<ChannelPipelineAlerts> m_pipeline1;
                     bool m_pipeline1HasBeenSet;
+
+                    /**
+                     * Pipeline 0 total active alarm count
+                     */
+                    int64_t m_pipelineAActiveAlerts;
+                    bool m_pipelineAActiveAlertsHasBeenSet;
+
+                    /**
+                     * Pipeline 1 total active alarm count
+                     */
+                    int64_t m_pipelineBActiveAlerts;
+                    bool m_pipelineBActiveAlertsHasBeenSet;
 
                 };
             }
