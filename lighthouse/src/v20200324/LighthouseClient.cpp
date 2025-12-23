@@ -240,6 +240,56 @@ LighthouseClient::AttachDisksOutcomeCallable LighthouseClient::AttachDisksCallab
     return prom->get_future();
 }
 
+LighthouseClient::CancelShareBlueprintAcrossAccountsOutcome LighthouseClient::CancelShareBlueprintAcrossAccounts(const CancelShareBlueprintAcrossAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CancelShareBlueprintAcrossAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CancelShareBlueprintAcrossAccountsResponse rsp = CancelShareBlueprintAcrossAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CancelShareBlueprintAcrossAccountsOutcome(rsp);
+        else
+            return CancelShareBlueprintAcrossAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return CancelShareBlueprintAcrossAccountsOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::CancelShareBlueprintAcrossAccountsAsync(const CancelShareBlueprintAcrossAccountsRequest& request, const CancelShareBlueprintAcrossAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CancelShareBlueprintAcrossAccountsRequest&;
+    using Resp = CancelShareBlueprintAcrossAccountsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CancelShareBlueprintAcrossAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::CancelShareBlueprintAcrossAccountsOutcomeCallable LighthouseClient::CancelShareBlueprintAcrossAccountsCallable(const CancelShareBlueprintAcrossAccountsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CancelShareBlueprintAcrossAccountsOutcome>>();
+    CancelShareBlueprintAcrossAccountsAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const CancelShareBlueprintAcrossAccountsRequest&,
+        CancelShareBlueprintAcrossAccountsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LighthouseClient::CreateBlueprintOutcome LighthouseClient::CreateBlueprint(const CreateBlueprintRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateBlueprint");
@@ -2990,6 +3040,56 @@ LighthouseClient::ModifyFirewallRulesOutcomeCallable LighthouseClient::ModifyFir
     return prom->get_future();
 }
 
+LighthouseClient::ModifyImageSharePermissionOutcome LighthouseClient::ModifyImageSharePermission(const ModifyImageSharePermissionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyImageSharePermission");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyImageSharePermissionResponse rsp = ModifyImageSharePermissionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyImageSharePermissionOutcome(rsp);
+        else
+            return ModifyImageSharePermissionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyImageSharePermissionOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::ModifyImageSharePermissionAsync(const ModifyImageSharePermissionRequest& request, const ModifyImageSharePermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyImageSharePermissionRequest&;
+    using Resp = ModifyImageSharePermissionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyImageSharePermission", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::ModifyImageSharePermissionOutcomeCallable LighthouseClient::ModifyImageSharePermissionCallable(const ModifyImageSharePermissionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyImageSharePermissionOutcome>>();
+    ModifyImageSharePermissionAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const ModifyImageSharePermissionRequest&,
+        ModifyImageSharePermissionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LighthouseClient::ModifyInstancesAttributeOutcome LighthouseClient::ModifyInstancesAttribute(const ModifyInstancesAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyInstancesAttribute");
@@ -3632,6 +3732,56 @@ LighthouseClient::StopInstancesOutcomeCallable LighthouseClient::StopInstancesCa
         const LighthouseClient*,
         const StopInstancesRequest&,
         StopInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+LighthouseClient::SyncBlueprintOutcome LighthouseClient::SyncBlueprint(const SyncBlueprintRequest &request)
+{
+    auto outcome = MakeRequest(request, "SyncBlueprint");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SyncBlueprintResponse rsp = SyncBlueprintResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SyncBlueprintOutcome(rsp);
+        else
+            return SyncBlueprintOutcome(o.GetError());
+    }
+    else
+    {
+        return SyncBlueprintOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::SyncBlueprintAsync(const SyncBlueprintRequest& request, const SyncBlueprintAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SyncBlueprintRequest&;
+    using Resp = SyncBlueprintResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SyncBlueprint", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::SyncBlueprintOutcomeCallable LighthouseClient::SyncBlueprintCallable(const SyncBlueprintRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SyncBlueprintOutcome>>();
+    SyncBlueprintAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const SyncBlueprintRequest&,
+        SyncBlueprintOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

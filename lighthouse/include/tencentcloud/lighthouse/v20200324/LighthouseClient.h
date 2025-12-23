@@ -31,6 +31,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/AttachCcnResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/AttachDisksRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/AttachDisksResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/CancelShareBlueprintAcrossAccountsRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/CancelShareBlueprintAcrossAccountsResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateBlueprintRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateBlueprintResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateDisksRequest.h>
@@ -141,6 +143,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/ModifyFirewallRuleDescriptionResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyFirewallRulesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyFirewallRulesResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/ModifyImageSharePermissionRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/ModifyImageSharePermissionResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleRequest.h>
@@ -167,6 +171,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/StartInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/StopInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/StopInstancesResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/SyncBlueprintRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/SyncBlueprintResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/TerminateDisksRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/TerminateDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/TerminateInstancesRequest.h>
@@ -197,6 +203,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AttachDisksResponse> AttachDisksOutcome;
                 typedef std::future<AttachDisksOutcome> AttachDisksOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::AttachDisksRequest&, AttachDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelShareBlueprintAcrossAccountsResponse> CancelShareBlueprintAcrossAccountsOutcome;
+                typedef std::future<CancelShareBlueprintAcrossAccountsOutcome> CancelShareBlueprintAcrossAccountsOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::CancelShareBlueprintAcrossAccountsRequest&, CancelShareBlueprintAcrossAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelShareBlueprintAcrossAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBlueprintResponse> CreateBlueprintOutcome;
                 typedef std::future<CreateBlueprintOutcome> CreateBlueprintOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::CreateBlueprintRequest&, CreateBlueprintOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBlueprintAsyncHandler;
@@ -362,6 +371,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyFirewallRulesResponse> ModifyFirewallRulesOutcome;
                 typedef std::future<ModifyFirewallRulesOutcome> ModifyFirewallRulesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyFirewallRulesRequest&, ModifyFirewallRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFirewallRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyImageSharePermissionResponse> ModifyImageSharePermissionOutcome;
+                typedef std::future<ModifyImageSharePermissionOutcome> ModifyImageSharePermissionOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::ModifyImageSharePermissionRequest&, ModifyImageSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageSharePermissionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
                 typedef std::future<ModifyInstancesAttributeOutcome> ModifyInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesAttributeRequest&, ModifyInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesAttributeAsyncHandler;
@@ -401,6 +413,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StopInstancesResponse> StopInstancesOutcome;
                 typedef std::future<StopInstancesOutcome> StopInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::StopInstancesRequest&, StopInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::SyncBlueprintResponse> SyncBlueprintOutcome;
+                typedef std::future<SyncBlueprintOutcome> SyncBlueprintOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::SyncBlueprintRequest&, SyncBlueprintOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncBlueprintAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateDisksResponse> TerminateDisksOutcome;
                 typedef std::future<TerminateDisksOutcome> TerminateDisksOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::TerminateDisksRequest&, TerminateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDisksAsyncHandler;
@@ -454,6 +469,16 @@ namespace TencentCloud
                 AttachDisksOutcome AttachDisks(const Model::AttachDisksRequest &request);
                 void AttachDisksAsync(const Model::AttachDisksRequest& request, const AttachDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AttachDisksOutcomeCallable AttachDisksCallable(const Model::AttachDisksRequest& request);
+
+                /**
+                 *This API is used to cancel image sharing across accounts.
+An image to be canceled sharing must be a custom image that is originally shared from another account to your account.
+                 * @param req CancelShareBlueprintAcrossAccountsRequest
+                 * @return CancelShareBlueprintAcrossAccountsOutcome
+                 */
+                CancelShareBlueprintAcrossAccountsOutcome CancelShareBlueprintAcrossAccounts(const Model::CancelShareBlueprintAcrossAccountsRequest &request);
+                void CancelShareBlueprintAcrossAccountsAsync(const Model::CancelShareBlueprintAcrossAccountsRequest& request, const CancelShareBlueprintAcrossAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelShareBlueprintAcrossAccountsOutcomeCallable CancelShareBlueprintAcrossAccountsCallable(const Model::CancelShareBlueprintAcrossAccountsRequest& request);
 
                 /**
                  *This API is used to create an image.
@@ -1024,6 +1049,22 @@ In the `FirewallRules` parameter:
                 ModifyFirewallRulesOutcomeCallable ModifyFirewallRulesCallable(const Model::ModifyFirewallRulesRequest& request);
 
                 /**
+                 *This API is used to share and cancel sharing of CVM custom images to the Lighthouse service.
+Sharing CVM images to Lighthouse requires the following conditions to be met:
+1. Images that have been shared cannot be shared again.
+2. Images imported from external sources are not supported for sharing.
+3. Full-instance images are not supported for sharing.
+4. Images need to support CloudInit to be eligible for sharing.
+5. The Platform and OsName of the images must meet the sharing conditions before the images are eligible for sharing.
+6. Only images in the NORMAL status are supported for sharing.
+                 * @param req ModifyImageSharePermissionRequest
+                 * @return ModifyImageSharePermissionOutcome
+                 */
+                ModifyImageSharePermissionOutcome ModifyImageSharePermission(const Model::ModifyImageSharePermissionRequest &request);
+                void ModifyImageSharePermissionAsync(const Model::ModifyImageSharePermissionRequest& request, const ModifyImageSharePermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyImageSharePermissionOutcomeCallable ModifyImageSharePermissionCallable(const Model::ModifyImageSharePermissionRequest& request);
+
+                /**
                  *This API is used to modify an instance attribute. 
 * The instance name is used only for users’ convenience. 
 * Batch operations are supported. The maximum number of instances in each request is 100.
@@ -1181,6 +1222,21 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
                 StopInstancesOutcome StopInstances(const Model::StopInstancesRequest &request);
                 void StopInstancesAsync(const Model::StopInstancesRequest& request, const StopInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopInstancesOutcomeCallable StopInstancesCallable(const Model::StopInstancesRequest& request);
+
+                /**
+                 *This API is used to synchronize a custom image to other regions.
+
+* Synchronization to multiple regions is supported. Up to 10 regions are supported.
+* Synchronization to the source region is not supported.
+* Only images in the NORMAL status are supported for synchronization.
+* Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
+ * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+                 * @param req SyncBlueprintRequest
+                 * @return SyncBlueprintOutcome
+                 */
+                SyncBlueprintOutcome SyncBlueprint(const Model::SyncBlueprintRequest &request);
+                void SyncBlueprintAsync(const Model::SyncBlueprintRequest& request, const SyncBlueprintAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SyncBlueprintOutcomeCallable SyncBlueprintCallable(const Model::SyncBlueprintRequest& request);
 
                 /**
                  *This API is used to terminate one or more cloud disk.

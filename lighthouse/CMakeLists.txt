@@ -46,6 +46,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/SystemDisk.h
   include/tencentcloud/lighthouse/v20200324/model/ResetInstanceBlueprint.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeBundlesResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/ModifyImageSharePermissionResponse.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleRequest.h
   include/tencentcloud/lighthouse/v20200324/model/InstancePriceDetail.h
   include/tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesRequest.h
@@ -58,7 +59,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/ResetAttachCcnRequest.h
   include/tencentcloud/lighthouse/v20200324/model/CreateDisksRequest.h
   include/tencentcloud/lighthouse/v20200324/model/AttachDisksRequest.h
-  include/tencentcloud/lighthouse/v20200324/model/ImportKeyPairResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/CancelShareBlueprintAcrossAccountsResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeSnapshotsRequest.h
   include/tencentcloud/lighthouse/v20200324/model/TerminateDisksResponse.h
   include/tencentcloud/lighthouse/v20200324/model/KeyPair.h
@@ -67,7 +68,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeRequest.h
   include/tencentcloud/lighthouse/v20200324/model/InquirePriceRenewDisksRequest.h
   include/tencentcloud/lighthouse/v20200324/model/Disk.h
-  include/tencentcloud/lighthouse/v20200324/model/ZoneInfo.h
+  include/tencentcloud/lighthouse/v20200324/model/DestinationRegionBlueprint.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeBlueprintInstancesRequest.h
   include/tencentcloud/lighthouse/v20200324/model/ApplyInstanceSnapshotResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DetachDisksRequest.h
@@ -77,7 +78,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlRequest.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyFirewallRuleDescriptionRequest.h
   include/tencentcloud/lighthouse/v20200324/model/InstanceTrafficPackage.h
-  include/tencentcloud/lighthouse/v20200324/model/StartInstancesResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/ModifyImageSharePermissionRequest.h
   include/tencentcloud/lighthouse/v20200324/model/TerminateInstancesResponse.h
   include/tencentcloud/lighthouse/v20200324/model/TrafficPackage.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeInstancesDiskNumRequest.h
@@ -104,6 +105,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/DataDiskPrice.h
   include/tencentcloud/lighthouse/v20200324/model/SceneInfo.h
   include/tencentcloud/lighthouse/v20200324/model/ImportKeyPairRequest.h
+  include/tencentcloud/lighthouse/v20200324/model/ImportKeyPairResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DeleteBlueprintsResponse.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyInstancesLoginKeyPairAttributeRequest.h
   include/tencentcloud/lighthouse/v20200324/model/IsolateInstancesRequest.h
@@ -119,6 +121,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/DescribeBlueprintsResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeKeyPairsRequest.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeCcnAttachedInstancesRequest.h
+  include/tencentcloud/lighthouse/v20200324/model/SyncBlueprintResponse.h
   include/tencentcloud/lighthouse/v20200324/model/ResetInstancesPasswordResponse.h
   include/tencentcloud/lighthouse/v20200324/model/LoginSettings.h
   include/tencentcloud/lighthouse/v20200324/model/Instance.h
@@ -149,10 +152,12 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/Filter.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeSnapshotsResponse.h
   include/tencentcloud/lighthouse/v20200324/model/Snapshot.h
+  include/tencentcloud/lighthouse/v20200324/model/ZoneInfo.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyFirewallRuleDescriptionResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeDiskDiscountRequest.h
   include/tencentcloud/lighthouse/v20200324/model/CreateDisksResponse.h
   include/tencentcloud/lighthouse/v20200324/model/AttachDisksResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/StartInstancesResponse.h
   include/tencentcloud/lighthouse/v20200324/model/CreateFirewallRulesRequest.h
   include/tencentcloud/lighthouse/v20200324/model/Software.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeFirewallRulesResponse.h
@@ -215,10 +220,12 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/AttachDetail.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyDisksAttributeResponse.h
   include/tencentcloud/lighthouse/v20200324/model/CreateInstanceSnapshotRequest.h
+  include/tencentcloud/lighthouse/v20200324/model/CancelShareBlueprintAcrossAccountsRequest.h
   include/tencentcloud/lighthouse/v20200324/model/BlueprintInstance.h
   include/tencentcloud/lighthouse/v20200324/model/InquirePriceCreateDisksResponse.h
   include/tencentcloud/lighthouse/v20200324/model/InstanceChargePrepaid.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/SyncBlueprintRequest.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeResponse.h
   )
 
@@ -251,6 +258,7 @@ set(lighthouse_src
   src/v20200324/model/SystemDisk.cpp
   src/v20200324/model/ResetInstanceBlueprint.cpp
   src/v20200324/model/DescribeBundlesResponse.cpp
+  src/v20200324/model/ModifyImageSharePermissionResponse.cpp
   src/v20200324/model/ModifyInstancesBundleRequest.cpp
   src/v20200324/model/InstancePriceDetail.cpp
   src/v20200324/model/InquirePriceRenewInstancesRequest.cpp
@@ -263,7 +271,7 @@ set(lighthouse_src
   src/v20200324/model/ResetAttachCcnRequest.cpp
   src/v20200324/model/CreateDisksRequest.cpp
   src/v20200324/model/AttachDisksRequest.cpp
-  src/v20200324/model/ImportKeyPairResponse.cpp
+  src/v20200324/model/CancelShareBlueprintAcrossAccountsResponse.cpp
   src/v20200324/model/DescribeSnapshotsRequest.cpp
   src/v20200324/model/TerminateDisksResponse.cpp
   src/v20200324/model/KeyPair.cpp
@@ -272,7 +280,7 @@ set(lighthouse_src
   src/v20200324/model/ModifyBlueprintAttributeRequest.cpp
   src/v20200324/model/InquirePriceRenewDisksRequest.cpp
   src/v20200324/model/Disk.cpp
-  src/v20200324/model/ZoneInfo.cpp
+  src/v20200324/model/DestinationRegionBlueprint.cpp
   src/v20200324/model/DescribeBlueprintInstancesRequest.cpp
   src/v20200324/model/ApplyInstanceSnapshotResponse.cpp
   src/v20200324/model/DetachDisksRequest.cpp
@@ -282,7 +290,7 @@ set(lighthouse_src
   src/v20200324/model/DescribeInstanceVncUrlRequest.cpp
   src/v20200324/model/ModifyFirewallRuleDescriptionRequest.cpp
   src/v20200324/model/InstanceTrafficPackage.cpp
-  src/v20200324/model/StartInstancesResponse.cpp
+  src/v20200324/model/ModifyImageSharePermissionRequest.cpp
   src/v20200324/model/TerminateInstancesResponse.cpp
   src/v20200324/model/TrafficPackage.cpp
   src/v20200324/model/DescribeInstancesDiskNumRequest.cpp
@@ -309,6 +317,7 @@ set(lighthouse_src
   src/v20200324/model/DataDiskPrice.cpp
   src/v20200324/model/SceneInfo.cpp
   src/v20200324/model/ImportKeyPairRequest.cpp
+  src/v20200324/model/ImportKeyPairResponse.cpp
   src/v20200324/model/DeleteBlueprintsResponse.cpp
   src/v20200324/model/ModifyInstancesLoginKeyPairAttributeRequest.cpp
   src/v20200324/model/IsolateInstancesRequest.cpp
@@ -324,6 +333,7 @@ set(lighthouse_src
   src/v20200324/model/DescribeBlueprintsResponse.cpp
   src/v20200324/model/DescribeKeyPairsRequest.cpp
   src/v20200324/model/DescribeCcnAttachedInstancesRequest.cpp
+  src/v20200324/model/SyncBlueprintResponse.cpp
   src/v20200324/model/ResetInstancesPasswordResponse.cpp
   src/v20200324/model/LoginSettings.cpp
   src/v20200324/model/Instance.cpp
@@ -354,10 +364,12 @@ set(lighthouse_src
   src/v20200324/model/Filter.cpp
   src/v20200324/model/DescribeSnapshotsResponse.cpp
   src/v20200324/model/Snapshot.cpp
+  src/v20200324/model/ZoneInfo.cpp
   src/v20200324/model/ModifyFirewallRuleDescriptionResponse.cpp
   src/v20200324/model/DescribeDiskDiscountRequest.cpp
   src/v20200324/model/CreateDisksResponse.cpp
   src/v20200324/model/AttachDisksResponse.cpp
+  src/v20200324/model/StartInstancesResponse.cpp
   src/v20200324/model/CreateFirewallRulesRequest.cpp
   src/v20200324/model/Software.cpp
   src/v20200324/model/DescribeFirewallRulesResponse.cpp
@@ -420,10 +432,12 @@ set(lighthouse_src
   src/v20200324/model/AttachDetail.cpp
   src/v20200324/model/ModifyDisksAttributeResponse.cpp
   src/v20200324/model/CreateInstanceSnapshotRequest.cpp
+  src/v20200324/model/CancelShareBlueprintAcrossAccountsRequest.cpp
   src/v20200324/model/BlueprintInstance.cpp
   src/v20200324/model/InquirePriceCreateDisksResponse.cpp
   src/v20200324/model/InstanceChargePrepaid.cpp
   src/v20200324/model/ModifyInstancesAttributeResponse.cpp
+  src/v20200324/model/SyncBlueprintRequest.cpp
   src/v20200324/model/DescribeInstanceLoginKeyPairAttributeResponse.cpp
   )
 
