@@ -23,7 +23,11 @@ using namespace TencentCloud::Lkeap::V20240522::Model;
 using namespace std;
 
 ReconstructDocumentSSERequest::ReconstructDocumentSSERequest() :
+    m_fileTypeHasBeenSet(false),
+    m_fileUrlHasBeenSet(false),
     m_fileBase64HasBeenSet(false),
+    m_fileStartPageNumberHasBeenSet(false),
+    m_fileEndPageNumberHasBeenSet(false),
     m_configHasBeenSet(false)
 {
 }
@@ -35,12 +39,44 @@ string ReconstructDocumentSSERequest::ToJsonString() const
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
+    if (m_fileTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_fileType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fileUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_fileUrl.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_fileBase64HasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileBase64";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_fileBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fileStartPageNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileStartPageNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_fileStartPageNumber, allocator);
+    }
+
+    if (m_fileEndPageNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileEndPageNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_fileEndPageNumber, allocator);
     }
 
     if (m_configHasBeenSet)
@@ -60,6 +96,38 @@ string ReconstructDocumentSSERequest::ToJsonString() const
 }
 
 
+string ReconstructDocumentSSERequest::GetFileType() const
+{
+    return m_fileType;
+}
+
+void ReconstructDocumentSSERequest::SetFileType(const string& _fileType)
+{
+    m_fileType = _fileType;
+    m_fileTypeHasBeenSet = true;
+}
+
+bool ReconstructDocumentSSERequest::FileTypeHasBeenSet() const
+{
+    return m_fileTypeHasBeenSet;
+}
+
+string ReconstructDocumentSSERequest::GetFileUrl() const
+{
+    return m_fileUrl;
+}
+
+void ReconstructDocumentSSERequest::SetFileUrl(const string& _fileUrl)
+{
+    m_fileUrl = _fileUrl;
+    m_fileUrlHasBeenSet = true;
+}
+
+bool ReconstructDocumentSSERequest::FileUrlHasBeenSet() const
+{
+    return m_fileUrlHasBeenSet;
+}
+
 string ReconstructDocumentSSERequest::GetFileBase64() const
 {
     return m_fileBase64;
@@ -74,6 +142,38 @@ void ReconstructDocumentSSERequest::SetFileBase64(const string& _fileBase64)
 bool ReconstructDocumentSSERequest::FileBase64HasBeenSet() const
 {
     return m_fileBase64HasBeenSet;
+}
+
+int64_t ReconstructDocumentSSERequest::GetFileStartPageNumber() const
+{
+    return m_fileStartPageNumber;
+}
+
+void ReconstructDocumentSSERequest::SetFileStartPageNumber(const int64_t& _fileStartPageNumber)
+{
+    m_fileStartPageNumber = _fileStartPageNumber;
+    m_fileStartPageNumberHasBeenSet = true;
+}
+
+bool ReconstructDocumentSSERequest::FileStartPageNumberHasBeenSet() const
+{
+    return m_fileStartPageNumberHasBeenSet;
+}
+
+int64_t ReconstructDocumentSSERequest::GetFileEndPageNumber() const
+{
+    return m_fileEndPageNumber;
+}
+
+void ReconstructDocumentSSERequest::SetFileEndPageNumber(const int64_t& _fileEndPageNumber)
+{
+    m_fileEndPageNumber = _fileEndPageNumber;
+    m_fileEndPageNumberHasBeenSet = true;
+}
+
+bool ReconstructDocumentSSERequest::FileEndPageNumberHasBeenSet() const
+{
+    return m_fileEndPageNumberHasBeenSet;
 }
 
 ReconstructDocumentSSEConfig ReconstructDocumentSSERequest::GetConfig() const

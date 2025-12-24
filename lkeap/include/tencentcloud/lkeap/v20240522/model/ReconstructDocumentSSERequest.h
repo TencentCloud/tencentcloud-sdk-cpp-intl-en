@@ -44,6 +44,68 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取File type.
+**Supported file types**: PDF, DOC, DOCX, PPT, PPTX, MD, TXT, XLS, XLSX, CSV, PNG, JPG, JPEG, BMP, GIF, WEBP, HEIC, EPS, ICNS, IM, PCX, PPM, TIFF, XBM, HEIF, JP2.
+**Supported file sizes**: 
+- Max 100 MB for PDF, DOC, DOCX, PPT, and PPTX .
+- Max 10 MB for MD, TXT, XLS, XLSX, and CSV.
+- Max20 MB for others.
+                     * @return FileType File type.
+**Supported file types**: PDF, DOC, DOCX, PPT, PPTX, MD, TXT, XLS, XLSX, CSV, PNG, JPG, JPEG, BMP, GIF, WEBP, HEIC, EPS, ICNS, IM, PCX, PPM, TIFF, XBM, HEIF, JP2.
+**Supported file sizes**: 
+- Max 100 MB for PDF, DOC, DOCX, PPT, and PPTX .
+- Max 10 MB for MD, TXT, XLS, XLSX, and CSV.
+- Max20 MB for others.
+                     * 
+                     */
+                    std::string GetFileType() const;
+
+                    /**
+                     * 设置File type.
+**Supported file types**: PDF, DOC, DOCX, PPT, PPTX, MD, TXT, XLS, XLSX, CSV, PNG, JPG, JPEG, BMP, GIF, WEBP, HEIC, EPS, ICNS, IM, PCX, PPM, TIFF, XBM, HEIF, JP2.
+**Supported file sizes**: 
+- Max 100 MB for PDF, DOC, DOCX, PPT, and PPTX .
+- Max 10 MB for MD, TXT, XLS, XLSX, and CSV.
+- Max20 MB for others.
+                     * @param _fileType File type.
+**Supported file types**: PDF, DOC, DOCX, PPT, PPTX, MD, TXT, XLS, XLSX, CSV, PNG, JPG, JPEG, BMP, GIF, WEBP, HEIC, EPS, ICNS, IM, PCX, PPM, TIFF, XBM, HEIF, JP2.
+**Supported file sizes**: 
+- Max 100 MB for PDF, DOC, DOCX, PPT, and PPTX .
+- Max 10 MB for MD, TXT, XLS, XLSX, and CSV.
+- Max20 MB for others.
+                     * 
+                     */
+                    void SetFileType(const std::string& _fileType);
+
+                    /**
+                     * 判断参数 FileType 是否已赋值
+                     * @return FileType 是否已赋值
+                     * 
+                     */
+                    bool FileTypeHasBeenSet() const;
+
+                    /**
+                     * 获取File URL. It is recommended to store the file in Tencent Cloud as the URL where the file is stored in Tencent Cloud can ensure higher download speed and stability. External URL may affect the speed and stability. Refer to: [Tencent Cloud COS Documentation](https://www.tencentcloud.com/document/product/436/7749)
+                     * @return FileUrl File URL. It is recommended to store the file in Tencent Cloud as the URL where the file is stored in Tencent Cloud can ensure higher download speed and stability. External URL may affect the speed and stability. Refer to: [Tencent Cloud COS Documentation](https://www.tencentcloud.com/document/product/436/7749)
+                     * 
+                     */
+                    std::string GetFileUrl() const;
+
+                    /**
+                     * 设置File URL. It is recommended to store the file in Tencent Cloud as the URL where the file is stored in Tencent Cloud can ensure higher download speed and stability. External URL may affect the speed and stability. Refer to: [Tencent Cloud COS Documentation](https://www.tencentcloud.com/document/product/436/7749)
+                     * @param _fileUrl File URL. It is recommended to store the file in Tencent Cloud as the URL where the file is stored in Tencent Cloud can ensure higher download speed and stability. External URL may affect the speed and stability. Refer to: [Tencent Cloud COS Documentation](https://www.tencentcloud.com/document/product/436/7749)
+                     * 
+                     */
+                    void SetFileUrl(const std::string& _fileUrl);
+
+                    /**
+                     * 判断参数 FileUrl 是否已赋值
+                     * @return FileUrl 是否已赋值
+                     * 
+                     */
+                    bool FileUrlHasBeenSet() const;
+
+                    /**
                      * 获取The base64 value of the file. File size limit: the downloaded file shall not exceed 8MB after base64 encoding. File download time does not exceed 3 seconds. Supported image pixels: the length of a single side is between 20-10000px. Either FileUrl or FileBase64 of the file must be provided. If both are provided, only the FileUrl is used.
                      * @return FileBase64 The base64 value of the file. File size limit: the downloaded file shall not exceed 8MB after base64 encoding. File download time does not exceed 3 seconds. Supported image pixels: the length of a single side is between 20-10000px. Either FileUrl or FileBase64 of the file must be provided. If both are provided, only the FileUrl is used.
                      * 
@@ -63,6 +125,48 @@ namespace TencentCloud
                      * 
                      */
                     bool FileBase64HasBeenSet() const;
+
+                    /**
+                     * 获取The starting page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the starting page number for recognition, including the current value.
+                     * @return FileStartPageNumber The starting page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the starting page number for recognition, including the current value.
+                     * 
+                     */
+                    int64_t GetFileStartPageNumber() const;
+
+                    /**
+                     * 设置The starting page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the starting page number for recognition, including the current value.
+                     * @param _fileStartPageNumber The starting page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the starting page number for recognition, including the current value.
+                     * 
+                     */
+                    void SetFileStartPageNumber(const int64_t& _fileStartPageNumber);
+
+                    /**
+                     * 判断参数 FileStartPageNumber 是否已赋值
+                     * @return FileStartPageNumber 是否已赋值
+                     * 
+                     */
+                    bool FileStartPageNumberHasBeenSet() const;
+
+                    /**
+                     * 获取The end page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the end page number for recognition, including the current value.
+                     * @return FileEndPageNumber The end page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the end page number for recognition, including the current value.
+                     * 
+                     */
+                    int64_t GetFileEndPageNumber() const;
+
+                    /**
+                     * 设置The end page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the end page number for recognition, including the current value.
+                     * @param _fileEndPageNumber The end page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the end page number for recognition, including the current value.
+                     * 
+                     */
+                    void SetFileEndPageNumber(const int64_t& _fileEndPageNumber);
+
+                    /**
+                     * 判断参数 FileEndPageNumber 是否已赋值
+                     * @return FileEndPageNumber 是否已赋值
+                     * 
+                     */
+                    bool FileEndPageNumberHasBeenSet() const;
 
                     /**
                      * 获取Document parsing configuration information.	
@@ -88,10 +192,39 @@ namespace TencentCloud
                 private:
 
                     /**
+                     * File type.
+**Supported file types**: PDF, DOC, DOCX, PPT, PPTX, MD, TXT, XLS, XLSX, CSV, PNG, JPG, JPEG, BMP, GIF, WEBP, HEIC, EPS, ICNS, IM, PCX, PPM, TIFF, XBM, HEIF, JP2.
+**Supported file sizes**: 
+- Max 100 MB for PDF, DOC, DOCX, PPT, and PPTX .
+- Max 10 MB for MD, TXT, XLS, XLSX, and CSV.
+- Max20 MB for others.
+                     */
+                    std::string m_fileType;
+                    bool m_fileTypeHasBeenSet;
+
+                    /**
+                     * File URL. It is recommended to store the file in Tencent Cloud as the URL where the file is stored in Tencent Cloud can ensure higher download speed and stability. External URL may affect the speed and stability. Refer to: [Tencent Cloud COS Documentation](https://www.tencentcloud.com/document/product/436/7749)
+                     */
+                    std::string m_fileUrl;
+                    bool m_fileUrlHasBeenSet;
+
+                    /**
                      * The base64 value of the file. File size limit: the downloaded file shall not exceed 8MB after base64 encoding. File download time does not exceed 3 seconds. Supported image pixels: the length of a single side is between 20-10000px. Either FileUrl or FileBase64 of the file must be provided. If both are provided, only the FileUrl is used.
                      */
                     std::string m_fileBase64;
                     bool m_fileBase64HasBeenSet;
+
+                    /**
+                     * The starting page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the starting page number for recognition, including the current value.
+                     */
+                    int64_t m_fileStartPageNumber;
+                    bool m_fileStartPageNumberHasBeenSet;
+
+                    /**
+                     * The end page number of the file. When type of the uploaded file is pdf, doc, docx, ppt, or pptx, it specifies the end page number for recognition, including the current value.
+                     */
+                    int64_t m_fileEndPageNumber;
+                    bool m_fileEndPageNumberHasBeenSet;
 
                     /**
                      * Document parsing configuration information.	

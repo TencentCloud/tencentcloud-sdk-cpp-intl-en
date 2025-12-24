@@ -1490,6 +1490,56 @@ LighthouseClient::DescribeGeneralResourceQuotasOutcomeCallable LighthouseClient:
     return prom->get_future();
 }
 
+LighthouseClient::DescribeImagesToShareOutcome LighthouseClient::DescribeImagesToShare(const DescribeImagesToShareRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeImagesToShare");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeImagesToShareResponse rsp = DescribeImagesToShareResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeImagesToShareOutcome(rsp);
+        else
+            return DescribeImagesToShareOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeImagesToShareOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::DescribeImagesToShareAsync(const DescribeImagesToShareRequest& request, const DescribeImagesToShareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeImagesToShareRequest&;
+    using Resp = DescribeImagesToShareResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeImagesToShare", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::DescribeImagesToShareOutcomeCallable LighthouseClient::DescribeImagesToShareCallable(const DescribeImagesToShareRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeImagesToShareOutcome>>();
+    DescribeImagesToShareAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const DescribeImagesToShareRequest&,
+        DescribeImagesToShareOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LighthouseClient::DescribeInstanceLoginKeyPairAttributeOutcome LighthouseClient::DescribeInstanceLoginKeyPairAttribute(const DescribeInstanceLoginKeyPairAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceLoginKeyPairAttribute");
@@ -3632,6 +3682,106 @@ LighthouseClient::ResetInstancesPasswordOutcomeCallable LighthouseClient::ResetI
         const LighthouseClient*,
         const ResetInstancesPasswordRequest&,
         ResetInstancesPasswordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+LighthouseClient::ResizeDisksOutcome LighthouseClient::ResizeDisks(const ResizeDisksRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResizeDisks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResizeDisksResponse rsp = ResizeDisksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResizeDisksOutcome(rsp);
+        else
+            return ResizeDisksOutcome(o.GetError());
+    }
+    else
+    {
+        return ResizeDisksOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::ResizeDisksAsync(const ResizeDisksRequest& request, const ResizeDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResizeDisksRequest&;
+    using Resp = ResizeDisksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResizeDisks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::ResizeDisksOutcomeCallable LighthouseClient::ResizeDisksCallable(const ResizeDisksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResizeDisksOutcome>>();
+    ResizeDisksAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const ResizeDisksRequest&,
+        ResizeDisksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+LighthouseClient::ShareBlueprintAcrossAccountsOutcome LighthouseClient::ShareBlueprintAcrossAccounts(const ShareBlueprintAcrossAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ShareBlueprintAcrossAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ShareBlueprintAcrossAccountsResponse rsp = ShareBlueprintAcrossAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ShareBlueprintAcrossAccountsOutcome(rsp);
+        else
+            return ShareBlueprintAcrossAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return ShareBlueprintAcrossAccountsOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::ShareBlueprintAcrossAccountsAsync(const ShareBlueprintAcrossAccountsRequest& request, const ShareBlueprintAcrossAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ShareBlueprintAcrossAccountsRequest&;
+    using Resp = ShareBlueprintAcrossAccountsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ShareBlueprintAcrossAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LighthouseClient::ShareBlueprintAcrossAccountsOutcomeCallable LighthouseClient::ShareBlueprintAcrossAccountsCallable(const ShareBlueprintAcrossAccountsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ShareBlueprintAcrossAccountsOutcome>>();
+    ShareBlueprintAcrossAccountsAsync(
+    request,
+    [prom](
+        const LighthouseClient*,
+        const ShareBlueprintAcrossAccountsRequest&,
+        ShareBlueprintAcrossAccountsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

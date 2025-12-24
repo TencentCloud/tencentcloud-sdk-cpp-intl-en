@@ -81,6 +81,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/DescribeFirewallRulesTemplateResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeGeneralResourceQuotasRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeGeneralResourceQuotasResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/DescribeImagesToShareRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/DescribeImagesToShareResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlRequest.h>
@@ -167,6 +169,10 @@
 #include <tencentcloud/lighthouse/v20200324/model/ResetInstanceResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ResetInstancesPasswordRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ResetInstancesPasswordResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/ResizeDisksRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/ResizeDisksResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/ShareBlueprintAcrossAccountsRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/ShareBlueprintAcrossAccountsResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/StartInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/StartInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/StopInstancesRequest.h>
@@ -278,6 +284,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGeneralResourceQuotasResponse> DescribeGeneralResourceQuotasOutcome;
                 typedef std::future<DescribeGeneralResourceQuotasOutcome> DescribeGeneralResourceQuotasOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeGeneralResourceQuotasRequest&, DescribeGeneralResourceQuotasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGeneralResourceQuotasAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImagesToShareResponse> DescribeImagesToShareOutcome;
+                typedef std::future<DescribeImagesToShareOutcome> DescribeImagesToShareOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::DescribeImagesToShareRequest&, DescribeImagesToShareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImagesToShareAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttributeOutcome;
                 typedef std::future<DescribeInstanceLoginKeyPairAttributeOutcome> DescribeInstanceLoginKeyPairAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeInstanceLoginKeyPairAttributeRequest&, DescribeInstanceLoginKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceLoginKeyPairAttributeAsyncHandler;
@@ -407,6 +416,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetInstancesPasswordResponse> ResetInstancesPasswordOutcome;
                 typedef std::future<ResetInstancesPasswordOutcome> ResetInstancesPasswordOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ResetInstancesPasswordRequest&, ResetInstancesPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstancesPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResizeDisksResponse> ResizeDisksOutcome;
+                typedef std::future<ResizeDisksOutcome> ResizeDisksOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::ResizeDisksRequest&, ResizeDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResizeDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ShareBlueprintAcrossAccountsResponse> ShareBlueprintAcrossAccountsOutcome;
+                typedef std::future<ShareBlueprintAcrossAccountsOutcome> ShareBlueprintAcrossAccountsOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::ShareBlueprintAcrossAccountsRequest&, ShareBlueprintAcrossAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ShareBlueprintAcrossAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartInstancesResponse> StartInstancesOutcome;
                 typedef std::future<StartInstancesOutcome> StartInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::StartInstancesRequest&, StartInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartInstancesAsyncHandler;
@@ -715,6 +730,15 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
                 DescribeGeneralResourceQuotasOutcome DescribeGeneralResourceQuotas(const Model::DescribeGeneralResourceQuotasRequest &request);
                 void DescribeGeneralResourceQuotasAsync(const Model::DescribeGeneralResourceQuotasRequest& request, const DescribeGeneralResourceQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeGeneralResourceQuotasOutcomeCallable DescribeGeneralResourceQuotasCallable(const Model::DescribeGeneralResourceQuotasRequest& request);
+
+                /**
+                 *This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
+                 * @param req DescribeImagesToShareRequest
+                 * @return DescribeImagesToShareOutcome
+                 */
+                DescribeImagesToShareOutcome DescribeImagesToShare(const Model::DescribeImagesToShareRequest &request);
+                void DescribeImagesToShareAsync(const Model::DescribeImagesToShareRequest& request, const DescribeImagesToShareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImagesToShareOutcomeCallable DescribeImagesToShareCallable(const Model::DescribeImagesToShareRequest& request);
 
                 /**
                  *This API is used to query the attributes of the default login key of an instance.
@@ -1195,6 +1219,26 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
                 ResetInstancesPasswordOutcome ResetInstancesPassword(const Model::ResetInstancesPasswordRequest &request);
                 void ResetInstancesPasswordAsync(const Model::ResetInstancesPasswordRequest& request, const ResetInstancesPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetInstancesPasswordOutcomeCallable ResetInstancesPasswordCallable(const Model::ResetInstancesPasswordRequest& request);
+
+                /**
+                 *This API is used to scale out a cloud disk. The operation currently only supports cloud disks of the data disk type that are in the ATTACHED or UNATTACHED status.
+                 * @param req ResizeDisksRequest
+                 * @return ResizeDisksOutcome
+                 */
+                ResizeDisksOutcome ResizeDisks(const Model::ResizeDisksRequest &request);
+                void ResizeDisksAsync(const Model::ResizeDisksRequest& request, const ResizeDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResizeDisksOutcomeCallable ResizeDisksCallable(const Model::ResizeDisksRequest& request);
+
+                /**
+                 *This API is used to share an image across accounts.
+This API is used to share custom images only, and the status of the shared image must be NORMAL.
+The account receiving the shared image must be a root account.
+                 * @param req ShareBlueprintAcrossAccountsRequest
+                 * @return ShareBlueprintAcrossAccountsOutcome
+                 */
+                ShareBlueprintAcrossAccountsOutcome ShareBlueprintAcrossAccounts(const Model::ShareBlueprintAcrossAccountsRequest &request);
+                void ShareBlueprintAcrossAccountsAsync(const Model::ShareBlueprintAcrossAccountsRequest& request, const ShareBlueprintAcrossAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ShareBlueprintAcrossAccountsOutcomeCallable ShareBlueprintAcrossAccountsCallable(const Model::ShareBlueprintAcrossAccountsRequest& request);
 
                 /**
                  *This API is used to start one or more instances.
