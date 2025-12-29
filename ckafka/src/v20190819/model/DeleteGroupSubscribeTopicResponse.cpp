@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupSubscribeTopicResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeCkafkaVersionResponse::DescribeCkafkaVersionResponse() :
+DeleteGroupSubscribeTopicResponse::DeleteGroupSubscribeTopicResponse() :
     m_resultHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeCkafkaVersionResponse::Deserialize(const string &payload)
+CoreInternalOutcome DeleteGroupSubscribeTopicResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -83,7 +83,7 @@ CoreInternalOutcome DescribeCkafkaVersionResponse::Deserialize(const string &pay
     return CoreInternalOutcome(true);
 }
 
-string DescribeCkafkaVersionResponse::ToJsonString() const
+string DeleteGroupSubscribeTopicResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -110,12 +110,12 @@ string DescribeCkafkaVersionResponse::ToJsonString() const
 }
 
 
-InstanceVersion DescribeCkafkaVersionResponse::GetResult() const
+JgwOperateResponse DeleteGroupSubscribeTopicResponse::GetResult() const
 {
     return m_result;
 }
 
-bool DescribeCkafkaVersionResponse::ResultHasBeenSet() const
+bool DeleteGroupSubscribeTopicResponse::ResultHasBeenSet() const
 {
     return m_resultHasBeenSet;
 }

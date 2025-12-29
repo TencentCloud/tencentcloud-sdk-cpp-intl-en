@@ -57,6 +57,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteGroupRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteGroupResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupSubscribeTopicRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupSubscribeTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreRequest.h>
@@ -99,6 +101,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeModifyTypeRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeModifyTypeResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRegionRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRegionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
@@ -218,6 +222,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
                 typedef std::future<DeleteGroupOutcome> DeleteGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteGroupRequest&, DeleteGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteGroupSubscribeTopicResponse> DeleteGroupSubscribeTopicOutcome;
+                typedef std::future<DeleteGroupSubscribeTopicOutcome> DeleteGroupSubscribeTopicOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteGroupSubscribeTopicRequest&, DeleteGroupSubscribeTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGroupSubscribeTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstancePostResponse> DeleteInstancePostOutcome;
                 typedef std::future<DeleteInstancePostOutcome> DeleteInstancePostOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteInstancePostRequest&, DeleteInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancePostAsyncHandler;
@@ -281,6 +288,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstancesDetailResponse> DescribeInstancesDetailOutcome;
                 typedef std::future<DescribeInstancesDetailOutcome> DescribeInstancesDetailOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeInstancesDetailRequest&, DescribeInstancesDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeModifyTypeResponse> DescribeModifyTypeOutcome;
+                typedef std::future<DescribeModifyTypeOutcome> DescribeModifyTypeOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeModifyTypeRequest&, DescribeModifyTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeModifyTypeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRegionResponse> DescribeRegionOutcome;
                 typedef std::future<DescribeRegionOutcome> DescribeRegionOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeRegionRequest&, DescribeRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionAsyncHandler;
@@ -519,6 +529,15 @@ namespace TencentCloud
                 DeleteGroupOutcomeCallable DeleteGroupCallable(const Model::DeleteGroupRequest& request);
 
                 /**
+                 *This API is used to delete topics subscribed by a consumption group. The consumption group status must be Empty.
+                 * @param req DeleteGroupSubscribeTopicRequest
+                 * @return DeleteGroupSubscribeTopicOutcome
+                 */
+                DeleteGroupSubscribeTopicOutcome DeleteGroupSubscribeTopic(const Model::DeleteGroupSubscribeTopicRequest &request);
+                void DeleteGroupSubscribeTopicAsync(const Model::DeleteGroupSubscribeTopicRequest& request, const DeleteGroupSubscribeTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteGroupSubscribeTopicOutcomeCallable DeleteGroupSubscribeTopicCallable(const Model::DeleteGroupSubscribeTopicRequest& request);
+
+                /**
                  *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
                  * @param req DeleteInstancePostRequest
                  * @return DeleteInstancePostOutcome
@@ -706,6 +725,15 @@ namespace TencentCloud
                 DescribeInstancesDetailOutcome DescribeInstancesDetail(const Model::DescribeInstancesDetailRequest &request);
                 void DescribeInstancesDetailAsync(const Model::DescribeInstancesDetailRequest& request, const DescribeInstancesDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstancesDetailOutcomeCallable DescribeInstancesDetailCallable(const Model::DescribeInstancesDetailRequest& request);
+
+                /**
+                 *This API is used to query instance specification change types.
+                 * @param req DescribeModifyTypeRequest
+                 * @return DescribeModifyTypeOutcome
+                 */
+                DescribeModifyTypeOutcome DescribeModifyType(const Model::DescribeModifyTypeRequest &request);
+                void DescribeModifyTypeAsync(const Model::DescribeModifyTypeRequest& request, const DescribeModifyTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeModifyTypeOutcomeCallable DescribeModifyTypeCallable(const Model::DescribeModifyTypeRequest& request);
 
                 /**
                  *This API is used to enumerate regions, and can be called only in Guangzhou.

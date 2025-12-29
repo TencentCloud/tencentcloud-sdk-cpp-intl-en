@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id.</p>.
+                     * @return InstanceId <p>ckafka cluster instance Id.</p>.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id.</p>.
+                     * @param _instanceId <p>ckafka cluster instance Id.</p>.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the Name of the ckafka cluster instance.
-                     * @return InstanceName Specifies the Name of the ckafka cluster instance.
+                     * 获取<p>Specifies the Name of the ckafka cluster instance.</p>.
+                     * @return InstanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Specifies the Name of the ckafka cluster instance.
-                     * @param _instanceName Specifies the Name of the ckafka cluster instance.
+                     * 设置<p>Specifies the Name of the ckafka cluster instance.</p>.
+                     * @param _instanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取VIP list information of access point
-                     * @return VipList VIP list information of access point
+                     * 获取<p>Access point VIP list information.</p>.
+                     * @return VipList <p>Access point VIP list information.</p>.
                      * 
                      */
                     std::vector<VipEntity> GetVipList() const;
 
                     /**
-                     * 设置VIP list information of access point
-                     * @param _vipList VIP list information of access point
+                     * 设置<p>Access point VIP list information.</p>.
+                     * @param _vipList <p>Access point VIP list information.</p>.
                      * 
                      */
                     void SetVipList(const std::vector<VipEntity>& _vipList);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool VipListHasBeenSet() const;
 
                     /**
-                     * 获取Virtual IP
-                     * @return Vip Virtual IP
+                     * 获取<p>Virtual IP.</p>.
+                     * @return Vip <p>Virtual IP.</p>.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Virtual IP
-                     * @param _vip Virtual IP
+                     * 设置<p>Virtual IP.</p>.
+                     * @param _vip <p>Virtual IP.</p>.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Virtual port
-                     * @return Vport Virtual port
+                     * 获取<P>Virtual port.</p>.
+                     * @return Vport <P>Virtual port.</p>.
                      * 
                      */
                     std::string GetVport() const;
 
                     /**
-                     * 设置Virtual port
-                     * @param _vport Virtual port
+                     * 设置<P>Virtual port.</p>.
+                     * @param _vport <P>Virtual port.</p>.
                      * 
                      */
                     void SetVport(const std::string& _vport);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-                     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * 获取<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-                     * @param _status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * 设置<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * @param _status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -178,15 +178,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance bandwidth in Mbps
-                     * @return Bandwidth Instance bandwidth in Mbps
+                     * 获取<p>Instance bandwidth (unit: Mbps).</p>.
+                     * @return Bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
                      * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
-                     * 设置Instance bandwidth in Mbps
-                     * @param _bandwidth Instance bandwidth in Mbps
+                     * 设置<p>Instance bandwidth (unit: Mbps).</p>.
+                     * @param _bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
                      * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
@@ -199,15 +199,15 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Instance storage capacity in GB
-                     * @return DiskSize Instance storage capacity in GB
+                     * 获取<p>Specifies the instance storage size in GB.</p>.
+                     * @return DiskSize <p>Specifies the instance storage size in GB.</p>.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Instance storage capacity in GB
-                     * @param _diskSize Instance storage capacity in GB
+                     * 设置<p>Specifies the instance storage size in GB.</p>.
+                     * @param _diskSize <p>Specifies the instance storage size in GB.</p>.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return ZoneId AZ
+                     * 获取<P>Specifies the availability zone.</p>.
+                     * @return ZoneId <P>Specifies the availability zone.</p>.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zoneId AZ
+                     * 设置<P>Specifies the availability zone.</p>.
+                     * @param _zoneId <P>Specifies the availability zone.</p>.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -241,15 +241,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. If this parameter is empty, it means the basic network
-                     * @return VpcId VPC ID. If this parameter is empty, it means the basic network
+                     * 获取<p>VPC ID. being empty indicates a basic network.</p>.
+                     * @return VpcId <p>VPC ID. being empty indicates a basic network.</p>.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. If this parameter is empty, it means the basic network
-                     * @param _vpcId VPC ID. If this parameter is empty, it means the basic network
+                     * 设置<p>VPC ID. being empty indicates a basic network.</p>.
+                     * @param _vpcId <p>VPC ID. being empty indicates a basic network.</p>.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -262,15 +262,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID. If this parameter is empty, it means the basic network
-                     * @return SubnetId Subnet ID. If this parameter is empty, it means the basic network
+                     * 获取<p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+                     * @return SubnetId <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID. If this parameter is empty, it means the basic network
-                     * @param _subnetId Subnet ID. If this parameter is empty, it means the basic network
+                     * 设置<p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+                     * @param _subnetId <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -283,15 +283,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance health status. 1: healthy, 2: alarmed, 3: exceptional
-                     * @return Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * 获取<P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+                     * @return Healthy <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
                      * 
                      */
                     int64_t GetHealthy() const;
 
                     /**
-                     * 设置Instance health status. 1: healthy, 2: alarmed, 3: exceptional
-                     * @param _healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * 设置<P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+                     * @param _healthy <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
                      * 
                      */
                     void SetHealthy(const int64_t& _healthy);
@@ -304,15 +304,15 @@ namespace TencentCloud
                     bool HealthyHasBeenSet() const;
 
                     /**
-                     * 获取Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
-                     * @return HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * 获取<P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+                     * @return HealthyMessage <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
                      * 
                      */
                     std::string GetHealthyMessage() const;
 
                     /**
-                     * 设置Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
-                     * @param _healthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * 设置<P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+                     * @param _healthyMessage <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
                      * 
                      */
                     void SetHealthyMessage(const std::string& _healthyMessage);
@@ -325,15 +325,15 @@ namespace TencentCloud
                     bool HealthyMessageHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<P>Creation time.</p>.
+                     * @return CreateTime <P>Creation time.</p>.
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<P>Creation time.</p>.
+                     * @param _createTime <P>Creation time.</p>.
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -346,15 +346,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in minutes
-                     * @return MsgRetentionTime Message retention period in minutes
+                     * 获取<P>Message retention period, in minutes.</p>.
+                     * @return MsgRetentionTime <P>Message retention period, in minutes.</p>.
                      * 
                      */
                     int64_t GetMsgRetentionTime() const;
 
                     /**
-                     * 设置Message retention period in minutes
-                     * @param _msgRetentionTime Message retention period in minutes
+                     * 设置<P>Message retention period, in minutes.</p>.
+                     * @param _msgRetentionTime <P>Message retention period, in minutes.</p>.
                      * 
                      */
                     void SetMsgRetentionTime(const int64_t& _msgRetentionTime);
@@ -367,15 +367,15 @@ namespace TencentCloud
                     bool MsgRetentionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
-                     * @return Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * 获取<p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+                     * @return Config <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
                      * 
                      */
                     InstanceConfigDO GetConfig() const;
 
                     /**
-                     * 设置Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
-                     * @param _config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * 设置<p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+                     * @param _config <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
                      * 
                      */
                     void SetConfig(const InstanceConfigDO& _config);
@@ -388,15 +388,15 @@ namespace TencentCloud
                     bool ConfigHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable partitions
-                     * @return RemainderPartitions Number of remaining creatable partitions
+                     * 获取<P>Number of remaining creatable partitions.</p>.
+                     * @return RemainderPartitions <P>Number of remaining creatable partitions.</p>.
                      * 
                      */
                     int64_t GetRemainderPartitions() const;
 
                     /**
-                     * 设置Number of remaining creatable partitions
-                     * @param _remainderPartitions Number of remaining creatable partitions
+                     * 设置<P>Number of remaining creatable partitions.</p>.
+                     * @param _remainderPartitions <P>Number of remaining creatable partitions.</p>.
                      * 
                      */
                     void SetRemainderPartitions(const int64_t& _remainderPartitions);
@@ -409,15 +409,15 @@ namespace TencentCloud
                     bool RemainderPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable topics
-                     * @return RemainderTopics Number of remaining creatable topics
+                     * 获取<P>Number of remaining creatable topics.</p>.
+                     * @return RemainderTopics <P>Number of remaining creatable topics.</p>.
                      * 
                      */
                     int64_t GetRemainderTopics() const;
 
                     /**
-                     * 设置Number of remaining creatable topics
-                     * @param _remainderTopics Number of remaining creatable topics
+                     * 设置<P>Number of remaining creatable topics.</p>.
+                     * @param _remainderTopics <P>Number of remaining creatable topics.</p>.
                      * 
                      */
                     void SetRemainderTopics(const int64_t& _remainderTopics);
@@ -430,15 +430,15 @@ namespace TencentCloud
                     bool RemainderTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Number of partitions already created
-                     * @return CreatedPartitions Number of partitions already created
+                     * 获取<P>Specifies the current number of partitions created.</p>.
+                     * @return CreatedPartitions <P>Specifies the current number of partitions created.</p>.
                      * 
                      */
                     int64_t GetCreatedPartitions() const;
 
                     /**
-                     * 设置Number of partitions already created
-                     * @param _createdPartitions Number of partitions already created
+                     * 设置<P>Specifies the current number of partitions created.</p>.
+                     * @param _createdPartitions <P>Specifies the current number of partitions created.</p>.
                      * 
                      */
                     void SetCreatedPartitions(const int64_t& _createdPartitions);
@@ -451,15 +451,15 @@ namespace TencentCloud
                     bool CreatedPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of topics already created
-                     * @return CreatedTopics Number of topics already created
+                     * 获取<P>Specifies the current number of topics created.</p>.
+                     * @return CreatedTopics <P>Specifies the current number of topics created.</p>.
                      * 
                      */
                     int64_t GetCreatedTopics() const;
 
                     /**
-                     * 设置Number of topics already created
-                     * @param _createdTopics Number of topics already created
+                     * 设置<P>Specifies the current number of topics created.</p>.
+                     * @param _createdTopics <P>Specifies the current number of topics created.</p>.
                      * 
                      */
                     void SetCreatedTopics(const int64_t& _createdTopics);
@@ -472,15 +472,15 @@ namespace TencentCloud
                     bool CreatedTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Tag array
-                     * @return Tags Tag array
+                     * 获取<P>Tag array.</p>.
+                     * @return Tags <P>Tag array.</p>.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag array
-                     * @param _tags Tag array
+                     * 设置<P>Tag array.</p>.
+                     * @param _tags <P>Tag array.</p>.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -493,15 +493,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-                     * @return ExpireTime Expiration time
+                     * 获取<P>Specifies the expiration time.</p>.
+                     * @return ExpireTime <P>Specifies the expiration time.</p>.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time
-                     * @param _expireTime Expiration time
+                     * 设置<P>Specifies the expiration time.</p>.
+                     * @param _expireTime <P>Specifies the expiration time.</p>.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -514,15 +514,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Availability Zone List
-                     * @return ZoneIds Availability Zone List
+                     * 获取<P>Specifies the availability zone list.</p>.
+                     * @return ZoneIds <P>Specifies the availability zone list.</p>.
                      * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
-                     * 设置Availability Zone List
-                     * @param _zoneIds Availability Zone List
+                     * 设置<P>Specifies the availability zone list.</p>.
+                     * @param _zoneIds <P>Specifies the availability zone list.</p>.
                      * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
@@ -535,15 +535,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ckafka cluster instance version.
-                     * @return Version Specifies the ckafka cluster instance version.
+                     * 获取<P>Specifies the ckafka cluster instance version.</p>.
+                     * @return Version <P>Specifies the ckafka cluster instance version.</p>.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Specifies the ckafka cluster instance version.
-                     * @param _version Specifies the ckafka cluster instance version.
+                     * 设置<P>Specifies the ckafka cluster instance version.</p>.
+                     * @param _version <P>Specifies the ckafka cluster instance version.</p>.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -556,15 +556,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of groups.
-                     * @return MaxGroupNum Maximum number of groups.
+                     * 获取<P>Specifies the maximum number of groups.</p>.
+                     * @return MaxGroupNum <P>Specifies the maximum number of groups.</p>.
                      * 
                      */
                     int64_t GetMaxGroupNum() const;
 
                     /**
-                     * 设置Maximum number of groups.
-                     * @param _maxGroupNum Maximum number of groups.
+                     * 设置<P>Specifies the maximum number of groups.</p>.
+                     * @param _maxGroupNum <P>Specifies the maximum number of groups.</p>.
                      * 
                      */
                     void SetMaxGroupNum(const int64_t& _maxGroupNum);
@@ -577,15 +577,15 @@ namespace TencentCloud
                     bool MaxGroupNumHasBeenSet() const;
 
                     /**
-                     * 获取Sale type. valid values: 0 (standard version), 1 (pro edition).
-                     * @return Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
+                     * 获取<P>Sale type. 0: standard version; 1: pro edition.</p>.
+                     * @return Cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
                      * 
                      */
                     int64_t GetCvm() const;
 
                     /**
-                     * 设置Sale type. valid values: 0 (standard version), 1 (pro edition).
-                     * @param _cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
+                     * 设置<P>Sale type. 0: standard version; 1: pro edition.</p>.
+                     * @param _cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
                      * 
                      */
                     void SetCvm(const int64_t& _cvm);
@@ -598,31 +598,15 @@ namespace TencentCloud
                     bool CvmHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
-                     * @return InstanceType Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+                     * 获取<p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+                     * @return InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
-                     * @param _instanceType Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+                     * 设置<p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+                     * @param _instanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -635,15 +619,15 @@ Specifies the serverless version.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
-                     * @return Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+                     * 获取<p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+                     * @return Features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
                      * 
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
-                     * 设置Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
-                     * @param _features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+                     * 设置<p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+                     * @param _features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
                      * 
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
@@ -656,15 +640,15 @@ Specifies the serverless version.
                     bool FeaturesHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic message retention policy.
-                     * @return RetentionTimeConfig Dynamic message retention policy.
+                     * 获取<P>Dynamic message retention policy.</p>.
+                     * @return RetentionTimeConfig <P>Dynamic message retention policy.</p>.
                      * 
                      */
                     DynamicRetentionTime GetRetentionTimeConfig() const;
 
                     /**
-                     * 设置Dynamic message retention policy.
-                     * @param _retentionTimeConfig Dynamic message retention policy.
+                     * 设置<P>Dynamic message retention policy.</p>.
+                     * @param _retentionTimeConfig <P>Dynamic message retention policy.</p>.
                      * 
                      */
                     void SetRetentionTimeConfig(const DynamicRetentionTime& _retentionTimeConfig);
@@ -677,15 +661,15 @@ Specifies the serverless version.
                     bool RetentionTimeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of connections.
-                     * @return MaxConnection Maximum number of connections.
+                     * 获取<P>Maximum number of connections.</p>.
+                     * @return MaxConnection <P>Maximum number of connections.</p>.
                      * 
                      */
                     uint64_t GetMaxConnection() const;
 
                     /**
-                     * 设置Maximum number of connections.
-                     * @param _maxConnection Maximum number of connections.
+                     * 设置<P>Maximum number of connections.</p>.
+                     * @param _maxConnection <P>Maximum number of connections.</p>.
                      * 
                      */
                     void SetMaxConnection(const uint64_t& _maxConnection);
@@ -698,15 +682,15 @@ Specifies the serverless version.
                     bool MaxConnectionHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth
-                     * @return PublicNetwork Public network bandwidth
+                     * 获取<P>Public network bandwidth.</p>.
+                     * @return PublicNetwork <P>Public network bandwidth.</p>.
                      * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
-                     * 设置Public network bandwidth
-                     * @param _publicNetwork Public network bandwidth
+                     * 设置<P>Public network bandwidth.</p>.
+                     * @param _publicNetwork <P>Public network bandwidth.</p>.
                      * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
@@ -719,15 +703,15 @@ Specifies the serverless version.
                     bool PublicNetworkHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the deprecated field with no actual meaning.
-                     * @return DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
+                     * 获取<P>Deprecated. no actual meaning.</p>.
+                     * @return DeleteRouteTimestamp <P>Deprecated. no actual meaning.</p>.
                      * 
                      */
                     std::string GetDeleteRouteTimestamp() const;
 
                     /**
-                     * 设置Specifies the deprecated field with no actual meaning.
-                     * @param _deleteRouteTimestamp Specifies the deprecated field with no actual meaning.
+                     * 设置<P>Deprecated. no actual meaning.</p>.
+                     * @param _deleteRouteTimestamp <P>Deprecated. no actual meaning.</p>.
                      * 
                      */
                     void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
@@ -740,15 +724,15 @@ Specifies the serverless version.
                     bool DeleteRouteTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable partitions.
-                     * @return RemainingPartitions Number of remaining creatable partitions.
+                     * 获取<P>Number of remaining creatable partitions.</p>.
+                     * @return RemainingPartitions <P>Number of remaining creatable partitions.</p>.
                      * 
                      */
                     int64_t GetRemainingPartitions() const;
 
                     /**
-                     * 设置Number of remaining creatable partitions.
-                     * @param _remainingPartitions Number of remaining creatable partitions.
+                     * 设置<P>Number of remaining creatable partitions.</p>.
+                     * @param _remainingPartitions <P>Number of remaining creatable partitions.</p>.
                      * 
                      */
                     void SetRemainingPartitions(const int64_t& _remainingPartitions);
@@ -761,15 +745,15 @@ Specifies the serverless version.
                     bool RemainingPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable topics.
-                     * @return RemainingTopics Number of remaining creatable topics.
+                     * 获取<P>Number of remaining creatable topics.</p>.
+                     * @return RemainingTopics <P>Number of remaining creatable topics.</p>.
                      * 
                      */
                     int64_t GetRemainingTopics() const;
 
                     /**
-                     * 设置Number of remaining creatable topics.
-                     * @param _remainingTopics Number of remaining creatable topics.
+                     * 设置<P>Number of remaining creatable topics.</p>.
+                     * @param _remainingTopics <P>Number of remaining creatable topics.</p>.
                      * 
                      */
                     void SetRemainingTopics(const int64_t& _remainingTopics);
@@ -782,15 +766,15 @@ Specifies the serverless version.
                     bool RemainingTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Scaling policy for dynamic disk.
-                     * @return DynamicDiskConfig Scaling policy for dynamic disk.
+                     * 获取<P>Dynamic disk expansion policy.</p>.
+                     * @return DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
                      * 
                      */
                     DynamicDiskConfig GetDynamicDiskConfig() const;
 
                     /**
-                     * 设置Scaling policy for dynamic disk.
-                     * @param _dynamicDiskConfig Scaling policy for dynamic disk.
+                     * 设置<P>Dynamic disk expansion policy.</p>.
+                     * @param _dynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
                      * 
                      */
                     void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
@@ -803,15 +787,15 @@ Specifies the serverless version.
                     bool DynamicDiskConfigHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the system maintenance time.
-                     * @return SystemMaintenanceTime Specifies the system maintenance time.
+                     * 获取<P>Specifies the system maintenance time.</p>.
+                     * @return SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
                      * 
                      */
                     std::string GetSystemMaintenanceTime() const;
 
                     /**
-                     * 设置Specifies the system maintenance time.
-                     * @param _systemMaintenanceTime Specifies the system maintenance time.
+                     * 设置<P>Specifies the system maintenance time.</p>.
+                     * @param _systemMaintenanceTime <P>Specifies the system maintenance time.</p>.
                      * 
                      */
                     void SetSystemMaintenanceTime(const std::string& _systemMaintenanceTime);
@@ -824,15 +808,15 @@ Specifies the serverless version.
                     bool SystemMaintenanceTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum size of messages at the instance level.
-                     * @return MaxMessageByte Specifies the maximum size of messages at the instance level.
+                     * 获取<P>Specifies the maximum size of instance level messages.</p>.
+                     * @return MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
                      * 
                      */
                     uint64_t GetMaxMessageByte() const;
 
                     /**
-                     * 设置Specifies the maximum size of messages at the instance level.
-                     * @param _maxMessageByte Specifies the maximum size of messages at the instance level.
+                     * 设置<P>Specifies the maximum size of instance level messages.</p>.
+                     * @param _maxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
                      * 
                      */
                     void SetMaxMessageByte(const uint64_t& _maxMessageByte);
@@ -845,15 +829,15 @@ Specifies the serverless version.
                     bool MaxMessageByteHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
-                     * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * 获取<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+                     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
-                     * @param _instanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * 设置<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+                     * @param _instanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -866,23 +850,15 @@ Specifies the serverless version.
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
-                     * @return ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+                     * 获取<p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * @return ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
                      * 
                      */
                     int64_t GetElasticBandwidthSwitch() const;
 
                     /**
-                     * 设置Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
-                     * @param _elasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+                     * 设置<p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * @param _elasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
                      * 
                      */
                     void SetElasticBandwidthSwitch(const int64_t& _elasticBandwidthSwitch);
@@ -895,43 +871,15 @@ Indicates the allowlist feature with elastic bandwidth enabled.
                     bool ElasticBandwidthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
-                     * @return ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+                     * 获取<P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+                     * @return ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
                      * 
                      */
                     int64_t GetElasticBandwidthOpenStatus() const;
 
                     /**
-                     * 设置Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
-                     * @param _elasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+                     * 设置<P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+                     * @param _elasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
                      * 
                      */
                     void SetElasticBandwidthOpenStatus(const int64_t& _elasticBandwidthOpenStatus);
@@ -944,39 +892,15 @@ Bandwidth failure.
                     bool ElasticBandwidthOpenStatusHasBeenSet() const;
 
                     /**
-                     * 获取Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
-                     * @return ClusterType Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+                     * 获取<p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+                     * @return ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
                      * 
                      */
                     std::string GetClusterType() const;
 
                     /**
-                     * 设置Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
-                     * @param _clusterType Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+                     * 设置<p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+                     * @param _clusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -989,15 +913,15 @@ CLOUD_EKS_TSE eks cluster.
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of free partitions.
-                     * @return FreePartitionNumber Number of free partitions.
+                     * 获取<P>Specifies the number of free partitions.</p>.
+                     * @return FreePartitionNumber <P>Specifies the number of free partitions.</p>.
                      * 
                      */
                     int64_t GetFreePartitionNumber() const;
 
                     /**
-                     * 设置Number of free partitions.
-                     * @param _freePartitionNumber Number of free partitions.
+                     * 设置<P>Specifies the number of free partitions.</p>.
+                     * @param _freePartitionNumber <P>Specifies the number of free partitions.</p>.
                      * 
                      */
                     void SetFreePartitionNumber(const int64_t& _freePartitionNumber);
@@ -1010,15 +934,15 @@ CLOUD_EKS_TSE eks cluster.
                     bool FreePartitionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the elastic bandwidth upper limit.
-                     * @return ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+                     * 获取<P>Specifies the elastic bandwidth upper limit.</p>.
+                     * @return ElasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
                      * 
                      */
                     int64_t GetElasticFloatBandwidth() const;
 
                     /**
-                     * 设置Specifies the elastic bandwidth upper limit.
-                     * @param _elasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+                     * 设置<P>Specifies the elastic bandwidth upper limit.</p>.
+                     * @param _elasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
                      * 
                      */
                     void SetElasticFloatBandwidth(const int64_t& _elasticFloatBandwidth);
@@ -1031,15 +955,15 @@ CLOUD_EKS_TSE eks cluster.
                     bool ElasticFloatBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取ssl custom certificate id. only returned for instance clusters with custom certificates.
-                     * @return CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * 获取<p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+                     * @return CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
                      * 
                      */
                     std::string GetCustomCertId() const;
 
                     /**
-                     * 设置ssl custom certificate id. only returned for instance clusters with custom certificates.
-                     * @param _customCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * 设置<p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+                     * @param _customCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
                      * 
                      */
                     void SetCustomCertId(const std::string& _customCertId);
@@ -1052,15 +976,15 @@ CLOUD_EKS_TSE eks cluster.
                     bool CustomCertIdHasBeenSet() const;
 
                     /**
-                     * 获取Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
-                     * @return UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * 获取<P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+                     * @return UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
                      * 
                      */
                     int64_t GetUncleanLeaderElectionEnable() const;
 
                     /**
-                     * 设置Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
-                     * @param _uncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * 设置<P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+                     * @param _uncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
                      * 
                      */
                     void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
@@ -1073,15 +997,15 @@ CLOUD_EKS_TSE eks cluster.
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取Instance deletion protection switch. 1: enabled; 0: disabled.
-                     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 获取<P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * @return DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
                      * 
                      */
                     int64_t GetDeleteProtectionEnable() const;
 
                     /**
-                     * 设置Instance deletion protection switch. 1: enabled; 0: disabled.
-                     * @param _deleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 设置<P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * @param _deleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
                      * 
                      */
                     void SetDeleteProtectionEnable(const int64_t& _deleteProtectionEnable);
@@ -1096,296 +1020,277 @@ CLOUD_EKS_TSE eks cluster.
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id.</p>.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies the Name of the ckafka cluster instance.
+                     * <p>Specifies the Name of the ckafka cluster instance.</p>.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * VIP list information of access point
+                     * <p>Access point VIP list information.</p>.
                      */
                     std::vector<VipEntity> m_vipList;
                     bool m_vipListHasBeenSet;
 
                     /**
-                     * Virtual IP
+                     * <p>Virtual IP.</p>.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Virtual port
+                     * <P>Virtual port.</p>.
                      */
                     std::string m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance bandwidth in Mbps
+                     * <p>Instance bandwidth (unit: Mbps).</p>.
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Instance storage capacity in GB
+                     * <p>Specifies the instance storage size in GB.</p>.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * AZ
+                     * <P>Specifies the availability zone.</p>.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * VPC ID. If this parameter is empty, it means the basic network
+                     * <p>VPC ID. being empty indicates a basic network.</p>.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID. If this parameter is empty, it means the basic network
+                     * <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
                      */
                     int64_t m_healthy;
                     bool m_healthyHasBeenSet;
 
                     /**
-                     * Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
                      */
                     std::string m_healthyMessage;
                     bool m_healthyMessageHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <P>Creation time.</p>.
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Message retention period in minutes
+                     * <P>Message retention period, in minutes.</p>.
                      */
                     int64_t m_msgRetentionTime;
                     bool m_msgRetentionTimeHasBeenSet;
 
                     /**
-                     * Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
                      */
                     InstanceConfigDO m_config;
                     bool m_configHasBeenSet;
 
                     /**
-                     * Number of remaining creatable partitions
+                     * <P>Number of remaining creatable partitions.</p>.
                      */
                     int64_t m_remainderPartitions;
                     bool m_remainderPartitionsHasBeenSet;
 
                     /**
-                     * Number of remaining creatable topics
+                     * <P>Number of remaining creatable topics.</p>.
                      */
                     int64_t m_remainderTopics;
                     bool m_remainderTopicsHasBeenSet;
 
                     /**
-                     * Number of partitions already created
+                     * <P>Specifies the current number of partitions created.</p>.
                      */
                     int64_t m_createdPartitions;
                     bool m_createdPartitionsHasBeenSet;
 
                     /**
-                     * Number of topics already created
+                     * <P>Specifies the current number of topics created.</p>.
                      */
                     int64_t m_createdTopics;
                     bool m_createdTopicsHasBeenSet;
 
                     /**
-                     * Tag array
+                     * <P>Tag array.</p>.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Expiration time
+                     * <P>Specifies the expiration time.</p>.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Availability Zone List
+                     * <P>Specifies the availability zone list.</p>.
                      */
                     std::vector<int64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Specifies the ckafka cluster instance version.
+                     * <P>Specifies the ckafka cluster instance version.</p>.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Maximum number of groups.
+                     * <P>Specifies the maximum number of groups.</p>.
                      */
                     int64_t m_maxGroupNum;
                     bool m_maxGroupNumHasBeenSet;
 
                     /**
-                     * Sale type. valid values: 0 (standard version), 1 (pro edition).
+                     * <P>Sale type. 0: standard version; 1: pro edition.</p>.
                      */
                     int64_t m_cvm;
                     bool m_cvmHasBeenSet;
 
                     /**
-                     * Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+                     * <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+                     * <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
                      */
                     std::vector<std::string> m_features;
                     bool m_featuresHasBeenSet;
 
                     /**
-                     * Dynamic message retention policy.
+                     * <P>Dynamic message retention policy.</p>.
                      */
                     DynamicRetentionTime m_retentionTimeConfig;
                     bool m_retentionTimeConfigHasBeenSet;
 
                     /**
-                     * Maximum number of connections.
+                     * <P>Maximum number of connections.</p>.
                      */
                     uint64_t m_maxConnection;
                     bool m_maxConnectionHasBeenSet;
 
                     /**
-                     * Public network bandwidth
+                     * <P>Public network bandwidth.</p>.
                      */
                     int64_t m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
 
                     /**
-                     * Specifies the deprecated field with no actual meaning.
+                     * <P>Deprecated. no actual meaning.</p>.
                      */
                     std::string m_deleteRouteTimestamp;
                     bool m_deleteRouteTimestampHasBeenSet;
 
                     /**
-                     * Number of remaining creatable partitions.
+                     * <P>Number of remaining creatable partitions.</p>.
                      */
                     int64_t m_remainingPartitions;
                     bool m_remainingPartitionsHasBeenSet;
 
                     /**
-                     * Number of remaining creatable topics.
+                     * <P>Number of remaining creatable topics.</p>.
                      */
                     int64_t m_remainingTopics;
                     bool m_remainingTopicsHasBeenSet;
 
                     /**
-                     * Scaling policy for dynamic disk.
+                     * <P>Dynamic disk expansion policy.</p>.
                      */
                     DynamicDiskConfig m_dynamicDiskConfig;
                     bool m_dynamicDiskConfigHasBeenSet;
 
                     /**
-                     * Specifies the system maintenance time.
+                     * <P>Specifies the system maintenance time.</p>.
                      */
                     std::string m_systemMaintenanceTime;
                     bool m_systemMaintenanceTimeHasBeenSet;
 
                     /**
-                     * Specifies the maximum size of messages at the instance level.
+                     * <P>Specifies the maximum size of instance level messages.</p>.
                      */
                     uint64_t m_maxMessageByte;
                     bool m_maxMessageByteHasBeenSet;
 
                     /**
-                     * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+                     * <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
                      */
                     int64_t m_elasticBandwidthSwitch;
                     bool m_elasticBandwidthSwitchHasBeenSet;
 
                     /**
-                     * Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+                     * <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
                      */
                     int64_t m_elasticBandwidthOpenStatus;
                     bool m_elasticBandwidthOpenStatusHasBeenSet;
 
                     /**
-                     * Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+                     * <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Number of free partitions.
+                     * <P>Specifies the number of free partitions.</p>.
                      */
                     int64_t m_freePartitionNumber;
                     bool m_freePartitionNumberHasBeenSet;
 
                     /**
-                     * Specifies the elastic bandwidth upper limit.
+                     * <P>Specifies the elastic bandwidth upper limit.</p>.
                      */
                     int64_t m_elasticFloatBandwidth;
                     bool m_elasticFloatBandwidthHasBeenSet;
 
                     /**
-                     * ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
                      */
                     std::string m_customCertId;
                     bool m_customCertIdHasBeenSet;
 
                     /**
-                     * Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
                      */
                     int64_t m_uncleanLeaderElectionEnable;
                     bool m_uncleanLeaderElectionEnableHasBeenSet;
 
                     /**
-                     * Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
                      */
                     int64_t m_deleteProtectionEnable;
                     bool m_deleteProtectionEnableHasBeenSet;

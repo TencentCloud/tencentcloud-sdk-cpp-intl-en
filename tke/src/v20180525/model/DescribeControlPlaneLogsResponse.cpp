@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeControlPlaneLogsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ckafka::V20190819::Model;
+using namespace TencentCloud::Tke::V20180525::Model;
 using namespace std;
 
-DescribeCkafkaVersionResponse::DescribeCkafkaVersionResponse() :
-    m_resultHasBeenSet(false)
+DescribeControlPlaneLogsResponse::DescribeControlPlaneLogsResponse() :
+    m_detailsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeCkafkaVersionResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeControlPlaneLogsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,40 +62,49 @@ CoreInternalOutcome DescribeCkafkaVersionResponse::Deserialize(const string &pay
     }
 
 
-    if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
+    if (rsp.HasMember("Details") && !rsp["Details"].IsNull())
     {
-        if (!rsp["Result"].IsObject())
-        {
-            return CoreInternalOutcome(Core::Error("response `Result` is not object type").SetRequestId(requestId));
-        }
+        if (!rsp["Details"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Details` is not array type"));
 
-        CoreInternalOutcome outcome = m_result.Deserialize(rsp["Result"]);
-        if (!outcome.IsSuccess())
+        const rapidjson::Value &tmpValue = rsp["Details"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
+            ComponentLogConfig item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_details.push_back(item);
         }
-
-        m_resultHasBeenSet = true;
+        m_detailsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeCkafkaVersionResponse::ToJsonString() const
+string DescribeControlPlaneLogsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_resultHasBeenSet)
+    if (m_detailsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Result";
+        string key = "Details";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_result.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_details.begin(); itr != m_details.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,14 +119,14 @@ string DescribeCkafkaVersionResponse::ToJsonString() const
 }
 
 
-InstanceVersion DescribeCkafkaVersionResponse::GetResult() const
+vector<ComponentLogConfig> DescribeControlPlaneLogsResponse::GetDetails() const
 {
-    return m_result;
+    return m_details;
 }
 
-bool DescribeCkafkaVersionResponse::ResultHasBeenSet() const
+bool DescribeControlPlaneLogsResponse::DetailsHasBeenSet() const
 {
-    return m_resultHasBeenSet;
+    return m_detailsHasBeenSet;
 }
 
 

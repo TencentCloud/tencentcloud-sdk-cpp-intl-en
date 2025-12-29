@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETEGROUPSUBSCRIBETOPICRESPONSE_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETEGROUPSUBSCRIBETOPICRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ckafka/v20190819/model/InstanceVersion.h>
+#include <tencentcloud/ckafka/v20190819/model/JgwOperateResponse.h>
 
 
 namespace TencentCloud
@@ -33,23 +33,23 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeCkafkaVersion response structure.
+                * DeleteGroupSubscribeTopic response structure.
                 */
-                class DescribeCkafkaVersionResponse : public AbstractModel
+                class DeleteGroupSubscribeTopicResponse : public AbstractModel
                 {
                 public:
-                    DescribeCkafkaVersionResponse();
-                    ~DescribeCkafkaVersionResponse() = default;
+                    DeleteGroupSubscribeTopicResponse();
+                    ~DeleteGroupSubscribeTopicResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance version information.
-                     * @return Result Instance version information.
+                     * 获取Returned result.
+                     * @return Result Returned result.
                      * 
                      */
-                    InstanceVersion GetResult() const;
+                    JgwOperateResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -61,9 +61,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance version information.
+                     * Returned result.
                      */
-                    InstanceVersion m_result;
+                    JgwOperateResponse m_result;
                     bool m_resultHasBeenSet;
 
                 };
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETEGROUPSUBSCRIBETOPICRESPONSE_H_

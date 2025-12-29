@@ -14,57 +14,57 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
+#ifndef TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBECONTROLPLANELOGSRESPONSE_H_
+#define TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBECONTROLPLANELOGSRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ckafka/v20190819/model/InstanceVersion.h>
+#include <tencentcloud/tke/v20180525/model/ComponentLogConfig.h>
 
 
 namespace TencentCloud
 {
-    namespace Ckafka
+    namespace Tke
     {
-        namespace V20190819
+        namespace V20180525
         {
             namespace Model
             {
                 /**
-                * DescribeCkafkaVersion response structure.
+                * DescribeControlPlaneLogs response structure.
                 */
-                class DescribeCkafkaVersionResponse : public AbstractModel
+                class DescribeControlPlaneLogsResponse : public AbstractModel
                 {
                 public:
-                    DescribeCkafkaVersionResponse();
-                    ~DescribeCkafkaVersionResponse() = default;
+                    DescribeControlPlaneLogsResponse();
+                    ~DescribeControlPlaneLogsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance version information.
-                     * @return Result Instance version information.
+                     * 获取Specifies the query result of log collection configuration.
+                     * @return Details Specifies the query result of log collection configuration.
                      * 
                      */
-                    InstanceVersion GetResult() const;
+                    std::vector<ComponentLogConfig> GetDetails() const;
 
                     /**
-                     * 判断参数 Result 是否已赋值
-                     * @return Result 是否已赋值
+                     * 判断参数 Details 是否已赋值
+                     * @return Details 是否已赋值
                      * 
                      */
-                    bool ResultHasBeenSet() const;
+                    bool DetailsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Instance version information.
+                     * Specifies the query result of log collection configuration.
                      */
-                    InstanceVersion m_result;
-                    bool m_resultHasBeenSet;
+                    std::vector<ComponentLogConfig> m_details;
+                    bool m_detailsHasBeenSet;
 
                 };
             }
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBECKAFKAVERSIONRESPONSE_H_
+#endif // !TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBECONTROLPLANELOGSRESPONSE_H_
