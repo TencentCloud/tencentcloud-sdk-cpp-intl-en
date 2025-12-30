@@ -177,15 +177,15 @@ If you do not specify this, the file will be saved to the trigger directory.
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-                     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 获取Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-                     * @param _resourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 设置Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @param _resourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -237,7 +237,7 @@ If you do not specify this, the file will be saved to the trigger directory.
                     bool m_taskNotifyConfigHasBeenSet;
 
                     /**
-                     * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

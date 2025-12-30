@@ -235,6 +235,8 @@
 #include <tencentcloud/mps/v20190612/model/ProcessMediaResponse.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowRequest.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h>
+#include <tencentcloud/mps/v20190612/model/TextTranslationRequest.h>
+#include <tencentcloud/mps/v20190612/model/TextTranslationResponse.h>
 
 
 namespace TencentCloud
@@ -567,6 +569,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetWorkflowResponse> ResetWorkflowOutcome;
                 typedef std::future<ResetWorkflowOutcome> ResetWorkflowOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ResetWorkflowRequest&, ResetWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextTranslationResponse> TextTranslationOutcome;
+                typedef std::future<TextTranslationOutcome> TextTranslationOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::TextTranslationRequest&, TextTranslationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextTranslationAsyncHandler;
 
 
 
@@ -1596,6 +1601,15 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
                 ResetWorkflowOutcome ResetWorkflow(const Model::ResetWorkflowRequest &request);
                 void ResetWorkflowAsync(const Model::ResetWorkflowRequest& request, const ResetWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetWorkflowOutcomeCallable ResetWorkflowCallable(const Model::ResetWorkflowRequest& request);
+
+                /**
+                 *This API is used to translate text.
+                 * @param req TextTranslationRequest
+                 * @return TextTranslationOutcome
+                 */
+                TextTranslationOutcome TextTranslation(const Model::TextTranslationRequest &request);
+                void TextTranslationAsync(const Model::TextTranslationRequest& request, const TextTranslationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextTranslationOutcomeCallable TextTranslationCallable(const Model::TextTranslationRequest& request);
 
             };
         }

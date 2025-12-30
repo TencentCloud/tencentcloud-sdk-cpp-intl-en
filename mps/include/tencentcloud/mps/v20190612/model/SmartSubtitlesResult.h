@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskAsrFullTextResult.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskTransTextResult.h>
 #include <tencentcloud/mps/v20190612/model/PureSubtitleTransResult.h>
+#include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskFullTextResult.h>
 
 
 namespace TencentCloud
@@ -54,10 +55,12 @@ namespace TencentCloud
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
                      * @return Type Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
                      * 
                      */
                     std::string GetType() const;
@@ -67,10 +70,12 @@ namespace TencentCloud
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
                      * @param _type Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -169,6 +174,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PureSubtitleTransTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SmartSubtitleTaskFullTextResult GetOcrFullTextTask() const;
+
+                    /**
+                     * 设置Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _ocrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOcrFullTextTask(const SmartSubtitleTaskFullTextResult& _ocrFullTextTask);
+
+                    /**
+                     * 判断参数 OcrFullTextTask 是否已赋值
+                     * @return OcrFullTextTask 是否已赋值
+                     * 
+                     */
+                    bool OcrFullTextTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -176,6 +210,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -203,6 +238,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     PureSubtitleTransResult m_pureSubtitleTransTask;
                     bool m_pureSubtitleTransTaskHasBeenSet;
+
+                    /**
+                     * Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SmartSubtitleTaskFullTextResult m_ocrFullTextTask;
+                    bool m_ocrFullTextTaskHasBeenSet;
 
                 };
             }
