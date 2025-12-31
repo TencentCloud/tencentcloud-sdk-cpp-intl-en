@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取The watermark image’s horizontal distance from the origin as a percentage of the video width
-                     * @return XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 获取The watermark image's horizontal distance from the origin as a percentage of the video width
+                     * @return XPos The watermark image's horizontal distance from the origin as a percentage of the video width
                      * 
                      */
                     int64_t GetXPos() const;
 
                     /**
-                     * 设置The watermark image’s horizontal distance from the origin as a percentage of the video width
-                     * @param _xPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 设置The watermark image's horizontal distance from the origin as a percentage of the video width
+                     * @param _xPos The watermark image's horizontal distance from the origin as a percentage of the video width
                      * 
                      */
                     void SetXPos(const int64_t& _xPos);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取The watermark image’s vertical distance from the origin as a percentage of the video height
-                     * @return YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 获取The watermark image's vertical distance from the origin as a percentage of the video height
+                     * @return YPos The watermark image's vertical distance from the origin as a percentage of the video height
                      * 
                      */
                     int64_t GetYPos() const;
 
                     /**
-                     * 设置The watermark image’s vertical distance from the origin as a percentage of the video height
-                     * @param _yPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 设置The watermark image's vertical distance from the origin as a percentage of the video height
+                     * @param _yPos The watermark image's vertical distance from the origin as a percentage of the video height
                      * 
                      */
                     void SetYPos(const int64_t& _yPos);
@@ -187,13 +187,13 @@ namespace TencentCloud
                     bool m_locationHasBeenSet;
 
                     /**
-                     * The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * The watermark image's horizontal distance from the origin as a percentage of the video width
                      */
                     int64_t m_xPos;
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * The watermark image's vertical distance from the origin as a percentage of the video height
                      */
                     int64_t m_yPos;
                     bool m_yPosHasBeenSet;

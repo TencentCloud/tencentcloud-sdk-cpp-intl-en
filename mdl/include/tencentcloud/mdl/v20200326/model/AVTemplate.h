@@ -712,15 +712,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool AudioTracksHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoEnhanceEnabled 
+                     * 获取Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+                     * @return VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
                      * 
                      */
                     uint64_t GetVideoEnhanceEnabled() const;
 
                     /**
-                     * 设置
-                     * @param _videoEnhanceEnabled 
+                     * 设置Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+                     * @param _videoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
                      * 
                      */
                     void SetVideoEnhanceEnabled(const uint64_t& _videoEnhanceEnabled);
@@ -733,15 +733,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool VideoEnhanceEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoEnhanceSettings 
+                     * 获取Video enhancement configuration array.
+                     * @return VideoEnhanceSettings Video enhancement configuration array.
                      * 
                      */
                     std::vector<VideoEnhanceSetting> GetVideoEnhanceSettings() const;
 
                     /**
-                     * 设置
-                     * @param _videoEnhanceSettings 
+                     * 设置Video enhancement configuration array.
+                     * @param _videoEnhanceSettings Video enhancement configuration array.
                      * 
                      */
                     void SetVideoEnhanceSettings(const std::vector<VideoEnhanceSetting>& _videoEnhanceSettings);
@@ -815,6 +815,27 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      * 
                      */
                     bool ColorSpaceSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Traceability watermark.
+                     * @return ForensicWatermarkIds Traceability watermark.
+                     * 
+                     */
+                    std::vector<std::string> GetForensicWatermarkIds() const;
+
+                    /**
+                     * 设置Traceability watermark.
+                     * @param _forensicWatermarkIds Traceability watermark.
+                     * 
+                     */
+                    void SetForensicWatermarkIds(const std::vector<std::string>& _forensicWatermarkIds);
+
+                    /**
+                     * 判断参数 ForensicWatermarkIds 是否已赋值
+                     * @return ForensicWatermarkIds 是否已赋值
+                     * 
+                     */
+                    bool ForensicWatermarkIdsHasBeenSet() const;
 
                 private:
 
@@ -1006,13 +1027,13 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_audioTracksHasBeenSet;
 
                     /**
-                     * 
+                     * Do you want to enable video enhancement? 1: Enable 0: Do not enable.
                      */
                     uint64_t m_videoEnhanceEnabled;
                     bool m_videoEnhanceEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * Video enhancement configuration array.
                      */
                     std::vector<VideoEnhanceSetting> m_videoEnhanceSettings;
                     bool m_videoEnhanceSettingsHasBeenSet;
@@ -1034,6 +1055,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     ColorSpaceSetting m_colorSpaceSettings;
                     bool m_colorSpaceSettingsHasBeenSet;
+
+                    /**
+                     * Traceability watermark.
+                     */
+                    std::vector<std::string> m_forensicWatermarkIds;
+                    bool m_forensicWatermarkIdsHasBeenSet;
 
                 };
             }

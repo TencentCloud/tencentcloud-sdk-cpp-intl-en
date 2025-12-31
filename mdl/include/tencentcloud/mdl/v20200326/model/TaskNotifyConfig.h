@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Notification type. Currently only supports URLs
+                     * @return Type Notification type. Currently only supports URLs
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Notification type. Currently only supports URLs
+                     * @param _type Notification type. Currently only supports URLs
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NotifyUrl 
+                     * 获取Callback URL. Starting with http/https, supporting a maximum of 512 characters
+                     * @return NotifyUrl Callback URL. Starting with http/https, supporting a maximum of 512 characters
                      * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
-                     * 设置
-                     * @param _notifyUrl 
+                     * 设置Callback URL. Starting with http/https, supporting a maximum of 512 characters
+                     * @param _notifyUrl Callback URL. Starting with http/https, supporting a maximum of 512 characters
                      * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Notification type. Currently only supports URLs
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Callback URL. Starting with http/https, supporting a maximum of 512 characters
                      */
                     std::string m_notifyUrl;
                     bool m_notifyUrlHasBeenSet;

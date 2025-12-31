@@ -55,7 +55,8 @@ AVTemplate::AVTemplate() :
     m_videoEnhanceSettingsHasBeenSet(false),
     m_gopSizeHasBeenSet(false),
     m_gopSizeUnitsHasBeenSet(false),
-    m_colorSpaceSettingsHasBeenSet(false)
+    m_colorSpaceSettingsHasBeenSet(false),
+    m_forensicWatermarkIdsHasBeenSet(false)
 {
 }
 
@@ -469,6 +470,19 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_colorSpaceSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("ForensicWatermarkIds") && !value["ForensicWatermarkIds"].IsNull())
+    {
+        if (!value["ForensicWatermarkIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.ForensicWatermarkIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["ForensicWatermarkIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_forensicWatermarkIds.push_back((*itr).GetString());
+        }
+        m_forensicWatermarkIdsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -773,6 +787,19 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_colorSpaceSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_forensicWatermarkIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForensicWatermarkIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_forensicWatermarkIds.begin(); itr != m_forensicWatermarkIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -1336,5 +1363,21 @@ void AVTemplate::SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSetti
 bool AVTemplate::ColorSpaceSettingsHasBeenSet() const
 {
     return m_colorSpaceSettingsHasBeenSet;
+}
+
+vector<string> AVTemplate::GetForensicWatermarkIds() const
+{
+    return m_forensicWatermarkIds;
+}
+
+void AVTemplate::SetForensicWatermarkIds(const vector<string>& _forensicWatermarkIds)
+{
+    m_forensicWatermarkIds = _forensicWatermarkIds;
+    m_forensicWatermarkIdsHasBeenSet = true;
+}
+
+bool AVTemplate::ForensicWatermarkIdsHasBeenSet() const
+{
+    return m_forensicWatermarkIdsHasBeenSet;
 }
 

@@ -433,15 +433,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool VideoCodecDetailsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoEnhanceEnabled 
+                     * 获取Video enhancement switch, 1: on 0: off.
+                     * @return VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
                      * 
                      */
                     uint64_t GetVideoEnhanceEnabled() const;
 
                     /**
-                     * 设置
-                     * @param _videoEnhanceEnabled 
+                     * 设置Video enhancement switch, 1: on 0: off.
+                     * @param _videoEnhanceEnabled Video enhancement switch, 1: on 0: off.
                      * 
                      */
                     void SetVideoEnhanceEnabled(const uint64_t& _videoEnhanceEnabled);
@@ -454,15 +454,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool VideoEnhanceEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoEnhanceSettings 
+                     * 获取Video enhancement parameter array.
+                     * @return VideoEnhanceSettings Video enhancement parameter array.
                      * 
                      */
                     std::vector<VideoEnhanceSetting> GetVideoEnhanceSettings() const;
 
                     /**
-                     * 设置
-                     * @param _videoEnhanceSettings 
+                     * 设置Video enhancement parameter array.
+                     * @param _videoEnhanceSettings Video enhancement parameter array.
                      * 
                      */
                     void SetVideoEnhanceSettings(const std::vector<VideoEnhanceSetting>& _videoEnhanceSettings);
@@ -494,6 +494,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool ColorSpaceSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Traceability watermark.
+                     * @return ForensicWatermarkIds Traceability watermark.
+                     * 
+                     */
+                    std::vector<std::string> GetForensicWatermarkIds() const;
+
+                    /**
+                     * 设置Traceability watermark.
+                     * @param _forensicWatermarkIds Traceability watermark.
+                     * 
+                     */
+                    void SetForensicWatermarkIds(const std::vector<std::string>& _forensicWatermarkIds);
+
+                    /**
+                     * 判断参数 ForensicWatermarkIds 是否已赋值
+                     * @return ForensicWatermarkIds 是否已赋值
+                     * 
+                     */
+                    bool ForensicWatermarkIdsHasBeenSet() const;
 
                 private:
 
@@ -607,13 +628,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_videoCodecDetailsHasBeenSet;
 
                     /**
-                     * 
+                     * Video enhancement switch, 1: on 0: off.
                      */
                     uint64_t m_videoEnhanceEnabled;
                     bool m_videoEnhanceEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * Video enhancement parameter array.
                      */
                     std::vector<VideoEnhanceSetting> m_videoEnhanceSettings;
                     bool m_videoEnhanceSettingsHasBeenSet;
@@ -623,6 +644,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     ColorSpaceSetting m_colorSpaceSettings;
                     bool m_colorSpaceSettingsHasBeenSet;
+
+                    /**
+                     * Traceability watermark.
+                     */
+                    std::vector<std::string> m_forensicWatermarkIds;
+                    bool m_forensicWatermarkIdsHasBeenSet;
 
                 };
             }

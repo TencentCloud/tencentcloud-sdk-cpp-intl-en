@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AB watermark configuration.
                 */
                 class AbWatermarkSettingsReq : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Optional values: A/B.
+                     * @return Type Optional values: A/B.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Optional values: A/B.
+                     * @param _type Optional values: A/B.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Optional values: A/B.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

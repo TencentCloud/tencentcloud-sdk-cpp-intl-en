@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
+                     * @return Url Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
+                     * @param _url Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
