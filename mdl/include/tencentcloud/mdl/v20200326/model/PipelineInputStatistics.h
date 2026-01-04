@@ -148,6 +148,69 @@ For other inputs, the quantity is 1.
                      */
                     bool AudioHasBeenSet() const;
 
+                    /**
+                     * 获取Session ID
+                     * @return SessionId Session ID
+                     * 
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置Session ID
+                     * @param _sessionId Session ID
+                     * 
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     * 
+                     */
+                    bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Rtt time, in milliseconds
+                     * @return RTT Rtt time, in milliseconds
+                     * 
+                     */
+                    int64_t GetRTT() const;
+
+                    /**
+                     * 设置Rtt time, in milliseconds
+                     * @param _rTT Rtt time, in milliseconds
+                     * 
+                     */
+                    void SetRTT(const int64_t& _rTT);
+
+                    /**
+                     * 判断参数 RTT 是否已赋值
+                     * @return RTT 是否已赋值
+                     * 
+                     */
+                    bool RTTHasBeenSet() const;
+
+                    /**
+                     * 获取Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * @return NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * 
+                     */
+                    int64_t GetNetworkValid() const;
+
+                    /**
+                     * 设置Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * @param _networkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * 
+                     */
+                    void SetNetworkValid(const int64_t& _networkValid);
+
+                    /**
+                     * 判断参数 NetworkValid 是否已赋值
+                     * @return NetworkValid 是否已赋值
+                     * 
+                     */
+                    bool NetworkValidHasBeenSet() const;
+
                 private:
 
                     /**
@@ -177,6 +240,24 @@ For other inputs, the quantity is 1.
                      */
                     std::vector<AudioPipelineInputStatistics> m_audio;
                     bool m_audioHasBeenSet;
+
+                    /**
+                     * Session ID
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * Rtt time, in milliseconds
+                     */
+                    int64_t m_rTT;
+                    bool m_rTTHasBeenSet;
+
+                    /**
+                     * Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     */
+                    int64_t m_networkValid;
+                    bool m_networkValidHasBeenSet;
 
                 };
             }

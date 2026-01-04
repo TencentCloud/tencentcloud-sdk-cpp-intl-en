@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-                     * @return XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 获取The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @return XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
                      * 
                      */
                     int64_t GetXPos() const;
 
                     /**
-                     * 设置The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-                     * @param _xPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 设置The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @param _xPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
                      * 
                      */
                     void SetXPos(const int64_t& _xPos);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-                     * @return YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 获取The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @return YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
                      * 
                      */
                     int64_t GetYPos() const;
 
                     /**
-                     * 设置The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-                     * @param _yPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 设置The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @param _yPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
                      * 
                      */
                     void SetYPos(const int64_t& _yPos);
@@ -152,10 +152,10 @@ namespace TencentCloud
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 获取The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
-                     * @return Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @return Width The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
                      * 
@@ -163,10 +163,10 @@ You cannot set both `Width` and `Height` to `0`.
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 设置The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
-                     * @param _width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @param _width The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
                      * 
@@ -181,10 +181,10 @@ You cannot set both `Width` and `Height` to `0`.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 获取The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
-                     * @return Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @return Height The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
                      * 
@@ -192,10 +192,10 @@ You cannot set both `Width` and `Height` to `0`.
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 设置The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
-                     * @param _height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @param _height The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
                      * 
@@ -230,19 +230,19 @@ You cannot set both `Width` and `Height` to `0`.
                     bool m_locationHasBeenSet;
 
                     /**
-                     * The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
                      */
                     int64_t m_xPos;
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
                      */
                     int64_t m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
                      */
@@ -250,7 +250,7 @@ You cannot set both `Width` and `Height` to `0`.
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
                      */

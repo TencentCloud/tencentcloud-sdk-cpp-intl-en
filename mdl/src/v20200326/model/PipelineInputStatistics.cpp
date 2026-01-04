@@ -24,7 +24,10 @@ PipelineInputStatistics::PipelineInputStatistics() :
     m_timestampHasBeenSet(false),
     m_networkInHasBeenSet(false),
     m_videoHasBeenSet(false),
-    m_audioHasBeenSet(false)
+    m_audioHasBeenSet(false),
+    m_sessionIdHasBeenSet(false),
+    m_rTTHasBeenSet(false),
+    m_networkValidHasBeenSet(false)
 {
 }
 
@@ -93,6 +96,36 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const rapidjson::Value 
         m_audioHasBeenSet = true;
     }
 
+    if (value.HasMember("SessionId") && !value["SessionId"].IsNull())
+    {
+        if (!value["SessionId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.SessionId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionId = string(value["SessionId"].GetString());
+        m_sessionIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("RTT") && !value["RTT"].IsNull())
+    {
+        if (!value["RTT"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.RTT` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_rTT = value["RTT"].GetInt64();
+        m_rTTHasBeenSet = true;
+    }
+
+    if (value.HasMember("NetworkValid") && !value["NetworkValid"].IsNull())
+    {
+        if (!value["NetworkValid"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.NetworkValid` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_networkValid = value["NetworkValid"].GetInt64();
+        m_networkValidHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -144,6 +177,30 @@ void PipelineInputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::D
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_sessionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rTTHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RTT";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rTT, allocator);
+    }
+
+    if (m_networkValidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkValid";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_networkValid, allocator);
     }
 
 }
@@ -211,5 +268,53 @@ void PipelineInputStatistics::SetAudio(const vector<AudioPipelineInputStatistics
 bool PipelineInputStatistics::AudioHasBeenSet() const
 {
     return m_audioHasBeenSet;
+}
+
+string PipelineInputStatistics::GetSessionId() const
+{
+    return m_sessionId;
+}
+
+void PipelineInputStatistics::SetSessionId(const string& _sessionId)
+{
+    m_sessionId = _sessionId;
+    m_sessionIdHasBeenSet = true;
+}
+
+bool PipelineInputStatistics::SessionIdHasBeenSet() const
+{
+    return m_sessionIdHasBeenSet;
+}
+
+int64_t PipelineInputStatistics::GetRTT() const
+{
+    return m_rTT;
+}
+
+void PipelineInputStatistics::SetRTT(const int64_t& _rTT)
+{
+    m_rTT = _rTT;
+    m_rTTHasBeenSet = true;
+}
+
+bool PipelineInputStatistics::RTTHasBeenSet() const
+{
+    return m_rTTHasBeenSet;
+}
+
+int64_t PipelineInputStatistics::GetNetworkValid() const
+{
+    return m_networkValid;
+}
+
+void PipelineInputStatistics::SetNetworkValid(const int64_t& _networkValid)
+{
+    m_networkValid = _networkValid;
+    m_networkValidHasBeenSet = true;
+}
+
+bool PipelineInputStatistics::NetworkValidHasBeenSet() const
+{
+    return m_networkValidHasBeenSet;
 }
 

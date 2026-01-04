@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool TypeIDHasBeenSet() const;
 
                     /**
-                     * 获取Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
-                     * @return Num Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+                     * 获取Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
+                     * @return Num Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
                      * 
                      */
                     uint64_t GetNum() const;
 
                     /**
-                     * 设置Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
-                     * @param _num Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+                     * 设置Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
+                     * @param _num Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
                      * 
                      */
                     void SetNum(const uint64_t& _num);
@@ -323,7 +323,7 @@ namespace TencentCloud
                     bool m_typeIDHasBeenSet;
 
                     /**
-                     * Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+                     * Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
                      */
                     uint64_t m_num;
                     bool m_numHasBeenSet;

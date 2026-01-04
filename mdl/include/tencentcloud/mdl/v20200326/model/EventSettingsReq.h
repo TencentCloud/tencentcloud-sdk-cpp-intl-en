@@ -30,6 +30,7 @@
 #include <tencentcloud/mdl/v20200326/model/StaticImageActivateSetting.h>
 #include <tencentcloud/mdl/v20200326/model/StaticImageDeactivateSetting.h>
 #include <tencentcloud/mdl/v20200326/model/MotionGraphicsActivateSetting.h>
+#include <tencentcloud/mdl/v20200326/model/AdBreakSetting.h>
 
 
 namespace TencentCloud
@@ -325,6 +326,27 @@ namespace TencentCloud
                      */
                     bool MotionGraphicsActivateSettingHasBeenSet() const;
 
+                    /**
+                     * 获取Ad Settings
+                     * @return AdBreakSetting Ad Settings
+                     * 
+                     */
+                    AdBreakSetting GetAdBreakSetting() const;
+
+                    /**
+                     * 设置Ad Settings
+                     * @param _adBreakSetting Ad Settings
+                     * 
+                     */
+                    void SetAdBreakSetting(const AdBreakSetting& _adBreakSetting);
+
+                    /**
+                     * 判断参数 AdBreakSetting 是否已赋值
+                     * @return AdBreakSetting 是否已赋值
+                     * 
+                     */
+                    bool AdBreakSettingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -404,6 +426,12 @@ namespace TencentCloud
                      */
                     MotionGraphicsActivateSetting m_motionGraphicsActivateSetting;
                     bool m_motionGraphicsActivateSettingHasBeenSet;
+
+                    /**
+                     * Ad Settings
+                     */
+                    AdBreakSetting m_adBreakSetting;
+                    bool m_adBreakSettingHasBeenSet;
 
                 };
             }

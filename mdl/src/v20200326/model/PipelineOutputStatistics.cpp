@@ -22,7 +22,8 @@ using namespace std;
 
 PipelineOutputStatistics::PipelineOutputStatistics() :
     m_timestampHasBeenSet(false),
-    m_networkOutHasBeenSet(false)
+    m_networkOutHasBeenSet(false),
+    m_networkValidHasBeenSet(false)
 {
 }
 
@@ -51,6 +52,16 @@ CoreInternalOutcome PipelineOutputStatistics::Deserialize(const rapidjson::Value
         m_networkOutHasBeenSet = true;
     }
 
+    if (value.HasMember("NetworkValid") && !value["NetworkValid"].IsNull())
+    {
+        if (!value["NetworkValid"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PipelineOutputStatistics.NetworkValid` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_networkValid = value["NetworkValid"].GetInt64();
+        m_networkValidHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -72,6 +83,14 @@ void PipelineOutputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::
         string key = "NetworkOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_networkOut, allocator);
+    }
+
+    if (m_networkValidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkValid";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_networkValid, allocator);
     }
 
 }
@@ -107,5 +126,21 @@ void PipelineOutputStatistics::SetNetworkOut(const uint64_t& _networkOut)
 bool PipelineOutputStatistics::NetworkOutHasBeenSet() const
 {
     return m_networkOutHasBeenSet;
+}
+
+int64_t PipelineOutputStatistics::GetNetworkValid() const
+{
+    return m_networkValid;
+}
+
+void PipelineOutputStatistics::SetNetworkValid(const int64_t& _networkValid)
+{
+    m_networkValid = _networkValid;
+    m_networkValidHasBeenSet = true;
+}
+
+bool PipelineOutputStatistics::NetworkValidHasBeenSet() const
+{
+    return m_networkValidHasBeenSet;
 }
 

@@ -77,6 +77,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionsRequest.h
   include/tencentcloud/mdl/v20200326/model/TimedMetadataInfo.h
+  include/tencentcloud/mdl/v20200326/model/AbWatermarkSettingsResp.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeTranscodeDetailInfo.h
   include/tencentcloud/mdl/v20200326/model/AbWatermarkInputInfo.h
@@ -120,14 +121,14 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputsResponse.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputResponse.h
-  include/tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionsResponse.h
+  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsResponse.h
   include/tencentcloud/mdl/v20200326/model/ThumbnailSettings.h
   include/tencentcloud/mdl/v20200326/model/PlanResp.h
   include/tencentcloud/mdl/v20200326/model/AudioNormalizationSettings.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelLogsRequest.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.h
-  include/tencentcloud/mdl/v20200326/model/GeneralSetting.h
+  include/tencentcloud/mdl/v20200326/model/AdBreakSetting.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.h
   include/tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeWatermarkInfo.h
@@ -137,7 +138,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsDestinationResp.h
   include/tencentcloud/mdl/v20200326/model/OutputInfo.h
-  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsResponse.h
+  include/tencentcloud/mdl/v20200326/model/DescribeWatermarkDetectionsResponse.h
   include/tencentcloud/mdl/v20200326/model/StaticImageDeactivateSetting.h
   include/tencentcloud/mdl/v20200326/model/VideoCodecDetail.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelResponse.h
@@ -154,6 +155,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.h
   include/tencentcloud/mdl/v20200326/model/StartStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/AbWatermarkSettingsReq.h
+  include/tencentcloud/mdl/v20200326/model/GeneralSetting.h
   include/tencentcloud/mdl/v20200326/model/EventNotifySetting.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/MotionGraphicsActivateSetting.h
@@ -161,6 +163,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamScte35Info.h
   include/tencentcloud/mdl/v20200326/model/StreamAudioInfo.h
+  include/tencentcloud/mdl/v20200326/model/LSqueezeSetting.h
   include/tencentcloud/mdl/v20200326/model/DrmKey.h
   include/tencentcloud/mdl/v20200326/model/OutputsStatistics.h
   include/tencentcloud/mdl/v20200326/model/InputSecurityGroupInfo.h
@@ -253,6 +256,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveWatermarksRequest.cpp
   src/v20200326/model/DescribeWatermarkDetectionsRequest.cpp
   src/v20200326/model/TimedMetadataInfo.cpp
+  src/v20200326/model/AbWatermarkSettingsResp.cpp
   src/v20200326/model/DescribeStreamLiveRegionsRequest.cpp
   src/v20200326/model/DescribeTranscodeDetailInfo.cpp
   src/v20200326/model/AbWatermarkInputInfo.cpp
@@ -296,14 +300,14 @@ set(mdl_src
   src/v20200326/model/CreateStreamLiveWatermarkResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputsResponse.cpp
   src/v20200326/model/ModifyStreamLiveInputResponse.cpp
-  src/v20200326/model/DescribeWatermarkDetectionsResponse.cpp
+  src/v20200326/model/DescribeStreamLiveChannelAlertsResponse.cpp
   src/v20200326/model/ThumbnailSettings.cpp
   src/v20200326/model/PlanResp.cpp
   src/v20200326/model/AudioNormalizationSettings.cpp
   src/v20200326/model/DescribeStreamLivePlansResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelLogsRequest.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.cpp
-  src/v20200326/model/GeneralSetting.cpp
+  src/v20200326/model/AdBreakSetting.cpp
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.cpp
   src/v20200326/model/GetAbWatermarkPlayUrlRequest.cpp
   src/v20200326/model/DescribeWatermarkInfo.cpp
@@ -313,7 +317,7 @@ set(mdl_src
   src/v20200326/model/CreateStreamLiveInputResponse.cpp
   src/v20200326/model/EventSettingsDestinationResp.cpp
   src/v20200326/model/OutputInfo.cpp
-  src/v20200326/model/DescribeStreamLiveChannelAlertsResponse.cpp
+  src/v20200326/model/DescribeWatermarkDetectionsResponse.cpp
   src/v20200326/model/StaticImageDeactivateSetting.cpp
   src/v20200326/model/VideoCodecDetail.cpp
   src/v20200326/model/CreateStreamLiveChannelResponse.cpp
@@ -330,6 +334,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.cpp
   src/v20200326/model/StartStreamLiveChannelRequest.cpp
   src/v20200326/model/AbWatermarkSettingsReq.cpp
+  src/v20200326/model/GeneralSetting.cpp
   src/v20200326/model/EventNotifySetting.cpp
   src/v20200326/model/DeleteStreamLiveInputResponse.cpp
   src/v20200326/model/MotionGraphicsActivateSetting.cpp
@@ -337,6 +342,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveWatermarkResponse.cpp
   src/v20200326/model/StreamScte35Info.cpp
   src/v20200326/model/StreamAudioInfo.cpp
+  src/v20200326/model/LSqueezeSetting.cpp
   src/v20200326/model/DrmKey.cpp
   src/v20200326/model/OutputsStatistics.cpp
   src/v20200326/model/InputSecurityGroupInfo.cpp

@@ -232,6 +232,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool FrameCaptureTemplateNamesHasBeenSet() const;
 
+                    /**
+                     * 获取Name modification for sub m3u8.
+                     * @return NameModifier Name modification for sub m3u8.
+                     * 
+                     */
+                    std::string GetNameModifier() const;
+
+                    /**
+                     * 设置Name modification for sub m3u8.
+                     * @param _nameModifier Name modification for sub m3u8.
+                     * 
+                     */
+                    void SetNameModifier(const std::string& _nameModifier);
+
+                    /**
+                     * 判断参数 NameModifier 是否已赋值
+                     * @return NameModifier 是否已赋值
+                     * 
+                     */
+                    bool NameModifierHasBeenSet() const;
+
                 private:
 
                     /**
@@ -285,6 +306,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_frameCaptureTemplateNames;
                     bool m_frameCaptureTemplateNamesHasBeenSet;
+
+                    /**
+                     * Name modification for sub m3u8.
+                     */
+                    std::string m_nameModifier;
+                    bool m_nameModifierHasBeenSet;
 
                 };
             }

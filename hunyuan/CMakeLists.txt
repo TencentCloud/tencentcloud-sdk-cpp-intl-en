@@ -19,22 +19,40 @@ set(hunyuan_public_header
   )
 
 set(hunyuan_public_header_model
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/ViewImage.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/File3D.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/InputFile3D.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobRequest.h
   )
 
 set(hunyuan_src
   src/v20230901/HunyuanClient.cpp
-  src/v20230901/model/SubmitHunyuanTo3DProJobRequest.cpp
-  src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
   src/v20230901/model/ViewImage.cpp
+  src/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.cpp
+  src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
+  src/v20230901/model/SubmitHunyuan3DPartJobResponse.cpp
+  src/v20230901/model/SubmitHunyuanTo3DProJobRequest.cpp
   src/v20230901/model/QueryHunyuanTo3DProJobRequest.cpp
   src/v20230901/model/File3D.cpp
+  src/v20230901/model/QueryHunyuanTo3DRapidJobResponse.cpp
+  src/v20230901/model/QueryHunyuan3DPartJobResponse.cpp
   src/v20230901/model/QueryHunyuanTo3DProJobResponse.cpp
+  src/v20230901/model/SubmitHunyuan3DPartJobRequest.cpp
+  src/v20230901/model/QueryHunyuan3DPartJobRequest.cpp
+  src/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.cpp
+  src/v20230901/model/InputFile3D.cpp
+  src/v20230901/model/QueryHunyuanTo3DRapidJobRequest.cpp
   )
 
 set(hunyuan_include

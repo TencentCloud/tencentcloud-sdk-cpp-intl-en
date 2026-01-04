@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeImageSettings.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeTextSettings.h>
+#include <tencentcloud/mdl/v20200326/model/AbWatermarkSettingsResp.h>
 
 
 namespace TencentCloud
@@ -211,6 +212,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool AttachedChannelsHasBeenSet() const;
 
+                    /**
+                     * 获取AB watermark configuration.
+                     * @return AbWatermarkSettings AB watermark configuration.
+                     * 
+                     */
+                    AbWatermarkSettingsResp GetAbWatermarkSettings() const;
+
+                    /**
+                     * 设置AB watermark configuration.
+                     * @param _abWatermarkSettings AB watermark configuration.
+                     * 
+                     */
+                    void SetAbWatermarkSettings(const AbWatermarkSettingsResp& _abWatermarkSettings);
+
+                    /**
+                     * 判断参数 AbWatermarkSettings 是否已赋值
+                     * @return AbWatermarkSettings 是否已赋值
+                     * 
+                     */
+                    bool AbWatermarkSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -258,6 +280,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_attachedChannels;
                     bool m_attachedChannelsHasBeenSet;
+
+                    /**
+                     * AB watermark configuration.
+                     */
+                    AbWatermarkSettingsResp m_abWatermarkSettings;
+                    bool m_abWatermarkSettingsHasBeenSet;
 
                 };
             }

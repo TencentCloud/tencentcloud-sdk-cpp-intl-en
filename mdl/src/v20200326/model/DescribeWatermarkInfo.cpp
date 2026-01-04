@@ -27,7 +27,8 @@ DescribeWatermarkInfo::DescribeWatermarkInfo() :
     m_imageSettingsHasBeenSet(false),
     m_textSettingsHasBeenSet(false),
     m_updateTimeHasBeenSet(false),
-    m_attachedChannelsHasBeenSet(false)
+    m_attachedChannelsHasBeenSet(false),
+    m_abWatermarkSettingsHasBeenSet(false)
 {
 }
 
@@ -123,6 +124,23 @@ CoreInternalOutcome DescribeWatermarkInfo::Deserialize(const rapidjson::Value &v
         m_attachedChannelsHasBeenSet = true;
     }
 
+    if (value.HasMember("AbWatermarkSettings") && !value["AbWatermarkSettings"].IsNull())
+    {
+        if (!value["AbWatermarkSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeWatermarkInfo.AbWatermarkSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_abWatermarkSettings.Deserialize(value["AbWatermarkSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_abWatermarkSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -191,6 +209,15 @@ void DescribeWatermarkInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_abWatermarkSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AbWatermarkSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_abWatermarkSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -306,5 +333,21 @@ void DescribeWatermarkInfo::SetAttachedChannels(const vector<string>& _attachedC
 bool DescribeWatermarkInfo::AttachedChannelsHasBeenSet() const
 {
     return m_attachedChannelsHasBeenSet;
+}
+
+AbWatermarkSettingsResp DescribeWatermarkInfo::GetAbWatermarkSettings() const
+{
+    return m_abWatermarkSettings;
+}
+
+void DescribeWatermarkInfo::SetAbWatermarkSettings(const AbWatermarkSettingsResp& _abWatermarkSettings)
+{
+    m_abWatermarkSettings = _abWatermarkSettings;
+    m_abWatermarkSettingsHasBeenSet = true;
+}
+
+bool DescribeWatermarkInfo::AbWatermarkSettingsHasBeenSet() const
+{
+    return m_abWatermarkSettingsHasBeenSet;
 }
 

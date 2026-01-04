@@ -92,6 +92,27 @@ In seconds, indicating data time.
                      */
                     bool NetworkOutHasBeenSet() const;
 
+                    /**
+                     * 获取Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * @return NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * 
+                     */
+                    int64_t GetNetworkValid() const;
+
+                    /**
+                     * 设置Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * @param _networkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     * 
+                     */
+                    void SetNetworkValid(const int64_t& _networkValid);
+
+                    /**
+                     * 判断参数 NetworkValid 是否已赋值
+                     * @return NetworkValid 是否已赋值
+                     * 
+                     */
+                    bool NetworkValidHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +127,12 @@ In seconds, indicating data time.
                      */
                     uint64_t m_networkOut;
                     bool m_networkOutHasBeenSet;
+
+                    /**
+                     * Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+                     */
+                    int64_t m_networkValid;
+                    bool m_networkValidHasBeenSet;
 
                 };
             }

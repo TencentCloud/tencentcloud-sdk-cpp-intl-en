@@ -33,7 +33,8 @@ EventSettingsReq::EventSettingsReq() :
     m_timedMetadataSettingHasBeenSet(false),
     m_staticImageActivateSettingHasBeenSet(false),
     m_staticImageDeactivateSettingHasBeenSet(false),
-    m_motionGraphicsActivateSettingHasBeenSet(false)
+    m_motionGraphicsActivateSettingHasBeenSet(false),
+    m_adBreakSettingHasBeenSet(false)
 {
 }
 
@@ -220,6 +221,23 @@ CoreInternalOutcome EventSettingsReq::Deserialize(const rapidjson::Value &value)
         m_motionGraphicsActivateSettingHasBeenSet = true;
     }
 
+    if (value.HasMember("AdBreakSetting") && !value["AdBreakSetting"].IsNull())
+    {
+        if (!value["AdBreakSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.AdBreakSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_adBreakSetting.Deserialize(value["AdBreakSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_adBreakSettingHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -347,6 +365,15 @@ void EventSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_motionGraphicsActivateSetting.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_adBreakSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdBreakSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_adBreakSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -558,5 +585,21 @@ void EventSettingsReq::SetMotionGraphicsActivateSetting(const MotionGraphicsActi
 bool EventSettingsReq::MotionGraphicsActivateSettingHasBeenSet() const
 {
     return m_motionGraphicsActivateSettingHasBeenSet;
+}
+
+AdBreakSetting EventSettingsReq::GetAdBreakSetting() const
+{
+    return m_adBreakSetting;
+}
+
+void EventSettingsReq::SetAdBreakSetting(const AdBreakSetting& _adBreakSetting)
+{
+    m_adBreakSetting = _adBreakSetting;
+    m_adBreakSettingHasBeenSet = true;
+}
+
+bool EventSettingsReq::AdBreakSettingHasBeenSet() const
+{
+    return m_adBreakSettingHasBeenSet;
 }
 

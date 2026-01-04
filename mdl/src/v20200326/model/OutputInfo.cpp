@@ -28,7 +28,8 @@ OutputInfo::OutputInfo() :
     m_aVTemplateNamesHasBeenSet(false),
     m_captionTemplateNamesHasBeenSet(false),
     m_timedMetadataSettingsHasBeenSet(false),
-    m_frameCaptureTemplateNamesHasBeenSet(false)
+    m_frameCaptureTemplateNamesHasBeenSet(false),
+    m_nameModifierHasBeenSet(false)
 {
 }
 
@@ -146,6 +147,16 @@ CoreInternalOutcome OutputInfo::Deserialize(const rapidjson::Value &value)
         m_frameCaptureTemplateNamesHasBeenSet = true;
     }
 
+    if (value.HasMember("NameModifier") && !value["NameModifier"].IsNull())
+    {
+        if (!value["NameModifier"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.NameModifier` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nameModifier = string(value["NameModifier"].GetString());
+        m_nameModifierHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -242,6 +253,14 @@ void OutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_nameModifierHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NameModifier";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nameModifier.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -373,5 +392,21 @@ void OutputInfo::SetFrameCaptureTemplateNames(const vector<string>& _frameCaptur
 bool OutputInfo::FrameCaptureTemplateNamesHasBeenSet() const
 {
     return m_frameCaptureTemplateNamesHasBeenSet;
+}
+
+string OutputInfo::GetNameModifier() const
+{
+    return m_nameModifier;
+}
+
+void OutputInfo::SetNameModifier(const string& _nameModifier)
+{
+    m_nameModifier = _nameModifier;
+    m_nameModifierHasBeenSet = true;
+}
+
+bool OutputInfo::NameModifierHasBeenSet() const
+{
+    return m_nameModifierHasBeenSet;
 }
 
