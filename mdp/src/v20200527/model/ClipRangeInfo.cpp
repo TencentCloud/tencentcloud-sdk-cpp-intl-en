@@ -22,7 +22,9 @@ using namespace std;
 
 ClipRangeInfo::ClipRangeInfo() :
     m_typeHasBeenSet(false),
-    m_offsetHasBeenSet(false)
+    m_offsetHasBeenSet(false),
+    m_startOffsetHasBeenSet(false),
+    m_endOffsetHasBeenSet(false)
 {
 }
 
@@ -51,6 +53,26 @@ CoreInternalOutcome ClipRangeInfo::Deserialize(const rapidjson::Value &value)
         m_offsetHasBeenSet = true;
     }
 
+    if (value.HasMember("StartOffset") && !value["StartOffset"].IsNull())
+    {
+        if (!value["StartOffset"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClipRangeInfo.StartOffset` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_startOffset = value["StartOffset"].GetUint64();
+        m_startOffsetHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndOffset") && !value["EndOffset"].IsNull())
+    {
+        if (!value["EndOffset"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClipRangeInfo.EndOffset` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_endOffset = value["EndOffset"].GetUint64();
+        m_endOffsetHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -72,6 +94,22 @@ void ClipRangeInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
+    }
+
+    if (m_startOffsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartOffset";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_startOffset, allocator);
+    }
+
+    if (m_endOffsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndOffset";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_endOffset, allocator);
     }
 
 }
@@ -107,5 +145,37 @@ void ClipRangeInfo::SetOffset(const uint64_t& _offset)
 bool ClipRangeInfo::OffsetHasBeenSet() const
 {
     return m_offsetHasBeenSet;
+}
+
+uint64_t ClipRangeInfo::GetStartOffset() const
+{
+    return m_startOffset;
+}
+
+void ClipRangeInfo::SetStartOffset(const uint64_t& _startOffset)
+{
+    m_startOffset = _startOffset;
+    m_startOffsetHasBeenSet = true;
+}
+
+bool ClipRangeInfo::StartOffsetHasBeenSet() const
+{
+    return m_startOffsetHasBeenSet;
+}
+
+uint64_t ClipRangeInfo::GetEndOffset() const
+{
+    return m_endOffset;
+}
+
+void ClipRangeInfo::SetEndOffset(const uint64_t& _endOffset)
+{
+    m_endOffset = _endOffset;
+    m_endOffsetHasBeenSet = true;
+}
+
+bool ClipRangeInfo::EndOffsetHasBeenSet() const
+{
+    return m_endOffsetHasBeenSet;
 }
 

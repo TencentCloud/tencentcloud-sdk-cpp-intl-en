@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Key 
+                     * 获取The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+                     * @return Key The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置
-                     * @param _key 
+                     * 设置The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+                     * @param _key The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -71,15 +71,19 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
+                     * @return Value The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
+                     * @param _value The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -94,13 +98,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * 
+                     * The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

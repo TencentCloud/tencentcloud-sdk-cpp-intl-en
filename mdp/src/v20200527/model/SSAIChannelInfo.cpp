@@ -26,7 +26,8 @@ SSAIChannelInfo::SSAIChannelInfo() :
     m_contentSourceHasBeenSet(false),
     m_playbackPrefixHasBeenSet(false),
     m_sSAIInfoHasBeenSet(false),
-    m_regionHasBeenSet(false)
+    m_regionHasBeenSet(false),
+    m_sessionInitPrefixHasBeenSet(false)
 {
 }
 
@@ -102,6 +103,16 @@ CoreInternalOutcome SSAIChannelInfo::Deserialize(const rapidjson::Value &value)
         m_regionHasBeenSet = true;
     }
 
+    if (value.HasMember("SessionInitPrefix") && !value["SessionInitPrefix"].IsNull())
+    {
+        if (!value["SessionInitPrefix"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIChannelInfo.SessionInitPrefix` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionInitPrefix = string(value["SessionInitPrefix"].GetString());
+        m_sessionInitPrefixHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -156,6 +167,14 @@ void SSAIChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionInitPrefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionInitPrefix";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionInitPrefix.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -255,5 +274,21 @@ void SSAIChannelInfo::SetRegion(const string& _region)
 bool SSAIChannelInfo::RegionHasBeenSet() const
 {
     return m_regionHasBeenSet;
+}
+
+string SSAIChannelInfo::GetSessionInitPrefix() const
+{
+    return m_sessionInitPrefix;
+}
+
+void SSAIChannelInfo::SetSessionInitPrefix(const string& _sessionInitPrefix)
+{
+    m_sessionInitPrefix = _sessionInitPrefix;
+    m_sessionInitPrefixHasBeenSet = true;
+}
+
+bool SSAIChannelInfo::SessionInitPrefixHasBeenSet() const
+{
+    return m_sessionInitPrefixHasBeenSet;
 }
 

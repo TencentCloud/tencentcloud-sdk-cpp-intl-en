@@ -38,7 +38,18 @@ UsageDetail::UsageDetail() :
     m_midFillRateHasBeenSet(false),
     m_preReqNumHasBeenSet(false),
     m_preReplacedNumHasBeenSet(false),
-    m_preReplaceRateHasBeenSet(false)
+    m_preReplaceRateHasBeenSet(false),
+    m_aDMarkerFoundHasBeenSet(false),
+    m_makeAdsRequestHasBeenSet(false),
+    m_vASTResponseHasBeenSet(false),
+    m_filledAvailHasBeenSet(false),
+    m_warningNoAdHasBeenSet(false),
+    m_errorAdsTimeoutHasBeenSet(false),
+    m_emptyVASTResponseHasBeenSet(false),
+    m_emptyVMAPResponseHasBeenSet(false),
+    m_dateHasBeenSet(false),
+    m_startTimeHasBeenSet(false),
+    m_endTimeHasBeenSet(false)
 {
 }
 
@@ -227,6 +238,116 @@ CoreInternalOutcome UsageDetail::Deserialize(const rapidjson::Value &value)
         m_preReplaceRateHasBeenSet = true;
     }
 
+    if (value.HasMember("ADMarkerFound") && !value["ADMarkerFound"].IsNull())
+    {
+        if (!value["ADMarkerFound"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.ADMarkerFound` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_aDMarkerFound = value["ADMarkerFound"].GetUint64();
+        m_aDMarkerFoundHasBeenSet = true;
+    }
+
+    if (value.HasMember("MakeAdsRequest") && !value["MakeAdsRequest"].IsNull())
+    {
+        if (!value["MakeAdsRequest"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.MakeAdsRequest` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_makeAdsRequest = value["MakeAdsRequest"].GetUint64();
+        m_makeAdsRequestHasBeenSet = true;
+    }
+
+    if (value.HasMember("VASTResponse") && !value["VASTResponse"].IsNull())
+    {
+        if (!value["VASTResponse"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.VASTResponse` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_vASTResponse = value["VASTResponse"].GetUint64();
+        m_vASTResponseHasBeenSet = true;
+    }
+
+    if (value.HasMember("FilledAvail") && !value["FilledAvail"].IsNull())
+    {
+        if (!value["FilledAvail"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.FilledAvail` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_filledAvail = value["FilledAvail"].GetUint64();
+        m_filledAvailHasBeenSet = true;
+    }
+
+    if (value.HasMember("WarningNoAd") && !value["WarningNoAd"].IsNull())
+    {
+        if (!value["WarningNoAd"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.WarningNoAd` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_warningNoAd = value["WarningNoAd"].GetUint64();
+        m_warningNoAdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ErrorAdsTimeout") && !value["ErrorAdsTimeout"].IsNull())
+    {
+        if (!value["ErrorAdsTimeout"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.ErrorAdsTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_errorAdsTimeout = value["ErrorAdsTimeout"].GetUint64();
+        m_errorAdsTimeoutHasBeenSet = true;
+    }
+
+    if (value.HasMember("EmptyVASTResponse") && !value["EmptyVASTResponse"].IsNull())
+    {
+        if (!value["EmptyVASTResponse"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.EmptyVASTResponse` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_emptyVASTResponse = value["EmptyVASTResponse"].GetUint64();
+        m_emptyVASTResponseHasBeenSet = true;
+    }
+
+    if (value.HasMember("EmptyVMAPResponse") && !value["EmptyVMAPResponse"].IsNull())
+    {
+        if (!value["EmptyVMAPResponse"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.EmptyVMAPResponse` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_emptyVMAPResponse = value["EmptyVMAPResponse"].GetUint64();
+        m_emptyVMAPResponseHasBeenSet = true;
+    }
+
+    if (value.HasMember("Date") && !value["Date"].IsNull())
+    {
+        if (!value["Date"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.Date` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_date = string(value["Date"].GetString());
+        m_dateHasBeenSet = true;
+    }
+
+    if (value.HasMember("StartTime") && !value["StartTime"].IsNull())
+    {
+        if (!value["StartTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_startTime = string(value["StartTime"].GetString());
+        m_startTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndTime") && !value["EndTime"].IsNull())
+    {
+        if (!value["EndTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `UsageDetail.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endTime = string(value["EndTime"].GetString());
+        m_endTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -376,6 +497,94 @@ void UsageDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "PreReplaceRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_preReplaceRate, allocator);
+    }
+
+    if (m_aDMarkerFoundHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ADMarkerFound";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_aDMarkerFound, allocator);
+    }
+
+    if (m_makeAdsRequestHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MakeAdsRequest";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_makeAdsRequest, allocator);
+    }
+
+    if (m_vASTResponseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VASTResponse";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vASTResponse, allocator);
+    }
+
+    if (m_filledAvailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilledAvail";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_filledAvail, allocator);
+    }
+
+    if (m_warningNoAdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarningNoAd";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_warningNoAd, allocator);
+    }
+
+    if (m_errorAdsTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrorAdsTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_errorAdsTimeout, allocator);
+    }
+
+    if (m_emptyVASTResponseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EmptyVASTResponse";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_emptyVASTResponse, allocator);
+    }
+
+    if (m_emptyVMAPResponseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EmptyVMAPResponse";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_emptyVMAPResponse, allocator);
+    }
+
+    if (m_dateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Date";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_date.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_startTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -667,5 +876,181 @@ void UsageDetail::SetPreReplaceRate(const double& _preReplaceRate)
 bool UsageDetail::PreReplaceRateHasBeenSet() const
 {
     return m_preReplaceRateHasBeenSet;
+}
+
+uint64_t UsageDetail::GetADMarkerFound() const
+{
+    return m_aDMarkerFound;
+}
+
+void UsageDetail::SetADMarkerFound(const uint64_t& _aDMarkerFound)
+{
+    m_aDMarkerFound = _aDMarkerFound;
+    m_aDMarkerFoundHasBeenSet = true;
+}
+
+bool UsageDetail::ADMarkerFoundHasBeenSet() const
+{
+    return m_aDMarkerFoundHasBeenSet;
+}
+
+uint64_t UsageDetail::GetMakeAdsRequest() const
+{
+    return m_makeAdsRequest;
+}
+
+void UsageDetail::SetMakeAdsRequest(const uint64_t& _makeAdsRequest)
+{
+    m_makeAdsRequest = _makeAdsRequest;
+    m_makeAdsRequestHasBeenSet = true;
+}
+
+bool UsageDetail::MakeAdsRequestHasBeenSet() const
+{
+    return m_makeAdsRequestHasBeenSet;
+}
+
+uint64_t UsageDetail::GetVASTResponse() const
+{
+    return m_vASTResponse;
+}
+
+void UsageDetail::SetVASTResponse(const uint64_t& _vASTResponse)
+{
+    m_vASTResponse = _vASTResponse;
+    m_vASTResponseHasBeenSet = true;
+}
+
+bool UsageDetail::VASTResponseHasBeenSet() const
+{
+    return m_vASTResponseHasBeenSet;
+}
+
+uint64_t UsageDetail::GetFilledAvail() const
+{
+    return m_filledAvail;
+}
+
+void UsageDetail::SetFilledAvail(const uint64_t& _filledAvail)
+{
+    m_filledAvail = _filledAvail;
+    m_filledAvailHasBeenSet = true;
+}
+
+bool UsageDetail::FilledAvailHasBeenSet() const
+{
+    return m_filledAvailHasBeenSet;
+}
+
+uint64_t UsageDetail::GetWarningNoAd() const
+{
+    return m_warningNoAd;
+}
+
+void UsageDetail::SetWarningNoAd(const uint64_t& _warningNoAd)
+{
+    m_warningNoAd = _warningNoAd;
+    m_warningNoAdHasBeenSet = true;
+}
+
+bool UsageDetail::WarningNoAdHasBeenSet() const
+{
+    return m_warningNoAdHasBeenSet;
+}
+
+uint64_t UsageDetail::GetErrorAdsTimeout() const
+{
+    return m_errorAdsTimeout;
+}
+
+void UsageDetail::SetErrorAdsTimeout(const uint64_t& _errorAdsTimeout)
+{
+    m_errorAdsTimeout = _errorAdsTimeout;
+    m_errorAdsTimeoutHasBeenSet = true;
+}
+
+bool UsageDetail::ErrorAdsTimeoutHasBeenSet() const
+{
+    return m_errorAdsTimeoutHasBeenSet;
+}
+
+uint64_t UsageDetail::GetEmptyVASTResponse() const
+{
+    return m_emptyVASTResponse;
+}
+
+void UsageDetail::SetEmptyVASTResponse(const uint64_t& _emptyVASTResponse)
+{
+    m_emptyVASTResponse = _emptyVASTResponse;
+    m_emptyVASTResponseHasBeenSet = true;
+}
+
+bool UsageDetail::EmptyVASTResponseHasBeenSet() const
+{
+    return m_emptyVASTResponseHasBeenSet;
+}
+
+uint64_t UsageDetail::GetEmptyVMAPResponse() const
+{
+    return m_emptyVMAPResponse;
+}
+
+void UsageDetail::SetEmptyVMAPResponse(const uint64_t& _emptyVMAPResponse)
+{
+    m_emptyVMAPResponse = _emptyVMAPResponse;
+    m_emptyVMAPResponseHasBeenSet = true;
+}
+
+bool UsageDetail::EmptyVMAPResponseHasBeenSet() const
+{
+    return m_emptyVMAPResponseHasBeenSet;
+}
+
+string UsageDetail::GetDate() const
+{
+    return m_date;
+}
+
+void UsageDetail::SetDate(const string& _date)
+{
+    m_date = _date;
+    m_dateHasBeenSet = true;
+}
+
+bool UsageDetail::DateHasBeenSet() const
+{
+    return m_dateHasBeenSet;
+}
+
+string UsageDetail::GetStartTime() const
+{
+    return m_startTime;
+}
+
+void UsageDetail::SetStartTime(const string& _startTime)
+{
+    m_startTime = _startTime;
+    m_startTimeHasBeenSet = true;
+}
+
+bool UsageDetail::StartTimeHasBeenSet() const
+{
+    return m_startTimeHasBeenSet;
+}
+
+string UsageDetail::GetEndTime() const
+{
+    return m_endTime;
+}
+
+void UsageDetail::SetEndTime(const string& _endTime)
+{
+    m_endTime = _endTime;
+    m_endTimeHasBeenSet = true;
+}
+
+bool UsageDetail::EndTimeHasBeenSet() const
+{
+    return m_endTimeHasBeenSet;
 }
 

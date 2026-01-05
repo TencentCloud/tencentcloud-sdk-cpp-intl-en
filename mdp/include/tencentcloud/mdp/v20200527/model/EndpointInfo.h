@@ -326,6 +326,27 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     bool DRMInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The switch of absolute path.
+                     * @return AbsolutePathEnable The switch of absolute path.
+                     * 
+                     */
+                    bool GetAbsolutePathEnable() const;
+
+                    /**
+                     * 设置The switch of absolute path.
+                     * @param _absolutePathEnable The switch of absolute path.
+                     * 
+                     */
+                    void SetAbsolutePathEnable(const bool& _absolutePathEnable);
+
+                    /**
+                     * 判断参数 AbsolutePathEnable 是否已赋值
+                     * @return AbsolutePathEnable 是否已赋值
+                     * 
+                     */
+                    bool AbsolutePathEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -406,6 +427,12 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     DRMInfo m_dRMInfo;
                     bool m_dRMInfoHasBeenSet;
+
+                    /**
+                     * The switch of absolute path.
+                     */
+                    bool m_absolutePathEnable;
+                    bool m_absolutePathEnableHasBeenSet;
 
                 };
             }

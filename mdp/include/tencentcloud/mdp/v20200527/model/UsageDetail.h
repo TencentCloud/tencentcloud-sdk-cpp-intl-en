@@ -301,128 +301,359 @@ namespace TencentCloud
                     /**
                      * 获取Advertising tag time.
                      * @return AdMarkerTime Advertising tag time.
-                     * 
+                     * @deprecated
                      */
                     double GetAdMarkerTime() const;
 
                     /**
                      * 设置Advertising tag time.
                      * @param _adMarkerTime Advertising tag time.
-                     * 
+                     * @deprecated
                      */
                     void SetAdMarkerTime(const double& _adMarkerTime);
 
                     /**
                      * 判断参数 AdMarkerTime 是否已赋值
                      * @return AdMarkerTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AdMarkerTimeHasBeenSet() const;
 
                     /**
                      * 获取Personalization replacement time.
                      * @return ReplacedTime Personalization replacement time.
-                     * 
+                     * @deprecated
                      */
                     double GetReplacedTime() const;
 
                     /**
                      * 设置Personalization replacement time.
                      * @param _replacedTime Personalization replacement time.
-                     * 
+                     * @deprecated
                      */
                     void SetReplacedTime(const double& _replacedTime);
 
                     /**
                      * 判断参数 ReplacedTime 是否已赋值
                      * @return ReplacedTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ReplacedTimeHasBeenSet() const;
 
                     /**
                      * 获取Fill factor for personalized ads.
                      * @return MidFillRate Fill factor for personalized ads.
-                     * 
+                     * @deprecated
                      */
                     double GetMidFillRate() const;
 
                     /**
                      * 设置Fill factor for personalized ads.
                      * @param _midFillRate Fill factor for personalized ads.
-                     * 
+                     * @deprecated
                      */
                     void SetMidFillRate(const double& _midFillRate);
 
                     /**
                      * 判断参数 MidFillRate 是否已赋值
                      * @return MidFillRate 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool MidFillRateHasBeenSet() const;
 
                     /**
                      * 获取Number of pre-roll ad requests.
                      * @return PreReqNum Number of pre-roll ad requests.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetPreReqNum() const;
 
                     /**
                      * 设置Number of pre-roll ad requests.
                      * @param _preReqNum Number of pre-roll ad requests.
-                     * 
+                     * @deprecated
                      */
                     void SetPreReqNum(const uint64_t& _preReqNum);
 
                     /**
                      * 判断参数 PreReqNum 是否已赋值
                      * @return PreReqNum 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PreReqNumHasBeenSet() const;
 
                     /**
                      * 获取Number of pre-roll ad replacements.
                      * @return PreReplacedNum Number of pre-roll ad replacements.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetPreReplacedNum() const;
 
                     /**
                      * 设置Number of pre-roll ad replacements.
                      * @param _preReplacedNum Number of pre-roll ad replacements.
-                     * 
+                     * @deprecated
                      */
                     void SetPreReplacedNum(const uint64_t& _preReplacedNum);
 
                     /**
                      * 判断参数 PreReplacedNum 是否已赋值
                      * @return PreReplacedNum 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PreReplacedNumHasBeenSet() const;
 
                     /**
                      * 获取Ad replacement rate.
                      * @return PreReplaceRate Ad replacement rate.
-                     * 
+                     * @deprecated
                      */
                     double GetPreReplaceRate() const;
 
                     /**
                      * 设置Ad replacement rate.
                      * @param _preReplaceRate Ad replacement rate.
-                     * 
+                     * @deprecated
                      */
                     void SetPreReplaceRate(const double& _preReplaceRate);
 
                     /**
                      * 判断参数 PreReplaceRate 是否已赋值
                      * @return PreReplaceRate 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PreReplaceRateHasBeenSet() const;
+
+                    /**
+                     * 获取Number of ad tags found in the list
+                     * @return ADMarkerFound Number of ad tags found in the list
+                     * 
+                     */
+                    uint64_t GetADMarkerFound() const;
+
+                    /**
+                     * 设置Number of ad tags found in the list
+                     * @param _aDMarkerFound Number of ad tags found in the list
+                     * 
+                     */
+                    void SetADMarkerFound(const uint64_t& _aDMarkerFound);
+
+                    /**
+                     * 判断参数 ADMarkerFound 是否已赋值
+                     * @return ADMarkerFound 是否已赋值
+                     * 
+                     */
+                    bool ADMarkerFoundHasBeenSet() const;
+
+                    /**
+                     * 获取Request advertising frequency from ADS
+                     * @return MakeAdsRequest Request advertising frequency from ADS
+                     * 
+                     */
+                    uint64_t GetMakeAdsRequest() const;
+
+                    /**
+                     * 设置Request advertising frequency from ADS
+                     * @param _makeAdsRequest Request advertising frequency from ADS
+                     * 
+                     */
+                    void SetMakeAdsRequest(const uint64_t& _makeAdsRequest);
+
+                    /**
+                     * 判断参数 MakeAdsRequest 是否已赋值
+                     * @return MakeAdsRequest 是否已赋值
+                     * 
+                     */
+                    bool MakeAdsRequestHasBeenSet() const;
+
+                    /**
+                     * 获取Received VAST returns from ADS
+                     * @return VASTResponse Received VAST returns from ADS
+                     * 
+                     */
+                    uint64_t GetVASTResponse() const;
+
+                    /**
+                     * 设置Received VAST returns from ADS
+                     * @param _vASTResponse Received VAST returns from ADS
+                     * 
+                     */
+                    void SetVASTResponse(const uint64_t& _vASTResponse);
+
+                    /**
+                     * 判断参数 VASTResponse 是否已赋值
+                     * @return VASTResponse 是否已赋值
+                     * 
+                     */
+                    bool VASTResponseHasBeenSet() const;
+
+                    /**
+                     * 获取Successfully filled the ad count
+                     * @return FilledAvail Successfully filled the ad count
+                     * 
+                     */
+                    uint64_t GetFilledAvail() const;
+
+                    /**
+                     * 设置Successfully filled the ad count
+                     * @param _filledAvail Successfully filled the ad count
+                     * 
+                     */
+                    void SetFilledAvail(const uint64_t& _filledAvail);
+
+                    /**
+                     * 判断参数 FilledAvail 是否已赋值
+                     * @return FilledAvail 是否已赋值
+                     * 
+                     */
+                    bool FilledAvailHasBeenSet() const;
+
+                    /**
+                     * 获取The number of issues encountered during ad replacement execution
+                     * @return WarningNoAd The number of issues encountered during ad replacement execution
+                     * 
+                     */
+                    uint64_t GetWarningNoAd() const;
+
+                    /**
+                     * 设置The number of issues encountered during ad replacement execution
+                     * @param _warningNoAd The number of issues encountered during ad replacement execution
+                     * 
+                     */
+                    void SetWarningNoAd(const uint64_t& _warningNoAd);
+
+                    /**
+                     * 判断参数 WarningNoAd 是否已赋值
+                     * @return WarningNoAd 是否已赋值
+                     * 
+                     */
+                    bool WarningNoAdHasBeenSet() const;
+
+                    /**
+                     * 获取The number of timeouts returned by ADS
+                     * @return ErrorAdsTimeout The number of timeouts returned by ADS
+                     * 
+                     */
+                    uint64_t GetErrorAdsTimeout() const;
+
+                    /**
+                     * 设置The number of timeouts returned by ADS
+                     * @param _errorAdsTimeout The number of timeouts returned by ADS
+                     * 
+                     */
+                    void SetErrorAdsTimeout(const uint64_t& _errorAdsTimeout);
+
+                    /**
+                     * 判断参数 ErrorAdsTimeout 是否已赋值
+                     * @return ErrorAdsTimeout 是否已赋值
+                     * 
+                     */
+                    bool ErrorAdsTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取The number of empty VAST responses returned by ADS
+                     * @return EmptyVASTResponse The number of empty VAST responses returned by ADS
+                     * 
+                     */
+                    uint64_t GetEmptyVASTResponse() const;
+
+                    /**
+                     * 设置The number of empty VAST responses returned by ADS
+                     * @param _emptyVASTResponse The number of empty VAST responses returned by ADS
+                     * 
+                     */
+                    void SetEmptyVASTResponse(const uint64_t& _emptyVASTResponse);
+
+                    /**
+                     * 判断参数 EmptyVASTResponse 是否已赋值
+                     * @return EmptyVASTResponse 是否已赋值
+                     * 
+                     */
+                    bool EmptyVASTResponseHasBeenSet() const;
+
+                    /**
+                     * 获取The number of empty VMAP responses returned by ADS
+                     * @return EmptyVMAPResponse The number of empty VMAP responses returned by ADS
+                     * 
+                     */
+                    uint64_t GetEmptyVMAPResponse() const;
+
+                    /**
+                     * 设置The number of empty VMAP responses returned by ADS
+                     * @param _emptyVMAPResponse The number of empty VMAP responses returned by ADS
+                     * 
+                     */
+                    void SetEmptyVMAPResponse(const uint64_t& _emptyVMAPResponse);
+
+                    /**
+                     * 判断参数 EmptyVMAPResponse 是否已赋值
+                     * @return EmptyVMAPResponse 是否已赋值
+                     * 
+                     */
+                    bool EmptyVMAPResponseHasBeenSet() const;
+
+                    /**
+                     * 获取Date
+                     * @return Date Date
+                     * 
+                     */
+                    std::string GetDate() const;
+
+                    /**
+                     * 设置Date
+                     * @param _date Date
+                     * 
+                     */
+                    void SetDate(const std::string& _date);
+
+                    /**
+                     * 判断参数 Date 是否已赋值
+                     * @return Date 是否已赋值
+                     * 
+                     */
+                    bool DateHasBeenSet() const;
+
+                    /**
+                     * 获取Start time
+                     * @return StartTime Start time
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Start time
+                     * @param _startTime Start time
+                     * 
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time
+                     * @return EndTime End time
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置End time
+                     * @param _endTime End time
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
 
                 private:
 
@@ -533,6 +764,72 @@ namespace TencentCloud
                      */
                     double m_preReplaceRate;
                     bool m_preReplaceRateHasBeenSet;
+
+                    /**
+                     * Number of ad tags found in the list
+                     */
+                    uint64_t m_aDMarkerFound;
+                    bool m_aDMarkerFoundHasBeenSet;
+
+                    /**
+                     * Request advertising frequency from ADS
+                     */
+                    uint64_t m_makeAdsRequest;
+                    bool m_makeAdsRequestHasBeenSet;
+
+                    /**
+                     * Received VAST returns from ADS
+                     */
+                    uint64_t m_vASTResponse;
+                    bool m_vASTResponseHasBeenSet;
+
+                    /**
+                     * Successfully filled the ad count
+                     */
+                    uint64_t m_filledAvail;
+                    bool m_filledAvailHasBeenSet;
+
+                    /**
+                     * The number of issues encountered during ad replacement execution
+                     */
+                    uint64_t m_warningNoAd;
+                    bool m_warningNoAdHasBeenSet;
+
+                    /**
+                     * The number of timeouts returned by ADS
+                     */
+                    uint64_t m_errorAdsTimeout;
+                    bool m_errorAdsTimeoutHasBeenSet;
+
+                    /**
+                     * The number of empty VAST responses returned by ADS
+                     */
+                    uint64_t m_emptyVASTResponse;
+                    bool m_emptyVASTResponseHasBeenSet;
+
+                    /**
+                     * The number of empty VMAP responses returned by ADS
+                     */
+                    uint64_t m_emptyVMAPResponse;
+                    bool m_emptyVMAPResponseHasBeenSet;
+
+                    /**
+                     * Date
+                     */
+                    std::string m_date;
+                    bool m_dateHasBeenSet;
+
+                    /**
+                     * Start time
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

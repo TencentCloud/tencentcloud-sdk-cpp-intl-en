@@ -33,7 +33,8 @@ HarvestJobResp::HarvestJobResp() :
     m_errMessageHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_channelIdHasBeenSet(false),
-    m_regionHasBeenSet(false)
+    m_regionHasBeenSet(false),
+    m_callbackURLHasBeenSet(false)
 {
 }
 
@@ -172,6 +173,16 @@ CoreInternalOutcome HarvestJobResp::Deserialize(const rapidjson::Value &value)
         m_regionHasBeenSet = true;
     }
 
+    if (value.HasMember("CallbackURL") && !value["CallbackURL"].IsNull())
+    {
+        if (!value["CallbackURL"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HarvestJobResp.CallbackURL` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_callbackURL = string(value["CallbackURL"].GetString());
+        m_callbackURLHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -281,6 +292,14 @@ void HarvestJobResp::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_callbackURLHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CallbackURL";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_callbackURL.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -492,5 +511,21 @@ void HarvestJobResp::SetRegion(const string& _region)
 bool HarvestJobResp::RegionHasBeenSet() const
 {
     return m_regionHasBeenSet;
+}
+
+string HarvestJobResp::GetCallbackURL() const
+{
+    return m_callbackURL;
+}
+
+void HarvestJobResp::SetCallbackURL(const string& _callbackURL)
+{
+    m_callbackURL = _callbackURL;
+    m_callbackURLHasBeenSet = true;
+}
+
+bool HarvestJobResp::CallbackURLHasBeenSet() const
+{
+    return m_callbackURLHasBeenSet;
 }
 

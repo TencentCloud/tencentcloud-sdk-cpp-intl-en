@@ -319,6 +319,27 @@ namespace TencentCloud
                      */
                     bool RegionHasBeenSet() const;
 
+                    /**
+                     * 获取Callback URL after recording is completed
+                     * @return CallbackURL Callback URL after recording is completed
+                     * 
+                     */
+                    std::string GetCallbackURL() const;
+
+                    /**
+                     * 设置Callback URL after recording is completed
+                     * @param _callbackURL Callback URL after recording is completed
+                     * 
+                     */
+                    void SetCallbackURL(const std::string& _callbackURL);
+
+                    /**
+                     * 判断参数 CallbackURL 是否已赋值
+                     * @return CallbackURL 是否已赋值
+                     * 
+                     */
+                    bool CallbackURLHasBeenSet() const;
+
                 private:
 
                     /**
@@ -398,6 +419,12 @@ namespace TencentCloud
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Callback URL after recording is completed
+                     */
+                    std::string m_callbackURL;
+                    bool m_callbackURLHasBeenSet;
 
                 };
             }

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Bucket 
+                     * 获取COS bucket name
+                     * @return Bucket COS bucket name
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置
-                     * @param _bucket 
+                     * 设置COS bucket name
+                     * @param _bucket COS bucket name
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Region
+                     * @return Region Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Region
+                     * @param _region Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Object 
+                     * 获取File object path
+                     * @return Object File object path
                      * 
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置
-                     * @param _object 
+                     * 设置File object path
+                     * @param _object File object path
                      * 
                      */
                     void SetObject(const std::string& _object);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * COS bucket name
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * 
+                     * Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * File object path
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;

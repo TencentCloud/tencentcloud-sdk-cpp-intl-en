@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CdnDomain 
+                     * 获取Associated playback domain name.
+                     * @return CdnDomain Associated playback domain name.
                      * 
                      */
                     std::string GetCdnDomain() const;
 
                     /**
-                     * 设置
-                     * @param _cdnDomain 
+                     * 设置Associated playback domain name.
+                     * @param _cdnDomain Associated playback domain name.
                      * 
                      */
                     void SetCdnDomain(const std::string& _cdnDomain);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CdnDomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Belonging region.
+                     * @return Region Belonging region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Belonging region.
+                     * @param _region Belonging region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChannelId 
+                     * 获取Channel ID.
+                     * @return ChannelId Channel ID.
                      * 
                      */
                     std::string GetChannelId() const;
 
                     /**
-                     * 设置
-                     * @param _channelId 
+                     * 设置Channel ID.
+                     * @param _channelId Channel ID.
                      * 
                      */
                     void SetChannelId(const std::string& _channelId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ChannelIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取The ID of a record
+                     * @return Id The ID of a record
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置The ID of a record
+                     * @param _id The ID of a record
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Associated playback domain name.
                      */
                     std::string m_cdnDomain;
                     bool m_cdnDomainHasBeenSet;
 
                     /**
-                     * 
+                     * Belonging region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Channel ID.
                      */
                     std::string m_channelId;
                     bool m_channelIdHasBeenSet;
 
                     /**
-                     * 
+                     * The ID of a record
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

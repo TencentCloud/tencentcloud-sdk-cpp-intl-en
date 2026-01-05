@@ -173,6 +173,27 @@ namespace TencentCloud
                      */
                     bool RegionHasBeenSet() const;
 
+                    /**
+                     * 获取Used for clickthrough addresses
+                     * @return SessionInitPrefix Used for clickthrough addresses
+                     * 
+                     */
+                    std::string GetSessionInitPrefix() const;
+
+                    /**
+                     * 设置Used for clickthrough addresses
+                     * @param _sessionInitPrefix Used for clickthrough addresses
+                     * 
+                     */
+                    void SetSessionInitPrefix(const std::string& _sessionInitPrefix);
+
+                    /**
+                     * 判断参数 SessionInitPrefix 是否已赋值
+                     * @return SessionInitPrefix 是否已赋值
+                     * 
+                     */
+                    bool SessionInitPrefixHasBeenSet() const;
+
                 private:
 
                     /**
@@ -210,6 +231,12 @@ namespace TencentCloud
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Used for clickthrough addresses
+                     */
+                    std::string m_sessionInitPrefix;
+                    bool m_sessionInitPrefixHasBeenSet;
 
                 };
             }

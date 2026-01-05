@@ -33,7 +33,8 @@ EndpointInfo::EndpointInfo() :
     m_customUrlParamIndexHasBeenSet(false),
     m_customUrlParamHasBeenSet(false),
     m_dRMEnabledHasBeenSet(false),
-    m_dRMInfoHasBeenSet(false)
+    m_dRMInfoHasBeenSet(false),
+    m_absolutePathEnableHasBeenSet(false)
 {
 }
 
@@ -193,6 +194,16 @@ CoreInternalOutcome EndpointInfo::Deserialize(const rapidjson::Value &value)
         m_dRMInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("AbsolutePathEnable") && !value["AbsolutePathEnable"].IsNull())
+    {
+        if (!value["AbsolutePathEnable"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.AbsolutePathEnable` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_absolutePathEnable = value["AbsolutePathEnable"].GetBool();
+        m_absolutePathEnableHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -305,6 +316,14 @@ void EndpointInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_dRMInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_absolutePathEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AbsolutePathEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_absolutePathEnable, allocator);
     }
 
 }
@@ -516,5 +535,21 @@ void EndpointInfo::SetDRMInfo(const DRMInfo& _dRMInfo)
 bool EndpointInfo::DRMInfoHasBeenSet() const
 {
     return m_dRMInfoHasBeenSet;
+}
+
+bool EndpointInfo::GetAbsolutePathEnable() const
+{
+    return m_absolutePathEnable;
+}
+
+void EndpointInfo::SetAbsolutePathEnable(const bool& _absolutePathEnable)
+{
+    m_absolutePathEnable = _absolutePathEnable;
+    m_absolutePathEnableHasBeenSet = true;
+}
+
+bool EndpointInfo::AbsolutePathEnableHasBeenSet() const
+{
+    return m_absolutePathEnableHasBeenSet;
 }
 

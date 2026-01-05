@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalSize 
+                     * 获取Total list size.
+                     * @return TotalSize Total list size.
                      * 
                      */
                     int64_t GetTotalSize() const;
 
                     /**
-                     * 设置
-                     * @param _totalSize 
+                     * 设置Total list size.
+                     * @param _totalSize Total list size.
                      * 
                      */
                     void SetTotalSize(const int64_t& _totalSize);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Records 
+                     * 获取List of associated domain name information.
+                     * @return Records List of associated domain name information.
                      * 
                      */
                     std::vector<DomainRecordInfo> GetRecords() const;
 
                     /**
-                     * 设置
-                     * @param _records 
+                     * 设置List of associated domain name information.
+                     * @param _records List of associated domain name information.
                      * 
                      */
                     void SetRecords(const std::vector<DomainRecordInfo>& _records);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total list size.
                      */
                     int64_t m_totalSize;
                     bool m_totalSizeHasBeenSet;
 
                     /**
-                     * 
+                     * List of associated domain name information.
                      */
                     std::vector<DomainRecordInfo> m_records;
                     bool m_recordsHasBeenSet;
