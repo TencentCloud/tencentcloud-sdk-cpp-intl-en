@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPType Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
                      * 设置Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPType Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
                      * 设置Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
                      * 设置Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
                      * 设置Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
                      * 设置Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
                      * 设置Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time, timestamp.
+                     * @return CreateTime Creation time, timestamp.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time, timestamp.
+                     * @param _createTime Creation time, timestamp.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
                      * 设置Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccessStatus Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Access status. 1: not connected; 2: connected.
+                     * @return AccessStatus Access status. 1: not connected; 2: connected.
                      * 
                      */
                     int64_t GetAccessStatus() const;
 
                     /**
-                     * 设置Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accessStatus Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Access status. 1: not connected; 2: connected.
+                     * @param _accessStatus Access status. 1: not connected; 2: connected.
                      * 
                      */
                     void SetAccessStatus(const int64_t& _accessStatus);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccessStatusHasBeenSet() const;
 
                     /**
-                     * 获取The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeamName The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the associated team
+                     * @return TeamName Name of the associated team
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _teamName The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the associated team
+                     * @param _teamName Name of the associated team
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -298,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
                      * 设置Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * @param _status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -350,84 +302,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
                      * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
                      * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
                      * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
                      * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
                      * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation time, timestamp.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Access status. 1: not connected; 2: connected.
                      */
                     int64_t m_accessStatus;
                     bool m_accessStatusHasBeenSet;
 
                     /**
-                     * The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the associated team
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
                      * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

@@ -150,65 +150,86 @@ namespace TencentCloud
                     /**
                      * 获取Android app package name
                      * @return AndroidAppKey Android app package name
-                     * 
+                     * @deprecated
                      */
                     std::string GetAndroidAppKey() const;
 
                     /**
                      * 设置Android app package name
                      * @param _androidAppKey Android app package name
-                     * 
+                     * @deprecated
                      */
                     void SetAndroidAppKey(const std::string& _androidAppKey);
 
                     /**
                      * 判断参数 AndroidAppKey 是否已赋值
                      * @return AndroidAppKey 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AndroidAppKeyHasBeenSet() const;
 
                     /**
                      * 获取iOS App bundleId
                      * @return IosAppKey iOS App bundleId
-                     * 
+                     * @deprecated
                      */
                     std::string GetIosAppKey() const;
 
                     /**
                      * 设置iOS App bundleId
                      * @param _iosAppKey iOS App bundleId
-                     * 
+                     * @deprecated
                      */
                     void SetIosAppKey(const std::string& _iosAppKey);
 
                     /**
                      * 判断参数 IosAppKey 是否已赋值
                      * @return IosAppKey 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IosAppKeyHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
-                     * 
+                     * @deprecated
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
                      * @param _remark Remarks
-                     * 
+                     * @deprecated
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool RemarkHasBeenSet() const;
+
+                    /**
+                     * 获取Scheme
+                     * @return Scheme Scheme
+                     * 
+                     */
+                    std::string GetScheme() const;
+
+                    /**
+                     * 设置Scheme
+                     * @param _scheme Scheme
+                     * 
+                     */
+                    void SetScheme(const std::string& _scheme);
+
+                    /**
+                     * 判断参数 Scheme 是否已赋值
+                     * @return Scheme 是否已赋值
+                     * 
+                     */
+                    bool SchemeHasBeenSet() const;
 
                 private:
 
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Scheme
+                     */
+                    std::string m_scheme;
+                    bool m_schemeHasBeenSet;
 
                 };
             }

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
                      * 设置Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
                      * 设置Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
                      * 设置Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program version.
+                     * @return MNPVersion Mini program version.
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program version.
+                     * @param _mNPVersion Mini program version.
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersionIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the mini program version.
+                     * @return MNPVersionIntro Describes the mini program version.
                      * 
                      */
                     std::string GetMNPVersionIntro() const;
 
                     /**
-                     * 设置Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersionIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes the mini program version.
+                     * @param _mNPVersionIntro Describes the mini program version.
                      * 
                      */
                     void SetMNPVersionIntro(const std::string& _mNPVersionIntro);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QRCodeUrl Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program qr code.
+                     * @return QRCodeUrl Specifies the mini program qr code.
                      * 
                      */
                     std::string GetQRCodeUrl() const;
 
                     /**
-                     * 设置Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qRCodeUrl Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program qr code.
+                     * @param _qRCodeUrl Specifies the mini program qr code.
                      * 
                      */
                     void SetQRCodeUrl(const std::string& _qRCodeUrl);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QRCodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PreviewEntrancePath Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the path to the preview version.
+                     * @return PreviewEntrancePath Specifies the path to the preview version.
                      * 
                      */
                     std::string GetPreviewEntrancePath() const;
 
                     /**
-                     * 设置Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _previewEntrancePath Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the path to the preview version.
+                     * @param _previewEntrancePath Specifies the path to the preview version.
                      * 
                      */
                     void SetPreviewEntrancePath(const std::string& _previewEntrancePath);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PreviewEntrancePathHasBeenSet() const;
 
                     /**
-                     * 获取QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QRCodeContent QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the qr code content.
+                     * @return QRCodeContent Specifies the qr code content.
                      * 
                      */
                     std::string GetQRCodeContent() const;
 
                     /**
-                     * 设置QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qRCodeContent QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the qr code content.
+                     * @param _qRCodeContent Specifies the qr code content.
                      * 
                      */
                     void SetQRCodeContent(const std::string& _qRCodeContent);
@@ -250,56 +218,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
                      * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
                      * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program version.
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Describes the mini program version.
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program qr code.
                      */
                     std::string m_qRCodeUrl;
                     bool m_qRCodeUrlHasBeenSet;
 
                     /**
-                     * Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the path to the preview version.
                      */
                     std::string m_previewEntrancePath;
                     bool m_previewEntrancePathHasBeenSet;
 
                     /**
-                     * QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the qr code content.
                      */
                     std::string m_qRCodeContent;
                     bool m_qRCodeContentHasBeenSet;

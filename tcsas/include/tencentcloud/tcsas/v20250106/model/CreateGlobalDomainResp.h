@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Result
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Result Result
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetResult() const;
 
                     /**
                      * 设置Result
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _result Result
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResult(const bool& _result);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RepeatUrls List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates the duplicate domain name.
+                     * @return RepeatUrls Indicates the duplicate domain name.
                      * 
                      */
                     std::vector<std::string> GetRepeatUrls() const;
 
                     /**
-                     * 设置List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _repeatUrls List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates the duplicate domain name.
+                     * @param _repeatUrls Indicates the duplicate domain name.
                      * 
                      */
                     void SetRepeatUrls(const std::vector<std::string>& _repeatUrls);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RepeatUrlsHasBeenSet() const;
 
                     /**
-                     * 获取List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExistsWhiteUrls List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Lists allowed domain names.
+                     * @return ExistsWhiteUrls Lists allowed domain names.
                      * 
                      */
                     std::vector<std::string> GetExistsWhiteUrls() const;
 
                     /**
-                     * 设置List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _existsWhiteUrls List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Lists allowed domain names.
+                     * @param _existsWhiteUrls Lists allowed domain names.
                      * 
                      */
                     void SetExistsWhiteUrls(const std::vector<std::string>& _existsWhiteUrls);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExistsWhiteUrlsHasBeenSet() const;
 
                     /**
-                     * 获取List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExistsBlackUrls List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates the domain name already exists in the blocklist.
+                     * @return ExistsBlackUrls Indicates the domain name already exists in the blocklist.
                      * 
                      */
                     std::vector<std::string> GetExistsBlackUrls() const;
 
                     /**
-                     * 设置List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _existsBlackUrls List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates the domain name already exists in the blocklist.
+                     * @param _existsBlackUrls Indicates the domain name already exists in the blocklist.
                      * 
                      */
                     void SetExistsBlackUrls(const std::vector<std::string>& _existsBlackUrls);
@@ -150,28 +134,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Result
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indicates the duplicate domain name.
                      */
                     std::vector<std::string> m_repeatUrls;
                     bool m_repeatUrlsHasBeenSet;
 
                     /**
-                     * List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Lists allowed domain names.
                      */
                     std::vector<std::string> m_existsWhiteUrls;
                     bool m_existsWhiteUrlsHasBeenSet;
 
                     /**
-                     * List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indicates the domain name already exists in the blocklist.
                      */
                     std::vector<std::string> m_existsBlackUrls;
                     bool m_existsBlackUrlsHasBeenSet;

@@ -27,11 +27,12 @@ CreateApplicationRequest::CreateApplicationRequest() :
     m_logoHasBeenSet(false),
     m_platformIdHasBeenSet(false),
     m_teamIdHasBeenSet(false),
-    m_applicationTypeHasBeenSet(false),
     m_introHasBeenSet(false),
+    m_applicationTypeHasBeenSet(false),
     m_androidAppKeyHasBeenSet(false),
     m_iosAppKeyHasBeenSet(false),
-    m_remarkHasBeenSet(false)
+    m_remarkHasBeenSet(false),
+    m_schemeHasBeenSet(false)
 {
 }
 
@@ -74,20 +75,20 @@ string CreateApplicationRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_applicationTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ApplicationType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_applicationType, allocator);
-    }
-
     if (m_introHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Intro";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_intro.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_applicationTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_applicationType, allocator);
     }
 
     if (m_androidAppKeyHasBeenSet)
@@ -112,6 +113,14 @@ string CreateApplicationRequest::ToJsonString() const
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_schemeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scheme";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -186,22 +195,6 @@ bool CreateApplicationRequest::TeamIdHasBeenSet() const
     return m_teamIdHasBeenSet;
 }
 
-int64_t CreateApplicationRequest::GetApplicationType() const
-{
-    return m_applicationType;
-}
-
-void CreateApplicationRequest::SetApplicationType(const int64_t& _applicationType)
-{
-    m_applicationType = _applicationType;
-    m_applicationTypeHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::ApplicationTypeHasBeenSet() const
-{
-    return m_applicationTypeHasBeenSet;
-}
-
 string CreateApplicationRequest::GetIntro() const
 {
     return m_intro;
@@ -216,6 +209,22 @@ void CreateApplicationRequest::SetIntro(const string& _intro)
 bool CreateApplicationRequest::IntroHasBeenSet() const
 {
     return m_introHasBeenSet;
+}
+
+int64_t CreateApplicationRequest::GetApplicationType() const
+{
+    return m_applicationType;
+}
+
+void CreateApplicationRequest::SetApplicationType(const int64_t& _applicationType)
+{
+    m_applicationType = _applicationType;
+    m_applicationTypeHasBeenSet = true;
+}
+
+bool CreateApplicationRequest::ApplicationTypeHasBeenSet() const
+{
+    return m_applicationTypeHasBeenSet;
 }
 
 string CreateApplicationRequest::GetAndroidAppKey() const
@@ -264,6 +273,22 @@ void CreateApplicationRequest::SetRemark(const string& _remark)
 bool CreateApplicationRequest::RemarkHasBeenSet() const
 {
     return m_remarkHasBeenSet;
+}
+
+string CreateApplicationRequest::GetScheme() const
+{
+    return m_scheme;
+}
+
+void CreateApplicationRequest::SetScheme(const string& _scheme)
+{
+    m_scheme = _scheme;
+    m_schemeHasBeenSet = true;
+}
+
+bool CreateApplicationRequest::SchemeHasBeenSet() const
+{
+    return m_schemeHasBeenSet;
 }
 
 

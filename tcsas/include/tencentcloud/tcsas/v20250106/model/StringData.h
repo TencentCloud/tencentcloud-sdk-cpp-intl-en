@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取string type response data.
+                     * @return Data string type response data.
                      * 
                      */
                     std::string GetData() const;
 
                     /**
-                     * 设置String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _data String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置string type response data.
+                     * @param _data string type response data.
                      * 
                      */
                     void SetData(const std::string& _data);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * string type response data.
                      */
                     std::string m_data;
                     bool m_dataHasBeenSet;

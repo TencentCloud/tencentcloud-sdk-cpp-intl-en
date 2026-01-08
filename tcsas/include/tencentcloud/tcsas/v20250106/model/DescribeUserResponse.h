@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Response data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DescribeUserDetailResp GetData() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Response data
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeUserDetailResp m_data;
                     bool m_dataHasBeenSet;

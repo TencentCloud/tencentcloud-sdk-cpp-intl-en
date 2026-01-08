@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the ID of the task to create a mini program version.
+                     * @return TaskId Specifies the ID of the task to create a mini program version.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the ID of the task to create a mini program version.
+                     * @param _taskId Specifies the ID of the task to create a mini program version.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the ID of the task to create a mini program version.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

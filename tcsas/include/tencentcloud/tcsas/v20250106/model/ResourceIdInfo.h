@@ -47,31 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceId Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
+                     * @return ResourceId Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
                      * 
                      */
                     int64_t GetResourceId() const;
 
                     /**
-                     * 设置Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceId Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
+                     * @param _resourceId Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
                      * 
                      */
                     void SetResourceId(const int64_t& _resourceId);
@@ -86,11 +82,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
                      */
                     int64_t m_resourceId;
                     bool m_resourceIdHasBeenSet;

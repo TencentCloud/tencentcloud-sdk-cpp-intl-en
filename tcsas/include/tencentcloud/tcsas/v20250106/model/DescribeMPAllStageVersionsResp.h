@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program ID.
+                     * @return MNPId Mini program ID.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program ID.
+                     * @param _mNPId Mini program ID.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program version primary key id.
+                     * @return MNPVersionId Specifies the mini program version primary key id.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program version primary key id.
+                     * @param _mNPVersionId Specifies the mini program version primary key id.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
                      * 设置Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program avatar.
+                     * @return MNPIcon Specifies the mini program avatar.
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program avatar.
+                     * @param _mNPIcon Specifies the mini program avatar.
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
                      * 设置Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
                      * 设置Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
                      * 设置Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取Developer
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateUser Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the developer.
+                     * @return CreateUser Specifies the developer.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Developer
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createUser Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the developer.
+                     * @param _createUser Specifies the developer.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Developer creation time.
+                     * @return CreateTime Developer creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Developer creation time.
+                     * @param _createTime Developer creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program version.
+                     * @return MNPVersion Mini program version.
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program version.
+                     * @param _mNPVersion Mini program version.
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取Version features
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersionIntro Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes version features.
+                     * @return MNPVersionIntro Describes version features.
                      * 
                      */
                     std::string GetMNPVersionIntro() const;
 
                     /**
-                     * 设置Version features
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersionIntro Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes version features.
+                     * @param _mNPVersionIntro Describes version features.
                      * 
                      */
                     void SetMNPVersionIntro(const std::string& _mNPVersionIntro);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Phase Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Development Platform Online.
+                     * @return Phase Development Platform Online.
                      * 
                      */
                     std::string GetPhase() const;
 
                     /**
-                     * 设置Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _phase Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Development Platform Online.
+                     * @param _phase Development Platform Online.
                      * 
                      */
                     void SetPhase(const std::string& _phase);
@@ -347,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhaseHasBeenSet() const;
 
                     /**
-                     * 获取0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalStatus 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+                     * @return ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalStatus 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+                     * @param _approvalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalNo Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Approval ticket ID
+                     * @return ApprovalNo Approval ticket ID
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalNo Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Approval ticket ID
+                     * @param _approvalNo Approval ticket ID
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -397,23 +341,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShowCase Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+                     * @return ShowCase Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
                      * 
                      */
                     int64_t GetShowCase() const;
 
                     /**
-                     * 设置Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _showCase Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+                     * @param _showCase Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
                      * 
                      */
                     void SetShowCase(const int64_t& _showCase);
@@ -426,19 +366,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ShowCaseHasBeenSet() const;
 
                     /**
-                     * 获取Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RollbackVersion Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Version number to roll back to.
+                     * @return RollbackVersion Version number to roll back to.
                      * 
                      */
                     int64_t GetRollbackVersion() const;
 
                     /**
-                     * 设置Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rollbackVersion Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Version number to roll back to.
+                     * @param _rollbackVersion Version number to roll back to.
                      * 
                      */
                     void SetRollbackVersion(const int64_t& _rollbackVersion);
@@ -451,19 +387,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RollbackVersionHasBeenSet() const;
 
                     /**
-                     * 获取Release status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates the release status.
+                     * @return Status Indicates the release status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Release status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates the release status.
+                     * @param _status Indicates the release status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -476,19 +408,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VersionCurrentStatus Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+                     * @return VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
                      * 
                      */
                     int64_t GetVersionCurrentStatus() const;
 
                     /**
-                     * 设置Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _versionCurrentStatus Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+                     * @param _versionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
                      * 
                      */
                     void SetVersionCurrentStatus(const int64_t& _versionCurrentStatus);
@@ -503,128 +431,110 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program ID.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program version primary key id.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
                      * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program avatar.
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
                      * Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
                      * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
                      * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the developer.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Developer creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program version.
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Describes version features.
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Development Platform Online.
                      */
                     std::string m_phase;
                     bool m_phaseHasBeenSet;
 
                     /**
-                     * 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Approval ticket ID
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
                      */
                     int64_t m_showCase;
                     bool m_showCaseHasBeenSet;
 
                     /**
-                     * Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Version number to roll back to.
                      */
                     int64_t m_rollbackVersion;
                     bool m_rollbackVersionHasBeenSet;
 
                     /**
-                     * Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indicates the release status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
                      */
                     int64_t m_versionCurrentStatus;
                     bool m_versionCurrentStatusHasBeenSet;

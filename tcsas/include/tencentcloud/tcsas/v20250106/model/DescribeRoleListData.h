@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoleId Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRoleId() const;
 
                     /**
                      * 设置Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _roleId Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRoleId(const int64_t& _roleId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleIdHasBeenSet() const;
 
                     /**
-                     * 获取Role name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoleName Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Role name.
+                     * @return RoleName Role name.
                      * 
                      */
                     std::string GetRoleName() const;
 
                     /**
-                     * 设置Role name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roleName Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Role name.
+                     * @param _roleName Role name.
                      * 
                      */
                     void SetRoleName(const std::string& _roleName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
                      * 设置Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoleType Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Role type 1-preset role 2-custom role.
+                     * @return RoleType Role type 1-preset role 2-custom role.
                      * 
                      */
                     int64_t GetRoleType() const;
 
                     /**
-                     * 设置Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roleType Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Role type 1-preset role 2-custom role.
+                     * @param _roleType Role type 1-preset role 2-custom role.
                      * 
                      */
                     void SetRoleType(const int64_t& _roleType);
@@ -175,35 +155,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_roleId;
                     bool m_roleIdHasBeenSet;
 
                     /**
-                     * Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Role name.
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;
 
                     /**
                      * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Role type 1-preset role 2-custom role.
                      */
                     int64_t m_roleType;
                     bool m_roleTypeHasBeenSet;

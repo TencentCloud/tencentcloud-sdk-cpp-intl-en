@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Result Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Result.
+                     * @return Result Result.
                      * 
                      */
                     bool GetResult() const;
 
                     /**
-                     * 设置Response result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _result Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Result.
+                     * @param _result Result.
                      * 
                      */
                     void SetResult(const bool& _result);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Result.
                      */
                     bool m_result;
                     bool m_resultHasBeenSet;

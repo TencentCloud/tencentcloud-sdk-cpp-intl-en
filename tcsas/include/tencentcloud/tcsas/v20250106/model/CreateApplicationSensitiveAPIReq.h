@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取API name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return APIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAPIName() const;
 
                     /**
                      * 设置API name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _aPIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAPIName(const std::string& _aPIName);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取API description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAPIDesc() const;
 
                     /**
                      * 设置API description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _aPIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAPIDesc(const std::string& _aPIDesc);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool APIDescHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取API type. 1: system; 2: custom.
+                     * @return APIType API type. 1: system; 2: custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aPIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置API type. 1: system; 2: custom.
+                     * @param _aPIType API type. 1: system; 2: custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -125,21 +113,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * API name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_aPIName;
                     bool m_aPINameHasBeenSet;
 
                     /**
                      * API description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_aPIDesc;
                     bool m_aPIDescHasBeenSet;
 
                     /**
-                     * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * API type. 1: system; 2: custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;

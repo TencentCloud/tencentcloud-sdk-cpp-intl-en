@@ -30,7 +30,8 @@ ModifyApplicationRequest::ModifyApplicationRequest() :
     m_platformIdHasBeenSet(false),
     m_androidAppKeyHasBeenSet(false),
     m_iosAppKeyHasBeenSet(false),
-    m_remarkHasBeenSet(false)
+    m_remarkHasBeenSet(false),
+    m_schemeHasBeenSet(false)
 {
 }
 
@@ -103,6 +104,14 @@ string ModifyApplicationRequest::ToJsonString() const
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_schemeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scheme";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -239,6 +248,22 @@ void ModifyApplicationRequest::SetRemark(const string& _remark)
 bool ModifyApplicationRequest::RemarkHasBeenSet() const
 {
     return m_remarkHasBeenSet;
+}
+
+string ModifyApplicationRequest::GetScheme() const
+{
+    return m_scheme;
+}
+
+void ModifyApplicationRequest::SetScheme(const string& _scheme)
+{
+    m_scheme = _scheme;
+    m_schemeHasBeenSet = true;
+}
+
+bool ModifyApplicationRequest::SchemeHasBeenSet() const
+{
+    return m_schemeHasBeenSet;
 }
 
 

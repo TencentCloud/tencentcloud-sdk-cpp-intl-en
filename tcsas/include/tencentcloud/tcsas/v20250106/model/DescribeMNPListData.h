@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * @param _status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -178,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
                      * 设置Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -203,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
                      * 设置Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -228,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -252,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Updater
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the updater.
+                     * @return UpdateUser Specifies the updater.
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置Updater
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the updater.
+                     * @param _updateUser Specifies the updater.
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -278,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -303,18 +279,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -327,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EffectStatus Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+                     * @return EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
                      * 
                      */
                     int64_t GetEffectStatus() const;
 
                     /**
-                     * 设置Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _effectStatus Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+                     * @param _effectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
                      * 
                      */
                     void SetEffectStatus(const int64_t& _effectStatus);
@@ -352,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EffectStatusHasBeenSet() const;
 
                     /**
-                     * 获取ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EffectMNPVersionId ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the ID of the application bound with the mini program.
+                     * @return EffectMNPVersionId Specifies the ID of the application bound with the mini program.
                      * 
                      */
                     int64_t GetEffectMNPVersionId() const;
 
                     /**
-                     * 设置ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _effectMNPVersionId ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the ID of the application bound with the mini program.
+                     * @param _effectMNPVersionId Specifies the ID of the application bound with the mini program.
                      * 
                      */
                     void SetEffectMNPVersionId(const int64_t& _effectMNPVersionId);
@@ -377,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EffectMNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EffectMNPVersion Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the effective version number of the application bound to the mini program.
+                     * @return EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
                      * 
                      */
                     std::string GetEffectMNPVersion() const;
 
                     /**
-                     * 设置Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _effectMNPVersion Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the effective version number of the application bound to the mini program.
+                     * @param _effectMNPVersion Specifies the effective version number of the application bound to the mini program.
                      * 
                      */
                     void SetEffectMNPVersion(const std::string& _effectMNPVersion);
@@ -434,71 +394,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
                      * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the updater.
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
                      * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
                      */
                     int64_t m_effectStatus;
                     bool m_effectStatusHasBeenSet;
 
                     /**
-                     * ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the ID of the application bound with the mini program.
                      */
                     int64_t m_effectMNPVersionId;
                     bool m_effectMNPVersionIdHasBeenSet;
 
                     /**
-                     * Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the effective version number of the application bound to the mini program.
                      */
                     std::string m_effectMNPVersion;
                     bool m_effectMNPVersionHasBeenSet;

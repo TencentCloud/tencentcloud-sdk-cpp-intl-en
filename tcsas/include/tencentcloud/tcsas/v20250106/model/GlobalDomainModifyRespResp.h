@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Result 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: success; 1: allowed domains exist; 2: blocked domains exist.
+                     * @return Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
                      * 
                      */
                     int64_t GetResult() const;
 
                     /**
-                     * 设置0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _result 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: success; 1: allowed domains exist; 2: blocked domains exist.
+                     * @param _result 0: success; 1: allowed domains exist; 2: blocked domains exist.
                      * 
                      */
                     void SetResult(const int64_t& _result);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 0: Success; 1: Allowed domains; 2: Blocked domains
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: success; 1: allowed domains exist; 2: blocked domains exist.
                      */
                     int64_t m_result;
                     bool m_resultHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User iD.
+                     * @return UserId User iD.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User iD.
+                     * @param _userId User iD.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取User account
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserAccount() const;
 
                     /**
                      * 设置User account
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _userAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserAccount(const std::string& _userAccount);
@@ -98,22 +90,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
                      * @return AccountType User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
                      * 设置User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
                      * @param _accountType User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -127,18 +115,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取User name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置User name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _userName User name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -153,30 +137,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * User iD.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
                      * User account
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userAccount;
                     bool m_userAccountHasBeenSet;
 
                     /**
                      * User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
 
                     /**
                      * User name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;

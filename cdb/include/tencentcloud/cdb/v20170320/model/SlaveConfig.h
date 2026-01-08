@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ReplicationModeHasBeenSet() const;
 
                     /**
-                     * 获取AZ name of the secondary database, such as ap-shanghai-1
-                     * @return Zone AZ name of the secondary database, such as ap-shanghai-1
+                     * 获取AZ name of the secondary database, such as ap-shanghai-2
+                     * @return Zone AZ name of the secondary database, such as ap-shanghai-2
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ name of the secondary database, such as ap-shanghai-1
-                     * @param _zone AZ name of the secondary database, such as ap-shanghai-1
+                     * 设置AZ name of the secondary database, such as ap-shanghai-2
+                     * @param _zone AZ name of the secondary database, such as ap-shanghai-2
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_replicationModeHasBeenSet;
 
                     /**
-                     * AZ name of the secondary database, such as ap-shanghai-1
+                     * AZ name of the secondary database, such as ap-shanghai-2
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

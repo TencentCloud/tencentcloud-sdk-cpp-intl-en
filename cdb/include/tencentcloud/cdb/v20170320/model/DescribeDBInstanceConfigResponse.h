@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance AZ information in the format of "ap-shanghai-1".
-                     * @return Zone Instance AZ information in the format of "ap-shanghai-1".
+                     * 获取Instance AZ information in the format of "ap-shanghai-2".
+                     * @return Zone Instance AZ information in the format of "ap-shanghai-2".
                      * 
                      */
                     std::string GetZone() const;
@@ -148,7 +148,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Instance AZ information in the format of "ap-shanghai-1".
+                     * Instance AZ information in the format of "ap-shanghai-2".
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

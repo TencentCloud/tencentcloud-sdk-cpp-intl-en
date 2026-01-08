@@ -36,7 +36,8 @@ DescribeApplicationResp::DescribeApplicationResp() :
     m_teamIdHasBeenSet(false),
     m_teamNameHasBeenSet(false),
     m_sensitiveApiCountHasBeenSet(false),
-    m_applicationTypeHasBeenSet(false)
+    m_applicationTypeHasBeenSet(false),
+    m_schemeHasBeenSet(false)
 {
 }
 
@@ -205,6 +206,16 @@ CoreInternalOutcome DescribeApplicationResp::Deserialize(const rapidjson::Value 
         m_applicationTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("Scheme") && !value["Scheme"].IsNull())
+    {
+        if (!value["Scheme"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeApplicationResp.Scheme` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_scheme = string(value["Scheme"].GetString());
+        m_schemeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -338,6 +349,14 @@ void DescribeApplicationResp::ToJsonObject(rapidjson::Value &value, rapidjson::D
         string key = "ApplicationType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_applicationType, allocator);
+    }
+
+    if (m_schemeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scheme";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -597,5 +616,21 @@ void DescribeApplicationResp::SetApplicationType(const int64_t& _applicationType
 bool DescribeApplicationResp::ApplicationTypeHasBeenSet() const
 {
     return m_applicationTypeHasBeenSet;
+}
+
+string DescribeApplicationResp::GetScheme() const
+{
+    return m_scheme;
+}
+
+void DescribeApplicationResp::SetScheme(const string& _scheme)
+{
+    m_scheme = _scheme;
+    m_schemeHasBeenSet = true;
+}
+
+bool DescribeApplicationResp::SchemeHasBeenSet() const
+{
+    return m_schemeHasBeenSet;
 }
 

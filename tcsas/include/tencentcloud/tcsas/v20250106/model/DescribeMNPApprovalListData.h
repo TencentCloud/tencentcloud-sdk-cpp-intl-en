@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalNo Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Approval ticket ID
+                     * @return ApprovalNo Approval ticket ID
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalNo Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Approval ticket ID
+                     * @param _approvalNo Approval ticket ID
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalStatus Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+                     * @return ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalStatus Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+                     * @param _approvalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
                      * 设置Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program version.
+                     * @return MNPVersion Mini program version.
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program version.
+                     * @param _mNPVersion Mini program version.
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
                      * 设置Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplyUser Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplyUser() const;
 
                     /**
                      * 设置Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applyUser Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplyUser(const std::string& _applyUser);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplyTime Application time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
                      * 设置Application time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applyTime Application time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
@@ -248,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
                      * 设置Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -273,18 +237,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
                      * 设置Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -298,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the application icon.
+                     * @return ApplicationLogo Specifies the application icon.
                      * 
                      */
                     std::string GetApplicationLogo() const;
 
                     /**
-                     * 设置Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the application icon.
+                     * @param _applicationLogo Specifies the application icon.
                      * 
                      */
                     void SetApplicationLogo(const std::string& _applicationLogo);
@@ -348,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
                      * 设置Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -373,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
                      * 设置Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -397,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MNPQrCodeUrl Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program review qr code.
+                     * @return MNPQrCodeUrl Mini program review qr code.
                      * 
                      */
                     std::string GetMNPQrCodeUrl() const;
 
                     /**
-                     * 设置Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mNPQrCodeUrl Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program review qr code.
+                     * @param _mNPQrCodeUrl Mini program review qr code.
                      * 
                      */
                     void SetMNPQrCodeUrl(const std::string& _mNPQrCodeUrl);
@@ -423,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
                      * 设置Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the reviewer.
+                     * @return ApprovalUser Specifies the reviewer.
                      * 
                      */
                     std::string GetApprovalUser() const;
 
                     /**
-                     * 设置Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the reviewer.
+                     * @param _approvalUser Specifies the reviewer.
                      * 
                      */
                     void SetApprovalUser(const std::string& _approvalUser);
@@ -472,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApprovalUserHasBeenSet() const;
 
                     /**
-                     * 获取Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Approval time.
+                     * @return ApprovalTime Approval time.
                      * 
                      */
                     std::string GetApprovalTime() const;
 
                     /**
-                     * 设置Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Approval time.
+                     * @param _approvalTime Approval time.
                      * 
                      */
                     void SetApprovalTime(const std::string& _approvalTime);
@@ -498,18 +426,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
                      * 设置Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _approvalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -524,134 +448,115 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Approval ticket ID
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
                      * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
                      * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program version.
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
 
                     /**
                      * Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
                      * Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applyUser;
                     bool m_applyUserHasBeenSet;
 
                     /**
                      * Application time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applyTime;
                     bool m_applyTimeHasBeenSet;
 
                     /**
                      * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
                      * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
                      * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the application icon.
                      */
                     std::string m_applicationLogo;
                     bool m_applicationLogoHasBeenSet;
 
                     /**
                      * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
                      * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program review qr code.
                      */
                     std::string m_mNPQrCodeUrl;
                     bool m_mNPQrCodeUrlHasBeenSet;
 
                     /**
                      * Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the reviewer.
                      */
                     std::string m_approvalUser;
                     bool m_approvalUserHasBeenSet;
 
                     /**
-                     * Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Approval time.
                      */
                     std::string m_approvalTime;
                     bool m_approvalTimeHasBeenSet;
 
                     /**
                      * Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;

@@ -64,27 +64,6 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Application platform. 2: Android; 3: iOS
-                     * @return AppType Application platform. 2: Android; 3: iOS
-                     * 
-                     */
-                    int64_t GetAppType() const;
-
-                    /**
-                     * 设置Application platform. 2: Android; 3: iOS
-                     * @param _appType Application platform. 2: Android; 3: iOS
-                     * 
-                     */
-                    void SetAppType(const int64_t& _appType);
-
-                    /**
-                     * 判断参数 AppType 是否已赋值
-                     * @return AppType 是否已赋值
-                     * 
-                     */
-                    bool AppTypeHasBeenSet() const;
-
-                    /**
                      * 获取Platform ID
                      * @return PlatformId Platform ID
                      * 
@@ -105,6 +84,27 @@ namespace TencentCloud
                      */
                     bool PlatformIdHasBeenSet() const;
 
+                    /**
+                     * 获取Application platform. 2: Android; 3: iOS
+                     * @return AppType Application platform. 2: Android; 3: iOS
+                     * @deprecated
+                     */
+                    int64_t GetAppType() const;
+
+                    /**
+                     * 设置Application platform. 2: Android; 3: iOS
+                     * @param _appType Application platform. 2: Android; 3: iOS
+                     * @deprecated
+                     */
+                    void SetAppType(const int64_t& _appType);
+
+                    /**
+                     * 判断参数 AppType 是否已赋值
+                     * @return AppType 是否已赋值
+                     * @deprecated
+                     */
+                    bool AppTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -114,16 +114,16 @@ namespace TencentCloud
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Application platform. 2: Android; 3: iOS
-                     */
-                    int64_t m_appType;
-                    bool m_appTypeHasBeenSet;
-
-                    /**
                      * Platform ID
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
+
+                    /**
+                     * Application platform. 2: Android; 3: iOS
+                     */
+                    int64_t m_appType;
+                    bool m_appTypeHasBeenSet;
 
                 };
             }

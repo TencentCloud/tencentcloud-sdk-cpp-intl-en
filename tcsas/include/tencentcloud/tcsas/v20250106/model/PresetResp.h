@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取RSA encryption public key.
+                     * @return Key RSA encryption public key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置RSA encryption public key.
+                     * @param _key RSA encryption public key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * RSA encryption public key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * RSA encryption public key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

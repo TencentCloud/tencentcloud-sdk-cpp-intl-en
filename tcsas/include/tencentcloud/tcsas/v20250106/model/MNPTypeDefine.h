@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TypeName Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the mini program category name.
+                     * @return TypeName Specifies the mini program category name.
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _typeName Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the mini program category name.
+                     * @param _typeName Specifies the mini program category name.
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TypeValue Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mini program category value.
+                     * @return TypeValue Mini program category value.
                      * 
                      */
                     std::vector<std::string> GetTypeValue() const;
 
                     /**
-                     * 设置Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _typeValue Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mini program category value.
+                     * @param _typeValue Mini program category value.
                      * 
                      */
                     void SetTypeValue(const std::vector<std::string>& _typeValue);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeValueHasBeenSet() const;
 
                     /**
-                     * 获取Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TypeId Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Category ID.
+                     * @return TypeId Category ID.
                      * 
                      */
                     int64_t GetTypeId() const;
 
                     /**
-                     * 设置Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _typeId Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Category ID.
+                     * @param _typeId Category ID.
                      * 
                      */
                     void SetTypeId(const int64_t& _typeId);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
                      * 设置Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSystem Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates whether it is a system category.
+                     * @return IsSystem Indicates whether it is a system category.
                      * 
                      */
                     bool GetIsSystem() const;
 
                     /**
-                     * 设置Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSystem Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates whether it is a system category.
+                     * @param _isSystem Indicates whether it is a system category.
                      * 
                      */
                     void SetIsSystem(const bool& _isSystem);
@@ -199,43 +175,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the mini program category name.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mini program category value.
                      */
                     std::vector<std::string> m_typeValue;
                     bool m_typeValueHasBeenSet;
 
                     /**
-                     * Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Category ID.
                      */
                     int64_t m_typeId;
                     bool m_typeIdHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indicates whether it is a system category.
                      */
                     bool m_isSystem;
                     bool m_isSystemHasBeenSet;

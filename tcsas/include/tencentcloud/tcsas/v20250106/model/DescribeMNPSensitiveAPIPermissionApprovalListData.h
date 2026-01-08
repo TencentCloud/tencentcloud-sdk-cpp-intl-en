@@ -257,19 +257,15 @@ namespace TencentCloud
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the review user.
+                     * @return ApprovalUser Specifies the review user.
                      * 
                      */
                     std::string GetApprovalUser() const;
 
                     /**
-                     * 设置Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the review user.
+                     * @param _approvalUser Specifies the review user.
                      * 
                      */
                     void SetApprovalUser(const std::string& _approvalUser);
@@ -282,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApprovalUserHasBeenSet() const;
 
                     /**
-                     * 获取Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Approval time.
+                     * @return ApprovalTime Approval time.
                      * 
                      */
                     std::string GetApprovalTime() const;
 
                     /**
-                     * 设置Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _approvalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Approval time.
+                     * @param _approvalTime Approval time.
                      * 
                      */
                     void SetApprovalTime(const std::string& _approvalTime);
@@ -308,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
                      * 设置Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _approvalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -333,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -358,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -382,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the application icon.
+                     * @return ApplicationLogo Specifies the application icon.
                      * 
                      */
                     std::string GetApplicationLogo() const;
 
                     /**
-                     * 设置Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the application icon.
+                     * @param _applicationLogo Specifies the application icon.
                      * 
                      */
                     void SetApplicationLogo(const std::string& _applicationLogo);
@@ -407,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationLogoHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取API type. 1: system; 2: custom.
+                     * @return APIType API type. 1: system; 2: custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aPIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置API type. 1: system; 2: custom.
+                     * @param _aPIType API type. 1: system; 2: custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -432,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool APITypeHasBeenSet() const;
 
                     /**
-                     * 获取API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取API feature description.
+                     * @return APIDesc API feature description.
                      * 
                      */
                     std::string GetAPIDesc() const;
 
                     /**
-                     * 设置API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aPIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置API feature description.
+                     * @param _aPIDesc API feature description.
                      * 
                      */
                     void SetAPIDesc(const std::string& _aPIDesc);
@@ -519,57 +487,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the review user.
                      */
                     std::string m_approvalUser;
                     bool m_approvalUserHasBeenSet;
 
                     /**
-                     * Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Approval time.
                      */
                     std::string m_approvalTime;
                     bool m_approvalTimeHasBeenSet;
 
                     /**
                      * Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;
 
                     /**
                      * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
                      * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the application icon.
                      */
                     std::string m_applicationLogo;
                     bool m_applicationLogoHasBeenSet;
 
                     /**
-                     * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * API type. 1: system; 2: custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;
 
                     /**
-                     * API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * API feature description.
                      */
                     std::string m_aPIDesc;
                     bool m_aPIDescHasBeenSet;

@@ -24,8 +24,8 @@ using namespace std;
 
 DescribeApplicationConfigFileRequest::DescribeApplicationConfigFileRequest() :
     m_applicationIdHasBeenSet(false),
-    m_appTypeHasBeenSet(false),
-    m_platformIdHasBeenSet(false)
+    m_platformIdHasBeenSet(false),
+    m_appTypeHasBeenSet(false)
 {
 }
 
@@ -44,20 +44,20 @@ string DescribeApplicationConfigFileRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_applicationId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_appTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AppType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_appType, allocator);
-    }
-
     if (m_platformIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PlatformId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_platformId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_appTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_appType, allocator);
     }
 
 
@@ -84,22 +84,6 @@ bool DescribeApplicationConfigFileRequest::ApplicationIdHasBeenSet() const
     return m_applicationIdHasBeenSet;
 }
 
-int64_t DescribeApplicationConfigFileRequest::GetAppType() const
-{
-    return m_appType;
-}
-
-void DescribeApplicationConfigFileRequest::SetAppType(const int64_t& _appType)
-{
-    m_appType = _appType;
-    m_appTypeHasBeenSet = true;
-}
-
-bool DescribeApplicationConfigFileRequest::AppTypeHasBeenSet() const
-{
-    return m_appTypeHasBeenSet;
-}
-
 string DescribeApplicationConfigFileRequest::GetPlatformId() const
 {
     return m_platformId;
@@ -114,6 +98,22 @@ void DescribeApplicationConfigFileRequest::SetPlatformId(const string& _platform
 bool DescribeApplicationConfigFileRequest::PlatformIdHasBeenSet() const
 {
     return m_platformIdHasBeenSet;
+}
+
+int64_t DescribeApplicationConfigFileRequest::GetAppType() const
+{
+    return m_appType;
+}
+
+void DescribeApplicationConfigFileRequest::SetAppType(const int64_t& _appType)
+{
+    m_appType = _appType;
+    m_appTypeHasBeenSet = true;
+}
+
+bool DescribeApplicationConfigFileRequest::AppTypeHasBeenSet() const
+{
+    return m_appTypeHasBeenSet;
 }
 
 
