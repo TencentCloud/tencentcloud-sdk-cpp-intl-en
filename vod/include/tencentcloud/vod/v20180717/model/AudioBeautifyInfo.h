@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_AUDIOBEAUTIFYINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_AUDIOBEAUTIFYINFO_H_
 
 #include <string>
 #include <vector>
@@ -35,38 +35,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Noise removal configuration.
+                * The audio improvement configuration.
                 */
-                class AudioDenoiseInfo : public AbstractModel
+                class AudioBeautifyInfo : public AbstractModel
                 {
                 public:
-                    AudioDenoiseInfo();
-                    ~AudioDenoiseInfo() = default;
+                    AudioBeautifyInfo();
+                    ~AudioBeautifyInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Whether to enable noise removal. Valid values:
+                     * 获取Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
-                     * @return Switch Whether to enable noise removal. Valid values:
+                     * @return Switch Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable noise removal. Valid values:
+                     * 设置Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
-                     * @param _switch Whether to enable noise removal. Valid values:
+                     * @param _switch Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
                      * 
                      */
@@ -80,52 +80,57 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @return Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 获取The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
+                     * @return Types The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
                      * 
                      */
-                    std::string GetType() const;
+                    std::vector<std::string> GetTypes() const;
 
                     /**
-                     * 设置The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @param _type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 设置The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
+                     * @param _types The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
                      * 
                      */
-                    void SetType(const std::string& _type);
+                    void SetTypes(const std::vector<std::string>& _types);
 
                     /**
-                     * 判断参数 Type 是否已赋值
-                     * @return Type 是否已赋值
+                     * 判断参数 Types 是否已赋值
+                     * @return Types 是否已赋值
                      * 
                      */
-                    bool TypeHasBeenSet() const;
+                    bool TypesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Whether to enable noise removal. Valid values:
+                     * Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
                      */
-                    std::string m_type;
-                    bool m_typeHasBeenSet;
+                    std::vector<std::string> m_types;
+                    bool m_typesHasBeenSet;
 
                 };
             }
@@ -133,4 +138,4 @@ Default value: `normal`.
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_AUDIOBEAUTIFYINFO_H_

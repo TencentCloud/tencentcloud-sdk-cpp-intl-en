@@ -50,9 +50,11 @@ namespace TencentCloud
                      * 获取Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * @return Switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * 
                      */
                     std::string GetSwitch() const;
@@ -61,9 +63,11 @@ namespace TencentCloud
                      * 设置Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * @param _switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,18 +80,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * 获取The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
-                     * @return Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * @return Intensity The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
                      * 
                      */
                     double GetIntensity() const;
 
                     /**
-                     * 设置The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * 设置The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
-                     * @param _intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * @param _intensity The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
                      * 
                      */
@@ -135,12 +139,13 @@ Default value: `normal`.
                      * Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
                      */
                     double m_intensity;

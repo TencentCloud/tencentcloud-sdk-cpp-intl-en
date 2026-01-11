@@ -50,9 +50,11 @@ namespace TencentCloud
                      * 获取Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * @return Switch Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * 
                      */
                     std::string GetSwitch() const;
@@ -61,9 +63,11 @@ namespace TencentCloud
                      * 设置Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * @param _switch Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,14 +86,14 @@ namespace TencentCloud
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
                      * @return Type The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
                      * 
                      */
                     std::string GetType() const;
@@ -101,14 +105,14 @@ Note:
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
                      * @param _type The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -126,6 +130,7 @@ Note:
                      * Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -137,7 +142,7 @@ Note:
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

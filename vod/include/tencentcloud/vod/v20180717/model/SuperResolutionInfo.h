@@ -51,10 +51,12 @@ namespace TencentCloud
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
                      * @return Switch Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
                      * 
                      */
                     std::string GetSwitch() const;
@@ -64,10 +66,12 @@ If super resolution is enabled, the output resolution will double.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
                      * @param _switch Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -144,6 +148,7 @@ Default value: `2`.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

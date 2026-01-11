@@ -24,6 +24,7 @@
 #include <tencentcloud/vod/v20180717/model/VideoTemplateInfoForUpdate.h>
 #include <tencentcloud/vod/v20180717/model/AudioTemplateInfoForUpdate.h>
 #include <tencentcloud/vod/v20180717/model/TEHDConfigForUpdate.h>
+#include <tencentcloud/vod/v20180717/model/EnhanceConfigForUpdate.h>
 
 
 namespace TencentCloud
@@ -272,6 +273,27 @@ namespace TencentCloud
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
+                     * 获取Audio/Video enhancement parameter.
+                     * @return EnhanceConfig Audio/Video enhancement parameter.
+                     * 
+                     */
+                    EnhanceConfigForUpdate GetEnhanceConfig() const;
+
+                    /**
+                     * 设置Audio/Video enhancement parameter.
+                     * @param _enhanceConfig Audio/Video enhancement parameter.
+                     * 
+                     */
+                    void SetEnhanceConfig(const EnhanceConfigForUpdate& _enhanceConfig);
+
+                    /**
+                     * 判断参数 EnhanceConfig 是否已赋值
+                     * @return EnhanceConfig 是否已赋值
+                     * 
+                     */
+                    bool EnhanceConfigHasBeenSet() const;
+
+                    /**
                      * 获取The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -365,6 +387,12 @@ namespace TencentCloud
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
+
+                    /**
+                     * Audio/Video enhancement parameter.
+                     */
+                    EnhanceConfigForUpdate m_enhanceConfig;
+                    bool m_enhanceConfigHasBeenSet;
 
                     /**
                      * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:

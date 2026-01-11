@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
-                     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * 获取When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
+                     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
                      * 
                      */
                     bool GetAutoSkipStartPage() const;
 
                     /**
-                     * 设置When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
-                     * @param _autoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * 设置When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
+                     * @param _autoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
                      * 
                      */
                     void SetAutoSkipStartPage(const bool& _autoSkipStartPage);
@@ -69,18 +73,18 @@ namespace TencentCloud
 
                     /**
                      * 获取When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
                      * @return AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
                      * 
                      */
                     bool GetAutoSkip() const;
 
                     /**
                      * 设置When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
                      * @param _autoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
                      * 
                      */
                     void SetAutoSkip(const bool& _autoSkip);
@@ -99,14 +103,14 @@ Example value: false
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
                      * @return CheckMode Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
                      * 
                      */
                     int64_t GetCheckMode() const;
@@ -118,14 +122,14 @@ Example value: 3
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
                      * @param _checkMode Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
                      * 
                      */
                     void SetCheckMode(const int64_t& _checkMode);
@@ -138,7 +142,7 @@ Example value: 3
                     bool CheckModeHasBeenSet() const;
 
                     /**
-                     * 获取The type of lisence used for verification. The following types are supported.
+                     * 获取Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -152,7 +156,7 @@ Example value: 3
 11.SingaporelDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
-                     * @return IDCardType The type of lisence used for verification. The following types are supported.
+                     * @return IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -171,7 +175,7 @@ Example: HKIDCard
                     std::string GetIDCardType() const;
 
                     /**
-                     * 设置The type of lisence used for verification. The following types are supported.
+                     * 设置Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -185,7 +189,7 @@ Example: HKIDCard
 11.SingaporelDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
-                     * @param _iDCardType The type of lisence used for verification. The following types are supported.
+                     * @param _iDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -212,14 +216,18 @@ Example: HKIDCard
 
                     /**
                      * 获取Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
                      * @return DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
                      * 
                      */
                     bool GetDisableCheckOcrWarnings() const;
 
                     /**
                      * 设置Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
                      * @param _disableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
                      * 
                      */
                     void SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings);
@@ -232,15 +240,39 @@ Example: HKIDCard
                     bool DisableCheckOcrWarningsHasBeenSet() const;
 
                     /**
-                     * 获取Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
-                     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+                     * 获取Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+                     * @return SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
                      * 
                      */
                     int64_t GetSecurityLevel() const;
 
                     /**
-                     * 设置Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
-                     * @param _securityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+                     * 设置Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+                     * @param _securityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
                      * 
                      */
                     void SetSecurityLevel(const int64_t& _securityLevel);
@@ -253,15 +285,19 @@ Example: HKIDCard
                     bool SecurityLevelHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
-                     * @return SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * 获取Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+                     * @return SkipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
                      * 
                      */
                     bool GetSkipPrivacyPolicy() const;
 
                     /**
-                     * 设置Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
-                     * @param _skipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * 设置Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+                     * @param _skipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
                      * 
                      */
                     void SetSkipPrivacyPolicy(const bool& _skipPrivacyPolicy);
@@ -274,15 +310,19 @@ Example: HKIDCard
                     bool SkipPrivacyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
-                     * @return IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * 获取whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+                     * @return IdCardCutReturn whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
                      * 
                      */
                     bool GetIdCardCutReturn() const;
 
                     /**
-                     * 设置The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
-                     * @param _idCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * 设置whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+                     * @param _idCardCutReturn whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
                      * 
                      */
                     void SetIdCardCutReturn(const bool& _idCardCutReturn);
@@ -295,15 +335,19 @@ Example: HKIDCard
                     bool IdCardCutReturnHasBeenSet() const;
 
                     /**
-                     * 获取Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
-                     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+                     * 获取Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+                     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
                      * 
                      */
                     std::string GetThemeColor() const;
 
                     /**
-                     * 设置Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
-                     * @param _themeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+                     * 设置Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+                     * @param _themeColor Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
                      * 
                      */
                     void SetThemeColor(const std::string& _themeColor);
@@ -316,15 +360,35 @@ Example: HKIDCard
                     bool ThemeColorHasBeenSet() const;
 
                     /**
-                     * 获取International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
-                     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+                     * 获取International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+                     * @return Language International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
-                     * @param _language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+                     * 设置International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+                     * @param _language International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -337,15 +401,27 @@ Example: HKIDCard
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
-                     * @return AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * 获取Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
+                     * @return AutoDowngrade Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
                      * 
                      */
                     int64_t GetAutoDowngrade() const;
 
                     /**
-                     * 设置Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
-                     * @param _autoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * 设置Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
+                     * @param _autoDowngrade Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
                      * 
                      */
                     void SetAutoDowngrade(const int64_t& _autoDowngrade);
@@ -359,50 +435,42 @@ Example: HKIDCard
 
                     /**
                      * 获取This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
                      * @return ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
                      * 
                      */
                     std::string GetActionList() const;
 
                     /**
                      * 设置This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
                      * @param _actionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
                      * 
                      */
                     void SetActionList(const std::string& _actionList);
@@ -416,14 +484,18 @@ The default value is blink. The different action types passed in this parameter 
 
                     /**
                      * 获取Control liveness retry number.The value range is 1-99.
+The default value is 99.
                      * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+The default value is 99.
                      * 
                      */
                     int64_t GetLivenessRetryLimit() const;
 
                     /**
                      * 设置Control liveness retry number.The value range is 1-99.
+The default value is 99.
                      * @param _livenessRetryLimit Control liveness retry number.The value range is 1-99.
+The default value is 99.
                      * 
                      */
                     void SetLivenessRetryLimit(const int64_t& _livenessRetryLimit);
@@ -437,14 +509,18 @@ The default value is blink. The different action types passed in this parameter 
 
                     /**
                      * 获取Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
                      * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
                      * 
                      */
                     uint64_t GetLivenessTimeout() const;
 
                     /**
                      * 设置Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
                      * @param _livenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
                      * 
                      */
                     void SetLivenessTimeout(const uint64_t& _livenessTimeout);
@@ -457,15 +533,43 @@ The default value is blink. The different action types passed in this parameter 
                     bool LivenessTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
-                     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * 获取Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
+                     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
                      * 
                      */
                     std::string GetSelectedWarningCodes() const;
 
                     /**
-                     * 设置Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
-                     * @param _selectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * 设置Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
+                     * @param _selectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
                      * 
                      */
                     void SetSelectedWarningCodes(const std::string& _selectedWarningCodes);
@@ -509,14 +613,15 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                 private:
 
                     /**
-                     * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
                      */
                     bool m_autoSkipStartPage;
                     bool m_autoSkipStartPageHasBeenSet;
 
                     /**
                      * When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
                      */
                     bool m_autoSkip;
                     bool m_autoSkipHasBeenSet;
@@ -528,13 +633,13 @@ Example value: false
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
                      */
                     int64_t m_checkMode;
                     bool m_checkModeHasBeenSet;
 
                     /**
-                     * The type of lisence used for verification. The following types are supported.
+                     * Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -554,75 +659,100 @@ Example: HKIDCard
 
                     /**
                      * Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
                      */
                     bool m_disableCheckOcrWarnings;
                     bool m_disableCheckOcrWarningsHasBeenSet;
 
                     /**
-                     * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+                     * Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
                      */
                     int64_t m_securityLevel;
                     bool m_securityLevelHasBeenSet;
 
                     /**
-                     * Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
                      */
                     bool m_skipPrivacyPolicy;
                     bool m_skipPrivacyPolicyHasBeenSet;
 
                     /**
-                     * The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
                      */
                     bool m_idCardCutReturn;
                     bool m_idCardCutReturnHasBeenSet;
 
                     /**
-                     * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+                     * Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
                      */
                     std::string m_themeColor;
                     bool m_themeColorHasBeenSet;
 
                     /**
-                     * International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+                     * International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
                      */
                     int64_t m_autoDowngrade;
                     bool m_autoDowngradeHasBeenSet;
 
                     /**
                      * This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
                      */
                     std::string m_actionList;
                     bool m_actionListHasBeenSet;
 
                     /**
                      * Control liveness retry number.The value range is 1-99.
+The default value is 99.
                      */
                     int64_t m_livenessRetryLimit;
                     bool m_livenessRetryLimitHasBeenSet;
 
                     /**
                      * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
                      */
                     uint64_t m_livenessTimeout;
                     bool m_livenessTimeoutHasBeenSet;
 
                     /**
-                     * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
                      */
                     std::string m_selectedWarningCodes;
                     bool m_selectedWarningCodesHasBeenSet;

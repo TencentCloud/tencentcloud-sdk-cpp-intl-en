@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEQUALITYENHANCEINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEQUALITYENHANCEINFO_H_
 
 #include <string>
 #include <vector>
@@ -35,39 +35,39 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Noise removal configuration.
+                * Overall enhancement configuration.
                 */
-                class AudioDenoiseInfo : public AbstractModel
+                class ImageQualityEnhanceInfo : public AbstractModel
                 {
                 public:
-                    AudioDenoiseInfo();
-                    ~AudioDenoiseInfo() = default;
+                    ImageQualityEnhanceInfo();
+                    ~ImageQualityEnhanceInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @return Switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 获取Whether to enable overall enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+                     * @return Switch Whether to enable overall enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @param _switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 设置Whether to enable overall enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+                     * @param _switch Whether to enable overall enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,23 +80,31 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @return Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 获取The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
+                     * @return Type The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @param _type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 设置The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
+                     * @param _type The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -111,18 +119,20 @@ Default value: `normal`.
                 private:
 
                     /**
-                     * Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * Whether to enable overall enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -133,4 +143,4 @@ Default value: `normal`.
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_AUDIODENOISEINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEQUALITYENHANCEINFO_H_
