@@ -164,18 +164,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+                     * 获取Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Expr Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+                     * @return Expr Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpr() const;
 
                     /**
-                     * 设置Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+                     * 设置Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expr Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+                     * @param _expr Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -260,7 +260,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+                     * Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expr;

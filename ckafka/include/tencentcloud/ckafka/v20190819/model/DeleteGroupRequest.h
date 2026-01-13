@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-                     * @return InstanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * 获取The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-                     * @param _instanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * 设置The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
-                     * @return Group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+                     * 获取Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
+                     * @return Group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
-                     * @param _group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+                     * 设置Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
+                     * @param _group Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+                     * Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;

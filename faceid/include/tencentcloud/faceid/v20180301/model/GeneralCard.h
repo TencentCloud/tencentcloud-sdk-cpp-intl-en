@@ -546,6 +546,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AddressHasBeenSet() const;
 
+                    /**
+                     * 获取Localized name.
+                     * @return FullNameLocal Localized name.
+                     * 
+                     */
+                    std::string GetFullNameLocal() const;
+
+                    /**
+                     * 设置Localized name.
+                     * @param _fullNameLocal Localized name.
+                     * 
+                     */
+                    void SetFullNameLocal(const std::string& _fullNameLocal);
+
+                    /**
+                     * 判断参数 FullNameLocal 是否已赋值
+                     * @return FullNameLocal 是否已赋值
+                     * 
+                     */
+                    bool FullNameLocalHasBeenSet() const;
+
+                    /**
+                     * 获取Localization.
+                     * @return FirstNameLocal Localization.
+                     * 
+                     */
+                    std::string GetFirstNameLocal() const;
+
+                    /**
+                     * 设置Localization.
+                     * @param _firstNameLocal Localization.
+                     * 
+                     */
+                    void SetFirstNameLocal(const std::string& _firstNameLocal);
+
+                    /**
+                     * 判断参数 FirstNameLocal 是否已赋值
+                     * @return FirstNameLocal 是否已赋值
+                     * 
+                     */
+                    bool FirstNameLocalHasBeenSet() const;
+
+                    /**
+                     * 获取Localized surname.
+                     * @return LastNameLocal Localized surname.
+                     * 
+                     */
+                    std::string GetLastNameLocal() const;
+
+                    /**
+                     * 设置Localized surname.
+                     * @param _lastNameLocal Localized surname.
+                     * 
+                     */
+                    void SetLastNameLocal(const std::string& _lastNameLocal);
+
+                    /**
+                     * 判断参数 LastNameLocal 是否已赋值
+                     * @return LastNameLocal 是否已赋值
+                     * 
+                     */
+                    bool LastNameLocalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -686,6 +749,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     Address m_address;
                     bool m_addressHasBeenSet;
+
+                    /**
+                     * Localized name.
+                     */
+                    std::string m_fullNameLocal;
+                    bool m_fullNameLocalHasBeenSet;
+
+                    /**
+                     * Localization.
+                     */
+                    std::string m_firstNameLocal;
+                    bool m_firstNameLocalHasBeenSet;
+
+                    /**
+                     * Localized surname.
+                     */
+                    std::string m_lastNameLocal;
+                    bool m_lastNameLocalHasBeenSet;
 
                 };
             }

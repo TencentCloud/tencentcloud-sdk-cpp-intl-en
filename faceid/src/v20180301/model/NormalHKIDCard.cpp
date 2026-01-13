@@ -30,7 +30,8 @@ NormalHKIDCard::NormalHKIDCard() :
     m_licenseNumberHasBeenSet(false),
     m_symbolHasBeenSet(false),
     m_issuedDateHasBeenSet(false),
-    m_currentIssueDateHasBeenSet(false)
+    m_currentIssueDateHasBeenSet(false),
+    m_hKIDVersionHasBeenSet(false)
 {
 }
 
@@ -139,6 +140,16 @@ CoreInternalOutcome NormalHKIDCard::Deserialize(const rapidjson::Value &value)
         m_currentIssueDateHasBeenSet = true;
     }
 
+    if (value.HasMember("HKIDVersion") && !value["HKIDVersion"].IsNull())
+    {
+        if (!value["HKIDVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NormalHKIDCard.HKIDVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_hKIDVersion = string(value["HKIDVersion"].GetString());
+        m_hKIDVersionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +235,14 @@ void NormalHKIDCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "CurrentIssueDate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_currentIssueDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hKIDVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HKIDVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hKIDVersion.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -387,5 +406,21 @@ void NormalHKIDCard::SetCurrentIssueDate(const string& _currentIssueDate)
 bool NormalHKIDCard::CurrentIssueDateHasBeenSet() const
 {
     return m_currentIssueDateHasBeenSet;
+}
+
+string NormalHKIDCard::GetHKIDVersion() const
+{
+    return m_hKIDVersion;
+}
+
+void NormalHKIDCard::SetHKIDVersion(const string& _hKIDVersion)
+{
+    m_hKIDVersion = _hKIDVersion;
+    m_hKIDVersionHasBeenSet = true;
+}
+
+bool NormalHKIDCard::HKIDVersionHasBeenSet() const
+{
+    return m_hKIDVersionHasBeenSet;
 }
 

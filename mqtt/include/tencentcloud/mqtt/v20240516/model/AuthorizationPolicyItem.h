@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return Priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _priority Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -155,11 +155,11 @@ namespace TencentCloud
                      * 获取Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * @return Effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetEffect() const;
@@ -168,11 +168,11 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                      * 设置Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * @param _effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetEffect(const std::string& _effect);
@@ -189,12 +189,12 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * @return Actions Operation.
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetActions() const;
@@ -204,12 +204,12 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * @param _actions Operation.
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetActions(const std::string& _actions);
@@ -222,15 +222,15 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool ActionsHasBeenSet() const;
 
                     /**
-                     * 获取Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return Resources Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Resources Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetResources() const;
 
                     /**
-                     * 设置Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _resources Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _resources Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetResources(const std::string& _resources);
@@ -243,15 +243,15 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool ResourcesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return ClientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return ClientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetClientId() const;
 
                     /**
-                     * 设置Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _clientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _clientId Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetClientId(const std::string& _clientId);
@@ -264,15 +264,15 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool ClientIdHasBeenSet() const;
 
                     /**
-                     * 获取Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return Username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _username Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -285,15 +285,15 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return Ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _ip Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -306,15 +306,15 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @return Qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     std::string GetQos() const;
 
                     /**
-                     * 设置Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-                     * @param _qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _qos Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      * 
                      */
                     void SetQos(const std::string& _qos);
@@ -327,11 +327,11 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
                     bool QosHasBeenSet() const;
 
                     /**
-                     * 获取Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 获取Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
-                     * @return Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * @return Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
@@ -340,11 +340,11 @@ Indicates the match of retain messages.
                     int64_t GetRetain() const;
 
                     /**
-                     * 设置Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * 设置Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
-                     * @param _retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * @param _retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.
@@ -449,7 +449,7 @@ Indicates the match of retain messages.
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Policy priority. a smaller priority ID indicates the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
@@ -458,7 +458,7 @@ Indicates the match of retain messages.
                      * Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_effect;
                     bool m_effectHasBeenSet;
@@ -468,43 +468,43 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
 Specifies the connection.
 Publishes an mqtt message.
 Sub. specifies the subscription to mqtt messages.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_actions;
                     bool m_actionsHasBeenSet;
 
                     /**
-                     * Resource. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Resource. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_resources;
                     bool m_resourcesHasBeenSet;
 
                     /**
-                     * Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Specifies the device ID for connection. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_clientId;
                     bool m_clientIdHasBeenSet;
 
                     /**
-                     * Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Condition - username. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Specifies the client IP address. see the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Condition - service quality. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                      */
                     std::string m_qos;
                     bool m_qosHasBeenSet;
 
                     /**
-                     * Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                     * Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Indicates the match of retain messages.
 2: indicates non-retain messages.
 3: indicates matching retain and non-retain messages.

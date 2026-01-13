@@ -75,18 +75,18 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
                     /**
                      * 获取Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * @return ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * @param _productName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -100,18 +100,18 @@ Refers to professional cluster specifications (https://www.tencentcloud.comom/do
 
                     /**
                      * 获取Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * @return StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetStorageSize() const;
 
                     /**
                      * 设置Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * @param _storageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      * 
                      */
                     void SetStorageSize(const int64_t& _storageSize);
@@ -269,14 +269,14 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
                     /**
                      * Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
                      * Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
                      */
                     int64_t m_storageSize;
                     bool m_storageSizeHasBeenSet;

@@ -43,18 +43,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+                     * 获取One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
-                     * @return LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+                     * @return LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+                     * 设置One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
-                     * @param _loadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+                     * @param _loadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
                      * 
                      */
@@ -91,7 +91,7 @@ Specifies the maximum length supported by the list is 20.
                 private:
 
                     /**
-                     * One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+                     * One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
                      */
                     std::vector<std::string> m_loadBalancerIds;

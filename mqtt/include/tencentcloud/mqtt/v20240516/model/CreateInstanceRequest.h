@@ -46,12 +46,12 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+                     * 获取Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
-                     * @return InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+                     * @return InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -61,12 +61,12 @@ PLATINUM version.
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+                     * 设置Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
-                     * @param _instanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+                     * @param _instanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -104,15 +104,15 @@ PLATINUM version.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
-                     * @return SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+                     * 获取Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+                     * @return SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
                      * 
                      */
                     std::string GetSkuCode() const;
 
                     /**
-                     * 设置Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
-                     * @param _skuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+                     * 设置Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+                     * @param _skuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
                      * 
                      */
                     void SetSkuCode(const std::string& _skuCode);
@@ -316,7 +316,7 @@ PLATINUM version.
                 private:
 
                     /**
-                     * Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+                     * Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -332,7 +332,7 @@ PLATINUM version.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+                     * Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
                      */
                     std::string m_skuCode;
                     bool m_skuCodeHasBeenSet;

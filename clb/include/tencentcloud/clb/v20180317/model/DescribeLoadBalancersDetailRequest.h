@@ -133,12 +133,12 @@ namespace TencentCloud
 Filter by [clb ID], for example: lb-rbw5skde.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - project-id
 Filters by [project ID]. for example: "0", "123".
 Type: String.
 Required: No
-Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+Method for obtaining: [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 - network
 Filters by [clb network type]. for example: Public.
 Type: String.
@@ -152,7 +152,7 @@ Required: No
 Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - target-ip
 Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
 Type: String.
@@ -161,17 +161,17 @@ Required: No
 Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - tag-key
 Filters by [tag key of the cloud load balancer tag], for example: "name".
 Type: String.
 Required: No
-Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+Method for obtaining: [DescribeTags](https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1).
 - tag:*
 Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
 Type: String.
 Required: No
-Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.com/document/api/651/35318?from_cn_redirect=1).
 - fuzzy-search
 Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
 Type: String.
@@ -181,12 +181,12 @@ Required: No
 Filter by [clb ID], for example: lb-rbw5skde.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - project-id
 Filters by [project ID]. for example: "0", "123".
 Type: String.
 Required: No
-Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+Method for obtaining: [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 - network
 Filters by [clb network type]. for example: Public.
 Type: String.
@@ -200,7 +200,7 @@ Required: No
 Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - target-ip
 Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
 Type: String.
@@ -209,17 +209,17 @@ Required: No
 Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - tag-key
 Filters by [tag key of the cloud load balancer tag], for example: "name".
 Type: String.
 Required: No
-Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+Method for obtaining: [DescribeTags](https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1).
 - tag:*
 Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
 Type: String.
 Required: No
-Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.com/document/api/651/35318?from_cn_redirect=1).
 - fuzzy-search
 Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
 Type: String.
@@ -234,12 +234,12 @@ Required: No
 Filter by [clb ID], for example: lb-rbw5skde.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - project-id
 Filters by [project ID]. for example: "0", "123".
 Type: String.
 Required: No
-Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+Method for obtaining: [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 - network
 Filters by [clb network type]. for example: Public.
 Type: String.
@@ -253,7 +253,7 @@ Required: No
 Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - target-ip
 Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
 Type: String.
@@ -262,17 +262,17 @@ Required: No
 Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - tag-key
 Filters by [tag key of the cloud load balancer tag], for example: "name".
 Type: String.
 Required: No
-Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+Method for obtaining: [DescribeTags](https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1).
 - tag:*
 Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
 Type: String.
 Required: No
-Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.com/document/api/651/35318?from_cn_redirect=1).
 - fuzzy-search
 Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
 Type: String.
@@ -282,12 +282,12 @@ Required: No
 Filter by [clb ID], for example: lb-rbw5skde.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - project-id
 Filters by [project ID]. for example: "0", "123".
 Type: String.
 Required: No
-Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+Method for obtaining: [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 - network
 Filters by [clb network type]. for example: Public.
 Type: String.
@@ -301,7 +301,7 @@ Required: No
 Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - target-ip
 Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
 Type: String.
@@ -310,17 +310,17 @@ Required: No
 Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - tag-key
 Filters by [tag key of the cloud load balancer tag], for example: "name".
 Type: String.
 Required: No
-Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+Method for obtaining: [DescribeTags](https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1).
 - tag:*
 Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
 Type: String.
 Required: No
-Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.com/document/api/651/35318?from_cn_redirect=1).
 - fuzzy-search
 Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
 Type: String.
@@ -368,12 +368,12 @@ Required: No
 Filter by [clb ID], for example: lb-rbw5skde.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - project-id
 Filters by [project ID]. for example: "0", "123".
 Type: String.
 Required: No
-Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+Method for obtaining: [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 - network
 Filters by [clb network type]. for example: Public.
 Type: String.
@@ -387,7 +387,7 @@ Required: No
 Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - target-ip
 Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
 Type: String.
@@ -396,17 +396,17 @@ Required: No
 Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
 Type: String.
 Required: No
-Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+Method for obtaining: [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
 - tag-key
 Filters by [tag key of the cloud load balancer tag], for example: "name".
 Type: String.
 Required: No
-Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+Method for obtaining: [DescribeTags](https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1).
 - tag:*
 Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
 Type: String.
 Required: No
-Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.com/document/api/651/35318?from_cn_redirect=1).
 - fuzzy-search
 Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
 Type: String.

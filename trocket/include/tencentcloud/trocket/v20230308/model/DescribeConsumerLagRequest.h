@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
-                     * @return InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+                     * 获取TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
+                     * @return InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
-                     * @param _instanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+                     * 设置TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
+                     * @param _instanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
-                     * @return ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+                     * 获取Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
+                     * @return ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
                      * 
                      */
                     std::string GetConsumerGroup() const;
 
                     /**
-                     * 设置Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
-                     * @param _consumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+                     * 设置Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
+                     * @param _consumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
                      * 
                      */
                     void SetConsumerGroup(const std::string& _consumerGroup);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ConsumerGroupHasBeenSet() const;
 
                     /**
-                     * 获取Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
-                     * @return Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+                     * 获取Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
+                     * @return Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
-                     * @param _namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+                     * 设置Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
+                     * @param _namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-                     * @return SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+                     * 获取Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+                     * @return SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
                      * 
                      */
                     std::string GetSubscribeTopic() const;
 
                     /**
-                     * 设置Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-                     * @param _subscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+                     * 设置Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+                     * @param _subscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
                      * 
                      */
                     void SetSubscribeTopic(const std::string& _subscribeTopic);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+                     * TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+                     * Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
                      */
                     std::string m_consumerGroup;
                     bool m_consumerGroupHasBeenSet;
 
                     /**
-                     * Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+                     * Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+                     * Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
                      */
                     std::string m_subscribeTopic;
                     bool m_subscribeTopicHasBeenSet;

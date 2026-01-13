@@ -332,15 +332,27 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     bool ExtraHasBeenSet() const;
 
                     /**
-                     * 获取BASIC: Basic Version (default).
-                     * @return SdkVersion BASIC: Basic Version (default).
+                     * 获取BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置BASIC: Basic Version (default).
-                     * @param _sdkVersion BASIC: Basic Version (default).
+                     * 设置BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @param _sdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -520,7 +532,10 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     bool m_extraHasBeenSet;
 
                     /**
-                     * BASIC: Basic Version (default).
+                     * BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;

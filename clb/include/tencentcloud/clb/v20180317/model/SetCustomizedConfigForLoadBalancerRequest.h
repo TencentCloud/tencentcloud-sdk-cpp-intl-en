@@ -106,18 +106,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     std::string GetConfigContent() const;
 
                     /**
                      * 设置Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * @param _configContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     void SetConfigContent(const std::string& _configContent);
@@ -152,18 +152,18 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
                     /**
                      * 获取CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
                      * @return LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
                      * @param _loadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
@@ -196,7 +196,7 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 
                     /**
                      * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      */
                     std::string m_configContent;
                     bool m_configContentHasBeenSet;
@@ -209,7 +209,7 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
                     /**
                      * CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;

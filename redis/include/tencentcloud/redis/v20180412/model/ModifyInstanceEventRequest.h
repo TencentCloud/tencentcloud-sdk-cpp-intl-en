@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
-                     * @return EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+                     * 获取Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+                     * @return EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
                      * 
                      */
                     int64_t GetEventId() const;
 
                     /**
-                     * 设置Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
-                     * @param _eventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+                     * 设置Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+                     * @param _eventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
                      * 
                      */
                     void SetEventId(const int64_t& _eventId);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+                     * Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
                      */
                     int64_t m_eventId;
                     bool m_eventIdHasBeenSet;

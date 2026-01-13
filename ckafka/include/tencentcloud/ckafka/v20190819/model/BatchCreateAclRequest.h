@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
-                     * @return ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+                     * 获取Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+                     * @return ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetResourceNames() const;
 
                     /**
-                     * 设置Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
-                     * @param _resourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+                     * 设置Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+                     * @param _resourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      * 
                      */
                     void SetResourceNames(const std::vector<std::string>& _resourceNames);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ResourceNamesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
-                     * @return RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+                     * 获取Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
+                     * @return RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
                      * 
                      */
                     std::vector<AclRuleInfo> GetRuleList() const;
 
                     /**
-                     * 设置Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
-                     * @param _ruleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+                     * 设置Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
+                     * @param _ruleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
                      * 
                      */
                     void SetRuleList(const std::vector<AclRuleInfo>& _ruleList);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -142,13 +142,13 @@ namespace TencentCloud
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+                     * Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_resourceNames;
                     bool m_resourceNamesHasBeenSet;
 
                     /**
-                     * Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+                     * Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
                      */
                     std::vector<AclRuleInfo> m_ruleList;
                     bool m_ruleListHasBeenSet;

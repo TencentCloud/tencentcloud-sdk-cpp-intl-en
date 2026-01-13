@@ -458,6 +458,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RequestIdHasBeenSet() const;
 
+                    /**
+                     * 获取Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+                     * @return LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+                     * 
+                     */
+                    std::vector<std::string> GetLivenessInfoTag() const;
+
+                    /**
+                     * 设置Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+                     * @param _livenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+                     * 
+                     */
+                    void SetLivenessInfoTag(const std::vector<std::string>& _livenessInfoTag);
+
+                    /**
+                     * 判断参数 LivenessInfoTag 是否已赋值
+                     * @return LivenessInfoTag 是否已赋值
+                     * 
+                     */
+                    bool LivenessInfoTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -573,6 +646,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
+
+                    /**
+                     * Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+                     */
+                    std::vector<std::string> m_livenessInfoTag;
+                    bool m_livenessInfoTagHasBeenSet;
 
                 };
             }

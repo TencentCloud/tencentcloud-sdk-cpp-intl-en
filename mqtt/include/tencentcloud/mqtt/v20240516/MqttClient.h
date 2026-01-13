@@ -353,7 +353,7 @@ This API is used to perform Username fuzzy search.
                 KickOutClientOutcomeCallable KickOutClientCallable(const Model::KickOutClientRequest& request);
 
                 /**
-                 *This API is used to modify policy rules. See the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+                 *This API is used to modify policy rules. See the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
                  * @param req ModifyAuthorizationPolicyRequest
                  * @return ModifyAuthorizationPolicyOutcome
                  */

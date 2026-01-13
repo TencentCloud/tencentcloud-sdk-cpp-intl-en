@@ -204,18 +204,18 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * 获取ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-                     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * 设置ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-                     * @param _zoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * @param _zoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
@@ -308,18 +308,18 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool ReplicasReadonlyHasBeenSet() const;
 
                     /**
-                     * 获取Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * 获取Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-                     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * 设置Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-                     * @param _zoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * @param _zoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
@@ -412,7 +412,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      */
                     uint64_t m_zoneId;
@@ -441,7 +441,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_replicasReadonlyHasBeenSet;
 
                     /**
-                     * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+                     * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      */
                     std::string m_zoneName;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
-                     * @return DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+                     * 获取Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+                     * @return DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
-                     * @param _diskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+                     * 设置Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+                     * @param _diskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+                     * Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;

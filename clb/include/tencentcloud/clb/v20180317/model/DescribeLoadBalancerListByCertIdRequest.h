@@ -43,18 +43,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+                     * 获取Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
-                     * @return CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+                     * @return CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
                      * 
                      */
                     std::vector<std::string> GetCertIds() const;
 
                     /**
-                     * 设置Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+                     * 设置Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
-                     * @param _certIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+                     * @param _certIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
                      * 
                      */
@@ -70,7 +70,7 @@ Specifies the maximum length of the array is 20.
                 private:
 
                     /**
-                     * Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+                     * Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.com/document/api/400/41674?from_cn_redirect=1) api.
 Specifies the maximum length of the array is 20.
                      */
                     std::vector<std::string> m_certIds;

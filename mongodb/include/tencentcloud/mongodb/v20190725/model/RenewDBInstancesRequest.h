@@ -45,10 +45,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies the ID or IDs of one or multiple instances to be renewed.
-- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
 - The maximum number of instances for each renewal request is 100.
                      * @return InstanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
-- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
 - The maximum number of instances for each renewal request is 100.
                      * 
                      */
@@ -56,10 +56,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Specifies the ID or IDs of one or multiple instances to be renewed.
-- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
 - The maximum number of instances for each renewal request is 100.
                      * @param _instanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
-- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
 - The maximum number of instances for each renewal request is 100.
                      * 
                      */
@@ -97,7 +97,7 @@ namespace TencentCloud
 
                     /**
                      * Specifies the ID or IDs of one or multiple instances to be renewed.
-- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
 - The maximum number of instances for each renewal request is 100.
                      */
                     std::vector<std::string> m_instanceIds;

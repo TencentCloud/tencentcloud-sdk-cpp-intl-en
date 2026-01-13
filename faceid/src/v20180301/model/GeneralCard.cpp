@@ -39,7 +39,10 @@ GeneralCard::GeneralCard() :
     m_birthPlaceHasBeenSet(false),
     m_nationalityHasBeenSet(false),
     m_registrationNumberHasBeenSet(false),
-    m_addressHasBeenSet(false)
+    m_addressHasBeenSet(false),
+    m_fullNameLocalHasBeenSet(false),
+    m_firstNameLocalHasBeenSet(false),
+    m_lastNameLocalHasBeenSet(false)
 {
 }
 
@@ -245,6 +248,36 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_addressHasBeenSet = true;
     }
 
+    if (value.HasMember("FullNameLocal") && !value["FullNameLocal"].IsNull())
+    {
+        if (!value["FullNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.FullNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullNameLocal = string(value["FullNameLocal"].GetString());
+        m_fullNameLocalHasBeenSet = true;
+    }
+
+    if (value.HasMember("FirstNameLocal") && !value["FirstNameLocal"].IsNull())
+    {
+        if (!value["FirstNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.FirstNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_firstNameLocal = string(value["FirstNameLocal"].GetString());
+        m_firstNameLocalHasBeenSet = true;
+    }
+
+    if (value.HasMember("LastNameLocal") && !value["LastNameLocal"].IsNull())
+    {
+        if (!value["LastNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.LastNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_lastNameLocal = string(value["LastNameLocal"].GetString());
+        m_lastNameLocalHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -403,6 +436,30 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_address.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_fullNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullNameLocal.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_firstNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FirstNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_firstNameLocal.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_lastNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LastNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastNameLocal.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -710,5 +767,53 @@ void GeneralCard::SetAddress(const Address& _address)
 bool GeneralCard::AddressHasBeenSet() const
 {
     return m_addressHasBeenSet;
+}
+
+string GeneralCard::GetFullNameLocal() const
+{
+    return m_fullNameLocal;
+}
+
+void GeneralCard::SetFullNameLocal(const string& _fullNameLocal)
+{
+    m_fullNameLocal = _fullNameLocal;
+    m_fullNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::FullNameLocalHasBeenSet() const
+{
+    return m_fullNameLocalHasBeenSet;
+}
+
+string GeneralCard::GetFirstNameLocal() const
+{
+    return m_firstNameLocal;
+}
+
+void GeneralCard::SetFirstNameLocal(const string& _firstNameLocal)
+{
+    m_firstNameLocal = _firstNameLocal;
+    m_firstNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::FirstNameLocalHasBeenSet() const
+{
+    return m_firstNameLocalHasBeenSet;
+}
+
+string GeneralCard::GetLastNameLocal() const
+{
+    return m_lastNameLocal;
+}
+
+void GeneralCard::SetLastNameLocal(const string& _lastNameLocal)
+{
+    m_lastNameLocal = _lastNameLocal;
+    m_lastNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::LastNameLocalHasBeenSet() const
+{
+    return m_lastNameLocalHasBeenSet;
 }
 

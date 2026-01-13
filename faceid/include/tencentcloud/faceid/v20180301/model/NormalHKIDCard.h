@@ -312,6 +312,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CurrentIssueDateHasBeenSet() const;
 
+                    /**
+                     * 获取Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HKIDVersion Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHKIDVersion() const;
+
+                    /**
+                     * 设置Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hKIDVersion Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHKIDVersion(const std::string& _hKIDVersion);
+
+                    /**
+                     * 判断参数 HKIDVersion 是否已赋值
+                     * @return HKIDVersion 是否已赋值
+                     * 
+                     */
+                    bool HKIDVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -387,6 +412,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_currentIssueDate;
                     bool m_currentIssueDateHasBeenSet;
+
+                    /**
+                     * Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hKIDVersion;
+                    bool m_hKIDVersionHasBeenSet;
 
                 };
             }

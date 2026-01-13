@@ -35,7 +35,8 @@ CompareResult::CompareResult() :
     m_simHasBeenSet(false),
     m_isNeedChargeHasBeenSet(false),
     m_cardInfoInputJsonHasBeenSet(false),
-    m_requestIdHasBeenSet(false)
+    m_requestIdHasBeenSet(false),
+    m_livenessInfoTagHasBeenSet(false)
 {
 }
 
@@ -236,6 +237,19 @@ CoreInternalOutcome CompareResult::Deserialize(const rapidjson::Value &value)
         m_requestIdHasBeenSet = true;
     }
 
+    if (value.HasMember("LivenessInfoTag") && !value["LivenessInfoTag"].IsNull())
+    {
+        if (!value["LivenessInfoTag"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CompareResult.LivenessInfoTag` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["LivenessInfoTag"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_livenessInfoTag.push_back((*itr).GetString());
+        }
+        m_livenessInfoTagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -367,6 +381,19 @@ void CompareResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "RequestId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_requestId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_livenessInfoTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LivenessInfoTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_livenessInfoTag.begin(); itr != m_livenessInfoTag.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -610,5 +637,21 @@ void CompareResult::SetRequestId(const string& _requestId)
 bool CompareResult::RequestIdHasBeenSet() const
 {
     return m_requestIdHasBeenSet;
+}
+
+vector<string> CompareResult::GetLivenessInfoTag() const
+{
+    return m_livenessInfoTag;
+}
+
+void CompareResult::SetLivenessInfoTag(const vector<string>& _livenessInfoTag)
+{
+    m_livenessInfoTag = _livenessInfoTag;
+    m_livenessInfoTagHasBeenSet = true;
+}
+
+bool CompareResult::LivenessInfoTagHasBeenSet() const
+{
+    return m_livenessInfoTagHasBeenSet;
 }
 

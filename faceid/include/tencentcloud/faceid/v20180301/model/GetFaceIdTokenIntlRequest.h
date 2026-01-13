@@ -216,15 +216,27 @@ The default value is blink. The different action types passed in this parameter 
                     bool ActionListHasBeenSet() const;
 
                     /**
-                     * 获取BASIC: Basic Version (Default).
-                     * @return SdkVersion BASIC: Basic Version (Default).
+                     * 获取BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置BASIC: Basic Version (Default).
-                     * @param _sdkVersion BASIC: Basic Version (Default).
+                     * 设置BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @param _sdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -286,7 +298,10 @@ The default value is blink. The different action types passed in this parameter 
                     bool m_actionListHasBeenSet;
 
                     /**
-                     * BASIC: Basic Version (Default).
+                     * BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;
