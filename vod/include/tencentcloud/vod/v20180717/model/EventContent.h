@@ -51,6 +51,9 @@
 #include <tencentcloud/vod/v20180717/model/MediaCastEvent.h>
 #include <tencentcloud/vod/v20180717/model/PersistenceCompleteTask.h>
 #include <tencentcloud/vod/v20180717/model/ComplexAdaptiveDynamicStreamingTask.h>
+#include <tencentcloud/vod/v20180717/model/ProcessMediaByMPS.h>
+#include <tencentcloud/vod/v20180717/model/AigcImageTask.h>
+#include <tencentcloud/vod/v20180717/model/AigcVideoTask.h>
 
 
 namespace TencentCloud
@@ -754,6 +757,77 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool ComplexAdaptiveDynamicStreamingCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ProcessMediaByMPSCompleteEvent 
+                     * 
+                     */
+                    ProcessMediaByMPS GetProcessMediaByMPSCompleteEvent() const;
+
+                    /**
+                     * 设置
+                     * @param _processMediaByMPSCompleteEvent 
+                     * 
+                     */
+                    void SetProcessMediaByMPSCompleteEvent(const ProcessMediaByMPS& _processMediaByMPSCompleteEvent);
+
+                    /**
+                     * 判断参数 ProcessMediaByMPSCompleteEvent 是否已赋值
+                     * @return ProcessMediaByMPSCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool ProcessMediaByMPSCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    AigcImageTask GetAigcImageCompleteEvent() const;
+
+                    /**
+                     * 设置AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _aigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAigcImageCompleteEvent(const AigcImageTask& _aigcImageCompleteEvent);
+
+                    /**
+                     * 判断参数 AigcImageCompleteEvent 是否已赋值
+                     * @return AigcImageCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool AigcImageCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    AigcVideoTask GetAigcVideoCompleteEvent() const;
+
+                    /**
+                     * 设置AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _aigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAigcVideoCompleteEvent(const AigcVideoTask& _aigcVideoCompleteEvent);
+
+                    /**
+                     * 判断参数 AigcVideoCompleteEvent 是否已赋值
+                     * @return AigcVideoCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool AigcVideoCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -947,6 +1021,26 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ComplexAdaptiveDynamicStreamingTask m_complexAdaptiveDynamicStreamingCompleteEvent;
                     bool m_complexAdaptiveDynamicStreamingCompleteEventHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ProcessMediaByMPS m_processMediaByMPSCompleteEvent;
+                    bool m_processMediaByMPSCompleteEventHasBeenSet;
+
+                    /**
+                     * AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    AigcImageTask m_aigcImageCompleteEvent;
+                    bool m_aigcImageCompleteEventHasBeenSet;
+
+                    /**
+                     * AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    AigcVideoTask m_aigcVideoCompleteEvent;
+                    bool m_aigcVideoCompleteEventHasBeenSet;
 
                 };
             }

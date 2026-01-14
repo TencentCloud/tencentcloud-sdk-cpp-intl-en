@@ -490,6 +490,106 @@ VodClient::CreateAdaptiveDynamicStreamingTemplateOutcomeCallable VodClient::Crea
     return prom->get_future();
 }
 
+VodClient::CreateAigcImageTaskOutcome VodClient::CreateAigcImageTask(const CreateAigcImageTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAigcImageTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAigcImageTaskResponse rsp = CreateAigcImageTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAigcImageTaskOutcome(rsp);
+        else
+            return CreateAigcImageTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAigcImageTaskOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateAigcImageTaskAsync(const CreateAigcImageTaskRequest& request, const CreateAigcImageTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAigcImageTaskRequest&;
+    using Resp = CreateAigcImageTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAigcImageTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateAigcImageTaskOutcomeCallable VodClient::CreateAigcImageTaskCallable(const CreateAigcImageTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAigcImageTaskOutcome>>();
+    CreateAigcImageTaskAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateAigcImageTaskRequest&,
+        CreateAigcImageTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::CreateAigcVideoTaskOutcome VodClient::CreateAigcVideoTask(const CreateAigcVideoTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAigcVideoTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAigcVideoTaskResponse rsp = CreateAigcVideoTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAigcVideoTaskOutcome(rsp);
+        else
+            return CreateAigcVideoTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAigcVideoTaskOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateAigcVideoTaskAsync(const CreateAigcVideoTaskRequest& request, const CreateAigcVideoTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAigcVideoTaskRequest&;
+    using Resp = CreateAigcVideoTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAigcVideoTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateAigcVideoTaskOutcomeCallable VodClient::CreateAigcVideoTaskCallable(const CreateAigcVideoTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAigcVideoTaskOutcome>>();
+    CreateAigcVideoTaskAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateAigcVideoTaskRequest&,
+        CreateAigcVideoTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::CreateAnimatedGraphicsTemplateOutcome VodClient::CreateAnimatedGraphicsTemplate(const CreateAnimatedGraphicsTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAnimatedGraphicsTemplate");
@@ -1382,6 +1482,56 @@ VodClient::CreateSampleSnapshotTemplateOutcomeCallable VodClient::CreateSampleSn
         const VodClient*,
         const CreateSampleSnapshotTemplateRequest&,
         CreateSampleSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::CreateSceneAigcImageTaskOutcome VodClient::CreateSceneAigcImageTask(const CreateSceneAigcImageTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSceneAigcImageTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSceneAigcImageTaskResponse rsp = CreateSceneAigcImageTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSceneAigcImageTaskOutcome(rsp);
+        else
+            return CreateSceneAigcImageTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSceneAigcImageTaskOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateSceneAigcImageTaskAsync(const CreateSceneAigcImageTaskRequest& request, const CreateSceneAigcImageTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSceneAigcImageTaskRequest&;
+    using Resp = CreateSceneAigcImageTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSceneAigcImageTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateSceneAigcImageTaskOutcomeCallable VodClient::CreateSceneAigcImageTaskCallable(const CreateSceneAigcImageTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSceneAigcImageTaskOutcome>>();
+    CreateSceneAigcImageTaskAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateSceneAigcImageTaskRequest&,
+        CreateSceneAigcImageTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

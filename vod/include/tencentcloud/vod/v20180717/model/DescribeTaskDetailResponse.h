@@ -44,6 +44,10 @@
 #include <tencentcloud/vod/v20180717/model/QualityEnhanceTask.h>
 #include <tencentcloud/vod/v20180717/model/ComplexAdaptiveDynamicStreamingTask.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByMPS.h>
+#include <tencentcloud/vod/v20180717/model/AigcImageTask.h>
+#include <tencentcloud/vod/v20180717/model/AigcVideoTask.h>
+#include <tencentcloud/vod/v20180717/model/ImportMediaKnowledgeTask.h>
+#include <tencentcloud/vod/v20180717/model/SceneAigcImageTask.h>
 
 
 namespace TencentCloud
@@ -536,6 +540,62 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool ProcessMediaByMPSTaskHasBeenSet() const;
 
+                    /**
+                     * 获取AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+                     * @return AigcImageTask AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+                     * 
+                     */
+                    AigcImageTask GetAigcImageTask() const;
+
+                    /**
+                     * 判断参数 AigcImageTask 是否已赋值
+                     * @return AigcImageTask 是否已赋值
+                     * 
+                     */
+                    bool AigcImageTaskHasBeenSet() const;
+
+                    /**
+                     * 获取AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+                     * @return AigcVideoTask AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+                     * 
+                     */
+                    AigcVideoTask GetAigcVideoTask() const;
+
+                    /**
+                     * 判断参数 AigcVideoTask 是否已赋值
+                     * @return AigcVideoTask 是否已赋值
+                     * 
+                     */
+                    bool AigcVideoTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ImportMediaKnowledge 
+                     * 
+                     */
+                    ImportMediaKnowledgeTask GetImportMediaKnowledge() const;
+
+                    /**
+                     * 判断参数 ImportMediaKnowledge 是否已赋值
+                     * @return ImportMediaKnowledge 是否已赋值
+                     * 
+                     */
+                    bool ImportMediaKnowledgeHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+                     * @return SceneAigcImageTask Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+                     * 
+                     */
+                    SceneAigcImageTask GetSceneAigcImageTask() const;
+
+                    /**
+                     * 判断参数 SceneAigcImageTask 是否已赋值
+                     * @return SceneAigcImageTask 是否已赋值
+                     * 
+                     */
+                    bool SceneAigcImageTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -744,6 +804,30 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ProcessMediaByMPS m_processMediaByMPSTask;
                     bool m_processMediaByMPSTaskHasBeenSet;
+
+                    /**
+                     * AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+                     */
+                    AigcImageTask m_aigcImageTask;
+                    bool m_aigcImageTaskHasBeenSet;
+
+                    /**
+                     * AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+                     */
+                    AigcVideoTask m_aigcVideoTask;
+                    bool m_aigcVideoTaskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ImportMediaKnowledgeTask m_importMediaKnowledge;
+                    bool m_importMediaKnowledgeHasBeenSet;
+
+                    /**
+                     * Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+                     */
+                    SceneAigcImageTask m_sceneAigcImageTask;
+                    bool m_sceneAigcImageTaskHasBeenSet;
 
                 };
             }
