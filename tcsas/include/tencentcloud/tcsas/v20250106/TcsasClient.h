@@ -29,6 +29,8 @@
 #include <tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateApplicationRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateApplicationResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateApplicationConfigRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateApplicationConfigResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLRequest.h>
@@ -63,18 +65,68 @@
 #include <tencentcloud/tcsas/v20250106/model/DeleteTeamMemberResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteUserRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteUserResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAPPDataDetailLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAPPDataDetailLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAPPDataOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAPPDataOverviewResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAdvertisingLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAdvertisingLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAdvertisingOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeAdvertisingOverviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigFileRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigFileResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfosRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfosResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainACLRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainACLResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewDataSummaryRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewDataSummaryResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewReportDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewReportDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisOverviewResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGActiveUserRealTimeStatisticsRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGActiveUserRealTimeStatisticsResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingOverviewResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAUDataDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAUDataDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAULineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAULineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAUMonthlyComparisonMetricCardRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGMAUMonthlyComparisonMetricCardResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentOverviewResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentReportDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentReportDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentRetentionAnalysisRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentRetentionAnalysisResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGRetentionDataRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGRetentionDataResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAccessAnalysisOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAccessAnalysisOverviewResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAdvertisingDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAdvertisingDetailResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListRequest.h>
@@ -85,12 +137,26 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPDomainACLResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPListResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAUDataDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAUDataDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAULineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAULineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAUMetricCardRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPMAUMetricCardResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPOfflinePackageURLRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPOfflinePackageURLResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPPageAnalysisDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPPageAnalysisDetailResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPReportDataLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPReportDataLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPReportDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPReportDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPRetentionDataRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPRetentionDataResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.h>
@@ -99,6 +165,12 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataLineChartRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataLineChartResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataOverviewRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataOverviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeRoleListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeRoleListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeTeamRequest.h>
@@ -119,6 +191,8 @@
 #include <tencentcloud/tcsas/v20250106/model/EnableApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyApplicationRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyApplicationResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyApplicationConfigRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyApplicationConfigResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyGlobalDomainRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyGlobalDomainResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNPRequest.h>
@@ -164,6 +238,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationResponse> CreateApplicationOutcome;
                 typedef std::future<CreateApplicationOutcome> CreateApplicationOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateApplicationRequest&, CreateApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateApplicationConfigResponse> CreateApplicationConfigOutcome;
+                typedef std::future<CreateApplicationConfigOutcome> CreateApplicationConfigOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateApplicationConfigRequest&, CreateApplicationConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateApplicationSensitiveAPIResponse> CreateApplicationSensitiveAPIOutcome;
                 typedef std::future<CreateApplicationSensitiveAPIOutcome> CreateApplicationSensitiveAPIOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateApplicationSensitiveAPIRequest&, CreateApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationSensitiveAPIAsyncHandler;
@@ -215,12 +292,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteUserResponse> DeleteUserOutcome;
                 typedef std::future<DeleteUserOutcome> DeleteUserOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DeleteUserRequest&, DeleteUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAPPDataDetailLineChartResponse> DescribeAPPDataDetailLineChartOutcome;
+                typedef std::future<DescribeAPPDataDetailLineChartOutcome> DescribeAPPDataDetailLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeAPPDataDetailLineChartRequest&, DescribeAPPDataDetailLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAPPDataDetailLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAPPDataOverviewResponse> DescribeAPPDataOverviewOutcome;
+                typedef std::future<DescribeAPPDataOverviewOutcome> DescribeAPPDataOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeAPPDataOverviewRequest&, DescribeAPPDataOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAPPDataOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAdvertisingLineChartResponse> DescribeAdvertisingLineChartOutcome;
+                typedef std::future<DescribeAdvertisingLineChartOutcome> DescribeAdvertisingLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeAdvertisingLineChartRequest&, DescribeAdvertisingLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAdvertisingLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAdvertisingOverviewResponse> DescribeAdvertisingOverviewOutcome;
+                typedef std::future<DescribeAdvertisingOverviewOutcome> DescribeAdvertisingOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeAdvertisingOverviewRequest&, DescribeAdvertisingOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAdvertisingOverviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeApplicationResponse> DescribeApplicationOutcome;
                 typedef std::future<DescribeApplicationOutcome> DescribeApplicationOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeApplicationRequest&, DescribeApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeApplicationConfigFileResponse> DescribeApplicationConfigFileOutcome;
                 typedef std::future<DescribeApplicationConfigFileOutcome> DescribeApplicationConfigFileOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeApplicationConfigFileRequest&, DescribeApplicationConfigFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationConfigFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApplicationConfigInfosResponse> DescribeApplicationConfigInfosOutcome;
+                typedef std::future<DescribeApplicationConfigInfosOutcome> DescribeApplicationConfigInfosOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeApplicationConfigInfosRequest&, DescribeApplicationConfigInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationConfigInfosAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeApplicationListResponse> DescribeApplicationListOutcome;
                 typedef std::future<DescribeApplicationListOutcome> DescribeApplicationListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeApplicationListRequest&, DescribeApplicationListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationListAsyncHandler;
@@ -230,9 +322,69 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGlobalDomainACLResponse> DescribeGlobalDomainACLOutcome;
                 typedef std::future<DescribeGlobalDomainACLOutcome> DescribeGlobalDomainACLOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeGlobalDomainACLRequest&, DescribeGlobalDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalDomainACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGlobalOverviewDataSummaryResponse> DescribeGlobalOverviewDataSummaryOutcome;
+                typedef std::future<DescribeGlobalOverviewDataSummaryOutcome> DescribeGlobalOverviewDataSummaryOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeGlobalOverviewDataSummaryRequest&, DescribeGlobalOverviewDataSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalOverviewDataSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGlobalOverviewReportDetailResponse> DescribeGlobalOverviewReportDetailOutcome;
+                typedef std::future<DescribeGlobalOverviewReportDetailOutcome> DescribeGlobalOverviewReportDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeGlobalOverviewReportDetailRequest&, DescribeGlobalOverviewReportDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalOverviewReportDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAccessAnalysisDetailResponse> DescribeMNGAccessAnalysisDetailOutcome;
+                typedef std::future<DescribeMNGAccessAnalysisDetailOutcome> DescribeMNGAccessAnalysisDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAccessAnalysisDetailRequest&, DescribeMNGAccessAnalysisDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAccessAnalysisDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAccessAnalysisLineChartResponse> DescribeMNGAccessAnalysisLineChartOutcome;
+                typedef std::future<DescribeMNGAccessAnalysisLineChartOutcome> DescribeMNGAccessAnalysisLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAccessAnalysisLineChartRequest&, DescribeMNGAccessAnalysisLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAccessAnalysisLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAccessAnalysisOverviewResponse> DescribeMNGAccessAnalysisOverviewOutcome;
+                typedef std::future<DescribeMNGAccessAnalysisOverviewOutcome> DescribeMNGAccessAnalysisOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAccessAnalysisOverviewRequest&, DescribeMNGAccessAnalysisOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAccessAnalysisOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGActiveUserRealTimeStatisticsResponse> DescribeMNGActiveUserRealTimeStatisticsOutcome;
+                typedef std::future<DescribeMNGActiveUserRealTimeStatisticsOutcome> DescribeMNGActiveUserRealTimeStatisticsOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGActiveUserRealTimeStatisticsRequest&, DescribeMNGActiveUserRealTimeStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGActiveUserRealTimeStatisticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAdvertisingDetailResponse> DescribeMNGAdvertisingDetailOutcome;
+                typedef std::future<DescribeMNGAdvertisingDetailOutcome> DescribeMNGAdvertisingDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAdvertisingDetailRequest&, DescribeMNGAdvertisingDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAdvertisingDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAdvertisingLineChartResponse> DescribeMNGAdvertisingLineChartOutcome;
+                typedef std::future<DescribeMNGAdvertisingLineChartOutcome> DescribeMNGAdvertisingLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAdvertisingLineChartRequest&, DescribeMNGAdvertisingLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAdvertisingLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAdvertisingOverviewResponse> DescribeMNGAdvertisingOverviewOutcome;
+                typedef std::future<DescribeMNGAdvertisingOverviewOutcome> DescribeMNGAdvertisingOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAdvertisingOverviewRequest&, DescribeMNGAdvertisingOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAdvertisingOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGMAUDataDetailResponse> DescribeMNGMAUDataDetailOutcome;
+                typedef std::future<DescribeMNGMAUDataDetailOutcome> DescribeMNGMAUDataDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGMAUDataDetailRequest&, DescribeMNGMAUDataDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGMAUDataDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGMAULineChartResponse> DescribeMNGMAULineChartOutcome;
+                typedef std::future<DescribeMNGMAULineChartOutcome> DescribeMNGMAULineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGMAULineChartRequest&, DescribeMNGMAULineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGMAULineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGMAUMonthlyComparisonMetricCardResponse> DescribeMNGMAUMonthlyComparisonMetricCardOutcome;
+                typedef std::future<DescribeMNGMAUMonthlyComparisonMetricCardOutcome> DescribeMNGMAUMonthlyComparisonMetricCardOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGMAUMonthlyComparisonMetricCardRequest&, DescribeMNGMAUMonthlyComparisonMetricCardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGMAUMonthlyComparisonMetricCardAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGPaymentLineChartResponse> DescribeMNGPaymentLineChartOutcome;
+                typedef std::future<DescribeMNGPaymentLineChartOutcome> DescribeMNGPaymentLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGPaymentLineChartRequest&, DescribeMNGPaymentLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGPaymentLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGPaymentOverviewResponse> DescribeMNGPaymentOverviewOutcome;
+                typedef std::future<DescribeMNGPaymentOverviewOutcome> DescribeMNGPaymentOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGPaymentOverviewRequest&, DescribeMNGPaymentOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGPaymentOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGPaymentReportDetailResponse> DescribeMNGPaymentReportDetailOutcome;
+                typedef std::future<DescribeMNGPaymentReportDetailOutcome> DescribeMNGPaymentReportDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGPaymentReportDetailRequest&, DescribeMNGPaymentReportDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGPaymentReportDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGPaymentRetentionAnalysisResponse> DescribeMNGPaymentRetentionAnalysisOutcome;
+                typedef std::future<DescribeMNGPaymentRetentionAnalysisOutcome> DescribeMNGPaymentRetentionAnalysisOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGPaymentRetentionAnalysisRequest&, DescribeMNGPaymentRetentionAnalysisOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGPaymentRetentionAnalysisAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGRetentionDataResponse> DescribeMNGRetentionDataOutcome;
+                typedef std::future<DescribeMNGRetentionDataOutcome> DescribeMNGRetentionDataOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGRetentionDataRequest&, DescribeMNGRetentionDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGRetentionDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPResponse> DescribeMNPOutcome;
                 typedef std::future<DescribeMNPOutcome> DescribeMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPRequest&, DescribeMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPAccessAnalysisOverviewResponse> DescribeMNPAccessAnalysisOverviewOutcome;
+                typedef std::future<DescribeMNPAccessAnalysisOverviewOutcome> DescribeMNPAccessAnalysisOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPAccessAnalysisOverviewRequest&, DescribeMNPAccessAnalysisOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAccessAnalysisOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPActiveUserRealTimeStatisticsResponse> DescribeMNPActiveUserRealTimeStatisticsOutcome;
+                typedef std::future<DescribeMNPActiveUserRealTimeStatisticsOutcome> DescribeMNPActiveUserRealTimeStatisticsOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPActiveUserRealTimeStatisticsRequest&, DescribeMNPActiveUserRealTimeStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPActiveUserRealTimeStatisticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPAdvertisingDetailResponse> DescribeMNPAdvertisingDetailOutcome;
+                typedef std::future<DescribeMNPAdvertisingDetailOutcome> DescribeMNPAdvertisingDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPAdvertisingDetailRequest&, DescribeMNPAdvertisingDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAdvertisingDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPAllStageVersionsResponse> DescribeMNPAllStageVersionsOutcome;
                 typedef std::future<DescribeMNPAllStageVersionsOutcome> DescribeMNPAllStageVersionsOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPAllStageVersionsRequest&, DescribeMNPAllStageVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAllStageVersionsAsyncHandler;
@@ -248,15 +400,36 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPListResponse> DescribeMNPListOutcome;
                 typedef std::future<DescribeMNPListOutcome> DescribeMNPListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPListRequest&, DescribeMNPListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPMAUDataDetailResponse> DescribeMNPMAUDataDetailOutcome;
+                typedef std::future<DescribeMNPMAUDataDetailOutcome> DescribeMNPMAUDataDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPMAUDataDetailRequest&, DescribeMNPMAUDataDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPMAUDataDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPMAULineChartResponse> DescribeMNPMAULineChartOutcome;
+                typedef std::future<DescribeMNPMAULineChartOutcome> DescribeMNPMAULineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPMAULineChartRequest&, DescribeMNPMAULineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPMAULineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPMAUMetricCardResponse> DescribeMNPMAUMetricCardOutcome;
+                typedef std::future<DescribeMNPMAUMetricCardOutcome> DescribeMNPMAUMetricCardOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPMAUMetricCardRequest&, DescribeMNPMAUMetricCardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPMAUMetricCardAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPOfflinePackageURLResponse> DescribeMNPOfflinePackageURLOutcome;
                 typedef std::future<DescribeMNPOfflinePackageURLOutcome> DescribeMNPOfflinePackageURLOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPOfflinePackageURLRequest&, DescribeMNPOfflinePackageURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPOfflinePackageURLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPPageAnalysisDetailResponse> DescribeMNPPageAnalysisDetailOutcome;
+                typedef std::future<DescribeMNPPageAnalysisDetailOutcome> DescribeMNPPageAnalysisDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPPageAnalysisDetailRequest&, DescribeMNPPageAnalysisDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPageAnalysisDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPPreviewResponse> DescribeMNPPreviewOutcome;
                 typedef std::future<DescribeMNPPreviewOutcome> DescribeMNPPreviewOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPPreviewRequest&, DescribeMNPPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPreviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPReleasedVersionHistoryResponse> DescribeMNPReleasedVersionHistoryOutcome;
                 typedef std::future<DescribeMNPReleasedVersionHistoryOutcome> DescribeMNPReleasedVersionHistoryOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPReleasedVersionHistoryRequest&, DescribeMNPReleasedVersionHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPReleasedVersionHistoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPReportDataLineChartResponse> DescribeMNPReportDataLineChartOutcome;
+                typedef std::future<DescribeMNPReportDataLineChartOutcome> DescribeMNPReportDataLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPReportDataLineChartRequest&, DescribeMNPReportDataLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPReportDataLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPReportDetailResponse> DescribeMNPReportDetailOutcome;
+                typedef std::future<DescribeMNPReportDetailOutcome> DescribeMNPReportDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPReportDetailRequest&, DescribeMNPReportDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPReportDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPRetentionDataResponse> DescribeMNPRetentionDataOutcome;
+                typedef std::future<DescribeMNPRetentionDataOutcome> DescribeMNPRetentionDataOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPRetentionDataRequest&, DescribeMNPRetentionDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPRetentionDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPSensitiveAPIPermissionApprovalResponse> DescribeMNPSensitiveAPIPermissionApprovalOutcome;
                 typedef std::future<DescribeMNPSensitiveAPIPermissionApprovalOutcome> DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest&, DescribeMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler;
@@ -269,6 +442,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPVersionResponse> DescribeMNPVersionOutcome;
                 typedef std::future<DescribeMNPVersionOutcome> DescribeMNPVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPVersionRequest&, DescribeMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePaymentDataDetailResponse> DescribePaymentDataDetailOutcome;
+                typedef std::future<DescribePaymentDataDetailOutcome> DescribePaymentDataDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribePaymentDataDetailRequest&, DescribePaymentDataDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePaymentDataDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePaymentDataLineChartResponse> DescribePaymentDataLineChartOutcome;
+                typedef std::future<DescribePaymentDataLineChartOutcome> DescribePaymentDataLineChartOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribePaymentDataLineChartRequest&, DescribePaymentDataLineChartOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePaymentDataLineChartAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePaymentDataOverviewResponse> DescribePaymentDataOverviewOutcome;
+                typedef std::future<DescribePaymentDataOverviewOutcome> DescribePaymentDataOverviewOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribePaymentDataOverviewRequest&, DescribePaymentDataOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePaymentDataOverviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRoleListResponse> DescribeRoleListOutcome;
                 typedef std::future<DescribeRoleListOutcome> DescribeRoleListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeRoleListRequest&, DescribeRoleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoleListAsyncHandler;
@@ -299,6 +481,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyApplicationResponse> ModifyApplicationOutcome;
                 typedef std::future<ModifyApplicationOutcome> ModifyApplicationOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyApplicationRequest&, ModifyApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyApplicationConfigResponse> ModifyApplicationConfigOutcome;
+                typedef std::future<ModifyApplicationConfigOutcome> ModifyApplicationConfigOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ModifyApplicationConfigRequest&, ModifyApplicationConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApplicationConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyGlobalDomainResponse> ModifyGlobalDomainOutcome;
                 typedef std::future<ModifyGlobalDomainOutcome> ModifyGlobalDomainOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyGlobalDomainRequest&, ModifyGlobalDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGlobalDomainAsyncHandler;
@@ -361,6 +546,15 @@ namespace TencentCloud
                 CreateApplicationOutcome CreateApplication(const Model::CreateApplicationRequest &request);
                 void CreateApplicationAsync(const Model::CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateApplicationOutcomeCallable CreateApplicationCallable(const Model::CreateApplicationRequest& request);
+
+                /**
+                 *This API is used to create the configuration for a specified superapp.
+                 * @param req CreateApplicationConfigRequest
+                 * @return CreateApplicationConfigOutcome
+                 */
+                CreateApplicationConfigOutcome CreateApplicationConfig(const Model::CreateApplicationConfigRequest &request);
+                void CreateApplicationConfigAsync(const Model::CreateApplicationConfigRequest& request, const CreateApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateApplicationConfigOutcomeCallable CreateApplicationConfigCallable(const Model::CreateApplicationConfigRequest& request);
 
                 /**
                  *This API is used to create a sensitive API of an application.
@@ -516,6 +710,42 @@ namespace TencentCloud
                 DeleteUserOutcomeCallable DeleteUserCallable(const Model::DeleteUserRequest& request);
 
                 /**
+                 *This API is used to retrieve the line chart data for selected superapp metrics.
+                 * @param req DescribeAPPDataDetailLineChartRequest
+                 * @return DescribeAPPDataDetailLineChartOutcome
+                 */
+                DescribeAPPDataDetailLineChartOutcome DescribeAPPDataDetailLineChart(const Model::DescribeAPPDataDetailLineChartRequest &request);
+                void DescribeAPPDataDetailLineChartAsync(const Model::DescribeAPPDataDetailLineChartRequest& request, const DescribeAPPDataDetailLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAPPDataDetailLineChartOutcomeCallable DescribeAPPDataDetailLineChartCallable(const Model::DescribeAPPDataDetailLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of the superapp data.
+                 * @param req DescribeAPPDataOverviewRequest
+                 * @return DescribeAPPDataOverviewOutcome
+                 */
+                DescribeAPPDataOverviewOutcome DescribeAPPDataOverview(const Model::DescribeAPPDataOverviewRequest &request);
+                void DescribeAPPDataOverviewAsync(const Model::DescribeAPPDataOverviewRequest& request, const DescribeAPPDataOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAPPDataOverviewOutcomeCallable DescribeAPPDataOverviewCallable(const Model::DescribeAPPDataOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+                 * @param req DescribeAdvertisingLineChartRequest
+                 * @return DescribeAdvertisingLineChartOutcome
+                 */
+                DescribeAdvertisingLineChartOutcome DescribeAdvertisingLineChart(const Model::DescribeAdvertisingLineChartRequest &request);
+                void DescribeAdvertisingLineChartAsync(const Model::DescribeAdvertisingLineChartRequest& request, const DescribeAdvertisingLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAdvertisingLineChartOutcomeCallable DescribeAdvertisingLineChartCallable(const Model::DescribeAdvertisingLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+                 * @param req DescribeAdvertisingOverviewRequest
+                 * @return DescribeAdvertisingOverviewOutcome
+                 */
+                DescribeAdvertisingOverviewOutcome DescribeAdvertisingOverview(const Model::DescribeAdvertisingOverviewRequest &request);
+                void DescribeAdvertisingOverviewAsync(const Model::DescribeAdvertisingOverviewRequest& request, const DescribeAdvertisingOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAdvertisingOverviewOutcomeCallable DescribeAdvertisingOverviewCallable(const Model::DescribeAdvertisingOverviewRequest& request);
+
+                /**
                  *This API is used to query the application details.
                  * @param req DescribeApplicationRequest
                  * @return DescribeApplicationOutcome
@@ -532,6 +762,15 @@ namespace TencentCloud
                 DescribeApplicationConfigFileOutcome DescribeApplicationConfigFile(const Model::DescribeApplicationConfigFileRequest &request);
                 void DescribeApplicationConfigFileAsync(const Model::DescribeApplicationConfigFileRequest& request, const DescribeApplicationConfigFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeApplicationConfigFileOutcomeCallable DescribeApplicationConfigFileCallable(const Model::DescribeApplicationConfigFileRequest& request);
+
+                /**
+                 *This API is used to retrieve the configuration details for an superapp.
+                 * @param req DescribeApplicationConfigInfosRequest
+                 * @return DescribeApplicationConfigInfosOutcome
+                 */
+                DescribeApplicationConfigInfosOutcome DescribeApplicationConfigInfos(const Model::DescribeApplicationConfigInfosRequest &request);
+                void DescribeApplicationConfigInfosAsync(const Model::DescribeApplicationConfigInfosRequest& request, const DescribeApplicationConfigInfosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationConfigInfosOutcomeCallable DescribeApplicationConfigInfosCallable(const Model::DescribeApplicationConfigInfosRequest& request);
 
                 /**
                  *This API is used to query the applications.
@@ -561,6 +800,159 @@ namespace TencentCloud
                 DescribeGlobalDomainACLOutcomeCallable DescribeGlobalDomainACLCallable(const Model::DescribeGlobalDomainACLRequest& request);
 
                 /**
+                 *This API is used to retrieve a global overview summary of usage statistics.
+                 * @param req DescribeGlobalOverviewDataSummaryRequest
+                 * @return DescribeGlobalOverviewDataSummaryOutcome
+                 */
+                DescribeGlobalOverviewDataSummaryOutcome DescribeGlobalOverviewDataSummary(const Model::DescribeGlobalOverviewDataSummaryRequest &request);
+                void DescribeGlobalOverviewDataSummaryAsync(const Model::DescribeGlobalOverviewDataSummaryRequest& request, const DescribeGlobalOverviewDataSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGlobalOverviewDataSummaryOutcomeCallable DescribeGlobalOverviewDataSummaryCallable(const Model::DescribeGlobalOverviewDataSummaryRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed report data for global overview within a specified date range.
+                 * @param req DescribeGlobalOverviewReportDetailRequest
+                 * @return DescribeGlobalOverviewReportDetailOutcome
+                 */
+                DescribeGlobalOverviewReportDetailOutcome DescribeGlobalOverviewReportDetail(const Model::DescribeGlobalOverviewReportDetailRequest &request);
+                void DescribeGlobalOverviewReportDetailAsync(const Model::DescribeGlobalOverviewReportDetailRequest& request, const DescribeGlobalOverviewReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGlobalOverviewReportDetailOutcomeCallable DescribeGlobalOverviewReportDetailCallable(const Model::DescribeGlobalOverviewReportDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+                 * @param req DescribeMNGAccessAnalysisDetailRequest
+                 * @return DescribeMNGAccessAnalysisDetailOutcome
+                 */
+                DescribeMNGAccessAnalysisDetailOutcome DescribeMNGAccessAnalysisDetail(const Model::DescribeMNGAccessAnalysisDetailRequest &request);
+                void DescribeMNGAccessAnalysisDetailAsync(const Model::DescribeMNGAccessAnalysisDetailRequest& request, const DescribeMNGAccessAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAccessAnalysisDetailOutcomeCallable DescribeMNGAccessAnalysisDetailCallable(const Model::DescribeMNGAccessAnalysisDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve line chart analysis data for mini game visits.
+                 * @param req DescribeMNGAccessAnalysisLineChartRequest
+                 * @return DescribeMNGAccessAnalysisLineChartOutcome
+                 */
+                DescribeMNGAccessAnalysisLineChartOutcome DescribeMNGAccessAnalysisLineChart(const Model::DescribeMNGAccessAnalysisLineChartRequest &request);
+                void DescribeMNGAccessAnalysisLineChartAsync(const Model::DescribeMNGAccessAnalysisLineChartRequest& request, const DescribeMNGAccessAnalysisLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAccessAnalysisLineChartOutcomeCallable DescribeMNGAccessAnalysisLineChartCallable(const Model::DescribeMNGAccessAnalysisLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+                 * @param req DescribeMNGAccessAnalysisOverviewRequest
+                 * @return DescribeMNGAccessAnalysisOverviewOutcome
+                 */
+                DescribeMNGAccessAnalysisOverviewOutcome DescribeMNGAccessAnalysisOverview(const Model::DescribeMNGAccessAnalysisOverviewRequest &request);
+                void DescribeMNGAccessAnalysisOverviewAsync(const Model::DescribeMNGAccessAnalysisOverviewRequest& request, const DescribeMNGAccessAnalysisOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAccessAnalysisOverviewOutcomeCallable DescribeMNGAccessAnalysisOverviewCallable(const Model::DescribeMNGAccessAnalysisOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve the real-time active user statistics for a mini game.
+                 * @param req DescribeMNGActiveUserRealTimeStatisticsRequest
+                 * @return DescribeMNGActiveUserRealTimeStatisticsOutcome
+                 */
+                DescribeMNGActiveUserRealTimeStatisticsOutcome DescribeMNGActiveUserRealTimeStatistics(const Model::DescribeMNGActiveUserRealTimeStatisticsRequest &request);
+                void DescribeMNGActiveUserRealTimeStatisticsAsync(const Model::DescribeMNGActiveUserRealTimeStatisticsRequest& request, const DescribeMNGActiveUserRealTimeStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGActiveUserRealTimeStatisticsOutcomeCallable DescribeMNGActiveUserRealTimeStatisticsCallable(const Model::DescribeMNGActiveUserRealTimeStatisticsRequest& request);
+
+                /**
+                 *This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+                 * @param req DescribeMNGAdvertisingDetailRequest
+                 * @return DescribeMNGAdvertisingDetailOutcome
+                 */
+                DescribeMNGAdvertisingDetailOutcome DescribeMNGAdvertisingDetail(const Model::DescribeMNGAdvertisingDetailRequest &request);
+                void DescribeMNGAdvertisingDetailAsync(const Model::DescribeMNGAdvertisingDetailRequest& request, const DescribeMNGAdvertisingDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAdvertisingDetailOutcomeCallable DescribeMNGAdvertisingDetailCallable(const Model::DescribeMNGAdvertisingDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve mini game advertising data in a line chart format.
+                 * @param req DescribeMNGAdvertisingLineChartRequest
+                 * @return DescribeMNGAdvertisingLineChartOutcome
+                 */
+                DescribeMNGAdvertisingLineChartOutcome DescribeMNGAdvertisingLineChart(const Model::DescribeMNGAdvertisingLineChartRequest &request);
+                void DescribeMNGAdvertisingLineChartAsync(const Model::DescribeMNGAdvertisingLineChartRequest& request, const DescribeMNGAdvertisingLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAdvertisingLineChartOutcomeCallable DescribeMNGAdvertisingLineChartCallable(const Model::DescribeMNGAdvertisingLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+                 * @param req DescribeMNGAdvertisingOverviewRequest
+                 * @return DescribeMNGAdvertisingOverviewOutcome
+                 */
+                DescribeMNGAdvertisingOverviewOutcome DescribeMNGAdvertisingOverview(const Model::DescribeMNGAdvertisingOverviewRequest &request);
+                void DescribeMNGAdvertisingOverviewAsync(const Model::DescribeMNGAdvertisingOverviewRequest& request, const DescribeMNGAdvertisingOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAdvertisingOverviewOutcomeCallable DescribeMNGAdvertisingOverviewCallable(const Model::DescribeMNGAdvertisingOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed mini game monthly active user data.
+                 * @param req DescribeMNGMAUDataDetailRequest
+                 * @return DescribeMNGMAUDataDetailOutcome
+                 */
+                DescribeMNGMAUDataDetailOutcome DescribeMNGMAUDataDetail(const Model::DescribeMNGMAUDataDetailRequest &request);
+                void DescribeMNGMAUDataDetailAsync(const Model::DescribeMNGMAUDataDetailRequest& request, const DescribeMNGMAUDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGMAUDataDetailOutcomeCallable DescribeMNGMAUDataDetailCallable(const Model::DescribeMNGMAUDataDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve mini game monthly active user data in a line chart format.
+                 * @param req DescribeMNGMAULineChartRequest
+                 * @return DescribeMNGMAULineChartOutcome
+                 */
+                DescribeMNGMAULineChartOutcome DescribeMNGMAULineChart(const Model::DescribeMNGMAULineChartRequest &request);
+                void DescribeMNGMAULineChartAsync(const Model::DescribeMNGMAULineChartRequest& request, const DescribeMNGMAULineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGMAULineChartOutcomeCallable DescribeMNGMAULineChartCallable(const Model::DescribeMNGMAULineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve MAU comparison data for a mini game between two months.
+                 * @param req DescribeMNGMAUMonthlyComparisonMetricCardRequest
+                 * @return DescribeMNGMAUMonthlyComparisonMetricCardOutcome
+                 */
+                DescribeMNGMAUMonthlyComparisonMetricCardOutcome DescribeMNGMAUMonthlyComparisonMetricCard(const Model::DescribeMNGMAUMonthlyComparisonMetricCardRequest &request);
+                void DescribeMNGMAUMonthlyComparisonMetricCardAsync(const Model::DescribeMNGMAUMonthlyComparisonMetricCardRequest& request, const DescribeMNGMAUMonthlyComparisonMetricCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGMAUMonthlyComparisonMetricCardOutcomeCallable DescribeMNGMAUMonthlyComparisonMetricCardCallable(const Model::DescribeMNGMAUMonthlyComparisonMetricCardRequest& request);
+
+                /**
+                 *This API is used to retrieve the line chart data for mini game payment.
+                 * @param req DescribeMNGPaymentLineChartRequest
+                 * @return DescribeMNGPaymentLineChartOutcome
+                 */
+                DescribeMNGPaymentLineChartOutcome DescribeMNGPaymentLineChart(const Model::DescribeMNGPaymentLineChartRequest &request);
+                void DescribeMNGPaymentLineChartAsync(const Model::DescribeMNGPaymentLineChartRequest& request, const DescribeMNGPaymentLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGPaymentLineChartOutcomeCallable DescribeMNGPaymentLineChartCallable(const Model::DescribeMNGPaymentLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of mini game payment data within a specified period.
+                 * @param req DescribeMNGPaymentOverviewRequest
+                 * @return DescribeMNGPaymentOverviewOutcome
+                 */
+                DescribeMNGPaymentOverviewOutcome DescribeMNGPaymentOverview(const Model::DescribeMNGPaymentOverviewRequest &request);
+                void DescribeMNGPaymentOverviewAsync(const Model::DescribeMNGPaymentOverviewRequest& request, const DescribeMNGPaymentOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGPaymentOverviewOutcomeCallable DescribeMNGPaymentOverviewCallable(const Model::DescribeMNGPaymentOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve a detailed payment report data for a mini game.
+                 * @param req DescribeMNGPaymentReportDetailRequest
+                 * @return DescribeMNGPaymentReportDetailOutcome
+                 */
+                DescribeMNGPaymentReportDetailOutcome DescribeMNGPaymentReportDetail(const Model::DescribeMNGPaymentReportDetailRequest &request);
+                void DescribeMNGPaymentReportDetailAsync(const Model::DescribeMNGPaymentReportDetailRequest& request, const DescribeMNGPaymentReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGPaymentReportDetailOutcomeCallable DescribeMNGPaymentReportDetailCallable(const Model::DescribeMNGPaymentReportDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve the mini game payment retention data.
+                 * @param req DescribeMNGPaymentRetentionAnalysisRequest
+                 * @return DescribeMNGPaymentRetentionAnalysisOutcome
+                 */
+                DescribeMNGPaymentRetentionAnalysisOutcome DescribeMNGPaymentRetentionAnalysis(const Model::DescribeMNGPaymentRetentionAnalysisRequest &request);
+                void DescribeMNGPaymentRetentionAnalysisAsync(const Model::DescribeMNGPaymentRetentionAnalysisRequest& request, const DescribeMNGPaymentRetentionAnalysisAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGPaymentRetentionAnalysisOutcomeCallable DescribeMNGPaymentRetentionAnalysisCallable(const Model::DescribeMNGPaymentRetentionAnalysisRequest& request);
+
+                /**
+                 *This API is used to retrieve user retention data for a mini game within a specified date range.
+                 * @param req DescribeMNGRetentionDataRequest
+                 * @return DescribeMNGRetentionDataOutcome
+                 */
+                DescribeMNGRetentionDataOutcome DescribeMNGRetentionData(const Model::DescribeMNGRetentionDataRequest &request);
+                void DescribeMNGRetentionDataAsync(const Model::DescribeMNGRetentionDataRequest& request, const DescribeMNGRetentionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGRetentionDataOutcomeCallable DescribeMNGRetentionDataCallable(const Model::DescribeMNGRetentionDataRequest& request);
+
+                /**
                  *This API is used to query the mini program details.
                  * @param req DescribeMNPRequest
                  * @return DescribeMNPOutcome
@@ -568,6 +960,33 @@ namespace TencentCloud
                 DescribeMNPOutcome DescribeMNP(const Model::DescribeMNPRequest &request);
                 void DescribeMNPAsync(const Model::DescribeMNPRequest& request, const DescribeMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPOutcomeCallable DescribeMNPCallable(const Model::DescribeMNPRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+                 * @param req DescribeMNPAccessAnalysisOverviewRequest
+                 * @return DescribeMNPAccessAnalysisOverviewOutcome
+                 */
+                DescribeMNPAccessAnalysisOverviewOutcome DescribeMNPAccessAnalysisOverview(const Model::DescribeMNPAccessAnalysisOverviewRequest &request);
+                void DescribeMNPAccessAnalysisOverviewAsync(const Model::DescribeMNPAccessAnalysisOverviewRequest& request, const DescribeMNPAccessAnalysisOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPAccessAnalysisOverviewOutcomeCallable DescribeMNPAccessAnalysisOverviewCallable(const Model::DescribeMNPAccessAnalysisOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve the real-time active user statistics for a mini program.
+                 * @param req DescribeMNPActiveUserRealTimeStatisticsRequest
+                 * @return DescribeMNPActiveUserRealTimeStatisticsOutcome
+                 */
+                DescribeMNPActiveUserRealTimeStatisticsOutcome DescribeMNPActiveUserRealTimeStatistics(const Model::DescribeMNPActiveUserRealTimeStatisticsRequest &request);
+                void DescribeMNPActiveUserRealTimeStatisticsAsync(const Model::DescribeMNPActiveUserRealTimeStatisticsRequest& request, const DescribeMNPActiveUserRealTimeStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPActiveUserRealTimeStatisticsOutcomeCallable DescribeMNPActiveUserRealTimeStatisticsCallable(const Model::DescribeMNPActiveUserRealTimeStatisticsRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+                 * @param req DescribeMNPAdvertisingDetailRequest
+                 * @return DescribeMNPAdvertisingDetailOutcome
+                 */
+                DescribeMNPAdvertisingDetailOutcome DescribeMNPAdvertisingDetail(const Model::DescribeMNPAdvertisingDetailRequest &request);
+                void DescribeMNPAdvertisingDetailAsync(const Model::DescribeMNPAdvertisingDetailRequest& request, const DescribeMNPAdvertisingDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPAdvertisingDetailOutcomeCallable DescribeMNPAdvertisingDetailCallable(const Model::DescribeMNPAdvertisingDetailRequest& request);
 
                 /**
                  *This API is used to query the mini program version management information.
@@ -615,6 +1034,33 @@ namespace TencentCloud
                 DescribeMNPListOutcomeCallable DescribeMNPListCallable(const Model::DescribeMNPListRequest& request);
 
                 /**
+                 *This API is used to retrieve the detailed mini program monthly active user data.
+                 * @param req DescribeMNPMAUDataDetailRequest
+                 * @return DescribeMNPMAUDataDetailOutcome
+                 */
+                DescribeMNPMAUDataDetailOutcome DescribeMNPMAUDataDetail(const Model::DescribeMNPMAUDataDetailRequest &request);
+                void DescribeMNPMAUDataDetailAsync(const Model::DescribeMNPMAUDataDetailRequest& request, const DescribeMNPMAUDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPMAUDataDetailOutcomeCallable DescribeMNPMAUDataDetailCallable(const Model::DescribeMNPMAUDataDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve mini program monthly active user data in a line chart format.
+                 * @param req DescribeMNPMAULineChartRequest
+                 * @return DescribeMNPMAULineChartOutcome
+                 */
+                DescribeMNPMAULineChartOutcome DescribeMNPMAULineChart(const Model::DescribeMNPMAULineChartRequest &request);
+                void DescribeMNPMAULineChartAsync(const Model::DescribeMNPMAULineChartRequest& request, const DescribeMNPMAULineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPMAULineChartOutcomeCallable DescribeMNPMAULineChartCallable(const Model::DescribeMNPMAULineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve MAU comparison data for a mini program between two months.
+                 * @param req DescribeMNPMAUMetricCardRequest
+                 * @return DescribeMNPMAUMetricCardOutcome
+                 */
+                DescribeMNPMAUMetricCardOutcome DescribeMNPMAUMetricCard(const Model::DescribeMNPMAUMetricCardRequest &request);
+                void DescribeMNPMAUMetricCardAsync(const Model::DescribeMNPMAUMetricCardRequest& request, const DescribeMNPMAUMetricCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPMAUMetricCardOutcomeCallable DescribeMNPMAUMetricCardCallable(const Model::DescribeMNPMAUMetricCardRequest& request);
+
+                /**
                  *DescribeMNPOfflinePackageURL
                  * @param req DescribeMNPOfflinePackageURLRequest
                  * @return DescribeMNPOfflinePackageURLOutcome
@@ -622,6 +1068,15 @@ namespace TencentCloud
                 DescribeMNPOfflinePackageURLOutcome DescribeMNPOfflinePackageURL(const Model::DescribeMNPOfflinePackageURLRequest &request);
                 void DescribeMNPOfflinePackageURLAsync(const Model::DescribeMNPOfflinePackageURLRequest& request, const DescribeMNPOfflinePackageURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPOfflinePackageURLOutcomeCallable DescribeMNPOfflinePackageURLCallable(const Model::DescribeMNPOfflinePackageURLRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+                 * @param req DescribeMNPPageAnalysisDetailRequest
+                 * @return DescribeMNPPageAnalysisDetailOutcome
+                 */
+                DescribeMNPPageAnalysisDetailOutcome DescribeMNPPageAnalysisDetail(const Model::DescribeMNPPageAnalysisDetailRequest &request);
+                void DescribeMNPPageAnalysisDetailAsync(const Model::DescribeMNPPageAnalysisDetailRequest& request, const DescribeMNPPageAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPPageAnalysisDetailOutcomeCallable DescribeMNPPageAnalysisDetailCallable(const Model::DescribeMNPPageAnalysisDetailRequest& request);
 
                 /**
                  *This API is used to query the mini program preview details.
@@ -640,6 +1095,33 @@ namespace TencentCloud
                 DescribeMNPReleasedVersionHistoryOutcome DescribeMNPReleasedVersionHistory(const Model::DescribeMNPReleasedVersionHistoryRequest &request);
                 void DescribeMNPReleasedVersionHistoryAsync(const Model::DescribeMNPReleasedVersionHistoryRequest& request, const DescribeMNPReleasedVersionHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPReleasedVersionHistoryOutcomeCallable DescribeMNPReleasedVersionHistoryCallable(const Model::DescribeMNPReleasedVersionHistoryRequest& request);
+
+                /**
+                 *This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+                 * @param req DescribeMNPReportDataLineChartRequest
+                 * @return DescribeMNPReportDataLineChartOutcome
+                 */
+                DescribeMNPReportDataLineChartOutcome DescribeMNPReportDataLineChart(const Model::DescribeMNPReportDataLineChartRequest &request);
+                void DescribeMNPReportDataLineChartAsync(const Model::DescribeMNPReportDataLineChartRequest& request, const DescribeMNPReportDataLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPReportDataLineChartOutcomeCallable DescribeMNPReportDataLineChartCallable(const Model::DescribeMNPReportDataLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed mini program visit analysis data.
+                 * @param req DescribeMNPReportDetailRequest
+                 * @return DescribeMNPReportDetailOutcome
+                 */
+                DescribeMNPReportDetailOutcome DescribeMNPReportDetail(const Model::DescribeMNPReportDetailRequest &request);
+                void DescribeMNPReportDetailAsync(const Model::DescribeMNPReportDetailRequest& request, const DescribeMNPReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPReportDetailOutcomeCallable DescribeMNPReportDetailCallable(const Model::DescribeMNPReportDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve user retention data for a mini program within a specified date range.
+                 * @param req DescribeMNPRetentionDataRequest
+                 * @return DescribeMNPRetentionDataOutcome
+                 */
+                DescribeMNPRetentionDataOutcome DescribeMNPRetentionData(const Model::DescribeMNPRetentionDataRequest &request);
+                void DescribeMNPRetentionDataAsync(const Model::DescribeMNPRetentionDataRequest& request, const DescribeMNPRetentionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPRetentionDataOutcomeCallable DescribeMNPRetentionDataCallable(const Model::DescribeMNPRetentionDataRequest& request);
 
                 /**
                  *This API is used to query details of a specific permission request to call sensitive APIs.
@@ -676,6 +1158,33 @@ namespace TencentCloud
                 DescribeMNPVersionOutcome DescribeMNPVersion(const Model::DescribeMNPVersionRequest &request);
                 void DescribeMNPVersionAsync(const Model::DescribeMNPVersionRequest& request, const DescribeMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPVersionOutcomeCallable DescribeMNPVersionCallable(const Model::DescribeMNPVersionRequest& request);
+
+                /**
+                 *This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+                 * @param req DescribePaymentDataDetailRequest
+                 * @return DescribePaymentDataDetailOutcome
+                 */
+                DescribePaymentDataDetailOutcome DescribePaymentDataDetail(const Model::DescribePaymentDataDetailRequest &request);
+                void DescribePaymentDataDetailAsync(const Model::DescribePaymentDataDetailRequest& request, const DescribePaymentDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePaymentDataDetailOutcomeCallable DescribePaymentDataDetailCallable(const Model::DescribePaymentDataDetailRequest& request);
+
+                /**
+                 *This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+                 * @param req DescribePaymentDataLineChartRequest
+                 * @return DescribePaymentDataLineChartOutcome
+                 */
+                DescribePaymentDataLineChartOutcome DescribePaymentDataLineChart(const Model::DescribePaymentDataLineChartRequest &request);
+                void DescribePaymentDataLineChartAsync(const Model::DescribePaymentDataLineChartRequest& request, const DescribePaymentDataLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePaymentDataLineChartOutcomeCallable DescribePaymentDataLineChartCallable(const Model::DescribePaymentDataLineChartRequest& request);
+
+                /**
+                 *This API is used to retrieve an overview of mini program payment data within a specified date range.
+                 * @param req DescribePaymentDataOverviewRequest
+                 * @return DescribePaymentDataOverviewOutcome
+                 */
+                DescribePaymentDataOverviewOutcome DescribePaymentDataOverview(const Model::DescribePaymentDataOverviewRequest &request);
+                void DescribePaymentDataOverviewAsync(const Model::DescribePaymentDataOverviewRequest& request, const DescribePaymentDataOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePaymentDataOverviewOutcomeCallable DescribePaymentDataOverviewCallable(const Model::DescribePaymentDataOverviewRequest& request);
 
                 /**
                  *This API is used to query the roles.
@@ -766,6 +1275,15 @@ namespace TencentCloud
                 ModifyApplicationOutcome ModifyApplication(const Model::ModifyApplicationRequest &request);
                 void ModifyApplicationAsync(const Model::ModifyApplicationRequest& request, const ModifyApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyApplicationOutcomeCallable ModifyApplicationCallable(const Model::ModifyApplicationRequest& request);
+
+                /**
+                 *This API is used to edit the configuration of a superapp.
+                 * @param req ModifyApplicationConfigRequest
+                 * @return ModifyApplicationConfigOutcome
+                 */
+                ModifyApplicationConfigOutcome ModifyApplicationConfig(const Model::ModifyApplicationConfigRequest &request);
+                void ModifyApplicationConfigAsync(const Model::ModifyApplicationConfigRequest& request, const ModifyApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyApplicationConfigOutcomeCallable ModifyApplicationConfigCallable(const Model::ModifyApplicationConfigRequest& request);
 
                 /**
                  *This API is used to modify the domain allowlist or blocklist.

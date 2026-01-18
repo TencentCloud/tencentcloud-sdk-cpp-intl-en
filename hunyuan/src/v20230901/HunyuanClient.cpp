@@ -40,6 +40,56 @@ HunyuanClient::HunyuanClient(const Credential &credential, const string &region,
 }
 
 
+HunyuanClient::Convert3DFormatOutcome HunyuanClient::Convert3DFormat(const Convert3DFormatRequest &request)
+{
+    auto outcome = MakeRequest(request, "Convert3DFormat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        Convert3DFormatResponse rsp = Convert3DFormatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return Convert3DFormatOutcome(rsp);
+        else
+            return Convert3DFormatOutcome(o.GetError());
+    }
+    else
+    {
+        return Convert3DFormatOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::Convert3DFormatAsync(const Convert3DFormatRequest& request, const Convert3DFormatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const Convert3DFormatRequest&;
+    using Resp = Convert3DFormatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "Convert3DFormat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::Convert3DFormatOutcomeCallable HunyuanClient::Convert3DFormatCallable(const Convert3DFormatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<Convert3DFormatOutcome>>();
+    Convert3DFormatAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const Convert3DFormatRequest&,
+        Convert3DFormatOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 HunyuanClient::QueryHunyuan3DPartJobOutcome HunyuanClient::QueryHunyuan3DPartJob(const QueryHunyuan3DPartJobRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryHunyuan3DPartJob");

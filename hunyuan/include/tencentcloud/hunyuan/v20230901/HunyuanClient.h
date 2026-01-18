@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h>
@@ -49,6 +51,9 @@ namespace TencentCloud
                 HunyuanClient(const Credential &credential, const std::string &region);
                 HunyuanClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::Convert3DFormatResponse> Convert3DFormatOutcome;
+                typedef std::future<Convert3DFormatOutcome> Convert3DFormatOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::Convert3DFormatRequest&, Convert3DFormatOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Convert3DFormatAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryHunyuan3DPartJobResponse> QueryHunyuan3DPartJobOutcome;
                 typedef std::future<QueryHunyuan3DPartJobOutcome> QueryHunyuan3DPartJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuan3DPartJobRequest&, QueryHunyuan3DPartJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuan3DPartJobAsyncHandler;
@@ -69,6 +74,15 @@ namespace TencentCloud
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuanTo3DRapidJobRequest&, SubmitHunyuanTo3DRapidJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuanTo3DRapidJobAsyncHandler;
 
 
+
+                /**
+                 *After inputting a 3D model file, the 3D model file format can be switched.
+                 * @param req Convert3DFormatRequest
+                 * @return Convert3DFormatOutcome
+                 */
+                Convert3DFormatOutcome Convert3DFormat(const Model::Convert3DFormatRequest &request);
+                void Convert3DFormatAsync(const Model::Convert3DFormatRequest& request, const Convert3DFormatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                Convert3DFormatOutcomeCallable Convert3DFormatCallable(const Model::Convert3DFormatRequest& request);
 
                 /**
                  *This API is used to query the generation task of a component.

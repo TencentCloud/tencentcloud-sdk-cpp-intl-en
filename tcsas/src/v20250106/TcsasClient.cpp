@@ -190,6 +190,56 @@ TcsasClient::CreateApplicationOutcomeCallable TcsasClient::CreateApplicationCall
     return prom->get_future();
 }
 
+TcsasClient::CreateApplicationConfigOutcome TcsasClient::CreateApplicationConfig(const CreateApplicationConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplicationConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationConfigResponse rsp = CreateApplicationConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationConfigOutcome(rsp);
+        else
+            return CreateApplicationConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationConfigOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateApplicationConfigAsync(const CreateApplicationConfigRequest& request, const CreateApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateApplicationConfigRequest&;
+    using Resp = CreateApplicationConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateApplicationConfigOutcomeCallable TcsasClient::CreateApplicationConfigCallable(const CreateApplicationConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateApplicationConfigOutcome>>();
+    CreateApplicationConfigAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateApplicationConfigRequest&,
+        CreateApplicationConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::CreateApplicationSensitiveAPIOutcome TcsasClient::CreateApplicationSensitiveAPI(const CreateApplicationSensitiveAPIRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateApplicationSensitiveAPI");
@@ -1040,6 +1090,206 @@ TcsasClient::DeleteUserOutcomeCallable TcsasClient::DeleteUserCallable(const Del
     return prom->get_future();
 }
 
+TcsasClient::DescribeAPPDataDetailLineChartOutcome TcsasClient::DescribeAPPDataDetailLineChart(const DescribeAPPDataDetailLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAPPDataDetailLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAPPDataDetailLineChartResponse rsp = DescribeAPPDataDetailLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAPPDataDetailLineChartOutcome(rsp);
+        else
+            return DescribeAPPDataDetailLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAPPDataDetailLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeAPPDataDetailLineChartAsync(const DescribeAPPDataDetailLineChartRequest& request, const DescribeAPPDataDetailLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAPPDataDetailLineChartRequest&;
+    using Resp = DescribeAPPDataDetailLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAPPDataDetailLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeAPPDataDetailLineChartOutcomeCallable TcsasClient::DescribeAPPDataDetailLineChartCallable(const DescribeAPPDataDetailLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAPPDataDetailLineChartOutcome>>();
+    DescribeAPPDataDetailLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeAPPDataDetailLineChartRequest&,
+        DescribeAPPDataDetailLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeAPPDataOverviewOutcome TcsasClient::DescribeAPPDataOverview(const DescribeAPPDataOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAPPDataOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAPPDataOverviewResponse rsp = DescribeAPPDataOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAPPDataOverviewOutcome(rsp);
+        else
+            return DescribeAPPDataOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAPPDataOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeAPPDataOverviewAsync(const DescribeAPPDataOverviewRequest& request, const DescribeAPPDataOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAPPDataOverviewRequest&;
+    using Resp = DescribeAPPDataOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAPPDataOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeAPPDataOverviewOutcomeCallable TcsasClient::DescribeAPPDataOverviewCallable(const DescribeAPPDataOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAPPDataOverviewOutcome>>();
+    DescribeAPPDataOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeAPPDataOverviewRequest&,
+        DescribeAPPDataOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeAdvertisingLineChartOutcome TcsasClient::DescribeAdvertisingLineChart(const DescribeAdvertisingLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAdvertisingLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAdvertisingLineChartResponse rsp = DescribeAdvertisingLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAdvertisingLineChartOutcome(rsp);
+        else
+            return DescribeAdvertisingLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAdvertisingLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeAdvertisingLineChartAsync(const DescribeAdvertisingLineChartRequest& request, const DescribeAdvertisingLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAdvertisingLineChartRequest&;
+    using Resp = DescribeAdvertisingLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAdvertisingLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeAdvertisingLineChartOutcomeCallable TcsasClient::DescribeAdvertisingLineChartCallable(const DescribeAdvertisingLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAdvertisingLineChartOutcome>>();
+    DescribeAdvertisingLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeAdvertisingLineChartRequest&,
+        DescribeAdvertisingLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeAdvertisingOverviewOutcome TcsasClient::DescribeAdvertisingOverview(const DescribeAdvertisingOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAdvertisingOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAdvertisingOverviewResponse rsp = DescribeAdvertisingOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAdvertisingOverviewOutcome(rsp);
+        else
+            return DescribeAdvertisingOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAdvertisingOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeAdvertisingOverviewAsync(const DescribeAdvertisingOverviewRequest& request, const DescribeAdvertisingOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAdvertisingOverviewRequest&;
+    using Resp = DescribeAdvertisingOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAdvertisingOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeAdvertisingOverviewOutcomeCallable TcsasClient::DescribeAdvertisingOverviewCallable(const DescribeAdvertisingOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAdvertisingOverviewOutcome>>();
+    DescribeAdvertisingOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeAdvertisingOverviewRequest&,
+        DescribeAdvertisingOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeApplicationOutcome TcsasClient::DescribeApplication(const DescribeApplicationRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeApplication");
@@ -1132,6 +1382,56 @@ TcsasClient::DescribeApplicationConfigFileOutcomeCallable TcsasClient::DescribeA
         const TcsasClient*,
         const DescribeApplicationConfigFileRequest&,
         DescribeApplicationConfigFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeApplicationConfigInfosOutcome TcsasClient::DescribeApplicationConfigInfos(const DescribeApplicationConfigInfosRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationConfigInfos");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationConfigInfosResponse rsp = DescribeApplicationConfigInfosResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationConfigInfosOutcome(rsp);
+        else
+            return DescribeApplicationConfigInfosOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationConfigInfosOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeApplicationConfigInfosAsync(const DescribeApplicationConfigInfosRequest& request, const DescribeApplicationConfigInfosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeApplicationConfigInfosRequest&;
+    using Resp = DescribeApplicationConfigInfosResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationConfigInfos", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeApplicationConfigInfosOutcomeCallable TcsasClient::DescribeApplicationConfigInfosCallable(const DescribeApplicationConfigInfosRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeApplicationConfigInfosOutcome>>();
+    DescribeApplicationConfigInfosAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeApplicationConfigInfosRequest&,
+        DescribeApplicationConfigInfosOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1290,6 +1590,856 @@ TcsasClient::DescribeGlobalDomainACLOutcomeCallable TcsasClient::DescribeGlobalD
     return prom->get_future();
 }
 
+TcsasClient::DescribeGlobalOverviewDataSummaryOutcome TcsasClient::DescribeGlobalOverviewDataSummary(const DescribeGlobalOverviewDataSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGlobalOverviewDataSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGlobalOverviewDataSummaryResponse rsp = DescribeGlobalOverviewDataSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGlobalOverviewDataSummaryOutcome(rsp);
+        else
+            return DescribeGlobalOverviewDataSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGlobalOverviewDataSummaryOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeGlobalOverviewDataSummaryAsync(const DescribeGlobalOverviewDataSummaryRequest& request, const DescribeGlobalOverviewDataSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeGlobalOverviewDataSummaryRequest&;
+    using Resp = DescribeGlobalOverviewDataSummaryResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeGlobalOverviewDataSummary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeGlobalOverviewDataSummaryOutcomeCallable TcsasClient::DescribeGlobalOverviewDataSummaryCallable(const DescribeGlobalOverviewDataSummaryRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeGlobalOverviewDataSummaryOutcome>>();
+    DescribeGlobalOverviewDataSummaryAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeGlobalOverviewDataSummaryRequest&,
+        DescribeGlobalOverviewDataSummaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeGlobalOverviewReportDetailOutcome TcsasClient::DescribeGlobalOverviewReportDetail(const DescribeGlobalOverviewReportDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGlobalOverviewReportDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGlobalOverviewReportDetailResponse rsp = DescribeGlobalOverviewReportDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGlobalOverviewReportDetailOutcome(rsp);
+        else
+            return DescribeGlobalOverviewReportDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGlobalOverviewReportDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeGlobalOverviewReportDetailAsync(const DescribeGlobalOverviewReportDetailRequest& request, const DescribeGlobalOverviewReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeGlobalOverviewReportDetailRequest&;
+    using Resp = DescribeGlobalOverviewReportDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeGlobalOverviewReportDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeGlobalOverviewReportDetailOutcomeCallable TcsasClient::DescribeGlobalOverviewReportDetailCallable(const DescribeGlobalOverviewReportDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeGlobalOverviewReportDetailOutcome>>();
+    DescribeGlobalOverviewReportDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeGlobalOverviewReportDetailRequest&,
+        DescribeGlobalOverviewReportDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAccessAnalysisDetailOutcome TcsasClient::DescribeMNGAccessAnalysisDetail(const DescribeMNGAccessAnalysisDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAccessAnalysisDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAccessAnalysisDetailResponse rsp = DescribeMNGAccessAnalysisDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAccessAnalysisDetailOutcome(rsp);
+        else
+            return DescribeMNGAccessAnalysisDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAccessAnalysisDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAccessAnalysisDetailAsync(const DescribeMNGAccessAnalysisDetailRequest& request, const DescribeMNGAccessAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAccessAnalysisDetailRequest&;
+    using Resp = DescribeMNGAccessAnalysisDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAccessAnalysisDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAccessAnalysisDetailOutcomeCallable TcsasClient::DescribeMNGAccessAnalysisDetailCallable(const DescribeMNGAccessAnalysisDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAccessAnalysisDetailOutcome>>();
+    DescribeMNGAccessAnalysisDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAccessAnalysisDetailRequest&,
+        DescribeMNGAccessAnalysisDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAccessAnalysisLineChartOutcome TcsasClient::DescribeMNGAccessAnalysisLineChart(const DescribeMNGAccessAnalysisLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAccessAnalysisLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAccessAnalysisLineChartResponse rsp = DescribeMNGAccessAnalysisLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAccessAnalysisLineChartOutcome(rsp);
+        else
+            return DescribeMNGAccessAnalysisLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAccessAnalysisLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAccessAnalysisLineChartAsync(const DescribeMNGAccessAnalysisLineChartRequest& request, const DescribeMNGAccessAnalysisLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAccessAnalysisLineChartRequest&;
+    using Resp = DescribeMNGAccessAnalysisLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAccessAnalysisLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAccessAnalysisLineChartOutcomeCallable TcsasClient::DescribeMNGAccessAnalysisLineChartCallable(const DescribeMNGAccessAnalysisLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAccessAnalysisLineChartOutcome>>();
+    DescribeMNGAccessAnalysisLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAccessAnalysisLineChartRequest&,
+        DescribeMNGAccessAnalysisLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAccessAnalysisOverviewOutcome TcsasClient::DescribeMNGAccessAnalysisOverview(const DescribeMNGAccessAnalysisOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAccessAnalysisOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAccessAnalysisOverviewResponse rsp = DescribeMNGAccessAnalysisOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAccessAnalysisOverviewOutcome(rsp);
+        else
+            return DescribeMNGAccessAnalysisOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAccessAnalysisOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAccessAnalysisOverviewAsync(const DescribeMNGAccessAnalysisOverviewRequest& request, const DescribeMNGAccessAnalysisOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAccessAnalysisOverviewRequest&;
+    using Resp = DescribeMNGAccessAnalysisOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAccessAnalysisOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAccessAnalysisOverviewOutcomeCallable TcsasClient::DescribeMNGAccessAnalysisOverviewCallable(const DescribeMNGAccessAnalysisOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAccessAnalysisOverviewOutcome>>();
+    DescribeMNGAccessAnalysisOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAccessAnalysisOverviewRequest&,
+        DescribeMNGAccessAnalysisOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGActiveUserRealTimeStatisticsOutcome TcsasClient::DescribeMNGActiveUserRealTimeStatistics(const DescribeMNGActiveUserRealTimeStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGActiveUserRealTimeStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGActiveUserRealTimeStatisticsResponse rsp = DescribeMNGActiveUserRealTimeStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGActiveUserRealTimeStatisticsOutcome(rsp);
+        else
+            return DescribeMNGActiveUserRealTimeStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGActiveUserRealTimeStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGActiveUserRealTimeStatisticsAsync(const DescribeMNGActiveUserRealTimeStatisticsRequest& request, const DescribeMNGActiveUserRealTimeStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGActiveUserRealTimeStatisticsRequest&;
+    using Resp = DescribeMNGActiveUserRealTimeStatisticsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGActiveUserRealTimeStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGActiveUserRealTimeStatisticsOutcomeCallable TcsasClient::DescribeMNGActiveUserRealTimeStatisticsCallable(const DescribeMNGActiveUserRealTimeStatisticsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGActiveUserRealTimeStatisticsOutcome>>();
+    DescribeMNGActiveUserRealTimeStatisticsAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGActiveUserRealTimeStatisticsRequest&,
+        DescribeMNGActiveUserRealTimeStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAdvertisingDetailOutcome TcsasClient::DescribeMNGAdvertisingDetail(const DescribeMNGAdvertisingDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAdvertisingDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAdvertisingDetailResponse rsp = DescribeMNGAdvertisingDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAdvertisingDetailOutcome(rsp);
+        else
+            return DescribeMNGAdvertisingDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAdvertisingDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAdvertisingDetailAsync(const DescribeMNGAdvertisingDetailRequest& request, const DescribeMNGAdvertisingDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAdvertisingDetailRequest&;
+    using Resp = DescribeMNGAdvertisingDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAdvertisingDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAdvertisingDetailOutcomeCallable TcsasClient::DescribeMNGAdvertisingDetailCallable(const DescribeMNGAdvertisingDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAdvertisingDetailOutcome>>();
+    DescribeMNGAdvertisingDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAdvertisingDetailRequest&,
+        DescribeMNGAdvertisingDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAdvertisingLineChartOutcome TcsasClient::DescribeMNGAdvertisingLineChart(const DescribeMNGAdvertisingLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAdvertisingLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAdvertisingLineChartResponse rsp = DescribeMNGAdvertisingLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAdvertisingLineChartOutcome(rsp);
+        else
+            return DescribeMNGAdvertisingLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAdvertisingLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAdvertisingLineChartAsync(const DescribeMNGAdvertisingLineChartRequest& request, const DescribeMNGAdvertisingLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAdvertisingLineChartRequest&;
+    using Resp = DescribeMNGAdvertisingLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAdvertisingLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAdvertisingLineChartOutcomeCallable TcsasClient::DescribeMNGAdvertisingLineChartCallable(const DescribeMNGAdvertisingLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAdvertisingLineChartOutcome>>();
+    DescribeMNGAdvertisingLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAdvertisingLineChartRequest&,
+        DescribeMNGAdvertisingLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGAdvertisingOverviewOutcome TcsasClient::DescribeMNGAdvertisingOverview(const DescribeMNGAdvertisingOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAdvertisingOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAdvertisingOverviewResponse rsp = DescribeMNGAdvertisingOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAdvertisingOverviewOutcome(rsp);
+        else
+            return DescribeMNGAdvertisingOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAdvertisingOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAdvertisingOverviewAsync(const DescribeMNGAdvertisingOverviewRequest& request, const DescribeMNGAdvertisingOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAdvertisingOverviewRequest&;
+    using Resp = DescribeMNGAdvertisingOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAdvertisingOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAdvertisingOverviewOutcomeCallable TcsasClient::DescribeMNGAdvertisingOverviewCallable(const DescribeMNGAdvertisingOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAdvertisingOverviewOutcome>>();
+    DescribeMNGAdvertisingOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAdvertisingOverviewRequest&,
+        DescribeMNGAdvertisingOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGMAUDataDetailOutcome TcsasClient::DescribeMNGMAUDataDetail(const DescribeMNGMAUDataDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGMAUDataDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGMAUDataDetailResponse rsp = DescribeMNGMAUDataDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGMAUDataDetailOutcome(rsp);
+        else
+            return DescribeMNGMAUDataDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGMAUDataDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGMAUDataDetailAsync(const DescribeMNGMAUDataDetailRequest& request, const DescribeMNGMAUDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGMAUDataDetailRequest&;
+    using Resp = DescribeMNGMAUDataDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGMAUDataDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGMAUDataDetailOutcomeCallable TcsasClient::DescribeMNGMAUDataDetailCallable(const DescribeMNGMAUDataDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGMAUDataDetailOutcome>>();
+    DescribeMNGMAUDataDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGMAUDataDetailRequest&,
+        DescribeMNGMAUDataDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGMAULineChartOutcome TcsasClient::DescribeMNGMAULineChart(const DescribeMNGMAULineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGMAULineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGMAULineChartResponse rsp = DescribeMNGMAULineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGMAULineChartOutcome(rsp);
+        else
+            return DescribeMNGMAULineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGMAULineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGMAULineChartAsync(const DescribeMNGMAULineChartRequest& request, const DescribeMNGMAULineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGMAULineChartRequest&;
+    using Resp = DescribeMNGMAULineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGMAULineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGMAULineChartOutcomeCallable TcsasClient::DescribeMNGMAULineChartCallable(const DescribeMNGMAULineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGMAULineChartOutcome>>();
+    DescribeMNGMAULineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGMAULineChartRequest&,
+        DescribeMNGMAULineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGMAUMonthlyComparisonMetricCardOutcome TcsasClient::DescribeMNGMAUMonthlyComparisonMetricCard(const DescribeMNGMAUMonthlyComparisonMetricCardRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGMAUMonthlyComparisonMetricCard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGMAUMonthlyComparisonMetricCardResponse rsp = DescribeMNGMAUMonthlyComparisonMetricCardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGMAUMonthlyComparisonMetricCardOutcome(rsp);
+        else
+            return DescribeMNGMAUMonthlyComparisonMetricCardOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGMAUMonthlyComparisonMetricCardOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGMAUMonthlyComparisonMetricCardAsync(const DescribeMNGMAUMonthlyComparisonMetricCardRequest& request, const DescribeMNGMAUMonthlyComparisonMetricCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGMAUMonthlyComparisonMetricCardRequest&;
+    using Resp = DescribeMNGMAUMonthlyComparisonMetricCardResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGMAUMonthlyComparisonMetricCard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGMAUMonthlyComparisonMetricCardOutcomeCallable TcsasClient::DescribeMNGMAUMonthlyComparisonMetricCardCallable(const DescribeMNGMAUMonthlyComparisonMetricCardRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGMAUMonthlyComparisonMetricCardOutcome>>();
+    DescribeMNGMAUMonthlyComparisonMetricCardAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGMAUMonthlyComparisonMetricCardRequest&,
+        DescribeMNGMAUMonthlyComparisonMetricCardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGPaymentLineChartOutcome TcsasClient::DescribeMNGPaymentLineChart(const DescribeMNGPaymentLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGPaymentLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGPaymentLineChartResponse rsp = DescribeMNGPaymentLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGPaymentLineChartOutcome(rsp);
+        else
+            return DescribeMNGPaymentLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGPaymentLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGPaymentLineChartAsync(const DescribeMNGPaymentLineChartRequest& request, const DescribeMNGPaymentLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGPaymentLineChartRequest&;
+    using Resp = DescribeMNGPaymentLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGPaymentLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGPaymentLineChartOutcomeCallable TcsasClient::DescribeMNGPaymentLineChartCallable(const DescribeMNGPaymentLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGPaymentLineChartOutcome>>();
+    DescribeMNGPaymentLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGPaymentLineChartRequest&,
+        DescribeMNGPaymentLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGPaymentOverviewOutcome TcsasClient::DescribeMNGPaymentOverview(const DescribeMNGPaymentOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGPaymentOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGPaymentOverviewResponse rsp = DescribeMNGPaymentOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGPaymentOverviewOutcome(rsp);
+        else
+            return DescribeMNGPaymentOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGPaymentOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGPaymentOverviewAsync(const DescribeMNGPaymentOverviewRequest& request, const DescribeMNGPaymentOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGPaymentOverviewRequest&;
+    using Resp = DescribeMNGPaymentOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGPaymentOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGPaymentOverviewOutcomeCallable TcsasClient::DescribeMNGPaymentOverviewCallable(const DescribeMNGPaymentOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGPaymentOverviewOutcome>>();
+    DescribeMNGPaymentOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGPaymentOverviewRequest&,
+        DescribeMNGPaymentOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGPaymentReportDetailOutcome TcsasClient::DescribeMNGPaymentReportDetail(const DescribeMNGPaymentReportDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGPaymentReportDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGPaymentReportDetailResponse rsp = DescribeMNGPaymentReportDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGPaymentReportDetailOutcome(rsp);
+        else
+            return DescribeMNGPaymentReportDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGPaymentReportDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGPaymentReportDetailAsync(const DescribeMNGPaymentReportDetailRequest& request, const DescribeMNGPaymentReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGPaymentReportDetailRequest&;
+    using Resp = DescribeMNGPaymentReportDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGPaymentReportDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGPaymentReportDetailOutcomeCallable TcsasClient::DescribeMNGPaymentReportDetailCallable(const DescribeMNGPaymentReportDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGPaymentReportDetailOutcome>>();
+    DescribeMNGPaymentReportDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGPaymentReportDetailRequest&,
+        DescribeMNGPaymentReportDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGPaymentRetentionAnalysisOutcome TcsasClient::DescribeMNGPaymentRetentionAnalysis(const DescribeMNGPaymentRetentionAnalysisRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGPaymentRetentionAnalysis");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGPaymentRetentionAnalysisResponse rsp = DescribeMNGPaymentRetentionAnalysisResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGPaymentRetentionAnalysisOutcome(rsp);
+        else
+            return DescribeMNGPaymentRetentionAnalysisOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGPaymentRetentionAnalysisOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGPaymentRetentionAnalysisAsync(const DescribeMNGPaymentRetentionAnalysisRequest& request, const DescribeMNGPaymentRetentionAnalysisAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGPaymentRetentionAnalysisRequest&;
+    using Resp = DescribeMNGPaymentRetentionAnalysisResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGPaymentRetentionAnalysis", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGPaymentRetentionAnalysisOutcomeCallable TcsasClient::DescribeMNGPaymentRetentionAnalysisCallable(const DescribeMNGPaymentRetentionAnalysisRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGPaymentRetentionAnalysisOutcome>>();
+    DescribeMNGPaymentRetentionAnalysisAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGPaymentRetentionAnalysisRequest&,
+        DescribeMNGPaymentRetentionAnalysisOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGRetentionDataOutcome TcsasClient::DescribeMNGRetentionData(const DescribeMNGRetentionDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGRetentionData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGRetentionDataResponse rsp = DescribeMNGRetentionDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGRetentionDataOutcome(rsp);
+        else
+            return DescribeMNGRetentionDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGRetentionDataOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGRetentionDataAsync(const DescribeMNGRetentionDataRequest& request, const DescribeMNGRetentionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGRetentionDataRequest&;
+    using Resp = DescribeMNGRetentionDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGRetentionData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGRetentionDataOutcomeCallable TcsasClient::DescribeMNGRetentionDataCallable(const DescribeMNGRetentionDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGRetentionDataOutcome>>();
+    DescribeMNGRetentionDataAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGRetentionDataRequest&,
+        DescribeMNGRetentionDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNPOutcome TcsasClient::DescribeMNP(const DescribeMNPRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNP");
@@ -1332,6 +2482,156 @@ TcsasClient::DescribeMNPOutcomeCallable TcsasClient::DescribeMNPCallable(const D
         const TcsasClient*,
         const DescribeMNPRequest&,
         DescribeMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPAccessAnalysisOverviewOutcome TcsasClient::DescribeMNPAccessAnalysisOverview(const DescribeMNPAccessAnalysisOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPAccessAnalysisOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPAccessAnalysisOverviewResponse rsp = DescribeMNPAccessAnalysisOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPAccessAnalysisOverviewOutcome(rsp);
+        else
+            return DescribeMNPAccessAnalysisOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPAccessAnalysisOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPAccessAnalysisOverviewAsync(const DescribeMNPAccessAnalysisOverviewRequest& request, const DescribeMNPAccessAnalysisOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPAccessAnalysisOverviewRequest&;
+    using Resp = DescribeMNPAccessAnalysisOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPAccessAnalysisOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPAccessAnalysisOverviewOutcomeCallable TcsasClient::DescribeMNPAccessAnalysisOverviewCallable(const DescribeMNPAccessAnalysisOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPAccessAnalysisOverviewOutcome>>();
+    DescribeMNPAccessAnalysisOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPAccessAnalysisOverviewRequest&,
+        DescribeMNPAccessAnalysisOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPActiveUserRealTimeStatisticsOutcome TcsasClient::DescribeMNPActiveUserRealTimeStatistics(const DescribeMNPActiveUserRealTimeStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPActiveUserRealTimeStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPActiveUserRealTimeStatisticsResponse rsp = DescribeMNPActiveUserRealTimeStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPActiveUserRealTimeStatisticsOutcome(rsp);
+        else
+            return DescribeMNPActiveUserRealTimeStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPActiveUserRealTimeStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPActiveUserRealTimeStatisticsAsync(const DescribeMNPActiveUserRealTimeStatisticsRequest& request, const DescribeMNPActiveUserRealTimeStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPActiveUserRealTimeStatisticsRequest&;
+    using Resp = DescribeMNPActiveUserRealTimeStatisticsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPActiveUserRealTimeStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPActiveUserRealTimeStatisticsOutcomeCallable TcsasClient::DescribeMNPActiveUserRealTimeStatisticsCallable(const DescribeMNPActiveUserRealTimeStatisticsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPActiveUserRealTimeStatisticsOutcome>>();
+    DescribeMNPActiveUserRealTimeStatisticsAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPActiveUserRealTimeStatisticsRequest&,
+        DescribeMNPActiveUserRealTimeStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPAdvertisingDetailOutcome TcsasClient::DescribeMNPAdvertisingDetail(const DescribeMNPAdvertisingDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPAdvertisingDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPAdvertisingDetailResponse rsp = DescribeMNPAdvertisingDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPAdvertisingDetailOutcome(rsp);
+        else
+            return DescribeMNPAdvertisingDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPAdvertisingDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPAdvertisingDetailAsync(const DescribeMNPAdvertisingDetailRequest& request, const DescribeMNPAdvertisingDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPAdvertisingDetailRequest&;
+    using Resp = DescribeMNPAdvertisingDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPAdvertisingDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPAdvertisingDetailOutcomeCallable TcsasClient::DescribeMNPAdvertisingDetailCallable(const DescribeMNPAdvertisingDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPAdvertisingDetailOutcome>>();
+    DescribeMNPAdvertisingDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPAdvertisingDetailRequest&,
+        DescribeMNPAdvertisingDetailOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1590,6 +2890,156 @@ TcsasClient::DescribeMNPListOutcomeCallable TcsasClient::DescribeMNPListCallable
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNPMAUDataDetailOutcome TcsasClient::DescribeMNPMAUDataDetail(const DescribeMNPMAUDataDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPMAUDataDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPMAUDataDetailResponse rsp = DescribeMNPMAUDataDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPMAUDataDetailOutcome(rsp);
+        else
+            return DescribeMNPMAUDataDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPMAUDataDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPMAUDataDetailAsync(const DescribeMNPMAUDataDetailRequest& request, const DescribeMNPMAUDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPMAUDataDetailRequest&;
+    using Resp = DescribeMNPMAUDataDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPMAUDataDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPMAUDataDetailOutcomeCallable TcsasClient::DescribeMNPMAUDataDetailCallable(const DescribeMNPMAUDataDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPMAUDataDetailOutcome>>();
+    DescribeMNPMAUDataDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPMAUDataDetailRequest&,
+        DescribeMNPMAUDataDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPMAULineChartOutcome TcsasClient::DescribeMNPMAULineChart(const DescribeMNPMAULineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPMAULineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPMAULineChartResponse rsp = DescribeMNPMAULineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPMAULineChartOutcome(rsp);
+        else
+            return DescribeMNPMAULineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPMAULineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPMAULineChartAsync(const DescribeMNPMAULineChartRequest& request, const DescribeMNPMAULineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPMAULineChartRequest&;
+    using Resp = DescribeMNPMAULineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPMAULineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPMAULineChartOutcomeCallable TcsasClient::DescribeMNPMAULineChartCallable(const DescribeMNPMAULineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPMAULineChartOutcome>>();
+    DescribeMNPMAULineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPMAULineChartRequest&,
+        DescribeMNPMAULineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPMAUMetricCardOutcome TcsasClient::DescribeMNPMAUMetricCard(const DescribeMNPMAUMetricCardRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPMAUMetricCard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPMAUMetricCardResponse rsp = DescribeMNPMAUMetricCardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPMAUMetricCardOutcome(rsp);
+        else
+            return DescribeMNPMAUMetricCardOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPMAUMetricCardOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPMAUMetricCardAsync(const DescribeMNPMAUMetricCardRequest& request, const DescribeMNPMAUMetricCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPMAUMetricCardRequest&;
+    using Resp = DescribeMNPMAUMetricCardResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPMAUMetricCard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPMAUMetricCardOutcomeCallable TcsasClient::DescribeMNPMAUMetricCardCallable(const DescribeMNPMAUMetricCardRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPMAUMetricCardOutcome>>();
+    DescribeMNPMAUMetricCardAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPMAUMetricCardRequest&,
+        DescribeMNPMAUMetricCardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNPOfflinePackageURLOutcome TcsasClient::DescribeMNPOfflinePackageURL(const DescribeMNPOfflinePackageURLRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPOfflinePackageURL");
@@ -1632,6 +3082,56 @@ TcsasClient::DescribeMNPOfflinePackageURLOutcomeCallable TcsasClient::DescribeMN
         const TcsasClient*,
         const DescribeMNPOfflinePackageURLRequest&,
         DescribeMNPOfflinePackageURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPPageAnalysisDetailOutcome TcsasClient::DescribeMNPPageAnalysisDetail(const DescribeMNPPageAnalysisDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPPageAnalysisDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPPageAnalysisDetailResponse rsp = DescribeMNPPageAnalysisDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPPageAnalysisDetailOutcome(rsp);
+        else
+            return DescribeMNPPageAnalysisDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPPageAnalysisDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPPageAnalysisDetailAsync(const DescribeMNPPageAnalysisDetailRequest& request, const DescribeMNPPageAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPPageAnalysisDetailRequest&;
+    using Resp = DescribeMNPPageAnalysisDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPPageAnalysisDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPPageAnalysisDetailOutcomeCallable TcsasClient::DescribeMNPPageAnalysisDetailCallable(const DescribeMNPPageAnalysisDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPPageAnalysisDetailOutcome>>();
+    DescribeMNPPageAnalysisDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPPageAnalysisDetailRequest&,
+        DescribeMNPPageAnalysisDetailOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1732,6 +3232,156 @@ TcsasClient::DescribeMNPReleasedVersionHistoryOutcomeCallable TcsasClient::Descr
         const TcsasClient*,
         const DescribeMNPReleasedVersionHistoryRequest&,
         DescribeMNPReleasedVersionHistoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPReportDataLineChartOutcome TcsasClient::DescribeMNPReportDataLineChart(const DescribeMNPReportDataLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPReportDataLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPReportDataLineChartResponse rsp = DescribeMNPReportDataLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPReportDataLineChartOutcome(rsp);
+        else
+            return DescribeMNPReportDataLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPReportDataLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPReportDataLineChartAsync(const DescribeMNPReportDataLineChartRequest& request, const DescribeMNPReportDataLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPReportDataLineChartRequest&;
+    using Resp = DescribeMNPReportDataLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPReportDataLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPReportDataLineChartOutcomeCallable TcsasClient::DescribeMNPReportDataLineChartCallable(const DescribeMNPReportDataLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPReportDataLineChartOutcome>>();
+    DescribeMNPReportDataLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPReportDataLineChartRequest&,
+        DescribeMNPReportDataLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPReportDetailOutcome TcsasClient::DescribeMNPReportDetail(const DescribeMNPReportDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPReportDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPReportDetailResponse rsp = DescribeMNPReportDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPReportDetailOutcome(rsp);
+        else
+            return DescribeMNPReportDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPReportDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPReportDetailAsync(const DescribeMNPReportDetailRequest& request, const DescribeMNPReportDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPReportDetailRequest&;
+    using Resp = DescribeMNPReportDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPReportDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPReportDetailOutcomeCallable TcsasClient::DescribeMNPReportDetailCallable(const DescribeMNPReportDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPReportDetailOutcome>>();
+    DescribeMNPReportDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPReportDetailRequest&,
+        DescribeMNPReportDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPRetentionDataOutcome TcsasClient::DescribeMNPRetentionData(const DescribeMNPRetentionDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPRetentionData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPRetentionDataResponse rsp = DescribeMNPRetentionDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPRetentionDataOutcome(rsp);
+        else
+            return DescribeMNPRetentionDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPRetentionDataOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPRetentionDataAsync(const DescribeMNPRetentionDataRequest& request, const DescribeMNPRetentionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPRetentionDataRequest&;
+    using Resp = DescribeMNPRetentionDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPRetentionData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPRetentionDataOutcomeCallable TcsasClient::DescribeMNPRetentionDataCallable(const DescribeMNPRetentionDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPRetentionDataOutcome>>();
+    DescribeMNPRetentionDataAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPRetentionDataRequest&,
+        DescribeMNPRetentionDataOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1932,6 +3582,156 @@ TcsasClient::DescribeMNPVersionOutcomeCallable TcsasClient::DescribeMNPVersionCa
         const TcsasClient*,
         const DescribeMNPVersionRequest&,
         DescribeMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribePaymentDataDetailOutcome TcsasClient::DescribePaymentDataDetail(const DescribePaymentDataDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePaymentDataDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePaymentDataDetailResponse rsp = DescribePaymentDataDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePaymentDataDetailOutcome(rsp);
+        else
+            return DescribePaymentDataDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePaymentDataDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribePaymentDataDetailAsync(const DescribePaymentDataDetailRequest& request, const DescribePaymentDataDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePaymentDataDetailRequest&;
+    using Resp = DescribePaymentDataDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePaymentDataDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribePaymentDataDetailOutcomeCallable TcsasClient::DescribePaymentDataDetailCallable(const DescribePaymentDataDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePaymentDataDetailOutcome>>();
+    DescribePaymentDataDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribePaymentDataDetailRequest&,
+        DescribePaymentDataDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribePaymentDataLineChartOutcome TcsasClient::DescribePaymentDataLineChart(const DescribePaymentDataLineChartRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePaymentDataLineChart");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePaymentDataLineChartResponse rsp = DescribePaymentDataLineChartResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePaymentDataLineChartOutcome(rsp);
+        else
+            return DescribePaymentDataLineChartOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePaymentDataLineChartOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribePaymentDataLineChartAsync(const DescribePaymentDataLineChartRequest& request, const DescribePaymentDataLineChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePaymentDataLineChartRequest&;
+    using Resp = DescribePaymentDataLineChartResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePaymentDataLineChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribePaymentDataLineChartOutcomeCallable TcsasClient::DescribePaymentDataLineChartCallable(const DescribePaymentDataLineChartRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePaymentDataLineChartOutcome>>();
+    DescribePaymentDataLineChartAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribePaymentDataLineChartRequest&,
+        DescribePaymentDataLineChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribePaymentDataOverviewOutcome TcsasClient::DescribePaymentDataOverview(const DescribePaymentDataOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePaymentDataOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePaymentDataOverviewResponse rsp = DescribePaymentDataOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePaymentDataOverviewOutcome(rsp);
+        else
+            return DescribePaymentDataOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePaymentDataOverviewOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribePaymentDataOverviewAsync(const DescribePaymentDataOverviewRequest& request, const DescribePaymentDataOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePaymentDataOverviewRequest&;
+    using Resp = DescribePaymentDataOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePaymentDataOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribePaymentDataOverviewOutcomeCallable TcsasClient::DescribePaymentDataOverviewCallable(const DescribePaymentDataOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePaymentDataOverviewOutcome>>();
+    DescribePaymentDataOverviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribePaymentDataOverviewRequest&,
+        DescribePaymentDataOverviewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2432,6 +4232,56 @@ TcsasClient::ModifyApplicationOutcomeCallable TcsasClient::ModifyApplicationCall
         const TcsasClient*,
         const ModifyApplicationRequest&,
         ModifyApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ModifyApplicationConfigOutcome TcsasClient::ModifyApplicationConfig(const ModifyApplicationConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyApplicationConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyApplicationConfigResponse rsp = ModifyApplicationConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyApplicationConfigOutcome(rsp);
+        else
+            return ModifyApplicationConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyApplicationConfigOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ModifyApplicationConfigAsync(const ModifyApplicationConfigRequest& request, const ModifyApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyApplicationConfigRequest&;
+    using Resp = ModifyApplicationConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ModifyApplicationConfigOutcomeCallable TcsasClient::ModifyApplicationConfigCallable(const ModifyApplicationConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyApplicationConfigOutcome>>();
+    ModifyApplicationConfigAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyApplicationConfigRequest&,
+        ModifyApplicationConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
