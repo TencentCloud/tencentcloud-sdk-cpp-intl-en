@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audit rule 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleFilters Audit rule 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取A single audit rule.
+                     * @return RuleFilters A single audit rule.
                      * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
-                     * 设置Audit rule 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleFilters Audit rule 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置A single audit rule.
+                     * @param _ruleFilters A single audit rule.
                      * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
@@ -75,8 +71,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Audit rule 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * A single audit rule.
                      */
                     std::vector<RuleFilters> m_ruleFilters;
                     bool m_ruleFiltersHasBeenSet;

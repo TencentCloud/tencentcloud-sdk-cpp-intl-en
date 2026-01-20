@@ -35,6 +35,8 @@
 #include <tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/BalanceRoGroupLoadRequest.h>
 #include <tencentcloud/cdb/v20170320/model/BalanceRoGroupLoadResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CloseAuditServiceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CloseAuditServiceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CloseCDBProxyRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CloseCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CloseCdbProxyAddressRequest.h>
@@ -43,8 +45,12 @@
 #include <tencentcloud/cdb/v20170320/model/CloseWanServiceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAccountsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAccountsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditLogFileRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditLogFileResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditRuleTemplateRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditRuleTemplateResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateBackupRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateBackupResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateCdbProxyRequest.h>
@@ -65,8 +71,16 @@
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateRoInstanceIpRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateRoInstanceIpResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateRotationPasswordRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateRotationPasswordResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteAccountsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteAccountsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditLogFileRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditLogFileResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditPolicyRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditPolicyResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DeleteAuditRuleTemplatesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteBackupRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteBackupResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteParamTemplateRequest.h>
@@ -79,10 +93,20 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeAccountsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditConfigRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditConfigResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditInstanceListRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditInstanceListResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogFilesRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogFilesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditPoliciesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditPoliciesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplateModifyHistoryRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplateModifyHistoryResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplatesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditRulesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditRulesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupConfigRequest.h>
@@ -199,6 +223,12 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPasswordResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPrivilegesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPrivilegesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditConfigRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditConfigResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditRuleTemplatesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditServiceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAuditServiceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAutoRenewFlagRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAutoRenewFlagResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupConfigRequest.h>
@@ -321,6 +351,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BalanceRoGroupLoadResponse> BalanceRoGroupLoadOutcome;
                 typedef std::future<BalanceRoGroupLoadOutcome> BalanceRoGroupLoadOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::BalanceRoGroupLoadRequest&, BalanceRoGroupLoadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BalanceRoGroupLoadAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseAuditServiceResponse> CloseAuditServiceOutcome;
+                typedef std::future<CloseAuditServiceOutcome> CloseAuditServiceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CloseAuditServiceRequest&, CloseAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CloseCDBProxyResponse> CloseCDBProxyOutcome;
                 typedef std::future<CloseCDBProxyOutcome> CloseCDBProxyOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CloseCDBProxyRequest&, CloseCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseCDBProxyAsyncHandler;
@@ -333,9 +366,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountsResponse> CreateAccountsOutcome;
                 typedef std::future<CreateAccountsOutcome> CreateAccountsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateAccountsRequest&, CreateAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAuditLogFileResponse> CreateAuditLogFileOutcome;
+                typedef std::future<CreateAuditLogFileOutcome> CreateAuditLogFileOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateAuditLogFileRequest&, CreateAuditLogFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditLogFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAuditPolicyResponse> CreateAuditPolicyOutcome;
                 typedef std::future<CreateAuditPolicyOutcome> CreateAuditPolicyOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateAuditPolicyRequest&, CreateAuditPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAuditRuleTemplateResponse> CreateAuditRuleTemplateOutcome;
+                typedef std::future<CreateAuditRuleTemplateOutcome> CreateAuditRuleTemplateOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateAuditRuleTemplateRequest&, CreateAuditRuleTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditRuleTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBackupResponse> CreateBackupOutcome;
                 typedef std::future<CreateBackupOutcome> CreateBackupOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateBackupRequest&, CreateBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupAsyncHandler;
@@ -366,9 +405,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRoInstanceIpResponse> CreateRoInstanceIpOutcome;
                 typedef std::future<CreateRoInstanceIpOutcome> CreateRoInstanceIpOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateRoInstanceIpRequest&, CreateRoInstanceIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRoInstanceIpAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRotationPasswordResponse> CreateRotationPasswordOutcome;
+                typedef std::future<CreateRotationPasswordOutcome> CreateRotationPasswordOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateRotationPasswordRequest&, CreateRotationPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRotationPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountsResponse> DeleteAccountsOutcome;
                 typedef std::future<DeleteAccountsOutcome> DeleteAccountsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteAccountsRequest&, DeleteAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAuditLogFileResponse> DeleteAuditLogFileOutcome;
+                typedef std::future<DeleteAuditLogFileOutcome> DeleteAuditLogFileOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DeleteAuditLogFileRequest&, DeleteAuditLogFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditLogFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAuditPolicyResponse> DeleteAuditPolicyOutcome;
+                typedef std::future<DeleteAuditPolicyOutcome> DeleteAuditPolicyOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DeleteAuditPolicyRequest&, DeleteAuditPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAuditRuleTemplatesResponse> DeleteAuditRuleTemplatesOutcome;
+                typedef std::future<DeleteAuditRuleTemplatesOutcome> DeleteAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DeleteAuditRuleTemplatesRequest&, DeleteAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditRuleTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBackupResponse> DeleteBackupOutcome;
                 typedef std::future<DeleteBackupOutcome> DeleteBackupOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteBackupRequest&, DeleteBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBackupAsyncHandler;
@@ -387,12 +438,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditConfigResponse> DescribeAuditConfigOutcome;
+                typedef std::future<DescribeAuditConfigOutcome> DescribeAuditConfigOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditConfigRequest&, DescribeAuditConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditInstanceListResponse> DescribeAuditInstanceListOutcome;
+                typedef std::future<DescribeAuditInstanceListOutcome> DescribeAuditInstanceListOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditInstanceListRequest&, DescribeAuditInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditInstanceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditLogFilesResponse> DescribeAuditLogFilesOutcome;
+                typedef std::future<DescribeAuditLogFilesOutcome> DescribeAuditLogFilesOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditLogFilesRequest&, DescribeAuditLogFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditLogFilesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAuditLogsResponse> DescribeAuditLogsOutcome;
                 typedef std::future<DescribeAuditLogsOutcome> DescribeAuditLogsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAuditLogsRequest&, DescribeAuditLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAuditPoliciesResponse> DescribeAuditPoliciesOutcome;
                 typedef std::future<DescribeAuditPoliciesOutcome> DescribeAuditPoliciesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAuditPoliciesRequest&, DescribeAuditPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditRuleTemplateModifyHistoryResponse> DescribeAuditRuleTemplateModifyHistoryOutcome;
+                typedef std::future<DescribeAuditRuleTemplateModifyHistoryOutcome> DescribeAuditRuleTemplateModifyHistoryOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditRuleTemplateModifyHistoryRequest&, DescribeAuditRuleTemplateModifyHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditRuleTemplateModifyHistoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditRuleTemplatesResponse> DescribeAuditRuleTemplatesOutcome;
+                typedef std::future<DescribeAuditRuleTemplatesOutcome> DescribeAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditRuleTemplatesRequest&, DescribeAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditRuleTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAuditRulesResponse> DescribeAuditRulesOutcome;
                 typedef std::future<DescribeAuditRulesOutcome> DescribeAuditRulesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAuditRulesRequest&, DescribeAuditRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditRulesAsyncHandler;
@@ -567,6 +633,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesOutcome;
                 typedef std::future<ModifyAccountPrivilegesOutcome> ModifyAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAccountPrivilegesRequest&, ModifyAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditConfigResponse> ModifyAuditConfigOutcome;
+                typedef std::future<ModifyAuditConfigOutcome> ModifyAuditConfigOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyAuditConfigRequest&, ModifyAuditConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditRuleTemplatesResponse> ModifyAuditRuleTemplatesOutcome;
+                typedef std::future<ModifyAuditRuleTemplatesOutcome> ModifyAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyAuditRuleTemplatesRequest&, ModifyAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditRuleTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditServiceResponse> ModifyAuditServiceOutcome;
+                typedef std::future<ModifyAuditServiceOutcome> ModifyAuditServiceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyAuditServiceRequest&, ModifyAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAutoRenewFlagResponse> ModifyAutoRenewFlagOutcome;
                 typedef std::future<ModifyAutoRenewFlagOutcome> ModifyAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAutoRenewFlagRequest&, ModifyAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoRenewFlagAsyncHandler;
@@ -760,6 +835,15 @@ namespace TencentCloud
                 BalanceRoGroupLoadOutcomeCallable BalanceRoGroupLoadCallable(const Model::BalanceRoGroupLoadRequest& request);
 
                 /**
+                 *This API is used to disable the audit service for an instance.
+                 * @param req CloseAuditServiceRequest
+                 * @return CloseAuditServiceOutcome
+                 */
+                CloseAuditServiceOutcome CloseAuditService(const Model::CloseAuditServiceRequest &request);
+                void CloseAuditServiceAsync(const Model::CloseAuditServiceRequest& request, const CloseAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseAuditServiceOutcomeCallable CloseAuditServiceCallable(const Model::CloseAuditServiceRequest& request);
+
+                /**
                  *This API is used to disable database proxy.
                  * @param req CloseCDBProxyRequest
                  * @return CloseCDBProxyOutcome
@@ -796,6 +880,15 @@ namespace TencentCloud
                 CreateAccountsOutcomeCallable CreateAccountsCallable(const Model::CreateAccountsRequest& request);
 
                 /**
+                 *This API is used to create an audit log file for a TencentDB instance.
+                 * @param req CreateAuditLogFileRequest
+                 * @return CreateAuditLogFileOutcome
+                 */
+                CreateAuditLogFileOutcome CreateAuditLogFile(const Model::CreateAuditLogFileRequest &request);
+                void CreateAuditLogFileAsync(const Model::CreateAuditLogFileRequest& request, const CreateAuditLogFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAuditLogFileOutcomeCallable CreateAuditLogFileCallable(const Model::CreateAuditLogFileRequest& request);
+
+                /**
                  *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
                  * @param req CreateAuditPolicyRequest
                  * @return CreateAuditPolicyOutcome
@@ -803,6 +896,15 @@ namespace TencentCloud
                 CreateAuditPolicyOutcome CreateAuditPolicy(const Model::CreateAuditPolicyRequest &request);
                 void CreateAuditPolicyAsync(const Model::CreateAuditPolicyRequest& request, const CreateAuditPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAuditPolicyOutcomeCallable CreateAuditPolicyCallable(const Model::CreateAuditPolicyRequest& request);
+
+                /**
+                 *This API is used to create an audit rule template.
+                 * @param req CreateAuditRuleTemplateRequest
+                 * @return CreateAuditRuleTemplateOutcome
+                 */
+                CreateAuditRuleTemplateOutcome CreateAuditRuleTemplate(const Model::CreateAuditRuleTemplateRequest &request);
+                void CreateAuditRuleTemplateAsync(const Model::CreateAuditRuleTemplateRequest& request, const CreateAuditRuleTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAuditRuleTemplateOutcomeCallable CreateAuditRuleTemplateCallable(const Model::CreateAuditRuleTemplateRequest& request);
 
                 /**
                  *This API (CreateBackup) is used to create a TencentDB instance backup.
@@ -914,6 +1016,15 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 CreateRoInstanceIpOutcomeCallable CreateRoInstanceIpCallable(const Model::CreateRoInstanceIpRequest& request);
 
                 /**
+                 *This API is used to enable password rotation.
+                 * @param req CreateRotationPasswordRequest
+                 * @return CreateRotationPasswordOutcome
+                 */
+                CreateRotationPasswordOutcome CreateRotationPassword(const Model::CreateRotationPasswordRequest &request);
+                void CreateRotationPasswordAsync(const Model::CreateRotationPasswordRequest& request, const CreateRotationPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRotationPasswordOutcomeCallable CreateRotationPasswordCallable(const Model::CreateRotationPasswordRequest& request);
+
+                /**
                  *This API (DeleteAccounts) is used to delete TencentDB accounts.
                  * @param req DeleteAccountsRequest
                  * @return DeleteAccountsOutcome
@@ -921,6 +1032,33 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DeleteAccountsOutcome DeleteAccounts(const Model::DeleteAccountsRequest &request);
                 void DeleteAccountsAsync(const Model::DeleteAccountsRequest& request, const DeleteAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAccountsOutcomeCallable DeleteAccountsCallable(const Model::DeleteAccountsRequest& request);
+
+                /**
+                 *This API is used to delete an audit log file of a TencentDB instance.
+                 * @param req DeleteAuditLogFileRequest
+                 * @return DeleteAuditLogFileOutcome
+                 */
+                DeleteAuditLogFileOutcome DeleteAuditLogFile(const Model::DeleteAuditLogFileRequest &request);
+                void DeleteAuditLogFileAsync(const Model::DeleteAuditLogFileRequest& request, const DeleteAuditLogFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAuditLogFileOutcomeCallable DeleteAuditLogFileCallable(const Model::DeleteAuditLogFileRequest& request);
+
+                /**
+                 *This API is used to delete an audit policy.
+                 * @param req DeleteAuditPolicyRequest
+                 * @return DeleteAuditPolicyOutcome
+                 */
+                DeleteAuditPolicyOutcome DeleteAuditPolicy(const Model::DeleteAuditPolicyRequest &request);
+                void DeleteAuditPolicyAsync(const Model::DeleteAuditPolicyRequest& request, const DeleteAuditPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAuditPolicyOutcomeCallable DeleteAuditPolicyCallable(const Model::DeleteAuditPolicyRequest& request);
+
+                /**
+                 *This API is used to delete audit rule templates.
+                 * @param req DeleteAuditRuleTemplatesRequest
+                 * @return DeleteAuditRuleTemplatesOutcome
+                 */
+                DeleteAuditRuleTemplatesOutcome DeleteAuditRuleTemplates(const Model::DeleteAuditRuleTemplatesRequest &request);
+                void DeleteAuditRuleTemplatesAsync(const Model::DeleteAuditRuleTemplatesRequest& request, const DeleteAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAuditRuleTemplatesOutcomeCallable DeleteAuditRuleTemplatesCallable(const Model::DeleteAuditRuleTemplatesRequest& request);
 
                 /**
                  *This API is used to delete a database backup. It can only delete manually initiated backups.
@@ -977,6 +1115,33 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeAsyncRequestInfoOutcomeCallable DescribeAsyncRequestInfoCallable(const Model::DescribeAsyncRequestInfoRequest& request);
 
                 /**
+                 *This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+                 * @param req DescribeAuditConfigRequest
+                 * @return DescribeAuditConfigOutcome
+                 */
+                DescribeAuditConfigOutcome DescribeAuditConfig(const Model::DescribeAuditConfigRequest &request);
+                void DescribeAuditConfigAsync(const Model::DescribeAuditConfigRequest& request, const DescribeAuditConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditConfigOutcomeCallable DescribeAuditConfigCallable(const Model::DescribeAuditConfigRequest& request);
+
+                /**
+                 *This API is used to obtain the list of audit instances.
+                 * @param req DescribeAuditInstanceListRequest
+                 * @return DescribeAuditInstanceListOutcome
+                 */
+                DescribeAuditInstanceListOutcome DescribeAuditInstanceList(const Model::DescribeAuditInstanceListRequest &request);
+                void DescribeAuditInstanceListAsync(const Model::DescribeAuditInstanceListRequest& request, const DescribeAuditInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditInstanceListOutcomeCallable DescribeAuditInstanceListCallable(const Model::DescribeAuditInstanceListRequest& request);
+
+                /**
+                 *This API is used to query the audit log files of a TencentDB instance.
+                 * @param req DescribeAuditLogFilesRequest
+                 * @return DescribeAuditLogFilesOutcome
+                 */
+                DescribeAuditLogFilesOutcome DescribeAuditLogFiles(const Model::DescribeAuditLogFilesRequest &request);
+                void DescribeAuditLogFilesAsync(const Model::DescribeAuditLogFilesRequest& request, const DescribeAuditLogFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditLogFilesOutcomeCallable DescribeAuditLogFilesCallable(const Model::DescribeAuditLogFilesRequest& request);
+
+                /**
                  *This API is used to query a database audit log.
                  * @param req DescribeAuditLogsRequest
                  * @return DescribeAuditLogsOutcome
@@ -993,6 +1158,24 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeAuditPoliciesOutcome DescribeAuditPolicies(const Model::DescribeAuditPoliciesRequest &request);
                 void DescribeAuditPoliciesAsync(const Model::DescribeAuditPoliciesRequest& request, const DescribeAuditPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAuditPoliciesOutcomeCallable DescribeAuditPoliciesCallable(const Model::DescribeAuditPoliciesRequest& request);
+
+                /**
+                 *This API is used to query the change history of rule templates.
+                 * @param req DescribeAuditRuleTemplateModifyHistoryRequest
+                 * @return DescribeAuditRuleTemplateModifyHistoryOutcome
+                 */
+                DescribeAuditRuleTemplateModifyHistoryOutcome DescribeAuditRuleTemplateModifyHistory(const Model::DescribeAuditRuleTemplateModifyHistoryRequest &request);
+                void DescribeAuditRuleTemplateModifyHistoryAsync(const Model::DescribeAuditRuleTemplateModifyHistoryRequest& request, const DescribeAuditRuleTemplateModifyHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditRuleTemplateModifyHistoryOutcomeCallable DescribeAuditRuleTemplateModifyHistoryCallable(const Model::DescribeAuditRuleTemplateModifyHistoryRequest& request);
+
+                /**
+                 *This API is used to query the information of audit rule templates.
+                 * @param req DescribeAuditRuleTemplatesRequest
+                 * @return DescribeAuditRuleTemplatesOutcome
+                 */
+                DescribeAuditRuleTemplatesOutcome DescribeAuditRuleTemplates(const Model::DescribeAuditRuleTemplatesRequest &request);
+                void DescribeAuditRuleTemplatesAsync(const Model::DescribeAuditRuleTemplatesRequest& request, const DescribeAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditRuleTemplatesOutcomeCallable DescribeAuditRuleTemplatesCallable(const Model::DescribeAuditRuleTemplatesRequest& request);
 
                 /**
                  *This API is used to query the audit rules in the current region.
@@ -1523,6 +1706,33 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyAccountPrivilegesOutcome ModifyAccountPrivileges(const Model::ModifyAccountPrivilegesRequest &request);
                 void ModifyAccountPrivilegesAsync(const Model::ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAccountPrivilegesOutcomeCallable ModifyAccountPrivilegesCallable(const Model::ModifyAccountPrivilegesRequest& request);
+
+                /**
+                 *This API is used to modify the service configurations for a TencentDB audit policy, including the audit log retention period.
+                 * @param req ModifyAuditConfigRequest
+                 * @return ModifyAuditConfigOutcome
+                 */
+                ModifyAuditConfigOutcome ModifyAuditConfig(const Model::ModifyAuditConfigRequest &request);
+                void ModifyAuditConfigAsync(const Model::ModifyAuditConfigRequest& request, const ModifyAuditConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditConfigOutcomeCallable ModifyAuditConfigCallable(const Model::ModifyAuditConfigRequest& request);
+
+                /**
+                 *This API is used to modify audit rule templates.
+                 * @param req ModifyAuditRuleTemplatesRequest
+                 * @return ModifyAuditRuleTemplatesOutcome
+                 */
+                ModifyAuditRuleTemplatesOutcome ModifyAuditRuleTemplates(const Model::ModifyAuditRuleTemplatesRequest &request);
+                void ModifyAuditRuleTemplatesAsync(const Model::ModifyAuditRuleTemplatesRequest& request, const ModifyAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditRuleTemplatesOutcomeCallable ModifyAuditRuleTemplatesCallable(const Model::ModifyAuditRuleTemplatesRequest& request);
+
+                /**
+                 *This API is used to modify the service configurations for a TencentDB instance, including the audit log retention period and the audit rules.
+                 * @param req ModifyAuditServiceRequest
+                 * @return ModifyAuditServiceOutcome
+                 */
+                ModifyAuditServiceOutcome ModifyAuditService(const Model::ModifyAuditServiceRequest &request);
+                void ModifyAuditServiceAsync(const Model::ModifyAuditServiceRequest& request, const ModifyAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditServiceOutcomeCallable ModifyAuditServiceCallable(const Model::ModifyAuditServiceRequest& request);
 
                 /**
                  *This API is used to modify the auto-renewal flag of a TencentDB instance.

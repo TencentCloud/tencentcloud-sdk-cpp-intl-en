@@ -334,10 +334,12 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     /**
                      * 获取BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
                      * @return SdkVersion BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
                      * 
@@ -347,10 +349,12 @@ Please contact us to access enhance version & plus version.
                     /**
                      * 设置BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
                      * @param _sdkVersion BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
                      * 
@@ -534,6 +538,7 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
                     /**
                      * BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
                      */

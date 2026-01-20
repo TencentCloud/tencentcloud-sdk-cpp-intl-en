@@ -316,6 +316,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CardCountHasBeenSet() const;
 
+                    /**
+                     * 获取complete or not
+                     * @return IsComplete complete or not
+                     * 
+                     */
+                    bool GetIsComplete() const;
+
+                    /**
+                     * 判断参数 IsComplete 是否已赋值
+                     * @return IsComplete 是否已赋值
+                     * 
+                     */
+                    bool IsCompleteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -435,6 +449,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_cardCount;
                     bool m_cardCountHasBeenSet;
+
+                    /**
+                     * complete or not
+                     */
+                    bool m_isComplete;
+                    bool m_isCompleteHasBeenSet;
 
                 };
             }

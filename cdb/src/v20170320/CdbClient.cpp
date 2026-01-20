@@ -340,6 +340,56 @@ CdbClient::BalanceRoGroupLoadOutcomeCallable CdbClient::BalanceRoGroupLoadCallab
     return prom->get_future();
 }
 
+CdbClient::CloseAuditServiceOutcome CdbClient::CloseAuditService(const CloseAuditServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloseAuditService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloseAuditServiceResponse rsp = CloseAuditServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloseAuditServiceOutcome(rsp);
+        else
+            return CloseAuditServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return CloseAuditServiceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CloseAuditServiceAsync(const CloseAuditServiceRequest& request, const CloseAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CloseAuditServiceRequest&;
+    using Resp = CloseAuditServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CloseAuditService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::CloseAuditServiceOutcomeCallable CdbClient::CloseAuditServiceCallable(const CloseAuditServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CloseAuditServiceOutcome>>();
+    CloseAuditServiceAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const CloseAuditServiceRequest&,
+        CloseAuditServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::CloseCDBProxyOutcome CdbClient::CloseCDBProxy(const CloseCDBProxyRequest &request)
 {
     auto outcome = MakeRequest(request, "CloseCDBProxy");
@@ -540,6 +590,56 @@ CdbClient::CreateAccountsOutcomeCallable CdbClient::CreateAccountsCallable(const
     return prom->get_future();
 }
 
+CdbClient::CreateAuditLogFileOutcome CdbClient::CreateAuditLogFile(const CreateAuditLogFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAuditLogFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAuditLogFileResponse rsp = CreateAuditLogFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAuditLogFileOutcome(rsp);
+        else
+            return CreateAuditLogFileOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAuditLogFileOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateAuditLogFileAsync(const CreateAuditLogFileRequest& request, const CreateAuditLogFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAuditLogFileRequest&;
+    using Resp = CreateAuditLogFileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAuditLogFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::CreateAuditLogFileOutcomeCallable CdbClient::CreateAuditLogFileCallable(const CreateAuditLogFileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAuditLogFileOutcome>>();
+    CreateAuditLogFileAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const CreateAuditLogFileRequest&,
+        CreateAuditLogFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::CreateAuditPolicyOutcome CdbClient::CreateAuditPolicy(const CreateAuditPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAuditPolicy");
@@ -582,6 +682,56 @@ CdbClient::CreateAuditPolicyOutcomeCallable CdbClient::CreateAuditPolicyCallable
         const CdbClient*,
         const CreateAuditPolicyRequest&,
         CreateAuditPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::CreateAuditRuleTemplateOutcome CdbClient::CreateAuditRuleTemplate(const CreateAuditRuleTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAuditRuleTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAuditRuleTemplateResponse rsp = CreateAuditRuleTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAuditRuleTemplateOutcome(rsp);
+        else
+            return CreateAuditRuleTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAuditRuleTemplateOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateAuditRuleTemplateAsync(const CreateAuditRuleTemplateRequest& request, const CreateAuditRuleTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAuditRuleTemplateRequest&;
+    using Resp = CreateAuditRuleTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAuditRuleTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::CreateAuditRuleTemplateOutcomeCallable CdbClient::CreateAuditRuleTemplateCallable(const CreateAuditRuleTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAuditRuleTemplateOutcome>>();
+    CreateAuditRuleTemplateAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const CreateAuditRuleTemplateRequest&,
+        CreateAuditRuleTemplateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1090,6 +1240,56 @@ CdbClient::CreateRoInstanceIpOutcomeCallable CdbClient::CreateRoInstanceIpCallab
     return prom->get_future();
 }
 
+CdbClient::CreateRotationPasswordOutcome CdbClient::CreateRotationPassword(const CreateRotationPasswordRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRotationPassword");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRotationPasswordResponse rsp = CreateRotationPasswordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRotationPasswordOutcome(rsp);
+        else
+            return CreateRotationPasswordOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRotationPasswordOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateRotationPasswordAsync(const CreateRotationPasswordRequest& request, const CreateRotationPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRotationPasswordRequest&;
+    using Resp = CreateRotationPasswordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRotationPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::CreateRotationPasswordOutcomeCallable CdbClient::CreateRotationPasswordCallable(const CreateRotationPasswordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRotationPasswordOutcome>>();
+    CreateRotationPasswordAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const CreateRotationPasswordRequest&,
+        CreateRotationPasswordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DeleteAccountsOutcome CdbClient::DeleteAccounts(const DeleteAccountsRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAccounts");
@@ -1132,6 +1332,156 @@ CdbClient::DeleteAccountsOutcomeCallable CdbClient::DeleteAccountsCallable(const
         const CdbClient*,
         const DeleteAccountsRequest&,
         DeleteAccountsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DeleteAuditLogFileOutcome CdbClient::DeleteAuditLogFile(const DeleteAuditLogFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAuditLogFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAuditLogFileResponse rsp = DeleteAuditLogFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAuditLogFileOutcome(rsp);
+        else
+            return DeleteAuditLogFileOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAuditLogFileOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DeleteAuditLogFileAsync(const DeleteAuditLogFileRequest& request, const DeleteAuditLogFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAuditLogFileRequest&;
+    using Resp = DeleteAuditLogFileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAuditLogFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DeleteAuditLogFileOutcomeCallable CdbClient::DeleteAuditLogFileCallable(const DeleteAuditLogFileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAuditLogFileOutcome>>();
+    DeleteAuditLogFileAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DeleteAuditLogFileRequest&,
+        DeleteAuditLogFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DeleteAuditPolicyOutcome CdbClient::DeleteAuditPolicy(const DeleteAuditPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAuditPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAuditPolicyResponse rsp = DeleteAuditPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAuditPolicyOutcome(rsp);
+        else
+            return DeleteAuditPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAuditPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DeleteAuditPolicyAsync(const DeleteAuditPolicyRequest& request, const DeleteAuditPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAuditPolicyRequest&;
+    using Resp = DeleteAuditPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAuditPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DeleteAuditPolicyOutcomeCallable CdbClient::DeleteAuditPolicyCallable(const DeleteAuditPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAuditPolicyOutcome>>();
+    DeleteAuditPolicyAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DeleteAuditPolicyRequest&,
+        DeleteAuditPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DeleteAuditRuleTemplatesOutcome CdbClient::DeleteAuditRuleTemplates(const DeleteAuditRuleTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAuditRuleTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAuditRuleTemplatesResponse rsp = DeleteAuditRuleTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAuditRuleTemplatesOutcome(rsp);
+        else
+            return DeleteAuditRuleTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAuditRuleTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DeleteAuditRuleTemplatesAsync(const DeleteAuditRuleTemplatesRequest& request, const DeleteAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAuditRuleTemplatesRequest&;
+    using Resp = DeleteAuditRuleTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAuditRuleTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DeleteAuditRuleTemplatesOutcomeCallable CdbClient::DeleteAuditRuleTemplatesCallable(const DeleteAuditRuleTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAuditRuleTemplatesOutcome>>();
+    DeleteAuditRuleTemplatesAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DeleteAuditRuleTemplatesRequest&,
+        DeleteAuditRuleTemplatesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1440,6 +1790,156 @@ CdbClient::DescribeAsyncRequestInfoOutcomeCallable CdbClient::DescribeAsyncReque
     return prom->get_future();
 }
 
+CdbClient::DescribeAuditConfigOutcome CdbClient::DescribeAuditConfig(const DescribeAuditConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditConfigResponse rsp = DescribeAuditConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditConfigOutcome(rsp);
+        else
+            return DescribeAuditConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditConfigOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditConfigAsync(const DescribeAuditConfigRequest& request, const DescribeAuditConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditConfigRequest&;
+    using Resp = DescribeAuditConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeAuditConfigOutcomeCallable CdbClient::DescribeAuditConfigCallable(const DescribeAuditConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditConfigOutcome>>();
+    DescribeAuditConfigAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeAuditConfigRequest&,
+        DescribeAuditConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeAuditInstanceListOutcome CdbClient::DescribeAuditInstanceList(const DescribeAuditInstanceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditInstanceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditInstanceListResponse rsp = DescribeAuditInstanceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditInstanceListOutcome(rsp);
+        else
+            return DescribeAuditInstanceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditInstanceListOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditInstanceListAsync(const DescribeAuditInstanceListRequest& request, const DescribeAuditInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditInstanceListRequest&;
+    using Resp = DescribeAuditInstanceListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditInstanceList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeAuditInstanceListOutcomeCallable CdbClient::DescribeAuditInstanceListCallable(const DescribeAuditInstanceListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditInstanceListOutcome>>();
+    DescribeAuditInstanceListAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeAuditInstanceListRequest&,
+        DescribeAuditInstanceListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeAuditLogFilesOutcome CdbClient::DescribeAuditLogFiles(const DescribeAuditLogFilesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditLogFiles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditLogFilesResponse rsp = DescribeAuditLogFilesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditLogFilesOutcome(rsp);
+        else
+            return DescribeAuditLogFilesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditLogFilesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditLogFilesAsync(const DescribeAuditLogFilesRequest& request, const DescribeAuditLogFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditLogFilesRequest&;
+    using Resp = DescribeAuditLogFilesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditLogFiles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeAuditLogFilesOutcomeCallable CdbClient::DescribeAuditLogFilesCallable(const DescribeAuditLogFilesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditLogFilesOutcome>>();
+    DescribeAuditLogFilesAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeAuditLogFilesRequest&,
+        DescribeAuditLogFilesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DescribeAuditLogsOutcome CdbClient::DescribeAuditLogs(const DescribeAuditLogsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAuditLogs");
@@ -1532,6 +2032,106 @@ CdbClient::DescribeAuditPoliciesOutcomeCallable CdbClient::DescribeAuditPolicies
         const CdbClient*,
         const DescribeAuditPoliciesRequest&,
         DescribeAuditPoliciesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeAuditRuleTemplateModifyHistoryOutcome CdbClient::DescribeAuditRuleTemplateModifyHistory(const DescribeAuditRuleTemplateModifyHistoryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditRuleTemplateModifyHistory");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditRuleTemplateModifyHistoryResponse rsp = DescribeAuditRuleTemplateModifyHistoryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditRuleTemplateModifyHistoryOutcome(rsp);
+        else
+            return DescribeAuditRuleTemplateModifyHistoryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditRuleTemplateModifyHistoryOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditRuleTemplateModifyHistoryAsync(const DescribeAuditRuleTemplateModifyHistoryRequest& request, const DescribeAuditRuleTemplateModifyHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditRuleTemplateModifyHistoryRequest&;
+    using Resp = DescribeAuditRuleTemplateModifyHistoryResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditRuleTemplateModifyHistory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeAuditRuleTemplateModifyHistoryOutcomeCallable CdbClient::DescribeAuditRuleTemplateModifyHistoryCallable(const DescribeAuditRuleTemplateModifyHistoryRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditRuleTemplateModifyHistoryOutcome>>();
+    DescribeAuditRuleTemplateModifyHistoryAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeAuditRuleTemplateModifyHistoryRequest&,
+        DescribeAuditRuleTemplateModifyHistoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeAuditRuleTemplatesOutcome CdbClient::DescribeAuditRuleTemplates(const DescribeAuditRuleTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditRuleTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditRuleTemplatesResponse rsp = DescribeAuditRuleTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditRuleTemplatesOutcome(rsp);
+        else
+            return DescribeAuditRuleTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditRuleTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditRuleTemplatesAsync(const DescribeAuditRuleTemplatesRequest& request, const DescribeAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditRuleTemplatesRequest&;
+    using Resp = DescribeAuditRuleTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditRuleTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeAuditRuleTemplatesOutcomeCallable CdbClient::DescribeAuditRuleTemplatesCallable(const DescribeAuditRuleTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditRuleTemplatesOutcome>>();
+    DescribeAuditRuleTemplatesAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeAuditRuleTemplatesRequest&,
+        DescribeAuditRuleTemplatesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4432,6 +5032,156 @@ CdbClient::ModifyAccountPrivilegesOutcomeCallable CdbClient::ModifyAccountPrivil
         const CdbClient*,
         const ModifyAccountPrivilegesRequest&,
         ModifyAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::ModifyAuditConfigOutcome CdbClient::ModifyAuditConfig(const ModifyAuditConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAuditConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAuditConfigResponse rsp = ModifyAuditConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAuditConfigOutcome(rsp);
+        else
+            return ModifyAuditConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAuditConfigOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyAuditConfigAsync(const ModifyAuditConfigRequest& request, const ModifyAuditConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyAuditConfigRequest&;
+    using Resp = ModifyAuditConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyAuditConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyAuditConfigOutcomeCallable CdbClient::ModifyAuditConfigCallable(const ModifyAuditConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyAuditConfigOutcome>>();
+    ModifyAuditConfigAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyAuditConfigRequest&,
+        ModifyAuditConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::ModifyAuditRuleTemplatesOutcome CdbClient::ModifyAuditRuleTemplates(const ModifyAuditRuleTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAuditRuleTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAuditRuleTemplatesResponse rsp = ModifyAuditRuleTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAuditRuleTemplatesOutcome(rsp);
+        else
+            return ModifyAuditRuleTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAuditRuleTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyAuditRuleTemplatesAsync(const ModifyAuditRuleTemplatesRequest& request, const ModifyAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyAuditRuleTemplatesRequest&;
+    using Resp = ModifyAuditRuleTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyAuditRuleTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyAuditRuleTemplatesOutcomeCallable CdbClient::ModifyAuditRuleTemplatesCallable(const ModifyAuditRuleTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyAuditRuleTemplatesOutcome>>();
+    ModifyAuditRuleTemplatesAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyAuditRuleTemplatesRequest&,
+        ModifyAuditRuleTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::ModifyAuditServiceOutcome CdbClient::ModifyAuditService(const ModifyAuditServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAuditService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAuditServiceResponse rsp = ModifyAuditServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAuditServiceOutcome(rsp);
+        else
+            return ModifyAuditServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAuditServiceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyAuditServiceAsync(const ModifyAuditServiceRequest& request, const ModifyAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyAuditServiceRequest&;
+    using Resp = ModifyAuditServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyAuditService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyAuditServiceOutcomeCallable CdbClient::ModifyAuditServiceCallable(const ModifyAuditServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyAuditServiceOutcome>>();
+    ModifyAuditServiceAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyAuditServiceRequest&,
+        ModifyAuditServiceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

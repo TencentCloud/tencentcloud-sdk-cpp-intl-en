@@ -1,0 +1,216 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_MODIFYAUDITSERVICEREQUEST_H_
+#define TENCENTCLOUD_CDB_V20170320_MODEL_MODIFYAUDITSERVICEREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/AuditRuleFilters.h>
+
+
+namespace TencentCloud
+{
+    namespace Cdb
+    {
+        namespace V20170320
+        {
+            namespace Model
+            {
+                /**
+                * ModifyAuditService request structure.
+                */
+                class ModifyAuditServiceRequest : public AbstractModel
+                {
+                public:
+                    ModifyAuditServiceRequest();
+                    ~ModifyAuditServiceRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Log retention period. Valid values:7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * @return LogExpireDay Log retention period. Valid values:7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * 
+                     */
+                    uint64_t GetLogExpireDay() const;
+
+                    /**
+                     * 设置Log retention period. Valid values:7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * @param _logExpireDay Log retention period. Valid values:7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * 
+                     */
+                    void SetLogExpireDay(const uint64_t& _logExpireDay);
+
+                    /**
+                     * 判断参数 LogExpireDay 是否已赋值
+                     * @return LogExpireDay 是否已赋值
+                     * 
+                     */
+                    bool LogExpireDayHasBeenSet() const;
+
+                    /**
+                     * 获取High-frequency log retention period. Default value: 7. This value must be less than or equal to LogExpireDay. Valid values include:3 - 3 days;7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * @return HighLogExpireDay High-frequency log retention period. Default value: 7. This value must be less than or equal to LogExpireDay. Valid values include:3 - 3 days;7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * 
+                     */
+                    uint64_t GetHighLogExpireDay() const;
+
+                    /**
+                     * 设置High-frequency log retention period. Default value: 7. This value must be less than or equal to LogExpireDay. Valid values include:3 - 3 days;7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * @param _highLogExpireDay High-frequency log retention period. Default value: 7. This value must be less than or equal to LogExpireDay. Valid values include:3 - 3 days;7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     * 
+                     */
+                    void SetHighLogExpireDay(const uint64_t& _highLogExpireDay);
+
+                    /**
+                     * 判断参数 HighLogExpireDay 是否已赋值
+                     * @return HighLogExpireDay 是否已赋值
+                     * 
+                     */
+                    bool HighLogExpireDayHasBeenSet() const;
+
+                    /**
+                     * 获取Modifies the instance audit rule to Full audit.
+                     * @return AuditAll Modifies the instance audit rule to Full audit.
+                     * 
+                     */
+                    bool GetAuditAll() const;
+
+                    /**
+                     * 设置Modifies the instance audit rule to Full audit.
+                     * @param _auditAll Modifies the instance audit rule to Full audit.
+                     * 
+                     */
+                    void SetAuditAll(const bool& _auditAll);
+
+                    /**
+                     * 判断参数 AuditAll 是否已赋值
+                     * @return AuditAll 是否已赋值
+                     * 
+                     */
+                    bool AuditAllHasBeenSet() const;
+
+                    /**
+                     * 获取Deprecated.
+                     * @return AuditRuleFilters Deprecated.
+                     * @deprecated
+                     */
+                    std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
+
+                    /**
+                     * 设置Deprecated.
+                     * @param _auditRuleFilters Deprecated.
+                     * @deprecated
+                     */
+                    void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
+
+                    /**
+                     * 判断参数 AuditRuleFilters 是否已赋值
+                     * @return AuditRuleFilters 是否已赋值
+                     * @deprecated
+                     */
+                    bool AuditRuleFiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+                     * @return RuleTemplateIds Rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+                     * 
+                     */
+                    std::vector<std::string> GetRuleTemplateIds() const;
+
+                    /**
+                     * 设置Rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+                     * @param _ruleTemplateIds Rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+                     * 
+                     */
+                    void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
+
+                    /**
+                     * 判断参数 RuleTemplateIds 是否已赋值
+                     * @return RuleTemplateIds 是否已赋值
+                     * 
+                     */
+                    bool RuleTemplateIdsHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/236/15872?from_cn_redirect=1) API.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Log retention period. Valid values:7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     */
+                    uint64_t m_logExpireDay;
+                    bool m_logExpireDayHasBeenSet;
+
+                    /**
+                     * High-frequency log retention period. Default value: 7. This value must be less than or equal to LogExpireDay. Valid values include:3 - 3 days;7 - One week;30 - One month;90 - Three months;180 - Six months;365 - One year;1095 - Three years;1825 - Five years.
+                     */
+                    uint64_t m_highLogExpireDay;
+                    bool m_highLogExpireDayHasBeenSet;
+
+                    /**
+                     * Modifies the instance audit rule to Full audit.
+                     */
+                    bool m_auditAll;
+                    bool m_auditAllHasBeenSet;
+
+                    /**
+                     * Deprecated.
+                     */
+                    std::vector<AuditRuleFilters> m_auditRuleFilters;
+                    bool m_auditRuleFiltersHasBeenSet;
+
+                    /**
+                     * Rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API.
+                     */
+                    std::vector<std::string> m_ruleTemplateIds;
+                    bool m_ruleTemplateIdsHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_MODIFYAUDITSERVICEREQUEST_H_
