@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trtc/v20190722/model/ServerPushText.h>
+#include <tencentcloud/trtc/v20190722/model/InvokeLLM.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of the task
-                     * @return TaskId Unique ID of the task
+                     * 获取Task unique identifier.
+                     * @return TaskId Task unique identifier.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Unique ID of the task
-                     * @param _taskId Unique ID of the task
+                     * 设置Task unique identifier.
+                     * @param _taskId Task unique identifier.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -65,19 +66,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
-                     * @return Command Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+                     * 获取Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
+                     * @return Command Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
                      * 
                      */
                     std::string GetCommand() const;
 
                     /**
-                     * 设置Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
-                     * @param _command Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+                     * 设置Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
+                     * @param _command Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
                      * 
                      */
                     void SetCommand(const std::string& _command);
@@ -90,15 +87,15 @@ namespace TencentCloud
                     bool CommandHasBeenSet() const;
 
                     /**
-                     * 获取The server sends a text broadcast command. This is required when Command is ServerPushText.
-                     * @return ServerPushText The server sends a text broadcast command. This is required when Command is ServerPushText.
+                     * 获取Server-Sent broadcast text Command. required when Command is ServerPushText.
+                     * @return ServerPushText Server-Sent broadcast text Command. required when Command is ServerPushText.
                      * 
                      */
                     ServerPushText GetServerPushText() const;
 
                     /**
-                     * 设置The server sends a text broadcast command. This is required when Command is ServerPushText.
-                     * @param _serverPushText The server sends a text broadcast command. This is required when Command is ServerPushText.
+                     * 设置Server-Sent broadcast text Command. required when Command is ServerPushText.
+                     * @param _serverPushText Server-Sent broadcast text Command. required when Command is ServerPushText.
                      * 
                      */
                     void SetServerPushText(const ServerPushText& _serverPushText);
@@ -110,26 +107,52 @@ namespace TencentCloud
                      */
                     bool ServerPushTextHasBeenSet() const;
 
+                    /**
+                     * 获取The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+                     * @return InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+                     * 
+                     */
+                    InvokeLLM GetInvokeLLM() const;
+
+                    /**
+                     * 设置The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+                     * @param _invokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+                     * 
+                     */
+                    void SetInvokeLLM(const InvokeLLM& _invokeLLM);
+
+                    /**
+                     * 判断参数 InvokeLLM 是否已赋值
+                     * @return InvokeLLM 是否已赋值
+                     * 
+                     */
+                    bool InvokeLLMHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Unique ID of the task
+                     * Task unique identifier.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+                     * Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
 
                     /**
-                     * The server sends a text broadcast command. This is required when Command is ServerPushText.
+                     * Server-Sent broadcast text Command. required when Command is ServerPushText.
                      */
                     ServerPushText m_serverPushText;
                     bool m_serverPushTextHasBeenSet;
+
+                    /**
+                     * The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+                     */
+                    InvokeLLM m_invokeLLM;
+                    bool m_invokeLLMHasBeenSet;
 
                 };
             }

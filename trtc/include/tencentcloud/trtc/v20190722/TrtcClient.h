@@ -296,7 +296,7 @@ namespace TencentCloud
 
 
                 /**
-                 *Provides server-side control of AI Conversation
+                 *This API is used to provide service for server-side robot control.
                  * @param req ControlAIConversationRequest
                  * @return ControlAIConversationOutcome
                  */

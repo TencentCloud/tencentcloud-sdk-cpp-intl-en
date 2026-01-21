@@ -25,12 +25,16 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h>
@@ -54,6 +58,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Convert3DFormatResponse> Convert3DFormatOutcome;
                 typedef std::future<Convert3DFormatOutcome> Convert3DFormatOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Convert3DFormatRequest&, Convert3DFormatOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Convert3DFormatAsyncHandler;
+                typedef Outcome<Core::Error, Model::Describe3DSmartTopologyJobResponse> Describe3DSmartTopologyJobOutcome;
+                typedef std::future<Describe3DSmartTopologyJobOutcome> Describe3DSmartTopologyJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::Describe3DSmartTopologyJobRequest&, Describe3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Describe3DSmartTopologyJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryHunyuan3DPartJobResponse> QueryHunyuan3DPartJobOutcome;
                 typedef std::future<QueryHunyuan3DPartJobOutcome> QueryHunyuan3DPartJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuan3DPartJobRequest&, QueryHunyuan3DPartJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuan3DPartJobAsyncHandler;
@@ -63,6 +70,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryHunyuanTo3DRapidJobResponse> QueryHunyuanTo3DRapidJobOutcome;
                 typedef std::future<QueryHunyuanTo3DRapidJobOutcome> QueryHunyuanTo3DRapidJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuanTo3DRapidJobRequest&, QueryHunyuanTo3DRapidJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuanTo3DRapidJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::Submit3DSmartTopologyJobResponse> Submit3DSmartTopologyJobOutcome;
+                typedef std::future<Submit3DSmartTopologyJobOutcome> Submit3DSmartTopologyJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::Submit3DSmartTopologyJobRequest&, Submit3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Submit3DSmartTopologyJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::SubmitHunyuan3DPartJobResponse> SubmitHunyuan3DPartJobOutcome;
                 typedef std::future<SubmitHunyuan3DPartJobOutcome> SubmitHunyuan3DPartJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuan3DPartJobRequest&, SubmitHunyuan3DPartJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuan3DPartJobAsyncHandler;
@@ -83,6 +93,16 @@ namespace TencentCloud
                 Convert3DFormatOutcome Convert3DFormat(const Model::Convert3DFormatRequest &request);
                 void Convert3DFormatAsync(const Model::Convert3DFormatRequest& request, const Convert3DFormatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 Convert3DFormatOutcomeCallable Convert3DFormatCallable(const Model::Convert3DFormatRequest& request);
+
+                /**
+                 *The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+                 * @param req Describe3DSmartTopologyJobRequest
+                 * @return Describe3DSmartTopologyJobOutcome
+                 */
+                Describe3DSmartTopologyJobOutcome Describe3DSmartTopologyJob(const Model::Describe3DSmartTopologyJobRequest &request);
+                void Describe3DSmartTopologyJobAsync(const Model::Describe3DSmartTopologyJobRequest& request, const Describe3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                Describe3DSmartTopologyJobOutcomeCallable Describe3DSmartTopologyJobCallable(const Model::Describe3DSmartTopologyJobRequest& request);
 
                 /**
                  *This API is used to query the generation task of a component.
@@ -112,6 +132,16 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 QueryHunyuanTo3DRapidJobOutcome QueryHunyuanTo3DRapidJob(const Model::QueryHunyuanTo3DRapidJobRequest &request);
                 void QueryHunyuanTo3DRapidJobAsync(const Model::QueryHunyuanTo3DRapidJobRequest& request, const QueryHunyuanTo3DRapidJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryHunyuanTo3DRapidJobOutcomeCallable QueryHunyuanTo3DRapidJobCallable(const Model::QueryHunyuanTo3DRapidJobRequest& request);
+
+                /**
+                 *The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+                 * @param req Submit3DSmartTopologyJobRequest
+                 * @return Submit3DSmartTopologyJobOutcome
+                 */
+                Submit3DSmartTopologyJobOutcome Submit3DSmartTopologyJob(const Model::Submit3DSmartTopologyJobRequest &request);
+                void Submit3DSmartTopologyJobAsync(const Model::Submit3DSmartTopologyJobRequest& request, const Submit3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                Submit3DSmartTopologyJobOutcomeCallable Submit3DSmartTopologyJobCallable(const Model::Submit3DSmartTopologyJobRequest& request);
 
                 /**
                  *This API is used to automatically perform component identification and generation based on the model structure after inputting a 3D model file.
