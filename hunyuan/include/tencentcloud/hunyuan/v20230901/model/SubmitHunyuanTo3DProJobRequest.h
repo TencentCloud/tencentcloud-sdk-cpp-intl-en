@@ -281,15 +281,15 @@ Supported image format: JPG or PNG
                     bool MultiViewImagesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether PBR material generation is enabled. default false.
-                     * @return EnablePBR Specifies whether PBR material generation is enabled. default false.
+                     * 获取Specifies whether PBR material generation is enabled. default false
+                     * @return EnablePBR Specifies whether PBR material generation is enabled. default false
                      * 
                      */
                     bool GetEnablePBR() const;
 
                     /**
-                     * 设置Specifies whether PBR material generation is enabled. default false.
-                     * @param _enablePBR Specifies whether PBR material generation is enabled. default false.
+                     * 设置Specifies whether PBR material generation is enabled. default false
+                     * @param _enablePBR Specifies whether PBR material generation is enabled. default false
                      * 
                      */
                     void SetEnablePBR(const bool& _enablePBR);
@@ -303,18 +303,18 @@ Supported image format: JPG or PNG
 
                     /**
                      * 获取Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
                      * @return FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
                      * 
                      */
                     int64_t GetFaceCount() const;
 
                     /**
                      * 设置Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
                      * @param _faceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
                      * 
                      */
                     void SetFaceCount(const int64_t& _faceCount);
@@ -327,31 +327,31 @@ Specifies the supported face count generation range. value range: 40000-1500000.
                     bool FaceCountHasBeenSet() const;
 
                     /**
-                     * 获取Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+                     * 获取Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
-                     * @return GenerateType Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+                     * @return GenerateType Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
                      * 
                      */
                     std::string GetGenerateType() const;
 
                     /**
-                     * 设置Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+                     * 设置Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
-                     * @param _generateType Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+                     * @param _generateType Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
                      * 
                      */
                     void SetGenerateType(const std::string& _generateType);
@@ -364,31 +364,31 @@ Specifies the Sketch for the generative model, allowing input of a Sketch or lin
                     bool GenerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter only takes effect when LowPoly mode is selected from GenerateType.
+                     * 获取This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
-                     * @return PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
+                     * @return PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
                      * 
                      */
                     std::string GetPolygonType() const;
 
                     /**
-                     * 设置This parameter only takes effect when LowPoly mode is selected from GenerateType.
+                     * 设置This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
-                     * @param _polygonType This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
+                     * @param _polygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
                      * 
                      */
                     void SetPolygonType(const std::string& _polygonType);
@@ -466,34 +466,34 @@ Supported image format: JPG or PNG
                     bool m_multiViewImagesHasBeenSet;
 
                     /**
-                     * Specifies whether PBR material generation is enabled. default false.
+                     * Specifies whether PBR material generation is enabled. default false
                      */
                     bool m_enablePBR;
                     bool m_enablePBRHasBeenSet;
 
                     /**
                      * Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
                      */
                     int64_t m_faceCount;
                     bool m_faceCountHasBeenSet;
 
                     /**
-                     * Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+                     * Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
                      */
                     std::string m_generateType;
                     bool m_generateTypeHasBeenSet;
 
                     /**
-                     * This parameter only takes effect when LowPoly mode is selected from GenerateType.
+                     * This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
                      */
                     std::string m_polygonType;
                     bool m_polygonTypeHasBeenSet;

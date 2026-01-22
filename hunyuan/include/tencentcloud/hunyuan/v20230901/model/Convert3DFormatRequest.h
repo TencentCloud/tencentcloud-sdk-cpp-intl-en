@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
-                     * @return File3D 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+                     * 获取3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+                     * @return File3D 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
                      * 
                      */
                     std::string GetFile3D() const;
 
                     /**
-                     * 设置3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
-                     * @param _file3D 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+                     * 设置3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+                     * @param _file3D 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
                      * 
                      */
                     void SetFile3D(const std::string& _file3D);
@@ -64,22 +68,26 @@ namespace TencentCloud
                     bool File3DHasBeenSet() const;
 
                     /**
-                     * 获取Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+                     * 获取Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
-                     * @return Format Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+                     * @return Format Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+                     * 设置Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
-                     * @param _format Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+                     * @param _format Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
                      * 
                      */
@@ -95,14 +103,16 @@ Example value: STL.
                 private:
 
                     /**
-                     * 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+                     * 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
                      */
                     std::string m_file3D;
                     bool m_file3DHasBeenSet;
 
                     /**
-                     * Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+                     * Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
                      */
                     std::string m_format;

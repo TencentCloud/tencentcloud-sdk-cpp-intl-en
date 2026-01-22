@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
-                     * @return WaterMarkUrl The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * 获取The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
+                     * @return WaterMarkUrl The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
                      * 
                      */
                     std::string GetWaterMarkUrl() const;
 
                     /**
-                     * 设置The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
-                     * @param _waterMarkUrl The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * 设置The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
+                     * @param _waterMarkUrl The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
                      * 
                      */
                     void SetWaterMarkUrl(const std::string& _waterMarkUrl);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
                      */
                     std::string m_waterMarkUrl;
                     bool m_waterMarkUrlHasBeenSet;

@@ -45,8 +45,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
-                     * @return Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+                     * 获取Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
+                     * @return Status Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
                      * 
                      */
                     std::string GetStatus() const;
@@ -59,8 +69,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code.	
-                     * @return ErrorCode Error code.	
+                     * 获取Error code
+                     * @return ErrorCode Error code
                      * 
                      */
                     std::string GetErrorCode() const;
@@ -73,8 +83,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.	
-                     * @return ErrorMessage Error message.	
+                     * 获取Error message
+                     * @return ErrorMessage Error message
                      * 
                      */
                     std::string GetErrorMessage() const;
@@ -87,8 +97,8 @@ namespace TencentCloud
                     bool ErrorMessageHasBeenSet() const;
 
                     /**
-                     * 获取Generates the file URL with a valid period of 1 day.	
-                     * @return ResultFile3Ds Generates the file URL with a valid period of 1 day.	
+                     * 获取Generates the file URL with a valid period of 1 day
+                     * @return ResultFile3Ds Generates the file URL with a valid period of 1 day
                      * 
                      */
                     std::vector<File3D> GetResultFile3Ds() const;
@@ -103,25 +113,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+                     * Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code.	
+                     * Error code
                      */
                     std::string m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * Error message.	
+                     * Error message
                      */
                     std::string m_errorMessage;
                     bool m_errorMessageHasBeenSet;
 
                     /**
-                     * Generates the file URL with a valid period of 1 day.	
+                     * Generates the file URL with a valid period of 1 day
                      */
                     std::vector<File3D> m_resultFile3Ds;
                     bool m_resultFile3DsHasBeenSet;

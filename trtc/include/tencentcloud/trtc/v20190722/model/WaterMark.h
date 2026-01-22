@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The watermark type. 0 (default): image; 1: text (not supported yet).
-                     * @return WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * 获取The watermark type. 0 (default): image; 1: text; 2: timestamp.
+                     * @return WaterMarkType The watermark type. 0 (default): image; 1: text; 2: timestamp.
                      * 
                      */
                     uint64_t GetWaterMarkType() const;
 
                     /**
-                     * 设置The watermark type. 0 (default): image; 1: text (not supported yet).
-                     * @param _waterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * 设置The watermark type. 0 (default): image; 1: text; 2: timestamp.
+                     * @param _waterMarkType The watermark type. 0 (default): image; 1: text; 2: timestamp.
                      * 
                      */
                     void SetWaterMarkType(const uint64_t& _waterMarkType);
@@ -136,7 +136,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * The watermark type. 0 (default): image; 1: text; 2: timestamp.
                      */
                     uint64_t m_waterMarkType;
                     bool m_waterMarkTypeHasBeenSet;

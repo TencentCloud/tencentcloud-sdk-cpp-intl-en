@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
-                     * @return RecordMode The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+                     * 获取Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+                     * @return RecordMode Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
                      * 
                      */
                     uint64_t GetRecordMode() const;
 
                     /**
-                     * 设置The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
-                     * @param _recordMode The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+                     * 设置Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+                     * @param _recordMode Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
                      * 
                      */
                     void SetRecordMode(const uint64_t& _recordMode);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool RecordModeHasBeenSet() const;
 
                     /**
-                     * 获取The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
-                     * @return MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+                     * 获取Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+                     * @return MaxIdleTime Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
                      * 
                      */
                     uint64_t GetMaxIdleTime() const;
 
                     /**
-                     * 设置The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
-                     * @param _maxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+                     * 设置Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+                     * @param _maxIdleTime Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
                      * 
                      */
                     void SetMaxIdleTime(const uint64_t& _maxIdleTime);
@@ -98,27 +98,27 @@ namespace TencentCloud
                     bool MaxIdleTimeHasBeenSet() const;
 
                     /**
-                     * 获取The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
-                     * @return StreamType The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+                     * 获取Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+                     * @return StreamType Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
                      * 
                      */
                     uint64_t GetStreamType() const;
 
                     /**
-                     * 设置The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
-                     * @param _streamType The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+                     * 设置Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+                     * @param _streamType Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
                      * 
                      */
                     void SetStreamType(const uint64_t& _streamType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StreamTypeHasBeenSet() const;
 
                     /**
-                     * 获取The allowlist/blocklist for stream subscription.
-                     * @return SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
+                     * 获取Specifies the allowlist or blocklist for the subscription stream.
+                     * @return SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
                      * 
                      */
                     SubscribeStreamUserIds GetSubscribeStreamUserIds() const;
 
                     /**
-                     * 设置The allowlist/blocklist for stream subscription.
-                     * @param _subscribeStreamUserIds The allowlist/blocklist for stream subscription.
+                     * 设置Specifies the allowlist or blocklist for the subscription stream.
+                     * @param _subscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
                      * 
                      */
                     void SetSubscribeStreamUserIds(const SubscribeStreamUserIds& _subscribeStreamUserIds);
@@ -152,15 +152,23 @@ namespace TencentCloud
                     bool SubscribeStreamUserIdsHasBeenSet() const;
 
                     /**
-                     * 获取The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-                     * @return OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+                     * 获取Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+                     * @return OutputFormat Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
                      * 
                      */
                     uint64_t GetOutputFormat() const;
 
                     /**
-                     * 设置The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-                     * @param _outputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+                     * 设置Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+                     * @param _outputFormat Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
                      * 
                      */
                     void SetOutputFormat(const uint64_t& _outputFormat);
@@ -173,15 +181,15 @@ namespace TencentCloud
                     bool OutputFormatHasBeenSet() const;
 
                     /**
-                     * 获取Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
-                     * @return AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     * 获取In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+                     * @return AvMerge In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
                      * 
                      */
                     uint64_t GetAvMerge() const;
 
                     /**
-                     * 设置Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
-                     * @param _avMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     * 设置In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+                     * @param _avMerge In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
                      * 
                      */
                     void SetAvMerge(const uint64_t& _avMerge);
@@ -194,19 +202,19 @@ namespace TencentCloud
                     bool AvMergeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
-                     * @return MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+                     * 获取If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+                     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
                      * 
                      */
                     uint64_t GetMaxMediaFileDuration() const;
 
                     /**
-                     * 设置The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
-                     * @param _maxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+                     * 设置If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+                     * @param _maxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
                      * 
                      */
                     void SetMaxMediaFileDuration(const uint64_t& _maxMediaFileDuration);
@@ -219,15 +227,15 @@ This parameter is invalid if the output format is HLS.
                     bool MaxMediaFileDurationHasBeenSet() const;
 
                     /**
-                     * 获取The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
-                     * @return MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+                     * 获取Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+                     * @return MediaId Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
                      * 
                      */
                     uint64_t GetMediaId() const;
 
                     /**
-                     * 设置The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
-                     * @param _mediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+                     * 设置Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+                     * @param _mediaId Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
                      * 
                      */
                     void SetMediaId(const uint64_t& _mediaId);
@@ -239,61 +247,152 @@ This parameter is invalid if the output format is HLS.
                      */
                     bool MediaIdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+                     * @return FillType Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+                     * 
+                     */
+                    uint64_t GetFillType() const;
+
+                    /**
+                     * 设置Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+                     * @param _fillType Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+                     * 
+                     */
+                    void SetFillType(const uint64_t& _fillType);
+
+                    /**
+                     * 判断参数 FillType 是否已赋值
+                     * @return FillType 是否已赋值
+                     * 
+                     */
+                    bool FillTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+                     * @return SubscribeAbility Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+                     * 
+                     */
+                    uint64_t GetSubscribeAbility() const;
+
+                    /**
+                     * 设置Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+                     * @param _subscribeAbility Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+                     * 
+                     */
+                    void SetSubscribeAbility(const uint64_t& _subscribeAbility);
+
+                    /**
+                     * 判断参数 SubscribeAbility 是否已赋值
+                     * @return SubscribeAbility 是否已赋值
+                     * 
+                     */
+                    bool SubscribeAbilityHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+                     * Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
                      */
                     uint64_t m_recordMode;
                     bool m_recordModeHasBeenSet;
 
                     /**
-                     * The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+                     * Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
                      */
                     uint64_t m_maxIdleTime;
                     bool m_maxIdleTimeHasBeenSet;
 
                     /**
-                     * The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+                     * Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
                      */
                     uint64_t m_streamType;
                     bool m_streamTypeHasBeenSet;
 
                     /**
-                     * The allowlist/blocklist for stream subscription.
+                     * Specifies the allowlist or blocklist for the subscription stream.
                      */
                     SubscribeStreamUserIds m_subscribeStreamUserIds;
                     bool m_subscribeStreamUserIdsHasBeenSet;
 
                     /**
-                     * The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+                     * Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
                      */
                     uint64_t m_outputFormat;
                     bool m_outputFormatHasBeenSet;
 
                     /**
-                     * Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     * In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
                      */
                     uint64_t m_avMerge;
                     bool m_avMergeHasBeenSet;
 
                     /**
-                     * The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+                     * If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
                      */
                     uint64_t m_maxMediaFileDuration;
                     bool m_maxMediaFileDurationHasBeenSet;
 
                     /**
-                     * The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+                     * Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
                      */
                     uint64_t m_mediaId;
                     bool m_mediaIdHasBeenSet;
+
+                    /**
+                     * Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+                     */
+                    uint64_t m_fillType;
+                    bool m_fillTypeHasBeenSet;
+
+                    /**
+                     * Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+                     */
+                    uint64_t m_subscribeAbility;
+                    bool m_subscribeAbilityHasBeenSet;
 
                 };
             }

@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
-                     * @return Prompt Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+                     * 获取Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
+                     * @return Prompt Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
-                     * @param _prompt Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+                     * 设置Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
+                     * @param _prompt Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -64,15 +72,27 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
-                     * @return ImageBase64 Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+                     * 获取Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
+                     * @return ImageBase64 Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
-                     * @param _imageBase64 Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+                     * 设置Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
+                     * @param _imageBase64 Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -85,15 +105,27 @@ namespace TencentCloud
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
-                     * @return ImageUrl Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+                     * 获取Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
+                     * @return ImageUrl Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
                      * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
-                     * 设置Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
-                     * @param _imageUrl Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+                     * 设置Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
+                     * @param _imageUrl Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
                      * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
@@ -127,15 +159,27 @@ namespace TencentCloud
                     bool EnablePBRHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
-                     * @return EnableGeometry Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+                     * 获取Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
+                     * @return EnableGeometry Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
                      * 
                      */
                     bool GetEnableGeometry() const;
 
                     /**
-                     * 设置Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
-                     * @param _enableGeometry Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+                     * 设置Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
+                     * @param _enableGeometry Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
                      * 
                      */
                     void SetEnableGeometry(const bool& _enableGeometry);
@@ -150,19 +194,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+                     * Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+                     * Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+                     * Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;
@@ -174,7 +226,10 @@ namespace TencentCloud
                     bool m_enablePBRHasBeenSet;
 
                     /**
-                     * Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+                     * Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
                      */
                     bool m_enableGeometry;
                     bool m_enableGeometryHasBeenSet;

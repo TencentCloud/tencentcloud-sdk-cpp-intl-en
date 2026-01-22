@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取3D file address.
-                     * @return ResultFile3D 3D file address.
+                     * 获取3D file address
+                     * @return ResultFile3D 3D file address
                      * 
                      */
                     std::string GetResultFile3D() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 3D file address.
+                     * 3D file address
                      */
                     std::string m_resultFile3D;
                     bool m_resultFile3DHasBeenSet;

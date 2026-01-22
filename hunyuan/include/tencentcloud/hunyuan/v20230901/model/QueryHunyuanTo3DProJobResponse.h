@@ -45,8 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
-                     * @return Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+                     * 获取Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
+                     * @return Status Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
                      * 
                      */
                     std::string GetStatus() const;
@@ -87,8 +93,8 @@ namespace TencentCloud
                     bool ErrorMessageHasBeenSet() const;
 
                     /**
-                     * 获取Describes the generated 3d file array.
-                     * @return ResultFile3Ds Describes the generated 3d file array.
+                     * 获取Describes the generated 3d file array
+                     * @return ResultFile3Ds Describes the generated 3d file array
                      * 
                      */
                     std::vector<File3D> GetResultFile3Ds() const;
@@ -103,7 +109,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+                     * Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -121,7 +130,7 @@ namespace TencentCloud
                     bool m_errorMessageHasBeenSet;
 
                     /**
-                     * Describes the generated 3d file array.
+                     * Describes the generated 3d file array
                      */
                     std::vector<File3D> m_resultFile3Ds;
                     bool m_resultFile3DsHasBeenSet;

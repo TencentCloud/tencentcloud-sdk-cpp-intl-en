@@ -49,11 +49,19 @@ namespace TencentCloud
                     /**
                      * 获取Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
                      * @return Type Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
                      * 
                      */
@@ -62,11 +70,19 @@ SuspectedWatermark: Suspected watermark
                     /**
                      * 设置Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
                      * @param _type Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
                      * 
                      */
@@ -84,7 +100,11 @@ SuspectedWatermark: Suspected watermark
                     /**
                      * Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
                      */
                     std::string m_type;

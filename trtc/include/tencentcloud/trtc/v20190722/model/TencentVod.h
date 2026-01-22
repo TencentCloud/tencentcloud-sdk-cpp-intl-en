@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
-                     * @return Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+                     * 获取Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+                     * @return Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      * 
                      */
                     std::string GetProcedure() const;
 
                     /**
-                     * 设置The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
-                     * @param _procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+                     * 设置Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+                     * @param _procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      * 
                      */
                     void SetProcedure(const std::string& _procedure);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProcedureHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
-                     * @return ExpireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+                     * 获取Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+                     * @return ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
-                     * @param _expireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+                     * 设置Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+                     * @param _expireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取The storage region. Set this parameter if you have special requirements on the storage region.
-                     * @return StorageRegion The storage region. Set this parameter if you have special requirements on the storage region.
+                     * 获取Specify the upload park, applicable only to the user with special requirement for upload region.
+                     * @return StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
                      * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置The storage region. Set this parameter if you have special requirements on the storage region.
-                     * @param _storageRegion The storage region. Set this parameter if you have special requirements on the storage region.
+                     * 设置Specify the upload park, applicable only to the user with special requirement for upload region.
+                     * @param _storageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
                      * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
@@ -110,19 +110,19 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
-                     * @return ClassId The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+                     * 获取Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+                     * @return ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      * 
                      */
                     uint64_t GetClassId() const;
 
                     /**
-                     * 设置The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
-                     * @param _classId The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+                     * 设置Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+                     * @param _classId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      * 
                      */
                     void SetClassId(const uint64_t& _classId);
@@ -135,15 +135,15 @@ The default value is `0`, which means others.
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * @return SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 获取Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+                     * @return SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * @param _subAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 设置Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+                     * @param _subAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -156,15 +156,15 @@ The default value is `0`, which means others.
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The task flow context, which is passed through after the task is completed.
-                     * @return SessionContext The task flow context, which is passed through after the task is completed.
+                     * 获取Task flow context, passed through when task complete.
+                     * @return SessionContext Task flow context, passed through when task complete.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The task flow context, which is passed through after the task is completed.
-                     * @param _sessionContext The task flow context, which is passed through after the task is completed.
+                     * 设置Task flow context, passed through when task complete.
+                     * @param _sessionContext Task flow context, passed through when task complete.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -177,15 +177,15 @@ The default value is `0`, which means others.
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取The upload context, which is passed through after upload is completed.
-                     * @return SourceContext The upload context, which is passed through after upload is completed.
+                     * 获取Upload context, passed through on upload completion callback.
+                     * @return SourceContext Upload context, passed through on upload completion callback.
                      * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
-                     * 设置The upload context, which is passed through after upload is completed.
-                     * @param _sourceContext The upload context, which is passed through after upload is completed.
+                     * 设置Upload context, passed through on upload completion callback.
+                     * @param _sourceContext Upload context, passed through on upload completion callback.
                      * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
@@ -198,15 +198,19 @@ The default value is `0`, which means others.
                     bool SourceContextHasBeenSet() const;
 
                     /**
-                     * 获取The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
-                     * @return MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+                     * 获取The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+                     * @return MediaType The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
                      * 
                      */
                     uint64_t GetMediaType() const;
 
                     /**
-                     * 设置The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
-                     * @param _mediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+                     * 设置The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+                     * @param _mediaType The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
                      * 
                      */
                     void SetMediaType(const uint64_t& _mediaType);
@@ -219,15 +223,15 @@ The default value is `0`, which means others.
                     bool MediaTypeHasBeenSet() const;
 
                     /**
-                     * 获取The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
-                     * @return UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     * 获取Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
+                     * @return UserDefineRecordId Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
                      * 
                      */
                     std::string GetUserDefineRecordId() const;
 
                     /**
-                     * 设置The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
-                     * @param _userDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     * 设置Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
+                     * @param _userDefineRecordId Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
                      * 
                      */
                     void SetUserDefineRecordId(const std::string& _userDefineRecordId);
@@ -242,56 +246,57 @@ The default value is `0`, which means others.
                 private:
 
                     /**
-                     * The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+                     * Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      */
                     std::string m_procedure;
                     bool m_procedureHasBeenSet;
 
                     /**
-                     * The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+                     * Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * The storage region. Set this parameter if you have special requirements on the storage region.
+                     * Specify the upload park, applicable only to the user with special requirement for upload region.
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+                     * Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      */
                     uint64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The task flow context, which is passed through after the task is completed.
+                     * Task flow context, passed through when task complete.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * The upload context, which is passed through after upload is completed.
+                     * Upload context, passed through on upload completion callback.
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;
 
                     /**
-                     * The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+                     * The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
                      */
                     uint64_t m_mediaType;
                     bool m_mediaTypeHasBeenSet;
 
                     /**
-                     * The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     * Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
                      */
                     std::string m_userDefineRecordId;
                     bool m_userDefineRecordIdHasBeenSet;

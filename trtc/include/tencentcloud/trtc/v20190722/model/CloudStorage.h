@@ -72,15 +72,27 @@ namespace TencentCloud
                     bool VendorHasBeenSet() const;
 
                     /**
-                     * 获取The region of cloud storage.
-                     * @return Region The region of cloud storage.
+                     * 获取[Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
+                     * @return Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置The region of cloud storage.
-                     * @param _region The region of cloud storage.
+                     * 设置[Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
+                     * @param _region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -114,15 +126,19 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取The access_key of the cloud storage account.
-                     * @return AccessKey The access_key of the cloud storage account.
+                     * 获取access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
+                     * @return AccessKey access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置The access_key of the cloud storage account.
-                     * @param _accessKey The access_key of the cloud storage account.
+                     * 设置access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
+                     * @param _accessKey access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -135,15 +151,19 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取The secret_key of the cloud storage account.
-                     * @return SecretKey The secret_key of the cloud storage account.
+                     * 获取secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
+                     * @return SecretKey secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置The secret_key of the cloud storage account.
-                     * @param _secretKey The secret_key of the cloud storage account.
+                     * 设置secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
+                     * @param _secretKey secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -156,15 +176,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
-                     * @return FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * 获取The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
+                     * @return FileNamePrefix The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
                      * 
                      */
                     std::vector<std::string> GetFileNamePrefix() const;
 
                     /**
-                     * 设置The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
-                     * @param _fileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * 设置The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
+                     * @param _fileNamePrefix The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
                      * 
                      */
                     void SetFileNamePrefix(const std::vector<std::string>& _fileNamePrefix);
@@ -186,7 +206,10 @@ namespace TencentCloud
                     bool m_vendorHasBeenSet;
 
                     /**
-                     * The region of cloud storage.
+                     * [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+Example value: cn-shanghai-1.
+
+[Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -198,19 +221,21 @@ namespace TencentCloud
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * The access_key of the cloud storage account.
+                     * access_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * The secret_key of the cloud storage account.
+                     * secret_key account information of the cloud storage.
+To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
                      */
                     std::vector<std::string> m_fileNamePrefix;
                     bool m_fileNamePrefixHasBeenSet;
