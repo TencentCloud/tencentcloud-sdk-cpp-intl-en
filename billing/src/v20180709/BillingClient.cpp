@@ -240,6 +240,56 @@ BillingClient::CreateGatherRuleOutcomeCallable BillingClient::CreateGatherRuleCa
     return prom->get_future();
 }
 
+BillingClient::CreateInstanceOutcome BillingClient::CreateInstance(const CreateInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateInstanceResponse rsp = CreateInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateInstanceOutcome(rsp);
+        else
+            return CreateInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateInstanceOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateInstanceAsync(const CreateInstanceRequest& request, const CreateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateInstanceRequest&;
+    using Resp = CreateInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::CreateInstanceOutcomeCallable BillingClient::CreateInstanceCallable(const CreateInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateInstanceOutcome>>();
+    CreateInstanceAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const CreateInstanceRequest&,
+        CreateInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DeleteAllocationRuleOutcome BillingClient::DeleteAllocationRule(const DeleteAllocationRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAllocationRule");

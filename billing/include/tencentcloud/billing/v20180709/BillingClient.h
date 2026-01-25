@@ -31,6 +31,8 @@
 #include <tencentcloud/billing/v20180709/model/CreateAllocationUnitResponse.h>
 #include <tencentcloud/billing/v20180709/model/CreateGatherRuleRequest.h>
 #include <tencentcloud/billing/v20180709/model/CreateGatherRuleResponse.h>
+#include <tencentcloud/billing/v20180709/model/CreateInstanceRequest.h>
+#include <tencentcloud/billing/v20180709/model/CreateInstanceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DeleteAllocationRuleRequest.h>
 #include <tencentcloud/billing/v20180709/model/DeleteAllocationRuleResponse.h>
 #include <tencentcloud/billing/v20180709/model/DeleteAllocationTagRequest.h>
@@ -133,6 +135,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateGatherRuleResponse> CreateGatherRuleOutcome;
                 typedef std::future<CreateGatherRuleOutcome> CreateGatherRuleOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::CreateGatherRuleRequest&, CreateGatherRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGatherRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
+                typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAllocationRuleResponse> DeleteAllocationRuleOutcome;
                 typedef std::future<DeleteAllocationRuleOutcome> DeleteAllocationRuleOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DeleteAllocationRuleRequest&, DeleteAllocationRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAllocationRuleAsyncHandler;
@@ -285,6 +290,16 @@ namespace TencentCloud
                 CreateGatherRuleOutcome CreateGatherRule(const Model::CreateGatherRuleRequest &request);
                 void CreateGatherRuleAsync(const Model::CreateGatherRuleRequest& request, const CreateGatherRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateGatherRuleOutcomeCallable CreateGatherRuleCallable(const Model::CreateGatherRuleRequest& request);
+
+                /**
+                 *Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
+Currently, the integrated and supported product for purchase includes: Cloud Firewall.
+                 * @param req CreateInstanceRequest
+                 * @return CreateInstanceOutcome
+                 */
+                CreateInstanceOutcome CreateInstance(const Model::CreateInstanceRequest &request);
+                void CreateInstanceAsync(const Model::CreateInstanceRequest& request, const CreateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
 
                 /**
                  *Delete sharing rule interface.

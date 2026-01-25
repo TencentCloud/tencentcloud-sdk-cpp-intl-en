@@ -28,6 +28,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DeleteAllocationRuleRequest.h
   include/tencentcloud/billing/v20180709/model/CreateAllocationRuleResponse.h
   include/tencentcloud/billing/v20180709/model/BillTagInfo.h
+  include/tencentcloud/billing/v20180709/model/CreateInstanceResponse.h
   include/tencentcloud/billing/v20180709/model/ConditionBusiness.h
   include/tencentcloud/billing/v20180709/model/AnalyseActionTypeDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeCostExplorerSummaryRequest.h
@@ -106,6 +107,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/ConsumptionProjectSummaryDataItem.h
   include/tencentcloud/billing/v20180709/model/AnalyseRegionDetail.h
   include/tencentcloud/billing/v20180709/model/ProductInfo.h
+  include/tencentcloud/billing/v20180709/model/CreateInstanceRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeAllocationUnitDetailRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h
   include/tencentcloud/billing/v20180709/model/ActionSummaryOverviewItem.h
@@ -179,6 +181,7 @@ set(billing_src
   src/v20180709/model/DeleteAllocationRuleRequest.cpp
   src/v20180709/model/CreateAllocationRuleResponse.cpp
   src/v20180709/model/BillTagInfo.cpp
+  src/v20180709/model/CreateInstanceResponse.cpp
   src/v20180709/model/ConditionBusiness.cpp
   src/v20180709/model/AnalyseActionTypeDetail.cpp
   src/v20180709/model/DescribeCostExplorerSummaryRequest.cpp
@@ -257,6 +260,7 @@ set(billing_src
   src/v20180709/model/ConsumptionProjectSummaryDataItem.cpp
   src/v20180709/model/AnalyseRegionDetail.cpp
   src/v20180709/model/ProductInfo.cpp
+  src/v20180709/model/CreateInstanceRequest.cpp
   src/v20180709/model/DescribeAllocationUnitDetailRequest.cpp
   src/v20180709/model/DescribeBillSummaryForOrganizationRequest.cpp
   src/v20180709/model/ActionSummaryOverviewItem.cpp
