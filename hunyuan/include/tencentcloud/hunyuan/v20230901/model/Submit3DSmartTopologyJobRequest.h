@@ -84,11 +84,11 @@ Url: file size cannot exceed 200MB.
                      * 获取Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
                      * @return PolygonType Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
                      * 
                      */
                     std::string GetPolygonType() const;
@@ -97,11 +97,11 @@ quadrilateral: quadrangle face
                      * 设置Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
                      * @param _polygonType Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
                      * 
                      */
                     void SetPolygonType(const std::string& _polygonType);
@@ -154,7 +154,7 @@ Url: file size cannot exceed 200MB.
                      * Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
                      */
                     std::string m_polygonType;
                     bool m_polygonTypeHasBeenSet;
