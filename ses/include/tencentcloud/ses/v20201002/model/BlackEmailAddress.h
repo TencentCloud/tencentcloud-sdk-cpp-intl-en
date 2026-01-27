@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Email address blocklist structure, including the blocklisted address and the time when it is blocklisted.
+                * Email blocklist structure describes the blocked email address, blocklist time, and reason.
                 */
                 class BlackEmailAddress : public AbstractModel
                 {
@@ -88,6 +88,27 @@ namespace TencentCloud
                      */
                     bool EmailAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Reason for being blacklisted.
+                     * @return IspDesc Reason for being blacklisted.
+                     * 
+                     */
+                    std::string GetIspDesc() const;
+
+                    /**
+                     * 设置Reason for being blacklisted.
+                     * @param _ispDesc Reason for being blacklisted.
+                     * 
+                     */
+                    void SetIspDesc(const std::string& _ispDesc);
+
+                    /**
+                     * 判断参数 IspDesc 是否已赋值
+                     * @return IspDesc 是否已赋值
+                     * 
+                     */
+                    bool IspDescHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +122,12 @@ namespace TencentCloud
                      */
                     std::string m_emailAddress;
                     bool m_emailAddressHasBeenSet;
+
+                    /**
+                     * Reason for being blacklisted.
+                     */
+                    std::string m_ispDesc;
+                    bool m_ispDescHasBeenSet;
 
                 };
             }

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SendDate Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSendDate() const;
 
                     /**
                      * 设置Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _sendDate Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSendDate(const std::string& _sendDate);
@@ -198,19 +194,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BounceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnsubscribeCount Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Number of users for unsubscription.
+                     * @return UnsubscribeCount Number of users for unsubscription.
                      * 
                      */
                     uint64_t GetUnsubscribeCount() const;
 
                     /**
-                     * 设置Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _unsubscribeCount Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Number of users for unsubscription.
+                     * @param _unsubscribeCount Number of users for unsubscription.
                      * 
                      */
                     void SetUnsubscribeCount(const uint64_t& _unsubscribeCount);
@@ -226,7 +218,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_sendDate;
                     bool m_sendDateHasBeenSet;
@@ -268,8 +259,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_bounceCountHasBeenSet;
 
                     /**
-                     * Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Number of users for unsubscription.
                      */
                     uint64_t m_unsubscribeCount;
                     bool m_unsubscribeCountHasBeenSet;

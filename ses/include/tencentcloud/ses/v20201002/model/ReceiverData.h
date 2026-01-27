@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Desc Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Recipient list description.
+                     * @return Desc Recipient list description.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _desc Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Recipient list description.
+                     * @param _desc Recipient list description.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -135,19 +131,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return ReceiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取List status (1 to be uploaded 2 uploading 3 upload complete).
+                     * @return ReceiversStatus List status (1 to be uploaded 2 uploading 3 upload complete).
                      * 
                      */
                     uint64_t GetReceiversStatus() const;
 
                     /**
-                     * 设置Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _receiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置List status (1 to be uploaded 2 uploading 3 upload complete).
+                     * @param _receiversStatus List status (1 to be uploaded 2 uploading 3 upload complete).
                      * 
                      */
                     void SetReceiversStatus(const uint64_t& _receiversStatus);
@@ -180,6 +172,27 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Invalid number of recipients.
+                     * @return InvalidCount Invalid number of recipients.
+                     * 
+                     */
+                    uint64_t GetInvalidCount() const;
+
+                    /**
+                     * 设置Invalid number of recipients.
+                     * @param _invalidCount Invalid number of recipients.
+                     * 
+                     */
+                    void SetInvalidCount(const uint64_t& _invalidCount);
+
+                    /**
+                     * 判断参数 InvalidCount 是否已赋值
+                     * @return InvalidCount 是否已赋值
+                     * 
+                     */
+                    bool InvalidCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -201,15 +214,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_countHasBeenSet;
 
                     /**
-                     * Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Recipient list description.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * List status (1 to be uploaded 2 uploading 3 upload complete).
                      */
                     uint64_t m_receiversStatus;
                     bool m_receiversStatusHasBeenSet;
@@ -219,6 +230,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Invalid number of recipients.
+                     */
+                    uint64_t m_invalidCount;
+                    bool m_invalidCountHasBeenSet;
 
                 };
             }

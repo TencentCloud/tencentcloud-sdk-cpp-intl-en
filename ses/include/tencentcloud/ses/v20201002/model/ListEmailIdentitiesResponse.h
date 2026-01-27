@@ -86,6 +86,20 @@ namespace TencentCloud
                      */
                     bool MaxDailyQuotaHasBeenSet() const;
 
+                    /**
+                     * 获取Total number.
+                     * @return Total Total number.
+                     * 
+                     */
+                    uint64_t GetTotal() const;
+
+                    /**
+                     * 判断参数 Total 是否已赋值
+                     * @return Total 是否已赋值
+                     * 
+                     */
+                    bool TotalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -105,6 +119,12 @@ namespace TencentCloud
                      */
                     uint64_t m_maxDailyQuota;
                     bool m_maxDailyQuotaHasBeenSet;
+
+                    /**
+                     * Total number.
+                     */
+                    uint64_t m_total;
+                    bool m_totalHasBeenSet;
 
                 };
             }

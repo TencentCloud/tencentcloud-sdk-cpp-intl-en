@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details of sender addresses.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EmailSenders Details of sender addresses.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取List of sender addresses description.
+                     * @return EmailSenders List of sender addresses description.
                      * 
                      */
                     std::vector<EmailSender> GetEmailSenders() const;
@@ -63,8 +61,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Details of sender addresses.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * List of sender addresses description.
                      */
                     std::vector<EmailSender> m_emailSenders;
                     bool m_emailSendersHasBeenSet;

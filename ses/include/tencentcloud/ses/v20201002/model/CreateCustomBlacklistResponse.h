@@ -1,0 +1,154 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_SES_V20201002_MODEL_CREATECUSTOMBLACKLISTRESPONSE_H_
+#define TENCENTCLOUD_SES_V20201002_MODEL_CREATECUSTOMBLACKLISTRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Ses
+    {
+        namespace V20201002
+        {
+            namespace Model
+            {
+                /**
+                * CreateCustomBlacklist response structure.
+                */
+                class CreateCustomBlacklistResponse : public AbstractModel
+                {
+                public:
+                    CreateCustomBlacklistResponse();
+                    ~CreateCustomBlacklistResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Total number of recipients.
+                     * @return TotalCount Total number of recipients.
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
+                    /**
+                     * 获取Actual uploaded quantity.
+                     * @return ValidCount Actual uploaded quantity.
+                     * 
+                     */
+                    uint64_t GetValidCount() const;
+
+                    /**
+                     * 判断参数 ValidCount 是否已赋值
+                     * @return ValidCount 是否已赋值
+                     * 
+                     */
+                    bool ValidCountHasBeenSet() const;
+
+                    /**
+                     * 获取Data too long quantity.
+                     * @return TooLongCount Data too long quantity.
+                     * 
+                     */
+                    uint64_t GetTooLongCount() const;
+
+                    /**
+                     * 判断参数 TooLongCount 是否已赋值
+                     * @return TooLongCount 是否已赋值
+                     * 
+                     */
+                    bool TooLongCountHasBeenSet() const;
+
+                    /**
+                     * 获取Repetition count.
+                     * @return RepeatCount Repetition count.
+                     * 
+                     */
+                    uint64_t GetRepeatCount() const;
+
+                    /**
+                     * 判断参数 RepeatCount 是否已赋值
+                     * @return RepeatCount 是否已赋值
+                     * 
+                     */
+                    bool RepeatCountHasBeenSet() const;
+
+                    /**
+                     * 获取Incorrect format count.
+                     * @return InvalidCount Incorrect format count.
+                     * 
+                     */
+                    uint64_t GetInvalidCount() const;
+
+                    /**
+                     * 判断参数 InvalidCount 是否已赋值
+                     * @return InvalidCount 是否已赋值
+                     * 
+                     */
+                    bool InvalidCountHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Total number of recipients.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Actual uploaded quantity.
+                     */
+                    uint64_t m_validCount;
+                    bool m_validCountHasBeenSet;
+
+                    /**
+                     * Data too long quantity.
+                     */
+                    uint64_t m_tooLongCount;
+                    bool m_tooLongCountHasBeenSet;
+
+                    /**
+                     * Repetition count.
+                     */
+                    uint64_t m_repeatCount;
+                    bool m_repeatCountHasBeenSet;
+
+                    /**
+                     * Incorrect format count.
+                     */
+                    uint64_t m_invalidCount;
+                    bool m_invalidCountHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_SES_V20201002_MODEL_CREATECUSTOMBLACKLISTRESPONSE_H_

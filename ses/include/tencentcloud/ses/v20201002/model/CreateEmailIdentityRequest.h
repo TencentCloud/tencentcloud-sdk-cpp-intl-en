@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ses/v20201002/model/TagList.h>
 
 
 namespace TencentCloud
@@ -63,6 +64,48 @@ namespace TencentCloud
                      */
                     bool EmailIdentityHasBeenSet() const;
 
+                    /**
+                     * 获取Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * @return DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * 
+                     */
+                    uint64_t GetDKIMOption() const;
+
+                    /**
+                     * 设置Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * @param _dKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * 
+                     */
+                    void SetDKIMOption(const uint64_t& _dKIMOption);
+
+                    /**
+                     * 判断参数 DKIMOption 是否已赋值
+                     * @return DKIMOption 是否已赋值
+                     * 
+                     */
+                    bool DKIMOptionHasBeenSet() const;
+
+                    /**
+                     * 获取tag.
+                     * @return TagList tag.
+                     * 
+                     */
+                    std::vector<TagList> GetTagList() const;
+
+                    /**
+                     * 设置tag.
+                     * @param _tagList tag.
+                     * 
+                     */
+                    void SetTagList(const std::vector<TagList>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     * 
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +113,18 @@ namespace TencentCloud
                      */
                     std::string m_emailIdentity;
                     bool m_emailIdentityHasBeenSet;
+
+                    /**
+                     * Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     */
+                    uint64_t m_dKIMOption;
+                    bool m_dKIMOptionHasBeenSet;
+
+                    /**
+                     * tag.
+                     */
+                    std::vector<TagList> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }

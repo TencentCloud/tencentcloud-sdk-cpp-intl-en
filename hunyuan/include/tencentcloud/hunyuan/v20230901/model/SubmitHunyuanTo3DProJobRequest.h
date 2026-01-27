@@ -46,11 +46,11 @@ namespace TencentCloud
                     /**
                      * 获取Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
                      * @return Model Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
                      * 
                      */
@@ -59,11 +59,11 @@ Example value:3.0
                     /**
                      * 设置Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
                      * @param _model Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
                      * 
                      */
@@ -405,7 +405,7 @@ quadrilateral: mix quadrangle and triangle faces to generate
                     /**
                      * Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
                      */
                     std::string m_model;

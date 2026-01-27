@@ -27,6 +27,8 @@
 #include <tencentcloud/ses/v20201002/model/BatchSendEmailResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateAddressUnsubscribeConfigRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateAddressUnsubscribeConfigResponse.h>
+#include <tencentcloud/ses/v20201002/model/CreateCustomBlacklistRequest.h>
+#include <tencentcloud/ses/v20201002/model/CreateCustomBlacklistResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailAddressRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailAddressResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailIdentityRequest.h>
@@ -41,6 +43,8 @@
 #include <tencentcloud/ses/v20201002/model/DeleteAddressUnsubscribeConfigResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteBlackListRequest.h>
 #include <tencentcloud/ses/v20201002/model/DeleteBlackListResponse.h>
+#include <tencentcloud/ses/v20201002/model/DeleteCustomBlackListRequest.h>
+#include <tencentcloud/ses/v20201002/model/DeleteCustomBlackListResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteEmailAddressRequest.h>
 #include <tencentcloud/ses/v20201002/model/DeleteEmailAddressResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteEmailIdentityRequest.h>
@@ -61,12 +65,16 @@
 #include <tencentcloud/ses/v20201002/model/ListAddressUnsubscribeConfigResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListBlackEmailAddressRequest.h>
 #include <tencentcloud/ses/v20201002/model/ListBlackEmailAddressResponse.h>
+#include <tencentcloud/ses/v20201002/model/ListCustomBlacklistRequest.h>
+#include <tencentcloud/ses/v20201002/model/ListCustomBlacklistResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailAddressRequest.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailAddressResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailIdentitiesRequest.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailIdentitiesResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailTemplatesRequest.h>
 #include <tencentcloud/ses/v20201002/model/ListEmailTemplatesResponse.h>
+#include <tencentcloud/ses/v20201002/model/ListReceiverDetailsRequest.h>
+#include <tencentcloud/ses/v20201002/model/ListReceiverDetailsResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListReceiversRequest.h>
 #include <tencentcloud/ses/v20201002/model/ListReceiversResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListSendTasksRequest.h>
@@ -75,6 +83,8 @@
 #include <tencentcloud/ses/v20201002/model/SendEmailResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateAddressUnsubscribeConfigRequest.h>
 #include <tencentcloud/ses/v20201002/model/UpdateAddressUnsubscribeConfigResponse.h>
+#include <tencentcloud/ses/v20201002/model/UpdateCustomBlackListRequest.h>
+#include <tencentcloud/ses/v20201002/model/UpdateCustomBlackListResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityRequest.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailSmtpPassWordRequest.h>
@@ -101,6 +111,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAddressUnsubscribeConfigResponse> CreateAddressUnsubscribeConfigOutcome;
                 typedef std::future<CreateAddressUnsubscribeConfigOutcome> CreateAddressUnsubscribeConfigOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateAddressUnsubscribeConfigRequest&, CreateAddressUnsubscribeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAddressUnsubscribeConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCustomBlacklistResponse> CreateCustomBlacklistOutcome;
+                typedef std::future<CreateCustomBlacklistOutcome> CreateCustomBlacklistOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::CreateCustomBlacklistRequest&, CreateCustomBlacklistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomBlacklistAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEmailAddressResponse> CreateEmailAddressOutcome;
                 typedef std::future<CreateEmailAddressOutcome> CreateEmailAddressOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateEmailAddressRequest&, CreateEmailAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmailAddressAsyncHandler;
@@ -122,6 +135,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteBlackListResponse> DeleteBlackListOutcome;
                 typedef std::future<DeleteBlackListOutcome> DeleteBlackListOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::DeleteBlackListRequest&, DeleteBlackListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBlackListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCustomBlackListResponse> DeleteCustomBlackListOutcome;
+                typedef std::future<DeleteCustomBlackListOutcome> DeleteCustomBlackListOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::DeleteCustomBlackListRequest&, DeleteCustomBlackListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomBlackListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteEmailAddressResponse> DeleteEmailAddressOutcome;
                 typedef std::future<DeleteEmailAddressOutcome> DeleteEmailAddressOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::DeleteEmailAddressRequest&, DeleteEmailAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEmailAddressAsyncHandler;
@@ -152,6 +168,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListBlackEmailAddressResponse> ListBlackEmailAddressOutcome;
                 typedef std::future<ListBlackEmailAddressOutcome> ListBlackEmailAddressOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::ListBlackEmailAddressRequest&, ListBlackEmailAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListBlackEmailAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListCustomBlacklistResponse> ListCustomBlacklistOutcome;
+                typedef std::future<ListCustomBlacklistOutcome> ListCustomBlacklistOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::ListCustomBlacklistRequest&, ListCustomBlacklistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListCustomBlacklistAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListEmailAddressResponse> ListEmailAddressOutcome;
                 typedef std::future<ListEmailAddressOutcome> ListEmailAddressOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::ListEmailAddressRequest&, ListEmailAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListEmailAddressAsyncHandler;
@@ -161,6 +180,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListEmailTemplatesResponse> ListEmailTemplatesOutcome;
                 typedef std::future<ListEmailTemplatesOutcome> ListEmailTemplatesOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::ListEmailTemplatesRequest&, ListEmailTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListEmailTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListReceiverDetailsResponse> ListReceiverDetailsOutcome;
+                typedef std::future<ListReceiverDetailsOutcome> ListReceiverDetailsOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::ListReceiverDetailsRequest&, ListReceiverDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReceiverDetailsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListReceiversResponse> ListReceiversOutcome;
                 typedef std::future<ListReceiversOutcome> ListReceiversOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::ListReceiversRequest&, ListReceiversOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReceiversAsyncHandler;
@@ -173,6 +195,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateAddressUnsubscribeConfigResponse> UpdateAddressUnsubscribeConfigOutcome;
                 typedef std::future<UpdateAddressUnsubscribeConfigOutcome> UpdateAddressUnsubscribeConfigOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::UpdateAddressUnsubscribeConfigRequest&, UpdateAddressUnsubscribeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAddressUnsubscribeConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCustomBlackListResponse> UpdateCustomBlackListOutcome;
+                typedef std::future<UpdateCustomBlackListOutcome> UpdateCustomBlackListOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::UpdateCustomBlackListRequest&, UpdateCustomBlackListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCustomBlackListAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateEmailIdentityResponse> UpdateEmailIdentityOutcome;
                 typedef std::future<UpdateEmailIdentityOutcome> UpdateEmailIdentityOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::UpdateEmailIdentityRequest&, UpdateEmailIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailIdentityAsyncHandler;
@@ -202,6 +227,15 @@ namespace TencentCloud
                 CreateAddressUnsubscribeConfigOutcome CreateAddressUnsubscribeConfig(const Model::CreateAddressUnsubscribeConfigRequest &request);
                 void CreateAddressUnsubscribeConfigAsync(const Model::CreateAddressUnsubscribeConfigRequest& request, const CreateAddressUnsubscribeConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAddressUnsubscribeConfigOutcomeCallable CreateAddressUnsubscribeConfigCallable(const Model::CreateAddressUnsubscribeConfigRequest& request);
+
+                /**
+                 *Add a custom blocklist.
+                 * @param req CreateCustomBlacklistRequest
+                 * @return CreateCustomBlacklistOutcome
+                 */
+                CreateCustomBlacklistOutcome CreateCustomBlacklist(const Model::CreateCustomBlacklistRequest &request);
+                void CreateCustomBlacklistAsync(const Model::CreateCustomBlacklistRequest& request, const CreateCustomBlacklistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCustomBlacklistOutcomeCallable CreateCustomBlacklistCallable(const Model::CreateCustomBlacklistRequest& request);
 
                 /**
                  *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
@@ -268,6 +302,15 @@ Note: Only an approved template can be used to send emails.
                 DeleteBlackListOutcomeCallable DeleteBlackListCallable(const Model::DeleteBlackListRequest& request);
 
                 /**
+                 *Delete a custom blocklist email address.
+                 * @param req DeleteCustomBlackListRequest
+                 * @return DeleteCustomBlackListOutcome
+                 */
+                DeleteCustomBlackListOutcome DeleteCustomBlackList(const Model::DeleteCustomBlackListRequest &request);
+                void DeleteCustomBlackListAsync(const Model::DeleteCustomBlackListRequest& request, const DeleteCustomBlackListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCustomBlackListOutcomeCallable DeleteCustomBlackListCallable(const Model::DeleteCustomBlackListRequest& request);
+
+                /**
                  *This API is used to delete a sender address.
                  * @param req DeleteEmailAddressRequest
                  * @return DeleteEmailAddressOutcome
@@ -322,8 +365,7 @@ Note: Only an approved template can be used to send emails.
                 GetEmailTemplateOutcomeCallable GetEmailTemplateCallable(const Model::GetEmailTemplateRequest& request);
 
                 /**
-                 *This API is used to get email sending status. Only data within 30 days can be queried.
-Default API request rate limit: 1 request/sec.
+                 *Search the email sending status. Only support querying data within 30 days.
                  * @param req GetSendEmailStatusRequest
                  * @return GetSendEmailStatusOutcome
                  */
@@ -359,6 +401,15 @@ Default API request rate limit: 1 request/sec.
                 ListBlackEmailAddressOutcomeCallable ListBlackEmailAddressCallable(const Model::ListBlackEmailAddressRequest& request);
 
                 /**
+                 *Retrieve the custom blocklist.
+                 * @param req ListCustomBlacklistRequest
+                 * @return ListCustomBlacklistOutcome
+                 */
+                ListCustomBlacklistOutcome ListCustomBlacklist(const Model::ListCustomBlacklistRequest &request);
+                void ListCustomBlacklistAsync(const Model::ListCustomBlacklistRequest& request, const ListCustomBlacklistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListCustomBlacklistOutcomeCallable ListCustomBlacklistCallable(const Model::ListCustomBlacklistRequest& request);
+
+                /**
                  *This API is used to get the list of sender addresses.
                  * @param req ListEmailAddressRequest
                  * @return ListEmailAddressOutcome
@@ -384,6 +435,15 @@ Default API request rate limit: 1 request/sec.
                 ListEmailTemplatesOutcome ListEmailTemplates(const Model::ListEmailTemplatesRequest &request);
                 void ListEmailTemplatesAsync(const Model::ListEmailTemplatesRequest& request, const ListEmailTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListEmailTemplatesOutcomeCallable ListEmailTemplatesCallable(const Model::ListEmailTemplatesRequest& request);
+
+                /**
+                 *Query ALL recipient email addresses in the recipient list based on the recipient list id with paging query. Filter queries can be based on the recipient email address.
+                 * @param req ListReceiverDetailsRequest
+                 * @return ListReceiverDetailsOutcome
+                 */
+                ListReceiverDetailsOutcome ListReceiverDetails(const Model::ListReceiverDetailsRequest &request);
+                void ListReceiverDetailsAsync(const Model::ListReceiverDetailsRequest& request, const ListReceiverDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListReceiverDetailsOutcomeCallable ListReceiverDetailsCallable(const Model::ListReceiverDetailsRequest& request);
 
                 /**
                  *This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
@@ -420,6 +480,15 @@ Default API request rate limit: 1 request/sec.
                 UpdateAddressUnsubscribeConfigOutcome UpdateAddressUnsubscribeConfig(const Model::UpdateAddressUnsubscribeConfigRequest &request);
                 void UpdateAddressUnsubscribeConfigAsync(const Model::UpdateAddressUnsubscribeConfigRequest& request, const UpdateAddressUnsubscribeConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateAddressUnsubscribeConfigOutcomeCallable UpdateAddressUnsubscribeConfigCallable(const Model::UpdateAddressUnsubscribeConfigRequest& request);
+
+                /**
+                 *Refresh custom blocklist.
+                 * @param req UpdateCustomBlackListRequest
+                 * @return UpdateCustomBlackListOutcome
+                 */
+                UpdateCustomBlackListOutcome UpdateCustomBlackList(const Model::UpdateCustomBlackListRequest &request);
+                void UpdateCustomBlackListAsync(const Model::UpdateCustomBlackListRequest& request, const UpdateCustomBlackListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCustomBlackListOutcomeCallable UpdateCustomBlackListCallable(const Model::UpdateCustomBlackListRequest& request);
 
                 /**
                  *This API is used to verify whether your DNS configuration is correct.

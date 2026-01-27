@@ -281,19 +281,15 @@ namespace TencentCloud
                     bool SubjectHasBeenSet() const;
 
                     /**
-                     * 获取Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Template and template data.
+                     * @return Template Template and template data.
                      * 
                      */
                     Template GetTemplate() const;
 
                     /**
-                     * 设置Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Template and template data.
+                     * @param _template Template and template data.
                      * 
                      */
                     void SetTemplate(const Template& _template);
@@ -356,19 +352,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool TimedParamHasBeenSet() const;
 
                     /**
-                     * 获取Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return ErrMsg Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Task exception information.
+                     * @return ErrMsg Task exception information.
                      * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
-                     * 设置Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _errMsg Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Task exception information.
+                     * @param _errMsg Task exception information.
                      * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
@@ -470,8 +462,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_subjectHasBeenSet;
 
                     /**
-                     * Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Template and template data.
                      */
                     Template m_template;
                     bool m_templateHasBeenSet;
@@ -491,8 +482,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_timedParamHasBeenSet;
 
                     /**
-                     * Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Task exception information.
                      */
                     std::string m_errMsg;
                     bool m_errMsgHasBeenSet;

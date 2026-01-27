@@ -19,50 +19,68 @@ set(hunyuan_public_header
   )
 
 set(hunyuan_public_header_model
-  include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/Convert3DFormatRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/ViewImage.h
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/ViewImage.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/TranslationChoice.h
+  include/tencentcloud/hunyuan/v20230901/model/ChatTranslationsResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/Usage.h
+  include/tencentcloud/hunyuan/v20230901/model/ChatTranslationsRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/File3D.h
+  include/tencentcloud/hunyuan/v20230901/model/PromptTokensDetails.h
+  include/tencentcloud/hunyuan/v20230901/model/InputFile3D.h
+  include/tencentcloud/hunyuan/v20230901/model/TranslationDelta.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/File3D.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/InputFile3D.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/Reference.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/ErrorMsg.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/TranslationMessage.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h
   )
 
 set(hunyuan_src
   src/v20230901/HunyuanClient.cpp
-  src/v20230901/model/Describe3DSmartTopologyJobResponse.cpp
   src/v20230901/model/Convert3DFormatRequest.cpp
-  src/v20230901/model/ViewImage.cpp
-  src/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.cpp
   src/v20230901/model/Submit3DSmartTopologyJobRequest.cpp
+  src/v20230901/model/ViewImage.cpp
+  src/v20230901/model/QueryHunyuanTo3DProJobRequest.cpp
+  src/v20230901/model/QueryHunyuan3DPartJobResponse.cpp
+  src/v20230901/model/QueryHunyuanTo3DRapidJobResponse.cpp
+  src/v20230901/model/TranslationChoice.cpp
+  src/v20230901/model/ChatTranslationsResponse.cpp
+  src/v20230901/model/Usage.cpp
+  src/v20230901/model/ChatTranslationsRequest.cpp
   src/v20230901/model/Submit3DSmartTopologyJobResponse.cpp
+  src/v20230901/model/File3D.cpp
+  src/v20230901/model/PromptTokensDetails.cpp
+  src/v20230901/model/InputFile3D.cpp
+  src/v20230901/model/TranslationDelta.cpp
+  src/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.cpp
   src/v20230901/model/SubmitHunyuan3DPartJobResponse.cpp
   src/v20230901/model/SubmitHunyuanTo3DProJobRequest.cpp
-  src/v20230901/model/QueryHunyuanTo3DProJobRequest.cpp
-  src/v20230901/model/File3D.cpp
-  src/v20230901/model/QueryHunyuanTo3DRapidJobResponse.cpp
-  src/v20230901/model/QueryHunyuan3DPartJobResponse.cpp
-  src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
-  src/v20230901/model/QueryHunyuanTo3DProJobResponse.cpp
-  src/v20230901/model/SubmitHunyuan3DPartJobRequest.cpp
   src/v20230901/model/Convert3DFormatResponse.cpp
-  src/v20230901/model/QueryHunyuan3DPartJobRequest.cpp
   src/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.cpp
-  src/v20230901/model/InputFile3D.cpp
+  src/v20230901/model/SubmitHunyuan3DPartJobRequest.cpp
+  src/v20230901/model/Describe3DSmartTopologyJobResponse.cpp
+  src/v20230901/model/Reference.cpp
+  src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
+  src/v20230901/model/ErrorMsg.cpp
+  src/v20230901/model/QueryHunyuanTo3DProJobResponse.cpp
+  src/v20230901/model/QueryHunyuan3DPartJobRequest.cpp
+  src/v20230901/model/TranslationMessage.cpp
   src/v20230901/model/QueryHunyuanTo3DRapidJobRequest.cpp
   src/v20230901/model/Describe3DSmartTopologyJobRequest.cpp
   )

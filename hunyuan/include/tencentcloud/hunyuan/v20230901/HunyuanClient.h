@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/hunyuan/v20230901/model/ChatTranslationsRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/ChatTranslationsResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h>
@@ -55,6 +57,9 @@ namespace TencentCloud
                 HunyuanClient(const Credential &credential, const std::string &region);
                 HunyuanClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ChatTranslationsResponse> ChatTranslationsOutcome;
+                typedef std::future<ChatTranslationsOutcome> ChatTranslationsOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::ChatTranslationsRequest&, ChatTranslationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChatTranslationsAsyncHandler;
                 typedef Outcome<Core::Error, Model::Convert3DFormatResponse> Convert3DFormatOutcome;
                 typedef std::future<Convert3DFormatOutcome> Convert3DFormatOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Convert3DFormatRequest&, Convert3DFormatOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Convert3DFormatAsyncHandler;
@@ -84,6 +89,20 @@ namespace TencentCloud
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuanTo3DRapidJobRequest&, SubmitHunyuanTo3DRapidJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuanTo3DRapidJobAsyncHandler;
 
 
+
+                /**
+                 *Tencent Hunyuan is a large language model (LLM) developed by Tencent R&D. It possesses powerful Chinese creation capacity, logical reasoning in complex context, and reliable task execution power. This API supports streaming or non-streaming calls. When using streaming calls, it follows the SSE protocol.
+
+1. This API does not currently support returning Image Content.
+2. By default, this API has account restrictions with a number of concurrencies of 5. 
+3. Please use the SDK to call this API. examples are provided in the Git repository examples/hunyuan/v20230901/ directory for each development language. The SDK link is provided in the "**Developer Resources - SDK**" part under the document.
+4. We recommend you use API Explorer for quick online debugging interface and download example code in languages, [click to open](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions).
+                 * @param req ChatTranslationsRequest
+                 * @return ChatTranslationsOutcome
+                 */
+                ChatTranslationsOutcome ChatTranslations(const Model::ChatTranslationsRequest &request);
+                void ChatTranslationsAsync(const Model::ChatTranslationsRequest& request, const ChatTranslationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ChatTranslationsOutcomeCallable ChatTranslationsCallable(const Model::ChatTranslationsRequest& request);
 
                 /**
                  *After inputting a 3D model file, the 3D model file format can be switched.

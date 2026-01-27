@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取You can specify a task ID to query.
-                     * @return TaskID You can specify a task ID to query.
+                     * 获取This parameter has been deprecated.
+                     * @return TaskID This parameter has been deprecated.
                      * 
                      */
                     std::string GetTaskID() const;
 
                     /**
-                     * 设置You can specify a task ID to query.
-                     * @param _taskID You can specify a task ID to query.
+                     * 设置This parameter has been deprecated.
+                     * @param _taskID This parameter has been deprecated.
                      * 
                      */
                     void SetTaskID(const std::string& _taskID);
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_emailAddressHasBeenSet;
 
                     /**
-                     * You can specify a task ID to query.
+                     * This parameter has been deprecated.
                      */
                     std::string m_taskID;
                     bool m_taskIDHasBeenSet;

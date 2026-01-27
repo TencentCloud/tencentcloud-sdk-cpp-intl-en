@@ -396,23 +396,44 @@ namespace TencentCloud
                     /**
                      * 获取Whether the recipient has reported the sender
                      * @return UserComplainted Whether the recipient has reported the sender
-                     * 
+                     * @deprecated
                      */
                     bool GetUserComplainted() const;
 
                     /**
                      * 设置Whether the recipient has reported the sender
                      * @param _userComplainted Whether the recipient has reported the sender
-                     * 
+                     * @deprecated
                      */
                     void SetUserComplainted(const bool& _userComplainted);
 
                     /**
                      * 判断参数 UserComplainted 是否已赋值
                      * @return UserComplainted 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool UserComplaintedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the user reports the sender.
+                     * @return UserComplained Whether the user reports the sender.
+                     * 
+                     */
+                    bool GetUserComplained() const;
+
+                    /**
+                     * 设置Whether the user reports the sender.
+                     * @param _userComplained Whether the user reports the sender.
+                     * 
+                     */
+                    void SetUserComplained(const bool& _userComplained);
+
+                    /**
+                     * 判断参数 UserComplained 是否已赋值
+                     * @return UserComplained 是否已赋值
+                     * 
+                     */
+                    bool UserComplainedHasBeenSet() const;
 
                 private:
 
@@ -516,6 +537,12 @@ namespace TencentCloud
                      */
                     bool m_userComplainted;
                     bool m_userComplaintedHasBeenSet;
+
+                    /**
+                     * Whether the user reports the sender.
+                     */
+                    bool m_userComplained;
+                    bool m_userComplainedHasBeenSet;
 
                 };
             }

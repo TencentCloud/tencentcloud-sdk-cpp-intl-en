@@ -40,6 +40,56 @@ HunyuanClient::HunyuanClient(const Credential &credential, const string &region,
 }
 
 
+HunyuanClient::ChatTranslationsOutcome HunyuanClient::ChatTranslations(const ChatTranslationsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChatTranslations");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChatTranslationsResponse rsp = ChatTranslationsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChatTranslationsOutcome(rsp);
+        else
+            return ChatTranslationsOutcome(o.GetError());
+    }
+    else
+    {
+        return ChatTranslationsOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::ChatTranslationsAsync(const ChatTranslationsRequest& request, const ChatTranslationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ChatTranslationsRequest&;
+    using Resp = ChatTranslationsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ChatTranslations", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::ChatTranslationsOutcomeCallable HunyuanClient::ChatTranslationsCallable(const ChatTranslationsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ChatTranslationsOutcome>>();
+    ChatTranslationsAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const ChatTranslationsRequest&,
+        ChatTranslationsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 HunyuanClient::Convert3DFormatOutcome HunyuanClient::Convert3DFormat(const Convert3DFormatRequest &request)
 {
     auto outcome = MakeRequest(request, "Convert3DFormat");

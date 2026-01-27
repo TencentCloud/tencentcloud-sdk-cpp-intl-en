@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool EmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EmailSenderName Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Sender alias.
+                     * @return EmailSenderName Sender alias.
                      * 
                      */
                     std::string GetEmailSenderName() const;
 
                     /**
-                     * 设置Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _emailSenderName Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Sender alias.
+                     * @param _emailSenderName Sender alias.
                      * 
                      */
                     void SetEmailSenderName(const std::string& _emailSenderName);
@@ -94,18 +90,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
                      * @return CreatedTimestamp Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
                      * 
                      */
                     uint64_t GetCreatedTimestamp() const;
 
                     /**
                      * 设置Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
                      * @param _createdTimestamp Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
                      * 
                      */
                     void SetCreatedTimestamp(const uint64_t& _createdTimestamp);
@@ -117,6 +117,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CreatedTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取smtp password type. 0=not set. 1=already set up.
+                     * @return SmtpPwdType smtp password type. 0=not set. 1=already set up.
+                     * 
+                     */
+                    uint64_t GetSmtpPwdType() const;
+
+                    /**
+                     * 设置smtp password type. 0=not set. 1=already set up.
+                     * @param _smtpPwdType smtp password type. 0=not set. 1=already set up.
+                     * 
+                     */
+                    void SetSmtpPwdType(const uint64_t& _smtpPwdType);
+
+                    /**
+                     * 判断参数 SmtpPwdType 是否已赋值
+                     * @return SmtpPwdType 是否已赋值
+                     * 
+                     */
+                    bool SmtpPwdTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -126,18 +147,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_emailAddressHasBeenSet;
 
                     /**
-                     * Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Sender alias.
                      */
                     std::string m_emailSenderName;
                     bool m_emailSenderNameHasBeenSet;
 
                     /**
                      * Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
                      */
                     uint64_t m_createdTimestamp;
                     bool m_createdTimestampHasBeenSet;
+
+                    /**
+                     * smtp password type. 0=not set. 1=already set up.
+                     */
+                    uint64_t m_smtpPwdType;
+                    bool m_smtpPwdTypeHasBeenSet;
 
                 };
             }

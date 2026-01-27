@@ -140,6 +140,56 @@ SesClient::CreateAddressUnsubscribeConfigOutcomeCallable SesClient::CreateAddres
     return prom->get_future();
 }
 
+SesClient::CreateCustomBlacklistOutcome SesClient::CreateCustomBlacklist(const CreateCustomBlacklistRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCustomBlacklist");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCustomBlacklistResponse rsp = CreateCustomBlacklistResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCustomBlacklistOutcome(rsp);
+        else
+            return CreateCustomBlacklistOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCustomBlacklistOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::CreateCustomBlacklistAsync(const CreateCustomBlacklistRequest& request, const CreateCustomBlacklistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateCustomBlacklistRequest&;
+    using Resp = CreateCustomBlacklistResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateCustomBlacklist", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::CreateCustomBlacklistOutcomeCallable SesClient::CreateCustomBlacklistCallable(const CreateCustomBlacklistRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateCustomBlacklistOutcome>>();
+    CreateCustomBlacklistAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const CreateCustomBlacklistRequest&,
+        CreateCustomBlacklistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SesClient::CreateEmailAddressOutcome SesClient::CreateEmailAddress(const CreateEmailAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateEmailAddress");
@@ -482,6 +532,56 @@ SesClient::DeleteBlackListOutcomeCallable SesClient::DeleteBlackListCallable(con
         const SesClient*,
         const DeleteBlackListRequest&,
         DeleteBlackListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SesClient::DeleteCustomBlackListOutcome SesClient::DeleteCustomBlackList(const DeleteCustomBlackListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCustomBlackList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCustomBlackListResponse rsp = DeleteCustomBlackListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCustomBlackListOutcome(rsp);
+        else
+            return DeleteCustomBlackListOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCustomBlackListOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::DeleteCustomBlackListAsync(const DeleteCustomBlackListRequest& request, const DeleteCustomBlackListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCustomBlackListRequest&;
+    using Resp = DeleteCustomBlackListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCustomBlackList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::DeleteCustomBlackListOutcomeCallable SesClient::DeleteCustomBlackListCallable(const DeleteCustomBlackListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCustomBlackListOutcome>>();
+    DeleteCustomBlackListAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const DeleteCustomBlackListRequest&,
+        DeleteCustomBlackListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -990,6 +1090,56 @@ SesClient::ListBlackEmailAddressOutcomeCallable SesClient::ListBlackEmailAddress
     return prom->get_future();
 }
 
+SesClient::ListCustomBlacklistOutcome SesClient::ListCustomBlacklist(const ListCustomBlacklistRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListCustomBlacklist");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListCustomBlacklistResponse rsp = ListCustomBlacklistResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListCustomBlacklistOutcome(rsp);
+        else
+            return ListCustomBlacklistOutcome(o.GetError());
+    }
+    else
+    {
+        return ListCustomBlacklistOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::ListCustomBlacklistAsync(const ListCustomBlacklistRequest& request, const ListCustomBlacklistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListCustomBlacklistRequest&;
+    using Resp = ListCustomBlacklistResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListCustomBlacklist", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::ListCustomBlacklistOutcomeCallable SesClient::ListCustomBlacklistCallable(const ListCustomBlacklistRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListCustomBlacklistOutcome>>();
+    ListCustomBlacklistAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const ListCustomBlacklistRequest&,
+        ListCustomBlacklistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SesClient::ListEmailAddressOutcome SesClient::ListEmailAddress(const ListEmailAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "ListEmailAddress");
@@ -1132,6 +1282,56 @@ SesClient::ListEmailTemplatesOutcomeCallable SesClient::ListEmailTemplatesCallab
         const SesClient*,
         const ListEmailTemplatesRequest&,
         ListEmailTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SesClient::ListReceiverDetailsOutcome SesClient::ListReceiverDetails(const ListReceiverDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListReceiverDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListReceiverDetailsResponse rsp = ListReceiverDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListReceiverDetailsOutcome(rsp);
+        else
+            return ListReceiverDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return ListReceiverDetailsOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::ListReceiverDetailsAsync(const ListReceiverDetailsRequest& request, const ListReceiverDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListReceiverDetailsRequest&;
+    using Resp = ListReceiverDetailsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListReceiverDetails", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::ListReceiverDetailsOutcomeCallable SesClient::ListReceiverDetailsCallable(const ListReceiverDetailsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListReceiverDetailsOutcome>>();
+    ListReceiverDetailsAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const ListReceiverDetailsRequest&,
+        ListReceiverDetailsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1332,6 +1532,56 @@ SesClient::UpdateAddressUnsubscribeConfigOutcomeCallable SesClient::UpdateAddres
         const SesClient*,
         const UpdateAddressUnsubscribeConfigRequest&,
         UpdateAddressUnsubscribeConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SesClient::UpdateCustomBlackListOutcome SesClient::UpdateCustomBlackList(const UpdateCustomBlackListRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCustomBlackList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCustomBlackListResponse rsp = UpdateCustomBlackListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCustomBlackListOutcome(rsp);
+        else
+            return UpdateCustomBlackListOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCustomBlackListOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::UpdateCustomBlackListAsync(const UpdateCustomBlackListRequest& request, const UpdateCustomBlackListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateCustomBlackListRequest&;
+    using Resp = UpdateCustomBlackListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateCustomBlackList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::UpdateCustomBlackListOutcomeCallable SesClient::UpdateCustomBlackListCallable(const UpdateCustomBlackListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateCustomBlackListOutcome>>();
+    UpdateCustomBlackListAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const UpdateCustomBlackListRequest&,
+        UpdateCustomBlackListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

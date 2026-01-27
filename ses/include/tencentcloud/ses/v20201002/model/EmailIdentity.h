@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ses/v20201002/model/TagList.h>
 
 
 namespace TencentCloud
@@ -151,6 +152,48 @@ namespace TencentCloud
                      */
                     bool DailyQuotaHasBeenSet() const;
 
+                    /**
+                     * 获取Independent ip for domain configuration.
+                     * @return SendIp Independent ip for domain configuration.
+                     * 
+                     */
+                    std::vector<std::string> GetSendIp() const;
+
+                    /**
+                     * 设置Independent ip for domain configuration.
+                     * @param _sendIp Independent ip for domain configuration.
+                     * 
+                     */
+                    void SetSendIp(const std::vector<std::string>& _sendIp);
+
+                    /**
+                     * 判断参数 SendIp 是否已赋值
+                     * @return SendIp 是否已赋值
+                     * 
+                     */
+                    bool SendIpHasBeenSet() const;
+
+                    /**
+                     * 获取tag.
+                     * @return TagList tag.
+                     * 
+                     */
+                    std::vector<TagList> GetTagList() const;
+
+                    /**
+                     * 设置tag.
+                     * @param _tagList tag.
+                     * 
+                     */
+                    void SetTagList(const std::vector<TagList>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     * 
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +225,18 @@ namespace TencentCloud
                      */
                     uint64_t m_dailyQuota;
                     bool m_dailyQuotaHasBeenSet;
+
+                    /**
+                     * Independent ip for domain configuration.
+                     */
+                    std::vector<std::string> m_sendIp;
+                    bool m_sendIpHasBeenSet;
+
+                    /**
+                     * tag.
+                     */
+                    std::vector<TagList> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }
