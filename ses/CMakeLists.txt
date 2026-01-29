@@ -34,6 +34,7 @@ set(ses_public_header_model
   include/tencentcloud/ses/v20201002/model/CreateEmailAddressRequest.h
   include/tencentcloud/ses/v20201002/model/CreateReceiverDetailRequest.h
   include/tencentcloud/ses/v20201002/model/UpdateEmailTemplateResponse.h
+  include/tencentcloud/ses/v20201002/model/CreateReceiverDetailWithDataRequest.h
   include/tencentcloud/ses/v20201002/model/TimedEmailParam.h
   include/tencentcloud/ses/v20201002/model/DNSAttributes.h
   include/tencentcloud/ses/v20201002/model/GetEmailTemplateResponse.h
@@ -47,6 +48,7 @@ set(ses_public_header_model
   include/tencentcloud/ses/v20201002/model/SendEmailStatus.h
   include/tencentcloud/ses/v20201002/model/ListEmailTemplatesRequest.h
   include/tencentcloud/ses/v20201002/model/DeleteBlackListRequest.h
+  include/tencentcloud/ses/v20201002/model/ReceiverInputData.h
   include/tencentcloud/ses/v20201002/model/ReceiverDetail.h
   include/tencentcloud/ses/v20201002/model/ListBlackEmailAddressResponse.h
   include/tencentcloud/ses/v20201002/model/ListEmailIdentitiesResponse.h
@@ -90,6 +92,7 @@ set(ses_public_header_model
   include/tencentcloud/ses/v20201002/model/ListEmailAddressRequest.h
   include/tencentcloud/ses/v20201002/model/UpdateCustomBlackListResponse.h
   include/tencentcloud/ses/v20201002/model/ListBlackEmailAddressRequest.h
+  include/tencentcloud/ses/v20201002/model/CreateReceiverDetailWithDataResponse.h
   include/tencentcloud/ses/v20201002/model/GetEmailTemplateRequest.h
   include/tencentcloud/ses/v20201002/model/ListSendTasksResponse.h
   include/tencentcloud/ses/v20201002/model/Volume.h
@@ -125,6 +128,7 @@ set(ses_src
   src/v20201002/model/CreateEmailAddressRequest.cpp
   src/v20201002/model/CreateReceiverDetailRequest.cpp
   src/v20201002/model/UpdateEmailTemplateResponse.cpp
+  src/v20201002/model/CreateReceiverDetailWithDataRequest.cpp
   src/v20201002/model/TimedEmailParam.cpp
   src/v20201002/model/DNSAttributes.cpp
   src/v20201002/model/GetEmailTemplateResponse.cpp
@@ -138,6 +142,7 @@ set(ses_src
   src/v20201002/model/SendEmailStatus.cpp
   src/v20201002/model/ListEmailTemplatesRequest.cpp
   src/v20201002/model/DeleteBlackListRequest.cpp
+  src/v20201002/model/ReceiverInputData.cpp
   src/v20201002/model/ReceiverDetail.cpp
   src/v20201002/model/ListBlackEmailAddressResponse.cpp
   src/v20201002/model/ListEmailIdentitiesResponse.cpp
@@ -181,6 +186,7 @@ set(ses_src
   src/v20201002/model/ListEmailAddressRequest.cpp
   src/v20201002/model/UpdateCustomBlackListResponse.cpp
   src/v20201002/model/ListBlackEmailAddressRequest.cpp
+  src/v20201002/model/CreateReceiverDetailWithDataResponse.cpp
   src/v20201002/model/GetEmailTemplateRequest.cpp
   src/v20201002/model/ListSendTasksResponse.cpp
   src/v20201002/model/Volume.cpp

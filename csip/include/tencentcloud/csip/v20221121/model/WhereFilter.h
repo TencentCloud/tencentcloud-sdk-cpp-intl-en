@@ -89,26 +89,26 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取 
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+                     * 获取Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
-                     * @return OperatorType  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+                     * @return OperatorType Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
                      * 
                      */
                     int64_t GetOperatorType() const;
 
                     /**
-                     * 设置 
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+                     * 设置Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
-                     * @param _operatorType  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+                     * @param _operatorType Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
                      * 
                      */
@@ -136,9 +136,9 @@ namespace TencentCloud
                     bool m_valuesHasBeenSet;
 
                     /**
-                     *  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+                     * Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
                      */
                     int64_t m_operatorType;

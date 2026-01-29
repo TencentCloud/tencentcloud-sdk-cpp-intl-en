@@ -39,6 +39,8 @@
 #include <tencentcloud/ses/v20201002/model/CreateReceiverResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateReceiverDetailRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateReceiverDetailResponse.h>
+#include <tencentcloud/ses/v20201002/model/CreateReceiverDetailWithDataRequest.h>
+#include <tencentcloud/ses/v20201002/model/CreateReceiverDetailWithDataResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteAddressUnsubscribeConfigRequest.h>
 #include <tencentcloud/ses/v20201002/model/DeleteAddressUnsubscribeConfigResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteBlackListRequest.h>
@@ -129,6 +131,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateReceiverDetailResponse> CreateReceiverDetailOutcome;
                 typedef std::future<CreateReceiverDetailOutcome> CreateReceiverDetailOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateReceiverDetailRequest&, CreateReceiverDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReceiverDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateReceiverDetailWithDataResponse> CreateReceiverDetailWithDataOutcome;
+                typedef std::future<CreateReceiverDetailWithDataOutcome> CreateReceiverDetailWithDataOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::CreateReceiverDetailWithDataRequest&, CreateReceiverDetailWithDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReceiverDetailWithDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAddressUnsubscribeConfigResponse> DeleteAddressUnsubscribeConfigOutcome;
                 typedef std::future<DeleteAddressUnsubscribeConfigOutcome> DeleteAddressUnsubscribeConfigOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::DeleteAddressUnsubscribeConfigRequest&, DeleteAddressUnsubscribeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAddressUnsubscribeConfigAsyncHandler;
@@ -282,6 +287,15 @@ Note: Only an approved template can be used to send emails.
                 CreateReceiverDetailOutcome CreateReceiverDetail(const Model::CreateReceiverDetailRequest &request);
                 void CreateReceiverDetailAsync(const Model::CreateReceiverDetailRequest& request, const CreateReceiverDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateReceiverDetailOutcomeCallable CreateReceiverDetailCallable(const Model::CreateReceiverDetailRequest& request);
+
+                /**
+                 *Add recipient addresses with Template parameters. Use this API to import Template parameters while adding recipient addresses, ensuring each recipient address uses Template variables with different values when sending emails. Users first call the CreateReceiver API to create a recipient list, then call this API to import recipient addresses and Template parameters for email sending, and finally use the BatchSendEmail API to complete batch email sending. Notably, after using this API, the Template parameter in the BatchSendEmail API does not need to be passed again. Users can also import recipient addresses, Template variables, and parameter values via the import file option in the console under Email Sending - Recipient List menu. This API limits the number of recipient addresses in a single request to 20,000 entries. It can also append recipient addresses to an already uploaded recipient list, but the total number of recipient addresses in the list must not exceed a certain limit, currently set at 50,000 entries. This API does not support removing duplicate recipient addresses. Users need to ensure uploaded and appended addresses are non-repeating and do not duplicate previously uploaded addresses.
+                 * @param req CreateReceiverDetailWithDataRequest
+                 * @return CreateReceiverDetailWithDataOutcome
+                 */
+                CreateReceiverDetailWithDataOutcome CreateReceiverDetailWithData(const Model::CreateReceiverDetailWithDataRequest &request);
+                void CreateReceiverDetailWithDataAsync(const Model::CreateReceiverDetailWithDataRequest& request, const CreateReceiverDetailWithDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateReceiverDetailWithDataOutcomeCallable CreateReceiverDetailWithDataCallable(const Model::CreateReceiverDetailWithDataRequest& request);
 
                 /**
                  *Remove address-level unsubscribe configuration.

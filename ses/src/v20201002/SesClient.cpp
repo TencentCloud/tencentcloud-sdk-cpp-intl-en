@@ -440,6 +440,56 @@ SesClient::CreateReceiverDetailOutcomeCallable SesClient::CreateReceiverDetailCa
     return prom->get_future();
 }
 
+SesClient::CreateReceiverDetailWithDataOutcome SesClient::CreateReceiverDetailWithData(const CreateReceiverDetailWithDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateReceiverDetailWithData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateReceiverDetailWithDataResponse rsp = CreateReceiverDetailWithDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateReceiverDetailWithDataOutcome(rsp);
+        else
+            return CreateReceiverDetailWithDataOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateReceiverDetailWithDataOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::CreateReceiverDetailWithDataAsync(const CreateReceiverDetailWithDataRequest& request, const CreateReceiverDetailWithDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateReceiverDetailWithDataRequest&;
+    using Resp = CreateReceiverDetailWithDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateReceiverDetailWithData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SesClient::CreateReceiverDetailWithDataOutcomeCallable SesClient::CreateReceiverDetailWithDataCallable(const CreateReceiverDetailWithDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateReceiverDetailWithDataOutcome>>();
+    CreateReceiverDetailWithDataAsync(
+    request,
+    [prom](
+        const SesClient*,
+        const CreateReceiverDetailWithDataRequest&,
+        CreateReceiverDetailWithDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SesClient::DeleteAddressUnsubscribeConfigOutcome SesClient::DeleteAddressUnsubscribeConfig(const DeleteAddressUnsubscribeConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAddressUnsubscribeConfig");
