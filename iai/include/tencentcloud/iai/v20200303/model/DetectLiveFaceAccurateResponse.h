@@ -47,11 +47,11 @@ namespace TencentCloud
                      * 获取Liveness scoring.
 -Value range: [0,100].
 -Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
                      * @return Score Liveness scoring.
 -Value range: [0,100].
 -Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
                      * 
                      */
                     double GetScore() const;
@@ -83,7 +83,7 @@ namespace TencentCloud
                      * Liveness scoring.
 -Value range: [0,100].
 -Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;

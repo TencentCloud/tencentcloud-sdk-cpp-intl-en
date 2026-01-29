@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset name.
+                     * @return AssetName Asset name.
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _assetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Asset name.
+                     * @param _assetName Asset name.
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return InstanceType 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset type.
+                     * @return InstanceType Asset type.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _instanceType 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Asset type.
+                     * @param _instanceType Asset type.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -97,19 +89,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetType Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset category.
+                     * @return AssetType Asset category.
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _assetType Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Asset category.
+                     * @param _assetType Asset category.
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -143,19 +131,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -168,19 +152,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Arn The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of Multi-Cloud Assets
+                     * @return Arn Unique ID of Multi-Cloud Assets
                      * 
                      */
                     std::string GetArn() const;
 
                     /**
-                     * 设置The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _arn The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of Multi-Cloud Assets
+                     * @param _arn Unique ID of Multi-Cloud Assets
                      * 
                      */
                     void SetArn(const std::string& _arn);
@@ -195,22 +175,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset name.
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset type.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset category.
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
@@ -222,15 +199,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_assetHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Unique ID of Multi-Cloud Assets
                      */
                     std::string m_arn;
                     bool m_arnHasBeenSet;

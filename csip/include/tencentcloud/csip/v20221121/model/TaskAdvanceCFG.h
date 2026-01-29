@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/csip/v20221121/model/PortRiskAdvanceCFGParamItem.h>
 #include <tencentcloud/csip/v20221121/model/TaskCenterVulRiskInputParam.h>
 #include <tencentcloud/csip/v20221121/model/TaskCenterWeakPwdRiskInputParam.h>
 #include <tencentcloud/csip/v20221121/model/TaskCenterCFGRiskInputParam.h>
@@ -48,6 +49,27 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取Port Risk Advanced Configuration
+                     * @return PortRisk Port Risk Advanced Configuration
+                     * 
+                     */
+                    std::vector<PortRiskAdvanceCFGParamItem> GetPortRisk() const;
+
+                    /**
+                     * 设置Port Risk Advanced Configuration
+                     * @param _portRisk Port Risk Advanced Configuration
+                     * 
+                     */
+                    void SetPortRisk(const std::vector<PortRiskAdvanceCFGParamItem>& _portRisk);
+
+                    /**
+                     * 判断参数 PortRisk 是否已赋值
+                     * @return PortRisk 是否已赋值
+                     * 
+                     */
+                    bool PortRiskHasBeenSet() const;
 
                     /**
                      * 获取Advanced vulnerability scan configuration
@@ -113,6 +135,12 @@ namespace TencentCloud
                     bool CFGRiskHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Port Risk Advanced Configuration
+                     */
+                    std::vector<PortRiskAdvanceCFGParamItem> m_portRisk;
+                    bool m_portRiskHasBeenSet;
 
                     /**
                      * Advanced vulnerability scan configuration

@@ -136,6 +136,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CardVerificationTokenHasBeenSet() const;
 
+                    /**
+                     * 获取If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+                     * @return HeadImageBase64 If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+                     * 
+                     */
+                    std::string GetHeadImageBase64() const;
+
+                    /**
+                     * 判断参数 HeadImageBase64 是否已赋值
+                     * @return HeadImageBase64 是否已赋值
+                     * 
+                     */
+                    bool HeadImageBase64HasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +192,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_cardVerificationToken;
                     bool m_cardVerificationTokenHasBeenSet;
+
+                    /**
+                     * If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+                     */
+                    std::string m_headImageBase64;
+                    bool m_headImageBase64HasBeenSet;
 
                 };
             }

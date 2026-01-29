@@ -1,0 +1,165 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CSIP_V20221121_MODEL_VULTREND_H_
+#define TENCENTCLOUD_CSIP_V20221121_MODEL_VULTREND_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Csip
+    {
+        namespace V20221121
+        {
+            namespace Model
+            {
+                /**
+                * Vulnerability trends, attack trend, users affected, affect assets.
+                */
+                class VulTrend : public AbstractModel
+                {
+                public:
+                    VulTrend();
+                    ~VulTrend() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Number of affected assets.
+                     * @return AffectAssetCount Number of affected assets.
+                     * 
+                     */
+                    int64_t GetAffectAssetCount() const;
+
+                    /**
+                     * 设置Number of affected assets.
+                     * @param _affectAssetCount Number of affected assets.
+                     * 
+                     */
+                    void SetAffectAssetCount(const int64_t& _affectAssetCount);
+
+                    /**
+                     * 判断参数 AffectAssetCount 是否已赋值
+                     * @return AffectAssetCount 是否已赋值
+                     * 
+                     */
+                    bool AffectAssetCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of users affected.
+                     * @return AffectUserCount Number of users affected.
+                     * 
+                     */
+                    int64_t GetAffectUserCount() const;
+
+                    /**
+                     * 设置Number of users affected.
+                     * @param _affectUserCount Number of users affected.
+                     * 
+                     */
+                    void SetAffectUserCount(const int64_t& _affectUserCount);
+
+                    /**
+                     * 判断参数 AffectUserCount 是否已赋值
+                     * @return AffectUserCount 是否已赋值
+                     * 
+                     */
+                    bool AffectUserCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of attacks.
+                     * @return AttackCount Number of attacks.
+                     * 
+                     */
+                    int64_t GetAttackCount() const;
+
+                    /**
+                     * 设置Number of attacks.
+                     * @param _attackCount Number of attacks.
+                     * 
+                     */
+                    void SetAttackCount(const int64_t& _attackCount);
+
+                    /**
+                     * 判断参数 AttackCount 是否已赋值
+                     * @return AttackCount 是否已赋值
+                     * 
+                     */
+                    bool AttackCountHasBeenSet() const;
+
+                    /**
+                     * 获取Time
+                     * @return Date Time
+                     * 
+                     */
+                    std::string GetDate() const;
+
+                    /**
+                     * 设置Time
+                     * @param _date Time
+                     * 
+                     */
+                    void SetDate(const std::string& _date);
+
+                    /**
+                     * 判断参数 Date 是否已赋值
+                     * @return Date 是否已赋值
+                     * 
+                     */
+                    bool DateHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Number of affected assets.
+                     */
+                    int64_t m_affectAssetCount;
+                    bool m_affectAssetCountHasBeenSet;
+
+                    /**
+                     * Number of users affected.
+                     */
+                    int64_t m_affectUserCount;
+                    bool m_affectUserCountHasBeenSet;
+
+                    /**
+                     * Number of attacks.
+                     */
+                    int64_t m_attackCount;
+                    bool m_attackCountHasBeenSet;
+
+                    /**
+                     * Time
+                     */
+                    std::string m_date;
+                    bool m_dateHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CSIP_V20221121_MODEL_VULTREND_H_

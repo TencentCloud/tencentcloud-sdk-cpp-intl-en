@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TagKey Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag Key, can be letters, digits, and underscores.
+                     * @return TagKey Tag Key, can be letters, digits, and underscores.
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tagKey Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag Key, can be letters, digits, and underscores.
+                     * @param _tagKey Tag Key, can be letters, digits, and underscores.
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TagValue Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag Value, can be letters, digits, and underscores.
+                     * @return TagValue Tag Value, can be letters, digits, and underscores.
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tagValue Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag Value, can be letters, digits, and underscores.
+                     * @param _tagValue Tag Value, can be letters, digits, and underscores.
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -99,15 +91,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag Key, can be letters, digits, and underscores.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag Value, can be letters, digits, and underscores.
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;

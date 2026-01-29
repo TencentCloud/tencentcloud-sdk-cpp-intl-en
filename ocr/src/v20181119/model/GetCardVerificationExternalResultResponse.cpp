@@ -28,7 +28,8 @@ GetCardVerificationExternalResultResponse::GetCardVerificationExternalResultResp
     m_warnInfoHasBeenSet(false),
     m_nationalityHasBeenSet(false),
     m_cardInfoHasBeenSet(false),
-    m_cardVerificationTokenHasBeenSet(false)
+    m_cardVerificationTokenHasBeenSet(false),
+    m_headImageBase64HasBeenSet(false)
 {
 }
 
@@ -126,6 +127,16 @@ CoreInternalOutcome GetCardVerificationExternalResultResponse::Deserialize(const
         m_cardVerificationTokenHasBeenSet = true;
     }
 
+    if (rsp.HasMember("HeadImageBase64") && !rsp["HeadImageBase64"].IsNull())
+    {
+        if (!rsp["HeadImageBase64"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HeadImageBase64` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_headImageBase64 = string(rsp["HeadImageBase64"].GetString());
+        m_headImageBase64HasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -180,6 +191,14 @@ string GetCardVerificationExternalResultResponse::ToJsonString() const
         string key = "CardVerificationToken";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_cardVerificationToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_headImageBase64HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HeadImageBase64";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headImageBase64.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -242,6 +261,16 @@ string GetCardVerificationExternalResultResponse::GetCardVerificationToken() con
 bool GetCardVerificationExternalResultResponse::CardVerificationTokenHasBeenSet() const
 {
     return m_cardVerificationTokenHasBeenSet;
+}
+
+string GetCardVerificationExternalResultResponse::GetHeadImageBase64() const
+{
+    return m_headImageBase64;
+}
+
+bool GetCardVerificationExternalResultResponse::HeadImageBase64HasBeenSet() const
+{
+    return m_headImageBase64HasBeenSet;
 }
 
 

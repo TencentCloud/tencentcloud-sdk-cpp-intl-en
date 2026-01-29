@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image name
-                     * @return ImageName Image name
+                     * 获取Image name.
+                     * @return ImageName Image name.
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Image name
-                     * @param _imageName Image name
+                     * 设置Image name.
+                     * @param _imageName Image name.
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Image description
-                     * @return ImageDescription Image description
+                     * 获取Image description.
+                     * @return ImageDescription Image description.
                      * 
                      */
                     std::string GetImageDescription() const;
 
                     /**
-                     * 设置Image description
-                     * @param _imageDescription Image description
+                     * 设置Image description.
+                     * @param _imageDescription Image description.
                      * 
                      */
                     void SetImageDescription(const std::string& _imageDescription);
@@ -272,7 +272,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                 private:
 
                     /**
-                     * Image name
+                     * Image name.
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
@@ -284,7 +284,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Image description
+                     * Image description.
                      */
                     std::string m_imageDescription;
                     bool m_imageDescriptionHasBeenSet;

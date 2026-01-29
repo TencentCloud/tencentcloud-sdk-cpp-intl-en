@@ -25,6 +25,10 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/csip/v20221121/model/AddNewBindRoleUserRequest.h>
 #include <tencentcloud/csip/v20221121/model/AddNewBindRoleUserResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateAccessKeyCheckTaskRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateAccessKeyCheckTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateAccessKeySyncTaskRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateAccessKeySyncTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateDomainAndIpRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateDomainAndIpResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateRiskCenterScanTaskRequest.h>
@@ -33,12 +37,34 @@
 #include <tencentcloud/csip/v20221121/model/DeleteDomainAndIpResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteRiskScanTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteRiskScanTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAbnormalCallRecordRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAbnormalCallRecordResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAlarmRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAlarmResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAlarmDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAlarmDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAssetRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyAssetResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyRiskRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyRiskResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyRiskDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyRiskDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyUserDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyUserDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyUserListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAccessKeyUserListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAssetProcessListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAssetProcessListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCFWAssetStatisticsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCFWAssetStatisticsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeCSIPRiskStatisticsRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeCSIPRiskStatisticsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCVMAssetInfoRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCVMAssetInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCVMAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeCVMAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeCallRecordRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeCallRecordResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterPodAssetsRequest.h>
@@ -49,8 +75,16 @@
 #include <tencentcloud/csip/v20221121/model/DescribeDbAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeDomainAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeDomainAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposeAssetCategoryRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposeAssetCategoryResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposePathRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposePathResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposuresRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeExposuresResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeGatewayAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeGatewayAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHighBaseLineRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHighBaseLineRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeListenerListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeListenerListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeNICAssetsRequest.h>
@@ -73,6 +107,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterAssetViewVULRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterAssetViewWeakPasswordRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterAssetViewWeakPasswordRiskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeRiskCenterCFGViewCFGRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeRiskCenterCFGViewCFGRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterPortViewPortRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterPortViewPortRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterServerRiskListRequest.h>
@@ -83,10 +119,14 @@
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterWebsiteRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeScanReportListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeScanReportListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeScanStatisticRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeScanStatisticResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeScanTaskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeScanTaskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSearchBugInfoRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSearchBugInfoResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeSourceIPAssetRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeSourceIPAssetResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSubUserInfoRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSubUserInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSubnetAssetsRequest.h>
@@ -95,16 +135,32 @@
 #include <tencentcloud/csip/v20221121/model/DescribeTaskLogListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeTaskLogURLRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeTaskLogURLResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeUserCallRecordRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeUserCallRecordResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVULListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVULListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVULRiskAdvanceCFGListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVULRiskAdvanceCFGListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVULRiskDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVULRiskDetailResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVpcAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVpcAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulViewVulRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulViewVulRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyOrganizationAccountStatusRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyOrganizationAccountStatusResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyRiskCenterRiskStatusRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyRiskCenterRiskStatusResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyRiskCenterScanTaskRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyRiskCenterScanTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/StopRiskCenterTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/StopRiskCenterTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/UpdateAccessKeyAlarmStatusRequest.h>
+#include <tencentcloud/csip/v20221121/model/UpdateAccessKeyAlarmStatusResponse.h>
+#include <tencentcloud/csip/v20221121/model/UpdateAccessKeyRemarkRequest.h>
+#include <tencentcloud/csip/v20221121/model/UpdateAccessKeyRemarkResponse.h>
 
 
 namespace TencentCloud
@@ -122,6 +178,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddNewBindRoleUserResponse> AddNewBindRoleUserOutcome;
                 typedef std::future<AddNewBindRoleUserOutcome> AddNewBindRoleUserOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::AddNewBindRoleUserRequest&, AddNewBindRoleUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddNewBindRoleUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAccessKeyCheckTaskResponse> CreateAccessKeyCheckTaskOutcome;
+                typedef std::future<CreateAccessKeyCheckTaskOutcome> CreateAccessKeyCheckTaskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateAccessKeyCheckTaskRequest&, CreateAccessKeyCheckTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccessKeyCheckTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAccessKeySyncTaskResponse> CreateAccessKeySyncTaskOutcome;
+                typedef std::future<CreateAccessKeySyncTaskOutcome> CreateAccessKeySyncTaskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateAccessKeySyncTaskRequest&, CreateAccessKeySyncTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccessKeySyncTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDomainAndIpResponse> CreateDomainAndIpOutcome;
                 typedef std::future<CreateDomainAndIpOutcome> CreateDomainAndIpOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateDomainAndIpRequest&, CreateDomainAndIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDomainAndIpAsyncHandler;
@@ -134,15 +196,48 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRiskScanTaskResponse> DeleteRiskScanTaskOutcome;
                 typedef std::future<DeleteRiskScanTaskOutcome> DeleteRiskScanTaskOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteRiskScanTaskRequest&, DeleteRiskScanTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRiskScanTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAbnormalCallRecordResponse> DescribeAbnormalCallRecordOutcome;
+                typedef std::future<DescribeAbnormalCallRecordOutcome> DescribeAbnormalCallRecordOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAbnormalCallRecordRequest&, DescribeAbnormalCallRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalCallRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyAlarmResponse> DescribeAccessKeyAlarmOutcome;
+                typedef std::future<DescribeAccessKeyAlarmOutcome> DescribeAccessKeyAlarmOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyAlarmRequest&, DescribeAccessKeyAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyAlarmAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyAlarmDetailResponse> DescribeAccessKeyAlarmDetailOutcome;
+                typedef std::future<DescribeAccessKeyAlarmDetailOutcome> DescribeAccessKeyAlarmDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyAlarmDetailRequest&, DescribeAccessKeyAlarmDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyAlarmDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyAssetResponse> DescribeAccessKeyAssetOutcome;
+                typedef std::future<DescribeAccessKeyAssetOutcome> DescribeAccessKeyAssetOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyAssetRequest&, DescribeAccessKeyAssetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyAssetAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyRiskResponse> DescribeAccessKeyRiskOutcome;
+                typedef std::future<DescribeAccessKeyRiskOutcome> DescribeAccessKeyRiskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyRiskRequest&, DescribeAccessKeyRiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyRiskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyRiskDetailResponse> DescribeAccessKeyRiskDetailOutcome;
+                typedef std::future<DescribeAccessKeyRiskDetailOutcome> DescribeAccessKeyRiskDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyRiskDetailRequest&, DescribeAccessKeyRiskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyRiskDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyUserDetailResponse> DescribeAccessKeyUserDetailOutcome;
+                typedef std::future<DescribeAccessKeyUserDetailOutcome> DescribeAccessKeyUserDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyUserDetailRequest&, DescribeAccessKeyUserDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyUserDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessKeyUserListResponse> DescribeAccessKeyUserListOutcome;
+                typedef std::future<DescribeAccessKeyUserListOutcome> DescribeAccessKeyUserListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAccessKeyUserListRequest&, DescribeAccessKeyUserListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessKeyUserListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAssetProcessListResponse> DescribeAssetProcessListOutcome;
+                typedef std::future<DescribeAssetProcessListOutcome> DescribeAssetProcessListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAssetProcessListRequest&, DescribeAssetProcessListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetProcessListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCFWAssetStatisticsResponse> DescribeCFWAssetStatisticsOutcome;
                 typedef std::future<DescribeCFWAssetStatisticsOutcome> DescribeCFWAssetStatisticsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeCFWAssetStatisticsRequest&, DescribeCFWAssetStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCFWAssetStatisticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCSIPRiskStatisticsResponse> DescribeCSIPRiskStatisticsOutcome;
+                typedef std::future<DescribeCSIPRiskStatisticsOutcome> DescribeCSIPRiskStatisticsOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeCSIPRiskStatisticsRequest&, DescribeCSIPRiskStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCSIPRiskStatisticsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCVMAssetInfoResponse> DescribeCVMAssetInfoOutcome;
                 typedef std::future<DescribeCVMAssetInfoOutcome> DescribeCVMAssetInfoOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeCVMAssetInfoRequest&, DescribeCVMAssetInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCVMAssetInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCVMAssetsResponse> DescribeCVMAssetsOutcome;
                 typedef std::future<DescribeCVMAssetsOutcome> DescribeCVMAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeCVMAssetsRequest&, DescribeCVMAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCVMAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCallRecordResponse> DescribeCallRecordOutcome;
+                typedef std::future<DescribeCallRecordOutcome> DescribeCallRecordOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeCallRecordRequest&, DescribeCallRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCallRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterAssetsResponse> DescribeClusterAssetsOutcome;
                 typedef std::future<DescribeClusterAssetsOutcome> DescribeClusterAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeClusterAssetsRequest&, DescribeClusterAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterAssetsAsyncHandler;
@@ -158,9 +253,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDomainAssetsResponse> DescribeDomainAssetsOutcome;
                 typedef std::future<DescribeDomainAssetsOutcome> DescribeDomainAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeDomainAssetsRequest&, DescribeDomainAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExposeAssetCategoryResponse> DescribeExposeAssetCategoryOutcome;
+                typedef std::future<DescribeExposeAssetCategoryOutcome> DescribeExposeAssetCategoryOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeExposeAssetCategoryRequest&, DescribeExposeAssetCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExposeAssetCategoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExposePathResponse> DescribeExposePathOutcome;
+                typedef std::future<DescribeExposePathOutcome> DescribeExposePathOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeExposePathRequest&, DescribeExposePathOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExposePathAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExposuresResponse> DescribeExposuresOutcome;
+                typedef std::future<DescribeExposuresOutcome> DescribeExposuresOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeExposuresRequest&, DescribeExposuresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExposuresAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGatewayAssetsResponse> DescribeGatewayAssetsOutcome;
                 typedef std::future<DescribeGatewayAssetsOutcome> DescribeGatewayAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeGatewayAssetsRequest&, DescribeGatewayAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatewayAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHighBaseLineRiskListResponse> DescribeHighBaseLineRiskListOutcome;
+                typedef std::future<DescribeHighBaseLineRiskListOutcome> DescribeHighBaseLineRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHighBaseLineRiskListRequest&, DescribeHighBaseLineRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHighBaseLineRiskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeListenerListResponse> DescribeListenerListOutcome;
                 typedef std::future<DescribeListenerListOutcome> DescribeListenerListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeListenerListRequest&, DescribeListenerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListenerListAsyncHandler;
@@ -194,6 +301,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRiskCenterAssetViewWeakPasswordRiskListResponse> DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome;
                 typedef std::future<DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome> DescribeRiskCenterAssetViewWeakPasswordRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeRiskCenterAssetViewWeakPasswordRiskListRequest&, DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRiskCenterAssetViewWeakPasswordRiskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRiskCenterCFGViewCFGRiskListResponse> DescribeRiskCenterCFGViewCFGRiskListOutcome;
+                typedef std::future<DescribeRiskCenterCFGViewCFGRiskListOutcome> DescribeRiskCenterCFGViewCFGRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeRiskCenterCFGViewCFGRiskListRequest&, DescribeRiskCenterCFGViewCFGRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRiskCenterCFGViewCFGRiskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRiskCenterPortViewPortRiskListResponse> DescribeRiskCenterPortViewPortRiskListOutcome;
                 typedef std::future<DescribeRiskCenterPortViewPortRiskListOutcome> DescribeRiskCenterPortViewPortRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeRiskCenterPortViewPortRiskListRequest&, DescribeRiskCenterPortViewPortRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRiskCenterPortViewPortRiskListAsyncHandler;
@@ -209,12 +319,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeScanReportListResponse> DescribeScanReportListOutcome;
                 typedef std::future<DescribeScanReportListOutcome> DescribeScanReportListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeScanReportListRequest&, DescribeScanReportListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScanReportListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeScanStatisticResponse> DescribeScanStatisticOutcome;
+                typedef std::future<DescribeScanStatisticOutcome> DescribeScanStatisticOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeScanStatisticRequest&, DescribeScanStatisticOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScanStatisticAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeScanTaskListResponse> DescribeScanTaskListOutcome;
                 typedef std::future<DescribeScanTaskListOutcome> DescribeScanTaskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeScanTaskListRequest&, DescribeScanTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScanTaskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSearchBugInfoResponse> DescribeSearchBugInfoOutcome;
                 typedef std::future<DescribeSearchBugInfoOutcome> DescribeSearchBugInfoOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeSearchBugInfoRequest&, DescribeSearchBugInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSearchBugInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSourceIPAssetResponse> DescribeSourceIPAssetOutcome;
+                typedef std::future<DescribeSourceIPAssetOutcome> DescribeSourceIPAssetOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeSourceIPAssetRequest&, DescribeSourceIPAssetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSourceIPAssetAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSubUserInfoResponse> DescribeSubUserInfoOutcome;
                 typedef std::future<DescribeSubUserInfoOutcome> DescribeSubUserInfoOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeSubUserInfoRequest&, DescribeSubUserInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubUserInfoAsyncHandler;
@@ -227,21 +343,45 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTaskLogURLResponse> DescribeTaskLogURLOutcome;
                 typedef std::future<DescribeTaskLogURLOutcome> DescribeTaskLogURLOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeTaskLogURLRequest&, DescribeTaskLogURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskLogURLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserCallRecordResponse> DescribeUserCallRecordOutcome;
+                typedef std::future<DescribeUserCallRecordOutcome> DescribeUserCallRecordOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeUserCallRecordRequest&, DescribeUserCallRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserCallRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVULListResponse> DescribeVULListOutcome;
+                typedef std::future<DescribeVULListOutcome> DescribeVULListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVULListRequest&, DescribeVULListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVULListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVULRiskAdvanceCFGListResponse> DescribeVULRiskAdvanceCFGListOutcome;
                 typedef std::future<DescribeVULRiskAdvanceCFGListOutcome> DescribeVULRiskAdvanceCFGListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeVULRiskAdvanceCFGListRequest&, DescribeVULRiskAdvanceCFGListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVULRiskAdvanceCFGListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVULRiskDetailResponse> DescribeVULRiskDetailOutcome;
+                typedef std::future<DescribeVULRiskDetailOutcome> DescribeVULRiskDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVULRiskDetailRequest&, DescribeVULRiskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVULRiskDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVpcAssetsResponse> DescribeVpcAssetsOutcome;
                 typedef std::future<DescribeVpcAssetsOutcome> DescribeVpcAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeVpcAssetsRequest&, DescribeVpcAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulRiskListResponse> DescribeVulRiskListOutcome;
+                typedef std::future<DescribeVulRiskListOutcome> DescribeVulRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulRiskListRequest&, DescribeVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulRiskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulViewVulRiskListResponse> DescribeVulViewVulRiskListOutcome;
+                typedef std::future<DescribeVulViewVulRiskListOutcome> DescribeVulViewVulRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulViewVulRiskListRequest&, DescribeVulViewVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulViewVulRiskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyOrganizationAccountStatusResponse> ModifyOrganizationAccountStatusOutcome;
                 typedef std::future<ModifyOrganizationAccountStatusOutcome> ModifyOrganizationAccountStatusOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyOrganizationAccountStatusRequest&, ModifyOrganizationAccountStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOrganizationAccountStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRiskCenterRiskStatusResponse> ModifyRiskCenterRiskStatusOutcome;
                 typedef std::future<ModifyRiskCenterRiskStatusOutcome> ModifyRiskCenterRiskStatusOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyRiskCenterRiskStatusRequest&, ModifyRiskCenterRiskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRiskCenterRiskStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRiskCenterScanTaskResponse> ModifyRiskCenterScanTaskOutcome;
+                typedef std::future<ModifyRiskCenterScanTaskOutcome> ModifyRiskCenterScanTaskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyRiskCenterScanTaskRequest&, ModifyRiskCenterScanTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRiskCenterScanTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopRiskCenterTaskResponse> StopRiskCenterTaskOutcome;
                 typedef std::future<StopRiskCenterTaskOutcome> StopRiskCenterTaskOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::StopRiskCenterTaskRequest&, StopRiskCenterTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopRiskCenterTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAccessKeyAlarmStatusResponse> UpdateAccessKeyAlarmStatusOutcome;
+                typedef std::future<UpdateAccessKeyAlarmStatusOutcome> UpdateAccessKeyAlarmStatusOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::UpdateAccessKeyAlarmStatusRequest&, UpdateAccessKeyAlarmStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAccessKeyAlarmStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAccessKeyRemarkResponse> UpdateAccessKeyRemarkOutcome;
+                typedef std::future<UpdateAccessKeyRemarkOutcome> UpdateAccessKeyRemarkOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::UpdateAccessKeyRemarkRequest&, UpdateAccessKeyRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAccessKeyRemarkAsyncHandler;
 
 
 
@@ -253,6 +393,24 @@ namespace TencentCloud
                 AddNewBindRoleUserOutcome AddNewBindRoleUser(const Model::AddNewBindRoleUserRequest &request);
                 void AddNewBindRoleUserAsync(const Model::AddNewBindRoleUserRequest& request, const AddNewBindRoleUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddNewBindRoleUserOutcomeCallable AddNewBindRoleUserCallable(const Model::AddNewBindRoleUserRequest& request);
+
+                /**
+                 *Detect AK async task.
+                 * @param req CreateAccessKeyCheckTaskRequest
+                 * @return CreateAccessKeyCheckTaskOutcome
+                 */
+                CreateAccessKeyCheckTaskOutcome CreateAccessKeyCheckTask(const Model::CreateAccessKeyCheckTaskRequest &request);
+                void CreateAccessKeyCheckTaskAsync(const Model::CreateAccessKeyCheckTaskRequest& request, const CreateAccessKeyCheckTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAccessKeyCheckTaskOutcomeCallable CreateAccessKeyCheckTaskCallable(const Model::CreateAccessKeyCheckTaskRequest& request);
+
+                /**
+                 *Trigger an AK asset sync task.
+                 * @param req CreateAccessKeySyncTaskRequest
+                 * @return CreateAccessKeySyncTaskOutcome
+                 */
+                CreateAccessKeySyncTaskOutcome CreateAccessKeySyncTask(const Model::CreateAccessKeySyncTaskRequest &request);
+                void CreateAccessKeySyncTaskAsync(const Model::CreateAccessKeySyncTaskRequest& request, const CreateAccessKeySyncTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAccessKeySyncTaskOutcomeCallable CreateAccessKeySyncTaskCallable(const Model::CreateAccessKeySyncTaskRequest& request);
 
                 /**
                  *This API is used to create an asset with the specific domain/IP.
@@ -291,6 +449,87 @@ namespace TencentCloud
                 DeleteRiskScanTaskOutcomeCallable DeleteRiskScanTaskCallable(const Model::DeleteRiskScanTaskRequest& request);
 
                 /**
+                 *Retrieve the call record list.
+                 * @param req DescribeAbnormalCallRecordRequest
+                 * @return DescribeAbnormalCallRecordOutcome
+                 */
+                DescribeAbnormalCallRecordOutcome DescribeAbnormalCallRecord(const Model::DescribeAbnormalCallRecordRequest &request);
+                void DescribeAbnormalCallRecordAsync(const Model::DescribeAbnormalCallRecordRequest& request, const DescribeAbnormalCallRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAbnormalCallRecordOutcomeCallable DescribeAbnormalCallRecordCallable(const Model::DescribeAbnormalCallRecordRequest& request);
+
+                /**
+                 *List of alarm records for access keys.
+                 * @param req DescribeAccessKeyAlarmRequest
+                 * @return DescribeAccessKeyAlarmOutcome
+                 */
+                DescribeAccessKeyAlarmOutcome DescribeAccessKeyAlarm(const Model::DescribeAccessKeyAlarmRequest &request);
+                void DescribeAccessKeyAlarmAsync(const Model::DescribeAccessKeyAlarmRequest& request, const DescribeAccessKeyAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyAlarmOutcomeCallable DescribeAccessKeyAlarmCallable(const Model::DescribeAccessKeyAlarmRequest& request);
+
+                /**
+                 *Alarm Record Details for Access Key.
+                 * @param req DescribeAccessKeyAlarmDetailRequest
+                 * @return DescribeAccessKeyAlarmDetailOutcome
+                 */
+                DescribeAccessKeyAlarmDetailOutcome DescribeAccessKeyAlarmDetail(const Model::DescribeAccessKeyAlarmDetailRequest &request);
+                void DescribeAccessKeyAlarmDetailAsync(const Model::DescribeAccessKeyAlarmDetailRequest& request, const DescribeAccessKeyAlarmDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyAlarmDetailOutcomeCallable DescribeAccessKeyAlarmDetailCallable(const Model::DescribeAccessKeyAlarmDetailRequest& request);
+
+                /**
+                 *Obtain user access key asset list.
+                 * @param req DescribeAccessKeyAssetRequest
+                 * @return DescribeAccessKeyAssetOutcome
+                 */
+                DescribeAccessKeyAssetOutcome DescribeAccessKeyAsset(const Model::DescribeAccessKeyAssetRequest &request);
+                void DescribeAccessKeyAssetAsync(const Model::DescribeAccessKeyAssetRequest& request, const DescribeAccessKeyAssetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyAssetOutcomeCallable DescribeAccessKeyAssetCallable(const Model::DescribeAccessKeyAssetRequest& request);
+
+                /**
+                 *Access key risk record list.
+                 * @param req DescribeAccessKeyRiskRequest
+                 * @return DescribeAccessKeyRiskOutcome
+                 */
+                DescribeAccessKeyRiskOutcome DescribeAccessKeyRisk(const Model::DescribeAccessKeyRiskRequest &request);
+                void DescribeAccessKeyRiskAsync(const Model::DescribeAccessKeyRiskRequest& request, const DescribeAccessKeyRiskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyRiskOutcomeCallable DescribeAccessKeyRiskCallable(const Model::DescribeAccessKeyRiskRequest& request);
+
+                /**
+                 *Access Key Risk Record Details.
+                 * @param req DescribeAccessKeyRiskDetailRequest
+                 * @return DescribeAccessKeyRiskDetailOutcome
+                 */
+                DescribeAccessKeyRiskDetailOutcome DescribeAccessKeyRiskDetail(const Model::DescribeAccessKeyRiskDetailRequest &request);
+                void DescribeAccessKeyRiskDetailAsync(const Model::DescribeAccessKeyRiskDetailRequest& request, const DescribeAccessKeyRiskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyRiskDetailOutcomeCallable DescribeAccessKeyRiskDetailCallable(const Model::DescribeAccessKeyRiskDetailRequest& request);
+
+                /**
+                 *Query the user's account details.
+                 * @param req DescribeAccessKeyUserDetailRequest
+                 * @return DescribeAccessKeyUserDetailOutcome
+                 */
+                DescribeAccessKeyUserDetailOutcome DescribeAccessKeyUserDetail(const Model::DescribeAccessKeyUserDetailRequest &request);
+                void DescribeAccessKeyUserDetailAsync(const Model::DescribeAccessKeyUserDetailRequest& request, const DescribeAccessKeyUserDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyUserDetailOutcomeCallable DescribeAccessKeyUserDetailCallable(const Model::DescribeAccessKeyUserDetailRequest& request);
+
+                /**
+                 *Query the account list of a user.
+                 * @param req DescribeAccessKeyUserListRequest
+                 * @return DescribeAccessKeyUserListOutcome
+                 */
+                DescribeAccessKeyUserListOutcome DescribeAccessKeyUserList(const Model::DescribeAccessKeyUserListRequest &request);
+                void DescribeAccessKeyUserListAsync(const Model::DescribeAccessKeyUserListRequest& request, const DescribeAccessKeyUserListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessKeyUserListOutcomeCallable DescribeAccessKeyUserListCallable(const Model::DescribeAccessKeyUserListRequest& request);
+
+                /**
+                 *Query the process list of host nodes under the exposed path in cloud boundary analysis.
+                 * @param req DescribeAssetProcessListRequest
+                 * @return DescribeAssetProcessListOutcome
+                 */
+                DescribeAssetProcessListOutcome DescribeAssetProcessList(const Model::DescribeAssetProcessListRequest &request);
+                void DescribeAssetProcessListAsync(const Model::DescribeAssetProcessListRequest& request, const DescribeAssetProcessListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAssetProcessListOutcomeCallable DescribeAssetProcessListCallable(const Model::DescribeAssetProcessListRequest& request);
+
+                /**
                  *Cloud Defense Asset Center Statistics
                  * @param req DescribeCFWAssetStatisticsRequest
                  * @return DescribeCFWAssetStatisticsOutcome
@@ -298,6 +537,15 @@ namespace TencentCloud
                 DescribeCFWAssetStatisticsOutcome DescribeCFWAssetStatistics(const Model::DescribeCFWAssetStatisticsRequest &request);
                 void DescribeCFWAssetStatisticsAsync(const Model::DescribeCFWAssetStatisticsRequest& request, const DescribeCFWAssetStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCFWAssetStatisticsOutcomeCallable DescribeCFWAssetStatisticsCallable(const Model::DescribeCFWAssetStatisticsRequest& request);
+
+                /**
+                 *Obtain risk center risk overview example.
+                 * @param req DescribeCSIPRiskStatisticsRequest
+                 * @return DescribeCSIPRiskStatisticsOutcome
+                 */
+                DescribeCSIPRiskStatisticsOutcome DescribeCSIPRiskStatistics(const Model::DescribeCSIPRiskStatisticsRequest &request);
+                void DescribeCSIPRiskStatisticsAsync(const Model::DescribeCSIPRiskStatisticsRequest& request, const DescribeCSIPRiskStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCSIPRiskStatisticsOutcomeCallable DescribeCSIPRiskStatisticsCallable(const Model::DescribeCSIPRiskStatisticsRequest& request);
 
                 /**
                  *This API is used to query details of CVM assets.
@@ -316,6 +564,15 @@ namespace TencentCloud
                 DescribeCVMAssetsOutcome DescribeCVMAssets(const Model::DescribeCVMAssetsRequest &request);
                 void DescribeCVMAssetsAsync(const Model::DescribeCVMAssetsRequest& request, const DescribeCVMAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCVMAssetsOutcomeCallable DescribeCVMAssetsCallable(const Model::DescribeCVMAssetsRequest& request);
+
+                /**
+                 *Retrieve the call record list.
+                 * @param req DescribeCallRecordRequest
+                 * @return DescribeCallRecordOutcome
+                 */
+                DescribeCallRecordOutcome DescribeCallRecord(const Model::DescribeCallRecordRequest &request);
+                void DescribeCallRecordAsync(const Model::DescribeCallRecordRequest& request, const DescribeCallRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCallRecordOutcomeCallable DescribeCallRecordCallable(const Model::DescribeCallRecordRequest& request);
 
                 /**
                  *This example shows you how to obtain the cluster list.
@@ -363,6 +620,33 @@ namespace TencentCloud
                 DescribeDomainAssetsOutcomeCallable DescribeDomainAssetsCallable(const Model::DescribeDomainAssetsRequest& request);
 
                 /**
+                 *Cloud boundary analysis asset category.
+                 * @param req DescribeExposeAssetCategoryRequest
+                 * @return DescribeExposeAssetCategoryOutcome
+                 */
+                DescribeExposeAssetCategoryOutcome DescribeExposeAssetCategory(const Model::DescribeExposeAssetCategoryRequest &request);
+                void DescribeExposeAssetCategoryAsync(const Model::DescribeExposeAssetCategoryRequest& request, const DescribeExposeAssetCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExposeAssetCategoryOutcomeCallable DescribeExposeAssetCategoryCallable(const Model::DescribeExposeAssetCategoryRequest& request);
+
+                /**
+                 *Query the node of the cloud boundary analysis path.
+                 * @param req DescribeExposePathRequest
+                 * @return DescribeExposePathOutcome
+                 */
+                DescribeExposePathOutcome DescribeExposePath(const Model::DescribeExposePathRequest &request);
+                void DescribeExposePathAsync(const Model::DescribeExposePathRequest& request, const DescribeExposePathAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExposePathOutcomeCallable DescribeExposePathCallable(const Model::DescribeExposePathRequest& request);
+
+                /**
+                 *Cloud Boundary Analysis Asset List.
+                 * @param req DescribeExposuresRequest
+                 * @return DescribeExposuresOutcome
+                 */
+                DescribeExposuresOutcome DescribeExposures(const Model::DescribeExposuresRequest &request);
+                void DescribeExposuresAsync(const Model::DescribeExposuresRequest& request, const DescribeExposuresAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExposuresOutcomeCallable DescribeExposuresCallable(const Model::DescribeExposuresRequest& request);
+
+                /**
                  *Obtain Gateway List
                  * @param req DescribeGatewayAssetsRequest
                  * @return DescribeGatewayAssetsOutcome
@@ -370,6 +654,15 @@ namespace TencentCloud
                 DescribeGatewayAssetsOutcome DescribeGatewayAssets(const Model::DescribeGatewayAssetsRequest &request);
                 void DescribeGatewayAssetsAsync(const Model::DescribeGatewayAssetsRequest& request, const DescribeGatewayAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeGatewayAssetsOutcomeCallable DescribeGatewayAssetsCallable(const Model::DescribeGatewayAssetsRequest& request);
+
+                /**
+                 *Query the high-risk baseline risk list of host nodes under the exposed path in cloud boundary analysis.
+                 * @param req DescribeHighBaseLineRiskListRequest
+                 * @return DescribeHighBaseLineRiskListOutcome
+                 */
+                DescribeHighBaseLineRiskListOutcome DescribeHighBaseLineRiskList(const Model::DescribeHighBaseLineRiskListRequest &request);
+                void DescribeHighBaseLineRiskListAsync(const Model::DescribeHighBaseLineRiskListRequest& request, const DescribeHighBaseLineRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHighBaseLineRiskListOutcomeCallable DescribeHighBaseLineRiskListCallable(const Model::DescribeHighBaseLineRiskListRequest& request);
 
                 /**
                  *This API is used to query the list of TCP listeners.
@@ -471,6 +764,15 @@ namespace TencentCloud
                 DescribeRiskCenterAssetViewWeakPasswordRiskListOutcomeCallable DescribeRiskCenterAssetViewWeakPasswordRiskListCallable(const Model::DescribeRiskCenterAssetViewWeakPasswordRiskListRequest& request);
 
                 /**
+                 *Obtain Configuration Risk List from Configuration's Perspective
+                 * @param req DescribeRiskCenterCFGViewCFGRiskListRequest
+                 * @return DescribeRiskCenterCFGViewCFGRiskListOutcome
+                 */
+                DescribeRiskCenterCFGViewCFGRiskListOutcome DescribeRiskCenterCFGViewCFGRiskList(const Model::DescribeRiskCenterCFGViewCFGRiskListRequest &request);
+                void DescribeRiskCenterCFGViewCFGRiskListAsync(const Model::DescribeRiskCenterCFGViewCFGRiskListRequest& request, const DescribeRiskCenterCFGViewCFGRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRiskCenterCFGViewCFGRiskListOutcomeCallable DescribeRiskCenterCFGViewCFGRiskListCallable(const Model::DescribeRiskCenterCFGViewCFGRiskListRequest& request);
+
+                /**
                  *This API is used to query the list of port risks by ports.
                  * @param req DescribeRiskCenterPortViewPortRiskListRequest
                  * @return DescribeRiskCenterPortViewPortRiskListOutcome
@@ -516,6 +818,15 @@ namespace TencentCloud
                 DescribeScanReportListOutcomeCallable DescribeScanReportListCallable(const Model::DescribeScanReportListRequest& request);
 
                 /**
+                 *Query the statistical information of cloud boundary analysis scanning results.
+                 * @param req DescribeScanStatisticRequest
+                 * @return DescribeScanStatisticOutcome
+                 */
+                DescribeScanStatisticOutcome DescribeScanStatistic(const Model::DescribeScanStatisticRequest &request);
+                void DescribeScanStatisticAsync(const Model::DescribeScanStatisticRequest& request, const DescribeScanStatisticAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeScanStatisticOutcomeCallable DescribeScanStatisticCallable(const Model::DescribeScanStatisticRequest& request);
+
+                /**
                  *This API is used to get the list of scan tasks.
                  * @param req DescribeScanTaskListRequest
                  * @return DescribeScanTaskListOutcome
@@ -532,6 +843,15 @@ namespace TencentCloud
                 DescribeSearchBugInfoOutcome DescribeSearchBugInfo(const Model::DescribeSearchBugInfoRequest &request);
                 void DescribeSearchBugInfoAsync(const Model::DescribeSearchBugInfoRequest& request, const DescribeSearchBugInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSearchBugInfoOutcomeCallable DescribeSearchBugInfoCallable(const Model::DescribeSearchBugInfoRequest& request);
+
+                /**
+                 *This API is used to obtain user access key asset list (source IP perspective).
+                 * @param req DescribeSourceIPAssetRequest
+                 * @return DescribeSourceIPAssetOutcome
+                 */
+                DescribeSourceIPAssetOutcome DescribeSourceIPAsset(const Model::DescribeSourceIPAssetRequest &request);
+                void DescribeSourceIPAssetAsync(const Model::DescribeSourceIPAssetRequest& request, const DescribeSourceIPAssetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSourceIPAssetOutcomeCallable DescribeSourceIPAssetCallable(const Model::DescribeSourceIPAssetRequest& request);
 
                 /**
                  *Query the group's sub-account list
@@ -570,6 +890,24 @@ namespace TencentCloud
                 DescribeTaskLogURLOutcomeCallable DescribeTaskLogURLCallable(const Model::DescribeTaskLogURLRequest& request);
 
                 /**
+                 *Obtain account call record list.
+                 * @param req DescribeUserCallRecordRequest
+                 * @return DescribeUserCallRecordOutcome
+                 */
+                DescribeUserCallRecordOutcome DescribeUserCallRecord(const Model::DescribeUserCallRecordRequest &request);
+                void DescribeUserCallRecordAsync(const Model::DescribeUserCallRecordRequest& request, const DescribeUserCallRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserCallRecordOutcomeCallable DescribeUserCallRecordCallable(const Model::DescribeUserCallRecordRequest& request);
+
+                /**
+                 *Security Center Risk Center - List of Vulnerabilities.
+                 * @param req DescribeVULListRequest
+                 * @return DescribeVULListOutcome
+                 */
+                DescribeVULListOutcome DescribeVULList(const Model::DescribeVULListRequest &request);
+                void DescribeVULListAsync(const Model::DescribeVULListRequest& request, const DescribeVULListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVULListOutcomeCallable DescribeVULListCallable(const Model::DescribeVULListRequest& request);
+
+                /**
                  *This API is used to query the advanced configuration of vulnerability scan.
                  * @param req DescribeVULRiskAdvanceCFGListRequest
                  * @return DescribeVULRiskAdvanceCFGListOutcome
@@ -579,6 +917,15 @@ namespace TencentCloud
                 DescribeVULRiskAdvanceCFGListOutcomeCallable DescribeVULRiskAdvanceCFGListCallable(const Model::DescribeVULRiskAdvanceCFGListRequest& request);
 
                 /**
+                 *Retrieve vulnerability details.
+                 * @param req DescribeVULRiskDetailRequest
+                 * @return DescribeVULRiskDetailOutcome
+                 */
+                DescribeVULRiskDetailOutcome DescribeVULRiskDetail(const Model::DescribeVULRiskDetailRequest &request);
+                void DescribeVULRiskDetailAsync(const Model::DescribeVULRiskDetailRequest& request, const DescribeVULRiskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVULRiskDetailOutcomeCallable DescribeVULRiskDetailCallable(const Model::DescribeVULRiskDetailRequest& request);
+
+                /**
                  *This API is used to get the list of VPCs.
                  * @param req DescribeVpcAssetsRequest
                  * @return DescribeVpcAssetsOutcome
@@ -586,6 +933,24 @@ namespace TencentCloud
                 DescribeVpcAssetsOutcome DescribeVpcAssets(const Model::DescribeVpcAssetsRequest &request);
                 void DescribeVpcAssetsAsync(const Model::DescribeVpcAssetsRequest& request, const DescribeVpcAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVpcAssetsOutcomeCallable DescribeVpcAssetsCallable(const Model::DescribeVpcAssetsRequest& request);
+
+                /**
+                 *Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
+                 * @param req DescribeVulRiskListRequest
+                 * @return DescribeVulRiskListOutcome
+                 */
+                DescribeVulRiskListOutcome DescribeVulRiskList(const Model::DescribeVulRiskListRequest &request);
+                void DescribeVulRiskListAsync(const Model::DescribeVulRiskListRequest& request, const DescribeVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulRiskListOutcomeCallable DescribeVulRiskListCallable(const Model::DescribeVulRiskListRequest& request);
+
+                /**
+                 *Obtain Vulnerability Risk List from Vulnerability's Perspective
+                 * @param req DescribeVulViewVulRiskListRequest
+                 * @return DescribeVulViewVulRiskListOutcome
+                 */
+                DescribeVulViewVulRiskListOutcome DescribeVulViewVulRiskList(const Model::DescribeVulViewVulRiskListRequest &request);
+                void DescribeVulViewVulRiskListAsync(const Model::DescribeVulViewVulRiskListRequest& request, const DescribeVulViewVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulViewVulRiskListOutcomeCallable DescribeVulViewVulRiskListCallable(const Model::DescribeVulViewVulRiskListRequest& request);
 
                 /**
                  *Modify Group Account Status
@@ -606,6 +971,15 @@ namespace TencentCloud
                 ModifyRiskCenterRiskStatusOutcomeCallable ModifyRiskCenterRiskStatusCallable(const Model::ModifyRiskCenterRiskStatusRequest& request);
 
                 /**
+                 *Modify Risk Center Scan Task
+                 * @param req ModifyRiskCenterScanTaskRequest
+                 * @return ModifyRiskCenterScanTaskOutcome
+                 */
+                ModifyRiskCenterScanTaskOutcome ModifyRiskCenterScanTask(const Model::ModifyRiskCenterScanTaskRequest &request);
+                void ModifyRiskCenterScanTaskAsync(const Model::ModifyRiskCenterScanTaskRequest& request, const ModifyRiskCenterScanTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRiskCenterScanTaskOutcomeCallable ModifyRiskCenterScanTaskCallable(const Model::ModifyRiskCenterScanTaskRequest& request);
+
+                /**
                  *This API is used to stop a scan task. 
                  * @param req StopRiskCenterTaskRequest
                  * @return StopRiskCenterTaskOutcome
@@ -613,6 +987,24 @@ namespace TencentCloud
                 StopRiskCenterTaskOutcome StopRiskCenterTask(const Model::StopRiskCenterTaskRequest &request);
                 void StopRiskCenterTaskAsync(const Model::StopRiskCenterTaskRequest& request, const StopRiskCenterTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopRiskCenterTaskOutcomeCallable StopRiskCenterTaskCallable(const Model::StopRiskCenterTaskRequest& request);
+
+                /**
+                 *Tag the risk or Alarm as processed/ignored.
+                 * @param req UpdateAccessKeyAlarmStatusRequest
+                 * @return UpdateAccessKeyAlarmStatusOutcome
+                 */
+                UpdateAccessKeyAlarmStatusOutcome UpdateAccessKeyAlarmStatus(const Model::UpdateAccessKeyAlarmStatusRequest &request);
+                void UpdateAccessKeyAlarmStatusAsync(const Model::UpdateAccessKeyAlarmStatusRequest& request, const UpdateAccessKeyAlarmStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAccessKeyAlarmStatusOutcomeCallable UpdateAccessKeyAlarmStatusCallable(const Model::UpdateAccessKeyAlarmStatusRequest& request);
+
+                /**
+                 *Edit access key/Source IP remark.
+                 * @param req UpdateAccessKeyRemarkRequest
+                 * @return UpdateAccessKeyRemarkOutcome
+                 */
+                UpdateAccessKeyRemarkOutcome UpdateAccessKeyRemark(const Model::UpdateAccessKeyRemarkRequest &request);
+                void UpdateAccessKeyRemarkAsync(const Model::UpdateAccessKeyRemarkRequest& request, const UpdateAccessKeyRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAccessKeyRemarkOutcomeCallable UpdateAccessKeyRemarkCallable(const Model::UpdateAccessKeyRemarkRequest& request);
 
             };
         }
