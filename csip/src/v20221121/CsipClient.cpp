@@ -1940,6 +1940,56 @@ CsipClient::DescribeRepositoryImageAssetsOutcomeCallable CsipClient::DescribeRep
     return prom->get_future();
 }
 
+CsipClient::DescribeRiskCallRecordOutcome CsipClient::DescribeRiskCallRecord(const DescribeRiskCallRecordRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRiskCallRecord");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRiskCallRecordResponse rsp = DescribeRiskCallRecordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRiskCallRecordOutcome(rsp);
+        else
+            return DescribeRiskCallRecordOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRiskCallRecordOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeRiskCallRecordAsync(const DescribeRiskCallRecordRequest& request, const DescribeRiskCallRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRiskCallRecordRequest&;
+    using Resp = DescribeRiskCallRecordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCallRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeRiskCallRecordOutcomeCallable CsipClient::DescribeRiskCallRecordCallable(const DescribeRiskCallRecordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRiskCallRecordOutcome>>();
+    DescribeRiskCallRecordAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCallRecordRequest&,
+        DescribeRiskCallRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeRiskCenterAssetViewCFGRiskListOutcome CsipClient::DescribeRiskCenterAssetViewCFGRiskList(const DescribeRiskCenterAssetViewCFGRiskListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRiskCenterAssetViewCFGRiskList");

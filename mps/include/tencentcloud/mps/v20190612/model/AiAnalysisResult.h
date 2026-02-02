@@ -37,6 +37,8 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskDubbingResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoRemakeResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoComprehensionResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskCutoutResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskReelResult.h>
 
 
 namespace TencentCloud
@@ -60,55 +62,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-                     * @return Type Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+                     * 获取Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+                     * @return Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-                     * @param _type Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+                     * 设置Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+                     * @param _type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -429,20 +395,53 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VideoComprehensionTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AiAnalysisTaskCutoutResult GetCutoutTask() const;
+
+                    /**
+                     * 设置Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCutoutTask(const AiAnalysisTaskCutoutResult& _cutoutTask);
+
+                    /**
+                     * 判断参数 CutoutTask 是否已赋值
+                     * @return CutoutTask 是否已赋值
+                     * 
+                     */
+                    bool CutoutTaskHasBeenSet() const;
+
+                    /**
+                     * 获取Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AiAnalysisTaskReelResult GetReelTask() const;
+
+                    /**
+                     * 设置Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetReelTask(const AiAnalysisTaskReelResult& _reelTask);
+
+                    /**
+                     * 判断参数 ReelTask 是否已赋值
+                     * @return ReelTask 是否已赋值
+                     * 
+                     */
+                    bool ReelTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+                     * Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -533,6 +532,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiAnalysisTaskVideoComprehensionResult m_videoComprehensionTask;
                     bool m_videoComprehensionTaskHasBeenSet;
+
+                    /**
+                     * Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiAnalysisTaskCutoutResult m_cutoutTask;
+                    bool m_cutoutTaskHasBeenSet;
+
+                    /**
+                     * Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiAnalysisTaskReelResult m_reelTask;
+                    bool m_reelTaskHasBeenSet;
 
                 };
             }

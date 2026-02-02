@@ -241,6 +241,8 @@
 #include <tencentcloud/mps/v20190612/model/ProcessLiveStreamResponse.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaRequest.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaResponse.h>
+#include <tencentcloud/mps/v20190612/model/RecognizeAudioRequest.h>
+#include <tencentcloud/mps/v20190612/model/RecognizeAudioResponse.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowRequest.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h>
 #include <tencentcloud/mps/v20190612/model/TextTranslationRequest.h>
@@ -586,6 +588,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeAudioResponse> RecognizeAudioOutcome;
+                typedef std::future<RecognizeAudioOutcome> RecognizeAudioOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::RecognizeAudioRequest&, RecognizeAudioOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeAudioAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetWorkflowResponse> ResetWorkflowOutcome;
                 typedef std::future<ResetWorkflowOutcome> ResetWorkflowOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ResetWorkflowRequest&, ResetWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetWorkflowAsyncHandler;
@@ -633,7 +638,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
                 CreateAdaptiveDynamicStreamingTemplateOutcomeCallable CreateAdaptiveDynamicStreamingTemplateCallable(const Model::CreateAdaptiveDynamicStreamingTemplateRequest& request);
 
                 /**
-                 *This API is used to create an AIGC image generation task.
+                 *This API is used to create AIGC image generation tasks.
                  * @param req CreateAigcImageTaskRequest
                  * @return CreateAigcImageTaskOutcome
                  */
@@ -642,7 +647,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
                 CreateAigcImageTaskOutcomeCallable CreateAigcImageTaskCallable(const Model::CreateAigcImageTaskRequest& request);
 
                 /**
-                 *This API is used to create an AIGC video generation task.
+                 *This API is used to create AI video generation tasks.
                  * @param req CreateAigcVideoTaskRequest
                  * @return CreateAigcVideoTaskOutcome
                  */
@@ -1058,7 +1063,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable DescribeAdaptiveDynamicStreamingTemplatesCallable(const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest& request);
 
                 /**
-                 *This API is used to query the details of the AIGC image task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+                 *This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
                  * @param req DescribeAigcImageTaskRequest
                  * @return DescribeAigcImageTaskOutcome
                  */
@@ -1067,7 +1072,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAigcImageTaskOutcomeCallable DescribeAigcImageTaskCallable(const Model::DescribeAigcImageTaskRequest& request);
 
                 /**
-                 *This API is used to query the details of the AIGC video task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+                 *This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
                  * @param req DescribeAigcVideoTaskRequest
                  * @return DescribeAigcVideoTaskOutcome
                  */
@@ -1648,6 +1653,15 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
                 ProcessMediaOutcome ProcessMedia(const Model::ProcessMediaRequest &request);
                 void ProcessMediaAsync(const Model::ProcessMediaRequest& request, const ProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ProcessMediaOutcomeCallable ProcessMediaCallable(const Model::ProcessMediaRequest& request);
+
+                /**
+                 *This API is used to return the speech recognition results synchronously.
+                 * @param req RecognizeAudioRequest
+                 * @return RecognizeAudioOutcome
+                 */
+                RecognizeAudioOutcome RecognizeAudio(const Model::RecognizeAudioRequest &request);
+                void RecognizeAudioAsync(const Model::RecognizeAudioRequest& request, const RecognizeAudioAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeAudioOutcomeCallable RecognizeAudioCallable(const Model::RecognizeAudioRequest& request);
 
                 /**
                  *This API is used to reset an existing workflow that is disabled.

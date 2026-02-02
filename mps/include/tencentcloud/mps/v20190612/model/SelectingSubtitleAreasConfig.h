@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Area configurations for the subtitle OCR extraction box.
                 */
                 class SelectingSubtitleAreasConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AutoAreas 
+                     * 获取Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * @return AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置
-                     * @param _autoAreas 
+                     * 设置Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * @param _autoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleWidth 
+                     * 获取Width of the sample video or image, in pixels.
+                     * @return SampleWidth Width of the sample video or image, in pixels.
                      * 
                      */
                     uint64_t GetSampleWidth() const;
 
                     /**
-                     * 设置
-                     * @param _sampleWidth 
+                     * 设置Width of the sample video or image, in pixels.
+                     * @param _sampleWidth Width of the sample video or image, in pixels.
                      * 
                      */
                     void SetSampleWidth(const uint64_t& _sampleWidth);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SampleWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleHeight 
+                     * 获取Height of the sample video or image, in pixels.
+                     * @return SampleHeight Height of the sample video or image, in pixels.
                      * 
                      */
                     uint64_t GetSampleHeight() const;
 
                     /**
-                     * 设置
-                     * @param _sampleHeight 
+                     * 设置Height of the sample video or image, in pixels.
+                     * @param _sampleHeight Height of the sample video or image, in pixels.
                      * 
                      */
                     void SetSampleHeight(const uint64_t& _sampleHeight);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * 
+                     * Width of the sample video or image, in pixels.
                      */
                     uint64_t m_sampleWidth;
                     bool m_sampleWidthHasBeenSet;
 
                     /**
-                     * 
+                     * Height of the sample video or image, in pixels.
                      */
                     uint64_t m_sampleHeight;
                     bool m_sampleHeightHasBeenSet;

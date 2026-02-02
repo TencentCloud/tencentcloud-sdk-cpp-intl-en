@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AIGC image task processing task ID.
-                     * @return TaskId AIGC image task processing task ID.
+                     * 获取ID of the created AIGC image generation task.
+                     * @return TaskId ID of the created AIGC image generation task.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置AIGC image task processing task ID.
-                     * @param _taskId AIGC image task processing task ID.
+                     * 设置ID of the created AIGC image generation task.
+                     * @param _taskId ID of the created AIGC image generation task.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AIGC image task processing task ID.
+                     * ID of the created AIGC image generation task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

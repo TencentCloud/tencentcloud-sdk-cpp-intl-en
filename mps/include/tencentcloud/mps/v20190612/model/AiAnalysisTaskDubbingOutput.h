@@ -94,6 +94,27 @@ namespace TencentCloud
                     bool SpeakerPathHasBeenSet() const;
 
                     /**
+                     * 获取Voice type ID.
+                     * @return VoiceId Voice type ID.
+                     * 
+                     */
+                    std::string GetVoiceId() const;
+
+                    /**
+                     * 设置Voice type ID.
+                     * @param _voiceId Voice type ID.
+                     * 
+                     */
+                    void SetVoiceId(const std::string& _voiceId);
+
+                    /**
+                     * 判断参数 VoiceId 是否已赋值
+                     * @return VoiceId 是否已赋值
+                     * 
+                     */
+                    bool VoiceIdHasBeenSet() const;
+
+                    /**
                      * 获取Specifies the storage location of the transcoded video.
                      * @return OutputStorage Specifies the storage location of the transcoded video.
                      * 
@@ -128,6 +149,12 @@ namespace TencentCloud
                      */
                     std::string m_speakerPath;
                     bool m_speakerPathHasBeenSet;
+
+                    /**
+                     * Voice type ID.
+                     */
+                    std::string m_voiceId;
+                    bool m_voiceIdHasBeenSet;
 
                     /**
                      * Specifies the storage location of the transcoded video.

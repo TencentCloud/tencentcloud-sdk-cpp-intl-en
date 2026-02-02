@@ -48,6 +48,7 @@ set(csip_public_header_model
   include/tencentcloud/csip/v20221121/model/DataSearchBug.h
   include/tencentcloud/csip/v20221121/model/OrganizationUserInfo.h
   include/tencentcloud/csip/v20221121/model/AssetTag.h
+  include/tencentcloud/csip/v20221121/model/DescribeRiskCallRecordResponse.h
   include/tencentcloud/csip/v20221121/model/DescribeScanReportListRequest.h
   include/tencentcloud/csip/v20221121/model/IpAssetListVO.h
   include/tencentcloud/csip/v20221121/model/DescribeClusterAssetsRequest.h
@@ -224,12 +225,14 @@ set(csip_public_header_model
   include/tencentcloud/csip/v20221121/model/DescribeGatewayAssetsRequest.h
   include/tencentcloud/csip/v20221121/model/DescribeCFWAssetStatisticsRequest.h
   include/tencentcloud/csip/v20221121/model/DescribeAccessKeyUserListResponse.h
+  include/tencentcloud/csip/v20221121/model/DescribeRiskCallRecordRequest.h
   include/tencentcloud/csip/v20221121/model/DescribeOtherCloudAssetsResponse.h
   include/tencentcloud/csip/v20221121/model/AssetCluster.h
   include/tencentcloud/csip/v20221121/model/CreateDomainAndIpResponse.h
   include/tencentcloud/csip/v20221121/model/UpdateAccessKeyRemarkRequest.h
   include/tencentcloud/csip/v20221121/model/DescribeTaskLogListResponse.h
   include/tencentcloud/csip/v20221121/model/DescribeExposuresResponse.h
+  include/tencentcloud/csip/v20221121/model/RiskCallRecord.h
   include/tencentcloud/csip/v20221121/model/DescribeRiskCenterAssetViewPortRiskListResponse.h
   include/tencentcloud/csip/v20221121/model/DescribeVULRiskAdvanceCFGListRequest.h
   include/tencentcloud/csip/v20221121/model/DescribeHighBaseLineRiskListRequest.h
@@ -267,6 +270,7 @@ set(csip_src
   src/v20221121/model/DataSearchBug.cpp
   src/v20221121/model/OrganizationUserInfo.cpp
   src/v20221121/model/AssetTag.cpp
+  src/v20221121/model/DescribeRiskCallRecordResponse.cpp
   src/v20221121/model/DescribeScanReportListRequest.cpp
   src/v20221121/model/IpAssetListVO.cpp
   src/v20221121/model/DescribeClusterAssetsRequest.cpp
@@ -443,12 +447,14 @@ set(csip_src
   src/v20221121/model/DescribeGatewayAssetsRequest.cpp
   src/v20221121/model/DescribeCFWAssetStatisticsRequest.cpp
   src/v20221121/model/DescribeAccessKeyUserListResponse.cpp
+  src/v20221121/model/DescribeRiskCallRecordRequest.cpp
   src/v20221121/model/DescribeOtherCloudAssetsResponse.cpp
   src/v20221121/model/AssetCluster.cpp
   src/v20221121/model/CreateDomainAndIpResponse.cpp
   src/v20221121/model/UpdateAccessKeyRemarkRequest.cpp
   src/v20221121/model/DescribeTaskLogListResponse.cpp
   src/v20221121/model/DescribeExposuresResponse.cpp
+  src/v20221121/model/RiskCallRecord.cpp
   src/v20221121/model/DescribeRiskCenterAssetViewPortRiskListResponse.cpp
   src/v20221121/model/DescribeVULRiskAdvanceCFGListRequest.cpp
   src/v20221121/model/DescribeHighBaseLineRiskListRequest.cpp

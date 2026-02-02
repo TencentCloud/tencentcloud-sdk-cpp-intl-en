@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
-                     * @return TaskId Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
+                     * 获取ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
+                     * @return TaskId ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +62,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
+                     * ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

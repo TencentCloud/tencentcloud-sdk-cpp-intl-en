@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CNAME status of accelerated domain names.
-                     * @return CnameStatus CNAME status of accelerated domain names.
+                     * 获取Integration of the CNAME of the domain name configuration status information list.
+                     * @return CnameStatus Integration of the CNAME of the domain name configuration status information list.
                      * 
                      */
                     std::vector<CnameStatus> GetCnameStatus() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CNAME status of accelerated domain names.
+                     * Integration of the CNAME of the domain name configuration status information list.
                      */
                     std::vector<CnameStatus> m_cnameStatus;
                     bool m_cnameStatusHasBeenSet;

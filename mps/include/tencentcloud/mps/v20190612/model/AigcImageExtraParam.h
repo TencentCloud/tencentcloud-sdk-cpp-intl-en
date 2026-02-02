@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extended parameters used for AIGC image generation.
                 */
                 class AigcImageExtraParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AspectRatio 
+                     * 获取The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+                     * @return AspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置
-                     * @param _aspectRatio 
+                     * 设置The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+                     * @param _aspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Resolution 
+                     * 获取Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+                     * @return Resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置
-                     * @param _resolution 
+                     * 设置Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+                     * @param _resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * 
+                     * Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;

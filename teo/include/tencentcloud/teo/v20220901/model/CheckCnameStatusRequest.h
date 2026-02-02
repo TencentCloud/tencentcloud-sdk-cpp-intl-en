@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of accelerated domain names.
-                     * @return RecordNames List of accelerated domain names.
+                     * 获取The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+                     * @return RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
                      * 
                      */
                     std::vector<std::string> GetRecordNames() const;
 
                     /**
-                     * 设置List of accelerated domain names.
-                     * @param _recordNames List of accelerated domain names.
+                     * 设置The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+                     * @param _recordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
                      * 
                      */
                     void SetRecordNames(const std::vector<std::string>& _recordNames);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of accelerated domain names.
+                     * The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
                      */
                     std::vector<std::string> m_recordNames;
                     bool m_recordNamesHasBeenSet;

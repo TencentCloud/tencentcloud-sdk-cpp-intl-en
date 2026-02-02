@@ -44,16 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
-                     * @return Status Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
+                     * 获取Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+                     * @return Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
                      * 
                      */
                     std::string GetStatus() const;
@@ -66,8 +58,8 @@ DONE: Task completed successfully.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
-                     * @return VideoUrls When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
+                     * 获取When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
+                     * @return VideoUrls When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
                      * 
                      */
                     std::vector<std::string> GetVideoUrls() const;
@@ -80,8 +72,8 @@ DONE: Task completed successfully.
                     bool VideoUrlsHasBeenSet() const;
 
                     /**
-                     * 获取The resolution of the output video. Example: 1080*720.
-                     * @return Resolution The resolution of the output video. Example: 1080*720.
+                     * 获取Output video resolution. Example: 1080*720.
+                     * @return Resolution Output video resolution. Example: 1080*720.
                      * 
                      */
                     std::string GetResolution() const;
@@ -110,23 +102,19 @@ DONE: Task completed successfully.
                 private:
 
                     /**
-                     * Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
+                     * Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
+                     * When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
                      */
                     std::vector<std::string> m_videoUrls;
                     bool m_videoUrlsHasBeenSet;
 
                     /**
-                     * The resolution of the output video. Example: 1080*720.
+                     * Output video resolution. Example: 1080*720.
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;

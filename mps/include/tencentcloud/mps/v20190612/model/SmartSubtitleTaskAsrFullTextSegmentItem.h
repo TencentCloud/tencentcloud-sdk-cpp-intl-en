@@ -160,6 +160,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool WordlistHasBeenSet() const;
 
+                    /**
+                     * 获取Speaker ID (if speaker recognition is enabled).
+                     * @return SpeakerId Speaker ID (if speaker recognition is enabled).
+                     * 
+                     */
+                    std::string GetSpeakerId() const;
+
+                    /**
+                     * 设置Speaker ID (if speaker recognition is enabled).
+                     * @param _speakerId Speaker ID (if speaker recognition is enabled).
+                     * 
+                     */
+                    void SetSpeakerId(const std::string& _speakerId);
+
+                    /**
+                     * 判断参数 SpeakerId 是否已赋值
+                     * @return SpeakerId 是否已赋值
+                     * 
+                     */
+                    bool SpeakerIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -193,6 +214,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<WordResult> m_wordlist;
                     bool m_wordlistHasBeenSet;
+
+                    /**
+                     * Speaker ID (if speaker recognition is enabled).
+                     */
+                    std::string m_speakerId;
+                    bool m_speakerIdHasBeenSet;
 
                 };
             }

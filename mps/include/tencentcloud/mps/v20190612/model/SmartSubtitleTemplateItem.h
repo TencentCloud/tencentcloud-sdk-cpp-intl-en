@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/AsrHotWordsConfigure.h>
+#include <tencentcloud/mps/v20190612/model/SelectingSubtitleAreasConfig.h>
 
 
 namespace TencentCloud
@@ -327,35 +328,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool VideoSrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleFormat Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubtitleFormat Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleFormat Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subtitleFormat Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -614,23 +599,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AliasNameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
-                     * @return ProcessType Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+                     * 获取Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+                     * @return ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
                      * 
                      */
                     uint64_t GetProcessType() const;
 
                     /**
-                     * 设置Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
-                     * @param _processType Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+                     * 设置Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+                     * @param _processType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
                      * 
                      */
                     void SetProcessType(const uint64_t& _processType);
@@ -641,6 +618,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool ProcessTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SelectingSubtitleAreasConfig GetSelectingSubtitleAreasConfig() const;
+
+                    /**
+                     * 设置Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _selectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSelectingSubtitleAreasConfig(const SelectingSubtitleAreasConfig& _selectingSubtitleAreasConfig);
+
+                    /**
+                     * 判断参数 SelectingSubtitleAreasConfig 是否已赋值
+                     * @return SelectingSubtitleAreasConfig 是否已赋值
+                     * 
+                     */
+                    bool SelectingSubtitleAreasConfigHasBeenSet() const;
 
                 private:
 
@@ -720,12 +718,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_videoSrcLanguageHasBeenSet;
 
                     /**
-                     * Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
@@ -797,12 +791,16 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_aliasNameHasBeenSet;
 
                     /**
-                     * Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+                     * Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
                      */
                     uint64_t m_processType;
                     bool m_processTypeHasBeenSet;
+
+                    /**
+                     * Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SelectingSubtitleAreasConfig m_selectingSubtitleAreasConfig;
+                    bool m_selectingSubtitleAreasConfigHasBeenSet;
 
                 };
             }

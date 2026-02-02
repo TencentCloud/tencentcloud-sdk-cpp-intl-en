@@ -97,6 +97,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool OutputStorageHasBeenSet() const;
 
+                    /**
+                     * 获取Processing result of the image-to-text task.
+                     * @return Content Processing result of the image-to-text task.
+                     * 
+                     */
+                    std::string GetContent() const;
+
+                    /**
+                     * 设置Processing result of the image-to-text task.
+                     * @param _content Processing result of the image-to-text task.
+                     * 
+                     */
+                    void SetContent(const std::string& _content);
+
+                    /**
+                     * 判断参数 Content 是否已赋值
+                     * @return Content 是否已赋值
+                     * 
+                     */
+                    bool ContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -112,6 +133,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
+
+                    /**
+                     * Processing result of the image-to-text task.
+                     */
+                    std::string m_content;
+                    bool m_contentHasBeenSet;
 
                 };
             }

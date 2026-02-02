@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AIGC video task processing task ID.
-                     * @return TaskId AIGC video task processing task ID.
+                     * 获取Task ID returned when the AIGC video generation task is created.
+                     * @return TaskId Task ID returned when the AIGC video generation task is created.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置AIGC video task processing task ID.
-                     * @param _taskId AIGC video task processing task ID.
+                     * 设置Task ID returned when the AIGC video generation task is created.
+                     * @param _taskId Task ID returned when the AIGC video generation task is created.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AIGC video task processing task ID.
+                     * Task ID returned when the AIGC video generation task is created.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

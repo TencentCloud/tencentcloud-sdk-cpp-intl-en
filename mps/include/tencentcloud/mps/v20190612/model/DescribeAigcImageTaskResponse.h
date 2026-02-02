@@ -44,18 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
-
-                     * @return Status Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
-
+                     * 获取Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+                     * @return Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
                      * 
                      */
                     std::string GetStatus() const;
@@ -68,8 +58,8 @@ DONE: Task completed successfully.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取When the task status is DONE, the returned image URL list will be available for 12 hours. Please retrieve and utilize the images promptly.
-                     * @return ImageUrls When the task status is DONE, the returned image URL list will be available for 12 hours. Please retrieve and utilize the images promptly.
+                     * 获取When the task status is DONE, the list of image URLs is returned. The images are stored for 12 hours. Please retrieve them as soon as possible.
+                     * @return ImageUrls When the task status is DONE, the list of image URLs is returned. The images are stored for 12 hours. Please retrieve them as soon as possible.
                      * 
                      */
                     std::vector<std::string> GetImageUrls() const;
@@ -98,18 +88,13 @@ DONE: Task completed successfully.
                 private:
 
                     /**
-                     * Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
-
+                     * Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * When the task status is DONE, the returned image URL list will be available for 12 hours. Please retrieve and utilize the images promptly.
+                     * When the task status is DONE, the list of image URLs is returned. The images are stored for 12 hours. Please retrieve them as soon as possible.
                      */
                     std::vector<std::string> m_imageUrls;
                     bool m_imageUrlsHasBeenSet;
