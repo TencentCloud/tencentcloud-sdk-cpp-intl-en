@@ -190,6 +190,56 @@ HunyuanClient::Describe3DSmartTopologyJobOutcomeCallable HunyuanClient::Describe
     return prom->get_future();
 }
 
+HunyuanClient::DescribeHunyuanTo3DUVJobOutcome HunyuanClient::DescribeHunyuanTo3DUVJob(const DescribeHunyuanTo3DUVJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHunyuanTo3DUVJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHunyuanTo3DUVJobResponse rsp = DescribeHunyuanTo3DUVJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHunyuanTo3DUVJobOutcome(rsp);
+        else
+            return DescribeHunyuanTo3DUVJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHunyuanTo3DUVJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::DescribeHunyuanTo3DUVJobAsync(const DescribeHunyuanTo3DUVJobRequest& request, const DescribeHunyuanTo3DUVJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHunyuanTo3DUVJobRequest&;
+    using Resp = DescribeHunyuanTo3DUVJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHunyuanTo3DUVJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::DescribeHunyuanTo3DUVJobOutcomeCallable HunyuanClient::DescribeHunyuanTo3DUVJobCallable(const DescribeHunyuanTo3DUVJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHunyuanTo3DUVJobOutcome>>();
+    DescribeHunyuanTo3DUVJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const DescribeHunyuanTo3DUVJobRequest&,
+        DescribeHunyuanTo3DUVJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 HunyuanClient::QueryHunyuan3DPartJobOutcome HunyuanClient::QueryHunyuan3DPartJob(const QueryHunyuan3DPartJobRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryHunyuan3DPartJob");
@@ -332,6 +382,56 @@ HunyuanClient::QueryHunyuanTo3DRapidJobOutcomeCallable HunyuanClient::QueryHunyu
         const HunyuanClient*,
         const QueryHunyuanTo3DRapidJobRequest&,
         QueryHunyuanTo3DRapidJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+HunyuanClient::QueryHunyuanTo3DTextureEditJobOutcome HunyuanClient::QueryHunyuanTo3DTextureEditJob(const QueryHunyuanTo3DTextureEditJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryHunyuanTo3DTextureEditJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryHunyuanTo3DTextureEditJobResponse rsp = QueryHunyuanTo3DTextureEditJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryHunyuanTo3DTextureEditJobOutcome(rsp);
+        else
+            return QueryHunyuanTo3DTextureEditJobOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryHunyuanTo3DTextureEditJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::QueryHunyuanTo3DTextureEditJobAsync(const QueryHunyuanTo3DTextureEditJobRequest& request, const QueryHunyuanTo3DTextureEditJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const QueryHunyuanTo3DTextureEditJobRequest&;
+    using Resp = QueryHunyuanTo3DTextureEditJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "QueryHunyuanTo3DTextureEditJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::QueryHunyuanTo3DTextureEditJobOutcomeCallable HunyuanClient::QueryHunyuanTo3DTextureEditJobCallable(const QueryHunyuanTo3DTextureEditJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<QueryHunyuanTo3DTextureEditJobOutcome>>();
+    QueryHunyuanTo3DTextureEditJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const QueryHunyuanTo3DTextureEditJobRequest&,
+        QueryHunyuanTo3DTextureEditJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -532,6 +632,106 @@ HunyuanClient::SubmitHunyuanTo3DRapidJobOutcomeCallable HunyuanClient::SubmitHun
         const HunyuanClient*,
         const SubmitHunyuanTo3DRapidJobRequest&,
         SubmitHunyuanTo3DRapidJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+HunyuanClient::SubmitHunyuanTo3DTextureEditJobOutcome HunyuanClient::SubmitHunyuanTo3DTextureEditJob(const SubmitHunyuanTo3DTextureEditJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "SubmitHunyuanTo3DTextureEditJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SubmitHunyuanTo3DTextureEditJobResponse rsp = SubmitHunyuanTo3DTextureEditJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SubmitHunyuanTo3DTextureEditJobOutcome(rsp);
+        else
+            return SubmitHunyuanTo3DTextureEditJobOutcome(o.GetError());
+    }
+    else
+    {
+        return SubmitHunyuanTo3DTextureEditJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::SubmitHunyuanTo3DTextureEditJobAsync(const SubmitHunyuanTo3DTextureEditJobRequest& request, const SubmitHunyuanTo3DTextureEditJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SubmitHunyuanTo3DTextureEditJobRequest&;
+    using Resp = SubmitHunyuanTo3DTextureEditJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SubmitHunyuanTo3DTextureEditJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::SubmitHunyuanTo3DTextureEditJobOutcomeCallable HunyuanClient::SubmitHunyuanTo3DTextureEditJobCallable(const SubmitHunyuanTo3DTextureEditJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SubmitHunyuanTo3DTextureEditJobOutcome>>();
+    SubmitHunyuanTo3DTextureEditJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const SubmitHunyuanTo3DTextureEditJobRequest&,
+        SubmitHunyuanTo3DTextureEditJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+HunyuanClient::SubmitHunyuanTo3DUVJobOutcome HunyuanClient::SubmitHunyuanTo3DUVJob(const SubmitHunyuanTo3DUVJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "SubmitHunyuanTo3DUVJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SubmitHunyuanTo3DUVJobResponse rsp = SubmitHunyuanTo3DUVJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SubmitHunyuanTo3DUVJobOutcome(rsp);
+        else
+            return SubmitHunyuanTo3DUVJobOutcome(o.GetError());
+    }
+    else
+    {
+        return SubmitHunyuanTo3DUVJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::SubmitHunyuanTo3DUVJobAsync(const SubmitHunyuanTo3DUVJobRequest& request, const SubmitHunyuanTo3DUVJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SubmitHunyuanTo3DUVJobRequest&;
+    using Resp = SubmitHunyuanTo3DUVJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SubmitHunyuanTo3DUVJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::SubmitHunyuanTo3DUVJobOutcomeCallable HunyuanClient::SubmitHunyuanTo3DUVJobCallable(const SubmitHunyuanTo3DUVJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SubmitHunyuanTo3DUVJobOutcome>>();
+    SubmitHunyuanTo3DUVJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const SubmitHunyuanTo3DUVJobRequest&,
+        SubmitHunyuanTo3DUVJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

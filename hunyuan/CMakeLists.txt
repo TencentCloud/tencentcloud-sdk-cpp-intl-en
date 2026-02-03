@@ -27,21 +27,30 @@ set(hunyuan_public_header_model
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/TranslationChoice.h
   include/tencentcloud/hunyuan/v20230901/model/ChatTranslationsResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DTextureEditJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Usage.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/ChatTranslationsRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/File3D.h
   include/tencentcloud/hunyuan/v20230901/model/PromptTokensDetails.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DTextureEditJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/File3D.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/InputFile3D.h
   include/tencentcloud/hunyuan/v20230901/model/TranslationDelta.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/Reference.h
+  include/tencentcloud/hunyuan/v20230901/model/ImageInfo.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/ErrorMsg.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h
@@ -61,21 +70,30 @@ set(hunyuan_src
   src/v20230901/model/QueryHunyuanTo3DRapidJobResponse.cpp
   src/v20230901/model/TranslationChoice.cpp
   src/v20230901/model/ChatTranslationsResponse.cpp
+  src/v20230901/model/SubmitHunyuanTo3DTextureEditJobRequest.cpp
   src/v20230901/model/Usage.cpp
+  src/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.cpp
   src/v20230901/model/ChatTranslationsRequest.cpp
-  src/v20230901/model/Submit3DSmartTopologyJobResponse.cpp
-  src/v20230901/model/File3D.cpp
   src/v20230901/model/PromptTokensDetails.cpp
+  src/v20230901/model/SubmitHunyuanTo3DUVJobRequest.cpp
+  src/v20230901/model/Submit3DSmartTopologyJobResponse.cpp
+  src/v20230901/model/SubmitHunyuanTo3DTextureEditJobResponse.cpp
+  src/v20230901/model/File3D.cpp
+  src/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.cpp
   src/v20230901/model/InputFile3D.cpp
   src/v20230901/model/TranslationDelta.cpp
   src/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.cpp
+  src/v20230901/model/SubmitHunyuanTo3DUVJobResponse.cpp
   src/v20230901/model/SubmitHunyuan3DPartJobResponse.cpp
   src/v20230901/model/SubmitHunyuanTo3DProJobRequest.cpp
+  src/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.cpp
   src/v20230901/model/Convert3DFormatResponse.cpp
-  src/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.cpp
+  src/v20230901/model/DescribeHunyuanTo3DUVJobRequest.cpp
   src/v20230901/model/SubmitHunyuan3DPartJobRequest.cpp
   src/v20230901/model/Describe3DSmartTopologyJobResponse.cpp
+  src/v20230901/model/DescribeHunyuanTo3DUVJobResponse.cpp
   src/v20230901/model/Reference.cpp
+  src/v20230901/model/ImageInfo.cpp
   src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
   src/v20230901/model/ErrorMsg.cpp
   src/v20230901/model/QueryHunyuanTo3DProJobResponse.cpp

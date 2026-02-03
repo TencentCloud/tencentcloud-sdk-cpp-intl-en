@@ -29,12 +29,16 @@
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h>
@@ -43,6 +47,10 @@
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DTextureEditJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DTextureEditJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobResponse.h>
 
 
 namespace TencentCloud
@@ -66,6 +74,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Describe3DSmartTopologyJobResponse> Describe3DSmartTopologyJobOutcome;
                 typedef std::future<Describe3DSmartTopologyJobOutcome> Describe3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Describe3DSmartTopologyJobRequest&, Describe3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Describe3DSmartTopologyJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHunyuanTo3DUVJobResponse> DescribeHunyuanTo3DUVJobOutcome;
+                typedef std::future<DescribeHunyuanTo3DUVJobOutcome> DescribeHunyuanTo3DUVJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::DescribeHunyuanTo3DUVJobRequest&, DescribeHunyuanTo3DUVJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHunyuanTo3DUVJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryHunyuan3DPartJobResponse> QueryHunyuan3DPartJobOutcome;
                 typedef std::future<QueryHunyuan3DPartJobOutcome> QueryHunyuan3DPartJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuan3DPartJobRequest&, QueryHunyuan3DPartJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuan3DPartJobAsyncHandler;
@@ -75,6 +86,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryHunyuanTo3DRapidJobResponse> QueryHunyuanTo3DRapidJobOutcome;
                 typedef std::future<QueryHunyuanTo3DRapidJobOutcome> QueryHunyuanTo3DRapidJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuanTo3DRapidJobRequest&, QueryHunyuanTo3DRapidJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuanTo3DRapidJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryHunyuanTo3DTextureEditJobResponse> QueryHunyuanTo3DTextureEditJobOutcome;
+                typedef std::future<QueryHunyuanTo3DTextureEditJobOutcome> QueryHunyuanTo3DTextureEditJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::QueryHunyuanTo3DTextureEditJobRequest&, QueryHunyuanTo3DTextureEditJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuanTo3DTextureEditJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::Submit3DSmartTopologyJobResponse> Submit3DSmartTopologyJobOutcome;
                 typedef std::future<Submit3DSmartTopologyJobOutcome> Submit3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Submit3DSmartTopologyJobRequest&, Submit3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Submit3DSmartTopologyJobAsyncHandler;
@@ -87,6 +101,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SubmitHunyuanTo3DRapidJobResponse> SubmitHunyuanTo3DRapidJobOutcome;
                 typedef std::future<SubmitHunyuanTo3DRapidJobOutcome> SubmitHunyuanTo3DRapidJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuanTo3DRapidJobRequest&, SubmitHunyuanTo3DRapidJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuanTo3DRapidJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitHunyuanTo3DTextureEditJobResponse> SubmitHunyuanTo3DTextureEditJobOutcome;
+                typedef std::future<SubmitHunyuanTo3DTextureEditJobOutcome> SubmitHunyuanTo3DTextureEditJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuanTo3DTextureEditJobRequest&, SubmitHunyuanTo3DTextureEditJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuanTo3DTextureEditJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitHunyuanTo3DUVJobResponse> SubmitHunyuanTo3DUVJobOutcome;
+                typedef std::future<SubmitHunyuanTo3DUVJobOutcome> SubmitHunyuanTo3DUVJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuanTo3DUVJobRequest&, SubmitHunyuanTo3DUVJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuanTo3DUVJobAsyncHandler;
 
 
 
@@ -124,6 +144,15 @@ namespace TencentCloud
                 Describe3DSmartTopologyJobOutcomeCallable Describe3DSmartTopologyJobCallable(const Model::Describe3DSmartTopologyJobRequest& request);
 
                 /**
+                 *Query component splitting tasks.
+                 * @param req DescribeHunyuanTo3DUVJobRequest
+                 * @return DescribeHunyuanTo3DUVJobOutcome
+                 */
+                DescribeHunyuanTo3DUVJobOutcome DescribeHunyuanTo3DUVJob(const Model::DescribeHunyuanTo3DUVJobRequest &request);
+                void DescribeHunyuanTo3DUVJobAsync(const Model::DescribeHunyuanTo3DUVJobRequest& request, const DescribeHunyuanTo3DUVJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHunyuanTo3DUVJobOutcomeCallable DescribeHunyuanTo3DUVJobCallable(const Model::DescribeHunyuanTo3DUVJobRequest& request);
+
+                /**
                  *This API is used to query the generation task of a component.
                  * @param req QueryHunyuan3DPartJobRequest
                  * @return QueryHunyuan3DPartJobOutcome
@@ -151,6 +180,15 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 QueryHunyuanTo3DRapidJobOutcome QueryHunyuanTo3DRapidJob(const Model::QueryHunyuanTo3DRapidJobRequest &request);
                 void QueryHunyuanTo3DRapidJobAsync(const Model::QueryHunyuanTo3DRapidJobRequest& request, const QueryHunyuanTo3DRapidJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryHunyuanTo3DRapidJobOutcomeCallable QueryHunyuanTo3DRapidJobCallable(const Model::QueryHunyuanTo3DRapidJobRequest& request);
+
+                /**
+                 *Query 3D texture edit tasks.
+                 * @param req QueryHunyuanTo3DTextureEditJobRequest
+                 * @return QueryHunyuanTo3DTextureEditJobOutcome
+                 */
+                QueryHunyuanTo3DTextureEditJobOutcome QueryHunyuanTo3DTextureEditJob(const Model::QueryHunyuanTo3DTextureEditJobRequest &request);
+                void QueryHunyuanTo3DTextureEditJobAsync(const Model::QueryHunyuanTo3DTextureEditJobRequest& request, const QueryHunyuanTo3DTextureEditJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryHunyuanTo3DTextureEditJobOutcomeCallable QueryHunyuanTo3DTextureEditJobCallable(const Model::QueryHunyuanTo3DTextureEditJobRequest& request);
 
                 /**
                  *The SmartTopoly API uses the Polygen 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
@@ -190,6 +228,24 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 SubmitHunyuanTo3DRapidJobOutcome SubmitHunyuanTo3DRapidJob(const Model::SubmitHunyuanTo3DRapidJobRequest &request);
                 void SubmitHunyuanTo3DRapidJobAsync(const Model::SubmitHunyuanTo3DRapidJobRequest& request, const SubmitHunyuanTo3DRapidJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SubmitHunyuanTo3DRapidJobOutcomeCallable SubmitHunyuanTo3DRapidJobCallable(const Model::SubmitHunyuanTo3DRapidJobRequest& request);
+
+                /**
+                 *After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+                 * @param req SubmitHunyuanTo3DTextureEditJobRequest
+                 * @return SubmitHunyuanTo3DTextureEditJobOutcome
+                 */
+                SubmitHunyuanTo3DTextureEditJobOutcome SubmitHunyuanTo3DTextureEditJob(const Model::SubmitHunyuanTo3DTextureEditJobRequest &request);
+                void SubmitHunyuanTo3DTextureEditJobAsync(const Model::SubmitHunyuanTo3DTextureEditJobRequest& request, const SubmitHunyuanTo3DTextureEditJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitHunyuanTo3DTextureEditJobOutcomeCallable SubmitHunyuanTo3DTextureEditJobCallable(const Model::SubmitHunyuanTo3DTextureEditJobRequest& request);
+
+                /**
+                 *After inputting the model, UV unfolding can be performed based on the model texture to output the corresponding UV texture
+                 * @param req SubmitHunyuanTo3DUVJobRequest
+                 * @return SubmitHunyuanTo3DUVJobOutcome
+                 */
+                SubmitHunyuanTo3DUVJobOutcome SubmitHunyuanTo3DUVJob(const Model::SubmitHunyuanTo3DUVJobRequest &request);
+                void SubmitHunyuanTo3DUVJobAsync(const Model::SubmitHunyuanTo3DUVJobRequest& request, const SubmitHunyuanTo3DUVJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitHunyuanTo3DUVJobOutcomeCallable SubmitHunyuanTo3DUVJobCallable(const Model::SubmitHunyuanTo3DUVJobRequest& request);
 
             };
         }

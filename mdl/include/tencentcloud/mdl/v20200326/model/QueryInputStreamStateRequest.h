@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The StreamLive input ID.
-                     * @return Id The StreamLive input ID.
+                     * 获取The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+                     * @return Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The StreamLive input ID.
-                     * @param _id The StreamLive input ID.
+                     * 设置The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+                     * @param _id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The StreamLive input ID.
+                     * The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
