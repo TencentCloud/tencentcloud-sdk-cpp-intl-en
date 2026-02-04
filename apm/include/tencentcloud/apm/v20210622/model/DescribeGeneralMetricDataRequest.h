@@ -197,13 +197,13 @@ namespace TencentCloud
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
                      * @return Period Whether to aggregate by a fixed time span: enter 1 for values of 1 and greater, and 0 if not filled in.
 -If 0 is filled in, it calculates the metric data from the start time to the cutoff time.
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
                      * 
                      */
                     int64_t GetPeriod() const;
@@ -214,13 +214,13 @@ namespace TencentCloud
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
                      * @param _period Whether to aggregate by a fixed time span: enter 1 for values of 1 and greater, and 0 if not filled in.
 -If 0 is filled in, it calculates the metric data from the start time to the cutoff time.
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -340,7 +340,7 @@ Value: specify the sorting method:.
 - if 1 is filled in, the aggregation granularity will be selected according to the time span from the start time to the deadline:.
  -If the time span is (0,12) hours, it is aggregated by one-minute granularity.
  -If the time span is [12,48] hours, it is aggregated at a five-minute granularity.
- -If the time span is (48, +∞) hours, it is aggregated at an hourly granularity.
+ -If the time span is (48, +inf) hours, it is aggregated at an hourly granularity.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;

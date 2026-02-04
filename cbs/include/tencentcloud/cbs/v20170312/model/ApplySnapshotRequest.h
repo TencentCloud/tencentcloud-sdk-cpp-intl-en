@@ -85,15 +85,19 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to shut down a CVM automatically before a rollback
-                     * @return AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+                     * 获取Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+                     * @return AutoStopInstance Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
                      * 
                      */
                     bool GetAutoStopInstance() const;
 
                     /**
-                     * 设置Specifies whether to shut down a CVM automatically before a rollback
-                     * @param _autoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+                     * 设置Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+                     * @param _autoStopInstance Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
                      * 
                      */
                     void SetAutoStopInstance(const bool& _autoStopInstance);
@@ -106,15 +110,15 @@ namespace TencentCloud
                     bool AutoStopInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to start up a CVM automatically after a rollback
-                     * @return AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+                     * 获取Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
+                     * @return AutoStartInstance Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
                      * 
                      */
                     bool GetAutoStartInstance() const;
 
                     /**
-                     * 设置Specifies whether to start up a CVM automatically after a rollback
-                     * @param _autoStartInstance Specifies whether to start up a CVM automatically after a rollback
+                     * 设置Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
+                     * @param _autoStartInstance Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
                      * 
                      */
                     void SetAutoStartInstance(const bool& _autoStartInstance);
@@ -141,13 +145,14 @@ namespace TencentCloud
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Specifies whether to shut down a CVM automatically before a rollback
+                     * Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
                      */
                     bool m_autoStopInstance;
                     bool m_autoStopInstanceHasBeenSet;
 
                     /**
-                     * Specifies whether to start up a CVM automatically after a rollback
+                     * Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
                      */
                     bool m_autoStartInstance;
                     bool m_autoStartInstanceHasBeenSet;

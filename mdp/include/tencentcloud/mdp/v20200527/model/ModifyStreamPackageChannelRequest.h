@@ -109,21 +109,21 @@ namespace TencentCloud
                     /**
                      * 获取Cache configuration.
                      * @return CacheInfo Cache configuration.
-                     * 
+                     * @deprecated
                      */
                     CacheInfo GetCacheInfo() const;
 
                     /**
                      * 设置Cache configuration.
                      * @param _cacheInfo Cache configuration.
-                     * 
+                     * @deprecated
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
 
                     /**
                      * 判断参数 CacheInfo 是否已赋值
                      * @return CacheInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CacheInfoHasBeenSet() const;
 

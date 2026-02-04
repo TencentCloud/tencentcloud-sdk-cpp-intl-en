@@ -1240,6 +1240,56 @@ VpcClient::CheckNetDetectStateOutcomeCallable VpcClient::CheckNetDetectStateCall
     return prom->get_future();
 }
 
+VpcClient::CheckTrafficMirrorOutcome VpcClient::CheckTrafficMirror(const CheckTrafficMirrorRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckTrafficMirror");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckTrafficMirrorResponse rsp = CheckTrafficMirrorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckTrafficMirrorOutcome(rsp);
+        else
+            return CheckTrafficMirrorOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckTrafficMirrorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CheckTrafficMirrorAsync(const CheckTrafficMirrorRequest& request, const CheckTrafficMirrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckTrafficMirrorRequest&;
+    using Resp = CheckTrafficMirrorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckTrafficMirror", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::CheckTrafficMirrorOutcomeCallable VpcClient::CheckTrafficMirrorCallable(const CheckTrafficMirrorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckTrafficMirrorOutcome>>();
+    CheckTrafficMirrorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const CheckTrafficMirrorRequest&,
+        CheckTrafficMirrorOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::CloneSecurityGroupOutcome VpcClient::CloneSecurityGroup(const CloneSecurityGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "CloneSecurityGroup");
@@ -2982,6 +3032,56 @@ VpcClient::CreateSubnetsOutcomeCallable VpcClient::CreateSubnetsCallable(const C
         const VpcClient*,
         const CreateSubnetsRequest&,
         CreateSubnetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::CreateTrafficMirrorOutcome VpcClient::CreateTrafficMirror(const CreateTrafficMirrorRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateTrafficMirror");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateTrafficMirrorResponse rsp = CreateTrafficMirrorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateTrafficMirrorOutcome(rsp);
+        else
+            return CreateTrafficMirrorOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateTrafficMirrorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateTrafficMirrorAsync(const CreateTrafficMirrorRequest& request, const CreateTrafficMirrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateTrafficMirrorRequest&;
+    using Resp = CreateTrafficMirrorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateTrafficMirror", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::CreateTrafficMirrorOutcomeCallable VpcClient::CreateTrafficMirrorCallable(const CreateTrafficMirrorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateTrafficMirrorOutcome>>();
+    CreateTrafficMirrorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const CreateTrafficMirrorRequest&,
+        CreateTrafficMirrorOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4882,6 +4982,56 @@ VpcClient::DeleteTemplateMemberOutcomeCallable VpcClient::DeleteTemplateMemberCa
         const VpcClient*,
         const DeleteTemplateMemberRequest&,
         DeleteTemplateMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::DeleteTrafficMirrorOutcome VpcClient::DeleteTrafficMirror(const DeleteTrafficMirrorRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTrafficMirror");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTrafficMirrorResponse rsp = DeleteTrafficMirrorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTrafficMirrorOutcome(rsp);
+        else
+            return DeleteTrafficMirrorOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTrafficMirrorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteTrafficMirrorAsync(const DeleteTrafficMirrorRequest& request, const DeleteTrafficMirrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteTrafficMirrorRequest&;
+    using Resp = DeleteTrafficMirrorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteTrafficMirror", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::DeleteTrafficMirrorOutcomeCallable VpcClient::DeleteTrafficMirrorCallable(const DeleteTrafficMirrorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteTrafficMirrorOutcome>>();
+    DeleteTrafficMirrorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const DeleteTrafficMirrorRequest&,
+        DeleteTrafficMirrorOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -8132,6 +8282,56 @@ VpcClient::DescribeTaskResultOutcomeCallable VpcClient::DescribeTaskResultCallab
         const VpcClient*,
         const DescribeTaskResultRequest&,
         DescribeTaskResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::DescribeTrafficMirrorsOutcome VpcClient::DescribeTrafficMirrors(const DescribeTrafficMirrorsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTrafficMirrors");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTrafficMirrorsResponse rsp = DescribeTrafficMirrorsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTrafficMirrorsOutcome(rsp);
+        else
+            return DescribeTrafficMirrorsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTrafficMirrorsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeTrafficMirrorsAsync(const DescribeTrafficMirrorsRequest& request, const DescribeTrafficMirrorsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTrafficMirrorsRequest&;
+    using Resp = DescribeTrafficMirrorsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTrafficMirrors", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::DescribeTrafficMirrorsOutcomeCallable VpcClient::DescribeTrafficMirrorsCallable(const DescribeTrafficMirrorsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTrafficMirrorsOutcome>>();
+    DescribeTrafficMirrorsAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const DescribeTrafficMirrorsRequest&,
+        DescribeTrafficMirrorsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -12690,6 +12890,56 @@ VpcClient::ModifyTemplateMemberOutcomeCallable VpcClient::ModifyTemplateMemberCa
     return prom->get_future();
 }
 
+VpcClient::ModifyTrafficMirrorAttributeOutcome VpcClient::ModifyTrafficMirrorAttribute(const ModifyTrafficMirrorAttributeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyTrafficMirrorAttribute");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyTrafficMirrorAttributeResponse rsp = ModifyTrafficMirrorAttributeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyTrafficMirrorAttributeOutcome(rsp);
+        else
+            return ModifyTrafficMirrorAttributeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyTrafficMirrorAttributeOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyTrafficMirrorAttributeAsync(const ModifyTrafficMirrorAttributeRequest& request, const ModifyTrafficMirrorAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyTrafficMirrorAttributeRequest&;
+    using Resp = ModifyTrafficMirrorAttributeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyTrafficMirrorAttribute", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::ModifyTrafficMirrorAttributeOutcomeCallable VpcClient::ModifyTrafficMirrorAttributeCallable(const ModifyTrafficMirrorAttributeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyTrafficMirrorAttributeOutcome>>();
+    ModifyTrafficMirrorAttributeAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const ModifyTrafficMirrorAttributeRequest&,
+        ModifyTrafficMirrorAttributeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::ModifyVpcAttributeOutcome VpcClient::ModifyVpcAttribute(const ModifyVpcAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyVpcAttribute");
@@ -14140,6 +14390,156 @@ VpcClient::ResetRoutesOutcomeCallable VpcClient::ResetRoutesCallable(const Reset
     return prom->get_future();
 }
 
+VpcClient::ResetTrafficMirrorFilterOutcome VpcClient::ResetTrafficMirrorFilter(const ResetTrafficMirrorFilterRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetTrafficMirrorFilter");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetTrafficMirrorFilterResponse rsp = ResetTrafficMirrorFilterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetTrafficMirrorFilterOutcome(rsp);
+        else
+            return ResetTrafficMirrorFilterOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetTrafficMirrorFilterOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ResetTrafficMirrorFilterAsync(const ResetTrafficMirrorFilterRequest& request, const ResetTrafficMirrorFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetTrafficMirrorFilterRequest&;
+    using Resp = ResetTrafficMirrorFilterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetTrafficMirrorFilter", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::ResetTrafficMirrorFilterOutcomeCallable VpcClient::ResetTrafficMirrorFilterCallable(const ResetTrafficMirrorFilterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetTrafficMirrorFilterOutcome>>();
+    ResetTrafficMirrorFilterAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const ResetTrafficMirrorFilterRequest&,
+        ResetTrafficMirrorFilterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::ResetTrafficMirrorSrcsOutcome VpcClient::ResetTrafficMirrorSrcs(const ResetTrafficMirrorSrcsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetTrafficMirrorSrcs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetTrafficMirrorSrcsResponse rsp = ResetTrafficMirrorSrcsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetTrafficMirrorSrcsOutcome(rsp);
+        else
+            return ResetTrafficMirrorSrcsOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetTrafficMirrorSrcsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ResetTrafficMirrorSrcsAsync(const ResetTrafficMirrorSrcsRequest& request, const ResetTrafficMirrorSrcsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetTrafficMirrorSrcsRequest&;
+    using Resp = ResetTrafficMirrorSrcsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetTrafficMirrorSrcs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::ResetTrafficMirrorSrcsOutcomeCallable VpcClient::ResetTrafficMirrorSrcsCallable(const ResetTrafficMirrorSrcsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetTrafficMirrorSrcsOutcome>>();
+    ResetTrafficMirrorSrcsAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const ResetTrafficMirrorSrcsRequest&,
+        ResetTrafficMirrorSrcsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::ResetTrafficMirrorTargetOutcome VpcClient::ResetTrafficMirrorTarget(const ResetTrafficMirrorTargetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetTrafficMirrorTarget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetTrafficMirrorTargetResponse rsp = ResetTrafficMirrorTargetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetTrafficMirrorTargetOutcome(rsp);
+        else
+            return ResetTrafficMirrorTargetOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetTrafficMirrorTargetOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ResetTrafficMirrorTargetAsync(const ResetTrafficMirrorTargetRequest& request, const ResetTrafficMirrorTargetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetTrafficMirrorTargetRequest&;
+    using Resp = ResetTrafficMirrorTargetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetTrafficMirrorTarget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::ResetTrafficMirrorTargetOutcomeCallable VpcClient::ResetTrafficMirrorTargetCallable(const ResetTrafficMirrorTargetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetTrafficMirrorTargetOutcome>>();
+    ResetTrafficMirrorTargetAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const ResetTrafficMirrorTargetRequest&,
+        ResetTrafficMirrorTargetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::ResetVpnConnectionOutcome VpcClient::ResetVpnConnection(const ResetVpnConnectionRequest &request)
 {
     auto outcome = MakeRequest(request, "ResetVpnConnection");
@@ -14440,6 +14840,106 @@ VpcClient::SetVpnGatewaysRenewFlagOutcomeCallable VpcClient::SetVpnGatewaysRenew
     return prom->get_future();
 }
 
+VpcClient::StartTrafficMirrorOutcome VpcClient::StartTrafficMirror(const StartTrafficMirrorRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartTrafficMirror");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartTrafficMirrorResponse rsp = StartTrafficMirrorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartTrafficMirrorOutcome(rsp);
+        else
+            return StartTrafficMirrorOutcome(o.GetError());
+    }
+    else
+    {
+        return StartTrafficMirrorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::StartTrafficMirrorAsync(const StartTrafficMirrorRequest& request, const StartTrafficMirrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StartTrafficMirrorRequest&;
+    using Resp = StartTrafficMirrorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StartTrafficMirror", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::StartTrafficMirrorOutcomeCallable VpcClient::StartTrafficMirrorCallable(const StartTrafficMirrorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StartTrafficMirrorOutcome>>();
+    StartTrafficMirrorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const StartTrafficMirrorRequest&,
+        StartTrafficMirrorOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::StopTrafficMirrorOutcome VpcClient::StopTrafficMirror(const StopTrafficMirrorRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopTrafficMirror");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopTrafficMirrorResponse rsp = StopTrafficMirrorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopTrafficMirrorOutcome(rsp);
+        else
+            return StopTrafficMirrorOutcome(o.GetError());
+    }
+    else
+    {
+        return StopTrafficMirrorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::StopTrafficMirrorAsync(const StopTrafficMirrorRequest& request, const StopTrafficMirrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StopTrafficMirrorRequest&;
+    using Resp = StopTrafficMirrorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StopTrafficMirror", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::StopTrafficMirrorOutcomeCallable VpcClient::StopTrafficMirrorCallable(const StopTrafficMirrorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StopTrafficMirrorOutcome>>();
+    StopTrafficMirrorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const StopTrafficMirrorRequest&,
+        StopTrafficMirrorOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::TransformAddressOutcome VpcClient::TransformAddress(const TransformAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "TransformAddress");
@@ -14682,6 +15182,106 @@ VpcClient::UnassignPrivateIpAddressesOutcomeCallable VpcClient::UnassignPrivateI
         const VpcClient*,
         const UnassignPrivateIpAddressesRequest&,
         UnassignPrivateIpAddressesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::UpdateTrafficMirrorAllFilterOutcome VpcClient::UpdateTrafficMirrorAllFilter(const UpdateTrafficMirrorAllFilterRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateTrafficMirrorAllFilter");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateTrafficMirrorAllFilterResponse rsp = UpdateTrafficMirrorAllFilterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateTrafficMirrorAllFilterOutcome(rsp);
+        else
+            return UpdateTrafficMirrorAllFilterOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateTrafficMirrorAllFilterOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::UpdateTrafficMirrorAllFilterAsync(const UpdateTrafficMirrorAllFilterRequest& request, const UpdateTrafficMirrorAllFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateTrafficMirrorAllFilterRequest&;
+    using Resp = UpdateTrafficMirrorAllFilterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateTrafficMirrorAllFilter", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::UpdateTrafficMirrorAllFilterOutcomeCallable VpcClient::UpdateTrafficMirrorAllFilterCallable(const UpdateTrafficMirrorAllFilterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateTrafficMirrorAllFilterOutcome>>();
+    UpdateTrafficMirrorAllFilterAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const UpdateTrafficMirrorAllFilterRequest&,
+        UpdateTrafficMirrorAllFilterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::UpdateTrafficMirrorDirectionOutcome VpcClient::UpdateTrafficMirrorDirection(const UpdateTrafficMirrorDirectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateTrafficMirrorDirection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateTrafficMirrorDirectionResponse rsp = UpdateTrafficMirrorDirectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateTrafficMirrorDirectionOutcome(rsp);
+        else
+            return UpdateTrafficMirrorDirectionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateTrafficMirrorDirectionOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::UpdateTrafficMirrorDirectionAsync(const UpdateTrafficMirrorDirectionRequest& request, const UpdateTrafficMirrorDirectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateTrafficMirrorDirectionRequest&;
+    using Resp = UpdateTrafficMirrorDirectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateTrafficMirrorDirection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::UpdateTrafficMirrorDirectionOutcomeCallable VpcClient::UpdateTrafficMirrorDirectionCallable(const UpdateTrafficMirrorDirectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateTrafficMirrorDirectionOutcome>>();
+    UpdateTrafficMirrorDirectionAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const UpdateTrafficMirrorDirectionRequest&,
+        UpdateTrafficMirrorDirectionOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

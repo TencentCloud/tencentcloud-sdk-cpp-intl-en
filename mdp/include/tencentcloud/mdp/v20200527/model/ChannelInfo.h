@@ -137,7 +137,7 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return CacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
-                     * 
+                     * @deprecated
                      */
                     CacheInfo GetCacheInfo() const;
 
@@ -146,14 +146,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @param _cacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
-                     * 
+                     * @deprecated
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
 
                     /**
                      * 判断参数 CacheInfo 是否已赋值
                      * @return CacheInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CacheInfoHasBeenSet() const;
 

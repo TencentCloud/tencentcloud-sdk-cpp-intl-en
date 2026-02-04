@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGESOURCEREQUEST_H_
-#define TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGESOURCEREQUEST_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_STOPTRAFFICMIRRORREQUEST_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_STOPTRAFFICMIRRORREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,51 +25,51 @@
 
 namespace TencentCloud
 {
-    namespace Mdp
+    namespace Vpc
     {
-        namespace V20200527
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * DeleteStreamPackageSource request structure.
+                * StopTrafficMirror request structure.
                 */
-                class DeleteStreamPackageSourceRequest : public AbstractModel
+                class StopTrafficMirrorRequest : public AbstractModel
                 {
                 public:
-                    DeleteStreamPackageSourceRequest();
-                    ~DeleteStreamPackageSourceRequest() = default;
+                    StopTrafficMirrorRequest();
+                    ~StopTrafficMirrorRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Source Id.
-                     * @return Id Source Id.
+                     * 获取Traffic mirroring instance ID.
+                     * @return TrafficMirrorId Traffic mirroring instance ID.
                      * 
                      */
-                    std::string GetId() const;
+                    std::string GetTrafficMirrorId() const;
 
                     /**
-                     * 设置Source Id.
-                     * @param _id Source Id.
+                     * 设置Traffic mirroring instance ID.
+                     * @param _trafficMirrorId Traffic mirroring instance ID.
                      * 
                      */
-                    void SetId(const std::string& _id);
+                    void SetTrafficMirrorId(const std::string& _trafficMirrorId);
 
                     /**
-                     * 判断参数 Id 是否已赋值
-                     * @return Id 是否已赋值
+                     * 判断参数 TrafficMirrorId 是否已赋值
+                     * @return TrafficMirrorId 是否已赋值
                      * 
                      */
-                    bool IdHasBeenSet() const;
+                    bool TrafficMirrorIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Source Id.
+                     * Traffic mirroring instance ID.
                      */
-                    std::string m_id;
-                    bool m_idHasBeenSet;
+                    std::string m_trafficMirrorId;
+                    bool m_trafficMirrorIdHasBeenSet;
 
                 };
             }
@@ -77,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGESOURCEREQUEST_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_STOPTRAFFICMIRRORREQUEST_H_
