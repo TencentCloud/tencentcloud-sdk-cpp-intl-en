@@ -46,10 +46,10 @@ namespace TencentCloud
 
                     /**
                      * 获取File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
                      * @return File3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
                      * 
                      */
@@ -57,10 +57,10 @@ Supported formats: FBX, OBJ, GLB
 
                     /**
                      * 设置File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
                      * @param _file3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
                      * 
                      */
@@ -168,7 +168,7 @@ Example value: true
 
                     /**
                      * File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
                      */
                     InputFile3D m_file3D;
