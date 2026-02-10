@@ -67,27 +67,6 @@ namespace TencentCloud
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-                     * @return Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-                     * 
-                     */
-                    std::vector<std::string> GetDestination() const;
-
-                    /**
-                     * 设置Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-                     * @param _destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-                     * 
-                     */
-                    void SetDestination(const std::vector<std::string>& _destination);
-
-                    /**
-                     * 判断参数 Destination 是否已赋值
-                     * @return Destination 是否已赋值
-                     * 
-                     */
-                    bool DestinationHasBeenSet() const;
-
-                    /**
                      * 获取Email subject.
                      * @return Subject Email subject.
                      * 
@@ -107,6 +86,31 @@ namespace TencentCloud
                      * 
                      */
                     bool SubjectHasBeenSet() const;
+
+                    /**
+                     * 获取Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * @return Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * 
+                     */
+                    std::vector<std::string> GetDestination() const;
+
+                    /**
+                     * 设置Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * @param _destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * 
+                     */
+                    void SetDestination(const std::vector<std::string>& _destination);
+
+                    /**
+                     * 判断参数 Destination 是否已赋值
+                     * @return Destination 是否已赋值
+                     * 
+                     */
+                    bool DestinationHasBeenSet() const;
 
                     /**
                      * 获取The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
@@ -356,16 +360,17 @@ namespace TencentCloud
                     bool m_fromEmailAddressHasBeenSet;
 
                     /**
-                     * Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-                     */
-                    std::vector<std::string> m_destination;
-                    bool m_destinationHasBeenSet;
-
-                    /**
                      * Email subject.
                      */
                     std::string m_subject;
                     bool m_subjectHasBeenSet;
+
+                    /**
+                     * Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     */
+                    std::vector<std::string> m_destination;
+                    bool m_destinationHasBeenSet;
 
                     /**
                      * The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.

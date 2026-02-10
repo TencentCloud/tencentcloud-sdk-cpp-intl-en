@@ -33,7 +33,8 @@ CreateAccountRequest::CreateAccountRequest() :
     m_verifyCodeHasBeenSet(false),
     m_tradeOneHasBeenSet(false),
     m_tradeTwoHasBeenSet(false),
-    m_extendedHasBeenSet(false)
+    m_extendedHasBeenSet(false),
+    m_customerNameHasBeenSet(false)
 {
 }
 
@@ -130,6 +131,14 @@ string CreateAccountRequest::ToJsonString() const
         string key = "Extended";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extended.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_customerNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomerName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerName.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -314,6 +323,22 @@ void CreateAccountRequest::SetExtended(const string& _extended)
 bool CreateAccountRequest::ExtendedHasBeenSet() const
 {
     return m_extendedHasBeenSet;
+}
+
+string CreateAccountRequest::GetCustomerName() const
+{
+    return m_customerName;
+}
+
+void CreateAccountRequest::SetCustomerName(const string& _customerName)
+{
+    m_customerName = _customerName;
+    m_customerNameHasBeenSet = true;
+}
+
+bool CreateAccountRequest::CustomerNameHasBeenSet() const
+{
+    return m_customerNameHasBeenSet;
 }
 
 

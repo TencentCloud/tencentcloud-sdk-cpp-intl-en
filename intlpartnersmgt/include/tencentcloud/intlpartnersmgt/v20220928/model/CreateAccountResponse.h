@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool UinHasBeenSet() const;
 
+                    /**
+                     * 获取Binding Results
+                     * @return Reason Binding Results
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
+
+                    /**
+                     * Binding Results
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

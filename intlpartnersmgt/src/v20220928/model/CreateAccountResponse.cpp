@@ -24,7 +24,8 @@ using namespace TencentCloud::Intlpartnersmgt::V20220928::Model;
 using namespace std;
 
 CreateAccountResponse::CreateAccountResponse() :
-    m_uinHasBeenSet(false)
+    m_uinHasBeenSet(false),
+    m_reasonHasBeenSet(false)
 {
 }
 
@@ -72,6 +73,16 @@ CoreInternalOutcome CreateAccountResponse::Deserialize(const string &payload)
         m_uinHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Reason") && !rsp["Reason"].IsNull())
+    {
+        if (!rsp["Reason"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Reason` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_reason = string(rsp["Reason"].GetString());
+        m_reasonHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -88,6 +99,14 @@ string CreateAccountResponse::ToJsonString() const
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_uin.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_reasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Reason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reason.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,6 +129,16 @@ string CreateAccountResponse::GetUin() const
 bool CreateAccountResponse::UinHasBeenSet() const
 {
     return m_uinHasBeenSet;
+}
+
+string CreateAccountResponse::GetReason() const
+{
+    return m_reason;
+}
+
+bool CreateAccountResponse::ReasonHasBeenSet() const
+{
+    return m_reasonHasBeenSet;
 }
 
 

@@ -313,6 +313,35 @@ such as "kghy_0101"
                      */
                     bool ExtendedHasBeenSet() const;
 
+                    /**
+                     * 获取For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+                     * @return CustomerName For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+                     * 
+                     */
+                    std::string GetCustomerName() const;
+
+                    /**
+                     * 设置For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+                     * @param _customerName For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+                     * 
+                     */
+                    void SetCustomerName(const std::string& _customerName);
+
+                    /**
+                     * 判断参数 CustomerName 是否已赋值
+                     * @return CustomerName 是否已赋值
+                     * 
+                     */
+                    bool CustomerNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -390,6 +419,14 @@ such as "kghy_0101"
                      */
                     std::string m_extended;
                     bool m_extendedHasBeenSet;
+
+                    /**
+                     * For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+                     */
+                    std::string m_customerName;
+                    bool m_customerNameHasBeenSet;
 
                 };
             }
