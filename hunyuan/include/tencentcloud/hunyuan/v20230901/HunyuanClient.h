@@ -182,7 +182,7 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 QueryHunyuanTo3DRapidJobOutcomeCallable QueryHunyuanTo3DRapidJobCallable(const Model::QueryHunyuanTo3DRapidJobRequest& request);
 
                 /**
-                 *Query 3D texture edit tasks.
+                 *Query 3D texture edit tasks, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
                  * @param req QueryHunyuanTo3DTextureEditJobRequest
                  * @return QueryHunyuanTo3DTextureEditJobOutcome
                  */
@@ -230,7 +230,7 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 SubmitHunyuanTo3DRapidJobOutcomeCallable SubmitHunyuanTo3DRapidJobCallable(const Model::SubmitHunyuanTo3DRapidJobRequest& request);
 
                 /**
-                 *After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+                 *After inputting the 3D model, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
                  * @param req SubmitHunyuanTo3DTextureEditJobRequest
                  * @return SubmitHunyuanTo3DTextureEditJobOutcome
                  */

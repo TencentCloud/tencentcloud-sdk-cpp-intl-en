@@ -97,8 +97,8 @@ Example value: RUN
                     bool ErrorMessageHasBeenSet() const;
 
                     /**
-                     * 获取Generate the file URL with a valid period of 1 day
-                     * @return ResultFile3Ds Generate the file URL with a valid period of 1 day
+                     * 获取The URL address for generating texture files is valid for 1 day.
+                     * @return ResultFile3Ds The URL address for generating texture files is valid for 1 day.
                      * 
                      */
                     std::vector<File3D> GetResultFile3Ds() const;
@@ -136,7 +136,7 @@ Example value: RUN
                     bool m_errorMessageHasBeenSet;
 
                     /**
-                     * Generate the file URL with a valid period of 1 day
+                     * The URL address for generating texture files is valid for 1 day.
                      */
                     std::vector<File3D> m_resultFile3Ds;
                     bool m_resultFile3DsHasBeenSet;

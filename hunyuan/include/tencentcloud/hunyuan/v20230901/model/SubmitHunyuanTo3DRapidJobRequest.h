@@ -138,6 +138,39 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
                     bool ImageUrlHasBeenSet() const;
 
                     /**
+                     * 获取Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+                     * @return ResultFormat Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+                     * 
+                     */
+                    std::string GetResultFormat() const;
+
+                    /**
+                     * 设置Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+                     * @param _resultFormat Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+                     * 
+                     */
+                    void SetResultFormat(const std::string& _resultFormat);
+
+                    /**
+                     * 判断参数 ResultFormat 是否已赋值
+                     * @return ResultFormat 是否已赋值
+                     * 
+                     */
+                    bool ResultFormatHasBeenSet() const;
+
+                    /**
                      * 获取Specifies whether PBR material generation is enabled, false by default.	
                      * @return EnablePBR Specifies whether PBR material generation is enabled, false by default.	
                      * 
@@ -218,6 +251,15 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;
+
+                    /**
+                     * Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+                     */
+                    std::string m_resultFormat;
+                    bool m_resultFormatHasBeenSet;
 
                     /**
                      * Specifies whether PBR material generation is enabled, false by default.	

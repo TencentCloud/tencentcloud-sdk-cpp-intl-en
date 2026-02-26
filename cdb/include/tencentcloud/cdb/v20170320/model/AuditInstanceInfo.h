@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Database engine type.
-                     * @return DbType Database engine type.
+                     * 获取Database kernel type.
+                     * @return DbType Database kernel type.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database engine type.
-                     * @param _dbType Database engine type.
+                     * 设置Database kernel type.
+                     * @param _dbType Database kernel type.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version.
-                     * @return DbVersion Database engine version.
+                     * 获取Database kernel version.
+                     * @return DbVersion Database kernel version.
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置Database engine version.
-                     * @param _dbVersion Database engine version.
+                     * 设置Database kernel version.
+                     * @param _dbVersion Database kernel version.
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -146,13 +146,13 @@ namespace TencentCloud
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Database engine type.
+                     * Database kernel type.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Database engine version.
+                     * Database kernel version.
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;

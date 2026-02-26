@@ -26,6 +26,7 @@ SubmitHunyuanTo3DRapidJobRequest::SubmitHunyuanTo3DRapidJobRequest() :
     m_promptHasBeenSet(false),
     m_imageBase64HasBeenSet(false),
     m_imageUrlHasBeenSet(false),
+    m_resultFormatHasBeenSet(false),
     m_enablePBRHasBeenSet(false),
     m_enableGeometryHasBeenSet(false)
 {
@@ -60,6 +61,14 @@ string SubmitHunyuanTo3DRapidJobRequest::ToJsonString() const
         string key = "ImageUrl";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_imageUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resultFormatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResultFormat";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resultFormat.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enablePBRHasBeenSet)
@@ -132,6 +141,22 @@ void SubmitHunyuanTo3DRapidJobRequest::SetImageUrl(const string& _imageUrl)
 bool SubmitHunyuanTo3DRapidJobRequest::ImageUrlHasBeenSet() const
 {
     return m_imageUrlHasBeenSet;
+}
+
+string SubmitHunyuanTo3DRapidJobRequest::GetResultFormat() const
+{
+    return m_resultFormat;
+}
+
+void SubmitHunyuanTo3DRapidJobRequest::SetResultFormat(const string& _resultFormat)
+{
+    m_resultFormat = _resultFormat;
+    m_resultFormatHasBeenSet = true;
+}
+
+bool SubmitHunyuanTo3DRapidJobRequest::ResultFormatHasBeenSet() const
+{
+    return m_resultFormatHasBeenSet;
 }
 
 bool SubmitHunyuanTo3DRapidJobRequest::GetEnablePBR() const

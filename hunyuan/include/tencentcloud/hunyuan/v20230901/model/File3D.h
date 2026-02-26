@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 3D file.
+                * 3D model related files, files or textures.
                 */
                 class File3D : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取3D file format. valid values: GIF, OBJ.
-                     * @return Type 3D file format. valid values: GIF, OBJ.
+                     * 获取3D model or texture. valid values: GIF or OBJ or Image.
+                     * @return Type 3D model or texture. valid values: GIF or OBJ or Image.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置3D file format. valid values: GIF, OBJ.
-                     * @param _type 3D file format. valid values: GIF, OBJ.
+                     * 设置3D model or texture. valid values: GIF or OBJ or Image.
+                     * @param _type 3D model or texture. valid values: GIF or OBJ or Image.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 3D file format. valid values: GIF, OBJ.
+                     * 3D model or texture. valid values: GIF or OBJ or Image.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
