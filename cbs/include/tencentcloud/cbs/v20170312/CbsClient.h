@@ -93,6 +93,8 @@
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotAttributeResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotsSharePermissionRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotsSharePermissionResponse.h>
+#include <tencentcloud/cbs/v20170312/model/RenewDiskRequest.h>
+#include <tencentcloud/cbs/v20170312/model/RenewDiskResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ResizeDiskRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ResizeDiskResponse.h>
 #include <tencentcloud/cbs/v20170312/model/TerminateDisksRequest.h>
@@ -218,6 +220,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySnapshotsSharePermissionResponse> ModifySnapshotsSharePermissionOutcome;
                 typedef std::future<ModifySnapshotsSharePermissionOutcome> ModifySnapshotsSharePermissionOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifySnapshotsSharePermissionRequest&, ModifySnapshotsSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotsSharePermissionAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewDiskResponse> RenewDiskOutcome;
+                typedef std::future<RenewDiskOutcome> RenewDiskOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::RenewDiskRequest&, RenewDiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewDiskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResizeDiskResponse> ResizeDiskOutcome;
                 typedef std::future<ResizeDiskOutcome> ResizeDiskOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ResizeDiskRequest&, ResizeDiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResizeDiskAsyncHandler;
@@ -624,6 +629,17 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
                 ModifySnapshotsSharePermissionOutcome ModifySnapshotsSharePermission(const Model::ModifySnapshotsSharePermissionRequest &request);
                 void ModifySnapshotsSharePermissionAsync(const Model::ModifySnapshotsSharePermissionRequest& request, const ModifySnapshotsSharePermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySnapshotsSharePermissionOutcomeCallable ModifySnapshotsSharePermissionCallable(const Model::ModifySnapshotsSharePermissionRequest& request);
+
+                /**
+                 *This API is used to renew cloud disks.
+
+This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be at the expiry date after the instance is renewed.
+                 * @param req RenewDiskRequest
+                 * @return RenewDiskOutcome
+                 */
+                RenewDiskOutcome RenewDisk(const Model::RenewDiskRequest &request);
+                void RenewDiskAsync(const Model::RenewDiskRequest& request, const RenewDiskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewDiskOutcomeCallable RenewDiskCallable(const Model::RenewDiskRequest& request);
 
                 /**
                  *This API is used to expand cloud disks. 

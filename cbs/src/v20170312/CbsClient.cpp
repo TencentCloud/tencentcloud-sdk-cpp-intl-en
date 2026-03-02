@@ -1790,6 +1790,56 @@ CbsClient::ModifySnapshotsSharePermissionOutcomeCallable CbsClient::ModifySnapsh
     return prom->get_future();
 }
 
+CbsClient::RenewDiskOutcome CbsClient::RenewDisk(const RenewDiskRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewDisk");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewDiskResponse rsp = RenewDiskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewDiskOutcome(rsp);
+        else
+            return RenewDiskOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewDiskOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::RenewDiskAsync(const RenewDiskRequest& request, const RenewDiskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RenewDiskRequest&;
+    using Resp = RenewDiskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RenewDisk", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::RenewDiskOutcomeCallable CbsClient::RenewDiskCallable(const RenewDiskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RenewDiskOutcome>>();
+    RenewDiskAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const RenewDiskRequest&,
+        RenewDiskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CbsClient::ResizeDiskOutcome CbsClient::ResizeDisk(const ResizeDiskRequest &request)
 {
     auto outcome = MakeRequest(request, "ResizeDisk");

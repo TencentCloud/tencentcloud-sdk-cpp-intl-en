@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EncryptListHasBeenSet() const;
 
                     /**
-                     * 获取Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
-                     * @return CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+                     * 获取Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
+                     * @return CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
                      * 
                      */
                     std::string GetCiphertextBlob() const;
 
                     /**
-                     * 设置Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
-                     * @param _ciphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+                     * 设置Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
+                     * @param _ciphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
                      * 
                      */
                     void SetCiphertextBlob(const std::string& _ciphertextBlob);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_encryptListHasBeenSet;
 
                     /**
-                     * Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+                     * Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
                      */
                     std::string m_ciphertextBlob;
                     bool m_ciphertextBlobHasBeenSet;

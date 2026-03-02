@@ -483,18 +483,18 @@ The default value is blink.
                     bool ActionListHasBeenSet() const;
 
                     /**
-                     * 获取Control liveness retry number.The value range is 1-99.
+                     * 获取Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
-                     * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+                     * @return LivenessRetryLimit Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
                      * 
                      */
                     int64_t GetLivenessRetryLimit() const;
 
                     /**
-                     * 设置Control liveness retry number.The value range is 1-99.
+                     * 设置Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
-                     * @param _livenessRetryLimit Control liveness retry number.The value range is 1-99.
+                     * @param _livenessRetryLimit Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
                      * 
                      */
@@ -508,18 +508,18 @@ The default value is 99.
                     bool LivenessRetryLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * 获取Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
-                     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
                      * 
                      */
                     uint64_t GetLivenessTimeout() const;
 
                     /**
-                     * 设置Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * 设置Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
-                     * @param _livenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * @param _livenessTimeout Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
                      * 
                      */
@@ -731,14 +731,14 @@ The default value is blink.
                     bool m_actionListHasBeenSet;
 
                     /**
-                     * Control liveness retry number.The value range is 1-99.
+                     * Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
                      */
                     int64_t m_livenessRetryLimit;
                     bool m_livenessRetryLimitHasBeenSet;
 
                     /**
-                     * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
                      */
                     uint64_t m_livenessTimeout;
