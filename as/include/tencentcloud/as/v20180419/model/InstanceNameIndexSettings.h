@@ -47,30 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable instance name index. Default value: false. Value range:.
-
-**true**: indicates that instance name index is enabled.
-**false**: indicates that instance name index is disabled.
+                     * 获取<p>Whether to enable instance creation sequencing, disabled by default. valid values:</p><p><strong>TRUE</strong>: indicates that instance creation sequencing is enabled; <strong>FALSE</strong>: indicates that instance creation sequencing is disabled</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enabled Whether to enable instance name index. Default value: false. Value range:.
-
-**true**: indicates that instance name index is enabled.
-**false**: indicates that instance name index is disabled.
+                     * @return Enabled <p>Whether to enable instance creation sequencing, disabled by default. valid values:</p><p><strong>TRUE</strong>: indicates that instance creation sequencing is enabled; <strong>FALSE</strong>: indicates that instance creation sequencing is disabled</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether to enable instance name index. Default value: false. Value range:.
-
-**true**: indicates that instance name index is enabled.
-**false**: indicates that instance name index is disabled.
+                     * 设置<p>Whether to enable instance creation sequencing, disabled by default. valid values:</p><p><strong>TRUE</strong>: indicates that instance creation sequencing is enabled; <strong>FALSE</strong>: indicates that instance creation sequencing is disabled</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enabled Whether to enable instance name index. Default value: false. Value range:.
-
-**true**: indicates that instance name index is enabled.
-**false**: indicates that instance name index is disabled.
+                     * @param _enabled <p>Whether to enable instance creation sequencing, disabled by default. valid values:</p><p><strong>TRUE</strong>: indicates that instance creation sequencing is enabled; <strong>FALSE</strong>: indicates that instance creation sequencing is disabled</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -84,34 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Begin index number. Value range: [0, 99999999].
-
-Indicates that the scale out activity will be failed when the index out of range. 
-If not specified, carries forward historical index number or 0.
-Lowering the index sequence number may lead to instance name duplication within the group.
+                     * 获取<p>Initial serial number. the value range is related to the IndexLength parameter: - when IndexLength is 0, the value range is [0, 99999999]. - when IndexLength is [1, 8], the value range is [0, 10^IndexLength-1], and the maximum value is the maximum number with the specified digits. the default value of the initial serial number is as follows: - first-time enabling of incremental serial number: the default value is 0 (the display length is related to IndexLength, for example, if IndexLength is 4, the display value is 0000). - non-first-time enabling of incremental serial number: the previous incremental serial number is postponed, for example, if the last usage incremented to serial number 069, the new default initial serial number is 070. note: modifying the initial serial number may lead to duplication within the scaling group.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BeginIndex Begin index number. Value range: [0, 99999999].
-
-Indicates that the scale out activity will be failed when the index out of range. 
-If not specified, carries forward historical index number or 0.
-Lowering the index sequence number may lead to instance name duplication within the group.
+                     * @return BeginIndex <p>Initial serial number. the value range is related to the IndexLength parameter: - when IndexLength is 0, the value range is [0, 99999999]. - when IndexLength is [1, 8], the value range is [0, 10^IndexLength-1], and the maximum value is the maximum number with the specified digits. the default value of the initial serial number is as follows: - first-time enabling of incremental serial number: the default value is 0 (the display length is related to IndexLength, for example, if IndexLength is 4, the display value is 0000). - non-first-time enabling of incremental serial number: the previous incremental serial number is postponed, for example, if the last usage incremented to serial number 069, the new default initial serial number is 070. note: modifying the initial serial number may lead to duplication within the scaling group.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBeginIndex() const;
 
                     /**
-                     * 设置Begin index number. Value range: [0, 99999999].
-
-Indicates that the scale out activity will be failed when the index out of range. 
-If not specified, carries forward historical index number or 0.
-Lowering the index sequence number may lead to instance name duplication within the group.
+                     * 设置<p>Initial serial number. the value range is related to the IndexLength parameter: - when IndexLength is 0, the value range is [0, 99999999]. - when IndexLength is [1, 8], the value range is [0, 10^IndexLength-1], and the maximum value is the maximum number with the specified digits. the default value of the initial serial number is as follows: - first-time enabling of incremental serial number: the default value is 0 (the display length is related to IndexLength, for example, if IndexLength is 4, the display value is 0000). - non-first-time enabling of incremental serial number: the previous incremental serial number is postponed, for example, if the last usage incremented to serial number 069, the new default initial serial number is 070. note: modifying the initial serial number may lead to duplication within the scaling group.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _beginIndex Begin index number. Value range: [0, 99999999].
-
-Indicates that the scale out activity will be failed when the index out of range. 
-If not specified, carries forward historical index number or 0.
-Lowering the index sequence number may lead to instance name duplication within the group.
+                     * @param _beginIndex <p>Initial serial number. the value range is related to the IndexLength parameter: - when IndexLength is 0, the value range is [0, 99999999]. - when IndexLength is [1, 8], the value range is [0, 10^IndexLength-1], and the maximum value is the maximum number with the specified digits. the default value of the initial serial number is as follows: - first-time enabling of incremental serial number: the default value is 0 (the display length is related to IndexLength, for example, if IndexLength is 4, the display value is 0000). - non-first-time enabling of incremental serial number: the previous incremental serial number is postponed, for example, if the last usage incremented to serial number 069, the new default initial serial number is 070. note: modifying the initial serial number may lead to duplication within the scaling group.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -125,27 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BeginIndexHasBeenSet() const;
 
                     /**
-                     * 获取Instance name index number digits, defaults to 0, means no specified digit count. Value range: 0-8, maximum is integer 8. when using values 1-8, the system checks whether the index number exceeds the maximum digit for this digit count.
-
-If set to 3, index number is in the format: 000, 001, 002 ... 010, 011 ... 100 ... 999. The maximum is 999. 
-Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10000 ... 99999999. Max number is 99999999.
-                     * @return IndexLength Instance name index number digits, defaults to 0, means no specified digit count. Value range: 0-8, maximum is integer 8. when using values 1-8, the system checks whether the index number exceeds the maximum digit for this digit count.
-
-If set to 3, index number is in the format: 000, 001, 002 ... 010, 011 ... 100 ... 999. The maximum is 999. 
-Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10000 ... 99999999. Max number is 99999999.
+                     * 获取<P>Incremental serial number length, defaults to 0, means no specified length. value range: 0-8, maximum is integer 8. - length set to 3, display form: 000, 001, 002 ... 010, 011 ... 100 ... 999, maximum is 999. - length set to 0, display form: 0, 1, 2 ... 10, 11 ... 100 ... 1000 ... 10000 ... 99999999, maximum is 99999999. note: continuous incremental serial number exceeding the limit can cause scale-out failure. do not set too small incremental serial number length.</p>.
+                     * @return IndexLength <P>Incremental serial number length, defaults to 0, means no specified length. value range: 0-8, maximum is integer 8. - length set to 3, display form: 000, 001, 002 ... 010, 011 ... 100 ... 999, maximum is 999. - length set to 0, display form: 0, 1, 2 ... 10, 11 ... 100 ... 1000 ... 10000 ... 99999999, maximum is 99999999. note: continuous incremental serial number exceeding the limit can cause scale-out failure. do not set too small incremental serial number length.</p>.
                      * 
                      */
                     uint64_t GetIndexLength() const;
 
                     /**
-                     * 设置Instance name index number digits, defaults to 0, means no specified digit count. Value range: 0-8, maximum is integer 8. when using values 1-8, the system checks whether the index number exceeds the maximum digit for this digit count.
-
-If set to 3, index number is in the format: 000, 001, 002 ... 010, 011 ... 100 ... 999. The maximum is 999. 
-Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10000 ... 99999999. Max number is 99999999.
-                     * @param _indexLength Instance name index number digits, defaults to 0, means no specified digit count. Value range: 0-8, maximum is integer 8. when using values 1-8, the system checks whether the index number exceeds the maximum digit for this digit count.
-
-If set to 3, index number is in the format: 000, 001, 002 ... 010, 011 ... 100 ... 999. The maximum is 999. 
-Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10000 ... 99999999. Max number is 99999999.
+                     * 设置<P>Incremental serial number length, defaults to 0, means no specified length. value range: 0-8, maximum is integer 8. - length set to 3, display form: 000, 001, 002 ... 010, 011 ... 100 ... 999, maximum is 999. - length set to 0, display form: 0, 1, 2 ... 10, 11 ... 100 ... 1000 ... 10000 ... 99999999, maximum is 99999999. note: continuous incremental serial number exceeding the limit can cause scale-out failure. do not set too small incremental serial number length.</p>.
+                     * @param _indexLength <P>Incremental serial number length, defaults to 0, means no specified length. value range: 0-8, maximum is integer 8. - length set to 3, display form: 000, 001, 002 ... 010, 011 ... 100 ... 999, maximum is 999. - length set to 0, display form: 0, 1, 2 ... 10, 11 ... 100 ... 1000 ... 10000 ... 99999999, maximum is 99999999. note: continuous incremental serial number exceeding the limit can cause scale-out failure. do not set too small incremental serial number length.</p>.
                      * 
                      */
                     void SetIndexLength(const uint64_t& _indexLength);
@@ -160,31 +120,21 @@ Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10
                 private:
 
                     /**
-                     * Whether to enable instance name index. Default value: false. Value range:.
-
-**true**: indicates that instance name index is enabled.
-**false**: indicates that instance name index is disabled.
+                     * <p>Whether to enable instance creation sequencing, disabled by default. valid values:</p><p><strong>TRUE</strong>: indicates that instance creation sequencing is enabled; <strong>FALSE</strong>: indicates that instance creation sequencing is disabled</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Begin index number. Value range: [0, 99999999].
-
-Indicates that the scale out activity will be failed when the index out of range. 
-If not specified, carries forward historical index number or 0.
-Lowering the index sequence number may lead to instance name duplication within the group.
+                     * <p>Initial serial number. the value range is related to the IndexLength parameter: - when IndexLength is 0, the value range is [0, 99999999]. - when IndexLength is [1, 8], the value range is [0, 10^IndexLength-1], and the maximum value is the maximum number with the specified digits. the default value of the initial serial number is as follows: - first-time enabling of incremental serial number: the default value is 0 (the display length is related to IndexLength, for example, if IndexLength is 4, the display value is 0000). - non-first-time enabling of incremental serial number: the previous incremental serial number is postponed, for example, if the last usage incremented to serial number 069, the new default initial serial number is 070. note: modifying the initial serial number may lead to duplication within the scaling group.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_beginIndex;
                     bool m_beginIndexHasBeenSet;
 
                     /**
-                     * Instance name index number digits, defaults to 0, means no specified digit count. Value range: 0-8, maximum is integer 8. when using values 1-8, the system checks whether the index number exceeds the maximum digit for this digit count.
-
-If set to 3, index number is in the format: 000, 001, 002 ... 010, 011 ... 100 ... 999. The maximum is 999. 
-Assuming set to 0, the index number is 0, 1, 2 ... 10, 11 ... 100 ... 1000 ...10000 ... 99999999. Max number is 99999999.
+                     * <P>Incremental serial number length, defaults to 0, means no specified length. value range: 0-8, maximum is integer 8. - length set to 3, display form: 000, 001, 002 ... 010, 011 ... 100 ... 999, maximum is 999. - length set to 0, display form: 0, 1, 2 ... 10, 11 ... 100 ... 1000 ... 10000 ... 99999999, maximum is 99999999. note: continuous incremental serial number exceeding the limit can cause scale-out failure. do not set too small incremental serial number length.</p>.
                      */
                     uint64_t m_indexLength;
                     bool m_indexLengthHasBeenSet;

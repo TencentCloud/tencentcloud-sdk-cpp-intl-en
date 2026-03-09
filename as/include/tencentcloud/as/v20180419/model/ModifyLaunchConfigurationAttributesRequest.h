@@ -429,23 +429,27 @@ The default data disk should be the same as the system disk.
                     bool DataDisksHasBeenSet() const;
 
                     /**
-                     * 获取CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
-                     * @return HostNameSettings CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+                     * 获取Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+                     * @return HostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
                      * 
                      */
                     HostNameSettings GetHostNameSettings() const;
 
                     /**
-                     * 设置CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
-                     * @param _hostNameSettings CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+                     * 设置Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+                     * @param _hostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
                      * 
                      */
                     void SetHostNameSettings(const HostNameSettings& _hostNameSettings);
@@ -458,23 +462,27 @@ This field requires passing the `HostName` field. Other fields that are not pass
                     bool HostNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
-                     * @return InstanceNameSettings Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+                     * 获取Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
+                     * @return InstanceNameSettings Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
                      * 
                      */
                     InstanceNameSettings GetInstanceNameSettings() const;
 
                     /**
-                     * 设置Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
-                     * @param _instanceNameSettings Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+                     * 设置Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
+                     * @param _instanceNameSettings Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
                      * 
                      */
                     void SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings);
@@ -529,18 +537,18 @@ This field requires passing in the `InstanceName` field. Other fields that are n
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+                     * 获取High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
-                     * @return HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+                     * @return HpcClusterId High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
                      * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+                     * 设置High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
-                     * @param _hpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+                     * @param _hpcClusterId High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
                      * 
                      */
@@ -811,17 +819,19 @@ The default data disk should be the same as the system disk.
                     bool m_dataDisksHasBeenSet;
 
                     /**
-                     * CVM hostname settings.
-This field is not supported for Windows instances.
-This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+                     * Specifies the related settings for the cloud virtual machine HostName (HostName).
+windows instances do not support setting hostname.
+When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
                      */
                     HostNameSettings m_hostNameSettings;
                     bool m_hostNameSettingsHasBeenSet;
 
                     /**
-                     * Settings of CVM instance names. 
-If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+                     * Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
                      */
                     InstanceNameSettings m_instanceNameSettings;
                     bool m_instanceNameSettingsHasBeenSet;
@@ -839,7 +849,7 @@ This field requires passing in the `InstanceName` field. Other fields that are n
                     bool m_camRoleNameHasBeenSet;
 
                     /**
-                     * High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+                     * High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
 Note: this field is empty by default.
                      */
                     std::string m_hpcClusterId;

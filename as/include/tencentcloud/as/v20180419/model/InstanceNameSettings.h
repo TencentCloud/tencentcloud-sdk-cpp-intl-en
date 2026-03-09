@@ -105,26 +105,18 @@ namespace TencentCloud
                     bool InstanceNameStyleHasBeenSet() const;
 
                     /**
-                     * 获取CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+                     * 获取CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+                     * @return InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceNameSuffix() const;
 
                     /**
-                     * 设置CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+                     * 设置CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+                     * @param _instanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -136,6 +128,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool InstanceNameSuffixHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+                     * @return InstanceNameDelimiter Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+                     * 
+                     */
+                    std::string GetInstanceNameDelimiter() const;
+
+                    /**
+                     * 设置Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+                     * @param _instanceNameDelimiter Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+                     * 
+                     */
+                    void SetInstanceNameDelimiter(const std::string& _instanceNameDelimiter);
+
+                    /**
+                     * 判断参数 InstanceNameDelimiter 是否已赋值
+                     * @return InstanceNameDelimiter 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameDelimiterHasBeenSet() const;
 
                 private:
 
@@ -156,13 +197,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameStyleHasBeenSet;
 
                     /**
-                     * CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+                     * CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceNameSuffix;
                     bool m_instanceNameSuffixHasBeenSet;
+
+                    /**
+                     * Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+                     */
+                    std::string m_instanceNameDelimiter;
+                    bool m_instanceNameDelimiterHasBeenSet;
 
                 };
             }
