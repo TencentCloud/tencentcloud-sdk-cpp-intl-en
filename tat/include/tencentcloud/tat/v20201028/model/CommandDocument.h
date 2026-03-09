@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Command type.
-                     * @return CommandType Command type.
+                     * 获取Command type. value is one of SHELL, POWERSHELL, BAT.
+                     * @return CommandType Command type. value is one of SHELL, POWERSHELL, BAT.
                      * 
                      */
                     std::string GetCommandType() const;
 
                     /**
-                     * 设置Command type.
-                     * @param _commandType Command type.
+                     * 设置Command type. value is one of SHELL, POWERSHELL, BAT.
+                     * @param _commandType Command type. value is one of SHELL, POWERSHELL, BAT.
                      * 
                      */
                     void SetCommandType(const std::string& _commandType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CommandTypeHasBeenSet() const;
 
                     /**
-                     * 获取Timeout period.
-                     * @return Timeout Timeout period.
+                     * 获取Timeout period. unit: seconds.
+                     * @return Timeout Timeout period. unit: seconds.
                      * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
-                     * 设置Timeout period.
-                     * @param _timeout Timeout period.
+                     * 设置Timeout period. unit: seconds.
+                     * @param _timeout Timeout period. unit: seconds.
                      * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
@@ -202,13 +202,13 @@ namespace TencentCloud
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Command type.
+                     * Command type. value is one of SHELL, POWERSHELL, BAT.
                      */
                     std::string m_commandType;
                     bool m_commandTypeHasBeenSet;
 
                     /**
-                     * Timeout period.
+                     * Timeout period. unit: seconds.
                      */
                     uint64_t m_timeout;
                     bool m_timeoutHasBeenSet;

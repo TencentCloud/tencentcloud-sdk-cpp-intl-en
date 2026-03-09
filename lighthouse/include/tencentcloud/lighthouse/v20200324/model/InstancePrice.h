@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lighthouse/v20200324/model/DetailPrice.h>
 
 
 namespace TencentCloud
@@ -35,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Price information of Lighthouse instances
+                * About Lighthouse Instance price.
                 */
                 class InstancePrice : public AbstractModel
                 {
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original package unit price.
-                     * @return OriginalBundlePrice Original package unit price.
+                     * 获取<P>Unit price of the package.</p><p>unit: usd</p>.
+                     * @return OriginalBundlePrice <P>Unit price of the package.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalBundlePrice() const;
 
                     /**
-                     * 设置Original package unit price.
-                     * @param _originalBundlePrice Original package unit price.
+                     * 设置<P>Unit price of the package.</p><p>unit: usd</p>.
+                     * @param _originalBundlePrice <P>Unit price of the package.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalBundlePrice(const double& _originalBundlePrice);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool OriginalBundlePriceHasBeenSet() const;
 
                     /**
-                     * 获取Original price.
-                     * @return OriginalPrice Original price.
+                     * 获取<P>Original price.</p><p>unit: usd</p>.
+                     * @return OriginalPrice <P>Original price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Original price.
-                     * @param _originalPrice Original price.
+                     * 设置<P>Original price.</p><p>unit: usd</p>.
+                     * @param _originalPrice <P>Original price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -89,18 +90,18 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount.
-                     * @return Discount Discount.
+                     * 获取<p>Discount.</p>.
+                     * @return Discount <p>Discount.</p>.
                      * 
                      */
-                    int64_t GetDiscount() const;
+                    double GetDiscount() const;
 
                     /**
-                     * 设置Discount.
-                     * @param _discount Discount.
+                     * 设置<p>Discount.</p>.
+                     * @param _discount <p>Discount.</p>.
                      * 
                      */
-                    void SetDiscount(const int64_t& _discount);
+                    void SetDiscount(const double& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price.
-                     * @return DiscountPrice Discounted price.
+                     * 获取<P>Discounted price.</p><p>unit: usd</p>.
+                     * @return DiscountPrice <P>Discounted price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted price.
-                     * @param _discountPrice Discounted price.
+                     * 设置<P>Discounted price.</p><p>unit: usd</p>.
+                     * @param _discountPrice <P>Discounted price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -131,19 +132,15 @@ namespace TencentCloud
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Currency Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Price currency unit. valid values: USD.</p>.
+                     * @return Currency <p>Price currency unit. valid values: USD.</p>.
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _currency Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Price currency unit. valid values: USD.</p>.
+                     * @param _currency <p>Price currency unit. valid values: USD.</p>.
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -155,38 +152,64 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CurrencyHasBeenSet() const;
 
+                    /**
+                     * 获取<P>Billing item detail.</p>.
+                     * @return DetailPrices <P>Billing item detail.</p>.
+                     * 
+                     */
+                    std::vector<DetailPrice> GetDetailPrices() const;
+
+                    /**
+                     * 设置<P>Billing item detail.</p>.
+                     * @param _detailPrices <P>Billing item detail.</p>.
+                     * 
+                     */
+                    void SetDetailPrices(const std::vector<DetailPrice>& _detailPrices);
+
+                    /**
+                     * 判断参数 DetailPrices 是否已赋值
+                     * @return DetailPrices 是否已赋值
+                     * 
+                     */
+                    bool DetailPricesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Original package unit price.
+                     * <P>Unit price of the package.</p><p>unit: usd</p>.
                      */
                     double m_originalBundlePrice;
                     bool m_originalBundlePriceHasBeenSet;
 
                     /**
-                     * Original price.
+                     * <P>Original price.</p><p>unit: usd</p>.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount.
+                     * <p>Discount.</p>.
                      */
-                    int64_t m_discount;
+                    double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**
-                     * Discounted price.
+                     * <P>Discounted price.</p><p>unit: usd</p>.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Price currency unit. valid values: USD.</p>.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
+
+                    /**
+                     * <P>Billing item detail.</p>.
+                     */
+                    std::vector<DetailPrice> m_detailPrices;
+                    bool m_detailPricesHasBeenSet;
 
                 };
             }

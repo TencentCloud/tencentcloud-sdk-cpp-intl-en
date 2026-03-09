@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InvokerIdHasBeenSet() const;
 
                     /**
-                     * 获取Execution time.
-                     * @return InvokeTime Execution time.
+                     * 获取Execution time. format: YYYY-MM-DDThh:MM:ssZ.
+                     * @return InvokeTime Execution time. format: YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetInvokeTime() const;
 
                     /**
-                     * 设置Execution time.
-                     * @param _invokeTime Execution time.
+                     * 设置Execution time. format: YYYY-MM-DDThh:MM:ssZ.
+                     * @param _invokeTime Execution time. format: YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetInvokeTime(const std::string& _invokeTime);
@@ -132,14 +132,54 @@ namespace TencentCloud
 
                     /**
                      * 获取Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * @return Result Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 设置Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * @param _result Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -160,7 +200,7 @@ namespace TencentCloud
                     bool m_invokerIdHasBeenSet;
 
                     /**
-                     * Execution time.
+                     * Execution time. format: YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_invokeTime;
                     bool m_invokeTimeHasBeenSet;
@@ -179,6 +219,16 @@ namespace TencentCloud
 
                     /**
                      * Trigger result.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the invoker to be deleted.
-                     * @return InvokerId ID of the invoker to be deleted.
+                     * 获取Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @return InvokerId Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
-                     * 设置ID of the invoker to be deleted.
-                     * @param _invokerId ID of the invoker to be deleted.
+                     * 设置Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @param _invokerId Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
@@ -66,7 +74,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the invoker to be deleted.
+                     * Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invokerId;
                     bool m_invokerIdHasBeenSet;

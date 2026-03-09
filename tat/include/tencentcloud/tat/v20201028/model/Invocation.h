@@ -90,39 +90,76 @@ namespace TencentCloud
                     bool CommandIdHasBeenSet() const;
 
                     /**
-                     * 获取Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
-                     * @return InvocationStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+                     * 获取Name of the executed command.
+                     * @return CommandName Name of the executed command.
+                     * 
+                     */
+                    std::string GetCommandName() const;
+
+                    /**
+                     * 设置Name of the executed command.
+                     * @param _commandName Name of the executed command.
+                     * 
+                     */
+                    void SetCommandName(const std::string& _commandName);
+
+                    /**
+                     * 判断参数 CommandName 是否已赋值
+                     * @return CommandName 是否已赋值
+                     * 
+                     */
+                    bool CommandNameHasBeenSet() const;
+
+                    /**
+                     * 获取Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
+                     * @return InvocationStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     std::string GetInvocationStatus() const;
 
                     /**
-                     * 设置Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
-                     * @param _invocationStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+                     * 设置Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
+                     * @param _invocationStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     void SetInvocationStatus(const std::string& _invocationStatus);
@@ -177,15 +214,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the execution activity.
-                     * @return StartTime Start time of the execution activity.
+                     * 获取Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return StartTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the execution activity.
-                     * @param _startTime Start time of the execution activity.
+                     * 设置Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _startTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -198,15 +235,19 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the execution activity.
-                     * @return EndTime End time of the execution activity.
+                     * 获取Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndTime Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the execution activity.
-                     * @param _endTime End time of the execution activity.
+                     * 设置Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endTime Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -219,15 +260,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the execution activity is created.
-                     * @return CreatedTime Time when the execution activity is created.
+                     * 获取Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+                     * @return CreatedTime Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Time when the execution activity is created.
-                     * @param _createdTime Time when the execution activity is created.
+                     * 设置Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+                     * @param _createdTime Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -240,15 +281,15 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the execution activity is updated.
-                     * @return UpdatedTime Time when the execution activity is updated.
+                     * 获取Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return UpdatedTime Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Time when the execution activity is updated.
-                     * @param _updatedTime Time when the execution activity is updated.
+                     * 设置Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _updatedTime Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -346,14 +387,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * @return InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * 
                      */
                     std::string GetInvocationSource() const;
 
                     /**
                      * 设置Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * @param _invocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * 
                      */
                     void SetInvocationSource(const std::string& _invocationSource);
@@ -506,13 +559,23 @@ namespace TencentCloud
                     bool m_commandIdHasBeenSet;
 
                     /**
-                     * Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+                     * Name of the executed command.
+                     */
+                    std::string m_commandName;
+                    bool m_commandNameHasBeenSet;
+
+                    /**
+                     * Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
                      */
                     std::string m_invocationStatus;
                     bool m_invocationStatusHasBeenSet;
@@ -530,25 +593,26 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Start time of the execution activity.
+                     * Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the execution activity.
+                     * Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Time when the execution activity is created.
+                     * Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Time when the execution activity is updated.
+                     * Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;
@@ -579,6 +643,9 @@ namespace TencentCloud
 
                     /**
                      * Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      */
                     std::string m_invocationSource;
                     bool m_invocationSourceHasBeenSet;

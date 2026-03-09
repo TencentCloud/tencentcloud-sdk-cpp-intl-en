@@ -190,6 +190,56 @@ TatClient::CreateInvokerOutcomeCallable TatClient::CreateInvokerCallable(const C
     return prom->get_future();
 }
 
+TatClient::CreateRegisterCodeOutcome TatClient::CreateRegisterCode(const CreateRegisterCodeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRegisterCode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRegisterCodeResponse rsp = CreateRegisterCodeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRegisterCodeOutcome(rsp);
+        else
+            return CreateRegisterCodeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRegisterCodeOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::CreateRegisterCodeAsync(const CreateRegisterCodeRequest& request, const CreateRegisterCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRegisterCodeRequest&;
+    using Resp = CreateRegisterCodeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRegisterCode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::CreateRegisterCodeOutcomeCallable TatClient::CreateRegisterCodeCallable(const CreateRegisterCodeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRegisterCodeOutcome>>();
+    CreateRegisterCodeAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const CreateRegisterCodeRequest&,
+        CreateRegisterCodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TatClient::DeleteCommandOutcome TatClient::DeleteCommand(const DeleteCommandRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCommand");
@@ -240,6 +290,56 @@ TatClient::DeleteCommandOutcomeCallable TatClient::DeleteCommandCallable(const D
     return prom->get_future();
 }
 
+TatClient::DeleteCommandsOutcome TatClient::DeleteCommands(const DeleteCommandsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCommands");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCommandsResponse rsp = DeleteCommandsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCommandsOutcome(rsp);
+        else
+            return DeleteCommandsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCommandsOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DeleteCommandsAsync(const DeleteCommandsRequest& request, const DeleteCommandsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCommandsRequest&;
+    using Resp = DeleteCommandsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCommands", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DeleteCommandsOutcomeCallable TatClient::DeleteCommandsCallable(const DeleteCommandsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCommandsOutcome>>();
+    DeleteCommandsAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DeleteCommandsRequest&,
+        DeleteCommandsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TatClient::DeleteInvokerOutcome TatClient::DeleteInvoker(const DeleteInvokerRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteInvoker");
@@ -282,6 +382,106 @@ TatClient::DeleteInvokerOutcomeCallable TatClient::DeleteInvokerCallable(const D
         const TatClient*,
         const DeleteInvokerRequest&,
         DeleteInvokerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::DeleteRegisterCodesOutcome TatClient::DeleteRegisterCodes(const DeleteRegisterCodesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRegisterCodes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRegisterCodesResponse rsp = DeleteRegisterCodesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRegisterCodesOutcome(rsp);
+        else
+            return DeleteRegisterCodesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRegisterCodesOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DeleteRegisterCodesAsync(const DeleteRegisterCodesRequest& request, const DeleteRegisterCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRegisterCodesRequest&;
+    using Resp = DeleteRegisterCodesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRegisterCodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DeleteRegisterCodesOutcomeCallable TatClient::DeleteRegisterCodesCallable(const DeleteRegisterCodesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRegisterCodesOutcome>>();
+    DeleteRegisterCodesAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DeleteRegisterCodesRequest&,
+        DeleteRegisterCodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::DeleteRegisterInstanceOutcome TatClient::DeleteRegisterInstance(const DeleteRegisterInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRegisterInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRegisterInstanceResponse rsp = DeleteRegisterInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRegisterInstanceOutcome(rsp);
+        else
+            return DeleteRegisterInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRegisterInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DeleteRegisterInstanceAsync(const DeleteRegisterInstanceRequest& request, const DeleteRegisterInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRegisterInstanceRequest&;
+    using Resp = DeleteRegisterInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRegisterInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DeleteRegisterInstanceOutcomeCallable TatClient::DeleteRegisterInstanceCallable(const DeleteRegisterInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRegisterInstanceOutcome>>();
+    DeleteRegisterInstanceAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DeleteRegisterInstanceRequest&,
+        DeleteRegisterInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -590,6 +790,56 @@ TatClient::DescribeInvokersOutcomeCallable TatClient::DescribeInvokersCallable(c
     return prom->get_future();
 }
 
+TatClient::DescribeQuotasOutcome TatClient::DescribeQuotas(const DescribeQuotasRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeQuotas");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeQuotasResponse rsp = DescribeQuotasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeQuotasOutcome(rsp);
+        else
+            return DescribeQuotasOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeQuotasOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DescribeQuotasAsync(const DescribeQuotasRequest& request, const DescribeQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeQuotasRequest&;
+    using Resp = DescribeQuotasResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeQuotas", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DescribeQuotasOutcomeCallable TatClient::DescribeQuotasCallable(const DescribeQuotasRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeQuotasOutcome>>();
+    DescribeQuotasAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DescribeQuotasRequest&,
+        DescribeQuotasOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TatClient::DescribeRegionsOutcome TatClient::DescribeRegions(const DescribeRegionsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRegions");
@@ -640,6 +890,156 @@ TatClient::DescribeRegionsOutcomeCallable TatClient::DescribeRegionsCallable(con
     return prom->get_future();
 }
 
+TatClient::DescribeRegisterCodesOutcome TatClient::DescribeRegisterCodes(const DescribeRegisterCodesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRegisterCodes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRegisterCodesResponse rsp = DescribeRegisterCodesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRegisterCodesOutcome(rsp);
+        else
+            return DescribeRegisterCodesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRegisterCodesOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DescribeRegisterCodesAsync(const DescribeRegisterCodesRequest& request, const DescribeRegisterCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRegisterCodesRequest&;
+    using Resp = DescribeRegisterCodesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRegisterCodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DescribeRegisterCodesOutcomeCallable TatClient::DescribeRegisterCodesCallable(const DescribeRegisterCodesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRegisterCodesOutcome>>();
+    DescribeRegisterCodesAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DescribeRegisterCodesRequest&,
+        DescribeRegisterCodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::DescribeRegisterInstancesOutcome TatClient::DescribeRegisterInstances(const DescribeRegisterInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRegisterInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRegisterInstancesResponse rsp = DescribeRegisterInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRegisterInstancesOutcome(rsp);
+        else
+            return DescribeRegisterInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRegisterInstancesOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DescribeRegisterInstancesAsync(const DescribeRegisterInstancesRequest& request, const DescribeRegisterInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRegisterInstancesRequest&;
+    using Resp = DescribeRegisterInstancesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRegisterInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DescribeRegisterInstancesOutcomeCallable TatClient::DescribeRegisterInstancesCallable(const DescribeRegisterInstancesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRegisterInstancesOutcome>>();
+    DescribeRegisterInstancesAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DescribeRegisterInstancesRequest&,
+        DescribeRegisterInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::DescribeScenesOutcome TatClient::DescribeScenes(const DescribeScenesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeScenes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeScenesResponse rsp = DescribeScenesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeScenesOutcome(rsp);
+        else
+            return DescribeScenesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeScenesOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DescribeScenesAsync(const DescribeScenesRequest& request, const DescribeScenesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeScenesRequest&;
+    using Resp = DescribeScenesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeScenes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DescribeScenesOutcomeCallable TatClient::DescribeScenesCallable(const DescribeScenesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeScenesOutcome>>();
+    DescribeScenesAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DescribeScenesRequest&,
+        DescribeScenesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TatClient::DisableInvokerOutcome TatClient::DisableInvoker(const DisableInvokerRequest &request)
 {
     auto outcome = MakeRequest(request, "DisableInvoker");
@@ -682,6 +1082,56 @@ TatClient::DisableInvokerOutcomeCallable TatClient::DisableInvokerCallable(const
         const TatClient*,
         const DisableInvokerRequest&,
         DisableInvokerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::DisableRegisterCodesOutcome TatClient::DisableRegisterCodes(const DisableRegisterCodesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableRegisterCodes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableRegisterCodesResponse rsp = DisableRegisterCodesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableRegisterCodesOutcome(rsp);
+        else
+            return DisableRegisterCodesOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableRegisterCodesOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::DisableRegisterCodesAsync(const DisableRegisterCodesRequest& request, const DisableRegisterCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DisableRegisterCodesRequest&;
+    using Resp = DisableRegisterCodesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DisableRegisterCodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::DisableRegisterCodesOutcomeCallable TatClient::DisableRegisterCodesCallable(const DisableRegisterCodesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DisableRegisterCodesOutcome>>();
+    DisableRegisterCodesAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const DisableRegisterCodesRequest&,
+        DisableRegisterCodesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -882,6 +1332,56 @@ TatClient::ModifyInvokerOutcomeCallable TatClient::ModifyInvokerCallable(const M
         const TatClient*,
         const ModifyInvokerRequest&,
         ModifyInvokerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TatClient::ModifyRegisterInstanceOutcome TatClient::ModifyRegisterInstance(const ModifyRegisterInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRegisterInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRegisterInstanceResponse rsp = ModifyRegisterInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRegisterInstanceOutcome(rsp);
+        else
+            return ModifyRegisterInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRegisterInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TatClient::ModifyRegisterInstanceAsync(const ModifyRegisterInstanceRequest& request, const ModifyRegisterInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRegisterInstanceRequest&;
+    using Resp = ModifyRegisterInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRegisterInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TatClient::ModifyRegisterInstanceOutcomeCallable TatClient::ModifyRegisterInstanceCallable(const ModifyRegisterInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRegisterInstanceOutcome>>();
+    ModifyRegisterInstanceAsync(
+    request,
+    [prom](
+        const TatClient*,
+        const ModifyRegisterInstanceRequest&,
+        ModifyRegisterInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
-                     * @return PriceName Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+                     * 获取<p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+                     * @return PriceName <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
                      * 
                      */
                     std::string GetPriceName() const;
 
                     /**
-                     * 设置Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
-                     * @param _priceName Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+                     * 设置<p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+                     * @param _priceName <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
                      * 
                      */
                     void SetPriceName(const std::string& _priceName);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool PriceNameHasBeenSet() const;
 
                     /**
-                     * 获取Official unit price of the billable item
-                     * @return OriginUnitPrice Official unit price of the billable item
+                     * 获取<P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+                     * @return OriginUnitPrice <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginUnitPrice() const;
 
                     /**
-                     * 设置Official unit price of the billable item
-                     * @param _originUnitPrice Official unit price of the billable item
+                     * 设置<P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+                     * @param _originUnitPrice <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginUnitPrice(const double& _originUnitPrice);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool OriginUnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Official total price of the billable item
-                     * @return OriginalPrice Official total price of the billable item
+                     * 获取<P>Total price of billing item dimension.</p><p>unit: usd</p>.
+                     * @return OriginalPrice <P>Total price of billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Official total price of the billable item
-                     * @param _originalPrice Official total price of the billable item
+                     * 设置<P>Total price of billing item dimension.</p><p>unit: usd</p>.
+                     * @param _originalPrice <P>Total price of billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -118,15 +110,15 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount of the billable item
-                     * @return Discount Discount of the billable item
+                     * 获取<P>Dimensional discount for billing items.</p>.
+                     * @return Discount <P>Dimensional discount for billing items.</p>.
                      * 
                      */
                     double GetDiscount() const;
 
                     /**
-                     * 设置Discount of the billable item
-                     * @param _discount Discount of the billable item
+                     * 设置<P>Dimensional discount for billing items.</p>.
+                     * @param _discount <P>Dimensional discount for billing items.</p>.
                      * 
                      */
                     void SetDiscount(const double& _discount);
@@ -139,15 +131,15 @@ namespace TencentCloud
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取Discounted total price of the billable item
-                     * @return DiscountPrice Discounted total price of the billable item
+                     * 获取<P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
+                     * @return DiscountPrice <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted total price of the billable item
-                     * @param _discountPrice Discounted total price of the billable item
+                     * 设置<P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
+                     * @param _discountPrice <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -162,33 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+                     * <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
                      */
                     std::string m_priceName;
                     bool m_priceNameHasBeenSet;
 
                     /**
-                     * Official unit price of the billable item
+                     * <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
                      */
                     double m_originUnitPrice;
                     bool m_originUnitPriceHasBeenSet;
 
                     /**
-                     * Official total price of the billable item
+                     * <P>Total price of billing item dimension.</p><p>unit: usd</p>.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount of the billable item
+                     * <P>Dimensional discount for billing items.</p>.
                      */
                     double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**
-                     * Discounted total price of the billable item
+                     * <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;

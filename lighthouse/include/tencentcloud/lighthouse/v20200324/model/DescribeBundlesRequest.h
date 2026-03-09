@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Package ID list.
-                     * @return BundleIds Package ID list.
+                     * 获取List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
+                     * @return BundleIds List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetBundleIds() const;
 
                     /**
-                     * 设置Package ID list.
-                     * @param _bundleIds Package ID list.
+                     * 设置List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
+                     * @param _bundleIds List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
                      * 
                      */
                     void SetBundleIds(const std::vector<std::string>& _bundleIds);
@@ -108,78 +108,78 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
                      * @return Filters Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
                      * @param _filters Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -192,15 +192,19 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot sp
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取AZ list, which contains all AZs by default.
-                     * @return Zones AZ list, which contains all AZs by default.
+                     * 获取AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
+                     * @return Zones AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置AZ list, which contains all AZs by default.
-                     * @param _zones AZ list, which contains all AZs by default.
+                     * 设置AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
+                     * @param _zones AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -215,7 +219,7 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot sp
                 private:
 
                     /**
-                     * Package ID list.
+                     * List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_bundleIds;
                     bool m_bundleIdsHasBeenSet;
@@ -234,28 +238,29 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot sp
 
                     /**
                      * Filter list.
-<li>bundle-id</li>Filter by the **bundle ID**.
-Type: String
+<li>bundle-id</li>Filter by [bundle id].
+Type: String.
 Required: No
-<li>`support-platform-type`<li>Filter by the **system type**.
-Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
-Type: String
+<li>`support-platform-type`</li>Filter by the system type.
+Value: LINUX_UNIX (LINUX/UNIX system); WINDOWS (WINDOWS systems).
+Type: String.
 Required: No
-<li>bundle-type</li>Filter by the **bundle type**.
-Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
-Type: String
+<li>bundle-type</li>Filter by [package type].
+Valid values: GENERAL_BUNDLE (GENERAL BUNDLE); STORAGE_BUNDLE (STORAGE BUNDLE); ENTERPRISE_BUNDLE (ENTERPRISE BUNDLE); EXCLUSIVE_BUNDLE (dedicated BUNDLE); BEFAST_BUNDLE (SPEED BUNDLE); STARTER_BUNDLE (STARTER BUNDLE); CAREFREE_BUNDLE (CAREFREE BUNDLE); RAZOR_SPEED_BUNDLE (RAZOR SPEED BUNDLE).
+Type: String.
 Required: No
-<li>bundle-state</li>Filter by the **bundle status**.
-Values: `ONLINE`, `OFFLINE`
-Type: String
+<li>bundle-state</li>Filter by [package status].
+Valid values: ONLINE, OFFLINE.
+Type: String.
 Required: No
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `BundleIds` and `Filters`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * AZ list, which contains all AZs by default.
+                     * AZ list. default to all availability zones.
+<li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;

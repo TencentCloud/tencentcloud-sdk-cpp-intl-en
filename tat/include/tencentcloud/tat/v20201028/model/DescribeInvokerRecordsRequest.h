@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of invoker IDs. Up to 100 IDs are allowed.
-                     * @return InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+                     * 获取Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @return InvokerIds Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::vector<std::string> GetInvokerIds() const;
 
                     /**
-                     * 设置List of invoker IDs. Up to 100 IDs are allowed.
-                     * @param _invokerIds List of invoker IDs. Up to 100 IDs are allowed.
+                     * 设置Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @param _invokerIds Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerIds(const std::vector<std::string>& _invokerIds);
@@ -108,7 +116,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of invoker IDs. Up to 100 IDs are allowed.
+                     * Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::vector<std::string> m_invokerIds;
                     bool m_invokerIdsHasBeenSet;

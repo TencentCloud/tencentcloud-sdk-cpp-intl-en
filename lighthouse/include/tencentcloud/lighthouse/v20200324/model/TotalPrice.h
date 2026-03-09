@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return OriginalPrice Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<P>Original total price.</p><p>unit: usd</p>.
+                     * @return OriginalPrice <P>Original total price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _originalPrice Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<P>Original total price.</p><p>unit: usd</p>.
+                     * @param _originalPrice <P>Original total price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return DiscountPrice Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<P>Total price after discount.</p><p>unit: usd</p>.
+                     * @return DiscountPrice <P>Total price after discount.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _discountPrice Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<P>Total price after discount.</p><p>unit: usd</p>.
+                     * @param _discountPrice <P>Total price after discount.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -99,15 +91,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * <P>Original total price.</p><p>unit: usd</p>.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * <P>Total price after discount.</p><p>unit: usd</p>.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;

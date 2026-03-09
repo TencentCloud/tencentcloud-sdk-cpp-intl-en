@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Invoker type.
-                     * @return Type Invoker type.
+                     * 获取Executor type. currently only support SCHEDULE.
+                     * @return Type Executor type. currently only support SCHEDULE.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Invoker type.
-                     * @param _type Invoker type.
+                     * 设置Executor type. currently only support SCHEDULE.
+                     * @param _type Executor type. currently only support SCHEDULE.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -216,19 +216,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Executor periodic schedule. recurring invoker will return this field.
+                     * @return ScheduleSettings Executor periodic schedule. recurring invoker will return this field.
                      * 
                      */
                     ScheduleSettings GetScheduleSettings() const;
 
                     /**
-                     * 设置Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _scheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Executor periodic schedule. recurring invoker will return this field.
+                     * @param _scheduleSettings Executor periodic schedule. recurring invoker will return this field.
                      * 
                      */
                     void SetScheduleSettings(const ScheduleSettings& _scheduleSettings);
@@ -241,15 +237,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ScheduleSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreatedTime Creation time.
+                     * 获取Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createdTime Creation time.
+                     * 设置Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _createdTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -262,15 +258,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Modification time.
-                     * @return UpdatedTime Modification time.
+                     * 获取Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return UpdatedTime Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Modification time.
-                     * @param _updatedTime Modification time.
+                     * 设置Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _updatedTime Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -297,7 +293,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Invoker type.
+                     * Executor type. currently only support SCHEDULE.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -333,20 +329,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Executor periodic schedule. recurring invoker will return this field.
                      */
                     ScheduleSettings m_scheduleSettings;
                     bool m_scheduleSettingsHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Modification time.
+                     * Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;

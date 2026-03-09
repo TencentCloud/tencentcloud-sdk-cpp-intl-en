@@ -330,6 +330,31 @@ Note: This field may return null, indicating that no valid
                      */
                     bool PathHasBeenSet() const;
 
+                    /**
+                     * 获取Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetParentFolderPath() const;
+
+                    /**
+                     * 设置Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _parentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetParentFolderPath(const std::string& _parentFolderPath);
+
+                    /**
+                     * 判断参数 ParentFolderPath 是否已赋值
+                     * @return ParentFolderPath 是否已赋值
+                     * 
+                     */
+                    bool ParentFolderPathHasBeenSet() const;
+
                 private:
 
                     /**
@@ -410,6 +435,13 @@ Note: This field may return null, indicating that no valid
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
+
+                    /**
+                     * Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_parentFolderPath;
+                    bool m_parentFolderPathHasBeenSet;
 
                 };
             }

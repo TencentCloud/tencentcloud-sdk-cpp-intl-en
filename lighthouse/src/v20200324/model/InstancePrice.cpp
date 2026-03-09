@@ -25,7 +25,8 @@ InstancePrice::InstancePrice() :
     m_originalPriceHasBeenSet(false),
     m_discountHasBeenSet(false),
     m_discountPriceHasBeenSet(false),
-    m_currencyHasBeenSet(false)
+    m_currencyHasBeenSet(false),
+    m_detailPricesHasBeenSet(false)
 {
 }
 
@@ -56,11 +57,11 @@ CoreInternalOutcome InstancePrice::Deserialize(const rapidjson::Value &value)
 
     if (value.HasMember("Discount") && !value["Discount"].IsNull())
     {
-        if (!value["Discount"].IsInt64())
+        if (!value["Discount"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Core::Error("response `InstancePrice.Discount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstancePrice.Discount` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
-        m_discount = value["Discount"].GetInt64();
+        m_discount = value["Discount"].GetDouble();
         m_discountHasBeenSet = true;
     }
 
@@ -82,6 +83,26 @@ CoreInternalOutcome InstancePrice::Deserialize(const rapidjson::Value &value)
         }
         m_currency = string(value["Currency"].GetString());
         m_currencyHasBeenSet = true;
+    }
+
+    if (value.HasMember("DetailPrices") && !value["DetailPrices"].IsNull())
+    {
+        if (!value["DetailPrices"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `InstancePrice.DetailPrices` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DetailPrices"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DetailPrice item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_detailPrices.push_back(item);
+        }
+        m_detailPricesHasBeenSet = true;
     }
 
 
@@ -131,6 +152,21 @@ void InstancePrice::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         value.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_detailPricesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DetailPrices";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_detailPrices.begin(); itr != m_detailPrices.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
 }
 
 
@@ -166,12 +202,12 @@ bool InstancePrice::OriginalPriceHasBeenSet() const
     return m_originalPriceHasBeenSet;
 }
 
-int64_t InstancePrice::GetDiscount() const
+double InstancePrice::GetDiscount() const
 {
     return m_discount;
 }
 
-void InstancePrice::SetDiscount(const int64_t& _discount)
+void InstancePrice::SetDiscount(const double& _discount)
 {
     m_discount = _discount;
     m_discountHasBeenSet = true;
@@ -212,5 +248,21 @@ void InstancePrice::SetCurrency(const string& _currency)
 bool InstancePrice::CurrencyHasBeenSet() const
 {
     return m_currencyHasBeenSet;
+}
+
+vector<DetailPrice> InstancePrice::GetDetailPrices() const
+{
+    return m_detailPrices;
+}
+
+void InstancePrice::SetDetailPrices(const vector<DetailPrice>& _detailPrices)
+{
+    m_detailPrices = _detailPrices;
+    m_detailPricesHasBeenSet = true;
+}
+
+bool InstancePrice::DetailPricesHasBeenSet() const
+{
+    return m_detailPricesHasBeenSet;
 }
 

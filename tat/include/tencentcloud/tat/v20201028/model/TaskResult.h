@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Time when the execution is started.
-                     * @return ExecStartTime Time when the execution is started.
+                     * 获取Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecStartTime Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExecStartTime() const;
 
                     /**
-                     * 设置Time when the execution is started.
-                     * @param _execStartTime Time when the execution is started.
+                     * 设置Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _execStartTime Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExecStartTime(const std::string& _execStartTime);
@@ -110,15 +114,19 @@ namespace TencentCloud
                     bool ExecStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the execution is ended.
-                     * @return ExecEndTime Time when the execution is ended.
+                     * 获取Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecEndTime Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExecEndTime() const;
 
                     /**
-                     * 设置Time when the execution is ended.
-                     * @param _execEndTime Time when the execution is ended.
+                     * 设置Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _execEndTime Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExecEndTime(const std::string& _execEndTime);
@@ -208,13 +216,15 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Time when the execution is started.
+                     * Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_execStartTime;
                     bool m_execStartTimeHasBeenSet;
 
                     /**
-                     * Time when the execution is ended.
+                     * Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_execEndTime;
                     bool m_execEndTimeHasBeenSet;

@@ -110,23 +110,23 @@ namespace TencentCloud
                     bool LastHeartbeatTimeHasBeenSet() const;
 
                     /**
-                     * 获取Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
-                     * @return AgentStatus Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+                     * 获取Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+                     * @return AgentStatus Agent status. valid values:.
+Online: Online, Offline: Offline.
+
                      * 
                      */
                     std::string GetAgentStatus() const;
 
                     /**
-                     * 设置Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
-                     * @param _agentStatus Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+                     * 设置Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+                     * @param _agentStatus Agent status. valid values:.
+Online: Online, Offline: Offline.
+
                      * 
                      */
                     void SetAgentStatus(const std::string& _agentStatus);
@@ -139,23 +139,15 @@ namespace TencentCloud
                     bool AgentStatusHasBeenSet() const;
 
                     /**
-                     * 获取Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
-                     * @return Environment Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+                     * 获取Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
+                     * @return Environment Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
                      * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
-                     * 设置Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
-                     * @param _environment Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+                     * 设置Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
+                     * @param _environment Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
                      * 
                      */
                     void SetEnvironment(const std::string& _environment);
@@ -209,17 +201,15 @@ namespace TencentCloud
                     bool m_lastHeartbeatTimeHasBeenSet;
 
                     /**
-                     * Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+                     * Agent status. valid values:.
+Online: Online, Offline: Offline.
+
                      */
                     std::string m_agentStatus;
                     bool m_agentStatusHasBeenSet;
 
                     /**
-                     * Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+                     * Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
                      */
                     std::string m_environment;
                     bool m_environmentHasBeenSet;

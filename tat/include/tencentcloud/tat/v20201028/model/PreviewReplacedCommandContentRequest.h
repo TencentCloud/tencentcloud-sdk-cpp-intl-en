@@ -43,31 +43,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
-At most 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
-This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
-                     * @return Parameters Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
-At most 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
-This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+                     * 获取The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
+
+key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
+Custom parameters are limited to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+If the previewed CommandId has DefaultParameters set, this parameter can be empty.
+                     * @return Parameters The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
+
+key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
+Custom parameters are limited to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+If the previewed CommandId has DefaultParameters set, this parameter can be empty.
                      * 
                      */
                     std::string GetParameters() const;
 
                     /**
-                     * 设置Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
-At most 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
-This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
-                     * @param _parameters Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
-At most 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
-This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+                     * 设置The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
+
+key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
+Custom parameters are limited to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+If the previewed CommandId has DefaultParameters set, this parameter can be empty.
+                     * @param _parameters The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
+
+key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
+Custom parameters are limited to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+If the previewed CommandId has DefaultParameters set, this parameter can be empty.
                      * 
                      */
                     void SetParameters(const std::string& _parameters);
@@ -80,19 +92,23 @@ This parameter can be left empty if DefaultParameters is set for the previewed C
                     bool ParametersHasBeenSet() const;
 
                     /**
-                     * 获取The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
-`CommandId` or `Content` must be specified.
-                     * @return CommandId The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
-`CommandId` or `Content` must be specified.
+                     * 获取Perform the replace preview command.
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+CommandId and Content, you must provide one and can only provide one.
+                     * @return CommandId Perform the replace preview command.
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+CommandId and Content, you must provide one and can only provide one.
                      * 
                      */
                     std::string GetCommandId() const;
 
                     /**
-                     * 设置The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
-`CommandId` or `Content` must be specified.
-                     * @param _commandId The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
-`CommandId` or `Content` must be specified.
+                     * 设置Perform the replace preview command.
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+CommandId and Content, you must provide one and can only provide one.
+                     * @param _commandId Perform the replace preview command.
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+CommandId and Content, you must provide one and can only provide one.
                      * 
                      */
                     void SetCommandId(const std::string& _commandId);
@@ -132,18 +148,22 @@ CommandId or Content must be specified.
                 private:
 
                     /**
-                     * Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
-At most 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
-This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+                     * The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
+
+key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
+Custom parameters are limited to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+If the previewed CommandId has DefaultParameters set, this parameter can be empty.
                      */
                     std::string m_parameters;
                     bool m_parametersHasBeenSet;
 
                     /**
-                     * The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
-`CommandId` or `Content` must be specified.
+                     * Perform the replace preview command.
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+CommandId and Content, you must provide one and can only provide one.
                      */
                     std::string m_commandId;
                     bool m_commandIdHasBeenSet;

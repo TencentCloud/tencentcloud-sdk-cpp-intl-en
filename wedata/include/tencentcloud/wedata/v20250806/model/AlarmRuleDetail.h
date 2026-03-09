@@ -27,6 +27,7 @@
 #include <tencentcloud/wedata/v20250806/model/TimeOutStrategyInfo.h>
 #include <tencentcloud/wedata/v20250806/model/ProjectInstanceStatisticsAlarmInfo.h>
 #include <tencentcloud/wedata/v20250806/model/ReconciliationStrategyInfo.h>
+#include <tencentcloud/wedata/v20250806/model/MonitorWhiteTask.h>
 
 
 namespace TencentCloud
@@ -215,6 +216,127 @@ namespace TencentCloud
                      */
                     bool ReconciliationExtInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Configure allowlist for monitored object.
+                     * @return MonitorWhiteTasks Configure allowlist for monitored object.
+                     * 
+                     */
+                    std::vector<MonitorWhiteTask> GetMonitorWhiteTasks() const;
+
+                    /**
+                     * 设置Configure allowlist for monitored object.
+                     * @param _monitorWhiteTasks Configure allowlist for monitored object.
+                     * 
+                     */
+                    void SetMonitorWhiteTasks(const std::vector<MonitorWhiteTask>& _monitorWhiteTasks);
+
+                    /**
+                     * 判断参数 MonitorWhiteTasks 是否已赋值
+                     * @return MonitorWhiteTasks 是否已赋值
+                     * 
+                     */
+                    bool MonitorWhiteTasksHasBeenSet() const;
+
+                    /**
+                     * 获取3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WorkflowCompletionTimeCycleExtInfo 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<TimeOutStrategyInfo> GetWorkflowCompletionTimeCycleExtInfo() const;
+
+                    /**
+                     * 设置3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _workflowCompletionTimeCycleExtInfo 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWorkflowCompletionTimeCycleExtInfo(const std::vector<TimeOutStrategyInfo>& _workflowCompletionTimeCycleExtInfo);
+
+                    /**
+                     * 判断参数 WorkflowCompletionTimeCycleExtInfo 是否已赋值
+                     * @return WorkflowCompletionTimeCycleExtInfo 是否已赋值
+                     * 
+                     */
+                    bool WorkflowCompletionTimeCycleExtInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WorkflowExecutionTrigger Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetWorkflowExecutionTrigger() const;
+
+                    /**
+                     * 设置Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _workflowExecutionTrigger Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWorkflowExecutionTrigger(const int64_t& _workflowExecutionTrigger);
+
+                    /**
+                     * 判断参数 WorkflowExecutionTrigger 是否已赋值
+                     * @return WorkflowExecutionTrigger 是否已赋值
+                     * 
+                     */
+                    bool WorkflowExecutionTriggerHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WorkflowExecutionFailureTrigger Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetWorkflowExecutionFailureTrigger() const;
+
+                    /**
+                     * 设置Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _workflowExecutionFailureTrigger Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWorkflowExecutionFailureTrigger(const int64_t& _workflowExecutionFailureTrigger);
+
+                    /**
+                     * 判断参数 WorkflowExecutionFailureTrigger 是否已赋值
+                     * @return WorkflowExecutionFailureTrigger 是否已赋值
+                     * 
+                     */
+                    bool WorkflowExecutionFailureTriggerHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WorkflowExecutionSuccessTrigger Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetWorkflowExecutionSuccessTrigger() const;
+
+                    /**
+                     * 设置Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _workflowExecutionSuccessTrigger Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWorkflowExecutionSuccessTrigger(const int64_t& _workflowExecutionSuccessTrigger);
+
+                    /**
+                     * 判断参数 WorkflowExecutionSuccessTrigger 是否已赋值
+                     * @return WorkflowExecutionSuccessTrigger 是否已赋值
+                     * 
+                     */
+                    bool WorkflowExecutionSuccessTriggerHasBeenSet() const;
+
                 private:
 
                     /**
@@ -262,6 +384,40 @@ namespace TencentCloud
                      */
                     std::vector<ReconciliationStrategyInfo> m_reconciliationExtInfo;
                     bool m_reconciliationExtInfoHasBeenSet;
+
+                    /**
+                     * Configure allowlist for monitored object.
+                     */
+                    std::vector<MonitorWhiteTask> m_monitorWhiteTasks;
+                    bool m_monitorWhiteTasksHasBeenSet;
+
+                    /**
+                     * 3.0 Workflow completion time (period) Alarm policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TimeOutStrategyInfo> m_workflowCompletionTimeCycleExtInfo;
+                    bool m_workflowCompletionTimeCycleExtInfoHasBeenSet;
+
+                    /**
+                     * Workflow execution triggers the Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_workflowExecutionTrigger;
+                    bool m_workflowExecutionTriggerHasBeenSet;
+
+                    /**
+                     * Workflow execution failure Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_workflowExecutionFailureTrigger;
+                    bool m_workflowExecutionFailureTriggerHasBeenSet;
+
+                    /**
+                     * Workflow execution successful Alarm condition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_workflowExecutionSuccessTrigger;
+                    bool m_workflowExecutionSuccessTriggerHasBeenSet;
 
                 };
             }

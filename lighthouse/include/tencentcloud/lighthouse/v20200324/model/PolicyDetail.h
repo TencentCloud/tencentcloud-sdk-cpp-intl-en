@@ -51,14 +51,14 @@ namespace TencentCloud
                      * @return UserDiscount User discount.
                      * 
                      */
-                    int64_t GetUserDiscount() const;
+                    double GetUserDiscount() const;
 
                     /**
                      * 设置User discount.
                      * @param _userDiscount User discount.
                      * 
                      */
-                    void SetUserDiscount(const int64_t& _userDiscount);
+                    void SetUserDiscount(const double& _userDiscount);
 
                     /**
                      * 判断参数 UserDiscount 是否已赋值
@@ -72,14 +72,14 @@ namespace TencentCloud
                      * @return CommonDiscount Public discount.
                      * 
                      */
-                    int64_t GetCommonDiscount() const;
+                    double GetCommonDiscount() const;
 
                     /**
                      * 设置Public discount.
                      * @param _commonDiscount Public discount.
                      * 
                      */
-                    void SetCommonDiscount(const int64_t& _commonDiscount);
+                    void SetCommonDiscount(const double& _commonDiscount);
 
                     /**
                      * 判断参数 CommonDiscount 是否已赋值
@@ -93,14 +93,14 @@ namespace TencentCloud
                      * @return FinalDiscount Final discount.
                      * 
                      */
-                    int64_t GetFinalDiscount() const;
+                    double GetFinalDiscount() const;
 
                     /**
                      * 设置Final discount.
                      * @param _finalDiscount Final discount.
                      * 
                      */
-                    void SetFinalDiscount(const int64_t& _finalDiscount);
+                    void SetFinalDiscount(const double& _finalDiscount);
 
                     /**
                      * 判断参数 FinalDiscount 是否已赋值
@@ -168,19 +168,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     /**
                      * User discount.
                      */
-                    int64_t m_userDiscount;
+                    double m_userDiscount;
                     bool m_userDiscountHasBeenSet;
 
                     /**
                      * Public discount.
                      */
-                    int64_t m_commonDiscount;
+                    double m_commonDiscount;
                     bool m_commonDiscountHasBeenSet;
 
                     /**
                      * Final discount.
                      */
-                    int64_t m_finalDiscount;
+                    double m_finalDiscount;
                     bool m_finalDiscountHasBeenSet;
 
                     /**

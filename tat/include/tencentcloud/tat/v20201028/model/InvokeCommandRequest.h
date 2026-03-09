@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the command to be triggered.
-                     * @return CommandId ID of the command to be triggered.
+                     * 获取Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     std::string GetCommandId() const;
 
                     /**
-                     * 设置ID of the command to be triggered.
-                     * @param _commandId ID of the command to be triggered.
+                     * 设置Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @param _commandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     void SetCommandId(const std::string& _commandId);
@@ -64,15 +64,35 @@ namespace TencentCloud
                     bool CommandIdHasBeenSet() const;
 
                     /**
-                     * 获取IDs of instances about to execute commands. At most 100 IDs are allowed.
-                     * @return InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * 获取Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+                     * @return InstanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置IDs of instances about to execute commands. At most 100 IDs are allowed.
-                     * @param _instanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * 设置Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+                     * @param _instanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -85,31 +105,35 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @return Parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 获取Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @return Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     std::string GetParameters() const;
 
                     /**
-                     * 设置Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param _parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 设置Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @param _parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     void SetParameters(const std::string& _parameters);
@@ -245,23 +269,29 @@ The principle of the least privilege is the best practice for permission managem
                 private:
 
                     /**
-                     * ID of the command to be triggered.
+                     * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      */
                     std::string m_commandId;
                     bool m_commandIdHasBeenSet;
 
                     /**
-                     * IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      */
                     std::string m_parameters;
                     bool m_parametersHasBeenSet;

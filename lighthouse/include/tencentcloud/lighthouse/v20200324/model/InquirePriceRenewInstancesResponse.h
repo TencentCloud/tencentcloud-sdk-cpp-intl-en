@@ -62,10 +62,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取List of data disk price information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataDiskPriceSet List of data disk price information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data disk price information list.
+                     * @return DataDiskPriceSet Data disk price information list.
                      * 
                      */
                     std::vector<DataDiskPrice> GetDataDiskPriceSet() const;
@@ -78,10 +76,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataDiskPriceSetHasBeenSet() const;
 
                     /**
-                     * 获取Price list of the instances to be renewed.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InstancePriceDetailSet Price list of the instances to be renewed.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Price list for instances to be renewed.
+                     * @return InstancePriceDetailSet Price list for instances to be renewed.
                      * 
                      */
                     std::vector<InstancePriceDetail> GetInstancePriceDetailSet() const;
@@ -116,15 +112,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_priceHasBeenSet;
 
                     /**
-                     * List of data disk price information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data disk price information list.
                      */
                     std::vector<DataDiskPrice> m_dataDiskPriceSet;
                     bool m_dataDiskPriceSetHasBeenSet;
 
                     /**
-                     * Price list of the instances to be renewed.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Price list for instances to be renewed.
                      */
                     std::vector<InstancePriceDetail> m_instancePriceDetailSet;
                     bool m_instancePriceDetailSetHasBeenSet;

@@ -1,0 +1,309 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_WEDATA_V20250806_MODEL_CREATETRIGGERTASKBASEATTRIBUTE_H_
+#define TENCENTCLOUD_WEDATA_V20250806_MODEL_CREATETRIGGERTASKBASEATTRIBUTE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Wedata
+    {
+        namespace V20250806
+        {
+            namespace Model
+            {
+                /**
+                * Create task basic attribute information.
+                */
+                class CreateTriggerTaskBaseAttribute : public AbstractModel
+                {
+                public:
+                    CreateTriggerTaskBaseAttribute();
+                    ~CreateTriggerTaskBaseAttribute() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Task name.
+                     * @return TaskName Task name.
+                     * 
+                     */
+                    std::string GetTaskName() const;
+
+                    /**
+                     * 设置Task name.
+                     * @param _taskName Task name.
+                     * 
+                     */
+                    void SetTaskName(const std::string& _taskName);
+
+                    /**
+                     * 判断参数 TaskName 是否已赋值
+                     * @return TaskName 是否已赋值
+                     * 
+                     */
+                    bool TaskNameHasBeenSet() const;
+
+                    /**
+                     * 获取Task type ID:.
+* 26:OfflineSynchronization
+* 30:Python
+* 32:DLC SQL
+* 35:Shell
+* 38:Shell Form Mode
+* 46:DLC Spark
+* 50:DLC PySpark
+* 130:Branch Node
+* 131:Merged Node
+* 132:Notebook
+* 133:SSH
+* 137:For-each
+* 139:DLC Spark Streaming
+* 140:Run Workflow
+                     * @return TaskTypeId Task type ID:.
+* 26:OfflineSynchronization
+* 30:Python
+* 32:DLC SQL
+* 35:Shell
+* 38:Shell Form Mode
+* 46:DLC Spark
+* 50:DLC PySpark
+* 130:Branch Node
+* 131:Merged Node
+* 132:Notebook
+* 133:SSH
+* 137:For-each
+* 139:DLC Spark Streaming
+* 140:Run Workflow
+                     * 
+                     */
+                    std::string GetTaskTypeId() const;
+
+                    /**
+                     * 设置Task type ID:.
+* 26:OfflineSynchronization
+* 30:Python
+* 32:DLC SQL
+* 35:Shell
+* 38:Shell Form Mode
+* 46:DLC Spark
+* 50:DLC PySpark
+* 130:Branch Node
+* 131:Merged Node
+* 132:Notebook
+* 133:SSH
+* 137:For-each
+* 139:DLC Spark Streaming
+* 140:Run Workflow
+                     * @param _taskTypeId Task type ID:.
+* 26:OfflineSynchronization
+* 30:Python
+* 32:DLC SQL
+* 35:Shell
+* 38:Shell Form Mode
+* 46:DLC Spark
+* 50:DLC PySpark
+* 130:Branch Node
+* 131:Merged Node
+* 132:Notebook
+* 133:SSH
+* 137:For-each
+* 139:DLC Spark Streaming
+* 140:Run Workflow
+                     * 
+                     */
+                    void SetTaskTypeId(const std::string& _taskTypeId);
+
+                    /**
+                     * 判断参数 TaskTypeId 是否已赋值
+                     * @return TaskTypeId 是否已赋值
+                     * 
+                     */
+                    bool TaskTypeIdHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow ID.
+                     * @return WorkflowId Workflow ID.
+                     * 
+                     */
+                    std::string GetWorkflowId() const;
+
+                    /**
+                     * 设置Workflow ID.
+                     * @param _workflowId Workflow ID.
+                     * 
+                     */
+                    void SetWorkflowId(const std::string& _workflowId);
+
+                    /**
+                     * 判断参数 WorkflowId 是否已赋值
+                     * @return WorkflowId 是否已赋值
+                     * 
+                     */
+                    bool WorkflowIdHasBeenSet() const;
+
+                    /**
+                     * 获取Task owner ID, defaults to the current user.
+                     * @return OwnerUin Task owner ID, defaults to the current user.
+                     * 
+                     */
+                    std::string GetOwnerUin() const;
+
+                    /**
+                     * 设置Task owner ID, defaults to the current user.
+                     * @param _ownerUin Task owner ID, defaults to the current user.
+                     * 
+                     */
+                    void SetOwnerUin(const std::string& _ownerUin);
+
+                    /**
+                     * 判断参数 OwnerUin 是否已赋值
+                     * @return OwnerUin 是否已赋值
+                     * 
+                     */
+                    bool OwnerUinHasBeenSet() const;
+
+                    /**
+                     * 获取Task description
+                     * @return TaskDescription Task description
+                     * 
+                     */
+                    std::string GetTaskDescription() const;
+
+                    /**
+                     * 设置Task description
+                     * @param _taskDescription Task description
+                     * 
+                     */
+                    void SetTaskDescription(const std::string& _taskDescription);
+
+                    /**
+                     * 判断参数 TaskDescription 是否已赋值
+                     * @return TaskDescription 是否已赋值
+                     * 
+                     */
+                    bool TaskDescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+                     * @return TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+                     * 
+                     */
+                    std::string GetTaskFolderPath() const;
+
+                    /**
+                     * 设置Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+                     * @param _taskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+                     * 
+                     */
+                    void SetTaskFolderPath(const std::string& _taskFolderPath);
+
+                    /**
+                     * 判断参数 TaskFolderPath 是否已赋值
+                     * @return TaskFolderPath 是否已赋值
+                     * 
+                     */
+                    bool TaskFolderPathHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Task name.
+                     */
+                    std::string m_taskName;
+                    bool m_taskNameHasBeenSet;
+
+                    /**
+                     * Task type ID:.
+* 26:OfflineSynchronization
+* 30:Python
+* 32:DLC SQL
+* 35:Shell
+* 38:Shell Form Mode
+* 46:DLC Spark
+* 50:DLC PySpark
+* 130:Branch Node
+* 131:Merged Node
+* 132:Notebook
+* 133:SSH
+* 137:For-each
+* 139:DLC Spark Streaming
+* 140:Run Workflow
+                     */
+                    std::string m_taskTypeId;
+                    bool m_taskTypeIdHasBeenSet;
+
+                    /**
+                     * Workflow ID.
+                     */
+                    std::string m_workflowId;
+                    bool m_workflowIdHasBeenSet;
+
+                    /**
+                     * Task owner ID, defaults to the current user.
+                     */
+                    std::string m_ownerUin;
+                    bool m_ownerUinHasBeenSet;
+
+                    /**
+                     * Task description
+                     */
+                    std::string m_taskDescription;
+                    bool m_taskDescriptionHasBeenSet;
+
+                    /**
+                     * Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+                     */
+                    std::string m_taskFolderPath;
+                    bool m_taskFolderPathHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_WEDATA_V20250806_MODEL_CREATETRIGGERTASKBASEATTRIBUTE_H_

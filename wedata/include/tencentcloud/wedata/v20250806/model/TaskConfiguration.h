@@ -178,18 +178,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool YarnQueueHasBeenSet() const;
 
                     /**
-                     * 获取Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+                     * 获取Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SourceServiceId Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+                     * @return SourceServiceId Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSourceServiceId() const;
 
                     /**
-                     * 设置Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+                     * 设置Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sourceServiceId Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+                     * @param _sourceServiceId Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -203,18 +203,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 获取Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SourceServiceType Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @return SourceServiceType Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSourceServiceType() const;
 
                     /**
-                     * 设置Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 设置Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sourceServiceType Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @param _sourceServiceType Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -228,18 +228,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceServiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 获取Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SourceServiceName Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @return SourceServiceName Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSourceServiceName() const;
 
                     /**
-                     * 设置Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 设置Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sourceServiceName Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @param _sourceServiceName Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -253,18 +253,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 获取Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetServiceId TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @return TargetServiceId Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetServiceId() const;
 
                     /**
-                     * 设置TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 设置Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetServiceId TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @param _targetServiceId Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -278,18 +278,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+                     * 获取Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetServiceType Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+                     * @return TargetServiceType Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetServiceType() const;
 
                     /**
-                     * 设置Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+                     * 设置Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetServiceType Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+                     * @param _targetServiceType Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -303,18 +303,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetServiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 获取Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetServiceName Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @return TargetServiceName Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetServiceName() const;
 
                     /**
-                     * 设置Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * 设置Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetServiceName Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * @param _targetServiceName Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -491,42 +491,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_yarnQueueHasBeenSet;
 
                     /**
-                     * Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+                     * Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sourceServiceId;
                     bool m_sourceServiceIdHasBeenSet;
 
                     /**
-                     * Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sourceServiceType;
                     bool m_sourceServiceTypeHasBeenSet;
 
                     /**
-                     * Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sourceServiceName;
                     bool m_sourceServiceNameHasBeenSet;
 
                     /**
-                     * TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetServiceId;
                     bool m_targetServiceIdHasBeenSet;
 
                     /**
-                     * Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+                     * Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetServiceType;
                     bool m_targetServiceTypeHasBeenSet;
 
                     /**
-                     * Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+                     * Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetServiceName;

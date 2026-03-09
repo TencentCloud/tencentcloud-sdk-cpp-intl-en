@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk ID.
-                     * @return DiskId Cloud disk ID.
+                     * 获取<p>Cloud disk ID.</p>.
+                     * @return DiskId <p>Cloud disk ID.</p>.
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置Cloud disk ID.
-                     * @param _diskId Cloud disk ID.
+                     * 设置<p>Cloud disk ID.</p>.
+                     * @param _diskId <p>Cloud disk ID.</p>.
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk unit price.
-                     * @return OriginalDiskPrice Cloud disk unit price.
+                     * 获取<P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+                     * @return OriginalDiskPrice <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalDiskPrice() const;
 
                     /**
-                     * 设置Cloud disk unit price.
-                     * @param _originalDiskPrice Cloud disk unit price.
+                     * 设置<P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+                     * @param _originalDiskPrice <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalDiskPrice(const double& _originalDiskPrice);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalDiskPriceHasBeenSet() const;
 
                     /**
-                     * 获取Total price of cloud disk
-                     * @return OriginalPrice Total price of cloud disk
+                     * 获取<P>Total CBS price.</p><p>unit: usd</p>.
+                     * @return OriginalPrice <P>Total CBS price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Total price of cloud disk
-                     * @param _originalPrice Total price of cloud disk
+                     * 设置<P>Total CBS price.</p><p>unit: usd</p>.
+                     * @param _originalPrice <P>Total CBS price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount.
-                     * @return Discount Discount.
+                     * 获取<p>Discount.</p>.
+                     * @return Discount <p>Discount.</p>.
                      * 
                      */
                     double GetDiscount() const;
 
                     /**
-                     * 设置Discount.
-                     * @param _discount Discount.
+                     * 设置<p>Discount.</p>.
+                     * @param _discount <p>Discount.</p>.
                      * 
                      */
                     void SetDiscount(const double& _discount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取Discounted total price.
-                     * @return DiscountPrice Discounted total price.
+                     * 获取<P>Discounted total price.</p><p>unit: usd</p>.
+                     * @return DiscountPrice <P>Discounted total price.</p><p>unit: usd</p>.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted total price.
-                     * @param _discountPrice Discounted total price.
+                     * 设置<P>Discounted total price.</p><p>unit: usd</p>.
+                     * @param _discountPrice <P>Discounted total price.</p><p>unit: usd</p>.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InstanceId ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Instance ID for data disk mounting.</p>.
+                     * @return InstanceId <p>Instance ID for data disk mounting.</p>.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _instanceId ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Instance ID for data disk mounting.</p>.
+                     * @param _instanceId <p>Instance ID for data disk mounting.</p>.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -179,38 +175,37 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Cloud disk ID.
+                     * <p>Cloud disk ID.</p>.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Cloud disk unit price.
+                     * <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
                      */
                     double m_originalDiskPrice;
                     bool m_originalDiskPriceHasBeenSet;
 
                     /**
-                     * Total price of cloud disk
+                     * <P>Total CBS price.</p><p>unit: usd</p>.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount.
+                     * <p>Discount.</p>.
                      */
                     double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**
-                     * Discounted total price.
+                     * <P>Discounted total price.</p><p>unit: usd</p>.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Instance ID for data disk mounting.</p>.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

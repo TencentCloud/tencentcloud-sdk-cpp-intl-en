@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk type. Valid values: "CLOUD_PREMIUM".
-                     * @return DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * 获取CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+                     * @return DiskType CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type. Valid values: "CLOUD_PREMIUM".
-                     * @param _diskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * 设置CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+                     * @param _diskType CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size.
-                     * @return DiskSize Cloud disk size.
+                     * 获取CBS disk capacity, unit: GB.
+                     * @return DiskSize CBS disk capacity, unit: GB.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size.
-                     * @param _diskSize Cloud disk size.
+                     * 设置CBS disk capacity, unit: GB.
+                     * @param _diskSize CBS disk capacity, unit: GB.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 获取Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
+                     * @return DiskBackupQuota Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
                      * 
                      */
                     int64_t GetDiskBackupQuota() const;
 
                     /**
-                     * 设置Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 设置Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
+                     * @param _diskBackupQuota Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
                      * 
                      */
                     void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Cloud disk size.
+                     * CBS disk capacity, unit: GB.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
                      */
                     int64_t m_diskBackupQuota;
                     bool m_diskBackupQuotaHasBeenSet;

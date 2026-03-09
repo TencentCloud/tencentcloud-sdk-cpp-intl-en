@@ -173,11 +173,11 @@ Silent mode: do not pass in this parameter.
                     /**
                      * 获取Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
                      * @return Optional Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
                      * 
                      */
@@ -186,11 +186,11 @@ Silent mode: do not pass in this parameter.
                     /**
                      * 设置Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
                      * @param _optional Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
                      * 
                      */
@@ -317,7 +317,7 @@ Silent mode: do not pass in this parameter.
                     /**
                      * Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
                      */
                     std::string m_optional;

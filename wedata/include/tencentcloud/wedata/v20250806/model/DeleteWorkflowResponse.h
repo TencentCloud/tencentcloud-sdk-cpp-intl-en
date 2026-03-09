@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
-                     * @return Data Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+                     * 获取Whether deletion succeeded.
+                     * @return Data Whether deletion succeeded.
                      * 
                      */
                     DeleteWorkflowResult GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+                     * Whether deletion succeeded.
                      */
                     DeleteWorkflowResult m_data;
                     bool m_dataHasBeenSet;

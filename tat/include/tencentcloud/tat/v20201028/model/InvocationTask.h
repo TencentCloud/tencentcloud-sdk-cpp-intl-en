@@ -112,67 +112,71 @@ namespace TencentCloud
                     bool CommandIdHasBeenSet() const;
 
                     /**
-                     * 获取Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
-                     * @return TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+                     * 获取Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+                     * @return TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
-                     * @param _taskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+                     * 设置Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+                     * @param _taskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -227,15 +231,19 @@ namespace TencentCloud
                     bool TaskResultHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the execution task.
-                     * @return StartTime Start time of the execution task.
+                     * 获取Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StartTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the execution task.
-                     * @param _startTime Start time of the execution task.
+                     * 设置Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _startTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -248,15 +256,19 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the execution task.
-                     * @return EndTime End time of the execution task.
+                     * 获取Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndTime Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the execution task.
-                     * @param _endTime End time of the execution task.
+                     * 设置Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endTime Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -269,15 +281,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreatedTime Creation time.
+                     * 获取Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createdTime Creation time.
+                     * 设置Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _createdTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -290,15 +302,15 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time.
-                     * @return UpdatedTime Update time.
+                     * 获取Update time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return UpdatedTime Update time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Update time.
-                     * @param _updatedTime Update time.
+                     * 设置Update time. the format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _updatedTime Update time. the format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -354,14 +366,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * @return InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * 
                      */
                     std::string GetInvocationSource() const;
 
                     /**
                      * 设置Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * @param _invocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      * 
                      */
                     void SetInvocationSource(const std::string& _invocationSource);
@@ -372,6 +396,27 @@ namespace TencentCloud
                      * 
                      */
                     bool InvocationSourceHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the executed command.
+                     * @return CommandName Name of the executed command.
+                     * 
+                     */
+                    std::string GetCommandName() const;
+
+                    /**
+                     * 设置Name of the executed command.
+                     * @param _commandName Name of the executed command.
+                     * 
+                     */
+                    void SetCommandName(const std::string& _commandName);
+
+                    /**
+                     * 判断参数 CommandName 是否已赋值
+                     * @return CommandName 是否已赋值
+                     * 
+                     */
+                    bool CommandNameHasBeenSet() const;
 
                 private:
 
@@ -394,20 +439,21 @@ namespace TencentCloud
                     bool m_commandIdHasBeenSet;
 
                     /**
-                     * Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+                     * Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -425,25 +471,27 @@ namespace TencentCloud
                     bool m_taskResultHasBeenSet;
 
                     /**
-                     * Start time of the execution task.
+                     * Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the execution task.
+                     * Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Update time.
+                     * Update time. the format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;
@@ -462,9 +510,18 @@ namespace TencentCloud
 
                     /**
                      * Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
                      */
                     std::string m_invocationSource;
                     bool m_invocationSourceHasBeenSet;
+
+                    /**
+                     * Name of the executed command.
+                     */
+                    std::string m_commandName;
+                    bool m_commandNameHasBeenSet;
 
                 };
             }

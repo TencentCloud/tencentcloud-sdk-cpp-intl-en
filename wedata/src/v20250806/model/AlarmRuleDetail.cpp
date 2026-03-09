@@ -26,7 +26,12 @@ AlarmRuleDetail::AlarmRuleDetail() :
     m_timeOutExtInfoHasBeenSet(false),
     m_dataBackfillOrRerunTimeOutExtInfoHasBeenSet(false),
     m_projectInstanceStatisticsAlarmInfoListHasBeenSet(false),
-    m_reconciliationExtInfoHasBeenSet(false)
+    m_reconciliationExtInfoHasBeenSet(false),
+    m_monitorWhiteTasksHasBeenSet(false),
+    m_workflowCompletionTimeCycleExtInfoHasBeenSet(false),
+    m_workflowExecutionTriggerHasBeenSet(false),
+    m_workflowExecutionFailureTriggerHasBeenSet(false),
+    m_workflowExecutionSuccessTriggerHasBeenSet(false)
 {
 }
 
@@ -135,6 +140,76 @@ CoreInternalOutcome AlarmRuleDetail::Deserialize(const rapidjson::Value &value)
         m_reconciliationExtInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("MonitorWhiteTasks") && !value["MonitorWhiteTasks"].IsNull())
+    {
+        if (!value["MonitorWhiteTasks"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AlarmRuleDetail.MonitorWhiteTasks` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["MonitorWhiteTasks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            MonitorWhiteTask item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_monitorWhiteTasks.push_back(item);
+        }
+        m_monitorWhiteTasksHasBeenSet = true;
+    }
+
+    if (value.HasMember("WorkflowCompletionTimeCycleExtInfo") && !value["WorkflowCompletionTimeCycleExtInfo"].IsNull())
+    {
+        if (!value["WorkflowCompletionTimeCycleExtInfo"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AlarmRuleDetail.WorkflowCompletionTimeCycleExtInfo` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["WorkflowCompletionTimeCycleExtInfo"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TimeOutStrategyInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_workflowCompletionTimeCycleExtInfo.push_back(item);
+        }
+        m_workflowCompletionTimeCycleExtInfoHasBeenSet = true;
+    }
+
+    if (value.HasMember("WorkflowExecutionTrigger") && !value["WorkflowExecutionTrigger"].IsNull())
+    {
+        if (!value["WorkflowExecutionTrigger"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmRuleDetail.WorkflowExecutionTrigger` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_workflowExecutionTrigger = value["WorkflowExecutionTrigger"].GetInt64();
+        m_workflowExecutionTriggerHasBeenSet = true;
+    }
+
+    if (value.HasMember("WorkflowExecutionFailureTrigger") && !value["WorkflowExecutionFailureTrigger"].IsNull())
+    {
+        if (!value["WorkflowExecutionFailureTrigger"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmRuleDetail.WorkflowExecutionFailureTrigger` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_workflowExecutionFailureTrigger = value["WorkflowExecutionFailureTrigger"].GetInt64();
+        m_workflowExecutionFailureTriggerHasBeenSet = true;
+    }
+
+    if (value.HasMember("WorkflowExecutionSuccessTrigger") && !value["WorkflowExecutionSuccessTrigger"].IsNull())
+    {
+        if (!value["WorkflowExecutionSuccessTrigger"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmRuleDetail.WorkflowExecutionSuccessTrigger` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_workflowExecutionSuccessTrigger = value["WorkflowExecutionSuccessTrigger"].GetInt64();
+        m_workflowExecutionSuccessTriggerHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -216,6 +291,60 @@ void AlarmRuleDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_monitorWhiteTasksHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MonitorWhiteTasks";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_monitorWhiteTasks.begin(); itr != m_monitorWhiteTasks.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_workflowCompletionTimeCycleExtInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WorkflowCompletionTimeCycleExtInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_workflowCompletionTimeCycleExtInfo.begin(); itr != m_workflowCompletionTimeCycleExtInfo.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_workflowExecutionTriggerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WorkflowExecutionTrigger";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_workflowExecutionTrigger, allocator);
+    }
+
+    if (m_workflowExecutionFailureTriggerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WorkflowExecutionFailureTrigger";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_workflowExecutionFailureTrigger, allocator);
+    }
+
+    if (m_workflowExecutionSuccessTriggerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WorkflowExecutionSuccessTrigger";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_workflowExecutionSuccessTrigger, allocator);
     }
 
 }
@@ -315,5 +444,85 @@ void AlarmRuleDetail::SetReconciliationExtInfo(const vector<ReconciliationStrate
 bool AlarmRuleDetail::ReconciliationExtInfoHasBeenSet() const
 {
     return m_reconciliationExtInfoHasBeenSet;
+}
+
+vector<MonitorWhiteTask> AlarmRuleDetail::GetMonitorWhiteTasks() const
+{
+    return m_monitorWhiteTasks;
+}
+
+void AlarmRuleDetail::SetMonitorWhiteTasks(const vector<MonitorWhiteTask>& _monitorWhiteTasks)
+{
+    m_monitorWhiteTasks = _monitorWhiteTasks;
+    m_monitorWhiteTasksHasBeenSet = true;
+}
+
+bool AlarmRuleDetail::MonitorWhiteTasksHasBeenSet() const
+{
+    return m_monitorWhiteTasksHasBeenSet;
+}
+
+vector<TimeOutStrategyInfo> AlarmRuleDetail::GetWorkflowCompletionTimeCycleExtInfo() const
+{
+    return m_workflowCompletionTimeCycleExtInfo;
+}
+
+void AlarmRuleDetail::SetWorkflowCompletionTimeCycleExtInfo(const vector<TimeOutStrategyInfo>& _workflowCompletionTimeCycleExtInfo)
+{
+    m_workflowCompletionTimeCycleExtInfo = _workflowCompletionTimeCycleExtInfo;
+    m_workflowCompletionTimeCycleExtInfoHasBeenSet = true;
+}
+
+bool AlarmRuleDetail::WorkflowCompletionTimeCycleExtInfoHasBeenSet() const
+{
+    return m_workflowCompletionTimeCycleExtInfoHasBeenSet;
+}
+
+int64_t AlarmRuleDetail::GetWorkflowExecutionTrigger() const
+{
+    return m_workflowExecutionTrigger;
+}
+
+void AlarmRuleDetail::SetWorkflowExecutionTrigger(const int64_t& _workflowExecutionTrigger)
+{
+    m_workflowExecutionTrigger = _workflowExecutionTrigger;
+    m_workflowExecutionTriggerHasBeenSet = true;
+}
+
+bool AlarmRuleDetail::WorkflowExecutionTriggerHasBeenSet() const
+{
+    return m_workflowExecutionTriggerHasBeenSet;
+}
+
+int64_t AlarmRuleDetail::GetWorkflowExecutionFailureTrigger() const
+{
+    return m_workflowExecutionFailureTrigger;
+}
+
+void AlarmRuleDetail::SetWorkflowExecutionFailureTrigger(const int64_t& _workflowExecutionFailureTrigger)
+{
+    m_workflowExecutionFailureTrigger = _workflowExecutionFailureTrigger;
+    m_workflowExecutionFailureTriggerHasBeenSet = true;
+}
+
+bool AlarmRuleDetail::WorkflowExecutionFailureTriggerHasBeenSet() const
+{
+    return m_workflowExecutionFailureTriggerHasBeenSet;
+}
+
+int64_t AlarmRuleDetail::GetWorkflowExecutionSuccessTrigger() const
+{
+    return m_workflowExecutionSuccessTrigger;
+}
+
+void AlarmRuleDetail::SetWorkflowExecutionSuccessTrigger(const int64_t& _workflowExecutionSuccessTrigger)
+{
+    m_workflowExecutionSuccessTrigger = _workflowExecutionSuccessTrigger;
+    m_workflowExecutionSuccessTriggerHasBeenSet = true;
+}
+
+bool AlarmRuleDetail::WorkflowExecutionSuccessTriggerHasBeenSet() const
+{
+    return m_workflowExecutionSuccessTriggerHasBeenSet;
 }
 

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tat/v20201028/model/DefaultParameterConf.h>
 #include <tencentcloud/tat/v20201028/model/Tag.h>
 
 
@@ -107,15 +108,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-                     * @return CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 获取Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+                     * @return CommandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      * 
                      */
                     std::string GetCommandType() const;
 
                     /**
-                     * 设置Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-                     * @param _commandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 设置Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+                     * @param _commandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      * 
                      */
                     void SetCommandType(const std::string& _commandType);
@@ -199,31 +200,39 @@ Default value: `false`.
                     bool EnableParameterHasBeenSet() const;
 
                     /**
-                     * 获取The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @return DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 获取Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @return DefaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     std::string GetDefaultParameters() const;
 
                     /**
-                     * 设置The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param _defaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 设置Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @param _defaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     void SetDefaultParameters(const std::string& _defaultParameters);
@@ -234,6 +243,43 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
                      * 
                      */
                     bool DefaultParametersHasBeenSet() const;
+
+                    /**
+                     * 获取Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+                     * @return DefaultParameterConfs Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+                     * 
+                     */
+                    std::vector<DefaultParameterConf> GetDefaultParameterConfs() const;
+
+                    /**
+                     * 设置Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+                     * @param _defaultParameterConfs Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+                     * 
+                     */
+                    void SetDefaultParameterConfs(const std::vector<DefaultParameterConf>& _defaultParameterConfs);
+
+                    /**
+                     * 判断参数 DefaultParameterConfs 是否已赋值
+                     * @return DefaultParameterConfs 是否已赋值
+                     * 
+                     */
+                    bool DefaultParameterConfsHasBeenSet() const;
 
                     /**
                      * 获取Tags bound to the command. At most 10 tags are allowed.
@@ -356,7 +402,7 @@ The principle of least privilege is the best practice for permission management.
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      */
                     std::string m_commandType;
                     bool m_commandTypeHasBeenSet;
@@ -382,14 +428,26 @@ Default value: `false`.
                     bool m_enableParameterHasBeenSet;
 
                     /**
-                     * The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      */
                     std::string m_defaultParameters;
                     bool m_defaultParametersHasBeenSet;
+
+                    /**
+                     * Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+                     */
+                    std::vector<DefaultParameterConf> m_defaultParameterConfs;
+                    bool m_defaultParameterConfsHasBeenSet;
 
                     /**
                      * Tags bound to the command. At most 10 tags are allowed.

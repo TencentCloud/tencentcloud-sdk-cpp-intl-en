@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Execution activity ID
-                     * @return InvocationId Execution activity ID
+                     * 获取Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+                     * @return InvocationId Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvocationId() const;
 
                     /**
-                     * 设置Execution activity ID
-                     * @param _invocationId Execution activity ID
+                     * 设置Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+                     * @param _invocationId Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
@@ -64,23 +72,35 @@ namespace TencentCloud
                     bool InvocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
-                     * @return InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * 获取Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
+                     * @return InstanceIds Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
-                     * @param _instanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * 设置Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
+                     * @param _instanceIds Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -95,15 +115,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Execution activity ID
+                     * Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invocationId;
                     bool m_invocationIdHasBeenSet;
 
                     /**
-                     * Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

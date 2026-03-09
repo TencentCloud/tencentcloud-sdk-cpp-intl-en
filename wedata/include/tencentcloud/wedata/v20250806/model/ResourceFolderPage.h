@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Paginate resource folders.
+                * Resource folder page.
                 */
                 class ResourceFolderPage : public AbstractModel
                 {

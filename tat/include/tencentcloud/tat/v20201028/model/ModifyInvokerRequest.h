@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the invoker to be modified.
-                     * @return InvokerId ID of the invoker to be modified.
+                     * 获取Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @return InvokerId Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
-                     * 设置ID of the invoker to be modified.
-                     * @param _invokerId ID of the invoker to be modified.
+                     * 设置Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @param _invokerId Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
@@ -65,15 +73,15 @@ namespace TencentCloud
                     bool InvokerIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the invoker to be modified.
-                     * @return Name Name of the invoker to be modified.
+                     * 获取Executor name to be modified. length not exceeding 120 characters.
+                     * @return Name Executor name to be modified. length not exceeding 120 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the invoker to be modified.
-                     * @param _name Name of the invoker to be modified.
+                     * 设置Executor name to be modified. length not exceeding 120 characters.
+                     * @param _name Executor name to be modified. length not exceeding 120 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -86,15 +94,31 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Invoker type. It can only be `SCHEDULE` (recurring invokers).
-                     * @return Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * 获取Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+                     * @return Type Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Invoker type. It can only be `SCHEDULE` (recurring invokers).
-                     * @param _type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * 设置Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+                     * @param _type Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -107,15 +131,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the command to be modified.
-                     * @return CommandId ID of the command to be modified.
+                     * 获取Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @return CommandId Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     std::string GetCommandId() const;
 
                     /**
-                     * 设置ID of the command to be modified.
-                     * @param _commandId ID of the command to be modified.
+                     * 设置Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @param _commandId Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     void SetCommandId(const std::string& _commandId);
@@ -128,15 +160,15 @@ namespace TencentCloud
                     bool CommandIdHasBeenSet() const;
 
                     /**
-                     * 获取The username to be modified.
-                     * @return Username The username to be modified.
+                     * 获取Username to be modified. length not exceeding 256 characters.
+                     * @return Username Username to be modified. length not exceeding 256 characters.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置The username to be modified.
-                     * @param _username The username to be modified.
+                     * 设置Username to be modified. length not exceeding 256 characters.
+                     * @param _username Username to be modified. length not exceeding 256 characters.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -149,15 +181,23 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters to be modified.
-                     * @return Parameters Custom parameters to be modified.
+                     * 获取Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+                     * @return Parameters Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetParameters() const;
 
                     /**
-                     * 设置Custom parameters to be modified.
-                     * @param _parameters Custom parameters to be modified.
+                     * 设置Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+                     * @param _parameters Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
                      * 
                      */
                     void SetParameters(const std::string& _parameters);
@@ -170,15 +210,31 @@ namespace TencentCloud
                     bool ParametersHasBeenSet() const;
 
                     /**
-                     * 获取List of instance IDs to be modified. Up to 100 IDs are allowed.
-                     * @return InstanceIds List of instance IDs to be modified. Up to 100 IDs are allowed.
+                     * 获取List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+                     * @return InstanceIds List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of instance IDs to be modified. Up to 100 IDs are allowed.
-                     * @param _instanceIds List of instance IDs to be modified. Up to 100 IDs are allowed.
+                     * 设置List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+                     * @param _instanceIds List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -191,15 +247,23 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled invoker settings to be modified.
-                     * @return ScheduleSettings Scheduled invoker settings to be modified.
+                     * 获取Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
+                     * @return ScheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
                      * 
                      */
                     ScheduleSettings GetScheduleSettings() const;
 
                     /**
-                     * 设置Scheduled invoker settings to be modified.
-                     * @param _scheduleSettings Scheduled invoker settings to be modified.
+                     * 设置Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
+                     * @param _scheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
                      * 
                      */
                     void SetScheduleSettings(const ScheduleSettings& _scheduleSettings);
@@ -214,49 +278,65 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the invoker to be modified.
+                     * Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invokerId;
                     bool m_invokerIdHasBeenSet;
 
                     /**
-                     * Name of the invoker to be modified.
+                     * Executor name to be modified. length not exceeding 120 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * ID of the command to be modified.
+                     * Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      */
                     std::string m_commandId;
                     bool m_commandIdHasBeenSet;
 
                     /**
-                     * The username to be modified.
+                     * Username to be modified. length not exceeding 256 characters.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Custom parameters to be modified.
+                     * Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
                      */
                     std::string m_parameters;
                     bool m_parametersHasBeenSet;
 
                     /**
-                     * List of instance IDs to be modified. Up to 100 IDs are allowed.
+                     * List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Scheduled invoker settings to be modified.
+                     * Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
                      */
                     ScheduleSettings m_scheduleSettings;
                     bool m_scheduleSettingsHasBeenSet;

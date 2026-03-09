@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the invoker to be disabled.
-                     * @return InvokerId ID of the invoker to be disabled.
+                     * 获取ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @return InvokerId ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
-                     * 设置ID of the invoker to be disabled.
-                     * @param _invokerId ID of the invoker to be disabled.
+                     * 设置ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @param _invokerId ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
@@ -66,7 +74,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the invoker to be disabled.
+                     * ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invokerId;
                     bool m_invokerIdHasBeenSet;

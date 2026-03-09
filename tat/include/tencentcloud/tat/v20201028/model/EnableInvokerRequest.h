@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the invoker to be enabled.
-                     * @return InvokerId ID of the invoker to be enabled.
+                     * 获取Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @return InvokerId Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
-                     * 设置ID of the invoker to be enabled.
-                     * @param _invokerId ID of the invoker to be enabled.
+                     * 设置Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+                     * @param _invokerId Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
@@ -66,7 +74,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the invoker to be enabled.
+                     * Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invokerId;
                     bool m_invokerIdHasBeenSet;

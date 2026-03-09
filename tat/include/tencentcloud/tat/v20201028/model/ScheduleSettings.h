@@ -47,23 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
-                     * @return Policy Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+                     * 获取Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
+                     * @return Policy Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
                      * 
                      */
                     std::string GetPolicy() const;
 
                     /**
-                     * 设置Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
-                     * @param _policy Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+                     * 设置Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
+                     * @param _policy Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
                      * 
                      */
                     void SetPolicy(const std::string& _policy);
@@ -97,15 +101,23 @@ namespace TencentCloud
                     bool RecurrenceHasBeenSet() const;
 
                     /**
-                     * 获取The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
-                     * @return InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * 获取Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
+                     * @return InvokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     std::string GetInvokeTime() const;
 
                     /**
-                     * 设置The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
-                     * @param _invokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * 设置Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
+                     * @param _invokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
                      * 
                      */
                     void SetInvokeTime(const std::string& _invokeTime);
@@ -120,9 +132,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+                     * Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
                      */
                     std::string m_policy;
                     bool m_policyHasBeenSet;
@@ -134,7 +147,9 @@ namespace TencentCloud
                     bool m_recurrenceHasBeenSet;
 
                     /**
-                     * The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
                      */
                     std::string m_invokeTime;
                     bool m_invokeTimeHasBeenSet;

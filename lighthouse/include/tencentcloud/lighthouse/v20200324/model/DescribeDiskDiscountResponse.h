@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Currency: CNY, USD.
-                     * @return Currency Currency: CNY, USD.
+                     * 获取Currency: USD.
+                     * @return Currency Currency: USD.
                      * 
                      */
                     std::string GetCurrency() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Currency: CNY, USD.
+                     * Currency: USD.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

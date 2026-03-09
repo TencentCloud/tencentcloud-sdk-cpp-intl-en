@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionNameHasBeenSet() const;
 
                     /**
-                     * 获取Region status. `AVAILABLE` indicates the region is available.
-                     * @return RegionState Region status. `AVAILABLE` indicates the region is available.
+                     * 获取Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
+                     * @return RegionState Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
                      * 
                      */
                     std::string GetRegionState() const;
 
                     /**
-                     * 设置Region status. `AVAILABLE` indicates the region is available.
-                     * @param _regionState Region status. `AVAILABLE` indicates the region is available.
+                     * 设置Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
+                     * @param _regionState Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
                      * 
                      */
                     void SetRegionState(const std::string& _regionState);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_regionNameHasBeenSet;
 
                     /**
-                     * Region status. `AVAILABLE` indicates the region is available.
+                     * Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
                      */
                     std::string m_regionState;
                     bool m_regionStateHasBeenSet;

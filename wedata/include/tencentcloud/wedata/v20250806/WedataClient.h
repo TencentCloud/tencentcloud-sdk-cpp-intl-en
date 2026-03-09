@@ -23,52 +23,120 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/wedata/v20250806/model/AddCalcEnginesToProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/AddCalcEnginesToProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/AssociateResourceGroupToProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/AssociateResourceGroupToProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/AuthorizeDataSourceRequest.h>
+#include <tencentcloud/wedata/v20250806/model/AuthorizeDataSourceResponse.h>
+#include <tencentcloud/wedata/v20250806/model/AuthorizePrivilegesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/AuthorizePrivilegesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateCodeFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateCodeFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateCodeFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateCodeFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateCodePermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateCodePermissionsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateDataBackfillPlanRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateDataBackfillPlanResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateDataSourceRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateDataSourceResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateOpsAlarmRuleRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateOpsAlarmRuleResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateProjectMemberRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateProjectMemberResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateResourceFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateResourceFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateResourceFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateResourceFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateResourceGroupRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateResourceGroupResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateSQLFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateSQLFolderResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateSQLScriptRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateSQLScriptResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateTaskRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTaskFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTaskFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTriggerTaskRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTriggerTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTriggerWorkflowRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateTriggerWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateWorkflowRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/CreateWorkflowFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/CreateWorkflowFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/CreateWorkflowPermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/CreateWorkflowPermissionsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteCodeFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteCodeFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteCodeFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteCodeFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteCodePermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteCodePermissionsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteDataBackfillPlanAsyncRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteDataBackfillPlanAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteDataSourceRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteDataSourceResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteLineageRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteLineageResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteOpsAlarmRuleRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteOpsAlarmRuleResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteProjectMemberRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteProjectMemberResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteResourceFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteResourceFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteResourceFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteResourceFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteResourceGroupRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteResourceGroupResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteSQLFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteSQLFolderResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteSQLScriptRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteSQLScriptResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteTaskRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTaskFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTaskFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTriggerTaskRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTriggerTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTriggerWorkflowRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteTriggerWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteWorkflowRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteWorkflowFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/DeleteWorkflowFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteWorkflowPermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DeleteWorkflowPermissionsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DescribeDataSourceAuthorityRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DescribeDataSourceAuthorityResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DisableProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DisableProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/DissociateResourceGroupFromProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/DissociateResourceGroupFromProjectResponse.h>
+#include <tencentcloud/wedata/v20250806/model/EnableProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/EnableProjectResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetAlarmMessageRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetAlarmMessageResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetCodeFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetCodeFileResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetCodeFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetCodeFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataBackfillPlanRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataBackfillPlanResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataSourceRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataSourceResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataSourceRelatedTasksRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetDataSourceRelatedTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetMyCodeMaxPermissionRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetMyCodeMaxPermissionResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetMyWorkflowMaxPermissionRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetMyWorkflowMaxPermissionResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsAlarmRuleRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsAlarmRuleResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsAsyncJobRequest.h>
@@ -77,52 +145,122 @@
 #include <tencentcloud/wedata/v20250806/model/GetOpsTaskResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsTaskCodeRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsTaskCodeResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetOpsTriggerWorkflowRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetOpsTriggerWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsWorkflowRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetOpsWorkflowResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetProjectResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetResourceFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetResourceFileResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetResourceFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetResourceFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetResourceGroupMetricsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetResourceGroupMetricsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetSQLFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetSQLFolderResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetSQLScriptRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetSQLScriptResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTableRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTableResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTableColumnsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTableColumnsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskCodeRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskCodeResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTaskFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTaskFolderResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskInstanceRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskInstanceResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskInstanceLogRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskInstanceLogResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskVersionRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetTaskVersionResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskCodeRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskCodeResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskRunRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskRunResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskVersionRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerTaskVersionResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerWorkflowRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerWorkflowResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerWorkflowRunRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetTriggerWorkflowRunResponse.h>
 #include <tencentcloud/wedata/v20250806/model/GetWorkflowRequest.h>
 #include <tencentcloud/wedata/v20250806/model/GetWorkflowResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GetWorkflowFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GetWorkflowFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/GrantMemberProjectRoleRequest.h>
+#include <tencentcloud/wedata/v20250806/model/GrantMemberProjectRoleResponse.h>
 #include <tencentcloud/wedata/v20250806/model/KillTaskInstancesAsyncRequest.h>
 #include <tencentcloud/wedata/v20250806/model/KillTaskInstancesAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/KillTriggerWorkflowRunsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/KillTriggerWorkflowRunsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListAlarmMessagesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListAlarmMessagesResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListCatalogRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListCatalogResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListCodeFolderContentsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListCodeFolderContentsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListCodePermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListCodePermissionsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListColumnLineageRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListColumnLineageResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListDataBackfillInstancesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListDataBackfillInstancesResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListDataSourcesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListDataSourcesResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListDatabaseRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListDatabaseResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamOpsTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamOpsTasksResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamTaskInstancesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamTaskInstancesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListDownstreamTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListDownstreamTriggerTasksRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListDownstreamTriggerTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListLineageRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListLineageResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsAlarmRulesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsAlarmRulesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListOpsTriggerWorkflowsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListOpsTriggerWorkflowsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsWorkflowsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListOpsWorkflowsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListPermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListPermissionsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListProcessLineageRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListProcessLineageResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectMembersRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectMembersResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectRolesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectRolesResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListProjectsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListQualityRuleTemplatesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListQualityRuleTemplatesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListResourceFilesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListResourceFilesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListResourceFoldersRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListResourceFoldersResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListResourceGroupsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListResourceGroupsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListSQLFolderContentsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListSQLFolderContentsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListSQLScriptRunsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListSQLScriptRunsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListSchemaRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListSchemaResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTableRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTableResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTaskFoldersRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTaskFoldersResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListTaskInstanceExecutionsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListTaskInstanceExecutionsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListTaskInstancesRequest.h>
@@ -131,48 +269,96 @@
 #include <tencentcloud/wedata/v20250806/model/ListTaskVersionsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTenantRolesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTenantRolesResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerTaskVersionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerTaskVersionsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerTasksRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerWorkflowRunsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerWorkflowRunsResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerWorkflowsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListTriggerWorkflowsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamOpsTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamOpsTasksResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamTaskInstancesRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamTaskInstancesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamTasksRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListUpstreamTasksResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListUpstreamTriggerTasksRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListUpstreamTriggerTasksResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListWorkflowFoldersRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListWorkflowFoldersResponse.h>
+#include <tencentcloud/wedata/v20250806/model/ListWorkflowPermissionsRequest.h>
+#include <tencentcloud/wedata/v20250806/model/ListWorkflowPermissionsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/ListWorkflowsRequest.h>
 #include <tencentcloud/wedata/v20250806/model/ListWorkflowsResponse.h>
 #include <tencentcloud/wedata/v20250806/model/PauseOpsTasksAsyncRequest.h>
 #include <tencentcloud/wedata/v20250806/model/PauseOpsTasksAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/RegisterLineageRequest.h>
+#include <tencentcloud/wedata/v20250806/model/RegisterLineageResponse.h>
+#include <tencentcloud/wedata/v20250806/model/RemoveMemberProjectRoleRequest.h>
+#include <tencentcloud/wedata/v20250806/model/RemoveMemberProjectRoleResponse.h>
 #include <tencentcloud/wedata/v20250806/model/RerunTaskInstancesAsyncRequest.h>
 #include <tencentcloud/wedata/v20250806/model/RerunTaskInstancesAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/RerunTriggerWorkflowRunAsyncRequest.h>
+#include <tencentcloud/wedata/v20250806/model/RerunTriggerWorkflowRunAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/RevokeDataSourceAuthorizationRequest.h>
+#include <tencentcloud/wedata/v20250806/model/RevokeDataSourceAuthorizationResponse.h>
+#include <tencentcloud/wedata/v20250806/model/RevokePrivilegesRequest.h>
+#include <tencentcloud/wedata/v20250806/model/RevokePrivilegesResponse.h>
 #include <tencentcloud/wedata/v20250806/model/RunSQLScriptRequest.h>
 #include <tencentcloud/wedata/v20250806/model/RunSQLScriptResponse.h>
 #include <tencentcloud/wedata/v20250806/model/SetSuccessTaskInstancesAsyncRequest.h>
 #include <tencentcloud/wedata/v20250806/model/SetSuccessTaskInstancesAsyncResponse.h>
+#include <tencentcloud/wedata/v20250806/model/StartOpsTasksRequest.h>
+#include <tencentcloud/wedata/v20250806/model/StartOpsTasksResponse.h>
 #include <tencentcloud/wedata/v20250806/model/StopOpsTasksAsyncRequest.h>
 #include <tencentcloud/wedata/v20250806/model/StopOpsTasksAsyncResponse.h>
 #include <tencentcloud/wedata/v20250806/model/StopSQLScriptRunRequest.h>
 #include <tencentcloud/wedata/v20250806/model/StopSQLScriptRunResponse.h>
 #include <tencentcloud/wedata/v20250806/model/SubmitTaskRequest.h>
 #include <tencentcloud/wedata/v20250806/model/SubmitTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/SubmitTriggerTaskRequest.h>
+#include <tencentcloud/wedata/v20250806/model/SubmitTriggerTaskResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateCodeFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateCodeFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateCodeFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateCodeFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateDataSourceRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateDataSourceResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateOpsAlarmRuleRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateOpsAlarmRuleResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateOpsTasksOwnerRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateOpsTasksOwnerResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateOpsTriggerTasksOwnerRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateOpsTriggerTasksOwnerResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateProjectRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateProjectResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateResourceFileRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateResourceFileResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateResourceFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateResourceFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateResourceGroupRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateResourceGroupResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateSQLFolderRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateSQLFolderResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateSQLScriptRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateSQLScriptResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateTaskRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTaskFolderRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTaskFolderResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTaskPartiallyRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTaskPartiallyResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerTaskRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerTaskResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerTaskPartiallyRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerTaskPartiallyResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerWorkflowRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerWorkflowResponse.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerWorkflowPartiallyRequest.h>
+#include <tencentcloud/wedata/v20250806/model/UpdateTriggerWorkflowPartiallyResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateWorkflowRequest.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateWorkflowResponse.h>
 #include <tencentcloud/wedata/v20250806/model/UpdateWorkflowFolderRequest.h>
@@ -191,24 +377,51 @@ namespace TencentCloud
                 WedataClient(const Credential &credential, const std::string &region);
                 WedataClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AddCalcEnginesToProjectResponse> AddCalcEnginesToProjectOutcome;
+                typedef std::future<AddCalcEnginesToProjectOutcome> AddCalcEnginesToProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::AddCalcEnginesToProjectRequest&, AddCalcEnginesToProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCalcEnginesToProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::AssociateResourceGroupToProjectResponse> AssociateResourceGroupToProjectOutcome;
+                typedef std::future<AssociateResourceGroupToProjectOutcome> AssociateResourceGroupToProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::AssociateResourceGroupToProjectRequest&, AssociateResourceGroupToProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateResourceGroupToProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::AuthorizeDataSourceResponse> AuthorizeDataSourceOutcome;
+                typedef std::future<AuthorizeDataSourceOutcome> AuthorizeDataSourceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::AuthorizeDataSourceRequest&, AuthorizeDataSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AuthorizeDataSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::AuthorizePrivilegesResponse> AuthorizePrivilegesOutcome;
+                typedef std::future<AuthorizePrivilegesOutcome> AuthorizePrivilegesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::AuthorizePrivilegesRequest&, AuthorizePrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AuthorizePrivilegesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCodeFileResponse> CreateCodeFileOutcome;
                 typedef std::future<CreateCodeFileOutcome> CreateCodeFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateCodeFileRequest&, CreateCodeFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCodeFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCodeFolderResponse> CreateCodeFolderOutcome;
                 typedef std::future<CreateCodeFolderOutcome> CreateCodeFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateCodeFolderRequest&, CreateCodeFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCodeFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCodePermissionsResponse> CreateCodePermissionsOutcome;
+                typedef std::future<CreateCodePermissionsOutcome> CreateCodePermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateCodePermissionsRequest&, CreateCodePermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCodePermissionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDataBackfillPlanResponse> CreateDataBackfillPlanOutcome;
                 typedef std::future<CreateDataBackfillPlanOutcome> CreateDataBackfillPlanOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateDataBackfillPlanRequest&, CreateDataBackfillPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataBackfillPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDataSourceResponse> CreateDataSourceOutcome;
+                typedef std::future<CreateDataSourceOutcome> CreateDataSourceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateDataSourceRequest&, CreateDataSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataSourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOpsAlarmRuleResponse> CreateOpsAlarmRuleOutcome;
                 typedef std::future<CreateOpsAlarmRuleOutcome> CreateOpsAlarmRuleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateOpsAlarmRuleRequest&, CreateOpsAlarmRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOpsAlarmRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProjectResponse> CreateProjectOutcome;
+                typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateProjectRequest&, CreateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProjectMemberResponse> CreateProjectMemberOutcome;
+                typedef std::future<CreateProjectMemberOutcome> CreateProjectMemberOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateProjectMemberRequest&, CreateProjectMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateResourceFileResponse> CreateResourceFileOutcome;
                 typedef std::future<CreateResourceFileOutcome> CreateResourceFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateResourceFileRequest&, CreateResourceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateResourceFolderResponse> CreateResourceFolderOutcome;
                 typedef std::future<CreateResourceFolderOutcome> CreateResourceFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateResourceFolderRequest&, CreateResourceFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourceFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateResourceGroupResponse> CreateResourceGroupOutcome;
+                typedef std::future<CreateResourceGroupOutcome> CreateResourceGroupOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateResourceGroupRequest&, CreateResourceGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourceGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSQLFolderResponse> CreateSQLFolderOutcome;
                 typedef std::future<CreateSQLFolderOutcome> CreateSQLFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateSQLFolderRequest&, CreateSQLFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSQLFolderAsyncHandler;
@@ -218,27 +431,60 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateTaskResponse> CreateTaskOutcome;
                 typedef std::future<CreateTaskOutcome> CreateTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateTaskRequest&, CreateTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTaskFolderResponse> CreateTaskFolderOutcome;
+                typedef std::future<CreateTaskFolderOutcome> CreateTaskFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateTaskFolderRequest&, CreateTaskFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTriggerTaskResponse> CreateTriggerTaskOutcome;
+                typedef std::future<CreateTriggerTaskOutcome> CreateTriggerTaskOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateTriggerTaskRequest&, CreateTriggerTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTriggerTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTriggerWorkflowResponse> CreateTriggerWorkflowOutcome;
+                typedef std::future<CreateTriggerWorkflowOutcome> CreateTriggerWorkflowOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateTriggerWorkflowRequest&, CreateTriggerWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTriggerWorkflowAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateWorkflowResponse> CreateWorkflowOutcome;
                 typedef std::future<CreateWorkflowOutcome> CreateWorkflowOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateWorkflowRequest&, CreateWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWorkflowAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateWorkflowFolderResponse> CreateWorkflowFolderOutcome;
                 typedef std::future<CreateWorkflowFolderOutcome> CreateWorkflowFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateWorkflowFolderRequest&, CreateWorkflowFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWorkflowFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateWorkflowPermissionsResponse> CreateWorkflowPermissionsOutcome;
+                typedef std::future<CreateWorkflowPermissionsOutcome> CreateWorkflowPermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateWorkflowPermissionsRequest&, CreateWorkflowPermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWorkflowPermissionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCodeFileResponse> DeleteCodeFileOutcome;
                 typedef std::future<DeleteCodeFileOutcome> DeleteCodeFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteCodeFileRequest&, DeleteCodeFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCodeFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCodeFolderResponse> DeleteCodeFolderOutcome;
                 typedef std::future<DeleteCodeFolderOutcome> DeleteCodeFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteCodeFolderRequest&, DeleteCodeFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCodeFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCodePermissionsResponse> DeleteCodePermissionsOutcome;
+                typedef std::future<DeleteCodePermissionsOutcome> DeleteCodePermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteCodePermissionsRequest&, DeleteCodePermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCodePermissionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDataBackfillPlanAsyncResponse> DeleteDataBackfillPlanAsyncOutcome;
+                typedef std::future<DeleteDataBackfillPlanAsyncOutcome> DeleteDataBackfillPlanAsyncOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteDataBackfillPlanAsyncRequest&, DeleteDataBackfillPlanAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDataBackfillPlanAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDataSourceResponse> DeleteDataSourceOutcome;
+                typedef std::future<DeleteDataSourceOutcome> DeleteDataSourceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteDataSourceRequest&, DeleteDataSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDataSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLineageResponse> DeleteLineageOutcome;
+                typedef std::future<DeleteLineageOutcome> DeleteLineageOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteLineageRequest&, DeleteLineageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLineageAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteOpsAlarmRuleResponse> DeleteOpsAlarmRuleOutcome;
                 typedef std::future<DeleteOpsAlarmRuleOutcome> DeleteOpsAlarmRuleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteOpsAlarmRuleRequest&, DeleteOpsAlarmRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOpsAlarmRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteProjectResponse> DeleteProjectOutcome;
+                typedef std::future<DeleteProjectOutcome> DeleteProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteProjectRequest&, DeleteProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteProjectMemberResponse> DeleteProjectMemberOutcome;
+                typedef std::future<DeleteProjectMemberOutcome> DeleteProjectMemberOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteProjectMemberRequest&, DeleteProjectMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProjectMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteResourceFileResponse> DeleteResourceFileOutcome;
                 typedef std::future<DeleteResourceFileOutcome> DeleteResourceFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteResourceFileRequest&, DeleteResourceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteResourceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteResourceFolderResponse> DeleteResourceFolderOutcome;
                 typedef std::future<DeleteResourceFolderOutcome> DeleteResourceFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteResourceFolderRequest&, DeleteResourceFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteResourceFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteResourceGroupResponse> DeleteResourceGroupOutcome;
+                typedef std::future<DeleteResourceGroupOutcome> DeleteResourceGroupOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteResourceGroupRequest&, DeleteResourceGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteResourceGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteSQLFolderResponse> DeleteSQLFolderOutcome;
                 typedef std::future<DeleteSQLFolderOutcome> DeleteSQLFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteSQLFolderRequest&, DeleteSQLFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSQLFolderAsyncHandler;
@@ -248,18 +494,60 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTaskResponse> DeleteTaskOutcome;
                 typedef std::future<DeleteTaskOutcome> DeleteTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteTaskRequest&, DeleteTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTaskFolderResponse> DeleteTaskFolderOutcome;
+                typedef std::future<DeleteTaskFolderOutcome> DeleteTaskFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteTaskFolderRequest&, DeleteTaskFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTaskFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTriggerTaskResponse> DeleteTriggerTaskOutcome;
+                typedef std::future<DeleteTriggerTaskOutcome> DeleteTriggerTaskOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteTriggerTaskRequest&, DeleteTriggerTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTriggerTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTriggerWorkflowResponse> DeleteTriggerWorkflowOutcome;
+                typedef std::future<DeleteTriggerWorkflowOutcome> DeleteTriggerWorkflowOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteTriggerWorkflowRequest&, DeleteTriggerWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTriggerWorkflowAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteWorkflowResponse> DeleteWorkflowOutcome;
                 typedef std::future<DeleteWorkflowOutcome> DeleteWorkflowOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteWorkflowRequest&, DeleteWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWorkflowAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteWorkflowFolderResponse> DeleteWorkflowFolderOutcome;
                 typedef std::future<DeleteWorkflowFolderOutcome> DeleteWorkflowFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DeleteWorkflowFolderRequest&, DeleteWorkflowFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWorkflowFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteWorkflowPermissionsResponse> DeleteWorkflowPermissionsOutcome;
+                typedef std::future<DeleteWorkflowPermissionsOutcome> DeleteWorkflowPermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DeleteWorkflowPermissionsRequest&, DeleteWorkflowPermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWorkflowPermissionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDataSourceAuthorityResponse> DescribeDataSourceAuthorityOutcome;
+                typedef std::future<DescribeDataSourceAuthorityOutcome> DescribeDataSourceAuthorityOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DescribeDataSourceAuthorityRequest&, DescribeDataSourceAuthorityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataSourceAuthorityAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableProjectResponse> DisableProjectOutcome;
+                typedef std::future<DisableProjectOutcome> DisableProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DisableProjectRequest&, DisableProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::DissociateResourceGroupFromProjectResponse> DissociateResourceGroupFromProjectOutcome;
+                typedef std::future<DissociateResourceGroupFromProjectOutcome> DissociateResourceGroupFromProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DissociateResourceGroupFromProjectRequest&, DissociateResourceGroupFromProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DissociateResourceGroupFromProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableProjectResponse> EnableProjectOutcome;
+                typedef std::future<EnableProjectOutcome> EnableProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::EnableProjectRequest&, EnableProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetAlarmMessageResponse> GetAlarmMessageOutcome;
                 typedef std::future<GetAlarmMessageOutcome> GetAlarmMessageOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetAlarmMessageRequest&, GetAlarmMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAlarmMessageAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetCodeFileResponse> GetCodeFileOutcome;
                 typedef std::future<GetCodeFileOutcome> GetCodeFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetCodeFileRequest&, GetCodeFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCodeFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetCodeFolderResponse> GetCodeFolderOutcome;
+                typedef std::future<GetCodeFolderOutcome> GetCodeFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetCodeFolderRequest&, GetCodeFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCodeFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetDataBackfillPlanResponse> GetDataBackfillPlanOutcome;
+                typedef std::future<GetDataBackfillPlanOutcome> GetDataBackfillPlanOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetDataBackfillPlanRequest&, GetDataBackfillPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDataBackfillPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetDataSourceResponse> GetDataSourceOutcome;
+                typedef std::future<GetDataSourceOutcome> GetDataSourceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetDataSourceRequest&, GetDataSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDataSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetDataSourceRelatedTasksResponse> GetDataSourceRelatedTasksOutcome;
+                typedef std::future<GetDataSourceRelatedTasksOutcome> GetDataSourceRelatedTasksOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetDataSourceRelatedTasksRequest&, GetDataSourceRelatedTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDataSourceRelatedTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetMyCodeMaxPermissionResponse> GetMyCodeMaxPermissionOutcome;
+                typedef std::future<GetMyCodeMaxPermissionOutcome> GetMyCodeMaxPermissionOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetMyCodeMaxPermissionRequest&, GetMyCodeMaxPermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetMyCodeMaxPermissionAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetMyWorkflowMaxPermissionResponse> GetMyWorkflowMaxPermissionOutcome;
+                typedef std::future<GetMyWorkflowMaxPermissionOutcome> GetMyWorkflowMaxPermissionOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetMyWorkflowMaxPermissionRequest&, GetMyWorkflowMaxPermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetMyWorkflowMaxPermissionAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetOpsAlarmRuleResponse> GetOpsAlarmRuleOutcome;
                 typedef std::future<GetOpsAlarmRuleOutcome> GetOpsAlarmRuleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetOpsAlarmRuleRequest&, GetOpsAlarmRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOpsAlarmRuleAsyncHandler;
@@ -272,21 +560,45 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetOpsTaskCodeResponse> GetOpsTaskCodeOutcome;
                 typedef std::future<GetOpsTaskCodeOutcome> GetOpsTaskCodeOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetOpsTaskCodeRequest&, GetOpsTaskCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOpsTaskCodeAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetOpsTriggerWorkflowResponse> GetOpsTriggerWorkflowOutcome;
+                typedef std::future<GetOpsTriggerWorkflowOutcome> GetOpsTriggerWorkflowOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetOpsTriggerWorkflowRequest&, GetOpsTriggerWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOpsTriggerWorkflowAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetOpsWorkflowResponse> GetOpsWorkflowOutcome;
                 typedef std::future<GetOpsWorkflowOutcome> GetOpsWorkflowOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetOpsWorkflowRequest&, GetOpsWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOpsWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetProjectResponse> GetProjectOutcome;
+                typedef std::future<GetProjectOutcome> GetProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetProjectRequest&, GetProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetResourceFileResponse> GetResourceFileOutcome;
                 typedef std::future<GetResourceFileOutcome> GetResourceFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetResourceFileRequest&, GetResourceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetResourceFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetResourceFolderResponse> GetResourceFolderOutcome;
+                typedef std::future<GetResourceFolderOutcome> GetResourceFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetResourceFolderRequest&, GetResourceFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetResourceFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetResourceGroupMetricsResponse> GetResourceGroupMetricsOutcome;
+                typedef std::future<GetResourceGroupMetricsOutcome> GetResourceGroupMetricsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetResourceGroupMetricsRequest&, GetResourceGroupMetricsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetResourceGroupMetricsAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetSQLFolderResponse> GetSQLFolderOutcome;
+                typedef std::future<GetSQLFolderOutcome> GetSQLFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetSQLFolderRequest&, GetSQLFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSQLFolderAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetSQLScriptResponse> GetSQLScriptOutcome;
                 typedef std::future<GetSQLScriptOutcome> GetSQLScriptOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetSQLScriptRequest&, GetSQLScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSQLScriptAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTableResponse> GetTableOutcome;
+                typedef std::future<GetTableOutcome> GetTableOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTableRequest&, GetTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTableColumnsResponse> GetTableColumnsOutcome;
+                typedef std::future<GetTableColumnsOutcome> GetTableColumnsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTableColumnsRequest&, GetTableColumnsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTableColumnsAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetTaskResponse> GetTaskOutcome;
                 typedef std::future<GetTaskOutcome> GetTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetTaskRequest&, GetTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetTaskCodeResponse> GetTaskCodeOutcome;
                 typedef std::future<GetTaskCodeOutcome> GetTaskCodeOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetTaskCodeRequest&, GetTaskCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskCodeAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTaskFolderResponse> GetTaskFolderOutcome;
+                typedef std::future<GetTaskFolderOutcome> GetTaskFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTaskFolderRequest&, GetTaskFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskFolderAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetTaskInstanceResponse> GetTaskInstanceOutcome;
                 typedef std::future<GetTaskInstanceOutcome> GetTaskInstanceOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetTaskInstanceRequest&, GetTaskInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskInstanceAsyncHandler;
@@ -296,21 +608,63 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetTaskVersionResponse> GetTaskVersionOutcome;
                 typedef std::future<GetTaskVersionOutcome> GetTaskVersionOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetTaskVersionRequest&, GetTaskVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerTaskResponse> GetTriggerTaskOutcome;
+                typedef std::future<GetTriggerTaskOutcome> GetTriggerTaskOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerTaskRequest&, GetTriggerTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerTaskCodeResponse> GetTriggerTaskCodeOutcome;
+                typedef std::future<GetTriggerTaskCodeOutcome> GetTriggerTaskCodeOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerTaskCodeRequest&, GetTriggerTaskCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerTaskCodeAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerTaskRunResponse> GetTriggerTaskRunOutcome;
+                typedef std::future<GetTriggerTaskRunOutcome> GetTriggerTaskRunOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerTaskRunRequest&, GetTriggerTaskRunOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerTaskRunAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerTaskVersionResponse> GetTriggerTaskVersionOutcome;
+                typedef std::future<GetTriggerTaskVersionOutcome> GetTriggerTaskVersionOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerTaskVersionRequest&, GetTriggerTaskVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerTaskVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerWorkflowResponse> GetTriggerWorkflowOutcome;
+                typedef std::future<GetTriggerWorkflowOutcome> GetTriggerWorkflowOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerWorkflowRequest&, GetTriggerWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTriggerWorkflowRunResponse> GetTriggerWorkflowRunOutcome;
+                typedef std::future<GetTriggerWorkflowRunOutcome> GetTriggerWorkflowRunOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTriggerWorkflowRunRequest&, GetTriggerWorkflowRunOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTriggerWorkflowRunAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetWorkflowResponse> GetWorkflowOutcome;
                 typedef std::future<GetWorkflowOutcome> GetWorkflowOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetWorkflowRequest&, GetWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetWorkflowFolderResponse> GetWorkflowFolderOutcome;
+                typedef std::future<GetWorkflowFolderOutcome> GetWorkflowFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetWorkflowFolderRequest&, GetWorkflowFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWorkflowFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::GrantMemberProjectRoleResponse> GrantMemberProjectRoleOutcome;
+                typedef std::future<GrantMemberProjectRoleOutcome> GrantMemberProjectRoleOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GrantMemberProjectRoleRequest&, GrantMemberProjectRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GrantMemberProjectRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::KillTaskInstancesAsyncResponse> KillTaskInstancesAsyncOutcome;
                 typedef std::future<KillTaskInstancesAsyncOutcome> KillTaskInstancesAsyncOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::KillTaskInstancesAsyncRequest&, KillTaskInstancesAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillTaskInstancesAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::KillTriggerWorkflowRunsResponse> KillTriggerWorkflowRunsOutcome;
+                typedef std::future<KillTriggerWorkflowRunsOutcome> KillTriggerWorkflowRunsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::KillTriggerWorkflowRunsRequest&, KillTriggerWorkflowRunsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillTriggerWorkflowRunsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListAlarmMessagesResponse> ListAlarmMessagesOutcome;
                 typedef std::future<ListAlarmMessagesOutcome> ListAlarmMessagesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListAlarmMessagesRequest&, ListAlarmMessagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAlarmMessagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListCatalogResponse> ListCatalogOutcome;
+                typedef std::future<ListCatalogOutcome> ListCatalogOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListCatalogRequest&, ListCatalogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListCatalogAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListCodeFolderContentsResponse> ListCodeFolderContentsOutcome;
                 typedef std::future<ListCodeFolderContentsOutcome> ListCodeFolderContentsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListCodeFolderContentsRequest&, ListCodeFolderContentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListCodeFolderContentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListCodePermissionsResponse> ListCodePermissionsOutcome;
+                typedef std::future<ListCodePermissionsOutcome> ListCodePermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListCodePermissionsRequest&, ListCodePermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListCodePermissionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListColumnLineageResponse> ListColumnLineageOutcome;
+                typedef std::future<ListColumnLineageOutcome> ListColumnLineageOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListColumnLineageRequest&, ListColumnLineageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListColumnLineageAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListDataBackfillInstancesResponse> ListDataBackfillInstancesOutcome;
                 typedef std::future<ListDataBackfillInstancesOutcome> ListDataBackfillInstancesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListDataBackfillInstancesRequest&, ListDataBackfillInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDataBackfillInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDataSourcesResponse> ListDataSourcesOutcome;
+                typedef std::future<ListDataSourcesOutcome> ListDataSourcesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListDataSourcesRequest&, ListDataSourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDataSourcesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDatabaseResponse> ListDatabaseOutcome;
+                typedef std::future<ListDatabaseOutcome> ListDatabaseOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListDatabaseRequest&, ListDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListDownstreamOpsTasksResponse> ListDownstreamOpsTasksOutcome;
                 typedef std::future<ListDownstreamOpsTasksOutcome> ListDownstreamOpsTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListDownstreamOpsTasksRequest&, ListDownstreamOpsTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDownstreamOpsTasksAsyncHandler;
@@ -320,27 +674,66 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListDownstreamTasksResponse> ListDownstreamTasksOutcome;
                 typedef std::future<ListDownstreamTasksOutcome> ListDownstreamTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListDownstreamTasksRequest&, ListDownstreamTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDownstreamTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDownstreamTriggerTasksResponse> ListDownstreamTriggerTasksOutcome;
+                typedef std::future<ListDownstreamTriggerTasksOutcome> ListDownstreamTriggerTasksOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListDownstreamTriggerTasksRequest&, ListDownstreamTriggerTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDownstreamTriggerTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListLineageResponse> ListLineageOutcome;
+                typedef std::future<ListLineageOutcome> ListLineageOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListLineageRequest&, ListLineageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListLineageAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListOpsAlarmRulesResponse> ListOpsAlarmRulesOutcome;
                 typedef std::future<ListOpsAlarmRulesOutcome> ListOpsAlarmRulesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListOpsAlarmRulesRequest&, ListOpsAlarmRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOpsAlarmRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListOpsTasksResponse> ListOpsTasksOutcome;
                 typedef std::future<ListOpsTasksOutcome> ListOpsTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListOpsTasksRequest&, ListOpsTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOpsTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListOpsTriggerWorkflowsResponse> ListOpsTriggerWorkflowsOutcome;
+                typedef std::future<ListOpsTriggerWorkflowsOutcome> ListOpsTriggerWorkflowsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListOpsTriggerWorkflowsRequest&, ListOpsTriggerWorkflowsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOpsTriggerWorkflowsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListOpsWorkflowsResponse> ListOpsWorkflowsOutcome;
                 typedef std::future<ListOpsWorkflowsOutcome> ListOpsWorkflowsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListOpsWorkflowsRequest&, ListOpsWorkflowsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOpsWorkflowsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListPermissionsResponse> ListPermissionsOutcome;
+                typedef std::future<ListPermissionsOutcome> ListPermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListPermissionsRequest&, ListPermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPermissionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListProcessLineageResponse> ListProcessLineageOutcome;
+                typedef std::future<ListProcessLineageOutcome> ListProcessLineageOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListProcessLineageRequest&, ListProcessLineageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListProcessLineageAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListProjectMembersResponse> ListProjectMembersOutcome;
+                typedef std::future<ListProjectMembersOutcome> ListProjectMembersOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListProjectMembersRequest&, ListProjectMembersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListProjectMembersAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListProjectRolesResponse> ListProjectRolesOutcome;
+                typedef std::future<ListProjectRolesOutcome> ListProjectRolesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListProjectRolesRequest&, ListProjectRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListProjectRolesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListProjectsResponse> ListProjectsOutcome;
+                typedef std::future<ListProjectsOutcome> ListProjectsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListProjectsRequest&, ListProjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListProjectsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListQualityRuleTemplatesResponse> ListQualityRuleTemplatesOutcome;
+                typedef std::future<ListQualityRuleTemplatesOutcome> ListQualityRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListQualityRuleTemplatesRequest&, ListQualityRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListQualityRuleTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListResourceFilesResponse> ListResourceFilesOutcome;
                 typedef std::future<ListResourceFilesOutcome> ListResourceFilesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListResourceFilesRequest&, ListResourceFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListResourceFilesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListResourceFoldersResponse> ListResourceFoldersOutcome;
                 typedef std::future<ListResourceFoldersOutcome> ListResourceFoldersOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListResourceFoldersRequest&, ListResourceFoldersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListResourceFoldersAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListResourceGroupsResponse> ListResourceGroupsOutcome;
+                typedef std::future<ListResourceGroupsOutcome> ListResourceGroupsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListResourceGroupsRequest&, ListResourceGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListResourceGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListSQLFolderContentsResponse> ListSQLFolderContentsOutcome;
                 typedef std::future<ListSQLFolderContentsOutcome> ListSQLFolderContentsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListSQLFolderContentsRequest&, ListSQLFolderContentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSQLFolderContentsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListSQLScriptRunsResponse> ListSQLScriptRunsOutcome;
                 typedef std::future<ListSQLScriptRunsOutcome> ListSQLScriptRunsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListSQLScriptRunsRequest&, ListSQLScriptRunsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSQLScriptRunsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListSchemaResponse> ListSchemaOutcome;
+                typedef std::future<ListSchemaOutcome> ListSchemaOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListSchemaRequest&, ListSchemaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSchemaAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTableResponse> ListTableOutcome;
+                typedef std::future<ListTableOutcome> ListTableOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTableRequest&, ListTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTaskFoldersResponse> ListTaskFoldersOutcome;
+                typedef std::future<ListTaskFoldersOutcome> ListTaskFoldersOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTaskFoldersRequest&, ListTaskFoldersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTaskFoldersAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListTaskInstanceExecutionsResponse> ListTaskInstanceExecutionsOutcome;
                 typedef std::future<ListTaskInstanceExecutionsOutcome> ListTaskInstanceExecutionsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListTaskInstanceExecutionsRequest&, ListTaskInstanceExecutionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTaskInstanceExecutionsAsyncHandler;
@@ -353,6 +746,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListTasksResponse> ListTasksOutcome;
                 typedef std::future<ListTasksOutcome> ListTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListTasksRequest&, ListTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTenantRolesResponse> ListTenantRolesOutcome;
+                typedef std::future<ListTenantRolesOutcome> ListTenantRolesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTenantRolesRequest&, ListTenantRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTenantRolesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTriggerTaskVersionsResponse> ListTriggerTaskVersionsOutcome;
+                typedef std::future<ListTriggerTaskVersionsOutcome> ListTriggerTaskVersionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTriggerTaskVersionsRequest&, ListTriggerTaskVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTriggerTaskVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTriggerTasksResponse> ListTriggerTasksOutcome;
+                typedef std::future<ListTriggerTasksOutcome> ListTriggerTasksOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTriggerTasksRequest&, ListTriggerTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTriggerTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTriggerWorkflowRunsResponse> ListTriggerWorkflowRunsOutcome;
+                typedef std::future<ListTriggerWorkflowRunsOutcome> ListTriggerWorkflowRunsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTriggerWorkflowRunsRequest&, ListTriggerWorkflowRunsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTriggerWorkflowRunsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTriggerWorkflowsResponse> ListTriggerWorkflowsOutcome;
+                typedef std::future<ListTriggerWorkflowsOutcome> ListTriggerWorkflowsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListTriggerWorkflowsRequest&, ListTriggerWorkflowsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTriggerWorkflowsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListUpstreamOpsTasksResponse> ListUpstreamOpsTasksOutcome;
                 typedef std::future<ListUpstreamOpsTasksOutcome> ListUpstreamOpsTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListUpstreamOpsTasksRequest&, ListUpstreamOpsTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListUpstreamOpsTasksAsyncHandler;
@@ -362,24 +770,48 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListUpstreamTasksResponse> ListUpstreamTasksOutcome;
                 typedef std::future<ListUpstreamTasksOutcome> ListUpstreamTasksOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListUpstreamTasksRequest&, ListUpstreamTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListUpstreamTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListUpstreamTriggerTasksResponse> ListUpstreamTriggerTasksOutcome;
+                typedef std::future<ListUpstreamTriggerTasksOutcome> ListUpstreamTriggerTasksOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListUpstreamTriggerTasksRequest&, ListUpstreamTriggerTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListUpstreamTriggerTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListWorkflowFoldersResponse> ListWorkflowFoldersOutcome;
                 typedef std::future<ListWorkflowFoldersOutcome> ListWorkflowFoldersOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListWorkflowFoldersRequest&, ListWorkflowFoldersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListWorkflowFoldersAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListWorkflowPermissionsResponse> ListWorkflowPermissionsOutcome;
+                typedef std::future<ListWorkflowPermissionsOutcome> ListWorkflowPermissionsOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListWorkflowPermissionsRequest&, ListWorkflowPermissionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListWorkflowPermissionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListWorkflowsResponse> ListWorkflowsOutcome;
                 typedef std::future<ListWorkflowsOutcome> ListWorkflowsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ListWorkflowsRequest&, ListWorkflowsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListWorkflowsAsyncHandler;
                 typedef Outcome<Core::Error, Model::PauseOpsTasksAsyncResponse> PauseOpsTasksAsyncOutcome;
                 typedef std::future<PauseOpsTasksAsyncOutcome> PauseOpsTasksAsyncOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::PauseOpsTasksAsyncRequest&, PauseOpsTasksAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseOpsTasksAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::RegisterLineageResponse> RegisterLineageOutcome;
+                typedef std::future<RegisterLineageOutcome> RegisterLineageOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::RegisterLineageRequest&, RegisterLineageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterLineageAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveMemberProjectRoleResponse> RemoveMemberProjectRoleOutcome;
+                typedef std::future<RemoveMemberProjectRoleOutcome> RemoveMemberProjectRoleOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::RemoveMemberProjectRoleRequest&, RemoveMemberProjectRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveMemberProjectRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::RerunTaskInstancesAsyncResponse> RerunTaskInstancesAsyncOutcome;
                 typedef std::future<RerunTaskInstancesAsyncOutcome> RerunTaskInstancesAsyncOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::RerunTaskInstancesAsyncRequest&, RerunTaskInstancesAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RerunTaskInstancesAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::RerunTriggerWorkflowRunAsyncResponse> RerunTriggerWorkflowRunAsyncOutcome;
+                typedef std::future<RerunTriggerWorkflowRunAsyncOutcome> RerunTriggerWorkflowRunAsyncOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::RerunTriggerWorkflowRunAsyncRequest&, RerunTriggerWorkflowRunAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RerunTriggerWorkflowRunAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::RevokeDataSourceAuthorizationResponse> RevokeDataSourceAuthorizationOutcome;
+                typedef std::future<RevokeDataSourceAuthorizationOutcome> RevokeDataSourceAuthorizationOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::RevokeDataSourceAuthorizationRequest&, RevokeDataSourceAuthorizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RevokeDataSourceAuthorizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::RevokePrivilegesResponse> RevokePrivilegesOutcome;
+                typedef std::future<RevokePrivilegesOutcome> RevokePrivilegesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::RevokePrivilegesRequest&, RevokePrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RevokePrivilegesAsyncHandler;
                 typedef Outcome<Core::Error, Model::RunSQLScriptResponse> RunSQLScriptOutcome;
                 typedef std::future<RunSQLScriptOutcome> RunSQLScriptOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::RunSQLScriptRequest&, RunSQLScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunSQLScriptAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetSuccessTaskInstancesAsyncResponse> SetSuccessTaskInstancesAsyncOutcome;
                 typedef std::future<SetSuccessTaskInstancesAsyncOutcome> SetSuccessTaskInstancesAsyncOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::SetSuccessTaskInstancesAsyncRequest&, SetSuccessTaskInstancesAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetSuccessTaskInstancesAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartOpsTasksResponse> StartOpsTasksOutcome;
+                typedef std::future<StartOpsTasksOutcome> StartOpsTasksOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::StartOpsTasksRequest&, StartOpsTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartOpsTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopOpsTasksAsyncResponse> StopOpsTasksAsyncOutcome;
                 typedef std::future<StopOpsTasksAsyncOutcome> StopOpsTasksAsyncOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::StopOpsTasksAsyncRequest&, StopOpsTasksAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopOpsTasksAsyncAsyncHandler;
@@ -389,24 +821,39 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SubmitTaskResponse> SubmitTaskOutcome;
                 typedef std::future<SubmitTaskOutcome> SubmitTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::SubmitTaskRequest&, SubmitTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitTriggerTaskResponse> SubmitTriggerTaskOutcome;
+                typedef std::future<SubmitTriggerTaskOutcome> SubmitTriggerTaskOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::SubmitTriggerTaskRequest&, SubmitTriggerTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitTriggerTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateCodeFileResponse> UpdateCodeFileOutcome;
                 typedef std::future<UpdateCodeFileOutcome> UpdateCodeFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateCodeFileRequest&, UpdateCodeFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCodeFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateCodeFolderResponse> UpdateCodeFolderOutcome;
                 typedef std::future<UpdateCodeFolderOutcome> UpdateCodeFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateCodeFolderRequest&, UpdateCodeFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCodeFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateDataSourceResponse> UpdateDataSourceOutcome;
+                typedef std::future<UpdateDataSourceOutcome> UpdateDataSourceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateDataSourceRequest&, UpdateDataSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDataSourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateOpsAlarmRuleResponse> UpdateOpsAlarmRuleOutcome;
                 typedef std::future<UpdateOpsAlarmRuleOutcome> UpdateOpsAlarmRuleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateOpsAlarmRuleRequest&, UpdateOpsAlarmRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOpsAlarmRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateOpsTasksOwnerResponse> UpdateOpsTasksOwnerOutcome;
                 typedef std::future<UpdateOpsTasksOwnerOutcome> UpdateOpsTasksOwnerOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateOpsTasksOwnerRequest&, UpdateOpsTasksOwnerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOpsTasksOwnerAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateOpsTriggerTasksOwnerResponse> UpdateOpsTriggerTasksOwnerOutcome;
+                typedef std::future<UpdateOpsTriggerTasksOwnerOutcome> UpdateOpsTriggerTasksOwnerOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateOpsTriggerTasksOwnerRequest&, UpdateOpsTriggerTasksOwnerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOpsTriggerTasksOwnerAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateProjectResponse> UpdateProjectOutcome;
+                typedef std::future<UpdateProjectOutcome> UpdateProjectOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateProjectRequest&, UpdateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateResourceFileResponse> UpdateResourceFileOutcome;
                 typedef std::future<UpdateResourceFileOutcome> UpdateResourceFileOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateResourceFileRequest&, UpdateResourceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateResourceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateResourceFolderResponse> UpdateResourceFolderOutcome;
                 typedef std::future<UpdateResourceFolderOutcome> UpdateResourceFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateResourceFolderRequest&, UpdateResourceFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateResourceFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateResourceGroupResponse> UpdateResourceGroupOutcome;
+                typedef std::future<UpdateResourceGroupOutcome> UpdateResourceGroupOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateResourceGroupRequest&, UpdateResourceGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateResourceGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateSQLFolderResponse> UpdateSQLFolderOutcome;
                 typedef std::future<UpdateSQLFolderOutcome> UpdateSQLFolderOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateSQLFolderRequest&, UpdateSQLFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateSQLFolderAsyncHandler;
@@ -416,6 +863,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateTaskResponse> UpdateTaskOutcome;
                 typedef std::future<UpdateTaskOutcome> UpdateTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateTaskRequest&, UpdateTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTaskFolderResponse> UpdateTaskFolderOutcome;
+                typedef std::future<UpdateTaskFolderOutcome> UpdateTaskFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTaskFolderRequest&, UpdateTaskFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTaskFolderAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTaskPartiallyResponse> UpdateTaskPartiallyOutcome;
+                typedef std::future<UpdateTaskPartiallyOutcome> UpdateTaskPartiallyOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTaskPartiallyRequest&, UpdateTaskPartiallyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTaskPartiallyAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTriggerTaskResponse> UpdateTriggerTaskOutcome;
+                typedef std::future<UpdateTriggerTaskOutcome> UpdateTriggerTaskOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTriggerTaskRequest&, UpdateTriggerTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTriggerTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTriggerTaskPartiallyResponse> UpdateTriggerTaskPartiallyOutcome;
+                typedef std::future<UpdateTriggerTaskPartiallyOutcome> UpdateTriggerTaskPartiallyOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTriggerTaskPartiallyRequest&, UpdateTriggerTaskPartiallyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTriggerTaskPartiallyAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTriggerWorkflowResponse> UpdateTriggerWorkflowOutcome;
+                typedef std::future<UpdateTriggerWorkflowOutcome> UpdateTriggerWorkflowOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTriggerWorkflowRequest&, UpdateTriggerWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTriggerWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateTriggerWorkflowPartiallyResponse> UpdateTriggerWorkflowPartiallyOutcome;
+                typedef std::future<UpdateTriggerWorkflowPartiallyOutcome> UpdateTriggerWorkflowPartiallyOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateTriggerWorkflowPartiallyRequest&, UpdateTriggerWorkflowPartiallyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateTriggerWorkflowPartiallyAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateWorkflowResponse> UpdateWorkflowOutcome;
                 typedef std::future<UpdateWorkflowOutcome> UpdateWorkflowOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateWorkflowRequest&, UpdateWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateWorkflowAsyncHandler;
@@ -424,6 +889,42 @@ namespace TencentCloud
                 typedef std::function<void(const WedataClient*, const Model::UpdateWorkflowFolderRequest&, UpdateWorkflowFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateWorkflowFolderAsyncHandler;
 
 
+
+                /**
+                 *Associate a project cluster.
+                 * @param req AddCalcEnginesToProjectRequest
+                 * @return AddCalcEnginesToProjectOutcome
+                 */
+                AddCalcEnginesToProjectOutcome AddCalcEnginesToProject(const Model::AddCalcEnginesToProjectRequest &request);
+                void AddCalcEnginesToProjectAsync(const Model::AddCalcEnginesToProjectRequest& request, const AddCalcEnginesToProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddCalcEnginesToProjectOutcomeCallable AddCalcEnginesToProjectCallable(const Model::AddCalcEnginesToProjectRequest& request);
+
+                /**
+                 *This API is used to bind the designated execution resource group to the project.
+                 * @param req AssociateResourceGroupToProjectRequest
+                 * @return AssociateResourceGroupToProjectOutcome
+                 */
+                AssociateResourceGroupToProjectOutcome AssociateResourceGroupToProject(const Model::AssociateResourceGroupToProjectRequest &request);
+                void AssociateResourceGroupToProjectAsync(const Model::AssociateResourceGroupToProjectRequest& request, const AssociateResourceGroupToProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AssociateResourceGroupToProjectOutcomeCallable AssociateResourceGroupToProjectCallable(const Model::AssociateResourceGroupToProjectRequest& request);
+
+                /**
+                 *Authorize a data source.
+                 * @param req AuthorizeDataSourceRequest
+                 * @return AuthorizeDataSourceOutcome
+                 */
+                AuthorizeDataSourceOutcome AuthorizeDataSource(const Model::AuthorizeDataSourceRequest &request);
+                void AuthorizeDataSourceAsync(const Model::AuthorizeDataSourceRequest& request, const AuthorizeDataSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AuthorizeDataSourceOutcomeCallable AuthorizeDataSourceCallable(const Model::AuthorizeDataSourceRequest& request);
+
+                /**
+                 *Authorization in Catalog mode.
+                 * @param req AuthorizePrivilegesRequest
+                 * @return AuthorizePrivilegesOutcome
+                 */
+                AuthorizePrivilegesOutcome AuthorizePrivileges(const Model::AuthorizePrivilegesRequest &request);
+                void AuthorizePrivilegesAsync(const Model::AuthorizePrivilegesRequest& request, const AuthorizePrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AuthorizePrivilegesOutcomeCallable AuthorizePrivilegesCallable(const Model::AuthorizePrivilegesRequest& request);
 
                 /**
                  *This API is used to create a code file.
@@ -444,6 +945,15 @@ namespace TencentCloud
                 CreateCodeFolderOutcomeCallable CreateCodeFolderCallable(const Model::CreateCodeFolderRequest& request);
 
                 /**
+                 *Configure CodeStudio entity permission.
+                 * @param req CreateCodePermissionsRequest
+                 * @return CreateCodePermissionsOutcome
+                 */
+                CreateCodePermissionsOutcome CreateCodePermissions(const Model::CreateCodePermissionsRequest &request);
+                void CreateCodePermissionsAsync(const Model::CreateCodePermissionsRequest& request, const CreateCodePermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCodePermissionsOutcomeCallable CreateCodePermissionsCallable(const Model::CreateCodePermissionsRequest& request);
+
+                /**
                  *This API is used to create a data backfill plan.
                  * @param req CreateDataBackfillPlanRequest
                  * @return CreateDataBackfillPlanOutcome
@@ -453,6 +963,15 @@ namespace TencentCloud
                 CreateDataBackfillPlanOutcomeCallable CreateDataBackfillPlanCallable(const Model::CreateDataBackfillPlanRequest& request);
 
                 /**
+                 *This API is used to create a data source in the designated project.
+                 * @param req CreateDataSourceRequest
+                 * @return CreateDataSourceOutcome
+                 */
+                CreateDataSourceOutcome CreateDataSource(const Model::CreateDataSourceRequest &request);
+                void CreateDataSourceAsync(const Model::CreateDataSourceRequest& request, const CreateDataSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDataSourceOutcomeCallable CreateDataSourceCallable(const Model::CreateDataSourceRequest& request);
+
+                /**
                  *This API is used to set alarm rules.
                  * @param req CreateOpsAlarmRuleRequest
                  * @return CreateOpsAlarmRuleOutcome
@@ -460,6 +979,24 @@ namespace TencentCloud
                 CreateOpsAlarmRuleOutcome CreateOpsAlarmRule(const Model::CreateOpsAlarmRuleRequest &request);
                 void CreateOpsAlarmRuleAsync(const Model::CreateOpsAlarmRuleRequest& request, const CreateOpsAlarmRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateOpsAlarmRuleOutcomeCallable CreateOpsAlarmRuleCallable(const Model::CreateOpsAlarmRuleRequest& request);
+
+                /**
+                 *Create a project with cluster information upon creation.
+                 * @param req CreateProjectRequest
+                 * @return CreateProjectOutcome
+                 */
+                CreateProjectOutcome CreateProject(const Model::CreateProjectRequest &request);
+                void CreateProjectAsync(const Model::CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProjectOutcomeCallable CreateProjectCallable(const Model::CreateProjectRequest& request);
+
+                /**
+                 *Add project user role.
+                 * @param req CreateProjectMemberRequest
+                 * @return CreateProjectMemberOutcome
+                 */
+                CreateProjectMemberOutcome CreateProjectMember(const Model::CreateProjectMemberRequest &request);
+                void CreateProjectMemberAsync(const Model::CreateProjectMemberRequest& request, const CreateProjectMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProjectMemberOutcomeCallable CreateProjectMemberCallable(const Model::CreateProjectMemberRequest& request);
 
                 /**
                  *This API is used to create a resource file.
@@ -478,6 +1015,15 @@ namespace TencentCloud
                 CreateResourceFolderOutcome CreateResourceFolder(const Model::CreateResourceFolderRequest &request);
                 void CreateResourceFolderAsync(const Model::CreateResourceFolderRequest& request, const CreateResourceFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateResourceFolderOutcomeCallable CreateResourceFolderCallable(const Model::CreateResourceFolderRequest& request);
+
+                /**
+                 *This API is used to purchase resources.
+                 * @param req CreateResourceGroupRequest
+                 * @return CreateResourceGroupOutcome
+                 */
+                CreateResourceGroupOutcome CreateResourceGroup(const Model::CreateResourceGroupRequest &request);
+                void CreateResourceGroupAsync(const Model::CreateResourceGroupRequest& request, const CreateResourceGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateResourceGroupOutcomeCallable CreateResourceGroupCallable(const Model::CreateResourceGroupRequest& request);
 
                 /**
                  *This API is used to create an SQL folder
@@ -507,6 +1053,33 @@ namespace TencentCloud
                 CreateTaskOutcomeCallable CreateTaskCallable(const Model::CreateTaskRequest& request);
 
                 /**
+                 *Create a folder.
+                 * @param req CreateTaskFolderRequest
+                 * @return CreateTaskFolderOutcome
+                 */
+                CreateTaskFolderOutcome CreateTaskFolder(const Model::CreateTaskFolderRequest &request);
+                void CreateTaskFolderAsync(const Model::CreateTaskFolderRequest& request, const CreateTaskFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTaskFolderOutcomeCallable CreateTaskFolderCallable(const Model::CreateTaskFolderRequest& request);
+
+                /**
+                 *This API is used to create a task.
+                 * @param req CreateTriggerTaskRequest
+                 * @return CreateTriggerTaskOutcome
+                 */
+                CreateTriggerTaskOutcome CreateTriggerTask(const Model::CreateTriggerTaskRequest &request);
+                void CreateTriggerTaskAsync(const Model::CreateTriggerTaskRequest& request, const CreateTriggerTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTriggerTaskOutcomeCallable CreateTriggerTaskCallable(const Model::CreateTriggerTaskRequest& request);
+
+                /**
+                 *create workflow.
+                 * @param req CreateTriggerWorkflowRequest
+                 * @return CreateTriggerWorkflowOutcome
+                 */
+                CreateTriggerWorkflowOutcome CreateTriggerWorkflow(const Model::CreateTriggerWorkflowRequest &request);
+                void CreateTriggerWorkflowAsync(const Model::CreateTriggerWorkflowRequest& request, const CreateTriggerWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTriggerWorkflowOutcomeCallable CreateTriggerWorkflowCallable(const Model::CreateTriggerWorkflowRequest& request);
+
+                /**
                  *This API is used to create workflow.
                  * @param req CreateWorkflowRequest
                  * @return CreateWorkflowOutcome
@@ -523,6 +1096,15 @@ namespace TencentCloud
                 CreateWorkflowFolderOutcome CreateWorkflowFolder(const Model::CreateWorkflowFolderRequest &request);
                 void CreateWorkflowFolderAsync(const Model::CreateWorkflowFolderRequest& request, const CreateWorkflowFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateWorkflowFolderOutcomeCallable CreateWorkflowFolderCallable(const Model::CreateWorkflowFolderRequest& request);
+
+                /**
+                 *This API is used to configure data development permissions.
+                 * @param req CreateWorkflowPermissionsRequest
+                 * @return CreateWorkflowPermissionsOutcome
+                 */
+                CreateWorkflowPermissionsOutcome CreateWorkflowPermissions(const Model::CreateWorkflowPermissionsRequest &request);
+                void CreateWorkflowPermissionsAsync(const Model::CreateWorkflowPermissionsRequest& request, const CreateWorkflowPermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateWorkflowPermissionsOutcomeCallable CreateWorkflowPermissionsCallable(const Model::CreateWorkflowPermissionsRequest& request);
 
                 /**
                  *This API is used to delete a code file.
@@ -543,6 +1125,42 @@ namespace TencentCloud
                 DeleteCodeFolderOutcomeCallable DeleteCodeFolderCallable(const Model::DeleteCodeFolderRequest& request);
 
                 /**
+                 *Delete CodeStudio entity permission.
+                 * @param req DeleteCodePermissionsRequest
+                 * @return DeleteCodePermissionsOutcome
+                 */
+                DeleteCodePermissionsOutcome DeleteCodePermissions(const Model::DeleteCodePermissionsRequest &request);
+                void DeleteCodePermissionsAsync(const Model::DeleteCodePermissionsRequest& request, const DeleteCodePermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCodePermissionsOutcomeCallable DeleteCodePermissionsCallable(const Model::DeleteCodePermissionsRequest& request);
+
+                /**
+                 *Delete a replenishment plan.
+                 * @param req DeleteDataBackfillPlanAsyncRequest
+                 * @return DeleteDataBackfillPlanAsyncOutcome
+                 */
+                DeleteDataBackfillPlanAsyncOutcome DeleteDataBackfillPlanAsync(const Model::DeleteDataBackfillPlanAsyncRequest &request);
+                void DeleteDataBackfillPlanAsyncAsync(const Model::DeleteDataBackfillPlanAsyncRequest& request, const DeleteDataBackfillPlanAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDataBackfillPlanAsyncOutcomeCallable DeleteDataBackfillPlanAsyncCallable(const Model::DeleteDataBackfillPlanAsyncRequest& request);
+
+                /**
+                 *This API is used to delete a data source.
+                 * @param req DeleteDataSourceRequest
+                 * @return DeleteDataSourceOutcome
+                 */
+                DeleteDataSourceOutcome DeleteDataSource(const Model::DeleteDataSourceRequest &request);
+                void DeleteDataSourceAsync(const Model::DeleteDataSourceRequest& request, const DeleteDataSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDataSourceOutcomeCallable DeleteDataSourceCallable(const Model::DeleteDataSourceRequest& request);
+
+                /**
+                 *RegisterLineage
+                 * @param req DeleteLineageRequest
+                 * @return DeleteLineageOutcome
+                 */
+                DeleteLineageOutcome DeleteLineage(const Model::DeleteLineageRequest &request);
+                void DeleteLineageAsync(const Model::DeleteLineageRequest& request, const DeleteLineageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLineageOutcomeCallable DeleteLineageCallable(const Model::DeleteLineageRequest& request);
+
+                /**
                  *Deletes alarm rules
                  * @param req DeleteOpsAlarmRuleRequest
                  * @return DeleteOpsAlarmRuleOutcome
@@ -550,6 +1168,24 @@ namespace TencentCloud
                 DeleteOpsAlarmRuleOutcome DeleteOpsAlarmRule(const Model::DeleteOpsAlarmRuleRequest &request);
                 void DeleteOpsAlarmRuleAsync(const Model::DeleteOpsAlarmRuleRequest& request, const DeleteOpsAlarmRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteOpsAlarmRuleOutcomeCallable DeleteOpsAlarmRuleCallable(const Model::DeleteOpsAlarmRuleRequest& request);
+
+                /**
+                 *This API is used to delete a project.
+                 * @param req DeleteProjectRequest
+                 * @return DeleteProjectOutcome
+                 */
+                DeleteProjectOutcome DeleteProject(const Model::DeleteProjectRequest &request);
+                void DeleteProjectAsync(const Model::DeleteProjectRequest& request, const DeleteProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProjectOutcomeCallable DeleteProjectCallable(const Model::DeleteProjectRequest& request);
+
+                /**
+                 *This API is used to delete project users.
+                 * @param req DeleteProjectMemberRequest
+                 * @return DeleteProjectMemberOutcome
+                 */
+                DeleteProjectMemberOutcome DeleteProjectMember(const Model::DeleteProjectMemberRequest &request);
+                void DeleteProjectMemberAsync(const Model::DeleteProjectMemberRequest& request, const DeleteProjectMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProjectMemberOutcomeCallable DeleteProjectMemberCallable(const Model::DeleteProjectMemberRequest& request);
 
                 /**
                  *This API is used to delete a resource file.
@@ -568,6 +1204,15 @@ namespace TencentCloud
                 DeleteResourceFolderOutcome DeleteResourceFolder(const Model::DeleteResourceFolderRequest &request);
                 void DeleteResourceFolderAsync(const Model::DeleteResourceFolderRequest& request, const DeleteResourceFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteResourceFolderOutcomeCallable DeleteResourceFolderCallable(const Model::DeleteResourceFolderRequest& request);
+
+                /**
+                 *This API is used to destroy resources.
+                 * @param req DeleteResourceGroupRequest
+                 * @return DeleteResourceGroupOutcome
+                 */
+                DeleteResourceGroupOutcome DeleteResourceGroup(const Model::DeleteResourceGroupRequest &request);
+                void DeleteResourceGroupAsync(const Model::DeleteResourceGroupRequest& request, const DeleteResourceGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteResourceGroupOutcomeCallable DeleteResourceGroupCallable(const Model::DeleteResourceGroupRequest& request);
 
                 /**
                  *This API is used to delete a SQL folder.
@@ -597,6 +1242,33 @@ namespace TencentCloud
                 DeleteTaskOutcomeCallable DeleteTaskCallable(const Model::DeleteTaskRequest& request);
 
                 /**
+                 *Delete a data development task folder.
+                 * @param req DeleteTaskFolderRequest
+                 * @return DeleteTaskFolderOutcome
+                 */
+                DeleteTaskFolderOutcome DeleteTaskFolder(const Model::DeleteTaskFolderRequest &request);
+                void DeleteTaskFolderAsync(const Model::DeleteTaskFolderRequest& request, const DeleteTaskFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTaskFolderOutcomeCallable DeleteTaskFolderCallable(const Model::DeleteTaskFolderRequest& request);
+
+                /**
+                 *Delete a workflow scheduling task.
+                 * @param req DeleteTriggerTaskRequest
+                 * @return DeleteTriggerTaskOutcome
+                 */
+                DeleteTriggerTaskOutcome DeleteTriggerTask(const Model::DeleteTriggerTaskRequest &request);
+                void DeleteTriggerTaskAsync(const Model::DeleteTriggerTaskRequest& request, const DeleteTriggerTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTriggerTaskOutcomeCallable DeleteTriggerTaskCallable(const Model::DeleteTriggerTaskRequest& request);
+
+                /**
+                 *Deletes a workflow
+                 * @param req DeleteTriggerWorkflowRequest
+                 * @return DeleteTriggerWorkflowOutcome
+                 */
+                DeleteTriggerWorkflowOutcome DeleteTriggerWorkflow(const Model::DeleteTriggerWorkflowRequest &request);
+                void DeleteTriggerWorkflowAsync(const Model::DeleteTriggerWorkflowRequest& request, const DeleteTriggerWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTriggerWorkflowOutcomeCallable DeleteTriggerWorkflowCallable(const Model::DeleteTriggerWorkflowRequest& request);
+
+                /**
                  *Deletes a workflow
                  * @param req DeleteWorkflowRequest
                  * @return DeleteWorkflowOutcome
@@ -615,6 +1287,51 @@ namespace TencentCloud
                 DeleteWorkflowFolderOutcomeCallable DeleteWorkflowFolderCallable(const Model::DeleteWorkflowFolderRequest& request);
 
                 /**
+                 *This API is used to delete workflow folder permissions.
+                 * @param req DeleteWorkflowPermissionsRequest
+                 * @return DeleteWorkflowPermissionsOutcome
+                 */
+                DeleteWorkflowPermissionsOutcome DeleteWorkflowPermissions(const Model::DeleteWorkflowPermissionsRequest &request);
+                void DeleteWorkflowPermissionsAsync(const Model::DeleteWorkflowPermissionsRequest& request, const DeleteWorkflowPermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteWorkflowPermissionsOutcomeCallable DeleteWorkflowPermissionsCallable(const Model::DeleteWorkflowPermissionsRequest& request);
+
+                /**
+                 *View Data Source Permission.
+                 * @param req DescribeDataSourceAuthorityRequest
+                 * @return DescribeDataSourceAuthorityOutcome
+                 */
+                DescribeDataSourceAuthorityOutcome DescribeDataSourceAuthority(const Model::DescribeDataSourceAuthorityRequest &request);
+                void DescribeDataSourceAuthorityAsync(const Model::DescribeDataSourceAuthorityRequest& request, const DescribeDataSourceAuthorityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDataSourceAuthorityOutcomeCallable DescribeDataSourceAuthorityCallable(const Model::DescribeDataSourceAuthorityRequest& request);
+
+                /**
+                 *Disable a project.
+                 * @param req DisableProjectRequest
+                 * @return DisableProjectOutcome
+                 */
+                DisableProjectOutcome DisableProject(const Model::DisableProjectRequest &request);
+                void DisableProjectAsync(const Model::DisableProjectRequest& request, const DisableProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableProjectOutcomeCallable DisableProjectCallable(const Model::DisableProjectRequest& request);
+
+                /**
+                 *This API is used to unbind the designated execution resource group from the project.
+                 * @param req DissociateResourceGroupFromProjectRequest
+                 * @return DissociateResourceGroupFromProjectOutcome
+                 */
+                DissociateResourceGroupFromProjectOutcome DissociateResourceGroupFromProject(const Model::DissociateResourceGroupFromProjectRequest &request);
+                void DissociateResourceGroupFromProjectAsync(const Model::DissociateResourceGroupFromProjectRequest& request, const DissociateResourceGroupFromProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DissociateResourceGroupFromProjectOutcomeCallable DissociateResourceGroupFromProjectCallable(const Model::DissociateResourceGroupFromProjectRequest& request);
+
+                /**
+                 *Enable a project.
+                 * @param req EnableProjectRequest
+                 * @return EnableProjectOutcome
+                 */
+                EnableProjectOutcome EnableProject(const Model::EnableProjectRequest &request);
+                void EnableProjectAsync(const Model::EnableProjectRequest& request, const EnableProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableProjectOutcomeCallable EnableProjectCallable(const Model::EnableProjectRequest& request);
+
+                /**
                  *This API is used to query alert information details.
                  * @param req GetAlarmMessageRequest
                  * @return GetAlarmMessageOutcome
@@ -631,6 +1348,60 @@ namespace TencentCloud
                 GetCodeFileOutcome GetCodeFile(const Model::GetCodeFileRequest &request);
                 void GetCodeFileAsync(const Model::GetCodeFileRequest& request, const GetCodeFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetCodeFileOutcomeCallable GetCodeFileCallable(const Model::GetCodeFileRequest& request);
+
+                /**
+                 *Retrieve sql folder details.
+                 * @param req GetCodeFolderRequest
+                 * @return GetCodeFolderOutcome
+                 */
+                GetCodeFolderOutcome GetCodeFolder(const Model::GetCodeFolderRequest &request);
+                void GetCodeFolderAsync(const Model::GetCodeFolderRequest& request, const GetCodeFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetCodeFolderOutcomeCallable GetCodeFolderCallable(const Model::GetCodeFolderRequest& request);
+
+                /**
+                 *Retrieve supplementary plan details.
+                 * @param req GetDataBackfillPlanRequest
+                 * @return GetDataBackfillPlanOutcome
+                 */
+                GetDataBackfillPlanOutcome GetDataBackfillPlan(const Model::GetDataBackfillPlanRequest &request);
+                void GetDataBackfillPlanAsync(const Model::GetDataBackfillPlanRequest& request, const GetDataBackfillPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetDataBackfillPlanOutcomeCallable GetDataBackfillPlanCallable(const Model::GetDataBackfillPlanRequest& request);
+
+                /**
+                 *This API is used to view detailed information of the specified data source.
+                 * @param req GetDataSourceRequest
+                 * @return GetDataSourceOutcome
+                 */
+                GetDataSourceOutcome GetDataSource(const Model::GetDataSourceRequest &request);
+                void GetDataSourceAsync(const Model::GetDataSourceRequest& request, const GetDataSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetDataSourceOutcomeCallable GetDataSourceCallable(const Model::GetDataSourceRequest& request);
+
+                /**
+                 *Query the associated task details of a data source.
+                 * @param req GetDataSourceRelatedTasksRequest
+                 * @return GetDataSourceRelatedTasksOutcome
+                 */
+                GetDataSourceRelatedTasksOutcome GetDataSourceRelatedTasks(const Model::GetDataSourceRelatedTasksRequest &request);
+                void GetDataSourceRelatedTasksAsync(const Model::GetDataSourceRelatedTasksRequest& request, const GetDataSourceRelatedTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetDataSourceRelatedTasksOutcomeCallable GetDataSourceRelatedTasksCallable(const Model::GetDataSourceRelatedTasksRequest& request);
+
+                /**
+                 *View the current user's maximum permission scope for the CodeStudio entity.
+                 * @param req GetMyCodeMaxPermissionRequest
+                 * @return GetMyCodeMaxPermissionOutcome
+                 */
+                GetMyCodeMaxPermissionOutcome GetMyCodeMaxPermission(const Model::GetMyCodeMaxPermissionRequest &request);
+                void GetMyCodeMaxPermissionAsync(const Model::GetMyCodeMaxPermissionRequest& request, const GetMyCodeMaxPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetMyCodeMaxPermissionOutcomeCallable GetMyCodeMaxPermissionCallable(const Model::GetMyCodeMaxPermissionRequest& request);
+
+                /**
+                 *Check the current user's maximum permission scope for the workflow folder recursively.
+                 * @param req GetMyWorkflowMaxPermissionRequest
+                 * @return GetMyWorkflowMaxPermissionOutcome
+                 */
+                GetMyWorkflowMaxPermissionOutcome GetMyWorkflowMaxPermission(const Model::GetMyWorkflowMaxPermissionRequest &request);
+                void GetMyWorkflowMaxPermissionAsync(const Model::GetMyWorkflowMaxPermissionRequest& request, const GetMyWorkflowMaxPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetMyWorkflowMaxPermissionOutcomeCallable GetMyWorkflowMaxPermissionCallable(const Model::GetMyWorkflowMaxPermissionRequest& request);
 
                 /**
                  *This API is used to query alert rule information based on alarm rule id or name.
@@ -669,6 +1440,15 @@ namespace TencentCloud
                 GetOpsTaskCodeOutcomeCallable GetOpsTaskCodeCallable(const Model::GetOpsTaskCodeRequest& request);
 
                 /**
+                 *Query workflow task details.
+                 * @param req GetOpsTriggerWorkflowRequest
+                 * @return GetOpsTriggerWorkflowOutcome
+                 */
+                GetOpsTriggerWorkflowOutcome GetOpsTriggerWorkflow(const Model::GetOpsTriggerWorkflowRequest &request);
+                void GetOpsTriggerWorkflowAsync(const Model::GetOpsTriggerWorkflowRequest& request, const GetOpsTriggerWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetOpsTriggerWorkflowOutcomeCallable GetOpsTriggerWorkflowCallable(const Model::GetOpsTriggerWorkflowRequest& request);
+
+                /**
                  *This API is used to obtain workflow scheduling details based on the workflow id.
                  * @param req GetOpsWorkflowRequest
                  * @return GetOpsWorkflowOutcome
@@ -676,6 +1456,15 @@ namespace TencentCloud
                 GetOpsWorkflowOutcome GetOpsWorkflow(const Model::GetOpsWorkflowRequest &request);
                 void GetOpsWorkflowAsync(const Model::GetOpsWorkflowRequest& request, const GetOpsWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetOpsWorkflowOutcomeCallable GetOpsWorkflowCallable(const Model::GetOpsWorkflowRequest& request);
+
+                /**
+                 *This API is used to get project information.
+                 * @param req GetProjectRequest
+                 * @return GetProjectOutcome
+                 */
+                GetProjectOutcome GetProject(const Model::GetProjectRequest &request);
+                void GetProjectAsync(const Model::GetProjectRequest& request, const GetProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetProjectOutcomeCallable GetProjectCallable(const Model::GetProjectRequest& request);
 
                 /**
                  *This API is used to obtain resource file details.
@@ -687,6 +1476,33 @@ namespace TencentCloud
                 GetResourceFileOutcomeCallable GetResourceFileCallable(const Model::GetResourceFileRequest& request);
 
                 /**
+                 *Query a resource file folder details.
+                 * @param req GetResourceFolderRequest
+                 * @return GetResourceFolderOutcome
+                 */
+                GetResourceFolderOutcome GetResourceFolder(const Model::GetResourceFolderRequest &request);
+                void GetResourceFolderAsync(const Model::GetResourceFolderRequest& request, const GetResourceFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetResourceFolderOutcomeCallable GetResourceFolderCallable(const Model::GetResourceFolderRequest& request);
+
+                /**
+                 *This API is used to view specified execution resource group monitoring metrics.
+                 * @param req GetResourceGroupMetricsRequest
+                 * @return GetResourceGroupMetricsOutcome
+                 */
+                GetResourceGroupMetricsOutcome GetResourceGroupMetrics(const Model::GetResourceGroupMetricsRequest &request);
+                void GetResourceGroupMetricsAsync(const Model::GetResourceGroupMetricsRequest& request, const GetResourceGroupMetricsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetResourceGroupMetricsOutcomeCallable GetResourceGroupMetricsCallable(const Model::GetResourceGroupMetricsRequest& request);
+
+                /**
+                 *Retrieve sql folder details.
+                 * @param req GetSQLFolderRequest
+                 * @return GetSQLFolderOutcome
+                 */
+                GetSQLFolderOutcome GetSQLFolder(const Model::GetSQLFolderRequest &request);
+                void GetSQLFolderAsync(const Model::GetSQLFolderRequest& request, const GetSQLFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetSQLFolderOutcomeCallable GetSQLFolderCallable(const Model::GetSQLFolderRequest& request);
+
+                /**
                  *This API is used to query script details.
                  * @param req GetSQLScriptRequest
                  * @return GetSQLScriptOutcome
@@ -694,6 +1510,24 @@ namespace TencentCloud
                 GetSQLScriptOutcome GetSQLScript(const Model::GetSQLScriptRequest &request);
                 void GetSQLScriptAsync(const Model::GetSQLScriptRequest& request, const GetSQLScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetSQLScriptOutcomeCallable GetSQLScriptCallable(const Model::GetSQLScriptRequest& request);
+
+                /**
+                 *Query table details.
+                 * @param req GetTableRequest
+                 * @return GetTableOutcome
+                 */
+                GetTableOutcome GetTable(const Model::GetTableRequest &request);
+                void GetTableAsync(const Model::GetTableRequest& request, const GetTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTableOutcomeCallable GetTableCallable(const Model::GetTableRequest& request);
+
+                /**
+                 *This API is used to obtain the list of all fields in a table.
+                 * @param req GetTableColumnsRequest
+                 * @return GetTableColumnsOutcome
+                 */
+                GetTableColumnsOutcome GetTableColumns(const Model::GetTableColumnsRequest &request);
+                void GetTableColumnsAsync(const Model::GetTableColumnsRequest& request, const GetTableColumnsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTableColumnsOutcomeCallable GetTableColumnsCallable(const Model::GetTableColumnsRequest& request);
 
                 /**
                  *This API is used to retrieve task details.
@@ -712,6 +1546,15 @@ namespace TencentCloud
                 GetTaskCodeOutcome GetTaskCode(const Model::GetTaskCodeRequest &request);
                 void GetTaskCodeAsync(const Model::GetTaskCodeRequest& request, const GetTaskCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetTaskCodeOutcomeCallable GetTaskCodeCallable(const Model::GetTaskCodeRequest& request);
+
+                /**
+                 *Query Task Folder Details.
+                 * @param req GetTaskFolderRequest
+                 * @return GetTaskFolderOutcome
+                 */
+                GetTaskFolderOutcome GetTaskFolder(const Model::GetTaskFolderRequest &request);
+                void GetTaskFolderAsync(const Model::GetTaskFolderRequest& request, const GetTaskFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTaskFolderOutcomeCallable GetTaskFolderCallable(const Model::GetTaskFolderRequest& request);
 
                 /**
                  *This API is used to query the details of a scheduling instance.
@@ -741,6 +1584,60 @@ namespace TencentCloud
                 GetTaskVersionOutcomeCallable GetTaskVersionCallable(const Model::GetTaskVersionRequest& request);
 
                 /**
+                 *This API is used to retrieve task details.
+                 * @param req GetTriggerTaskRequest
+                 * @return GetTriggerTaskOutcome
+                 */
+                GetTriggerTaskOutcome GetTriggerTask(const Model::GetTriggerTaskRequest &request);
+                void GetTriggerTaskAsync(const Model::GetTriggerTaskRequest& request, const GetTriggerTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerTaskOutcomeCallable GetTriggerTaskCallable(const Model::GetTriggerTaskRequest& request);
+
+                /**
+                 *Retrieve workflow scheduling task code.
+                 * @param req GetTriggerTaskCodeRequest
+                 * @return GetTriggerTaskCodeOutcome
+                 */
+                GetTriggerTaskCodeOutcome GetTriggerTaskCode(const Model::GetTriggerTaskCodeRequest &request);
+                void GetTriggerTaskCodeAsync(const Model::GetTriggerTaskCodeRequest& request, const GetTriggerTaskCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerTaskCodeOutcomeCallable GetTriggerTaskCodeCallable(const Model::GetTriggerTaskCodeRequest& request);
+
+                /**
+                 *Query task execution details.
+                 * @param req GetTriggerTaskRunRequest
+                 * @return GetTriggerTaskRunOutcome
+                 */
+                GetTriggerTaskRunOutcome GetTriggerTaskRun(const Model::GetTriggerTaskRunRequest &request);
+                void GetTriggerTaskRunAsync(const Model::GetTriggerTaskRunRequest& request, const GetTriggerTaskRunAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerTaskRunOutcomeCallable GetTriggerTaskRunCallable(const Model::GetTriggerTaskRunRequest& request);
+
+                /**
+                 *Get task version list.
+                 * @param req GetTriggerTaskVersionRequest
+                 * @return GetTriggerTaskVersionOutcome
+                 */
+                GetTriggerTaskVersionOutcome GetTriggerTaskVersion(const Model::GetTriggerTaskVersionRequest &request);
+                void GetTriggerTaskVersionAsync(const Model::GetTriggerTaskVersionRequest& request, const GetTriggerTaskVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerTaskVersionOutcomeCallable GetTriggerTaskVersionCallable(const Model::GetTriggerTaskVersionRequest& request);
+
+                /**
+                 *Retrieve workflow information.
+                 * @param req GetTriggerWorkflowRequest
+                 * @return GetTriggerWorkflowOutcome
+                 */
+                GetTriggerWorkflowOutcome GetTriggerWorkflow(const Model::GetTriggerWorkflowRequest &request);
+                void GetTriggerWorkflowAsync(const Model::GetTriggerWorkflowRequest& request, const GetTriggerWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerWorkflowOutcomeCallable GetTriggerWorkflowCallable(const Model::GetTriggerWorkflowRequest& request);
+
+                /**
+                 *Query workflow task details.
+                 * @param req GetTriggerWorkflowRunRequest
+                 * @return GetTriggerWorkflowRunOutcome
+                 */
+                GetTriggerWorkflowRunOutcome GetTriggerWorkflowRun(const Model::GetTriggerWorkflowRunRequest &request);
+                void GetTriggerWorkflowRunAsync(const Model::GetTriggerWorkflowRunRequest& request, const GetTriggerWorkflowRunAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTriggerWorkflowRunOutcomeCallable GetTriggerWorkflowRunCallable(const Model::GetTriggerWorkflowRunRequest& request);
+
+                /**
                  *This API is used to retrieve workflow information.
                  * @param req GetWorkflowRequest
                  * @return GetWorkflowOutcome
@@ -748,6 +1645,24 @@ namespace TencentCloud
                 GetWorkflowOutcome GetWorkflow(const Model::GetWorkflowRequest &request);
                 void GetWorkflowAsync(const Model::GetWorkflowRequest& request, const GetWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetWorkflowOutcomeCallable GetWorkflowCallable(const Model::GetWorkflowRequest& request);
+
+                /**
+                 *Query folder details.
+                 * @param req GetWorkflowFolderRequest
+                 * @return GetWorkflowFolderOutcome
+                 */
+                GetWorkflowFolderOutcome GetWorkflowFolder(const Model::GetWorkflowFolderRequest &request);
+                void GetWorkflowFolderAsync(const Model::GetWorkflowFolderRequest& request, const GetWorkflowFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetWorkflowFolderOutcomeCallable GetWorkflowFolderCallable(const Model::GetWorkflowFolderRequest& request);
+
+                /**
+                 *Modify project user roles.
+                 * @param req GrantMemberProjectRoleRequest
+                 * @return GrantMemberProjectRoleOutcome
+                 */
+                GrantMemberProjectRoleOutcome GrantMemberProjectRole(const Model::GrantMemberProjectRoleRequest &request);
+                void GrantMemberProjectRoleAsync(const Model::GrantMemberProjectRoleRequest& request, const GrantMemberProjectRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GrantMemberProjectRoleOutcomeCallable GrantMemberProjectRoleCallable(const Model::GrantMemberProjectRoleRequest& request);
 
                 /**
                  *This API is used to terminate instances in batches asynchronously.
@@ -759,6 +1674,15 @@ namespace TencentCloud
                 KillTaskInstancesAsyncOutcomeCallable KillTaskInstancesAsyncCallable(const Model::KillTaskInstancesAsyncRequest& request);
 
                 /**
+                 *Terminate running.
+                 * @param req KillTriggerWorkflowRunsRequest
+                 * @return KillTriggerWorkflowRunsOutcome
+                 */
+                KillTriggerWorkflowRunsOutcome KillTriggerWorkflowRuns(const Model::KillTriggerWorkflowRunsRequest &request);
+                void KillTriggerWorkflowRunsAsync(const Model::KillTriggerWorkflowRunsRequest& request, const KillTriggerWorkflowRunsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                KillTriggerWorkflowRunsOutcomeCallable KillTriggerWorkflowRunsCallable(const Model::KillTriggerWorkflowRunsRequest& request);
+
+                /**
                  *This API is used to search the alarm information list.
                  * @param req ListAlarmMessagesRequest
                  * @return ListAlarmMessagesOutcome
@@ -766,6 +1690,15 @@ namespace TencentCloud
                 ListAlarmMessagesOutcome ListAlarmMessages(const Model::ListAlarmMessagesRequest &request);
                 void ListAlarmMessagesAsync(const Model::ListAlarmMessagesRequest& request, const ListAlarmMessagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAlarmMessagesOutcomeCallable ListAlarmMessagesCallable(const Model::ListAlarmMessagesRequest& request);
+
+                /**
+                 *Retrieve asset catalog info.
+                 * @param req ListCatalogRequest
+                 * @return ListCatalogOutcome
+                 */
+                ListCatalogOutcome ListCatalog(const Model::ListCatalogRequest &request);
+                void ListCatalogAsync(const Model::ListCatalogRequest& request, const ListCatalogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListCatalogOutcomeCallable ListCatalogCallable(const Model::ListCatalogRequest& request);
 
                 /**
                  *This API is used to get folder content.
@@ -777,6 +1710,24 @@ namespace TencentCloud
                 ListCodeFolderContentsOutcomeCallable ListCodeFolderContentsCallable(const Model::ListCodeFolderContentsRequest& request);
 
                 /**
+                 *View CodeStudio entity permission.
+                 * @param req ListCodePermissionsRequest
+                 * @return ListCodePermissionsOutcome
+                 */
+                ListCodePermissionsOutcome ListCodePermissions(const Model::ListCodePermissionsRequest &request);
+                void ListCodePermissionsAsync(const Model::ListCodePermissionsRequest& request, const ListCodePermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListCodePermissionsOutcomeCallable ListCodePermissionsCallable(const Model::ListCodePermissionsRequest& request);
+
+                /**
+                 *This API is used to obtain table field lineage information.
+                 * @param req ListColumnLineageRequest
+                 * @return ListColumnLineageOutcome
+                 */
+                ListColumnLineageOutcome ListColumnLineage(const Model::ListColumnLineageRequest &request);
+                void ListColumnLineageAsync(const Model::ListColumnLineageRequest& request, const ListColumnLineageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListColumnLineageOutcomeCallable ListColumnLineageCallable(const Model::ListColumnLineageRequest& request);
+
+                /**
                  *This API is used to retrieve all instances of a single backfill.
                  * @param req ListDataBackfillInstancesRequest
                  * @return ListDataBackfillInstancesOutcome
@@ -784,6 +1735,24 @@ namespace TencentCloud
                 ListDataBackfillInstancesOutcome ListDataBackfillInstances(const Model::ListDataBackfillInstancesRequest &request);
                 void ListDataBackfillInstancesAsync(const Model::ListDataBackfillInstancesRequest& request, const ListDataBackfillInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListDataBackfillInstancesOutcomeCallable ListDataBackfillInstancesCallable(const Model::ListDataBackfillInstancesRequest& request);
+
+                /**
+                 *This API is used to query the data source list in the designated project.
+                 * @param req ListDataSourcesRequest
+                 * @return ListDataSourcesOutcome
+                 */
+                ListDataSourcesOutcome ListDataSources(const Model::ListDataSourcesRequest &request);
+                void ListDataSourcesAsync(const Model::ListDataSourcesRequest& request, const ListDataSourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDataSourcesOutcomeCallable ListDataSourcesCallable(const Model::ListDataSourcesRequest& request);
+
+                /**
+                 *This API is used to obtain asset database info.
+                 * @param req ListDatabaseRequest
+                 * @return ListDatabaseOutcome
+                 */
+                ListDatabaseOutcome ListDatabase(const Model::ListDatabaseRequest &request);
+                void ListDatabaseAsync(const Model::ListDatabaseRequest& request, const ListDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDatabaseOutcomeCallable ListDatabaseCallable(const Model::ListDatabaseRequest& request);
 
                 /**
                  *This API is used to retrieve task direct downstream details.
@@ -813,6 +1782,24 @@ namespace TencentCloud
                 ListDownstreamTasksOutcomeCallable ListDownstreamTasksCallable(const Model::ListDownstreamTasksRequest& request);
 
                 /**
+                 *This API is used to retrieve direct downstream task details.
+                 * @param req ListDownstreamTriggerTasksRequest
+                 * @return ListDownstreamTriggerTasksOutcome
+                 */
+                ListDownstreamTriggerTasksOutcome ListDownstreamTriggerTasks(const Model::ListDownstreamTriggerTasksRequest &request);
+                void ListDownstreamTriggerTasksAsync(const Model::ListDownstreamTriggerTasksRequest& request, const ListDownstreamTriggerTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDownstreamTriggerTasksOutcomeCallable ListDownstreamTriggerTasksCallable(const Model::ListDownstreamTriggerTasksRequest& request);
+
+                /**
+                 *This API is used to obtain asset lineage information.
+                 * @param req ListLineageRequest
+                 * @return ListLineageOutcome
+                 */
+                ListLineageOutcome ListLineage(const Model::ListLineageRequest &request);
+                void ListLineageAsync(const Model::ListLineageRequest& request, const ListLineageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListLineageOutcomeCallable ListLineageCallable(const Model::ListLineageRequest& request);
+
+                /**
                  *This API is used to query the alarm rule list.
                  * @param req ListOpsAlarmRulesRequest
                  * @return ListOpsAlarmRulesOutcome
@@ -831,6 +1818,15 @@ namespace TencentCloud
                 ListOpsTasksOutcomeCallable ListOpsTasksCallable(const Model::ListOpsTasksRequest& request);
 
                 /**
+                 *This API is used to query the list of workflows.
+                 * @param req ListOpsTriggerWorkflowsRequest
+                 * @return ListOpsTriggerWorkflowsOutcome
+                 */
+                ListOpsTriggerWorkflowsOutcome ListOpsTriggerWorkflows(const Model::ListOpsTriggerWorkflowsRequest &request);
+                void ListOpsTriggerWorkflowsAsync(const Model::ListOpsTriggerWorkflowsRequest& request, const ListOpsTriggerWorkflowsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListOpsTriggerWorkflowsOutcomeCallable ListOpsTriggerWorkflowsCallable(const Model::ListOpsTriggerWorkflowsRequest& request);
+
+                /**
                  *Get Workflows under a Project by Project ID.
                  * @param req ListOpsWorkflowsRequest
                  * @return ListOpsWorkflowsOutcome
@@ -838,6 +1834,60 @@ namespace TencentCloud
                 ListOpsWorkflowsOutcome ListOpsWorkflows(const Model::ListOpsWorkflowsRequest &request);
                 void ListOpsWorkflowsAsync(const Model::ListOpsWorkflowsRequest& request, const ListOpsWorkflowsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListOpsWorkflowsOutcomeCallable ListOpsWorkflowsCallable(const Model::ListOpsWorkflowsRequest& request);
+
+                /**
+                 *Retrieve authorizable permission details.
+                 * @param req ListPermissionsRequest
+                 * @return ListPermissionsOutcome
+                 */
+                ListPermissionsOutcome ListPermissions(const Model::ListPermissionsRequest &request);
+                void ListPermissionsAsync(const Model::ListPermissionsRequest& request, const ListPermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListPermissionsOutcomeCallable ListPermissionsCallable(const Model::ListPermissionsRequest& request);
+
+                /**
+                 *This API is used to obtain asset lineage information.
+                 * @param req ListProcessLineageRequest
+                 * @return ListProcessLineageOutcome
+                 */
+                ListProcessLineageOutcome ListProcessLineage(const Model::ListProcessLineageRequest &request);
+                void ListProcessLineageAsync(const Model::ListProcessLineageRequest& request, const ListProcessLineageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListProcessLineageOutcomeCallable ListProcessLineageCallable(const Model::ListProcessLineageRequest& request);
+
+                /**
+                 *This API is used to obtain the user under the project with pagination return.
+                 * @param req ListProjectMembersRequest
+                 * @return ListProjectMembersOutcome
+                 */
+                ListProjectMembersOutcome ListProjectMembers(const Model::ListProjectMembersRequest &request);
+                void ListProjectMembersAsync(const Model::ListProjectMembersRequest& request, const ListProjectMembersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListProjectMembersOutcomeCallable ListProjectMembersCallable(const Model::ListProjectMembersRequest& request);
+
+                /**
+                 *Get role list info.
+                 * @param req ListProjectRolesRequest
+                 * @return ListProjectRolesOutcome
+                 */
+                ListProjectRolesOutcome ListProjectRoles(const Model::ListProjectRolesRequest &request);
+                void ListProjectRolesAsync(const Model::ListProjectRolesRequest& request, const ListProjectRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListProjectRolesOutcomeCallable ListProjectRolesCallable(const Model::ListProjectRolesRequest& request);
+
+                /**
+                 *The project list in the tenant's global scope is irrelevant to the user's viewing range.
+                 * @param req ListProjectsRequest
+                 * @return ListProjectsOutcome
+                 */
+                ListProjectsOutcome ListProjects(const Model::ListProjectsRequest &request);
+                void ListProjectsAsync(const Model::ListProjectsRequest& request, const ListProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListProjectsOutcomeCallable ListProjectsCallable(const Model::ListProjectsRequest& request);
+
+                /**
+                 *[Filter criteria] {template Name, query usage with Keyword fuzzy matching} {template type, 1. system template 2. custom template} {quality detection dimensions (QualityDims), 1. accuracy 2. uniqueness 3. integrity 4. consistency 5. timeliness 6. validity} [Sorting field] {citation sorting type, sort ASC or DESC based on the number of references}.
+                 * @param req ListQualityRuleTemplatesRequest
+                 * @return ListQualityRuleTemplatesOutcome
+                 */
+                ListQualityRuleTemplatesOutcome ListQualityRuleTemplates(const Model::ListQualityRuleTemplatesRequest &request);
+                void ListQualityRuleTemplatesAsync(const Model::ListQualityRuleTemplatesRequest& request, const ListQualityRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListQualityRuleTemplatesOutcomeCallable ListQualityRuleTemplatesCallable(const Model::ListQualityRuleTemplatesRequest& request);
 
                 /**
                  *This API is used to view resource file list
@@ -858,6 +1908,15 @@ namespace TencentCloud
                 ListResourceFoldersOutcomeCallable ListResourceFoldersCallable(const Model::ListResourceFoldersRequest& request);
 
                 /**
+                 *This API is used to query the execution resource group list.
+                 * @param req ListResourceGroupsRequest
+                 * @return ListResourceGroupsOutcome
+                 */
+                ListResourceGroupsOutcome ListResourceGroups(const Model::ListResourceGroupsRequest &request);
+                void ListResourceGroupsAsync(const Model::ListResourceGroupsRequest& request, const ListResourceGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListResourceGroupsOutcomeCallable ListResourceGroupsCallable(const Model::ListResourceGroupsRequest& request);
+
+                /**
                  *This API is used to retrieve the content list of an sql folder
                  * @param req ListSQLFolderContentsRequest
                  * @return ListSQLFolderContentsOutcome
@@ -874,6 +1933,33 @@ namespace TencentCloud
                 ListSQLScriptRunsOutcome ListSQLScriptRuns(const Model::ListSQLScriptRunsRequest &request);
                 void ListSQLScriptRunsAsync(const Model::ListSQLScriptRunsRequest& request, const ListSQLScriptRunsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListSQLScriptRunsOutcomeCallable ListSQLScriptRunsCallable(const Model::ListSQLScriptRunsRequest& request);
+
+                /**
+                 *This API is used to obtain the asset database Schema information.
+                 * @param req ListSchemaRequest
+                 * @return ListSchemaOutcome
+                 */
+                ListSchemaOutcome ListSchema(const Model::ListSchemaRequest &request);
+                void ListSchemaAsync(const Model::ListSchemaRequest& request, const ListSchemaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListSchemaOutcomeCallable ListSchemaCallable(const Model::ListSchemaRequest& request);
+
+                /**
+                 *This API is used to obtain table information of assets.
+                 * @param req ListTableRequest
+                 * @return ListTableOutcome
+                 */
+                ListTableOutcome ListTable(const Model::ListTableRequest &request);
+                void ListTableAsync(const Model::ListTableRequest& request, const ListTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTableOutcomeCallable ListTableCallable(const Model::ListTableRequest& request);
+
+                /**
+                 *Query Task Folder List.
+                 * @param req ListTaskFoldersRequest
+                 * @return ListTaskFoldersOutcome
+                 */
+                ListTaskFoldersOutcome ListTaskFolders(const Model::ListTaskFoldersRequest &request);
+                void ListTaskFoldersAsync(const Model::ListTaskFoldersRequest& request, const ListTaskFoldersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTaskFoldersOutcomeCallable ListTaskFoldersCallable(const Model::ListTaskFoldersRequest& request);
 
                 /**
                  *This API is used to query the details of a scheduling instance.
@@ -912,6 +1998,51 @@ namespace TencentCloud
                 ListTasksOutcomeCallable ListTasksCallable(const Model::ListTasksRequest& request);
 
                 /**
+                 *Get the role list of all root accounts.
+                 * @param req ListTenantRolesRequest
+                 * @return ListTenantRolesOutcome
+                 */
+                ListTenantRolesOutcome ListTenantRoles(const Model::ListTenantRolesRequest &request);
+                void ListTenantRolesAsync(const Model::ListTenantRolesRequest& request, const ListTenantRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTenantRolesOutcomeCallable ListTenantRolesCallable(const Model::ListTenantRolesRequest& request);
+
+                /**
+                 *Task save version list.
+                 * @param req ListTriggerTaskVersionsRequest
+                 * @return ListTriggerTaskVersionsOutcome
+                 */
+                ListTriggerTaskVersionsOutcome ListTriggerTaskVersions(const Model::ListTriggerTaskVersionsRequest &request);
+                void ListTriggerTaskVersionsAsync(const Model::ListTriggerTaskVersionsRequest& request, const ListTriggerTaskVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTriggerTaskVersionsOutcomeCallable ListTriggerTaskVersionsCallable(const Model::ListTriggerTaskVersionsRequest& request);
+
+                /**
+                 *Query job pagination information.
+                 * @param req ListTriggerTasksRequest
+                 * @return ListTriggerTasksOutcome
+                 */
+                ListTriggerTasksOutcome ListTriggerTasks(const Model::ListTriggerTasksRequest &request);
+                void ListTriggerTasksAsync(const Model::ListTriggerTasksRequest& request, const ListTriggerTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTriggerTasksOutcomeCallable ListTriggerTasksCallable(const Model::ListTriggerTasksRequest& request);
+
+                /**
+                 *Query workflow operation.
+                 * @param req ListTriggerWorkflowRunsRequest
+                 * @return ListTriggerWorkflowRunsOutcome
+                 */
+                ListTriggerWorkflowRunsOutcome ListTriggerWorkflowRuns(const Model::ListTriggerWorkflowRunsRequest &request);
+                void ListTriggerWorkflowRunsAsync(const Model::ListTriggerWorkflowRunsRequest& request, const ListTriggerWorkflowRunsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTriggerWorkflowRunsOutcomeCallable ListTriggerWorkflowRunsCallable(const Model::ListTriggerWorkflowRunsRequest& request);
+
+                /**
+                 *This API is used to query the list of workflows.
+                 * @param req ListTriggerWorkflowsRequest
+                 * @return ListTriggerWorkflowsOutcome
+                 */
+                ListTriggerWorkflowsOutcome ListTriggerWorkflows(const Model::ListTriggerWorkflowsRequest &request);
+                void ListTriggerWorkflowsAsync(const Model::ListTriggerWorkflowsRequest& request, const ListTriggerWorkflowsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTriggerWorkflowsOutcomeCallable ListTriggerWorkflowsCallable(const Model::ListTriggerWorkflowsRequest& request);
+
+                /**
                  *This API is used to retrieve task direct upstream.
                  * @param req ListUpstreamOpsTasksRequest
                  * @return ListUpstreamOpsTasksOutcome
@@ -939,6 +2070,15 @@ namespace TencentCloud
                 ListUpstreamTasksOutcomeCallable ListUpstreamTasksCallable(const Model::ListUpstreamTasksRequest& request);
 
                 /**
+                 *This API is used to retrieve direct upstream tasks.
+                 * @param req ListUpstreamTriggerTasksRequest
+                 * @return ListUpstreamTriggerTasksOutcome
+                 */
+                ListUpstreamTriggerTasksOutcome ListUpstreamTriggerTasks(const Model::ListUpstreamTriggerTasksRequest &request);
+                void ListUpstreamTriggerTasksAsync(const Model::ListUpstreamTriggerTasksRequest& request, const ListUpstreamTriggerTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListUpstreamTriggerTasksOutcomeCallable ListUpstreamTriggerTasksCallable(const Model::ListUpstreamTriggerTasksRequest& request);
+
+                /**
                  *This API is used to query the folder list.
                  * @param req ListWorkflowFoldersRequest
                  * @return ListWorkflowFoldersOutcome
@@ -946,6 +2086,15 @@ namespace TencentCloud
                 ListWorkflowFoldersOutcome ListWorkflowFolders(const Model::ListWorkflowFoldersRequest &request);
                 void ListWorkflowFoldersAsync(const Model::ListWorkflowFoldersRequest& request, const ListWorkflowFoldersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListWorkflowFoldersOutcomeCallable ListWorkflowFoldersCallable(const Model::ListWorkflowFoldersRequest& request);
+
+                /**
+                 *Query workflow authorization permissions.
+                 * @param req ListWorkflowPermissionsRequest
+                 * @return ListWorkflowPermissionsOutcome
+                 */
+                ListWorkflowPermissionsOutcome ListWorkflowPermissions(const Model::ListWorkflowPermissionsRequest &request);
+                void ListWorkflowPermissionsAsync(const Model::ListWorkflowPermissionsRequest& request, const ListWorkflowPermissionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListWorkflowPermissionsOutcomeCallable ListWorkflowPermissionsCallable(const Model::ListWorkflowPermissionsRequest& request);
 
                 /**
                  *This API is used to query the list of workflows.
@@ -966,6 +2115,24 @@ namespace TencentCloud
                 PauseOpsTasksAsyncOutcomeCallable PauseOpsTasksAsyncCallable(const Model::PauseOpsTasksAsyncRequest& request);
 
                 /**
+                 *RegisterLineage
+                 * @param req RegisterLineageRequest
+                 * @return RegisterLineageOutcome
+                 */
+                RegisterLineageOutcome RegisterLineage(const Model::RegisterLineageRequest &request);
+                void RegisterLineageAsync(const Model::RegisterLineageRequest& request, const RegisterLineageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RegisterLineageOutcomeCallable RegisterLineageCallable(const Model::RegisterLineageRequest& request);
+
+                /**
+                 *Delete project user roles.
+                 * @param req RemoveMemberProjectRoleRequest
+                 * @return RemoveMemberProjectRoleOutcome
+                 */
+                RemoveMemberProjectRoleOutcome RemoveMemberProjectRole(const Model::RemoveMemberProjectRoleRequest &request);
+                void RemoveMemberProjectRoleAsync(const Model::RemoveMemberProjectRoleRequest& request, const RemoveMemberProjectRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RemoveMemberProjectRoleOutcomeCallable RemoveMemberProjectRoleCallable(const Model::RemoveMemberProjectRoleRequest& request);
+
+                /**
                  *This API is used to batch rerun instances asynchronously.
                  * @param req RerunTaskInstancesAsyncRequest
                  * @return RerunTaskInstancesAsyncOutcome
@@ -973,6 +2140,33 @@ namespace TencentCloud
                 RerunTaskInstancesAsyncOutcome RerunTaskInstancesAsync(const Model::RerunTaskInstancesAsyncRequest &request);
                 void RerunTaskInstancesAsyncAsync(const Model::RerunTaskInstancesAsyncRequest& request, const RerunTaskInstancesAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RerunTaskInstancesAsyncOutcomeCallable RerunTaskInstancesAsyncCallable(const Model::RerunTaskInstancesAsyncRequest& request);
+
+                /**
+                 *Rerun an operation.
+                 * @param req RerunTriggerWorkflowRunAsyncRequest
+                 * @return RerunTriggerWorkflowRunAsyncOutcome
+                 */
+                RerunTriggerWorkflowRunAsyncOutcome RerunTriggerWorkflowRunAsync(const Model::RerunTriggerWorkflowRunAsyncRequest &request);
+                void RerunTriggerWorkflowRunAsyncAsync(const Model::RerunTriggerWorkflowRunAsyncRequest& request, const RerunTriggerWorkflowRunAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RerunTriggerWorkflowRunAsyncOutcomeCallable RerunTriggerWorkflowRunAsyncCallable(const Model::RerunTriggerWorkflowRunAsyncRequest& request);
+
+                /**
+                 *Revoke data source permission.
+                 * @param req RevokeDataSourceAuthorizationRequest
+                 * @return RevokeDataSourceAuthorizationOutcome
+                 */
+                RevokeDataSourceAuthorizationOutcome RevokeDataSourceAuthorization(const Model::RevokeDataSourceAuthorizationRequest &request);
+                void RevokeDataSourceAuthorizationAsync(const Model::RevokeDataSourceAuthorizationRequest& request, const RevokeDataSourceAuthorizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RevokeDataSourceAuthorizationOutcomeCallable RevokeDataSourceAuthorizationCallable(const Model::RevokeDataSourceAuthorizationRequest& request);
+
+                /**
+                 *Authorization Revoked in Catalog mode.
+                 * @param req RevokePrivilegesRequest
+                 * @return RevokePrivilegesOutcome
+                 */
+                RevokePrivilegesOutcome RevokePrivileges(const Model::RevokePrivilegesRequest &request);
+                void RevokePrivilegesAsync(const Model::RevokePrivilegesRequest& request, const RevokePrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RevokePrivilegesOutcomeCallable RevokePrivilegesCallable(const Model::RevokePrivilegesRequest& request);
 
                 /**
                  *This API is used to run an SQL script.
@@ -991,6 +2185,15 @@ namespace TencentCloud
                 SetSuccessTaskInstancesAsyncOutcome SetSuccessTaskInstancesAsync(const Model::SetSuccessTaskInstancesAsyncRequest &request);
                 void SetSuccessTaskInstancesAsyncAsync(const Model::SetSuccessTaskInstancesAsyncRequest& request, const SetSuccessTaskInstancesAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SetSuccessTaskInstancesAsyncOutcomeCallable SetSuccessTaskInstancesAsyncCallable(const Model::SetSuccessTaskInstancesAsyncRequest& request);
+
+                /**
+                 *Start tasks asynchronously in batch.
+                 * @param req StartOpsTasksRequest
+                 * @return StartOpsTasksOutcome
+                 */
+                StartOpsTasksOutcome StartOpsTasks(const Model::StartOpsTasksRequest &request);
+                void StartOpsTasksAsync(const Model::StartOpsTasksRequest& request, const StartOpsTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartOpsTasksOutcomeCallable StartOpsTasksCallable(const Model::StartOpsTasksRequest& request);
 
                 /**
                  *This API is used to asynchronously deactivate tasks in batch.
@@ -1020,6 +2223,15 @@ namespace TencentCloud
                 SubmitTaskOutcomeCallable SubmitTaskCallable(const Model::SubmitTaskRequest& request);
 
                 /**
+                 *Submit a workflow scheduling task.
+                 * @param req SubmitTriggerTaskRequest
+                 * @return SubmitTriggerTaskOutcome
+                 */
+                SubmitTriggerTaskOutcome SubmitTriggerTask(const Model::SubmitTriggerTaskRequest &request);
+                void SubmitTriggerTaskAsync(const Model::SubmitTriggerTaskRequest& request, const SubmitTriggerTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitTriggerTaskOutcomeCallable SubmitTriggerTaskCallable(const Model::SubmitTriggerTaskRequest& request);
+
+                /**
                  *This API is used to update a code file.
                  * @param req UpdateCodeFileRequest
                  * @return UpdateCodeFileOutcome
@@ -1036,6 +2248,15 @@ namespace TencentCloud
                 UpdateCodeFolderOutcome UpdateCodeFolder(const Model::UpdateCodeFolderRequest &request);
                 void UpdateCodeFolderAsync(const Model::UpdateCodeFolderRequest& request, const UpdateCodeFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateCodeFolderOutcomeCallable UpdateCodeFolderCallable(const Model::UpdateCodeFolderRequest& request);
+
+                /**
+                 *This API is used to update a data source.
+                 * @param req UpdateDataSourceRequest
+                 * @return UpdateDataSourceOutcome
+                 */
+                UpdateDataSourceOutcome UpdateDataSource(const Model::UpdateDataSourceRequest &request);
+                void UpdateDataSourceAsync(const Model::UpdateDataSourceRequest& request, const UpdateDataSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateDataSourceOutcomeCallable UpdateDataSourceCallable(const Model::UpdateDataSourceRequest& request);
 
                 /**
                  *Modifies alarm rules
@@ -1056,6 +2277,24 @@ namespace TencentCloud
                 UpdateOpsTasksOwnerOutcomeCallable UpdateOpsTasksOwnerCallable(const Model::UpdateOpsTasksOwnerRequest& request);
 
                 /**
+                 *Query task execution details.
+                 * @param req UpdateOpsTriggerTasksOwnerRequest
+                 * @return UpdateOpsTriggerTasksOwnerOutcome
+                 */
+                UpdateOpsTriggerTasksOwnerOutcome UpdateOpsTriggerTasksOwner(const Model::UpdateOpsTriggerTasksOwnerRequest &request);
+                void UpdateOpsTriggerTasksOwnerAsync(const Model::UpdateOpsTriggerTasksOwnerRequest& request, const UpdateOpsTriggerTasksOwnerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateOpsTriggerTasksOwnerOutcomeCallable UpdateOpsTriggerTasksOwnerCallable(const Model::UpdateOpsTriggerTasksOwnerRequest& request);
+
+                /**
+                 *This API is used to modify project basic information.
+                 * @param req UpdateProjectRequest
+                 * @return UpdateProjectOutcome
+                 */
+                UpdateProjectOutcome UpdateProject(const Model::UpdateProjectRequest &request);
+                void UpdateProjectAsync(const Model::UpdateProjectRequest& request, const UpdateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateProjectOutcomeCallable UpdateProjectCallable(const Model::UpdateProjectRequest& request);
+
+                /**
                  *This API is used to update a resource file.
                  * @param req UpdateResourceFileRequest
                  * @return UpdateResourceFileOutcome
@@ -1065,13 +2304,22 @@ namespace TencentCloud
                 UpdateResourceFileOutcomeCallable UpdateResourceFileCallable(const Model::UpdateResourceFileRequest& request);
 
                 /**
-                 *This API is used to update a resource folder.
+                 *Update resource folder.
                  * @param req UpdateResourceFolderRequest
                  * @return UpdateResourceFolderOutcome
                  */
                 UpdateResourceFolderOutcome UpdateResourceFolder(const Model::UpdateResourceFolderRequest &request);
                 void UpdateResourceFolderAsync(const Model::UpdateResourceFolderRequest& request, const UpdateResourceFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateResourceFolderOutcomeCallable UpdateResourceFolderCallable(const Model::UpdateResourceFolderRequest& request);
+
+                /**
+                 *This API is used to modify configurations or renew resources.
+                 * @param req UpdateResourceGroupRequest
+                 * @return UpdateResourceGroupOutcome
+                 */
+                UpdateResourceGroupOutcome UpdateResourceGroup(const Model::UpdateResourceGroupRequest &request);
+                void UpdateResourceGroupAsync(const Model::UpdateResourceGroupRequest& request, const UpdateResourceGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateResourceGroupOutcomeCallable UpdateResourceGroupCallable(const Model::UpdateResourceGroupRequest& request);
 
                 /**
                  *This API is used to rename an SQL folder.
@@ -1101,6 +2349,60 @@ namespace TencentCloud
                 UpdateTaskOutcomeCallable UpdateTaskCallable(const Model::UpdateTaskRequest& request);
 
                 /**
+                 *Update a task folder.
+                 * @param req UpdateTaskFolderRequest
+                 * @return UpdateTaskFolderOutcome
+                 */
+                UpdateTaskFolderOutcome UpdateTaskFolder(const Model::UpdateTaskFolderRequest &request);
+                void UpdateTaskFolderAsync(const Model::UpdateTaskFolderRequest& request, const UpdateTaskFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTaskFolderOutcomeCallable UpdateTaskFolderCallable(const Model::UpdateTaskFolderRequest& request);
+
+                /**
+                 *This API is used to update a task.
+                 * @param req UpdateTaskPartiallyRequest
+                 * @return UpdateTaskPartiallyOutcome
+                 */
+                UpdateTaskPartiallyOutcome UpdateTaskPartially(const Model::UpdateTaskPartiallyRequest &request);
+                void UpdateTaskPartiallyAsync(const Model::UpdateTaskPartiallyRequest& request, const UpdateTaskPartiallyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTaskPartiallyOutcomeCallable UpdateTaskPartiallyCallable(const Model::UpdateTaskPartiallyRequest& request);
+
+                /**
+                 *This API is used to update a task.
+                 * @param req UpdateTriggerTaskRequest
+                 * @return UpdateTriggerTaskOutcome
+                 */
+                UpdateTriggerTaskOutcome UpdateTriggerTask(const Model::UpdateTriggerTaskRequest &request);
+                void UpdateTriggerTaskAsync(const Model::UpdateTriggerTaskRequest& request, const UpdateTriggerTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTriggerTaskOutcomeCallable UpdateTriggerTaskCallable(const Model::UpdateTriggerTaskRequest& request);
+
+                /**
+                 *This API is used to update a task.
+                 * @param req UpdateTriggerTaskPartiallyRequest
+                 * @return UpdateTriggerTaskPartiallyOutcome
+                 */
+                UpdateTriggerTaskPartiallyOutcome UpdateTriggerTaskPartially(const Model::UpdateTriggerTaskPartiallyRequest &request);
+                void UpdateTriggerTaskPartiallyAsync(const Model::UpdateTriggerTaskPartiallyRequest& request, const UpdateTriggerTaskPartiallyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTriggerTaskPartiallyOutcomeCallable UpdateTriggerTaskPartiallyCallable(const Model::UpdateTriggerTaskPartiallyRequest& request);
+
+                /**
+                 *This API is used to update workflow, including basic information and workflow parameters.
+                 * @param req UpdateTriggerWorkflowRequest
+                 * @return UpdateTriggerWorkflowOutcome
+                 */
+                UpdateTriggerWorkflowOutcome UpdateTriggerWorkflow(const Model::UpdateTriggerWorkflowRequest &request);
+                void UpdateTriggerWorkflowAsync(const Model::UpdateTriggerWorkflowRequest& request, const UpdateTriggerWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTriggerWorkflowOutcomeCallable UpdateTriggerWorkflowCallable(const Model::UpdateTriggerWorkflowRequest& request);
+
+                /**
+                 *Update workflow (including basic info and workflow parameters).
+                 * @param req UpdateTriggerWorkflowPartiallyRequest
+                 * @return UpdateTriggerWorkflowPartiallyOutcome
+                 */
+                UpdateTriggerWorkflowPartiallyOutcome UpdateTriggerWorkflowPartially(const Model::UpdateTriggerWorkflowPartiallyRequest &request);
+                void UpdateTriggerWorkflowPartiallyAsync(const Model::UpdateTriggerWorkflowPartiallyRequest& request, const UpdateTriggerWorkflowPartiallyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateTriggerWorkflowPartiallyOutcomeCallable UpdateTriggerWorkflowPartiallyCallable(const Model::UpdateTriggerWorkflowPartiallyRequest& request);
+
+                /**
                  *This API is used to update a workflow including basic information and workflow parameters.
                  * @param req UpdateWorkflowRequest
                  * @return UpdateWorkflowOutcome
@@ -1110,7 +2412,7 @@ namespace TencentCloud
                 UpdateWorkflowOutcomeCallable UpdateWorkflowCallable(const Model::UpdateWorkflowRequest& request);
 
                 /**
-                 *This API is used to update a workflow folder
+                 *Refresh workflow folder.
                  * @param req UpdateWorkflowFolderRequest
                  * @return UpdateWorkflowFolderOutcome
                  */

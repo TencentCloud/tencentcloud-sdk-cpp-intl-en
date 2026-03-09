@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tat/v20201028/model/DefaultParameterConf.h>
 #include <tencentcloud/tat/v20201028/model/Tag.h>
 
 
@@ -65,23 +66,35 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
-                     * @return InstanceIds IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * 获取Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+                     * @return InstanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
-                     * @param _instanceIds IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * 设置Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+                     * @param _instanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -136,15 +149,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-                     * @return CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 获取Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+                     * @return CommandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      * 
                      */
                     std::string GetCommandType() const;
 
                     /**
-                     * 设置Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-                     * @param _commandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 设置Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+                     * @param _commandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      * 
                      */
                     void SetCommandType(const std::string& _commandType);
@@ -199,27 +212,27 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Whether to save the command. Valid values:
-<li> `True`: Save
-<li> `False`: Do not save
-The default value is `False`.
-                     * @return SaveCommand Whether to save the command. Valid values:
-<li> `True`: Save
-<li> `False`: Do not save
-The default value is `False`.
+                     * 获取Whether to save the command. value range:.
+<li>true: save</li>.
+<li>false: not saved.</li>.
+The default value is false.
+                     * @return SaveCommand Whether to save the command. value range:.
+<li>true: save</li>.
+<li>false: not saved.</li>.
+The default value is false.
                      * 
                      */
                     bool GetSaveCommand() const;
 
                     /**
-                     * 设置Whether to save the command. Valid values:
-<li> `True`: Save
-<li> `False`: Do not save
-The default value is `False`.
-                     * @param _saveCommand Whether to save the command. Valid values:
-<li> `True`: Save
-<li> `False`: Do not save
-The default value is `False`.
+                     * 设置Whether to save the command. value range:.
+<li>true: save</li>.
+<li>false: not saved.</li>.
+The default value is false.
+                     * @param _saveCommand Whether to save the command. value range:.
+<li>true: save</li>.
+<li>false: not saved.</li>.
+The default value is false.
                      * 
                      */
                     void SetSaveCommand(const bool& _saveCommand);
@@ -233,22 +246,34 @@ The default value is `False`.
 
                     /**
                      * 获取Whether to enable the custom parameter feature.
-This cannot be modified once created.
-Default value: `false`.
+Once created, this value does not offer modification.
+Valid values:.
+<li>true: enable</li>.
+<li>false: disabled.</li>.
+The default value is false.
                      * @return EnableParameter Whether to enable the custom parameter feature.
-This cannot be modified once created.
-Default value: `false`.
+Once created, this value does not offer modification.
+Valid values:.
+<li>true: enable</li>.
+<li>false: disabled.</li>.
+The default value is false.
                      * 
                      */
                     bool GetEnableParameter() const;
 
                     /**
                      * 设置Whether to enable the custom parameter feature.
-This cannot be modified once created.
-Default value: `false`.
+Once created, this value does not offer modification.
+Valid values:.
+<li>true: enable</li>.
+<li>false: disabled.</li>.
+The default value is false.
                      * @param _enableParameter Whether to enable the custom parameter feature.
-This cannot be modified once created.
-Default value: `false`.
+Once created, this value does not offer modification.
+Valid values:.
+<li>true: enable</li>.
+<li>false: disabled.</li>.
+The default value is false.
                      * 
                      */
                     void SetEnableParameter(const bool& _enableParameter);
@@ -261,31 +286,39 @@ Default value: `false`.
                     bool EnableParameterHasBeenSet() const;
 
                     /**
-                     * 获取The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If Parameters is not provided, the default values specified here are used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @return DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If Parameters is not provided, the default values specified here are used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 获取Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+If Parameters is not provided, the default value here will be used to replace.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @return DefaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+If Parameters is not provided, the default value here will be used to replace.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     std::string GetDefaultParameters() const;
 
                     /**
-                     * 设置The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If Parameters is not provided, the default values specified here are used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param _defaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If Parameters is not provided, the default values specified here are used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 设置Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+If Parameters is not provided, the default value here will be used to replace.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @param _defaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+If Parameters is not provided, the default value here will be used to replace.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     void SetDefaultParameters(const std::string& _defaultParameters);
@@ -298,31 +331,68 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
                     bool DefaultParametersHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the `DefaultParameters` is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @return Parameters Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the `DefaultParameters` is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 获取Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+If Parameters is not provided, the default value here will be used to replace.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+                     * @return DefaultParameterConfs Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+If Parameters is not provided, the default value here will be used to replace.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+                     * 
+                     */
+                    std::vector<DefaultParameterConf> GetDefaultParameterConfs() const;
+
+                    /**
+                     * 设置Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+If Parameters is not provided, the default value here will be used to replace.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+                     * @param _defaultParameterConfs Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+If Parameters is not provided, the default value here will be used to replace.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+                     * 
+                     */
+                    void SetDefaultParameterConfs(const std::vector<DefaultParameterConf>& _defaultParameterConfs);
+
+                    /**
+                     * 判断参数 DefaultParameterConfs 是否已赋值
+                     * @return DefaultParameterConfs 是否已赋值
+                     * 
+                     */
+                    bool DefaultParameterConfsHasBeenSet() const;
+
+                    /**
+                     * 获取Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @return Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     std::string GetParameters() const;
 
                     /**
-                     * 设置Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the `DefaultParameters` is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param _parameters Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the `DefaultParameters` is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 设置Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+                     * @param _parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * 
                      */
                     void SetParameters(const std::string& _parameters);
@@ -443,9 +513,12 @@ The principle of least privilege is the best practice for permission management.
                     bool m_contentHasBeenSet;
 
                     /**
-                     * IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+                     * Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -463,7 +536,7 @@ The principle of least privilege is the best practice for permission management.
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
                      */
                     std::string m_commandType;
                     bool m_commandTypeHasBeenSet;
@@ -481,38 +554,53 @@ The principle of least privilege is the best practice for permission management.
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * Whether to save the command. Valid values:
-<li> `True`: Save
-<li> `False`: Do not save
-The default value is `False`.
+                     * Whether to save the command. value range:.
+<li>true: save</li>.
+<li>false: not saved.</li>.
+The default value is false.
                      */
                     bool m_saveCommand;
                     bool m_saveCommandHasBeenSet;
 
                     /**
                      * Whether to enable the custom parameter feature.
-This cannot be modified once created.
-Default value: `false`.
+Once created, this value does not offer modification.
+Valid values:.
+<li>true: enable</li>.
+<li>false: disabled.</li>.
+The default value is false.
                      */
                     bool m_enableParameter;
                     bool m_enableParameterHasBeenSet;
 
                     /**
-                     * The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If Parameters is not provided, the default values specified here are used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+If Parameters is not provided, the default value here will be used to replace.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      */
                     std::string m_defaultParameters;
                     bool m_defaultParametersHasBeenSet;
 
                     /**
-                     * Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the `DefaultParameters` is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+If Parameters is not provided, the default value here will be used to replace.
+This parameter can be set only when the EnableParameter of the command is true.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+                     */
+                    std::vector<DefaultParameterConf> m_defaultParameterConfs;
+                    bool m_defaultParameterConfsHasBeenSet;
+
+                    /**
+                     * Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true.
+If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      */
                     std::string m_parameters;
                     bool m_parametersHasBeenSet;

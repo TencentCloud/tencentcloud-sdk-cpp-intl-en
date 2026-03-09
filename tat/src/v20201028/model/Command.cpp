@@ -32,6 +32,8 @@ Command::Command() :
     m_updatedTimeHasBeenSet(false),
     m_enableParameterHasBeenSet(false),
     m_defaultParametersHasBeenSet(false),
+    m_defaultParameterConfsHasBeenSet(false),
+    m_scenesHasBeenSet(false),
     m_formattedDescriptionHasBeenSet(false),
     m_createdByHasBeenSet(false),
     m_tagsHasBeenSet(false),
@@ -154,6 +156,39 @@ CoreInternalOutcome Command::Deserialize(const rapidjson::Value &value)
         }
         m_defaultParameters = string(value["DefaultParameters"].GetString());
         m_defaultParametersHasBeenSet = true;
+    }
+
+    if (value.HasMember("DefaultParameterConfs") && !value["DefaultParameterConfs"].IsNull())
+    {
+        if (!value["DefaultParameterConfs"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Command.DefaultParameterConfs` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DefaultParameterConfs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DefaultParameterConf item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_defaultParameterConfs.push_back(item);
+        }
+        m_defaultParameterConfsHasBeenSet = true;
+    }
+
+    if (value.HasMember("Scenes") && !value["Scenes"].IsNull())
+    {
+        if (!value["Scenes"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Command.Scenes` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Scenes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_scenes.push_back((*itr).GetString());
+        }
+        m_scenesHasBeenSet = true;
     }
 
     if (value.HasMember("FormattedDescription") && !value["FormattedDescription"].IsNull())
@@ -319,6 +354,34 @@ void Command::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocat
         string key = "DefaultParameters";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_defaultParameters.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defaultParameterConfsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultParameterConfs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_defaultParameterConfs.begin(); itr != m_defaultParameterConfs.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_scenesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scenes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_scenes.begin(); itr != m_scenes.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     if (m_formattedDescriptionHasBeenSet)
@@ -553,6 +616,38 @@ void Command::SetDefaultParameters(const string& _defaultParameters)
 bool Command::DefaultParametersHasBeenSet() const
 {
     return m_defaultParametersHasBeenSet;
+}
+
+vector<DefaultParameterConf> Command::GetDefaultParameterConfs() const
+{
+    return m_defaultParameterConfs;
+}
+
+void Command::SetDefaultParameterConfs(const vector<DefaultParameterConf>& _defaultParameterConfs)
+{
+    m_defaultParameterConfs = _defaultParameterConfs;
+    m_defaultParameterConfsHasBeenSet = true;
+}
+
+bool Command::DefaultParameterConfsHasBeenSet() const
+{
+    return m_defaultParameterConfsHasBeenSet;
+}
+
+vector<string> Command::GetScenes() const
+{
+    return m_scenes;
+}
+
+void Command::SetScenes(const vector<string>& _scenes)
+{
+    m_scenes = _scenes;
+    m_scenesHasBeenSet = true;
+}
+
+bool Command::ScenesHasBeenSet() const
+{
+    return m_scenesHasBeenSet;
 }
 
 string Command::GetFormattedDescription() const

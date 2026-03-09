@@ -50,18 +50,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
                      * @param _instanceId Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -74,19 +70,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InstancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Price inquiry information.
+                     * @return InstancePrice Price inquiry information.
                      * 
                      */
                     InstancePrice GetInstancePrice() const;
 
                     /**
-                     * 设置Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _instancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Price inquiry information.
+                     * @param _instancePrice Price inquiry information.
                      * 
                      */
                     void SetInstancePrice(const InstancePrice& _instancePrice);
@@ -99,19 +91,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool InstancePriceHasBeenSet() const;
 
                     /**
-                     * 获取Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
+                     * @return DiscountDetail Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
                      * 
                      */
                     std::vector<DiscountDetail> GetDiscountDetail() const;
 
                     /**
-                     * 设置Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _discountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
+                     * @param _discountDetail Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
                      * 
                      */
                     void SetDiscountDetail(const std::vector<DiscountDetail>& _discountDetail);
@@ -127,21 +115,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Price inquiry information.
                      */
                     InstancePrice m_instancePrice;
                     bool m_instancePriceHasBeenSet;
 
                     /**
-                     * Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
                      */
                     std::vector<DiscountDetail> m_discountDetail;
                     bool m_discountDetailHasBeenSet;

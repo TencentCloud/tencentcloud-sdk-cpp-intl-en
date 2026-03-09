@@ -44,15 +44,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of invoker IDs.
-                     * @return InvokerIds List of invoker IDs.
+                     * 获取Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
+                     * @return InvokerIds Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
                      * 
                      */
                     std::vector<std::string> GetInvokerIds() const;
 
                     /**
-                     * 设置List of invoker IDs.
-                     * @param _invokerIds List of invoker IDs.
+                     * 设置Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
+                     * @param _invokerIds Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
                      * 
                      */
                     void SetInvokerIds(const std::vector<std::string>& _invokerIds);
@@ -65,31 +85,39 @@ namespace TencentCloud
                     bool InvokerIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions:
+                     * 获取Filter criteria:.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
-                     * @return Filters Filter conditions:
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
+                     * @return Filters Filter criteria:.
+
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions:
+                     * 设置Filter criteria:.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
-                     * @param _filters Filter conditions:
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
+                     * @param _filters Filter criteria:.
+
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -146,17 +174,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of invoker IDs.
+                     * Executor ID list.
+
+The maximum per request is 100.
+
+Parameters must not be specified simultaneously `InvokerIds` and `Filters`.
+
                      */
                     std::vector<std::string> m_invokerIds;
                     bool m_invokerIdsHasBeenSet;
 
                     /**
-                     * Filter conditions:
+                     * Filter criteria:.
 
-<li> `invoker-id` - String - Required: No - (Filter condition) Filter by the invoker ID.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `type` - String - Required: No - (Filter condition) Filter by the invoker type.
+- invoker-id - String - required: no - (filter condition) filter by executor id.
+-command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+- invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

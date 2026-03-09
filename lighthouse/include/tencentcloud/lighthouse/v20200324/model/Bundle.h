@@ -308,51 +308,51 @@ Values:
                     bool BundleSalesStateHasBeenSet() const;
 
                     /**
-                     * 获取Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
-                     * @return BundleType Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+                     * 获取Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+                     * @return BundleType Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
                      * 
                      */
                     std::string GetBundleType() const;
 
                     /**
-                     * 设置Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
-                     * @param _bundleType Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+                     * 设置Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+                     * @param _bundleType Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
                      * 
                      */
                     void SetBundleType(const std::string& _bundleType);
@@ -365,19 +365,15 @@ Valid values:
                     bool BundleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @return BundleTypeDescription Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 获取Package type description.
+                     * @return BundleTypeDescription Package type description.
                      * 
                      */
                     std::string GetBundleTypeDescription() const;
 
                     /**
-                     * 设置Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param _bundleTypeDescription Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 设置Package type description.
+                     * @param _bundleTypeDescription Package type description.
                      * 
                      */
                     void SetBundleTypeDescription(const std::string& _bundleTypeDescription);
@@ -425,6 +421,27 @@ Valid values:
                      * 
                      */
                     bool BundleDisplayLabelHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the traffic volume is unlimited.
+                     * @return TrafficUnlimited Whether the traffic volume is unlimited.
+                     * 
+                     */
+                    bool GetTrafficUnlimited() const;
+
+                    /**
+                     * 设置Whether the traffic volume is unlimited.
+                     * @param _trafficUnlimited Whether the traffic volume is unlimited.
+                     * 
+                     */
+                    void SetTrafficUnlimited(const bool& _trafficUnlimited);
+
+                    /**
+                     * 判断参数 TrafficUnlimited 是否已赋值
+                     * @return TrafficUnlimited 是否已赋值
+                     * 
+                     */
+                    bool TrafficUnlimitedHasBeenSet() const;
 
                 private:
 
@@ -503,23 +520,22 @@ Values:
                     bool m_bundleSalesStateHasBeenSet;
 
                     /**
-                     * Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+                     * Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
                      */
                     std::string m_bundleType;
                     bool m_bundleTypeHasBeenSet;
 
                     /**
-                     * Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * Package type description.
                      */
                     std::string m_bundleTypeDescription;
                     bool m_bundleTypeDescriptionHasBeenSet;
@@ -533,6 +549,12 @@ Valid values:
                      */
                     std::string m_bundleDisplayLabel;
                     bool m_bundleDisplayLabelHasBeenSet;
+
+                    /**
+                     * Whether the traffic volume is unlimited.
+                     */
+                    bool m_trafficUnlimited;
+                    bool m_trafficUnlimitedHasBeenSet;
 
                 };
             }

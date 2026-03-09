@@ -109,6 +109,35 @@ namespace TencentCloud
                      */
                     bool TaskDescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+                     * @return TaskFolderPath Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+                     * 
+                     */
+                    std::string GetTaskFolderPath() const;
+
+                    /**
+                     * 设置Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+                     * @param _taskFolderPath Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+                     * 
+                     */
+                    void SetTaskFolderPath(const std::string& _taskFolderPath);
+
+                    /**
+                     * 判断参数 TaskFolderPath 是否已赋值
+                     * @return TaskFolderPath 是否已赋值
+                     * 
+                     */
+                    bool TaskFolderPathHasBeenSet() const;
+
                 private:
 
                     /**
@@ -128,6 +157,14 @@ namespace TencentCloud
                      */
                     std::string m_taskDescription;
                     bool m_taskDescriptionHasBeenSet;
+
+                    /**
+                     * Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+                     */
+                    std::string m_taskFolderPath;
+                    bool m_taskFolderPathHasBeenSet;
 
                 };
             }

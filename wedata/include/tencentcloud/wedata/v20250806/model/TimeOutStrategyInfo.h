@@ -203,6 +203,89 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
                      */
                     bool ScheduleTimeZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Second Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetSecond() const;
+
+                    /**
+                     * 设置Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _second Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSecond(const int64_t& _second);
+
+                    /**
+                     * 判断参数 Second 是否已赋值
+                     * @return Second 是否已赋值
+                     * 
+                     */
+                    bool SecondHasBeenSet() const;
+
+                    /**
+                     * 获取Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Times Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetTimes() const;
+
+                    /**
+                     * 设置Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _times Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTimes(const int64_t& _times);
+
+                    /**
+                     * 判断参数 Times 是否已赋值
+                     * @return Times 是否已赋值
+                     * 
+                     */
+                    bool TimesHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AlarmTriggerFrequency Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetAlarmTriggerFrequency() const;
+
+                    /**
+                     * 设置Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _alarmTriggerFrequency Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAlarmTriggerFrequency(const int64_t& _alarmTriggerFrequency);
+
+                    /**
+                     * 判断参数 AlarmTriggerFrequency 是否已赋值
+                     * @return AlarmTriggerFrequency 是否已赋值
+                     * 
+                     */
+                    bool AlarmTriggerFrequencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -247,6 +330,29 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
                      */
                     std::string m_scheduleTimeZone;
                     bool m_scheduleTimeZoneHasBeenSet;
+
+                    /**
+                     * Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_second;
+                    bool m_secondHasBeenSet;
+
+                    /**
+                     * Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_times;
+                    bool m_timesHasBeenSet;
+
+                    /**
+                     * Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_alarmTriggerFrequency;
+                    bool m_alarmTriggerFrequencyHasBeenSet;
 
                 };
             }

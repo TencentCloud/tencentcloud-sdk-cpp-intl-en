@@ -255,31 +255,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
                     bool ExecutionEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-                     * @return ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-                     * 
-                     */
-                    int64_t GetScheduleRunType() const;
-
-                    /**
-                     * 设置Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-                     * @param _scheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-                     * 
-                     */
-                    void SetScheduleRunType(const int64_t& _scheduleRunType);
-
-                    /**
-                     * 判断参数 ScheduleRunType 是否已赋值
-                     * @return ScheduleRunType 是否已赋值
-                     * 
-                     */
-                    bool ScheduleRunTypeHasBeenSet() const;
-
-                    /**
                      * 获取Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
                      * @return CalendarOpen Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
                      * 
@@ -385,29 +360,29 @@ CRONTAB_CYCLE: specifies the crontab expression type
                     bool UpstreamDependencyConfigListHasBeenSet() const;
 
                     /**
-                     * 获取SpecSpecifies the downstream dependency array.
-
-                     * @return DownStreamDependencyConfigList SpecSpecifies the downstream dependency array.
-
+                     * 获取Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DownstreamDependencyConfigList Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<DependencyTaskBrief> GetDownStreamDependencyConfigList() const;
+                    std::vector<DependencyTaskBrief> GetDownstreamDependencyConfigList() const;
 
                     /**
-                     * 设置SpecSpecifies the downstream dependency array.
-
-                     * @param _downStreamDependencyConfigList SpecSpecifies the downstream dependency array.
-
+                     * 设置Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _downstreamDependencyConfigList Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetDownStreamDependencyConfigList(const std::vector<DependencyTaskBrief>& _downStreamDependencyConfigList);
+                    void SetDownstreamDependencyConfigList(const std::vector<DependencyTaskBrief>& _downstreamDependencyConfigList);
 
                     /**
-                     * 判断参数 DownStreamDependencyConfigList 是否已赋值
-                     * @return DownStreamDependencyConfigList 是否已赋值
+                     * 判断参数 DownstreamDependencyConfigList 是否已赋值
+                     * @return DownstreamDependencyConfigList 是否已赋值
                      * 
                      */
-                    bool DownStreamDependencyConfigListHasBeenSet() const;
+                    bool DownstreamDependencyConfigListHasBeenSet() const;
 
                     /**
                      * 获取Array of Events
@@ -433,127 +408,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
                      * 
                      */
                     bool EventListenerListHasBeenSet() const;
-
-                    /**
-                     * 获取Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-                     * @return RunPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-                     * 
-                     */
-                    uint64_t GetRunPriority() const;
-
-                    /**
-                     * 设置Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-                     * @param _runPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-                     * 
-                     */
-                    void SetRunPriority(const uint64_t& _runPriority);
-
-                    /**
-                     * 判断参数 RunPriority 是否已赋值
-                     * @return RunPriority 是否已赋值
-                     * 
-                     */
-                    bool RunPriorityHasBeenSet() const;
-
-                    /**
-                     * 获取Retry policy. retry wait time in minutes. default: 5.
-
-                     * @return RetryWait Retry policy. retry wait time in minutes. default: 5.
-
-                     * 
-                     */
-                    int64_t GetRetryWait() const;
-
-                    /**
-                     * 设置Retry policy. retry wait time in minutes. default: 5.
-
-                     * @param _retryWait Retry policy. retry wait time in minutes. default: 5.
-
-                     * 
-                     */
-                    void SetRetryWait(const int64_t& _retryWait);
-
-                    /**
-                     * 判断参数 RetryWait 是否已赋值
-                     * @return RetryWait 是否已赋值
-                     * 
-                     */
-                    bool RetryWaitHasBeenSet() const;
-
-                    /**
-                     * 获取Specifies the maximum attempts of the retry policy. default: 4.
-
-                     * @return MaxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
-
-                     * 
-                     */
-                    int64_t GetMaxRetryAttempts() const;
-
-                    /**
-                     * 设置Specifies the maximum attempts of the retry policy. default: 4.
-
-                     * @param _maxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
-
-                     * 
-                     */
-                    void SetMaxRetryAttempts(const int64_t& _maxRetryAttempts);
-
-                    /**
-                     * 判断参数 MaxRetryAttempts 是否已赋值
-                     * @return MaxRetryAttempts 是否已赋值
-                     * 
-                     */
-                    bool MaxRetryAttemptsHasBeenSet() const;
-
-                    /**
-                     * 获取Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-                     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-                     * 
-                     */
-                    int64_t GetExecutionTTL() const;
-
-                    /**
-                     * 设置Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-                     * @param _executionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-                     * 
-                     */
-                    void SetExecutionTTL(const int64_t& _executionTTL);
-
-                    /**
-                     * 判断参数 ExecutionTTL 是否已赋值
-                     * @return ExecutionTTL 是否已赋值
-                     * 
-                     */
-                    bool ExecutionTTLHasBeenSet() const;
-
-                    /**
-                     * 获取Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * 
-                     */
-                    std::string GetWaitExecutionTotalTTL() const;
-
-                    /**
-                     * 设置Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * @param _waitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * 
-                     */
-                    void SetWaitExecutionTotalTTL(const std::string& _waitExecutionTotalTTL);
-
-                    /**
-                     * 判断参数 WaitExecutionTotalTTL 是否已赋值
-                     * @return WaitExecutionTotalTTL 是否已赋值
-                     * 
-                     */
-                    bool WaitExecutionTotalTTLHasBeenSet() const;
 
                     /**
                      * 获取Rerun & Refill Configuration: Default: ALL;
@@ -692,6 +546,327 @@ T_PLUS_1: specifies t+1 generation.
                      */
                     bool InitStrategyHasBeenSet() const;
 
+                    /**
+                     * 获取Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ScheduleRunType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    int64_t GetScheduleRunType() const;
+
+                    /**
+                     * 设置Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _scheduleRunType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    void SetScheduleRunType(const int64_t& _scheduleRunType);
+
+                    /**
+                     * 判断参数 ScheduleRunType 是否已赋值
+                     * @return ScheduleRunType 是否已赋值
+                     * @deprecated
+                     */
+                    bool ScheduleRunTypeHasBeenSet() const;
+
+                    /**
+                     * 获取(Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DownStreamDependencyConfigList (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    std::vector<DependencyTaskBrief> GetDownStreamDependencyConfigList() const;
+
+                    /**
+                     * 设置(Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _downStreamDependencyConfigList (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    void SetDownStreamDependencyConfigList(const std::vector<DependencyTaskBrief>& _downStreamDependencyConfigList);
+
+                    /**
+                     * 判断参数 DownStreamDependencyConfigList 是否已赋值
+                     * @return DownStreamDependencyConfigList 是否已赋值
+                     * @deprecated
+                     */
+                    bool DownStreamDependencyConfigListHasBeenSet() const;
+
+                    /**
+                     * 获取Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+                     * @return RunPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+                     * @deprecated
+                     */
+                    uint64_t GetRunPriority() const;
+
+                    /**
+                     * 设置Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+                     * @param _runPriority Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+                     * @deprecated
+                     */
+                    void SetRunPriority(const uint64_t& _runPriority);
+
+                    /**
+                     * 判断参数 RunPriority 是否已赋值
+                     * @return RunPriority 是否已赋值
+                     * @deprecated
+                     */
+                    bool RunPriorityHasBeenSet() const;
+
+                    /**
+                     * 获取Retry policy. retry wait time in minutes. default: 5.
+
+                     * @return RetryWait Retry policy. retry wait time in minutes. default: 5.
+
+                     * @deprecated
+                     */
+                    int64_t GetRetryWait() const;
+
+                    /**
+                     * 设置Retry policy. retry wait time in minutes. default: 5.
+
+                     * @param _retryWait Retry policy. retry wait time in minutes. default: 5.
+
+                     * @deprecated
+                     */
+                    void SetRetryWait(const int64_t& _retryWait);
+
+                    /**
+                     * 判断参数 RetryWait 是否已赋值
+                     * @return RetryWait 是否已赋值
+                     * @deprecated
+                     */
+                    bool RetryWaitHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the maximum attempts of the retry policy. default: 4.
+
+                     * @return MaxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
+
+                     * @deprecated
+                     */
+                    int64_t GetMaxRetryAttempts() const;
+
+                    /**
+                     * 设置Specifies the maximum attempts of the retry policy. default: 4.
+
+                     * @param _maxRetryAttempts Specifies the maximum attempts of the retry policy. default: 4.
+
+                     * @deprecated
+                     */
+                    void SetMaxRetryAttempts(const int64_t& _maxRetryAttempts);
+
+                    /**
+                     * 判断参数 MaxRetryAttempts 是否已赋值
+                     * @return MaxRetryAttempts 是否已赋值
+                     * @deprecated
+                     */
+                    bool MaxRetryAttemptsHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+                     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+                     * @deprecated
+                     */
+                    int64_t GetExecutionTTL() const;
+
+                    /**
+                     * 设置Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+                     * @param _executionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+                     * @deprecated
+                     */
+                    void SetExecutionTTL(const int64_t& _executionTTL);
+
+                    /**
+                     * 判断参数 ExecutionTTL 是否已赋值
+                     * @return ExecutionTTL 是否已赋值
+                     * @deprecated
+                     */
+                    bool ExecutionTTLHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * @deprecated
+                     */
+                    std::string GetWaitExecutionTotalTTL() const;
+
+                    /**
+                     * 设置Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * @param _waitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * @deprecated
+                     */
+                    void SetWaitExecutionTotalTTL(const std::string& _waitExecutionTotalTTL);
+
+                    /**
+                     * 判断参数 WaitExecutionTotalTTL 是否已赋值
+                     * @return WaitExecutionTotalTTL 是否已赋值
+                     * @deprecated
+                     */
+                    bool WaitExecutionTotalTTLHasBeenSet() const;
+
+                    /**
+                     * 获取Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetScheduleType() const;
+
+                    /**
+                     * 设置Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _scheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetScheduleType(const int64_t& _scheduleType);
+
+                    /**
+                     * 判断参数 ScheduleType 是否已赋值
+                     * @return ScheduleType 是否已赋值
+                     * 
+                     */
+                    bool ScheduleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RunPriorityType Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRunPriorityType() const;
+
+                    /**
+                     * 设置Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _runPriorityType Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRunPriorityType(const int64_t& _runPriorityType);
+
+                    /**
+                     * 判断参数 RunPriorityType 是否已赋值
+                     * @return RunPriorityType 是否已赋值
+                     * 
+                     */
+                    bool RunPriorityTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRetryWaitMinute() const;
+
+                    /**
+                     * 设置Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _retryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRetryWaitMinute(const int64_t& _retryWaitMinute);
+
+                    /**
+                     * 判断参数 RetryWaitMinute 是否已赋值
+                     * @return RetryWaitMinute 是否已赋值
+                     * 
+                     */
+                    bool RetryWaitMinuteHasBeenSet() const;
+
+                    /**
+                     * 获取Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxRetryNumber Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaxRetryNumber() const;
+
+                    /**
+                     * 设置Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxRetryNumber Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxRetryNumber(const int64_t& _maxRetryNumber);
+
+                    /**
+                     * 判断参数 MaxRetryNumber 是否已赋值
+                     * @return MaxRetryNumber 是否已赋值
+                     * 
+                     */
+                    bool MaxRetryNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetExecutionTTLMinute() const;
+
+                    /**
+                     * 设置Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExecutionTTLMinute(const int64_t& _executionTTLMinute);
+
+                    /**
+                     * 判断参数 ExecutionTTLMinute 是否已赋值
+                     * @return ExecutionTTLMinute 是否已赋值
+                     * 
+                     */
+                    bool ExecutionTTLMinuteHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WaitExecutionTotalTTLMinute Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetWaitExecutionTotalTTLMinute() const;
+
+                    /**
+                     * 设置Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _waitExecutionTotalTTLMinute Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWaitExecutionTotalTTLMinute(const int64_t& _waitExecutionTotalTTLMinute);
+
+                    /**
+                     * 判断参数 WaitExecutionTotalTTLMinute 是否已赋值
+                     * @return WaitExecutionTotalTTLMinute 是否已赋值
+                     * 
+                     */
+                    bool WaitExecutionTotalTTLMinuteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -751,13 +926,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
                     bool m_executionEndTimeHasBeenSet;
 
                     /**
-                     * Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-
-                     */
-                    int64_t m_scheduleRunType;
-                    bool m_scheduleRunTypeHasBeenSet;
-
-                    /**
                      * Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
                      */
                     std::string m_calendarOpen;
@@ -788,11 +956,11 @@ CRONTAB_CYCLE: specifies the crontab expression type
                     bool m_upstreamDependencyConfigListHasBeenSet;
 
                     /**
-                     * SpecSpecifies the downstream dependency array.
-
+                     * Downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<DependencyTaskBrief> m_downStreamDependencyConfigList;
-                    bool m_downStreamDependencyConfigListHasBeenSet;
+                    std::vector<DependencyTaskBrief> m_downstreamDependencyConfigList;
+                    bool m_downstreamDependencyConfigListHasBeenSet;
 
                     /**
                      * Array of Events
@@ -800,40 +968,6 @@ CRONTAB_CYCLE: specifies the crontab expression type
                      */
                     std::vector<EventListener> m_eventListenerList;
                     bool m_eventListenerListHasBeenSet;
-
-                    /**
-                     * Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-
-                     */
-                    uint64_t m_runPriority;
-                    bool m_runPriorityHasBeenSet;
-
-                    /**
-                     * Retry policy. retry wait time in minutes. default: 5.
-
-                     */
-                    int64_t m_retryWait;
-                    bool m_retryWaitHasBeenSet;
-
-                    /**
-                     * Specifies the maximum attempts of the retry policy. default: 4.
-
-                     */
-                    int64_t m_maxRetryAttempts;
-                    bool m_maxRetryAttemptsHasBeenSet;
-
-                    /**
-                     * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-
-                     */
-                    int64_t m_executionTTL;
-                    bool m_executionTTLHasBeenSet;
-
-                    /**
-                     * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     */
-                    std::string m_waitExecutionTotalTTL;
-                    bool m_waitExecutionTotalTTLHasBeenSet;
 
                     /**
                      * Rerun & Refill Configuration: Default: ALL;
@@ -872,6 +1006,96 @@ T_PLUS_1: specifies t+1 generation.
                      */
                     std::string m_initStrategy;
                     bool m_initStrategyHasBeenSet;
+
+                    /**
+                     * Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_scheduleRunType;
+                    bool m_scheduleRunTypeHasBeenSet;
+
+                    /**
+                     * (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<DependencyTaskBrief> m_downStreamDependencyConfigList;
+                    bool m_downStreamDependencyConfigListHasBeenSet;
+
+                    /**
+                     * Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+
+                     */
+                    uint64_t m_runPriority;
+                    bool m_runPriorityHasBeenSet;
+
+                    /**
+                     * Retry policy. retry wait time in minutes. default: 5.
+
+                     */
+                    int64_t m_retryWait;
+                    bool m_retryWaitHasBeenSet;
+
+                    /**
+                     * Specifies the maximum attempts of the retry policy. default: 4.
+
+                     */
+                    int64_t m_maxRetryAttempts;
+                    bool m_maxRetryAttemptsHasBeenSet;
+
+                    /**
+                     * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+
+                     */
+                    int64_t m_executionTTL;
+                    bool m_executionTTLHasBeenSet;
+
+                    /**
+                     * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     */
+                    std::string m_waitExecutionTotalTTL;
+                    bool m_waitExecutionTotalTTLHasBeenSet;
+
+                    /**
+                     * Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_scheduleType;
+                    bool m_scheduleTypeHasBeenSet;
+
+                    /**
+                     * Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_runPriorityType;
+                    bool m_runPriorityTypeHasBeenSet;
+
+                    /**
+                     * Retry policy retry wait time, in minutes: default: 5.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_retryWaitMinute;
+                    bool m_retryWaitMinuteHasBeenSet;
+
+                    /**
+                     * Retry policy maximum attempts. default: 4.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxRetryNumber;
+                    bool m_maxRetryNumberHasBeenSet;
+
+                    /**
+                     * Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_executionTTLMinute;
+                    bool m_executionTTLMinuteHasBeenSet;
+
+                    /**
+                     * Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_waitExecutionTotalTTLMinute;
+                    bool m_waitExecutionTotalTTLMinuteHasBeenSet;
 
                 };
             }
