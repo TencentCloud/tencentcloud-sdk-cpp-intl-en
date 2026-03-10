@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Type of the intelligent video editing result.
+                * AI narration and video re-creation result type.
                 */
                 class AiAnalysisTaskReelResult : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the intelligent video editing task.
-                     * @return Input Input of the intelligent video editing task.
+                     * 获取AI narration and video re-creation task input.
+                     * @return Input AI narration and video re-creation task input.
                      * 
                      */
                     AiAnalysisTaskReelInput GetInput() const;
 
                     /**
-                     * 设置Input of the intelligent video editing task.
-                     * @param _input Input of the intelligent video editing task.
+                     * 设置AI narration and video re-creation task input.
+                     * @param _input AI narration and video re-creation task input.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskReelInput& _input);
@@ -133,15 +133,19 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Output AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AiAnalysisTaskReelOutput GetOutput() const;
 
                     /**
-                     * 设置Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _output AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskReelOutput& _output);
@@ -266,13 +270,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the intelligent video editing task.
+                     * AI narration and video re-creation task input.
                      */
                     AiAnalysisTaskReelInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiAnalysisTaskReelOutput m_output;
                     bool m_outputHasBeenSet;

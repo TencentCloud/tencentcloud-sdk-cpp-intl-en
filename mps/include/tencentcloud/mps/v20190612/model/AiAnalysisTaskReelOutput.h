@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent video editing result.
+                * AI narration and video re-creation result info.
                 */
                 class AiAnalysisTaskReelOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path of the edited video.
-                     * @return VideoPath Path of the edited video.
+                     * 获取Path of the output video.
+                     * @return VideoPath Path of the output video.
                      * 
                      */
                     std::string GetVideoPath() const;
 
                     /**
-                     * 设置Path of the edited video.
-                     * @param _videoPath Path of the edited video.
+                     * 设置Path of the output video.
+                     * @param _videoPath Path of the output video.
                      * 
                      */
                     void SetVideoPath(const std::string& _videoPath);
@@ -67,6 +67,43 @@ namespace TencentCloud
                      * 
                      */
                     bool VideoPathHasBeenSet() const;
+
+                    /**
+                     * 获取Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+                     * @return VideoPaths Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+                     * 
+                     */
+                    std::vector<std::string> GetVideoPaths() const;
+
+                    /**
+                     * 设置Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+                     * @param _videoPaths Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+                     * 
+                     */
+                    void SetVideoPaths(const std::vector<std::string>& _videoPaths);
+
+                    /**
+                     * 判断参数 VideoPaths 是否已赋值
+                     * @return VideoPaths 是否已赋值
+                     * 
+                     */
+                    bool VideoPathsHasBeenSet() const;
 
                     /**
                      * 获取Script file path.
@@ -94,15 +131,15 @@ namespace TencentCloud
                     bool ScriptPathHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of the edited video.
-                     * @return OutputStorage Storage location of the edited video.
+                     * 获取Storage location of the output video.
+                     * @return OutputStorage Storage location of the output video.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of the edited video.
-                     * @param _outputStorage Storage location of the edited video.
+                     * 设置Storage location of the output video.
+                     * @param _outputStorage Storage location of the output video.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -117,10 +154,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Path of the edited video.
+                     * Path of the output video.
                      */
                     std::string m_videoPath;
                     bool m_videoPathHasBeenSet;
+
+                    /**
+                     * Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+                     */
+                    std::vector<std::string> m_videoPaths;
+                    bool m_videoPathsHasBeenSet;
 
                     /**
                      * Script file path.
@@ -130,7 +177,7 @@ namespace TencentCloud
                     bool m_scriptPathHasBeenSet;
 
                     /**
-                     * Storage location of the edited video.
+                     * Storage location of the output video.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data structure of the video matting result.
+                * Data structure of the video intelligent image masking result.
                 */
                 class AiAnalysisTaskCutoutResult : public AbstractModel
                 {

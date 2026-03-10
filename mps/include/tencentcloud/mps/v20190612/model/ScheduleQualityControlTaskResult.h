@@ -174,6 +174,27 @@ namespace TencentCloud
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取Task execution progress.
+                     * @return Progress Task execution progress.
+                     * 
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置Task execution progress.
+                     * @param _progress Task execution progress.
+                     * 
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +232,12 @@ namespace TencentCloud
                      */
                     QualityControlData m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Task execution progress.
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

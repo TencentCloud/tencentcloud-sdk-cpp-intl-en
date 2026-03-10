@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of input video file.
-                     * @return FileInfos Information of input video file.
+                     * 获取<p>Input video file information.</p>
+                     * @return FileInfos <p>Input video file information.</p>
                      * 
                      */
                     std::vector<EditMediaFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置Information of input video file.
-                     * @param _fileInfos Information of input video file.
+                     * 设置<p>Input video file information.</p>
+                     * @param _fileInfos <p>Input video file information.</p>
                      * 
                      */
                     void SetFileInfos(const std::vector<EditMediaFileInfo>& _fileInfos);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取The storage location of the media processing output file.
-                     * @return OutputStorage The storage location of the media processing output file.
+                     * 获取<p>Target storage for the output file of the media processing task.</p>
+                     * @return OutputStorage <p>Target storage for the output file of the media processing task.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置The storage location of the media processing output file.
-                     * @param _outputStorage The storage location of the media processing output file.
+                     * 设置<p>Target storage for the output file of the media processing task.</p>
+                     * @param _outputStorage <p>Target storage for the output file of the media processing task.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -90,27 +90,15 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The path to save the media processing output file.
-
-Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
-
-                     * @return OutputObjectPath The path to save the media processing output file.
-
-Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
-
+                     * 获取<p>Target path for the output file of the media processing task.</p><p>Note: For a complex compositing task, the file name in the path can contain only digits, letters, hyphens (-), and underscores (_), with a maximum of 64 characters.</p>
+                     * @return OutputObjectPath <p>Target path for the output file of the media processing task.</p><p>Note: For a complex compositing task, the file name in the path can contain only digits, letters, hyphens (-), and underscores (_), with a maximum of 64 characters.</p>
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置The path to save the media processing output file.
-
-Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
-
-                     * @param _outputObjectPath The path to save the media processing output file.
-
-Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
-
+                     * 设置<p>Target path for the output file of the media processing task.</p><p>Note: For a complex compositing task, the file name in the path can contain only digits, letters, hyphens (-), and underscores (_), with a maximum of 64 characters.</p>
+                     * @param _outputObjectPath <p>Target path for the output file of the media processing task.</p><p>Note: For a complex compositing task, the file name in the path can contain only digits, letters, hyphens (-), and underscores (_), with a maximum of 64 characters.</p>
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -123,15 +111,15 @@ Note: For complex compositing tasks, the filename can be up to 64 characters lon
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取The output settings for a video clipping task.
-                     * @return OutputConfig The output settings for a video clipping task.
+                     * 获取<p>Configuration of the file generated by the [editing] task.</p>
+                     * @return OutputConfig <p>Configuration of the file generated by the [editing] task.</p>
                      * 
                      */
                     EditMediaOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置The output settings for a video clipping task.
-                     * @param _outputConfig The output settings for a video clipping task.
+                     * 设置<p>Configuration of the file generated by the [editing] task.</p>
+                     * @param _outputConfig <p>Configuration of the file generated by the [editing] task.</p>
                      * 
                      */
                     void SetOutputConfig(const EditMediaOutputConfig& _outputConfig);
@@ -144,23 +132,15 @@ Note: For complex compositing tasks, the filename can be up to 64 characters lon
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings for a video compositing task.
-
-Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
-                     * @return ComposeConfig The settings for a video compositing task.
-
-Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * 获取<p>[Compositing] task configuration.</p><p>Note: If this is not empty, the task is a compositing task. Otherwise, the task is an editing task.</p>
+                     * @return ComposeConfig <p>[Compositing] task configuration.</p><p>Note: If this is not empty, the task is a compositing task. Otherwise, the task is an editing task.</p>
                      * 
                      */
                     ComposeMediaConfig GetComposeConfig() const;
 
                     /**
-                     * 设置The settings for a video compositing task.
-
-Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
-                     * @param _composeConfig The settings for a video compositing task.
-
-Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * 设置<p>[Compositing] task configuration.</p><p>Note: If this is not empty, the task is a compositing task. Otherwise, the task is an editing task.</p>
+                     * @param _composeConfig <p>[Compositing] task configuration.</p><p>Note: If this is not empty, the task is a compositing task. Otherwise, the task is an editing task.</p>
                      * 
                      */
                     void SetComposeConfig(const ComposeMediaConfig& _composeConfig);
@@ -173,15 +153,15 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool ComposeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
-                     * @return TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
+                     * 获取<p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
+                     * @return TaskNotifyConfig <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
                      * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
-                     * 设置Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
-                     * @param _taskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
+                     * 设置<p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
+                     * @param _taskNotifyConfig <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
                      * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
@@ -194,15 +174,15 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -215,15 +195,15 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @param _sessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -236,15 +216,15 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * 获取<p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-                     * @param _sessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * 设置<p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -256,66 +236,88 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * @return ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置<p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * @param _resourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Information of input video file.
+                     * <p>Input video file information.</p>
                      */
                     std::vector<EditMediaFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * The storage location of the media processing output file.
+                     * <p>Target storage for the output file of the media processing task.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The path to save the media processing output file.
-
-Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
-
+                     * <p>Target path for the output file of the media processing task.</p><p>Note: For a complex compositing task, the file name in the path can contain only digits, letters, hyphens (-), and underscores (_), with a maximum of 64 characters.</p>
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * The output settings for a video clipping task.
+                     * <p>Configuration of the file generated by the [editing] task.</p>
                      */
                     EditMediaOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * The settings for a video compositing task.
-
-Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * <p>[Compositing] task configuration.</p><p>Note: If this is not empty, the task is a compositing task. Otherwise, the task is an editing task.</p>
                      */
                     ComposeMediaConfig m_composeConfig;
                     bool m_composeConfigHasBeenSet;
 
                     /**
-                     * Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
+                     * <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                 };
             }

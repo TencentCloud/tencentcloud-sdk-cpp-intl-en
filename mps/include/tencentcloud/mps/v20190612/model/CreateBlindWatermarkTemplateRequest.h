@@ -126,6 +126,39 @@ namespace TencentCloud
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+                     * @return Strength Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+                     * 
+                     */
+                    std::string GetStrength() const;
+
+                    /**
+                     * 设置Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+                     * @param _strength Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+                     * 
+                     */
+                    void SetStrength(const std::string& _strength);
+
+                    /**
+                     * 判断参数 Strength 是否已赋值
+                     * @return Strength 是否已赋值
+                     * 
+                     */
+                    bool StrengthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +184,15 @@ namespace TencentCloud
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+                     */
+                    std::string m_strength;
+                    bool m_strengthHasBeenSet;
 
                 };
             }

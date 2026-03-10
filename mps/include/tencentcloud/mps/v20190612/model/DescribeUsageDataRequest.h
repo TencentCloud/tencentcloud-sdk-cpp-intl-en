@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @return StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 获取Start date. use ISO date format.
+                     * @return StartTime Start date. use ISO date format.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param _startTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 设置Start date. use ISO date format.
+                     * @param _startTime Start date. use ISO date format.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -197,7 +197,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * Start date. use ISO date format.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;

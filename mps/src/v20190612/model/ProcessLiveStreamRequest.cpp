@@ -31,9 +31,11 @@ ProcessLiveStreamRequest::ProcessLiveStreamRequest() :
     m_aiRecognitionTaskHasBeenSet(false),
     m_aiAnalysisTaskHasBeenSet(false),
     m_aiQualityControlTaskHasBeenSet(false),
+    m_smartSubtitlesTaskHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
     m_sessionContextHasBeenSet(false),
-    m_scheduleIdHasBeenSet(false)
+    m_scheduleIdHasBeenSet(false),
+    m_resourceIdHasBeenSet(false)
 {
 }
 
@@ -114,6 +116,15 @@ string ProcessLiveStreamRequest::ToJsonString() const
         m_aiQualityControlTask.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_smartSubtitlesTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SmartSubtitlesTask";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_smartSubtitlesTask.ToJsonObject(d[key.c_str()], allocator);
+    }
+
     if (m_sessionIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -136,6 +147,14 @@ string ProcessLiveStreamRequest::ToJsonString() const
         string key = "ScheduleId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_scheduleId, allocator);
+    }
+
+    if (m_resourceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -274,6 +293,22 @@ bool ProcessLiveStreamRequest::AiQualityControlTaskHasBeenSet() const
     return m_aiQualityControlTaskHasBeenSet;
 }
 
+LiveSmartSubtitlesTaskInput ProcessLiveStreamRequest::GetSmartSubtitlesTask() const
+{
+    return m_smartSubtitlesTask;
+}
+
+void ProcessLiveStreamRequest::SetSmartSubtitlesTask(const LiveSmartSubtitlesTaskInput& _smartSubtitlesTask)
+{
+    m_smartSubtitlesTask = _smartSubtitlesTask;
+    m_smartSubtitlesTaskHasBeenSet = true;
+}
+
+bool ProcessLiveStreamRequest::SmartSubtitlesTaskHasBeenSet() const
+{
+    return m_smartSubtitlesTaskHasBeenSet;
+}
+
 string ProcessLiveStreamRequest::GetSessionId() const
 {
     return m_sessionId;
@@ -320,6 +355,22 @@ void ProcessLiveStreamRequest::SetScheduleId(const int64_t& _scheduleId)
 bool ProcessLiveStreamRequest::ScheduleIdHasBeenSet() const
 {
     return m_scheduleIdHasBeenSet;
+}
+
+string ProcessLiveStreamRequest::GetResourceId() const
+{
+    return m_resourceId;
+}
+
+void ProcessLiveStreamRequest::SetResourceId(const string& _resourceId)
+{
+    m_resourceId = _resourceId;
+    m_resourceIdHasBeenSet = true;
+}
+
+bool ProcessLiveStreamRequest::ResourceIdHasBeenSet() const
+{
+    return m_resourceIdHasBeenSet;
 }
 
 

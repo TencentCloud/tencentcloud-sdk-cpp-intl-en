@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/VideoComprehensionResultItem.h>
 
 
 namespace TencentCloud
@@ -67,6 +68,48 @@ namespace TencentCloud
                      */
                     bool VideoComprehensionAnalysisResultHasBeenSet() const;
 
+                    /**
+                     * 获取Video (audio) extended information.
+                     * @return VideoComprehensionExtInfo Video (audio) extended information.
+                     * 
+                     */
+                    std::string GetVideoComprehensionExtInfo() const;
+
+                    /**
+                     * 设置Video (audio) extended information.
+                     * @param _videoComprehensionExtInfo Video (audio) extended information.
+                     * 
+                     */
+                    void SetVideoComprehensionExtInfo(const std::string& _videoComprehensionExtInfo);
+
+                    /**
+                     * 判断参数 VideoComprehensionExtInfo 是否已赋值
+                     * @return VideoComprehensionExtInfo 是否已赋值
+                     * 
+                     */
+                    bool VideoComprehensionExtInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Video shot understanding result.
+                     * @return VideoComprehensionResultList Video shot understanding result.
+                     * 
+                     */
+                    std::vector<VideoComprehensionResultItem> GetVideoComprehensionResultList() const;
+
+                    /**
+                     * 设置Video shot understanding result.
+                     * @param _videoComprehensionResultList Video shot understanding result.
+                     * 
+                     */
+                    void SetVideoComprehensionResultList(const std::vector<VideoComprehensionResultItem>& _videoComprehensionResultList);
+
+                    /**
+                     * 判断参数 VideoComprehensionResultList 是否已赋值
+                     * @return VideoComprehensionResultList 是否已赋值
+                     * 
+                     */
+                    bool VideoComprehensionResultListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +117,18 @@ namespace TencentCloud
                      */
                     std::string m_videoComprehensionAnalysisResult;
                     bool m_videoComprehensionAnalysisResultHasBeenSet;
+
+                    /**
+                     * Video (audio) extended information.
+                     */
+                    std::string m_videoComprehensionExtInfo;
+                    bool m_videoComprehensionExtInfoHasBeenSet;
+
+                    /**
+                     * Video shot understanding result.
+                     */
+                    std::vector<VideoComprehensionResultItem> m_videoComprehensionResultList;
+                    bool m_videoComprehensionResultListHasBeenSet;
 
                 };
             }

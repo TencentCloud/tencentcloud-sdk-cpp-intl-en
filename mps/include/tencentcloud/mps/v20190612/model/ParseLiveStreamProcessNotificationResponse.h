@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/LiveStreamAiAnalysisResultInfo.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamAiQualityControlResultInfo.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamRecordResultInfo.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamAiSmartSubtitleResultInfo.h>
 
 
 namespace TencentCloud
@@ -50,19 +51,21 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+                     * 获取Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
-                     * @return NotificationType Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+                     * @return NotificationType Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
                      * 
                      */
@@ -180,6 +183,20 @@ Note: when this field return null, means no valid values can be obtained.
                     bool LiveRecordResultInfoHasBeenSet() const;
 
                     /**
+                     * 获取Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+                     * @return AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+                     * 
+                     */
+                    LiveStreamAiSmartSubtitleResultInfo GetAiSmartSubtitleResultInfo() const;
+
+                    /**
+                     * 判断参数 AiSmartSubtitleResultInfo 是否已赋值
+                     * @return AiSmartSubtitleResultInfo 是否已赋值
+                     * 
+                     */
+                    bool AiSmartSubtitleResultInfoHasBeenSet() const;
+
+                    /**
                      * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * 
@@ -238,12 +255,13 @@ Note: when this field return null, means no valid values can be obtained.
                 private:
 
                     /**
-                     * Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+                     * Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
                      */
                     std::string m_notificationType;
@@ -293,6 +311,12 @@ Note: when this field return null, means no valid values can be obtained.
                      */
                     LiveStreamRecordResultInfo m_liveRecordResultInfo;
                     bool m_liveRecordResultInfoHasBeenSet;
+
+                    /**
+                     * Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+                     */
+                    LiveStreamAiSmartSubtitleResultInfo m_aiSmartSubtitleResultInfo;
+                    bool m_aiSmartSubtitleResultInfoHasBeenSet;
 
                     /**
                      * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.

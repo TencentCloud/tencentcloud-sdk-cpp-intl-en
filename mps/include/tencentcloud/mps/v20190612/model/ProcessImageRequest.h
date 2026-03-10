@@ -232,6 +232,27 @@ The image template feature is in beta testing. If you want to use it, submit a t
                      */
                     bool ImageTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Extended parameters for image processing.
+                     * @return StdExtInfo Extended parameters for image processing.
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置Extended parameters for image processing.
+                     * @param _stdExtInfo Extended parameters for image processing.
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -285,6 +306,12 @@ The image template feature is in beta testing. If you want to use it, submit a t
                      */
                     ImageTaskInput m_imageTask;
                     bool m_imageTaskHasBeenSet;
+
+                    /**
+                     * Extended parameters for image processing.
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
 
                 };
             }

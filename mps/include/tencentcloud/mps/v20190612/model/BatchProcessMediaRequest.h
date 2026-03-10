@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
-                     * @return OutputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+                     * 获取Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
+                     * @return OutputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
-                     * @param _outputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+                     * 设置Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
+                     * @param _outputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -202,15 +202,15 @@ If left blank, it indicates that the directory is the same as the one where the 
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-                     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 获取Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-                     * @param _resourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 设置Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+                     * @param _resourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -264,8 +264,8 @@ Default value: 0
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+                     * Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -302,7 +302,7 @@ If left blank, it indicates that the directory is the same as the one where the 
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

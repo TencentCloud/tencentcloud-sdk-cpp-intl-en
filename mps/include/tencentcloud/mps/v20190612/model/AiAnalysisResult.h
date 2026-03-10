@@ -396,15 +396,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoComprehensionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AiAnalysisTaskCutoutResult GetCutoutTask() const;
 
                     /**
-                     * 设置Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCutoutTask(const AiAnalysisTaskCutoutResult& _cutoutTask);
@@ -417,15 +421,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CutoutTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AiAnalysisTaskReelResult GetReelTask() const;
 
                     /**
-                     * 设置Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReelTask(const AiAnalysisTaskReelResult& _reelTask);
@@ -534,13 +542,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_videoComprehensionTaskHasBeenSet;
 
                     /**
-                     * Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiAnalysisTaskCutoutResult m_cutoutTask;
                     bool m_cutoutTaskHasBeenSet;
 
                     /**
-                     * Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiAnalysisTaskReelResult m_reelTask;
                     bool m_reelTaskHasBeenSet;
