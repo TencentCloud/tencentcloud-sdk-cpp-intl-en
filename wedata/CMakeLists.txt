@@ -762,6 +762,7 @@ set(wedata_public_header_model
   include/tencentcloud/wedata/v20250806/model/DeleteResourceFolderResponse.h
   include/tencentcloud/wedata/v20250806/model/UpdateTaskRequest.h
   include/tencentcloud/wedata/v20250806/model/KVMap.h
+  include/tencentcloud/wedata/v20250806/model/CreateTriggerWorkflowRunResponse.h
   include/tencentcloud/wedata/v20250806/model/ListResourceFilesResponse.h
   include/tencentcloud/wedata/v20250806/model/ListDownstreamTaskInstancesRequest.h
   include/tencentcloud/wedata/v20250806/model/UpdateProjectRequest.h
@@ -824,6 +825,7 @@ set(wedata_public_header_model
   include/tencentcloud/wedata/v20250806/model/SQLScriptConfig.h
   include/tencentcloud/wedata/v20250806/model/CodeFile.h
   include/tencentcloud/wedata/v20250806/model/AddCalcEnginesToProjectRequest.h
+  include/tencentcloud/wedata/v20250806/model/UpdateTaskBaseAttribute.h
   include/tencentcloud/wedata/v20250806/model/CreateWorkflowResult.h
   include/tencentcloud/wedata/v20250806/model/TaskDataRegistry.h
   include/tencentcloud/wedata/v20250806/model/KillTriggerWorkflowRunsRequest.h
@@ -1058,6 +1060,7 @@ set(wedata_public_header_model
   include/tencentcloud/wedata/v20250806/model/GetDataSourceRelatedTasksRequest.h
   include/tencentcloud/wedata/v20250806/model/UpdateTriggerTaskBaseAttribute.h
   include/tencentcloud/wedata/v20250806/model/ResourceFolderPage.h
+  include/tencentcloud/wedata/v20250806/model/CreateTriggerWorkflowRunResult.h
   include/tencentcloud/wedata/v20250806/model/ListDownstreamTasksResponse.h
   include/tencentcloud/wedata/v20250806/model/ListQualityRuleTemplatesRequest.h
   include/tencentcloud/wedata/v20250806/model/AuthorizePrivilegesRsp.h
@@ -1180,7 +1183,7 @@ set(wedata_public_header_model
   include/tencentcloud/wedata/v20250806/model/GetResourceFolderResponse.h
   include/tencentcloud/wedata/v20250806/model/WorkflowFolder.h
   include/tencentcloud/wedata/v20250806/model/GetAlarmMessageResponse.h
-  include/tencentcloud/wedata/v20250806/model/UpdateTaskBaseAttribute.h
+  include/tencentcloud/wedata/v20250806/model/CreateTriggerWorkflowRunRequest.h
   include/tencentcloud/wedata/v20250806/model/GetOpsTaskCodeRequest.h
   include/tencentcloud/wedata/v20250806/model/GetTaskFolderResponse.h
   include/tencentcloud/wedata/v20250806/model/GetDataBackfillPlanRequest.h
@@ -2070,6 +2073,7 @@ set(wedata_src
   src/v20250806/model/DeleteResourceFolderResponse.cpp
   src/v20250806/model/UpdateTaskRequest.cpp
   src/v20250806/model/KVMap.cpp
+  src/v20250806/model/CreateTriggerWorkflowRunResponse.cpp
   src/v20250806/model/ListResourceFilesResponse.cpp
   src/v20250806/model/ListDownstreamTaskInstancesRequest.cpp
   src/v20250806/model/UpdateProjectRequest.cpp
@@ -2132,6 +2136,7 @@ set(wedata_src
   src/v20250806/model/SQLScriptConfig.cpp
   src/v20250806/model/CodeFile.cpp
   src/v20250806/model/AddCalcEnginesToProjectRequest.cpp
+  src/v20250806/model/UpdateTaskBaseAttribute.cpp
   src/v20250806/model/CreateWorkflowResult.cpp
   src/v20250806/model/TaskDataRegistry.cpp
   src/v20250806/model/KillTriggerWorkflowRunsRequest.cpp
@@ -2366,6 +2371,7 @@ set(wedata_src
   src/v20250806/model/GetDataSourceRelatedTasksRequest.cpp
   src/v20250806/model/UpdateTriggerTaskBaseAttribute.cpp
   src/v20250806/model/ResourceFolderPage.cpp
+  src/v20250806/model/CreateTriggerWorkflowRunResult.cpp
   src/v20250806/model/ListDownstreamTasksResponse.cpp
   src/v20250806/model/ListQualityRuleTemplatesRequest.cpp
   src/v20250806/model/AuthorizePrivilegesRsp.cpp
@@ -2488,7 +2494,7 @@ set(wedata_src
   src/v20250806/model/GetResourceFolderResponse.cpp
   src/v20250806/model/WorkflowFolder.cpp
   src/v20250806/model/GetAlarmMessageResponse.cpp
-  src/v20250806/model/UpdateTaskBaseAttribute.cpp
+  src/v20250806/model/CreateTriggerWorkflowRunRequest.cpp
   src/v20250806/model/GetOpsTaskCodeRequest.cpp
   src/v20250806/model/GetTaskFolderResponse.cpp
   src/v20250806/model/GetDataBackfillPlanRequest.cpp
