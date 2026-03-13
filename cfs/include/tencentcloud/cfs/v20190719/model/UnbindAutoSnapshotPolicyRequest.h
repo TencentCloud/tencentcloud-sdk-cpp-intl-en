@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IDs of the file systems to be unbound, separated by comma
-                     * @return FileSystemIds List of IDs of the file systems to be unbound, separated by comma
+                     * 获取List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * @return FileSystemIds List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetFileSystemIds() const;
 
                     /**
-                     * 设置List of IDs of the file systems to be unbound, separated by comma
-                     * @param _fileSystemIds List of IDs of the file systems to be unbound, separated by comma
+                     * 设置List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * @param _fileSystemIds List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     void SetFileSystemIds(const std::string& _fileSystemIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileSystemIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the snapshot to be unbound
-                     * @return AutoSnapshotPolicyId ID of the snapshot to be unbound
+                     * 获取Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @return AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置ID of the snapshot to be unbound
-                     * @param _autoSnapshotPolicyId ID of the snapshot to be unbound
+                     * 设置Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @param _autoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IDs of the file systems to be unbound, separated by comma
+                     * List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      */
                     std::string m_fileSystemIds;
                     bool m_fileSystemIdsHasBeenSet;
 
                     /**
-                     * ID of the snapshot to be unbound
+                     * Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;

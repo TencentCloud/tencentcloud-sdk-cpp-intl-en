@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system snapshot ID
-                     * @return SnapshotId File system snapshot ID
+                     * 获取Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+                     * @return SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置File system snapshot ID
-                     * @param _snapshotId File system snapshot ID
+                     * 设置Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+                     * @param _snapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取Start time, format "YYYY-MM-DD hh:MM:ss".
+                     * @return StartTime Start time, format "YYYY-MM-DD hh:MM:ss".
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _startTime Start time
+                     * 设置Start time, format "YYYY-MM-DD hh:MM:ss".
+                     * @param _startTime Start time, format "YYYY-MM-DD hh:MM:ss".
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time, format "YYYY-MM-DD hh:MM:ss".
+                     * @return EndTime End time, format "YYYY-MM-DD hh:MM:ss".
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time, format "YYYY-MM-DD hh:MM:ss".
+                     * @param _endTime End time, format "YYYY-MM-DD hh:MM:ss".
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system snapshot ID
+                     * Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time, format "YYYY-MM-DD hh:MM:ss".
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time, format "YYYY-MM-DD hh:MM:ss".
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

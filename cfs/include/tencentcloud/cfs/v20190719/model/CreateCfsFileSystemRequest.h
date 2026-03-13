@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool NetInterfaceHasBeenSet() const;
 
                     /**
-                     * 获取Permission group ID
-                     * @return PGroupId Permission group ID
+                     * 获取Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+                     * @return PGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
                      * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID
-                     * @param _pGroupId Permission group ID
+                     * 设置Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+                     * @param _pGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
                      * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool PGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
-                     * @return Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+                     * 获取File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+                     * @return Protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
-                     * @param _protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+                     * 设置File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+                     * @param _protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -149,15 +149,19 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. This field is required if network type is VPC.
-                     * @return VpcId VPC ID. This field is required if network type is VPC.
+                     * 获取Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+                     * @return VpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. This field is required if network type is VPC.
-                     * @param _vpcId VPC ID. This field is required if network type is VPC.
+                     * 设置Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+                     * @param _vpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -170,15 +174,19 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID. This field is required if network type is VPC.
-                     * @return SubnetId Subnet ID. This field is required if network type is VPC.
+                     * 获取Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+                     * @return SubnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID. This field is required if network type is VPC.
-                     * @param _subnetId Subnet ID. This field is required if network type is VPC.
+                     * 设置Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+                     * @param _subnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -275,15 +283,23 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取CCN instance ID (required if the network type is CCN)
-                     * @return CcnId CCN instance ID (required if the network type is CCN)
+                     * 获取Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
+                     * @return CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
                      * 
                      */
                     std::string GetCcnId() const;
 
                     /**
-                     * 设置CCN instance ID (required if the network type is CCN)
-                     * @param _ccnId CCN instance ID (required if the network type is CCN)
+                     * 设置Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
+                     * @param _ccnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
                      * 
                      */
                     void SetCcnId(const std::string& _ccnId);
@@ -317,15 +333,15 @@ namespace TencentCloud
                     bool CidrBlockHasBeenSet() const;
 
                     /**
-                     * 获取File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
-                     * @return Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     * 获取File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+                     * @return Capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
                      * 
                      */
                     uint64_t GetCapacity() const;
 
                     /**
-                     * 设置File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
-                     * @param _capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     * 设置File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+                     * @param _capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
                      * 
                      */
                     void SetCapacity(const uint64_t& _capacity);
@@ -336,6 +352,135 @@ namespace TencentCloud
                      * 
                      */
                     bool CapacityHasBeenSet() const;
+
+                    /**
+                     * 获取File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+                     * @return SnapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+                     * 
+                     */
+                    std::string GetSnapshotId() const;
+
+                    /**
+                     * 设置File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+                     * @param _snapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+                     * 
+                     */
+                    void SetSnapshotId(const std::string& _snapshotId);
+
+                    /**
+                     * 判断参数 SnapshotId 是否已赋值
+                     * @return SnapshotId 是否已赋值
+                     * 
+                     */
+                    bool SnapshotIdHasBeenSet() const;
+
+                    /**
+                     * 获取Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+                     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+                     * 
+                     */
+                    std::string GetAutoSnapshotPolicyId() const;
+
+                    /**
+                     * 设置Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+                     * @param _autoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+                     * 
+                     */
+                    void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyId 是否已赋值
+                     * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
+                     */
+                    bool AutoSnapshotPolicyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether default expansion is enabled. only turbo file storage supports this feature.
+                     * @return EnableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+                     * 
+                     */
+                    bool GetEnableAutoScaleUp() const;
+
+                    /**
+                     * 设置Whether default expansion is enabled. only turbo file storage supports this feature.
+                     * @param _enableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+                     * 
+                     */
+                    void SetEnableAutoScaleUp(const bool& _enableAutoScaleUp);
+
+                    /**
+                     * 判断参数 EnableAutoScaleUp 是否已赋值
+                     * @return EnableAutoScaleUp 是否已赋值
+                     * 
+                     */
+                    bool EnableAutoScaleUpHasBeenSet() const;
+
+                    /**
+                     * 获取v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+                     * @return CfsVersion v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+                     * 
+                     */
+                    std::string GetCfsVersion() const;
+
+                    /**
+                     * 设置v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+                     * @param _cfsVersion v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+                     * 
+                     */
+                    void SetCfsVersion(const std::string& _cfsVersion);
+
+                    /**
+                     * 判断参数 CfsVersion 是否已赋值
+                     * @return CfsVersion 是否已赋值
+                     * 
+                     */
+                    bool CfsVersionHasBeenSet() const;
+
+                    /**
+                     * 获取turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+                     * @return MetaType turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+                     * 
+                     */
+                    std::string GetMetaType() const;
+
+                    /**
+                     * 设置turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+                     * @param _metaType turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+                     * 
+                     */
+                    void SetMetaType(const std::string& _metaType);
+
+                    /**
+                     * 判断参数 MetaType 是否已赋值
+                     * @return MetaType 是否已赋值
+                     * 
+                     */
+                    bool MetaTypeHasBeenSet() const;
 
                 private:
 
@@ -352,13 +497,13 @@ namespace TencentCloud
                     bool m_netInterfaceHasBeenSet;
 
                     /**
-                     * Permission group ID
+                     * Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
 
                     /**
-                     * File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+                     * File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
@@ -370,13 +515,15 @@ namespace TencentCloud
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * VPC ID. This field is required if network type is VPC.
+                     * Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID. This field is required if network type is VPC.
+                     * Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -406,7 +553,9 @@ namespace TencentCloud
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * CCN instance ID (required if the network type is CCN)
+                     * Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
                      */
                     std::string m_ccnId;
                     bool m_ccnIdHasBeenSet;
@@ -418,10 +567,46 @@ namespace TencentCloud
                     bool m_cidrBlockHasBeenSet;
 
                     /**
-                     * File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     * File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
                      */
                     uint64_t m_capacity;
                     bool m_capacityHasBeenSet;
+
+                    /**
+                     * File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+                     */
+                    std::string m_snapshotId;
+                    bool m_snapshotIdHasBeenSet;
+
+                    /**
+                     * Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+                     */
+                    std::string m_autoSnapshotPolicyId;
+                    bool m_autoSnapshotPolicyIdHasBeenSet;
+
+                    /**
+                     * Whether default expansion is enabled. only turbo file storage supports this feature.
+                     */
+                    bool m_enableAutoScaleUp;
+                    bool m_enableAutoScaleUpHasBeenSet;
+
+                    /**
+                     * v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+                     */
+                    std::string m_cfsVersion;
+                    bool m_cfsVersionHasBeenSet;
+
+                    /**
+                     * turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+                     */
+                    std::string m_metaType;
+                    bool m_metaTypeHasBeenSet;
 
                 };
             }

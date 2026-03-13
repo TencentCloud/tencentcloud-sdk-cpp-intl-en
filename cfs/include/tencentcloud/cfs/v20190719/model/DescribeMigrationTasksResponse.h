@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of migration tasks
-                     * @return TotalCount Number of migration tasks
+                     * 获取Total number of migration tasks.
+                     * @return TotalCount Total number of migration tasks.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of migration tasks
+                     * Total number of migration tasks.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

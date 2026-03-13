@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Permission group ID
-                     * @return PGroupId Permission group ID
+                     * 获取Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID
-                     * @param _pGroupId Permission group ID
+                     * 设置Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @param _pGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Permission group ID
+                     * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
 
                     /**
-                     * File system ID
+                     * File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

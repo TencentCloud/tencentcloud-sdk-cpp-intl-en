@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom file system name
-                     * @return FsName Custom file system name
+                     * 获取User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
+                     * @return FsName User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
                      * 
                      */
                     std::string GetFsName() const;
 
                     /**
-                     * 设置Custom file system name
-                     * @param _fsName Custom file system name
+                     * 设置User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
+                     * @param _fsName User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
                      * 
                      */
                     void SetFsName(const std::string& _fsName);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Custom file system name
+                     * User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * @return FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * @param _fileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot ID
-                     * @return SnapshotId Snapshot ID
+                     * 获取Snapshot ID.
+                     * @return SnapshotId Snapshot ID.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置Snapshot ID
-                     * @param _snapshotId Snapshot ID
+                     * 设置Snapshot ID.
+                     * @param _snapshotId Snapshot ID.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取The starting position of paging
-                     * @return Offset The starting position of paging
+                     * 获取Paging start position, defaults to 0.
+                     * @return Offset Paging start position, defaults to 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The starting position of paging
-                     * @param _offset The starting position of paging
+                     * 设置Paging start position, defaults to 0.
+                     * @param _offset Paging start position, defaults to 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page length
-                     * @return Limit Page length
+                     * 获取Page length. default value 20.
+                     * @return Limit Page length. default value 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Page length
-                     * @param _limit Page length
+                     * 设置Page length. default value 20.
+                     * @param _limit Page length. default value 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -128,15 +128,43 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filters
-                     * @return Filters Filters
+                     * 获取Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+                     * @return Filters Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filters
-                     * @param _filters Filters
+                     * 设置Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+                     * @param _filters Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -149,15 +177,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Order field
-                     * @return OrderField Order field
+                     * 获取Sort by creation time to obtain value.
+                     * @return OrderField Sort by creation time to obtain value.
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置Order field
-                     * @param _orderField Order field
+                     * 设置Sort by creation time to obtain value.
+                     * @param _orderField Sort by creation time to obtain value.
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -170,15 +198,15 @@ namespace TencentCloud
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order (ascending or descending)
-                     * @return Order Sorting order (ascending or descending)
+                     * 获取Sorting order; ascending or descending order.
+                     * @return Order Sorting order; ascending or descending order.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order (ascending or descending)
-                     * @param _order Sorting order (ascending or descending)
+                     * 设置Sorting order; ascending or descending order.
+                     * @param _order Sorting order; ascending or descending order.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -193,43 +221,50 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Snapshot ID
+                     * Snapshot ID.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * The starting position of paging
+                     * Paging start position, defaults to 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page length
+                     * Page length. default value 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filters
+                     * Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Order field
+                     * Sort by creation time to obtain value.
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Sorting order (ascending or descending)
+                     * Sorting order; ascending or descending order.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

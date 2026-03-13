@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
-                     * @return Zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * 获取Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
+                     * @return Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
-                     * @param _zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * 设置Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
+                     * @param _zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

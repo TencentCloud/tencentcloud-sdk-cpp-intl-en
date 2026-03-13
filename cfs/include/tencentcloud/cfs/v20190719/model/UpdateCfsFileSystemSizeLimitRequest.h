@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FsLimitHasBeenSet() const;
 
                     /**
-                     * 获取File system ID. Currently, only Standard file systems are supported.
-                     * @return FileSystemId File system ID. Currently, only Standard file systems are supported.
+                     * 获取File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID. Currently, only Standard file systems are supported.
-                     * @param _fileSystemId File system ID. Currently, only Standard file systems are supported.
+                     * 设置File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_fsLimitHasBeenSet;
 
                     /**
-                     * File system ID. Currently, only Standard file systems are supported.
+                     * File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

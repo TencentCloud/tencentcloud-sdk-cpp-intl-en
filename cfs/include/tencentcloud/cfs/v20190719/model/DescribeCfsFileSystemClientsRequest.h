@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -63,13 +63,67 @@ namespace TencentCloud
                      */
                     bool FileSystemIdHasBeenSet() const;
 
+                    /**
+                     * 获取Offset paging number, defaults to 0.
+                     * @return Offset Offset paging number, defaults to 0.
+                     * 
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset paging number, defaults to 0.
+                     * @param _offset Offset paging number, defaults to 0.
+                     * 
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Limit page size. default value 10. maximum value 100.
+                     * @return Limit Limit page size. default value 10. maximum value 100.
+                     * 
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置Limit page size. default value 10. maximum value 100.
+                     * @param _limit Limit page size. default value 10. maximum value 100.
+                     * 
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
+
+                    /**
+                     * Offset paging number, defaults to 0.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Limit page size. default value 10. maximum value 100.
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
 
                 };
             }

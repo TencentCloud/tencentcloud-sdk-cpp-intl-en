@@ -48,14 +48,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
                      * @return Action Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
                      * @param _action Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -89,15 +105,31 @@ namespace TencentCloud
                     bool ActionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Operation name
-                     * @return ActionName Operation name
+                     * 获取Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+                     * @return ActionName Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
                      * 
                      */
                     std::string GetActionName() const;
 
                     /**
-                     * 设置Operation name
-                     * @param _actionName Operation name
+                     * 设置Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+                     * @param _actionName Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
                      * 
                      */
                     void SetActionName(const std::string& _actionName);
@@ -110,15 +142,15 @@ namespace TencentCloud
                     bool ActionNameHasBeenSet() const;
 
                     /**
-                     * 获取Operator
-                     * @return Operator Operator
+                     * 获取Operator uin.
+                     * @return Operator Operator uin.
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置Operator
-                     * @param _operator Operator
+                     * 设置Operator uin.
+                     * @param _operator Operator uin.
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -131,15 +163,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取Result
-                     * @return Result Result
+                     * 获取1- task in progress; 2- task success; 3- task failure.
+                     * @return Result 1- task in progress; 2- task success; 3- task failure.
                      * 
                      */
                     uint64_t GetResult() const;
 
                     /**
-                     * 设置Result
-                     * @param _result Result
+                     * 设置1- task in progress; 2- task success; 3- task failure.
+                     * @param _result 1- task in progress; 2- task success; 3- task failure.
                      * 
                      */
                     void SetResult(const uint64_t& _result);
@@ -155,6 +187,10 @@ namespace TencentCloud
 
                     /**
                      * Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
@@ -166,19 +202,23 @@ namespace TencentCloud
                     bool m_actionTimeHasBeenSet;
 
                     /**
-                     * Operation name
+                     * Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
                      */
                     std::string m_actionName;
                     bool m_actionNameHasBeenSet;
 
                     /**
-                     * Operator
+                     * Operator uin.
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * Result
+                     * 1- task in progress; 2- task success; 3- task failure.
                      */
                     uint64_t m_result;
                     bool m_resultHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Permission group ID
-                     * @return PGroupId Permission group ID
+                     * 获取Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID
-                     * @param _pGroupId Permission group ID
+                     * 设置Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @param _pGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID
-                     * @return RuleId Rule ID
+                     * 获取Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
+                     * @return RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Rule ID
-                     * @param _ruleId Rule ID
+                     * 设置Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
+                     * @param _ruleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -127,15 +127,35 @@ namespace TencentCloud
                     bool RWPermissionHasBeenSet() const;
 
                     /**
-                     * 获取User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
-                     * @return UserPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+                     * 获取User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+                     * @return UserPermission User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      * 
                      */
                     std::string GetUserPermission() const;
 
                     /**
-                     * 设置User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
-                     * @param _userPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+                     * 设置User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+                     * @param _userPermission User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      * 
                      */
                     void SetUserPermission(const std::string& _userPermission);
@@ -148,15 +168,15 @@ namespace TencentCloud
                     bool UserPermissionHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
-                     * @return Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * 获取Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
+                     * @return Priority Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
-                     * @param _priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * 设置Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
+                     * @param _priority Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -171,13 +191,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Permission group ID
+                     * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
 
                     /**
-                     * Rule ID
+                     * Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
@@ -195,13 +215,18 @@ namespace TencentCloud
                     bool m_rWPermissionHasBeenSet;
 
                     /**
-                     * User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+                     * User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      */
                     std::string m_userPermission;
                     bool m_userPermissionHasBeenSet;
 
                     /**
-                     * Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;

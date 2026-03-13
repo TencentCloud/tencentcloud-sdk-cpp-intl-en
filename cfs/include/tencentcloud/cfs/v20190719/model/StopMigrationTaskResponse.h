@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
-                     * @return Status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+                     * 获取Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+                     * @return Status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+                     * Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

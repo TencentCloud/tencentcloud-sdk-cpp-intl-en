@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot name
-                     * @return SnapshotName Snapshot name
+                     * 获取Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * @return SnapshotName Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置Snapshot name
-                     * @param _snapshotName Snapshot name
+                     * 设置Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * @param _snapshotName Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -109,13 +109,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Snapshot name
+                     * Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;

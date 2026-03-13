@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot policy ID
-                     * @return AutoSnapshotPolicyId Snapshot policy ID
+                     * 获取Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @return AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置Snapshot policy ID
-                     * @param _autoSnapshotPolicyId Snapshot policy ID
+                     * 设置Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @param _autoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot policy name
-                     * @return PolicyName Snapshot policy name
+                     * 获取Snapshot policy name, no more than 64 characters.
+                     * @return PolicyName Snapshot policy name, no more than 64 characters.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
-                     * 设置Snapshot policy name
-                     * @param _policyName Snapshot policy name
+                     * 设置Snapshot policy name, no more than 64 characters.
+                     * @param _policyName Snapshot policy name, no more than 64 characters.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取The day of the week on which to regularly back up the snapshot
-                     * @return DayOfWeek The day of the week on which to regularly back up the snapshot
+                     * 获取Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+                     * @return DayOfWeek Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      * 
                      */
                     std::string GetDayOfWeek() const;
 
                     /**
-                     * 设置The day of the week on which to regularly back up the snapshot
-                     * @param _dayOfWeek The day of the week on which to regularly back up the snapshot
+                     * 设置Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+                     * @param _dayOfWeek Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      * 
                      */
                     void SetDayOfWeek(const std::string& _dayOfWeek);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool HourHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot retention period
-                     * @return AliveDays Snapshot retention period
+                     * 获取Snapshot retention days.
+                     * @return AliveDays Snapshot retention days.
                      * 
                      */
                     uint64_t GetAliveDays() const;
 
                     /**
-                     * 设置Snapshot retention period
-                     * @param _aliveDays Snapshot retention period
+                     * 设置Snapshot retention days.
+                     * @param _aliveDays Snapshot retention days.
                      * 
                      */
                     void SetAliveDays(const uint64_t& _aliveDays);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool AliveDaysHasBeenSet() const;
 
                     /**
-                     * 获取Whether to activate the scheduled snapshot feature
-                     * @return IsActivated Whether to activate the scheduled snapshot feature
+                     * 获取Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
+                     * @return IsActivated Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
                      * 
                      */
                     uint64_t GetIsActivated() const;
 
                     /**
-                     * 设置Whether to activate the scheduled snapshot feature
-                     * @param _isActivated Whether to activate the scheduled snapshot feature
+                     * 设置Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
+                     * @param _isActivated Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
                      * 
                      */
                     void SetIsActivated(const uint64_t& _isActivated);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool IsActivatedHasBeenSet() const;
 
                     /**
-                     * 获取The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
-                     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     * 获取Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
+                     * @return DayOfMonth Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
                      * 
                      */
                     std::string GetDayOfMonth() const;
 
                     /**
-                     * 设置The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
-                     * @param _dayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     * 设置Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
+                     * @param _dayOfMonth Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
                      * 
                      */
                     void SetDayOfMonth(const std::string& _dayOfMonth);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool DayOfMonthHasBeenSet() const;
 
                     /**
-                     * 获取The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
-                     * @return IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     * 获取Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
+                     * @return IntervalDays Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
                      * 
                      */
                     uint64_t GetIntervalDays() const;
 
                     /**
-                     * 设置The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
-                     * @param _intervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     * 设置Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
+                     * @param _intervalDays Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
                      * 
                      */
                     void SetIntervalDays(const uint64_t& _intervalDays);
@@ -213,19 +213,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Snapshot policy ID
+                     * Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;
 
                     /**
-                     * Snapshot policy name
+                     * Snapshot policy name, no more than 64 characters.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * The day of the week on which to regularly back up the snapshot
+                     * Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      */
                     std::string m_dayOfWeek;
                     bool m_dayOfWeekHasBeenSet;
@@ -237,25 +237,25 @@ namespace TencentCloud
                     bool m_hourHasBeenSet;
 
                     /**
-                     * Snapshot retention period
+                     * Snapshot retention days.
                      */
                     uint64_t m_aliveDays;
                     bool m_aliveDaysHasBeenSet;
 
                     /**
-                     * Whether to activate the scheduled snapshot feature
+                     * Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
                      */
                     uint64_t m_isActivated;
                     bool m_isActivatedHasBeenSet;
 
                     /**
-                     * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     * Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
                      */
                     std::string m_dayOfMonth;
                     bool m_dayOfMonthHasBeenSet;
 
                     /**
-                     * The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     * Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
                      */
                     uint64_t m_intervalDays;
                     bool m_intervalDaysHasBeenSet;

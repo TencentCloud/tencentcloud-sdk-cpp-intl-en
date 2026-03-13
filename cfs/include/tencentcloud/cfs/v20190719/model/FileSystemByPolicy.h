@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system size
-                     * @return SizeByte File system size
+                     * 获取File system size, in Byte.
+                     * @return SizeByte File system size, in Byte.
                      * 
                      */
                     uint64_t GetSizeByte() const;
 
                     /**
-                     * 设置File system size
-                     * @param _sizeByte File system size
+                     * 设置File system size, in Byte.
+                     * @param _sizeByte File system size, in Byte.
                      * 
                      */
                     void SetSizeByte(const uint64_t& _sizeByte);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SizeByteHasBeenSet() const;
 
                     /**
-                     * 获取Storage class
-                     * @return StorageType Storage class
+                     * 获取Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage class
-                     * @param _storageType Storage class
+                     * 设置Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * @param _storageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Total snapshot size
-                     * @return TotalSnapshotSize Total snapshot size
+                     * 获取Total snapshot size in GiB.
+                     * @return TotalSnapshotSize Total snapshot size in GiB.
                      * 
                      */
                     uint64_t GetTotalSnapshotSize() const;
 
                     /**
-                     * 设置Total snapshot size
-                     * @param _totalSnapshotSize Total snapshot size
+                     * 设置Total snapshot size in GiB.
+                     * @param _totalSnapshotSize Total snapshot size in GiB.
                      * 
                      */
                     void SetTotalSnapshotSize(const uint64_t& _totalSnapshotSize);
@@ -208,19 +208,19 @@ namespace TencentCloud
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system size
+                     * File system size, in Byte.
                      */
                     uint64_t m_sizeByte;
                     bool m_sizeByteHasBeenSet;
 
                     /**
-                     * Storage class
+                     * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Total snapshot size
+                     * Total snapshot size in GiB.
                      */
                     uint64_t m_totalSnapshotSize;
                     bool m_totalSnapshotSizeHasBeenSet;

@@ -110,15 +110,31 @@ namespace TencentCloud
                     bool RWPermissionHasBeenSet() const;
 
                     /**
-                     * 获取User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
-                     * @return UserPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * 获取All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+                     * @return UserPermission All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      * 
                      */
                     std::string GetUserPermission() const;
 
                     /**
-                     * 设置User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
-                     * @param _userPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * 设置All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+                     * @param _userPermission All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      * 
                      */
                     void SetUserPermission(const std::string& _userPermission);
@@ -172,7 +188,11 @@ namespace TencentCloud
                     bool m_rWPermissionHasBeenSet;
 
                     /**
-                     * User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
                      */
                     std::string m_userPermission;
                     bool m_userPermissionHasBeenSet;

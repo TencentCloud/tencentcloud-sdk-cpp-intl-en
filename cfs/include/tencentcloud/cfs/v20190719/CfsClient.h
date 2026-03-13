@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cfs/v20190719/model/ApplyPathLifecyclePolicyRequest.h>
+#include <tencentcloud/cfs/v20190719/model/ApplyPathLifecyclePolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/BindAutoSnapshotPolicyRequest.h>
 #include <tencentcloud/cfs/v20190719/model/BindAutoSnapshotPolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/CreateAutoSnapshotPolicyRequest.h>
@@ -35,6 +37,14 @@
 #include <tencentcloud/cfs/v20190719/model/CreateCfsRuleResponse.h>
 #include <tencentcloud/cfs/v20190719/model/CreateCfsSnapshotRequest.h>
 #include <tencentcloud/cfs/v20190719/model/CreateCfsSnapshotResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateDataFlowRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateDataFlowResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecycleDataTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecycleDataTaskResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyDownloadTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyDownloadTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/CreateMigrationTaskRequest.h>
 #include <tencentcloud/cfs/v20190719/model/CreateMigrationTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteAutoSnapshotPolicyRequest.h>
@@ -47,10 +57,12 @@
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsRuleResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsSnapshotRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsSnapshotResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteDataFlowRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteDataFlowResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteLifecyclePolicyRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteLifecyclePolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteMigrationTaskRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteMigrationTaskResponse.h>
-#include <tencentcloud/cfs/v20190719/model/DeleteMountTargetRequest.h>
-#include <tencentcloud/cfs/v20190719/model/DeleteMountTargetResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAutoSnapshotPoliciesRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAutoSnapshotPoliciesResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAvailableZoneInfoRequest.h>
@@ -71,18 +83,32 @@
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotOverviewResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotsResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeDataFlowRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeDataFlowResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeLifecycleDataTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeLifecycleDataTaskResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeLifecyclePoliciesRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeLifecyclePoliciesResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMigrationTasksRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMigrationTasksResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMountTargetsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMountTargetsResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeSnapshotOperationLogsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeSnapshotOperationLogsResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DoDirectoryOperationRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DoDirectoryOperationResponse.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyDataFlowRequest.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyDataFlowResponse.h>
 #include <tencentcloud/cfs/v20190719/model/ModifyFileSystemAutoScaleUpRuleRequest.h>
 #include <tencentcloud/cfs/v20190719/model/ModifyFileSystemAutoScaleUpRuleResponse.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyLifecyclePolicyRequest.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyLifecyclePolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/ScaleUpFileSystemRequest.h>
 #include <tencentcloud/cfs/v20190719/model/ScaleUpFileSystemResponse.h>
 #include <tencentcloud/cfs/v20190719/model/SignUpCfsServiceRequest.h>
 #include <tencentcloud/cfs/v20190719/model/SignUpCfsServiceResponse.h>
+#include <tencentcloud/cfs/v20190719/model/StopLifecycleDataTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/StopLifecycleDataTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/StopMigrationTaskRequest.h>
 #include <tencentcloud/cfs/v20190719/model/StopMigrationTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/UnbindAutoSnapshotPolicyRequest.h>
@@ -115,6 +141,9 @@ namespace TencentCloud
                 CfsClient(const Credential &credential, const std::string &region);
                 CfsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyPathLifecyclePolicyResponse> ApplyPathLifecyclePolicyOutcome;
+                typedef std::future<ApplyPathLifecyclePolicyOutcome> ApplyPathLifecyclePolicyOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::ApplyPathLifecyclePolicyRequest&, ApplyPathLifecyclePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyPathLifecyclePolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::BindAutoSnapshotPolicyResponse> BindAutoSnapshotPolicyOutcome;
                 typedef std::future<BindAutoSnapshotPolicyOutcome> BindAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::BindAutoSnapshotPolicyRequest&, BindAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindAutoSnapshotPolicyAsyncHandler;
@@ -133,6 +162,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCfsSnapshotResponse> CreateCfsSnapshotOutcome;
                 typedef std::future<CreateCfsSnapshotOutcome> CreateCfsSnapshotOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::CreateCfsSnapshotRequest&, CreateCfsSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCfsSnapshotAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDataFlowResponse> CreateDataFlowOutcome;
+                typedef std::future<CreateDataFlowOutcome> CreateDataFlowOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::CreateDataFlowRequest&, CreateDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLifecycleDataTaskResponse> CreateLifecycleDataTaskOutcome;
+                typedef std::future<CreateLifecycleDataTaskOutcome> CreateLifecycleDataTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::CreateLifecycleDataTaskRequest&, CreateLifecycleDataTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLifecycleDataTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLifecyclePolicyResponse> CreateLifecyclePolicyOutcome;
+                typedef std::future<CreateLifecyclePolicyOutcome> CreateLifecyclePolicyOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::CreateLifecyclePolicyRequest&, CreateLifecyclePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLifecyclePolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLifecyclePolicyDownloadTaskResponse> CreateLifecyclePolicyDownloadTaskOutcome;
+                typedef std::future<CreateLifecyclePolicyDownloadTaskOutcome> CreateLifecyclePolicyDownloadTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::CreateLifecyclePolicyDownloadTaskRequest&, CreateLifecyclePolicyDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLifecyclePolicyDownloadTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMigrationTaskResponse> CreateMigrationTaskOutcome;
                 typedef std::future<CreateMigrationTaskOutcome> CreateMigrationTaskOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::CreateMigrationTaskRequest&, CreateMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMigrationTaskAsyncHandler;
@@ -151,12 +192,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCfsSnapshotResponse> DeleteCfsSnapshotOutcome;
                 typedef std::future<DeleteCfsSnapshotOutcome> DeleteCfsSnapshotOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DeleteCfsSnapshotRequest&, DeleteCfsSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCfsSnapshotAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDataFlowResponse> DeleteDataFlowOutcome;
+                typedef std::future<DeleteDataFlowOutcome> DeleteDataFlowOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DeleteDataFlowRequest&, DeleteDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDataFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLifecyclePolicyResponse> DeleteLifecyclePolicyOutcome;
+                typedef std::future<DeleteLifecyclePolicyOutcome> DeleteLifecyclePolicyOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DeleteLifecyclePolicyRequest&, DeleteLifecyclePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLifecyclePolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteMigrationTaskResponse> DeleteMigrationTaskOutcome;
                 typedef std::future<DeleteMigrationTaskOutcome> DeleteMigrationTaskOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DeleteMigrationTaskRequest&, DeleteMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMigrationTaskAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteMountTargetResponse> DeleteMountTargetOutcome;
-                typedef std::future<DeleteMountTargetOutcome> DeleteMountTargetOutcomeCallable;
-                typedef std::function<void(const CfsClient*, const Model::DeleteMountTargetRequest&, DeleteMountTargetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMountTargetAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPoliciesOutcome;
                 typedef std::future<DescribeAutoSnapshotPoliciesOutcome> DescribeAutoSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeAutoSnapshotPoliciesRequest&, DescribeAutoSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoSnapshotPoliciesAsyncHandler;
@@ -187,6 +231,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCfsSnapshotsResponse> DescribeCfsSnapshotsOutcome;
                 typedef std::future<DescribeCfsSnapshotsOutcome> DescribeCfsSnapshotsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeCfsSnapshotsRequest&, DescribeCfsSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCfsSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDataFlowResponse> DescribeDataFlowOutcome;
+                typedef std::future<DescribeDataFlowOutcome> DescribeDataFlowOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DescribeDataFlowRequest&, DescribeDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLifecycleDataTaskResponse> DescribeLifecycleDataTaskOutcome;
+                typedef std::future<DescribeLifecycleDataTaskOutcome> DescribeLifecycleDataTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DescribeLifecycleDataTaskRequest&, DescribeLifecycleDataTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLifecycleDataTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLifecyclePoliciesResponse> DescribeLifecyclePoliciesOutcome;
+                typedef std::future<DescribeLifecyclePoliciesOutcome> DescribeLifecyclePoliciesOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DescribeLifecyclePoliciesRequest&, DescribeLifecyclePoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLifecyclePoliciesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMigrationTasksResponse> DescribeMigrationTasksOutcome;
                 typedef std::future<DescribeMigrationTasksOutcome> DescribeMigrationTasksOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeMigrationTasksRequest&, DescribeMigrationTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrationTasksAsyncHandler;
@@ -196,15 +249,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogsOutcome;
                 typedef std::future<DescribeSnapshotOperationLogsOutcome> DescribeSnapshotOperationLogsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeSnapshotOperationLogsRequest&, DescribeSnapshotOperationLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotOperationLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DoDirectoryOperationResponse> DoDirectoryOperationOutcome;
+                typedef std::future<DoDirectoryOperationOutcome> DoDirectoryOperationOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DoDirectoryOperationRequest&, DoDirectoryOperationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DoDirectoryOperationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDataFlowResponse> ModifyDataFlowOutcome;
+                typedef std::future<ModifyDataFlowOutcome> ModifyDataFlowOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::ModifyDataFlowRequest&, ModifyDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDataFlowAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyFileSystemAutoScaleUpRuleResponse> ModifyFileSystemAutoScaleUpRuleOutcome;
                 typedef std::future<ModifyFileSystemAutoScaleUpRuleOutcome> ModifyFileSystemAutoScaleUpRuleOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::ModifyFileSystemAutoScaleUpRuleRequest&, ModifyFileSystemAutoScaleUpRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFileSystemAutoScaleUpRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLifecyclePolicyResponse> ModifyLifecyclePolicyOutcome;
+                typedef std::future<ModifyLifecyclePolicyOutcome> ModifyLifecyclePolicyOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::ModifyLifecyclePolicyRequest&, ModifyLifecyclePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLifecyclePolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ScaleUpFileSystemResponse> ScaleUpFileSystemOutcome;
                 typedef std::future<ScaleUpFileSystemOutcome> ScaleUpFileSystemOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::ScaleUpFileSystemRequest&, ScaleUpFileSystemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleUpFileSystemAsyncHandler;
                 typedef Outcome<Core::Error, Model::SignUpCfsServiceResponse> SignUpCfsServiceOutcome;
                 typedef std::future<SignUpCfsServiceOutcome> SignUpCfsServiceOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::SignUpCfsServiceRequest&, SignUpCfsServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SignUpCfsServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopLifecycleDataTaskResponse> StopLifecycleDataTaskOutcome;
+                typedef std::future<StopLifecycleDataTaskOutcome> StopLifecycleDataTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::StopLifecycleDataTaskRequest&, StopLifecycleDataTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopLifecycleDataTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopMigrationTaskResponse> StopMigrationTaskOutcome;
                 typedef std::future<StopMigrationTaskOutcome> StopMigrationTaskOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::StopMigrationTaskRequest&, StopMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopMigrationTaskAsyncHandler;
@@ -234,6 +299,15 @@ namespace TencentCloud
                 typedef std::function<void(const CfsClient*, const Model::UpdateCfsSnapshotAttributeRequest&, UpdateCfsSnapshotAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCfsSnapshotAttributeAsyncHandler;
 
 
+
+                /**
+                 *Configure the directory list associated with the lifecycle policy.
+                 * @param req ApplyPathLifecyclePolicyRequest
+                 * @return ApplyPathLifecyclePolicyOutcome
+                 */
+                ApplyPathLifecyclePolicyOutcome ApplyPathLifecyclePolicy(const Model::ApplyPathLifecyclePolicyRequest &request);
+                void ApplyPathLifecyclePolicyAsync(const Model::ApplyPathLifecyclePolicyRequest& request, const ApplyPathLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyPathLifecyclePolicyOutcomeCallable ApplyPathLifecyclePolicyCallable(const Model::ApplyPathLifecyclePolicyRequest& request);
 
                 /**
                  *This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
@@ -290,8 +364,43 @@ namespace TencentCloud
                 CreateCfsSnapshotOutcomeCallable CreateCfsSnapshotCallable(const Model::CreateCfsSnapshotRequest& request);
 
                 /**
+                 *This API is used to create a data flow.
+                 * @param req CreateDataFlowRequest
+                 * @return CreateDataFlowOutcome
+                 */
+                CreateDataFlowOutcome CreateDataFlow(const Model::CreateDataFlowRequest &request);
+                void CreateDataFlowAsync(const Model::CreateDataFlowRequest& request, const CreateDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDataFlowOutcomeCallable CreateDataFlowCallable(const Model::CreateDataFlowRequest& request);
+
+                /**
+                 *Support proactive settlement/preheat API.
+                 * @param req CreateLifecycleDataTaskRequest
+                 * @return CreateLifecycleDataTaskOutcome
+                 */
+                CreateLifecycleDataTaskOutcome CreateLifecycleDataTask(const Model::CreateLifecycleDataTaskRequest &request);
+                void CreateLifecycleDataTaskAsync(const Model::CreateLifecycleDataTaskRequest& request, const CreateLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLifecycleDataTaskOutcomeCallable CreateLifecycleDataTaskCallable(const Model::CreateLifecycleDataTaskRequest& request);
+
+                /**
+                 *This API is used to create a file storage lifecycle policy.
+                 * @param req CreateLifecyclePolicyRequest
+                 * @return CreateLifecyclePolicyOutcome
+                 */
+                CreateLifecyclePolicyOutcome CreateLifecyclePolicy(const Model::CreateLifecyclePolicyRequest &request);
+                void CreateLifecyclePolicyAsync(const Model::CreateLifecyclePolicyRequest& request, const CreateLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLifecyclePolicyOutcomeCallable CreateLifecyclePolicyCallable(const Model::CreateLifecyclePolicyRequest& request);
+
+                /**
+                 *Download the file list in a lifecycle task.
+                 * @param req CreateLifecyclePolicyDownloadTaskRequest
+                 * @return CreateLifecyclePolicyDownloadTaskOutcome
+                 */
+                CreateLifecyclePolicyDownloadTaskOutcome CreateLifecyclePolicyDownloadTask(const Model::CreateLifecyclePolicyDownloadTaskRequest &request);
+                void CreateLifecyclePolicyDownloadTaskAsync(const Model::CreateLifecyclePolicyDownloadTaskRequest& request, const CreateLifecyclePolicyDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLifecyclePolicyDownloadTaskOutcomeCallable CreateLifecyclePolicyDownloadTaskCallable(const Model::CreateLifecyclePolicyDownloadTaskRequest& request);
+
+                /**
                  *This API is used to create a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
                  * @param req CreateMigrationTaskRequest
                  * @return CreateMigrationTaskOutcome
                  */
@@ -318,7 +427,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 DeleteCfsFileSystemOutcomeCallable DeleteCfsFileSystemCallable(const Model::DeleteCfsFileSystemRequest& request);
 
                 /**
-                 *This API is used to delete a permission group.
+                 *This API is used to delete a permission group. Only permission groups not bound to a file system can be deleted by this API.
                  * @param req DeleteCfsPGroupRequest
                  * @return DeleteCfsPGroupOutcome
                  */
@@ -345,23 +454,31 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 DeleteCfsSnapshotOutcomeCallable DeleteCfsSnapshotCallable(const Model::DeleteCfsSnapshotRequest& request);
 
                 /**
-                 *This API is used to delete a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
+                 *Delete a data flow.
+                 * @param req DeleteDataFlowRequest
+                 * @return DeleteDataFlowOutcome
+                 */
+                DeleteDataFlowOutcome DeleteDataFlow(const Model::DeleteDataFlowRequest &request);
+                void DeleteDataFlowAsync(const Model::DeleteDataFlowRequest& request, const DeleteDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDataFlowOutcomeCallable DeleteDataFlowCallable(const Model::DeleteDataFlowRequest& request);
+
+                /**
+                 *Delete a lifecycle management policy.
+                 * @param req DeleteLifecyclePolicyRequest
+                 * @return DeleteLifecyclePolicyOutcome
+                 */
+                DeleteLifecyclePolicyOutcome DeleteLifecyclePolicy(const Model::DeleteLifecyclePolicyRequest &request);
+                void DeleteLifecyclePolicyAsync(const Model::DeleteLifecyclePolicyRequest& request, const DeleteLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLifecyclePolicyOutcomeCallable DeleteLifecyclePolicyCallable(const Model::DeleteLifecyclePolicyRequest& request);
+
+                /**
+                 *This API is used to delete migration tasks. Deletion is not supported for tasks in the status of Waiting, creating, running, canceling, or terminating.
                  * @param req DeleteMigrationTaskRequest
                  * @return DeleteMigrationTaskOutcome
                  */
                 DeleteMigrationTaskOutcome DeleteMigrationTask(const Model::DeleteMigrationTaskRequest &request);
                 void DeleteMigrationTaskAsync(const Model::DeleteMigrationTaskRequest& request, const DeleteMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteMigrationTaskOutcomeCallable DeleteMigrationTaskCallable(const Model::DeleteMigrationTaskRequest& request);
-
-                /**
-                 *This API is used to delete a mount target.
-                 * @param req DeleteMountTargetRequest
-                 * @return DeleteMountTargetOutcome
-                 */
-                DeleteMountTargetOutcome DeleteMountTarget(const Model::DeleteMountTargetRequest &request);
-                void DeleteMountTargetAsync(const Model::DeleteMountTargetRequest& request, const DeleteMountTargetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteMountTargetOutcomeCallable DeleteMountTargetCallable(const Model::DeleteMountTargetRequest& request);
 
                 /**
                  *This API is used to query the list of scheduled snapshot policies of a file system.
@@ -382,8 +499,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 DescribeAvailableZoneInfoOutcomeCallable DescribeAvailableZoneInfoCallable(const Model::DescribeAvailableZoneInfoRequest& request);
 
                 /**
-                 *This API is used to get the list of data source buckets.
-To use this API, submit a ticket for us to add you to the allowlist.
+                 *To obtain the list of data source buckets.
                  * @param req DescribeBucketListRequest
                  * @return DescribeBucketListOutcome
                  */
@@ -455,6 +571,33 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 DescribeCfsSnapshotsOutcomeCallable DescribeCfsSnapshotsCallable(const Model::DescribeCfsSnapshotsRequest& request);
 
                 /**
+                 *This API is used to query data flow information.
+                 * @param req DescribeDataFlowRequest
+                 * @return DescribeDataFlowOutcome
+                 */
+                DescribeDataFlowOutcome DescribeDataFlow(const Model::DescribeDataFlowRequest &request);
+                void DescribeDataFlowAsync(const Model::DescribeDataFlowRequest& request, const DescribeDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDataFlowOutcomeCallable DescribeDataFlowCallable(const Model::DescribeDataFlowRequest& request);
+
+                /**
+                 *This API is used to query the lifecycle task. It only supports querying task data within 3 months.
+                 * @param req DescribeLifecycleDataTaskRequest
+                 * @return DescribeLifecycleDataTaskOutcome
+                 */
+                DescribeLifecycleDataTaskOutcome DescribeLifecycleDataTask(const Model::DescribeLifecycleDataTaskRequest &request);
+                void DescribeLifecycleDataTaskAsync(const Model::DescribeLifecycleDataTaskRequest& request, const DescribeLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLifecycleDataTaskOutcomeCallable DescribeLifecycleDataTaskCallable(const Model::DescribeLifecycleDataTaskRequest& request);
+
+                /**
+                 *Query lifecycle management policies.
+                 * @param req DescribeLifecyclePoliciesRequest
+                 * @return DescribeLifecyclePoliciesOutcome
+                 */
+                DescribeLifecyclePoliciesOutcome DescribeLifecyclePolicies(const Model::DescribeLifecyclePoliciesRequest &request);
+                void DescribeLifecyclePoliciesAsync(const Model::DescribeLifecyclePoliciesRequest& request, const DescribeLifecyclePoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLifecyclePoliciesOutcomeCallable DescribeLifecyclePoliciesCallable(const Model::DescribeLifecyclePoliciesRequest& request);
+
+                /**
                  *This API is used to get the list of migration tasks.
 To use this API, submit a ticket for us to add you to the allowlist.
                  * @param req DescribeMigrationTasksRequest
@@ -483,7 +626,25 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 DescribeSnapshotOperationLogsOutcomeCallable DescribeSnapshotOperationLogsCallable(const Model::DescribeSnapshotOperationLogsRequest& request);
 
                 /**
-                 *This API is used to modify the scaling policy of a file system.
+                 *File system directory operation API. Currently, only the Turbo series file system supports calling this API to perform directory operations. The Universal Series file system (including the enhanced version) does not support calling.
+                 * @param req DoDirectoryOperationRequest
+                 * @return DoDirectoryOperationOutcome
+                 */
+                DoDirectoryOperationOutcome DoDirectoryOperation(const Model::DoDirectoryOperationRequest &request);
+                void DoDirectoryOperationAsync(const Model::DoDirectoryOperationRequest& request, const DoDirectoryOperationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DoDirectoryOperationOutcomeCallable DoDirectoryOperationCallable(const Model::DoDirectoryOperationRequest& request);
+
+                /**
+                 *Modify data flow parameters.
+                 * @param req ModifyDataFlowRequest
+                 * @return ModifyDataFlowOutcome
+                 */
+                ModifyDataFlowOutcome ModifyDataFlow(const Model::ModifyDataFlowRequest &request);
+                void ModifyDataFlowAsync(const Model::ModifyDataFlowRequest& request, const ModifyDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDataFlowOutcomeCallable ModifyDataFlowCallable(const Model::ModifyDataFlowRequest& request);
+
+                /**
+                 *This API is used to set the file system scaling policy. It supports only the turbo file system.
                  * @param req ModifyFileSystemAutoScaleUpRuleRequest
                  * @return ModifyFileSystemAutoScaleUpRuleOutcome
                  */
@@ -492,7 +653,16 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 ModifyFileSystemAutoScaleUpRuleOutcomeCallable ModifyFileSystemAutoScaleUpRuleCallable(const Model::ModifyFileSystemAutoScaleUpRuleRequest& request);
 
                 /**
-                 *This API is used to scale up a Turbo file system.
+                 *Update a file storage lifecycle policy.
+                 * @param req ModifyLifecyclePolicyRequest
+                 * @return ModifyLifecyclePolicyOutcome
+                 */
+                ModifyLifecyclePolicyOutcome ModifyLifecyclePolicy(const Model::ModifyLifecyclePolicyRequest &request);
+                void ModifyLifecyclePolicyAsync(const Model::ModifyLifecyclePolicyRequest& request, const ModifyLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLifecyclePolicyOutcomeCallable ModifyLifecyclePolicyCallable(const Model::ModifyLifecyclePolicyRequest& request);
+
+                /**
+                 *This API is used to expand the turbo file system. It only supports expansion and does not support scale-down. The scaling increment for the turbo standard type is 10240 GIB, and for the turbo performance type, it is 5120 GIB.
                  * @param req ScaleUpFileSystemRequest
                  * @return ScaleUpFileSystemOutcome
                  */
@@ -510,8 +680,16 @@ To use this API, submit a ticket for us to add you to the allowlist.
                 SignUpCfsServiceOutcomeCallable SignUpCfsServiceCallable(const Model::SignUpCfsServiceRequest& request);
 
                 /**
-                 *This API is used to stop a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
+                 *This API is used to terminate a lifecycle task.
+                 * @param req StopLifecycleDataTaskRequest
+                 * @return StopLifecycleDataTaskOutcome
+                 */
+                StopLifecycleDataTaskOutcome StopLifecycleDataTask(const Model::StopLifecycleDataTaskRequest &request);
+                void StopLifecycleDataTaskAsync(const Model::StopLifecycleDataTaskRequest& request, const StopLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopLifecycleDataTaskOutcomeCallable StopLifecycleDataTaskCallable(const Model::StopLifecycleDataTaskRequest& request);
+
+                /**
+                 *This API is used to terminate a migration task, including tasks in the Waiting or Running status.
                  * @param req StopMigrationTaskRequest
                  * @return StopMigrationTaskOutcome
                  */

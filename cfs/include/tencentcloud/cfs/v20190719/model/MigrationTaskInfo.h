@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool MigrationModeHasBeenSet() const;
 
                     /**
-                     * 获取Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BucketName Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data source bucket name.
+                     * @return BucketName Data source bucket name.
                      * 
                      */
                     std::string GetBucketName() const;
 
                     /**
-                     * 设置Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bucketName Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Data source bucket name.
+                     * @param _bucketName Data source bucket name.
                      * 
                      */
                     void SetBucketName(const std::string& _bucketName);
@@ -156,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BucketNameHasBeenSet() const;
 
                     /**
-                     * 获取Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BucketRegion Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source bucket region.
+                     * @return BucketRegion Source bucket region.
                      * 
                      */
                     std::string GetBucketRegion() const;
 
                     /**
-                     * 设置Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bucketRegion Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source bucket region.
+                     * @param _bucketRegion Source bucket region.
                      * 
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
@@ -181,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BucketAddress Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data source bucket address.
+                     * @return BucketAddress Data source bucket address.
                      * 
                      */
                     std::string GetBucketAddress() const;
 
                     /**
-                     * 设置Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bucketAddress Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Data source bucket address.
+                     * @param _bucketAddress Data source bucket address.
                      * 
                      */
                     void SetBucketAddress(const std::string& _bucketAddress);
@@ -206,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BucketAddressHasBeenSet() const;
 
                     /**
-                     * 获取List address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ListAddress List address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Checklist address.
+                     * @return ListAddress Checklist address.
                      * 
                      */
                     std::string GetListAddress() const;
 
                     /**
-                     * 设置List address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _listAddress List address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Checklist address.
+                     * @param _listAddress Checklist address.
                      * 
                      */
                     void SetListAddress(const std::string& _listAddress);
@@ -231,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListAddressHasBeenSet() const;
 
                     /**
-                     * 获取File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FsName File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File system instance name.
+                     * @return FsName File system instance name.
                      * 
                      */
                     std::string GetFsName() const;
 
                     /**
-                     * 设置File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fsName File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File system instance name.
+                     * @param _fsName File system instance name.
                      * 
                      */
                     void SetFsName(const std::string& _fsName);
@@ -340,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Completion/Termination time.
+                     * @return EndTime Completion/Termination time.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Completion/Termination time.
+                     * @param _endTime Completion/Termination time.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -365,15 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
-                     * @return Status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+                     * 获取Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+                     * @return Status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
-                     * @param _status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+                     * 设置Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+                     * @param _status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -386,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileTotalCount Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of files.
+                     * @return FileTotalCount Number of files.
                      * 
                      */
                     uint64_t GetFileTotalCount() const;
 
                     /**
-                     * 设置Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileTotalCount Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of files.
+                     * @param _fileTotalCount Number of files.
                      * 
                      */
                     void SetFileTotalCount(const uint64_t& _fileTotalCount);
@@ -411,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMigratedCount Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of migrated files.
+                     * @return FileMigratedCount Number of migrated files.
                      * 
                      */
                     uint64_t GetFileMigratedCount() const;
 
                     /**
-                     * 设置Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMigratedCount Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of migrated files.
+                     * @param _fileMigratedCount Number of migrated files.
                      * 
                      */
                     void SetFileMigratedCount(const uint64_t& _fileMigratedCount);
@@ -436,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileMigratedCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileFailedCount Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of failed files in migration.
+                     * @return FileFailedCount Number of failed files in migration.
                      * 
                      */
                     uint64_t GetFileFailedCount() const;
 
                     /**
-                     * 设置Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileFailedCount Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of failed files in migration.
+                     * @param _fileFailedCount Number of failed files in migration.
                      * 
                      */
                     void SetFileFailedCount(const uint64_t& _fileFailedCount);
@@ -461,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileFailedCountHasBeenSet() const;
 
                     /**
-                     * 获取File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileTotalSize File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File capacity, in Byte.
+                     * @return FileTotalSize File capacity, in Byte.
                      * 
                      */
                     int64_t GetFileTotalSize() const;
 
                     /**
-                     * 设置File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileTotalSize File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File capacity, in Byte.
+                     * @param _fileTotalSize File capacity, in Byte.
                      * 
                      */
                     void SetFileTotalSize(const int64_t& _fileTotalSize);
@@ -486,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileTotalSizeHasBeenSet() const;
 
                     /**
-                     * 获取Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMigratedSize Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Migrated file capacity in Byte.
+                     * @return FileMigratedSize Migrated file capacity in Byte.
                      * 
                      */
                     int64_t GetFileMigratedSize() const;
 
                     /**
-                     * 设置Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMigratedSize Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Migrated file capacity in Byte.
+                     * @param _fileMigratedSize Migrated file capacity in Byte.
                      * 
                      */
                     void SetFileMigratedSize(const int64_t& _fileMigratedSize);
@@ -511,19 +467,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileMigratedSizeHasBeenSet() const;
 
                     /**
-                     * 获取Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileFailedSize Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Capacity of failed migration files, in Byte.
+                     * @return FileFailedSize Capacity of failed migration files, in Byte.
                      * 
                      */
                     int64_t GetFileFailedSize() const;
 
                     /**
-                     * 设置Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileFailedSize Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Capacity of failed migration files, in Byte.
+                     * @param _fileFailedSize Capacity of failed migration files, in Byte.
                      * 
                      */
                     void SetFileFailedSize(const int64_t& _fileFailedSize);
@@ -536,19 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileFailedSizeHasBeenSet() const;
 
                     /**
-                     * 获取List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileTotalList List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total inventory.
+                     * @return FileTotalList Total inventory.
                      * 
                      */
                     std::string GetFileTotalList() const;
 
                     /**
-                     * 设置List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileTotalList List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total inventory.
+                     * @param _fileTotalList Total inventory.
                      * 
                      */
                     void SetFileTotalList(const std::string& _fileTotalList);
@@ -561,19 +509,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileTotalListHasBeenSet() const;
 
                     /**
-                     * 获取List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileCompletedList List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File list completed.
+                     * @return FileCompletedList File list completed.
                      * 
                      */
                     std::string GetFileCompletedList() const;
 
                     /**
-                     * 设置List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileCompletedList List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File list completed.
+                     * @param _fileCompletedList File list completed.
                      * 
                      */
                     void SetFileCompletedList(const std::string& _fileCompletedList);
@@ -586,19 +530,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileCompletedListHasBeenSet() const;
 
                     /**
-                     * 获取List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileFailedList List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Failed file list.
+                     * @return FileFailedList Failed file list.
                      * 
                      */
                     std::string GetFileFailedList() const;
 
                     /**
-                     * 设置List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileFailedList List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Failed file list.
+                     * @param _fileFailedList Failed file list.
                      * 
                      */
                     void SetFileFailedList(const std::string& _fileFailedList);
@@ -611,19 +551,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileFailedListHasBeenSet() const;
 
                     /**
-                     * 获取Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BucketPath Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source bucket path.
+                     * @return BucketPath Source bucket path.
                      * 
                      */
                     std::string GetBucketPath() const;
 
                     /**
-                     * 设置Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bucketPath Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source bucket path.
+                     * @param _bucketPath Source bucket path.
                      * 
                      */
                     void SetBucketPath(const std::string& _bucketPath);
@@ -634,6 +570,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool BucketPathHasBeenSet() const;
+
+                    /**
+                     * 获取Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * @return Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * 
+                     */
+                    uint64_t GetDirection() const;
+
+                    /**
+                     * 设置Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * @param _direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * 
+                     */
+                    void SetDirection(const uint64_t& _direction);
+
+                    /**
+                     * 判断参数 Direction 是否已赋值
+                     * @return Direction 是否已赋值
+                     * 
+                     */
+                    bool DirectionHasBeenSet() const;
 
                 private:
 
@@ -662,36 +619,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_migrationModeHasBeenSet;
 
                     /**
-                     * Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data source bucket name.
                      */
                     std::string m_bucketName;
                     bool m_bucketNameHasBeenSet;
 
                     /**
-                     * Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source bucket region.
                      */
                     std::string m_bucketRegion;
                     bool m_bucketRegionHasBeenSet;
 
                     /**
-                     * Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data source bucket address.
                      */
                     std::string m_bucketAddress;
                     bool m_bucketAddressHasBeenSet;
 
                     /**
-                     * List address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Checklist address.
                      */
                     std::string m_listAddress;
                     bool m_listAddressHasBeenSet;
 
                     /**
-                     * File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File system instance name.
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
@@ -721,87 +673,82 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * End time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Completion/Termination time.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+                     * Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of files.
                      */
                     uint64_t m_fileTotalCount;
                     bool m_fileTotalCountHasBeenSet;
 
                     /**
-                     * Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of migrated files.
                      */
                     uint64_t m_fileMigratedCount;
                     bool m_fileMigratedCountHasBeenSet;
 
                     /**
-                     * Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of failed files in migration.
                      */
                     uint64_t m_fileFailedCount;
                     bool m_fileFailedCountHasBeenSet;
 
                     /**
-                     * File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File capacity, in Byte.
                      */
                     int64_t m_fileTotalSize;
                     bool m_fileTotalSizeHasBeenSet;
 
                     /**
-                     * Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Migrated file capacity in Byte.
                      */
                     int64_t m_fileMigratedSize;
                     bool m_fileMigratedSizeHasBeenSet;
 
                     /**
-                     * Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Capacity of failed migration files, in Byte.
                      */
                     int64_t m_fileFailedSize;
                     bool m_fileFailedSizeHasBeenSet;
 
                     /**
-                     * List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total inventory.
                      */
                     std::string m_fileTotalList;
                     bool m_fileTotalListHasBeenSet;
 
                     /**
-                     * List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File list completed.
                      */
                     std::string m_fileCompletedList;
                     bool m_fileCompletedListHasBeenSet;
 
                     /**
-                     * List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Failed file list.
                      */
                     std::string m_fileFailedList;
                     bool m_fileFailedListHasBeenSet;
 
                     /**
-                     * Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source bucket path.
                      */
                     std::string m_bucketPath;
                     bool m_bucketPathHasBeenSet;
+
+                    /**
+                     * Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     */
+                    uint64_t m_direction;
+                    bool m_directionHasBeenSet;
 
                 };
             }

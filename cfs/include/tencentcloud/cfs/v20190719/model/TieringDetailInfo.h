@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * @return TieringSizeInBytes <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
                      * 
                      */
                     int64_t GetTieringSizeInBytes() const;
 
                     /**
-                     * 设置STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * @param _tieringSizeInBytes <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
                      * 
                      */
                     void SetTieringSizeInBytes(const int64_t& _tieringSizeInBytes);
@@ -71,14 +67,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TieringSizeInBytesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * @return SecondaryTieringSizeInBytes <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * 
+                     */
+                    int64_t GetSecondaryTieringSizeInBytes() const;
+
+                    /**
+                     * 设置<p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * @param _secondaryTieringSizeInBytes <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     * 
+                     */
+                    void SetSecondaryTieringSizeInBytes(const int64_t& _secondaryTieringSizeInBytes);
+
+                    /**
+                     * 判断参数 SecondaryTieringSizeInBytes 是否已赋值
+                     * @return SecondaryTieringSizeInBytes 是否已赋值
+                     * 
+                     */
+                    bool SecondaryTieringSizeInBytesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
                      */
                     int64_t m_tieringSizeInBytes;
                     bool m_tieringSizeInBytesHasBeenSet;
+
+                    /**
+                     * <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+                     */
+                    int64_t m_secondaryTieringSizeInBytes;
+                    bool m_secondaryTieringSizeInBytesHasBeenSet;
 
                 };
             }

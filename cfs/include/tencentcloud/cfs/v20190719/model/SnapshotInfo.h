@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot creation time
-                     * @return CreationTime Snapshot creation time
+                     * 获取<P>Snapshot creation time</p>.
+                     * @return CreationTime <P>Snapshot creation time</p>.
                      * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
-                     * 设置Snapshot creation time
-                     * @param _creationTime Snapshot creation time
+                     * 设置<P>Snapshot creation time</p>.
+                     * @param _creationTime <P>Snapshot creation time</p>.
                      * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CreationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot name
-                     * @return SnapshotName Snapshot name
+                     * 获取<P>Snapshot name</p>.
+                     * @return SnapshotName <P>Snapshot name</p>.
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置Snapshot name
-                     * @param _snapshotName Snapshot name
+                     * 设置<P>Snapshot name</p>.
+                     * @param _snapshotName <P>Snapshot name</p>.
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot ID
-                     * @return SnapshotId Snapshot ID
+                     * 获取<p>Snapshot ID.</p>.
+                     * @return SnapshotId <p>Snapshot ID.</p>.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置Snapshot ID
-                     * @param _snapshotId Snapshot ID
+                     * 设置<p>Snapshot ID.</p>.
+                     * @param _snapshotId <p>Snapshot ID.</p>.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot status
-                     * @return Status Snapshot status
+                     * 获取<P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+                     * @return Status <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Snapshot status
-                     * @param _status Snapshot status
+                     * 设置<P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+                     * @param _status <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Region name
-                     * @return RegionName Region name
+                     * 获取<P>Region name</p>.
+                     * @return RegionName <P>Region name</p>.
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region name
-                     * @param _regionName Region name
+                     * 设置<P>Region name</p>.
+                     * @param _regionName <P>Region name</p>.
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool RegionNameHasBeenSet() const;
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取<p>File system ID</p>.
+                     * @return FileSystemId <p>File system ID</p>.
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置<p>File system ID</p>.
+                     * @param _fileSystemId <p>File system ID</p>.
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot size
-                     * @return Size Snapshot size
+                     * 获取<p>Snapshot size</p><p>unit: MiB</p>.
+                     * @return Size <p>Snapshot size</p><p>unit: MiB</p>.
                      * 
                      */
                     uint64_t GetSize() const;
 
                     /**
-                     * 设置Snapshot size
-                     * @param _size Snapshot size
+                     * 设置<p>Snapshot size</p><p>unit: MiB</p>.
+                     * @param _size <p>Snapshot size</p><p>unit: MiB</p>.
                      * 
                      */
                     void SetSize(const uint64_t& _size);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Retention period in days
-                     * @return AliveDay Retention period in days
+                     * 获取<P>Retention duration days</p>.
+                     * @return AliveDay <P>Retention duration days</p>.
                      * 
                      */
                     uint64_t GetAliveDay() const;
 
                     /**
-                     * 设置Retention period in days
-                     * @param _aliveDay Retention period in days
+                     * 设置<P>Retention duration days</p>.
+                     * @param _aliveDay <P>Retention duration days</p>.
                      * 
                      */
                     void SetAliveDay(const uint64_t& _aliveDay);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AliveDayHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot progress
-                     * @return Percent Snapshot progress
+                     * 获取<P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+                     * @return Percent <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
                      * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
-                     * 设置Snapshot progress
-                     * @param _percent Snapshot progress
+                     * 设置<P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+                     * @param _percent <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
                      * 
                      */
                     void SetPercent(const uint64_t& _percent);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool PercentHasBeenSet() const;
 
                     /**
-                     * 获取Account ID
-                     * @return AppId Account ID
+                     * 获取<p>Account ID.</p>.
+                     * @return AppId <p>Account ID.</p>.
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置Account ID
-                     * @param _appId Account ID
+                     * 设置<p>Account ID.</p>.
+                     * @param _appId <p>Account ID.</p>.
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot deletion time
-                     * @return DeleteTime Snapshot deletion time
+                     * 获取<P>Snapshot deletion time</p>.
+                     * @return DeleteTime <P>Snapshot deletion time</p>.
                      * 
                      */
                     std::string GetDeleteTime() const;
 
                     /**
-                     * 设置Snapshot deletion time
-                     * @param _deleteTime Snapshot deletion time
+                     * 设置<P>Snapshot deletion time</p>.
+                     * @param _deleteTime <P>Snapshot deletion time</p>.
                      * 
                      */
                     void SetDeleteTime(const std::string& _deleteTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool DeleteTimeHasBeenSet() const;
 
                     /**
-                     * 获取File system name
-                     * @return FsName File system name
+                     * 获取<P>File system name</p>.
+                     * @return FsName <P>File system name</p>.
                      * 
                      */
                     std::string GetFsName() const;
 
                     /**
-                     * 设置File system name
-                     * @param _fsName File system name
+                     * 设置<P>File system name</p>.
+                     * @param _fsName <P>File system name</p>.
                      * 
                      */
                     void SetFsName(const std::string& _fsName);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot tag
-                     * @return Tags Snapshot tag
+                     * 获取<P>Snapshot tag.</p>.
+                     * @return Tags <P>Snapshot tag.</p>.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Snapshot tag
-                     * @param _tags Snapshot tag
+                     * 设置<P>Snapshot tag.</p>.
+                     * @param _tags <P>Snapshot tag.</p>.
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -321,18 +321,18 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot type
+                     * 获取<p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotType Snapshot type
+                     * @return SnapshotType <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSnapshotType() const;
 
                     /**
-                     * 设置Snapshot type
+                     * 设置<p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _snapshotType Snapshot type
+                     * @param _snapshotType <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -345,92 +345,124 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SnapshotTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotTime <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSnapshotTime() const;
+
+                    /**
+                     * 设置<P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _snapshotTime <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSnapshotTime(const std::string& _snapshotTime);
+
+                    /**
+                     * 判断参数 SnapshotTime 是否已赋值
+                     * @return SnapshotTime 是否已赋值
+                     * 
+                     */
+                    bool SnapshotTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Snapshot creation time
+                     * <P>Snapshot creation time</p>.
                      */
                     std::string m_creationTime;
                     bool m_creationTimeHasBeenSet;
 
                     /**
-                     * Snapshot name
+                     * <P>Snapshot name</p>.
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
 
                     /**
-                     * Snapshot ID
+                     * <p>Snapshot ID.</p>.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Snapshot status
+                     * <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Region name
+                     * <P>Region name</p>.
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
 
                     /**
-                     * File system ID
+                     * <p>File system ID</p>.
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Snapshot size
+                     * <p>Snapshot size</p><p>unit: MiB</p>.
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Retention period in days
+                     * <P>Retention duration days</p>.
                      */
                     uint64_t m_aliveDay;
                     bool m_aliveDayHasBeenSet;
 
                     /**
-                     * Snapshot progress
+                     * <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
                      */
                     uint64_t m_percent;
                     bool m_percentHasBeenSet;
 
                     /**
-                     * Account ID
+                     * <p>Account ID.</p>.
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Snapshot deletion time
+                     * <P>Snapshot deletion time</p>.
                      */
                     std::string m_deleteTime;
                     bool m_deleteTimeHasBeenSet;
 
                     /**
-                     * File system name
+                     * <P>File system name</p>.
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
 
                     /**
-                     * Snapshot tag
+                     * <P>Snapshot tag.</p>.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Snapshot type
+                     * <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_snapshotType;
                     bool m_snapshotTypeHasBeenSet;
+
+                    /**
+                     * <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_snapshotTime;
+                    bool m_snapshotTimeHasBeenSet;
 
                 };
             }

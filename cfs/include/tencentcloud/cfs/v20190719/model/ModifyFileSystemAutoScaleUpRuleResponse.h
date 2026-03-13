@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule status. Valid values: `0` (disabled) and `1` (enabled).
-                     * @return Status Rule status. Valid values: `0` (disabled) and `1` (enabled).
+                     * 获取Rule status 0: turn off, 1: turn on.
+                     * @return Status Rule status 0: turn off, 1: turn on.
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Threshold for triggering scaling. Value range: 10-90
-                     * @return ScaleUpThreshold Threshold for triggering scaling. Value range: 10-90
+                     * 获取Expansion threshold. value range: 10-90.
+                     * @return ScaleUpThreshold Expansion threshold. value range: 10-90.
                      * 
                      */
                     uint64_t GetScaleUpThreshold() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ScaleUpThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Target threshold after scaling. Value range: 10-90
-                     * @return TargetThreshold Target threshold after scaling. Value range: 10-90
+                     * 获取Reach the threshold after expansion. value range: [10-90].
+                     * @return TargetThreshold Reach the threshold after expansion. value range: [10-90].
                      * 
                      */
                     uint64_t GetTargetThreshold() const;
@@ -108,19 +108,19 @@ namespace TencentCloud
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Rule status. Valid values: `0` (disabled) and `1` (enabled).
+                     * Rule status 0: turn off, 1: turn on.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Threshold for triggering scaling. Value range: 10-90
+                     * Expansion threshold. value range: 10-90.
                      */
                     uint64_t m_scaleUpThreshold;
                     bool m_scaleUpThresholdHasBeenSet;
 
                     /**
-                     * Target threshold after scaling. Value range: 10-90
+                     * Reach the threshold after expansion. value range: [10-90].
                      */
                     uint64_t m_targetThreshold;
                     bool m_targetThresholdHasBeenSet;

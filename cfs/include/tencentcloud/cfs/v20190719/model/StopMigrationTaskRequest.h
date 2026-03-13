@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Migration task name
-                     * @return TaskId Migration task name
+                     * 获取Migration task Id.
+                     * @return TaskId Migration task Id.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Migration task name
-                     * @param _taskId Migration task name
+                     * 设置Migration task Id.
+                     * @param _taskId Migration task Id.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Migration task name
+                     * Migration task Id.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

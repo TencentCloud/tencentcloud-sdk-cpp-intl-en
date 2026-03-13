@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cfs/v20190719/model/DeleteMountTargetRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyDownloadTaskRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,33 +22,33 @@
 using namespace TencentCloud::Cfs::V20190719::Model;
 using namespace std;
 
-DeleteMountTargetRequest::DeleteMountTargetRequest() :
-    m_fileSystemIdHasBeenSet(false),
-    m_mountTargetIdHasBeenSet(false)
+CreateLifecyclePolicyDownloadTaskRequest::CreateLifecyclePolicyDownloadTaskRequest() :
+    m_taskIdHasBeenSet(false),
+    m_typeHasBeenSet(false)
 {
 }
 
-string DeleteMountTargetRequest::ToJsonString() const
+string CreateLifecyclePolicyDownloadTaskRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_fileSystemIdHasBeenSet)
+    if (m_taskIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FileSystemId";
+        string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_mountTargetIdHasBeenSet)
+    if (m_typeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MountTargetId";
+        string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_mountTargetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +59,36 @@ string DeleteMountTargetRequest::ToJsonString() const
 }
 
 
-string DeleteMountTargetRequest::GetFileSystemId() const
+string CreateLifecyclePolicyDownloadTaskRequest::GetTaskId() const
 {
-    return m_fileSystemId;
+    return m_taskId;
 }
 
-void DeleteMountTargetRequest::SetFileSystemId(const string& _fileSystemId)
+void CreateLifecyclePolicyDownloadTaskRequest::SetTaskId(const string& _taskId)
 {
-    m_fileSystemId = _fileSystemId;
-    m_fileSystemIdHasBeenSet = true;
+    m_taskId = _taskId;
+    m_taskIdHasBeenSet = true;
 }
 
-bool DeleteMountTargetRequest::FileSystemIdHasBeenSet() const
+bool CreateLifecyclePolicyDownloadTaskRequest::TaskIdHasBeenSet() const
 {
-    return m_fileSystemIdHasBeenSet;
+    return m_taskIdHasBeenSet;
 }
 
-string DeleteMountTargetRequest::GetMountTargetId() const
+string CreateLifecyclePolicyDownloadTaskRequest::GetType() const
 {
-    return m_mountTargetId;
+    return m_type;
 }
 
-void DeleteMountTargetRequest::SetMountTargetId(const string& _mountTargetId)
+void CreateLifecyclePolicyDownloadTaskRequest::SetType(const string& _type)
 {
-    m_mountTargetId = _mountTargetId;
-    m_mountTargetIdHasBeenSet = true;
+    m_type = _type;
+    m_typeHasBeenSet = true;
 }
 
-bool DeleteMountTargetRequest::MountTargetIdHasBeenSet() const
+bool CreateLifecyclePolicyDownloadTaskRequest::TypeHasBeenSet() const
 {
-    return m_mountTargetIdHasBeenSet;
+    return m_typeHasBeenSet;
 }
 
 

@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Offset paging number. default 0.
+                     * @return Offset Offset paging number. default 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Offset paging number. default 0.
+                     * @param _offset Offset paging number. default 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Limit page size. default value 10.
+                     * @return Limit Limit page size. default value 10.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Limit page size. default value 10.
+                     * @param _limit Limit page size. default value 10.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreationToken 
+                     * 获取User-defined name
+                     * @return CreationToken User-defined name
                      * 
                      */
                     std::string GetCreationToken() const;
 
                     /**
-                     * 设置
-                     * @param _creationToken 
+                     * 设置User-defined name
+                     * @param _creationToken User-defined name
                      * 
                      */
                     void SetCreationToken(const std::string& _creationToken);
@@ -189,19 +189,19 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Offset paging number. default 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Limit page size. default value 10.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * User-defined name
                      */
                     std::string m_creationToken;
                     bool m_creationTokenHasBeenSet;

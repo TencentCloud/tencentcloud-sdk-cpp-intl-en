@@ -40,6 +40,56 @@ CfsClient::CfsClient(const Credential &credential, const string &region, const C
 }
 
 
+CfsClient::ApplyPathLifecyclePolicyOutcome CfsClient::ApplyPathLifecyclePolicy(const ApplyPathLifecyclePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyPathLifecyclePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyPathLifecyclePolicyResponse rsp = ApplyPathLifecyclePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyPathLifecyclePolicyOutcome(rsp);
+        else
+            return ApplyPathLifecyclePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyPathLifecyclePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::ApplyPathLifecyclePolicyAsync(const ApplyPathLifecyclePolicyRequest& request, const ApplyPathLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApplyPathLifecyclePolicyRequest&;
+    using Resp = ApplyPathLifecyclePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApplyPathLifecyclePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::ApplyPathLifecyclePolicyOutcomeCallable CfsClient::ApplyPathLifecyclePolicyCallable(const ApplyPathLifecyclePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApplyPathLifecyclePolicyOutcome>>();
+    ApplyPathLifecyclePolicyAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const ApplyPathLifecyclePolicyRequest&,
+        ApplyPathLifecyclePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfsClient::BindAutoSnapshotPolicyOutcome CfsClient::BindAutoSnapshotPolicy(const BindAutoSnapshotPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "BindAutoSnapshotPolicy");
@@ -332,6 +382,206 @@ CfsClient::CreateCfsSnapshotOutcomeCallable CfsClient::CreateCfsSnapshotCallable
         const CfsClient*,
         const CreateCfsSnapshotRequest&,
         CreateCfsSnapshotOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::CreateDataFlowOutcome CfsClient::CreateDataFlow(const CreateDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDataFlowResponse rsp = CreateDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDataFlowOutcome(rsp);
+        else
+            return CreateDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::CreateDataFlowAsync(const CreateDataFlowRequest& request, const CreateDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDataFlowRequest&;
+    using Resp = CreateDataFlowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDataFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::CreateDataFlowOutcomeCallable CfsClient::CreateDataFlowCallable(const CreateDataFlowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDataFlowOutcome>>();
+    CreateDataFlowAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const CreateDataFlowRequest&,
+        CreateDataFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::CreateLifecycleDataTaskOutcome CfsClient::CreateLifecycleDataTask(const CreateLifecycleDataTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLifecycleDataTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLifecycleDataTaskResponse rsp = CreateLifecycleDataTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLifecycleDataTaskOutcome(rsp);
+        else
+            return CreateLifecycleDataTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLifecycleDataTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::CreateLifecycleDataTaskAsync(const CreateLifecycleDataTaskRequest& request, const CreateLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLifecycleDataTaskRequest&;
+    using Resp = CreateLifecycleDataTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLifecycleDataTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::CreateLifecycleDataTaskOutcomeCallable CfsClient::CreateLifecycleDataTaskCallable(const CreateLifecycleDataTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLifecycleDataTaskOutcome>>();
+    CreateLifecycleDataTaskAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const CreateLifecycleDataTaskRequest&,
+        CreateLifecycleDataTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::CreateLifecyclePolicyOutcome CfsClient::CreateLifecyclePolicy(const CreateLifecyclePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLifecyclePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLifecyclePolicyResponse rsp = CreateLifecyclePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLifecyclePolicyOutcome(rsp);
+        else
+            return CreateLifecyclePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLifecyclePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::CreateLifecyclePolicyAsync(const CreateLifecyclePolicyRequest& request, const CreateLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLifecyclePolicyRequest&;
+    using Resp = CreateLifecyclePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLifecyclePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::CreateLifecyclePolicyOutcomeCallable CfsClient::CreateLifecyclePolicyCallable(const CreateLifecyclePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLifecyclePolicyOutcome>>();
+    CreateLifecyclePolicyAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const CreateLifecyclePolicyRequest&,
+        CreateLifecyclePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::CreateLifecyclePolicyDownloadTaskOutcome CfsClient::CreateLifecyclePolicyDownloadTask(const CreateLifecyclePolicyDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLifecyclePolicyDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLifecyclePolicyDownloadTaskResponse rsp = CreateLifecyclePolicyDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLifecyclePolicyDownloadTaskOutcome(rsp);
+        else
+            return CreateLifecyclePolicyDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLifecyclePolicyDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::CreateLifecyclePolicyDownloadTaskAsync(const CreateLifecyclePolicyDownloadTaskRequest& request, const CreateLifecyclePolicyDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLifecyclePolicyDownloadTaskRequest&;
+    using Resp = CreateLifecyclePolicyDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLifecyclePolicyDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::CreateLifecyclePolicyDownloadTaskOutcomeCallable CfsClient::CreateLifecyclePolicyDownloadTaskCallable(const CreateLifecyclePolicyDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLifecyclePolicyDownloadTaskOutcome>>();
+    CreateLifecyclePolicyDownloadTaskAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const CreateLifecyclePolicyDownloadTaskRequest&,
+        CreateLifecyclePolicyDownloadTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -640,6 +890,106 @@ CfsClient::DeleteCfsSnapshotOutcomeCallable CfsClient::DeleteCfsSnapshotCallable
     return prom->get_future();
 }
 
+CfsClient::DeleteDataFlowOutcome CfsClient::DeleteDataFlow(const DeleteDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDataFlowResponse rsp = DeleteDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDataFlowOutcome(rsp);
+        else
+            return DeleteDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DeleteDataFlowAsync(const DeleteDataFlowRequest& request, const DeleteDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDataFlowRequest&;
+    using Resp = DeleteDataFlowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDataFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DeleteDataFlowOutcomeCallable CfsClient::DeleteDataFlowCallable(const DeleteDataFlowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDataFlowOutcome>>();
+    DeleteDataFlowAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DeleteDataFlowRequest&,
+        DeleteDataFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::DeleteLifecyclePolicyOutcome CfsClient::DeleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLifecyclePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLifecyclePolicyResponse rsp = DeleteLifecyclePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLifecyclePolicyOutcome(rsp);
+        else
+            return DeleteLifecyclePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLifecyclePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DeleteLifecyclePolicyAsync(const DeleteLifecyclePolicyRequest& request, const DeleteLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLifecyclePolicyRequest&;
+    using Resp = DeleteLifecyclePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLifecyclePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DeleteLifecyclePolicyOutcomeCallable CfsClient::DeleteLifecyclePolicyCallable(const DeleteLifecyclePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLifecyclePolicyOutcome>>();
+    DeleteLifecyclePolicyAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DeleteLifecyclePolicyRequest&,
+        DeleteLifecyclePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfsClient::DeleteMigrationTaskOutcome CfsClient::DeleteMigrationTask(const DeleteMigrationTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteMigrationTask");
@@ -682,56 +1032,6 @@ CfsClient::DeleteMigrationTaskOutcomeCallable CfsClient::DeleteMigrationTaskCall
         const CfsClient*,
         const DeleteMigrationTaskRequest&,
         DeleteMigrationTaskOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CfsClient::DeleteMountTargetOutcome CfsClient::DeleteMountTarget(const DeleteMountTargetRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteMountTarget");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteMountTargetResponse rsp = DeleteMountTargetResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteMountTargetOutcome(rsp);
-        else
-            return DeleteMountTargetOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteMountTargetOutcome(outcome.GetError());
-    }
-}
-
-void CfsClient::DeleteMountTargetAsync(const DeleteMountTargetRequest& request, const DeleteMountTargetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DeleteMountTargetRequest&;
-    using Resp = DeleteMountTargetResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DeleteMountTarget", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfsClient::DeleteMountTargetOutcomeCallable CfsClient::DeleteMountTargetCallable(const DeleteMountTargetRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DeleteMountTargetOutcome>>();
-    DeleteMountTargetAsync(
-    request,
-    [prom](
-        const CfsClient*,
-        const DeleteMountTargetRequest&,
-        DeleteMountTargetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1240,6 +1540,156 @@ CfsClient::DescribeCfsSnapshotsOutcomeCallable CfsClient::DescribeCfsSnapshotsCa
     return prom->get_future();
 }
 
+CfsClient::DescribeDataFlowOutcome CfsClient::DescribeDataFlow(const DescribeDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDataFlowResponse rsp = DescribeDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDataFlowOutcome(rsp);
+        else
+            return DescribeDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DescribeDataFlowAsync(const DescribeDataFlowRequest& request, const DescribeDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDataFlowRequest&;
+    using Resp = DescribeDataFlowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DescribeDataFlowOutcomeCallable CfsClient::DescribeDataFlowCallable(const DescribeDataFlowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDataFlowOutcome>>();
+    DescribeDataFlowAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DescribeDataFlowRequest&,
+        DescribeDataFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::DescribeLifecycleDataTaskOutcome CfsClient::DescribeLifecycleDataTask(const DescribeLifecycleDataTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLifecycleDataTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLifecycleDataTaskResponse rsp = DescribeLifecycleDataTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLifecycleDataTaskOutcome(rsp);
+        else
+            return DescribeLifecycleDataTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLifecycleDataTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DescribeLifecycleDataTaskAsync(const DescribeLifecycleDataTaskRequest& request, const DescribeLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLifecycleDataTaskRequest&;
+    using Resp = DescribeLifecycleDataTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLifecycleDataTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DescribeLifecycleDataTaskOutcomeCallable CfsClient::DescribeLifecycleDataTaskCallable(const DescribeLifecycleDataTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLifecycleDataTaskOutcome>>();
+    DescribeLifecycleDataTaskAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DescribeLifecycleDataTaskRequest&,
+        DescribeLifecycleDataTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::DescribeLifecyclePoliciesOutcome CfsClient::DescribeLifecyclePolicies(const DescribeLifecyclePoliciesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLifecyclePolicies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLifecyclePoliciesResponse rsp = DescribeLifecyclePoliciesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLifecyclePoliciesOutcome(rsp);
+        else
+            return DescribeLifecyclePoliciesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLifecyclePoliciesOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DescribeLifecyclePoliciesAsync(const DescribeLifecyclePoliciesRequest& request, const DescribeLifecyclePoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLifecyclePoliciesRequest&;
+    using Resp = DescribeLifecyclePoliciesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLifecyclePolicies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DescribeLifecyclePoliciesOutcomeCallable CfsClient::DescribeLifecyclePoliciesCallable(const DescribeLifecyclePoliciesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLifecyclePoliciesOutcome>>();
+    DescribeLifecyclePoliciesAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DescribeLifecyclePoliciesRequest&,
+        DescribeLifecyclePoliciesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfsClient::DescribeMigrationTasksOutcome CfsClient::DescribeMigrationTasks(const DescribeMigrationTasksRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMigrationTasks");
@@ -1390,6 +1840,106 @@ CfsClient::DescribeSnapshotOperationLogsOutcomeCallable CfsClient::DescribeSnaps
     return prom->get_future();
 }
 
+CfsClient::DoDirectoryOperationOutcome CfsClient::DoDirectoryOperation(const DoDirectoryOperationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DoDirectoryOperation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DoDirectoryOperationResponse rsp = DoDirectoryOperationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DoDirectoryOperationOutcome(rsp);
+        else
+            return DoDirectoryOperationOutcome(o.GetError());
+    }
+    else
+    {
+        return DoDirectoryOperationOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DoDirectoryOperationAsync(const DoDirectoryOperationRequest& request, const DoDirectoryOperationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DoDirectoryOperationRequest&;
+    using Resp = DoDirectoryOperationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DoDirectoryOperation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::DoDirectoryOperationOutcomeCallable CfsClient::DoDirectoryOperationCallable(const DoDirectoryOperationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DoDirectoryOperationOutcome>>();
+    DoDirectoryOperationAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const DoDirectoryOperationRequest&,
+        DoDirectoryOperationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::ModifyDataFlowOutcome CfsClient::ModifyDataFlow(const ModifyDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDataFlowResponse rsp = ModifyDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDataFlowOutcome(rsp);
+        else
+            return ModifyDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::ModifyDataFlowAsync(const ModifyDataFlowRequest& request, const ModifyDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDataFlowRequest&;
+    using Resp = ModifyDataFlowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDataFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::ModifyDataFlowOutcomeCallable CfsClient::ModifyDataFlowCallable(const ModifyDataFlowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDataFlowOutcome>>();
+    ModifyDataFlowAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const ModifyDataFlowRequest&,
+        ModifyDataFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfsClient::ModifyFileSystemAutoScaleUpRuleOutcome CfsClient::ModifyFileSystemAutoScaleUpRule(const ModifyFileSystemAutoScaleUpRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyFileSystemAutoScaleUpRule");
@@ -1432,6 +1982,56 @@ CfsClient::ModifyFileSystemAutoScaleUpRuleOutcomeCallable CfsClient::ModifyFileS
         const CfsClient*,
         const ModifyFileSystemAutoScaleUpRuleRequest&,
         ModifyFileSystemAutoScaleUpRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::ModifyLifecyclePolicyOutcome CfsClient::ModifyLifecyclePolicy(const ModifyLifecyclePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLifecyclePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLifecyclePolicyResponse rsp = ModifyLifecyclePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLifecyclePolicyOutcome(rsp);
+        else
+            return ModifyLifecyclePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLifecyclePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::ModifyLifecyclePolicyAsync(const ModifyLifecyclePolicyRequest& request, const ModifyLifecyclePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyLifecyclePolicyRequest&;
+    using Resp = ModifyLifecyclePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyLifecyclePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::ModifyLifecyclePolicyOutcomeCallable CfsClient::ModifyLifecyclePolicyCallable(const ModifyLifecyclePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyLifecyclePolicyOutcome>>();
+    ModifyLifecyclePolicyAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const ModifyLifecyclePolicyRequest&,
+        ModifyLifecyclePolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1532,6 +2132,56 @@ CfsClient::SignUpCfsServiceOutcomeCallable CfsClient::SignUpCfsServiceCallable(c
         const CfsClient*,
         const SignUpCfsServiceRequest&,
         SignUpCfsServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfsClient::StopLifecycleDataTaskOutcome CfsClient::StopLifecycleDataTask(const StopLifecycleDataTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopLifecycleDataTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopLifecycleDataTaskResponse rsp = StopLifecycleDataTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopLifecycleDataTaskOutcome(rsp);
+        else
+            return StopLifecycleDataTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return StopLifecycleDataTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::StopLifecycleDataTaskAsync(const StopLifecycleDataTaskRequest& request, const StopLifecycleDataTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StopLifecycleDataTaskRequest&;
+    using Resp = StopLifecycleDataTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StopLifecycleDataTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfsClient::StopLifecycleDataTaskOutcomeCallable CfsClient::StopLifecycleDataTaskCallable(const StopLifecycleDataTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StopLifecycleDataTaskOutcome>>();
+    StopLifecycleDataTaskAsync(
+    request,
+    [prom](
+        const CfsClient*,
+        const StopLifecycleDataTaskRequest&,
+        StopLifecycleDataTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

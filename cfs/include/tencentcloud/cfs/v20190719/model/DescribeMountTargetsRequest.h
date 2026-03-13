@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
+                     * @return FileSystemId File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
+                     * @param _fileSystemId File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

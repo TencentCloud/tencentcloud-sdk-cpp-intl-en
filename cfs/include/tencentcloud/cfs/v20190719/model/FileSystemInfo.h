@@ -28,6 +28,7 @@
 #include <tencentcloud/cfs/v20190719/model/TagInfo.h>
 #include <tencentcloud/cfs/v20190719/model/TieringDetailInfo.h>
 #include <tencentcloud/cfs/v20190719/model/AutoScaleUpRule.h>
+#include <tencentcloud/cfs/v20190719/model/ExstraPerformanceInfo.h>
 
 
 namespace TencentCloud
@@ -159,15 +160,15 @@ namespace TencentCloud
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
-                     * 获取Used file system capacity
-                     * @return SizeByte Used file system capacity
+                     * 获取Used capacity of the file system, in Byte.
+                     * @return SizeByte Used capacity of the file system, in Byte.
                      * 
                      */
                     uint64_t GetSizeByte() const;
 
                     /**
-                     * 设置Used file system capacity
-                     * @param _sizeByte Used file system capacity
+                     * 设置Used capacity of the file system, in Byte.
+                     * @param _sizeByte Used capacity of the file system, in Byte.
                      * 
                      */
                     void SetSizeByte(const uint64_t& _sizeByte);
@@ -180,15 +181,15 @@ namespace TencentCloud
                     bool SizeByteHasBeenSet() const;
 
                     /**
-                     * 获取Maximum storage limit of a file system
-                     * @return SizeLimit Maximum storage limit of a file system
+                     * 获取File system space limit, in GiB.
+                     * @return SizeLimit File system space limit, in GiB.
                      * 
                      */
                     uint64_t GetSizeLimit() const;
 
                     /**
-                     * 设置Maximum storage limit of a file system
-                     * @param _sizeLimit Maximum storage limit of a file system
+                     * 设置File system space limit, in GiB.
+                     * @param _sizeLimit File system space limit, in GiB.
                      * 
                      */
                     void SetSizeLimit(const uint64_t& _sizeLimit);
@@ -243,15 +244,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取File system protocol type
-                     * @return Protocol File system protocol type
+                     * 获取File system protocol type. Valid values: NFS, CIFS, and TURBO.
+                     * @return Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置File system protocol type
-                     * @param _protocol File system protocol type
+                     * 设置File system protocol type. Valid values: NFS, CIFS, and TURBO.
+                     * @param _protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -264,15 +265,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取File system storage class
-                     * @return StorageType File system storage class
+                     * 获取Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置File system storage class
-                     * @param _storageType File system storage class
+                     * 设置Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * @param _storageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -369,15 +370,15 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether a file system is encrypted
-                     * @return Encrypted Whether a file system is encrypted
+                     * 获取Is the file system encrypted. true: encrypted. false: non-encrypted.
+                     * @return Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
                      * 
                      */
                     bool GetEncrypted() const;
 
                     /**
-                     * 设置Whether a file system is encrypted
-                     * @param _encrypted Whether a file system is encrypted
+                     * 设置Is the file system encrypted. true: encrypted. false: non-encrypted.
+                     * @param _encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
                      * 
                      */
                     void SetEncrypted(const bool& _encrypted);
@@ -432,15 +433,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
-                     * @return BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     * 获取Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+                     * @return BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
                      * 
                      */
                     double GetBandwidthLimit() const;
 
                     /**
-                     * 设置The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
-                     * @param _bandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     * 设置Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+                     * @param _bandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
                      * 
                      */
                     void SetBandwidthLimit(const double& _bandwidthLimit);
@@ -453,15 +454,15 @@ namespace TencentCloud
                     bool BandwidthLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoSnapshotPolicyId 
+                     * 获取Snapshot policy associated with the file system.
+                     * @return AutoSnapshotPolicyId Snapshot policy associated with the file system.
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置
-                     * @param _autoSnapshotPolicyId 
+                     * 设置Snapshot policy associated with the file system.
+                     * @param _autoSnapshotPolicyId Snapshot policy associated with the file system.
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -474,15 +475,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnapStatus 
+                     * 获取File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+                     * @return SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
                      * 
                      */
                     std::string GetSnapStatus() const;
 
                     /**
-                     * 设置
-                     * @param _snapStatus 
+                     * 设置File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+                     * @param _snapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
                      * 
                      */
                     void SetSnapStatus(const std::string& _snapStatus);
@@ -495,15 +496,19 @@ namespace TencentCloud
                     bool SnapStatusHasBeenSet() const;
 
                     /**
-                     * 获取Total capacity of the file system
-                     * @return Capacity Total capacity of the file system
+                     * 获取Upper limit of file system capacity.
+Unit: GiB.
+                     * @return Capacity Upper limit of file system capacity.
+Unit: GiB.
                      * 
                      */
                     uint64_t GetCapacity() const;
 
                     /**
-                     * 设置Total capacity of the file system
-                     * @param _capacity Total capacity of the file system
+                     * 设置Upper limit of file system capacity.
+Unit: GiB.
+                     * @param _capacity Upper limit of file system capacity.
+Unit: GiB.
                      * 
                      */
                     void SetCapacity(const uint64_t& _capacity);
@@ -537,15 +542,23 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取The lifecycle management status of a file system.
-                     * @return TieringState The lifecycle management status of a file system.
+                     * 获取Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+                     * @return TieringState Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
                      * 
                      */
                     std::string GetTieringState() const;
 
                     /**
-                     * 设置The lifecycle management status of a file system.
-                     * @param _tieringState The lifecycle management status of a file system.
+                     * 设置Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+                     * @param _tieringState Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
                      * 
                      */
                     void SetTieringState(const std::string& _tieringState);
@@ -558,19 +571,15 @@ namespace TencentCloud
                     bool TieringStateHasBeenSet() const;
 
                     /**
-                     * 获取The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TieringDetail The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Layered storage detail.
+                     * @return TieringDetail Layered storage detail.
                      * 
                      */
                     TieringDetailInfo GetTieringDetail() const;
 
                     /**
-                     * 设置The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tieringDetail The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Layered storage detail.
+                     * @param _tieringDetail Layered storage detail.
                      * 
                      */
                     void SetTieringDetail(const TieringDetailInfo& _tieringDetail);
@@ -583,15 +592,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TieringDetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScaleUpRule 
+                     * 获取File system auto scale-out policy.
+                     * @return AutoScaleUpRule File system auto scale-out policy.
                      * 
                      */
                     AutoScaleUpRule GetAutoScaleUpRule() const;
 
                     /**
-                     * 设置
-                     * @param _autoScaleUpRule 
+                     * 设置File system auto scale-out policy.
+                     * @param _autoScaleUpRule File system auto scale-out policy.
                      * 
                      */
                     void SetAutoScaleUpRule(const AutoScaleUpRule& _autoScaleUpRule);
@@ -602,6 +611,77 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AutoScaleUpRuleHasBeenSet() const;
+
+                    /**
+                     * 获取File System Version
+                     * @return Version File System Version
+                     * 
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置File System Version
+                     * @param _version File System Version
+                     * 
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     * 
+                     */
+                    bool VersionHasBeenSet() const;
+
+                    /**
+                     * 获取Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExstraPerformanceInfo Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<ExstraPerformanceInfo> GetExstraPerformanceInfo() const;
+
+                    /**
+                     * 设置Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _exstraPerformanceInfo Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExstraPerformanceInfo(const std::vector<ExstraPerformanceInfo>& _exstraPerformanceInfo);
+
+                    /**
+                     * 判断参数 ExstraPerformanceInfo 是否已赋值
+                     * @return ExstraPerformanceInfo 是否已赋值
+                     * 
+                     */
+                    bool ExstraPerformanceInfoHasBeenSet() const;
+
+                    /**
+                     * 获取basic: standard version metadata type.
+enhanced: additional metadata type.
+                     * @return MetaType basic: standard version metadata type.
+enhanced: additional metadata type.
+                     * 
+                     */
+                    std::string GetMetaType() const;
+
+                    /**
+                     * 设置basic: standard version metadata type.
+enhanced: additional metadata type.
+                     * @param _metaType basic: standard version metadata type.
+enhanced: additional metadata type.
+                     * 
+                     */
+                    void SetMetaType(const std::string& _metaType);
+
+                    /**
+                     * 判断参数 MetaType 是否已赋值
+                     * @return MetaType 是否已赋值
+                     * 
+                     */
+                    bool MetaTypeHasBeenSet() const;
 
                 private:
 
@@ -636,13 +716,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lifeCycleStateHasBeenSet;
 
                     /**
-                     * Used file system capacity
+                     * Used capacity of the file system, in Byte.
                      */
                     uint64_t m_sizeByte;
                     bool m_sizeByteHasBeenSet;
 
                     /**
-                     * Maximum storage limit of a file system
+                     * File system space limit, in GiB.
                      */
                     uint64_t m_sizeLimit;
                     bool m_sizeLimitHasBeenSet;
@@ -660,13 +740,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * File system protocol type
+                     * File system protocol type. Valid values: NFS, CIFS, and TURBO.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * File system storage class
+                     * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -696,7 +776,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fsNameHasBeenSet;
 
                     /**
-                     * Whether a file system is encrypted
+                     * Is the file system encrypted. true: encrypted. false: non-encrypted.
                      */
                     bool m_encrypted;
                     bool m_encryptedHasBeenSet;
@@ -714,25 +794,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     * Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
                      */
                     double m_bandwidthLimit;
                     bool m_bandwidthLimitHasBeenSet;
 
                     /**
-                     * 
+                     * Snapshot policy associated with the file system.
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;
 
                     /**
-                     * 
+                     * File system processes snapshot status, snapping: in snapshot, normal: in normal status.
                      */
                     std::string m_snapStatus;
                     bool m_snapStatusHasBeenSet;
 
                     /**
-                     * Total capacity of the file system
+                     * Upper limit of file system capacity.
+Unit: GiB.
                      */
                     uint64_t m_capacity;
                     bool m_capacityHasBeenSet;
@@ -744,23 +825,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * The lifecycle management status of a file system.
+                     * Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
                      */
                     std::string m_tieringState;
                     bool m_tieringStateHasBeenSet;
 
                     /**
-                     * The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Layered storage detail.
                      */
                     TieringDetailInfo m_tieringDetail;
                     bool m_tieringDetailHasBeenSet;
 
                     /**
-                     * 
+                     * File system auto scale-out policy.
                      */
                     AutoScaleUpRule m_autoScaleUpRule;
                     bool m_autoScaleUpRuleHasBeenSet;
+
+                    /**
+                     * File System Version
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
+
+                    /**
+                     * Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ExstraPerformanceInfo> m_exstraPerformanceInfo;
+                    bool m_exstraPerformanceInfoHasBeenSet;
+
+                    /**
+                     * basic: standard version metadata type.
+enhanced: additional metadata type.
+                     */
+                    std::string m_metaType;
+                    bool m_metaTypeHasBeenSet;
 
                 };
             }

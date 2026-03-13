@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Permission group ID
-                     * @return PGroupId Permission group ID
+                     * 获取Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID
-                     * @param _pGroupId Permission group ID
+                     * 设置Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+                     * @param _pGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Permission group description, which can contain 1-255 characters
-                     * @return DescInfo Permission group description, which can contain 1-255 characters
+                     * 获取Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
+                     * @return DescInfo Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
                      * 
                      */
                     std::string GetDescInfo() const;
 
                     /**
-                     * 设置Permission group description, which can contain 1-255 characters
-                     * @param _descInfo Permission group description, which can contain 1-255 characters
+                     * 设置Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
+                     * @param _descInfo Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
                      * 
                      */
                     void SetDescInfo(const std::string& _descInfo);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Permission group ID
+                     * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Permission group description, which can contain 1-255 characters
+                     * Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
                      */
                     std::string m_descInfo;
                     bool m_descInfoHasBeenSet;

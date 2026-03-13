@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system snapshot ID
-                     * @return SnapshotId File system snapshot ID
+                     * 获取Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+                     * @return SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置File system snapshot ID
-                     * @param _snapshotId File system snapshot ID
+                     * 设置Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+                     * @param _snapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取File system snapshot name
-                     * @return SnapshotName File system snapshot name
+                     * 获取File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * @return SnapshotName File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置File system snapshot name
-                     * @param _snapshotName File system snapshot name
+                     * 设置File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * @param _snapshotName File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
-                     * 获取File system snapshot retention period in days
-                     * @return AliveDays File system snapshot retention period in days
+                     * 获取File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
+                     * @return AliveDays File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
                      * 
                      */
                     uint64_t GetAliveDays() const;
 
                     /**
-                     * 设置File system snapshot retention period in days
-                     * @param _aliveDays File system snapshot retention period in days
+                     * 设置File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
+                     * @param _aliveDays File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
                      * 
                      */
                     void SetAliveDays(const uint64_t& _aliveDays);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system snapshot ID
+                     * Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * File system snapshot name
+                     * File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
 
                     /**
-                     * File system snapshot retention period in days
+                     * File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
                      */
                     uint64_t m_aliveDays;
                     bool m_aliveDaysHasBeenSet;

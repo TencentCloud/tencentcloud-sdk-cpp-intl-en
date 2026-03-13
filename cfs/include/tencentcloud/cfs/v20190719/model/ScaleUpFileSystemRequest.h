@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Target capacity after scaling
-                     * @return TargetCapacity Target capacity after scaling
+                     * 获取Target capacity after scale-out (unit GiB).
+                     * @return TargetCapacity Target capacity after scale-out (unit GiB).
                      * 
                      */
                     uint64_t GetTargetCapacity() const;
 
                     /**
-                     * 设置Target capacity after scaling
-                     * @param _targetCapacity Target capacity after scaling
+                     * 设置Target capacity after scale-out (unit GiB).
+                     * @param _targetCapacity Target capacity after scale-out (unit GiB).
                      * 
                      */
                     void SetTargetCapacity(const uint64_t& _targetCapacity);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Target capacity after scaling
+                     * Target capacity after scale-out (unit GiB).
                      */
                     uint64_t m_targetCapacity;
                     bool m_targetCapacityHasBeenSet;

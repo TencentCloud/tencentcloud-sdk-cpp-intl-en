@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Target capacity after scaling
-                     * @return TargetCapacity Target capacity after scaling
+                     * 获取Target capacity after scale-out (unit GiB).
+                     * @return TargetCapacity Target capacity after scale-out (unit GiB).
                      * 
                      */
                     uint64_t GetTargetCapacity() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Target capacity after scaling
+                     * Target capacity after scale-out (unit GiB).
                      */
                     uint64_t m_targetCapacity;
                     bool m_targetCapacityHasBeenSet;

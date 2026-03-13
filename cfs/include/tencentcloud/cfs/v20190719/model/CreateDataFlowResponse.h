@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CFS_V20190719_MODEL_DELETEMOUNTTARGETRESPONSE_H_
-#define TENCENTCLOUD_CFS_V20190719_MODEL_DELETEMOUNTTARGETRESPONSE_H_
+#ifndef TENCENTCLOUD_CFS_V20190719_MODEL_CREATEDATAFLOWRESPONSE_H_
+#define TENCENTCLOUD_CFS_V20190719_MODEL_CREATEDATAFLOWRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,18 +32,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DeleteMountTarget response structure.
+                * CreateDataFlow response structure.
                 */
-                class DeleteMountTargetResponse : public AbstractModel
+                class CreateDataFlowResponse : public AbstractModel
                 {
                 public:
-                    DeleteMountTargetResponse();
-                    ~DeleteMountTargetResponse() = default;
+                    CreateDataFlowResponse();
+                    ~CreateDataFlowResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Data flow manage ID.
+                     * @return DataFlowId Data flow manage ID.
+                     * 
+                     */
+                    std::string GetDataFlowId() const;
+
+                    /**
+                     * 判断参数 DataFlowId 是否已赋值
+                     * @return DataFlowId 是否已赋值
+                     * 
+                     */
+                    bool DataFlowIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Data flow manage ID.
+                     */
+                    std::string m_dataFlowId;
+                    bool m_dataFlowIdHasBeenSet;
 
                 };
             }
@@ -51,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CFS_V20190719_MODEL_DELETEMOUNTTARGETRESPONSE_H_
+#endif // !TENCENTCLOUD_CFS_V20190719_MODEL_CREATEDATAFLOWRESPONSE_H_

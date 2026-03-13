@@ -64,19 +64,15 @@ namespace TencentCloud
                     bool SrcServiceHasBeenSet() const;
 
                     /**
-                     * 获取SecretId of the data source account
-
-                     * @return SrcSecretId SecretId of the data source account
-
+                     * 获取SecretId of the data source account.
+                     * @return SrcSecretId SecretId of the data source account.
                      * 
                      */
                     std::string GetSrcSecretId() const;
 
                     /**
-                     * 设置SecretId of the data source account
-
-                     * @param _srcSecretId SecretId of the data source account
-
+                     * 设置SecretId of the data source account.
+                     * @param _srcSecretId SecretId of the data source account.
                      * 
                      */
                     void SetSrcSecretId(const std::string& _srcSecretId);
@@ -118,8 +114,7 @@ namespace TencentCloud
                     bool m_srcServiceHasBeenSet;
 
                     /**
-                     * SecretId of the data source account
-
+                     * SecretId of the data source account.
                      */
                     std::string m_srcSecretId;
                     bool m_srcSecretIdHasBeenSet;

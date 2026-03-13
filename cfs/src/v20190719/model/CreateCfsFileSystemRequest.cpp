@@ -36,7 +36,12 @@ CreateCfsFileSystemRequest::CreateCfsFileSystemRequest() :
     m_clientTokenHasBeenSet(false),
     m_ccnIdHasBeenSet(false),
     m_cidrBlockHasBeenSet(false),
-    m_capacityHasBeenSet(false)
+    m_capacityHasBeenSet(false),
+    m_snapshotIdHasBeenSet(false),
+    m_autoSnapshotPolicyIdHasBeenSet(false),
+    m_enableAutoScaleUpHasBeenSet(false),
+    m_cfsVersionHasBeenSet(false),
+    m_metaTypeHasBeenSet(false)
 {
 }
 
@@ -164,6 +169,46 @@ string CreateCfsFileSystemRequest::ToJsonString() const
         string key = "Capacity";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_capacity, allocator);
+    }
+
+    if (m_snapshotIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapshotId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_snapshotId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoSnapshotPolicyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoSnapshotPolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_autoSnapshotPolicyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_enableAutoScaleUpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableAutoScaleUp";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableAutoScaleUp, allocator);
+    }
+
+    if (m_cfsVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CfsVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cfsVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_metaTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetaType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_metaType.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -396,6 +441,86 @@ void CreateCfsFileSystemRequest::SetCapacity(const uint64_t& _capacity)
 bool CreateCfsFileSystemRequest::CapacityHasBeenSet() const
 {
     return m_capacityHasBeenSet;
+}
+
+string CreateCfsFileSystemRequest::GetSnapshotId() const
+{
+    return m_snapshotId;
+}
+
+void CreateCfsFileSystemRequest::SetSnapshotId(const string& _snapshotId)
+{
+    m_snapshotId = _snapshotId;
+    m_snapshotIdHasBeenSet = true;
+}
+
+bool CreateCfsFileSystemRequest::SnapshotIdHasBeenSet() const
+{
+    return m_snapshotIdHasBeenSet;
+}
+
+string CreateCfsFileSystemRequest::GetAutoSnapshotPolicyId() const
+{
+    return m_autoSnapshotPolicyId;
+}
+
+void CreateCfsFileSystemRequest::SetAutoSnapshotPolicyId(const string& _autoSnapshotPolicyId)
+{
+    m_autoSnapshotPolicyId = _autoSnapshotPolicyId;
+    m_autoSnapshotPolicyIdHasBeenSet = true;
+}
+
+bool CreateCfsFileSystemRequest::AutoSnapshotPolicyIdHasBeenSet() const
+{
+    return m_autoSnapshotPolicyIdHasBeenSet;
+}
+
+bool CreateCfsFileSystemRequest::GetEnableAutoScaleUp() const
+{
+    return m_enableAutoScaleUp;
+}
+
+void CreateCfsFileSystemRequest::SetEnableAutoScaleUp(const bool& _enableAutoScaleUp)
+{
+    m_enableAutoScaleUp = _enableAutoScaleUp;
+    m_enableAutoScaleUpHasBeenSet = true;
+}
+
+bool CreateCfsFileSystemRequest::EnableAutoScaleUpHasBeenSet() const
+{
+    return m_enableAutoScaleUpHasBeenSet;
+}
+
+string CreateCfsFileSystemRequest::GetCfsVersion() const
+{
+    return m_cfsVersion;
+}
+
+void CreateCfsFileSystemRequest::SetCfsVersion(const string& _cfsVersion)
+{
+    m_cfsVersion = _cfsVersion;
+    m_cfsVersionHasBeenSet = true;
+}
+
+bool CreateCfsFileSystemRequest::CfsVersionHasBeenSet() const
+{
+    return m_cfsVersionHasBeenSet;
+}
+
+string CreateCfsFileSystemRequest::GetMetaType() const
+{
+    return m_metaType;
+}
+
+void CreateCfsFileSystemRequest::SetMetaType(const string& _metaType)
+{
+    m_metaType = _metaType;
+    m_metaTypeHasBeenSet = true;
+}
+
+bool CreateCfsFileSystemRequest::MetaTypeHasBeenSet() const
+{
+    return m_metaTypeHasBeenSet;
 }
 
 

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+                     * @param _fileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ScaleUpThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
-                     * @return TargetThreshold Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+                     * 获取Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+                     * @return TargetThreshold Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
                      * 
                      */
                     uint64_t GetTargetThreshold() const;
 
                     /**
-                     * 设置Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
-                     * @param _targetThreshold Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+                     * 设置Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+                     * @param _targetThreshold Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
                      * 
                      */
                     void SetTargetThreshold(const uint64_t& _targetThreshold);
@@ -106,19 +106,15 @@ namespace TencentCloud
                     bool TargetThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
-                     * @return Status Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+                     * 获取Rule status 0: turn off, 1: turn on; keep the original status if not specified.
+                     * @return Status Rule status 0: turn off, 1: turn on; keep the original status if not specified.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
-                     * @param _status Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+                     * 设置Rule status 0: turn off, 1: turn on; keep the original status if not specified.
+                     * @param _status Rule status 0: turn off, 1: turn on; keep the original status if not specified.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -133,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID
+                     * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
@@ -145,14 +141,13 @@ namespace TencentCloud
                     bool m_scaleUpThresholdHasBeenSet;
 
                     /**
-                     * Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+                     * Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
                      */
                     uint64_t m_targetThreshold;
                     bool m_targetThresholdHasBeenSet;
 
                     /**
-                     * Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+                     * Rule status 0: turn off, 1: turn on; keep the original status if not specified.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

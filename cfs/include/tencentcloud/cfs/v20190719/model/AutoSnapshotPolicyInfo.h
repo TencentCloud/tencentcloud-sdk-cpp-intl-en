@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cfs/v20190719/model/FileSystemByPolicy.h>
+#include <tencentcloud/cfs/v20190719/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot policy name
-                     * @return PolicyName Snapshot policy name
+                     * 获取Snapshot policy name.
+                     * @return PolicyName Snapshot policy name.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
-                     * 设置Snapshot policy name
-                     * @param _policyName Snapshot policy name
+                     * 设置Snapshot policy name.
+                     * @param _policyName Snapshot policy name.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool HourHasBeenSet() const;
 
                     /**
-                     * 获取Whether to activate the scheduled snapshot feature
-                     * @return IsActivated Whether to activate the scheduled snapshot feature
+                     * 获取Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
+                     * @return IsActivated Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
                      * 
                      */
                     uint64_t GetIsActivated() const;
 
                     /**
-                     * 设置Whether to activate the scheduled snapshot feature
-                     * @param _isActivated Whether to activate the scheduled snapshot feature
+                     * 设置Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
+                     * @param _isActivated Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
                      * 
                      */
                     void SetIsActivated(const uint64_t& _isActivated);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool NextActiveTimeHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot policy status
-                     * @return Status Snapshot policy status
+                     * 获取Snapshot policy status. available represents normal status. only status here.
+                     * @return Status Snapshot policy status. available represents normal status. only status here.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Snapshot policy status
-                     * @param _status Snapshot policy status
+                     * 设置Snapshot policy status. available represents normal status. only status here.
+                     * @param _status Snapshot policy status. available represents normal status. only status here.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Account ID
-                     * @return AppId Account ID
+                     * 获取Account ID.
+                     * @return AppId Account ID.
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置Account ID
-                     * @param _appId Account ID
+                     * 设置Account ID.
+                     * @param _appId Account ID.
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -370,6 +371,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IntervalDaysHasBeenSet() const;
 
+                    /**
+                     * 获取Snapshot retention time for cross-region replication, in days.
+                     * @return CrossRegionsAliveDays Snapshot retention time for cross-region replication, in days.
+                     * 
+                     */
+                    uint64_t GetCrossRegionsAliveDays() const;
+
+                    /**
+                     * 设置Snapshot retention time for cross-region replication, in days.
+                     * @param _crossRegionsAliveDays Snapshot retention time for cross-region replication, in days.
+                     * 
+                     */
+                    void SetCrossRegionsAliveDays(const uint64_t& _crossRegionsAliveDays);
+
+                    /**
+                     * 判断参数 CrossRegionsAliveDays 是否已赋值
+                     * @return CrossRegionsAliveDays 是否已赋值
+                     * 
+                     */
+                    bool CrossRegionsAliveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Snapshot policy tag.
+                     * @return Tags Snapshot policy tag.
+                     * 
+                     */
+                    std::vector<TagInfo> GetTags() const;
+
+                    /**
+                     * 设置Snapshot policy tag.
+                     * @param _tags Snapshot policy tag.
+                     * 
+                     */
+                    void SetTags(const std::vector<TagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -379,7 +422,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_autoSnapshotPolicyIdHasBeenSet;
 
                     /**
-                     * Snapshot policy name
+                     * Snapshot policy name.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
@@ -409,7 +452,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hourHasBeenSet;
 
                     /**
-                     * Whether to activate the scheduled snapshot feature
+                     * Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
                      */
                     uint64_t m_isActivated;
                     bool m_isActivatedHasBeenSet;
@@ -421,13 +464,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nextActiveTimeHasBeenSet;
 
                     /**
-                     * Snapshot policy status
+                     * Snapshot policy status. available represents normal status. only status here.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Account ID
+                     * Account ID.
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -463,6 +506,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_intervalDays;
                     bool m_intervalDaysHasBeenSet;
+
+                    /**
+                     * Snapshot retention time for cross-region replication, in days.
+                     */
+                    uint64_t m_crossRegionsAliveDays;
+                    bool m_crossRegionsAliveDaysHasBeenSet;
+
+                    /**
+                     * Snapshot policy tag.
+                     */
+                    std::vector<TagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

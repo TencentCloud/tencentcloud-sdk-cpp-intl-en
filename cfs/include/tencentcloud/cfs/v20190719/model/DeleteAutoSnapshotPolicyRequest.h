@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot policy ID
-                     * @return AutoSnapshotPolicyId Snapshot policy ID
+                     * 获取Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @return AutoSnapshotPolicyId Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置Snapshot policy ID
-                     * @param _autoSnapshotPolicyId Snapshot policy ID
+                     * 设置Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+                     * @param _autoSnapshotPolicyId Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Snapshot policy ID
+                     * Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;

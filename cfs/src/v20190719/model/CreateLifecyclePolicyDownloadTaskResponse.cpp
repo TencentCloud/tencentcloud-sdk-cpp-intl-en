@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cfs/v20190719/model/DeleteMountTargetResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateLifecyclePolicyDownloadTaskResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
 using namespace std;
 
-DeleteMountTargetResponse::DeleteMountTargetResponse()
+CreateLifecyclePolicyDownloadTaskResponse::CreateLifecyclePolicyDownloadTaskResponse() :
+    m_downloadAddressHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DeleteMountTargetResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateLifecyclePolicyDownloadTaskResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +62,33 @@ CoreInternalOutcome DeleteMountTargetResponse::Deserialize(const string &payload
     }
 
 
+    if (rsp.HasMember("DownloadAddress") && !rsp["DownloadAddress"].IsNull())
+    {
+        if (!rsp["DownloadAddress"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DownloadAddress` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_downloadAddress = string(rsp["DownloadAddress"].GetString());
+        m_downloadAddressHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string DeleteMountTargetResponse::ToJsonString() const
+string CreateLifecyclePolicyDownloadTaskResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_downloadAddressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DownloadAddress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_downloadAddress.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +101,15 @@ string DeleteMountTargetResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+string CreateLifecyclePolicyDownloadTaskResponse::GetDownloadAddress() const
+{
+    return m_downloadAddress;
+}
+
+bool CreateLifecyclePolicyDownloadTaskResponse::DownloadAddressHasBeenSet() const
+{
+    return m_downloadAddressHasBeenSet;
+}
 
 

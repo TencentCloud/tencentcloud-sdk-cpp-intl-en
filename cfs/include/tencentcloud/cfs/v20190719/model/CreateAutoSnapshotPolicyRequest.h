@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cfs/v20190719/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The time point when to repeat the snapshot operation
-                     * @return Hour The time point when to repeat the snapshot operation
+                     * 获取Snapshot repeat time point. value range: 0-23 hr.
+                     * @return Hour Snapshot repeat time point. value range: 0-23 hr.
                      * 
                      */
                     std::string GetHour() const;
 
                     /**
-                     * 设置The time point when to repeat the snapshot operation
-                     * @param _hour The time point when to repeat the snapshot operation
+                     * 设置Snapshot repeat time point. value range: 0-23 hr.
+                     * @param _hour Snapshot repeat time point. value range: 0-23 hr.
                      * 
                      */
                     void SetHour(const std::string& _hour);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool HourHasBeenSet() const;
 
                     /**
-                     * 获取Policy name
-                     * @return PolicyName Policy name
+                     * 获取Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
+                     * @return PolicyName Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
-                     * 设置Policy name
-                     * @param _policyName Policy name
+                     * 设置Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
+                     * @param _policyName Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取The day of the week on which to repeat the snapshot operation
-                     * @return DayOfWeek The day of the week on which to repeat the snapshot operation
+                     * 获取Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+                     * @return DayOfWeek Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      * 
                      */
                     std::string GetDayOfWeek() const;
 
                     /**
-                     * 设置The day of the week on which to repeat the snapshot operation
-                     * @param _dayOfWeek The day of the week on which to repeat the snapshot operation
+                     * 设置Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+                     * @param _dayOfWeek Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      * 
                      */
                     void SetDayOfWeek(const std::string& _dayOfWeek);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool DayOfWeekHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot retention period
-                     * @return AliveDays Snapshot retention period
+                     * 获取Specifies the snapshot retention duration in days. the default value is 0 (permanent).
+                     * @return AliveDays Specifies the snapshot retention duration in days. the default value is 0 (permanent).
                      * 
                      */
                     uint64_t GetAliveDays() const;
 
                     /**
-                     * 设置Snapshot retention period
-                     * @param _aliveDays Snapshot retention period
+                     * 设置Specifies the snapshot retention duration in days. the default value is 0 (permanent).
+                     * @param _aliveDays Specifies the snapshot retention duration in days. the default value is 0 (permanent).
                      * 
                      */
                     void SetAliveDays(const uint64_t& _aliveDays);
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool AliveDaysHasBeenSet() const;
 
                     /**
-                     * 获取The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
-                     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+                     * 获取Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
+                     * @return DayOfMonth Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
                      * 
                      */
                     std::string GetDayOfMonth() const;
 
                     /**
-                     * 设置The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
-                     * @param _dayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+                     * 设置Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
+                     * @param _dayOfMonth Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
                      * 
                      */
                     void SetDayOfMonth(const std::string& _dayOfMonth);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool DayOfMonthHasBeenSet() const;
 
                     /**
-                     * 获取The snapshot interval, in days.
-                     * @return IntervalDays The snapshot interval, in days.
+                     * 获取Interval days. choose one of the three with DayOfWeek and DayOfMonth.
+                     * @return IntervalDays Interval days. choose one of the three with DayOfWeek and DayOfMonth.
                      * 
                      */
                     uint64_t GetIntervalDays() const;
 
                     /**
-                     * 设置The snapshot interval, in days.
-                     * @param _intervalDays The snapshot interval, in days.
+                     * 设置Interval days. choose one of the three with DayOfWeek and DayOfMonth.
+                     * @param _intervalDays Interval days. choose one of the three with DayOfWeek and DayOfMonth.
                      * 
                      */
                     void SetIntervalDays(const uint64_t& _intervalDays);
@@ -168,43 +169,70 @@ namespace TencentCloud
                      */
                     bool IntervalDaysHasBeenSet() const;
 
+                    /**
+                     * 获取Snapshot policy tag.
+                     * @return ResourceTags Snapshot policy tag.
+                     * 
+                     */
+                    std::vector<TagInfo> GetResourceTags() const;
+
+                    /**
+                     * 设置Snapshot policy tag.
+                     * @param _resourceTags Snapshot policy tag.
+                     * 
+                     */
+                    void SetResourceTags(const std::vector<TagInfo>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     * 
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The time point when to repeat the snapshot operation
+                     * Snapshot repeat time point. value range: 0-23 hr.
                      */
                     std::string m_hour;
                     bool m_hourHasBeenSet;
 
                     /**
-                     * Policy name
+                     * Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * The day of the week on which to repeat the snapshot operation
+                     * Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
                      */
                     std::string m_dayOfWeek;
                     bool m_dayOfWeekHasBeenSet;
 
                     /**
-                     * Snapshot retention period
+                     * Specifies the snapshot retention duration in days. the default value is 0 (permanent).
                      */
                     uint64_t m_aliveDays;
                     bool m_aliveDaysHasBeenSet;
 
                     /**
-                     * The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+                     * Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
                      */
                     std::string m_dayOfMonth;
                     bool m_dayOfMonthHasBeenSet;
 
                     /**
-                     * The snapshot interval, in days.
+                     * Interval days. choose one of the three with DayOfWeek and DayOfMonth.
                      */
                     uint64_t m_intervalDays;
                     bool m_intervalDaysHasBeenSet;
+
+                    /**
+                     * Snapshot policy tag.
+                     */
+                    std::vector<TagInfo> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }

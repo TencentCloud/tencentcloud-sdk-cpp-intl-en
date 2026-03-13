@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Auto scale-out rule.
                 */
                 class AutoScaleUpRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Enable auto scale-out policy, disable.
+                     * @return Status Enable auto scale-out policy, disable.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Enable auto scale-out policy, disable.
+                     * @param _status Enable auto scale-out policy, disable.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScaleThreshold 
+                     * 获取Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+                     * @return ScaleThreshold Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
                      * 
                      */
                     uint64_t GetScaleThreshold() const;
 
                     /**
-                     * 设置
-                     * @param _scaleThreshold 
+                     * 设置Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+                     * @param _scaleThreshold Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
                      * 
                      */
                     void SetScaleThreshold(const uint64_t& _scaleThreshold);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ScaleThresholdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetThreshold 
+                     * 获取Used capacity to total clusters ratio after expansion. value range: [10-90].
+                     * @return TargetThreshold Used capacity to total clusters ratio after expansion. value range: [10-90].
                      * 
                      */
                     uint64_t GetTargetThreshold() const;
 
                     /**
-                     * 设置
-                     * @param _targetThreshold 
+                     * 设置Used capacity to total clusters ratio after expansion. value range: [10-90].
+                     * @param _targetThreshold Used capacity to total clusters ratio after expansion. value range: [10-90].
                      * 
                      */
                     void SetTargetThreshold(const uint64_t& _targetThreshold);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Enable auto scale-out policy, disable.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
                      */
                     uint64_t m_scaleThreshold;
                     bool m_scaleThresholdHasBeenSet;
 
                     /**
-                     * 
+                     * Used capacity to total clusters ratio after expansion. value range: [10-90].
                      */
                     uint64_t m_targetThreshold;
                     bool m_targetThresholdHasBeenSet;

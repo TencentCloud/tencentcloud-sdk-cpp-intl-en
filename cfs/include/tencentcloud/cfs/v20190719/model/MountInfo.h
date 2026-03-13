@@ -131,15 +131,23 @@ namespace TencentCloud
                     bool FSIDHasBeenSet() const;
 
                     /**
-                     * 获取Mount target status
-                     * @return LifeCycleState Mount target status
+                     * 获取Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+                     * @return LifeCycleState Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
                      * 
                      */
                     std::string GetLifeCycleState() const;
 
                     /**
-                     * 设置Mount target status
-                     * @param _lifeCycleState Mount target status
+                     * 设置Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+                     * @param _lifeCycleState Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
                      * 
                      */
                     void SetLifeCycleState(const std::string& _lifeCycleState);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
-                     * 获取Network type
-                     * @return NetworkInterface Network type
+                     * 获取Network type, including VPC, CCN.
+                     * @return NetworkInterface Network type, including VPC, CCN.
                      * 
                      */
                     std::string GetNetworkInterface() const;
 
                     /**
-                     * 设置Network type
-                     * @param _networkInterface Network type
+                     * 设置Network type, including VPC, CCN.
+                     * @param _networkInterface Network type, including VPC, CCN.
                      * 
                      */
                     void SetNetworkInterface(const std::string& _networkInterface);
@@ -325,13 +333,15 @@ namespace TencentCloud
                     bool m_fSIDHasBeenSet;
 
                     /**
-                     * Mount target status
+                     * Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;
 
                     /**
-                     * Network type
+                     * Network type, including VPC, CCN.
                      */
                     std::string m_networkInterface;
                     bool m_networkInterfaceHasBeenSet;

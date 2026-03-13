@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SnapshotNumberHasBeenSet() const;
 
                     /**
-                     * 获取Total snapshot size
-                     * @return SnapshotSize Total snapshot size
+                     * 获取Total snapshot capacity in MiB.
+                     * @return SnapshotSize Total snapshot capacity in MiB.
                      * 
                      */
                     uint64_t GetSnapshotSize() const;
 
                     /**
-                     * 设置Total snapshot size
-                     * @param _snapshotSize Total snapshot size
+                     * 设置Total snapshot capacity in MiB.
+                     * @param _snapshotSize Total snapshot capacity in MiB.
                      * 
                      */
                     void SetSnapshotSize(const uint64_t& _snapshotSize);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_snapshotNumberHasBeenSet;
 
                     /**
-                     * Total snapshot size
+                     * Total snapshot capacity in MiB.
                      */
                     uint64_t m_snapshotSize;
                     bool m_snapshotSizeHasBeenSet;

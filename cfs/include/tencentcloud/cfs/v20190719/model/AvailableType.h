@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProtocolsHasBeenSet() const;
 
                     /**
-                     * 获取Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
-                     * @return Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * 获取Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+                     * @return Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
-                     * @param _type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * 设置Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+                     * @param _type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -119,7 +119,7 @@ namespace TencentCloud
                     bool m_protocolsHasBeenSet;
 
                     /**
-                     * Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
