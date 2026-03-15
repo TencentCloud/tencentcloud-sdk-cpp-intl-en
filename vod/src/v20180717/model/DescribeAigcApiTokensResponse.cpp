@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tdmysql/v20211122/model/ModifyBinlogStatusResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeAigcApiTokensResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tdmysql::V20211122::Model;
+using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-ModifyBinlogStatusResponse::ModifyBinlogStatusResponse() :
-    m_flowIdHasBeenSet(false)
+DescribeAigcApiTokensResponse::DescribeAigcApiTokensResponse() :
+    m_apiTokensHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyBinlogStatusResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeAigcApiTokensResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,40 @@ CoreInternalOutcome ModifyBinlogStatusResponse::Deserialize(const string &payloa
     }
 
 
-    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
+    if (rsp.HasMember("ApiTokens") && !rsp["ApiTokens"].IsNull())
     {
-        if (!rsp["FlowId"].IsInt64())
+        if (!rsp["ApiTokens"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ApiTokens` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["ApiTokens"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
+            m_apiTokens.push_back((*itr).GetString());
         }
-        m_flowId = rsp["FlowId"].GetInt64();
-        m_flowIdHasBeenSet = true;
+        m_apiTokensHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyBinlogStatusResponse::ToJsonString() const
+string DescribeAigcApiTokensResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_flowIdHasBeenSet)
+    if (m_apiTokensHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FlowId";
+        string key = "ApiTokens";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_flowId, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_apiTokens.begin(); itr != m_apiTokens.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +110,14 @@ string ModifyBinlogStatusResponse::ToJsonString() const
 }
 
 
-int64_t ModifyBinlogStatusResponse::GetFlowId() const
+vector<string> DescribeAigcApiTokensResponse::GetApiTokens() const
 {
-    return m_flowId;
+    return m_apiTokens;
 }
 
-bool ModifyBinlogStatusResponse::FlowIdHasBeenSet() const
+bool DescribeAigcApiTokensResponse::ApiTokensHasBeenSet() const
 {
-    return m_flowIdHasBeenSet;
+    return m_apiTokensHasBeenSet;
 }
 
 

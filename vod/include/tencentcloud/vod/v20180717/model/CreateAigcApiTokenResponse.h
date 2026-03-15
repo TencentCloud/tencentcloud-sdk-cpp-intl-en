@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TDMYSQL_V20211122_MODEL_MODIFYBINLOGSTATUSRESPONSE_H_
-#define TENCENTCLOUD_TDMYSQL_V20211122_MODEL_MODIFYBINLOGSTATUSRESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_CREATEAIGCAPITOKENRESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_CREATEAIGCAPITOKENRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,45 +25,45 @@
 
 namespace TencentCloud
 {
-    namespace Tdmysql
+    namespace Vod
     {
-        namespace V20211122
+        namespace V20180717
         {
             namespace Model
             {
                 /**
-                * ModifyBinlogStatus response structure.
+                * CreateAigcApiToken response structure.
                 */
-                class ModifyBinlogStatusResponse : public AbstractModel
+                class CreateAigcApiTokenResponse : public AbstractModel
                 {
                 public:
-                    ModifyBinlogStatusResponse();
-                    ~ModifyBinlogStatusResponse() = default;
+                    CreateAigcApiTokenResponse();
+                    ~CreateAigcApiTokenResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Process id of the flow.
-                     * @return FlowId Process id of the flow.
+                     * 获取API Token.
+                     * @return ApiToken API Token.
                      * 
                      */
-                    int64_t GetFlowId() const;
+                    std::string GetApiToken() const;
 
                     /**
-                     * 判断参数 FlowId 是否已赋值
-                     * @return FlowId 是否已赋值
+                     * 判断参数 ApiToken 是否已赋值
+                     * @return ApiToken 是否已赋值
                      * 
                      */
-                    bool FlowIdHasBeenSet() const;
+                    bool ApiTokenHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Process id of the flow.
+                     * API Token.
                      */
-                    int64_t m_flowId;
-                    bool m_flowIdHasBeenSet;
+                    std::string m_apiToken;
+                    bool m_apiTokenHasBeenSet;
 
                 };
             }
@@ -71,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TDMYSQL_V20211122_MODEL_MODIFYBINLOGSTATUSRESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_CREATEAIGCAPITOKENRESPONSE_H_

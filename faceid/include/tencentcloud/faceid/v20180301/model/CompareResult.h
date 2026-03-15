@@ -49,50 +49,66 @@ namespace TencentCloud
 
                     /**
                      * 获取The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
                      * @return ErrorCode The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
                      * 
                      */
                     std::string GetErrorCode() const;
 
                     /**
                      * 设置The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
                      * @param _errorCode The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
                      * 
                      */
                     void SetErrorCode(const std::string& _errorCode);
@@ -192,11 +208,19 @@ namespace TencentCloud
                      * 获取The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
                      * @return LiveErrorCode The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
                      * 
                      */
                     std::string GetLiveErrorCode() const;
@@ -205,11 +229,19 @@ namespace TencentCloud
                      * 设置The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
                      * @param _liveErrorCode The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
                      * 
                      */
                     void SetLiveErrorCode(const std::string& _liveErrorCode);
@@ -291,21 +323,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 获取The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CompareErrorCode The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -314,21 +348,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 设置The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _compareErrorCode The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -535,15 +571,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The final verification result code.
-0: Success.
-1001: Failed to call the liveness detection engine.
+0: Succeeded.
+1001: Failed to call the liveness engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
                      */
                     std::string m_errorCode;
                     bool m_errorCodeHasBeenSet;
@@ -576,7 +616,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
+1002: Suspected spoofed recording.
 1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
+
                      */
                     std::string m_liveErrorCode;
                     bool m_liveErrorCodeHasBeenSet;
@@ -603,12 +647,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * The face comparison result code.
 0: Success.
-2004: The uploaded face image is too large or too small.
-2012: The face is not fully exposed.
-2013: No face is detected.
-2014: The resolution of the uploaded image is too low . Please upload a new one.
+2004: The image passed in is too large or too small.
+2012: Multiple faces detected.
+2013: No face was detected, or the face detected was incomplete.
+2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
-2016: The similarity did not reach the passing standard.
+2016: The similarity did not reach the standard passing threshold.
+2017: Facial occlusion detected.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_compareErrorCode;

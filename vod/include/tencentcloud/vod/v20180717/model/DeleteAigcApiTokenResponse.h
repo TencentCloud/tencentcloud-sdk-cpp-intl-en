@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TDMYSQL_V20211122_MODEL_DESCRIBEBILLINGENABLERESPONSE_H_
-#define TENCENTCLOUD_TDMYSQL_V20211122_MODEL_DESCRIBEBILLINGENABLERESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_DELETEAIGCAPITOKENRESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_DELETEAIGCAPITOKENRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,20 +25,20 @@
 
 namespace TencentCloud
 {
-    namespace Tdmysql
+    namespace Vod
     {
-        namespace V20211122
+        namespace V20180717
         {
             namespace Model
             {
                 /**
-                * DescribeBillingEnable response structure.
+                * DeleteAigcApiToken response structure.
                 */
-                class DescribeBillingEnableResponse : public AbstractModel
+                class DeleteAigcApiTokenResponse : public AbstractModel
                 {
                 public:
-                    DescribeBillingEnableResponse();
-                    ~DescribeBillingEnableResponse() = default;
+                    DeleteAigcApiTokenResponse();
+                    ~DeleteAigcApiTokenResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TDMYSQL_V20211122_MODEL_DESCRIBEBILLINGENABLERESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_DELETEAIGCAPITOKENRESPONSE_H_

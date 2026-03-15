@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance list that needs to be modified.
-                     * @return InstanceIds Instance list that needs to be modified.
+                     * 获取<P>Instance list that needs to be modified</p>.
+                     * @return InstanceIds <P>Instance list that needs to be modified</p>.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance list that needs to be modified.
-                     * @param _instanceIds Instance list that needs to be modified.
+                     * 设置<P>Instance list that needs to be modified</p>.
+                     * @param _instanceIds <P>Instance list that needs to be modified</p>.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
-                     * @return AutoRenewFlag 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+                     * 获取<P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
+                     * @return AutoRenewFlag <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
-                     * @param _autoRenewFlag 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+                     * 设置<P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
+                     * @param _autoRenewFlag <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance list that needs to be modified.
+                     * <P>Instance list that needs to be modified</p>.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+                     * <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

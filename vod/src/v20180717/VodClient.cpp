@@ -490,6 +490,56 @@ VodClient::CreateAdaptiveDynamicStreamingTemplateOutcomeCallable VodClient::Crea
     return prom->get_future();
 }
 
+VodClient::CreateAigcApiTokenOutcome VodClient::CreateAigcApiToken(const CreateAigcApiTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAigcApiToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAigcApiTokenResponse rsp = CreateAigcApiTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAigcApiTokenOutcome(rsp);
+        else
+            return CreateAigcApiTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAigcApiTokenOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateAigcApiTokenAsync(const CreateAigcApiTokenRequest& request, const CreateAigcApiTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAigcApiTokenRequest&;
+    using Resp = CreateAigcApiTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAigcApiToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateAigcApiTokenOutcomeCallable VodClient::CreateAigcApiTokenCallable(const CreateAigcApiTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAigcApiTokenOutcome>>();
+    CreateAigcApiTokenAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateAigcApiTokenRequest&,
+        CreateAigcApiTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::CreateAigcImageTaskOutcome VodClient::CreateAigcImageTask(const CreateAigcImageTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAigcImageTask");
@@ -2090,6 +2140,56 @@ VodClient::DeleteAdaptiveDynamicStreamingTemplateOutcomeCallable VodClient::Dele
     return prom->get_future();
 }
 
+VodClient::DeleteAigcApiTokenOutcome VodClient::DeleteAigcApiToken(const DeleteAigcApiTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAigcApiToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAigcApiTokenResponse rsp = DeleteAigcApiTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAigcApiTokenOutcome(rsp);
+        else
+            return DeleteAigcApiTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAigcApiTokenOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteAigcApiTokenAsync(const DeleteAigcApiTokenRequest& request, const DeleteAigcApiTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAigcApiTokenRequest&;
+    using Resp = DeleteAigcApiTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAigcApiToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DeleteAigcApiTokenOutcomeCallable VodClient::DeleteAigcApiTokenCallable(const DeleteAigcApiTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAigcApiTokenOutcome>>();
+    DeleteAigcApiTokenAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DeleteAigcApiTokenRequest&,
+        DeleteAigcApiTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DeleteAnimatedGraphicsTemplateOutcome VodClient::DeleteAnimatedGraphicsTemplate(const DeleteAnimatedGraphicsTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAnimatedGraphicsTemplate");
@@ -3382,6 +3482,56 @@ VodClient::DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable VodClient::D
         const VodClient*,
         const DescribeAdaptiveDynamicStreamingTemplatesRequest&,
         DescribeAdaptiveDynamicStreamingTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeAigcApiTokensOutcome VodClient::DescribeAigcApiTokens(const DescribeAigcApiTokensRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAigcApiTokens");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAigcApiTokensResponse rsp = DescribeAigcApiTokensResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAigcApiTokensOutcome(rsp);
+        else
+            return DescribeAigcApiTokensOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAigcApiTokensOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeAigcApiTokensAsync(const DescribeAigcApiTokensRequest& request, const DescribeAigcApiTokensAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAigcApiTokensRequest&;
+    using Resp = DescribeAigcApiTokensResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAigcApiTokens", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeAigcApiTokensOutcomeCallable VodClient::DescribeAigcApiTokensCallable(const DescribeAigcApiTokensRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAigcApiTokensOutcome>>();
+    DescribeAigcApiTokensAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeAigcApiTokensRequest&,
+        DescribeAigcApiTokensOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

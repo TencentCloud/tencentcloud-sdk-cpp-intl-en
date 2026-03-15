@@ -84,6 +84,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/FaceConfigureInfoForUpdate.h
   include/tencentcloud/vod/v20180717/model/ContentReviewTemplateItem.h
   include/tencentcloud/vod/v20180717/model/AigcImageTaskOutputFileInfo.h
+  include/tencentcloud/vod/v20180717/model/TaskSimpleInfo.h
   include/tencentcloud/vod/v20180717/model/DeleteAIRecognitionTemplateResponse.h
   include/tencentcloud/vod/v20180717/model/VideoEnhanceConfig.h
   include/tencentcloud/vod/v20180717/model/DeleteContentReviewTemplateRequest.h
@@ -213,7 +214,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ModifyMediaInfoRequest.h
   include/tencentcloud/vod/v20180717/model/FrameRateWithDenInfo.h
   include/tencentcloud/vod/v20180717/model/TraceWatermarkInput.h
-  include/tencentcloud/vod/v20180717/model/PornAsrReviewTemplateInfoForUpdate.h
+  include/tencentcloud/vod/v20180717/model/ModifyPersonSampleRequest.h
   include/tencentcloud/vod/v20180717/model/ReviewAudioVideoSegmentItem.h
   include/tencentcloud/vod/v20180717/model/MediaAnimatedGraphicsInfo.h
   include/tencentcloud/vod/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesRequest.h
@@ -268,6 +269,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ColorEnhanceInfo.h
   include/tencentcloud/vod/v20180717/model/DeleteEnhanceMediaTemplateResponse.h
   include/tencentcloud/vod/v20180717/model/EditMediaOutputConfig.h
+  include/tencentcloud/vod/v20180717/model/ModifyPersonSampleResponse.h
   include/tencentcloud/vod/v20180717/model/SplitMediaTaskSegmentInfo.h
   include/tencentcloud/vod/v20180717/model/AiReviewPornAsrTaskOutput.h
   include/tencentcloud/vod/v20180717/model/RequestHeader.h
@@ -358,6 +360,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/AiAnalysisTaskTagResult.h
   include/tencentcloud/vod/v20180717/model/SearchMediaResponse.h
   include/tencentcloud/vod/v20180717/model/ProcessMediaByMPSResponse.h
+  include/tencentcloud/vod/v20180717/model/DescribeAigcApiTokensRequest.h
   include/tencentcloud/vod/v20180717/model/Cache.h
   include/tencentcloud/vod/v20180717/model/RemoveWaterMarkTaskOutput.h
   include/tencentcloud/vod/v20180717/model/ModifyMediaStorageClassRequest.h
@@ -437,7 +440,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/SetVodDomainCertificateResponse.h
   include/tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTaskOutput.h
   include/tencentcloud/vod/v20180717/model/MediaProcessTaskCoverBySnapshotResult.h
-  include/tencentcloud/vod/v20180717/model/CreateWatermarkTemplateRequest.h
+  include/tencentcloud/vod/v20180717/model/DeleteAigcApiTokenResponse.h
   include/tencentcloud/vod/v20180717/model/UserAgentFilter.h
   include/tencentcloud/vod/v20180717/model/ComplexAdaptiveDynamicStreamingTaskInput.h
   include/tencentcloud/vod/v20180717/model/SortBy.h
@@ -452,8 +455,10 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/HeadTailConfigureInfoForUpdate.h
   include/tencentcloud/vod/v20180717/model/ImageScale.h
   include/tencentcloud/vod/v20180717/model/ModifyJustInTimeTranscodeTemplateResponse.h
+  include/tencentcloud/vod/v20180717/model/MediaVideoStreamItem.h
   include/tencentcloud/vod/v20180717/model/TranscodePlayInfo2017.h
   include/tencentcloud/vod/v20180717/model/SplitMediaTask.h
+  include/tencentcloud/vod/v20180717/model/CreateWatermarkTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/OthersPrivateAccess.h
   include/tencentcloud/vod/v20180717/model/ComposeMediaTaskInput.h
   include/tencentcloud/vod/v20180717/model/ModifyQualityInspectTemplateRequest.h
@@ -628,7 +633,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ComposeMediaTaskOutput.h
   include/tencentcloud/vod/v20180717/model/DescribeQualityInspectTemplatesRequest.h
   include/tencentcloud/vod/v20180717/model/DescribeMediaInfosRequest.h
-  include/tencentcloud/vod/v20180717/model/ModifyPersonSampleRequest.h
+  include/tencentcloud/vod/v20180717/model/CreateAigcApiTokenRequest.h
   include/tencentcloud/vod/v20180717/model/AsrFullTextConfigureInfo.h
   include/tencentcloud/vod/v20180717/model/TerrorismImageResult.h
   include/tencentcloud/vod/v20180717/model/DeleteVodDomainRequest.h
@@ -725,10 +730,10 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ProcedureTask.h
   include/tencentcloud/vod/v20180717/model/ExtractTraceWatermarkRequest.h
   include/tencentcloud/vod/v20180717/model/CDNDomainConfig.h
-  include/tencentcloud/vod/v20180717/model/TaskSimpleInfo.h
+  include/tencentcloud/vod/v20180717/model/DescribeAigcApiTokensResponse.h
   include/tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h
   include/tencentcloud/vod/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesResponse.h
-  include/tencentcloud/vod/v20180717/model/DomainQUICConfig.h
+  include/tencentcloud/vod/v20180717/model/DeleteAigcApiTokenRequest.h
   include/tencentcloud/vod/v20180717/model/SetDrmKeyProviderInfoRequest.h
   include/tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTemplate.h
   include/tencentcloud/vod/v20180717/model/DeleteSnapshotByTimeOffsetTemplateResponse.h
@@ -739,6 +744,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/CreateTranscodeTemplateResponse.h
   include/tencentcloud/vod/v20180717/model/CDNDomainConfigForUpdate.h
   include/tencentcloud/vod/v20180717/model/AiRecognitionTaskAsrWordsResultInput.h
+  include/tencentcloud/vod/v20180717/model/PornAsrReviewTemplateInfoForUpdate.h
   include/tencentcloud/vod/v20180717/model/ModifySubAppIdStatusResponse.h
   include/tencentcloud/vod/v20180717/model/CreateAIAnalysisTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/AiReviewTerrorismTaskInput.h
@@ -781,7 +787,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/DescribeCurrentPlaylistRequest.h
   include/tencentcloud/vod/v20180717/model/UserDefineAsrTextReviewTemplateInfoForUpdate.h
   include/tencentcloud/vod/v20180717/model/DescribeCDNDomainsResponse.h
-  include/tencentcloud/vod/v20180717/model/MediaVideoStreamItem.h
+  include/tencentcloud/vod/v20180717/model/DomainQUICConfig.h
   include/tencentcloud/vod/v20180717/model/CreateRebuildMediaTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/ImageOperation.h
   include/tencentcloud/vod/v20180717/model/MediaSubStreamInfoItem.h
@@ -795,7 +801,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h
   include/tencentcloud/vod/v20180717/model/RebuildMediaTask.h
   include/tencentcloud/vod/v20180717/model/ConfirmEventsResponse.h
-  include/tencentcloud/vod/v20180717/model/ModifyPersonSampleResponse.h
+  include/tencentcloud/vod/v20180717/model/CreateAigcApiTokenResponse.h
   include/tencentcloud/vod/v20180717/model/VideoTrackItem.h
   include/tencentcloud/vod/v20180717/model/VideoDenoiseInfo.h
   include/tencentcloud/vod/v20180717/model/DescribeLicenseUsageDataRequest.h
@@ -1000,6 +1006,7 @@ set(vod_src
   src/v20180717/model/FaceConfigureInfoForUpdate.cpp
   src/v20180717/model/ContentReviewTemplateItem.cpp
   src/v20180717/model/AigcImageTaskOutputFileInfo.cpp
+  src/v20180717/model/TaskSimpleInfo.cpp
   src/v20180717/model/DeleteAIRecognitionTemplateResponse.cpp
   src/v20180717/model/VideoEnhanceConfig.cpp
   src/v20180717/model/DeleteContentReviewTemplateRequest.cpp
@@ -1129,7 +1136,7 @@ set(vod_src
   src/v20180717/model/ModifyMediaInfoRequest.cpp
   src/v20180717/model/FrameRateWithDenInfo.cpp
   src/v20180717/model/TraceWatermarkInput.cpp
-  src/v20180717/model/PornAsrReviewTemplateInfoForUpdate.cpp
+  src/v20180717/model/ModifyPersonSampleRequest.cpp
   src/v20180717/model/ReviewAudioVideoSegmentItem.cpp
   src/v20180717/model/MediaAnimatedGraphicsInfo.cpp
   src/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesRequest.cpp
@@ -1184,6 +1191,7 @@ set(vod_src
   src/v20180717/model/ColorEnhanceInfo.cpp
   src/v20180717/model/DeleteEnhanceMediaTemplateResponse.cpp
   src/v20180717/model/EditMediaOutputConfig.cpp
+  src/v20180717/model/ModifyPersonSampleResponse.cpp
   src/v20180717/model/SplitMediaTaskSegmentInfo.cpp
   src/v20180717/model/AiReviewPornAsrTaskOutput.cpp
   src/v20180717/model/RequestHeader.cpp
@@ -1274,6 +1282,7 @@ set(vod_src
   src/v20180717/model/AiAnalysisTaskTagResult.cpp
   src/v20180717/model/SearchMediaResponse.cpp
   src/v20180717/model/ProcessMediaByMPSResponse.cpp
+  src/v20180717/model/DescribeAigcApiTokensRequest.cpp
   src/v20180717/model/Cache.cpp
   src/v20180717/model/RemoveWaterMarkTaskOutput.cpp
   src/v20180717/model/ModifyMediaStorageClassRequest.cpp
@@ -1353,7 +1362,7 @@ set(vod_src
   src/v20180717/model/SetVodDomainCertificateResponse.cpp
   src/v20180717/model/ExtractTraceWatermarkTaskOutput.cpp
   src/v20180717/model/MediaProcessTaskCoverBySnapshotResult.cpp
-  src/v20180717/model/CreateWatermarkTemplateRequest.cpp
+  src/v20180717/model/DeleteAigcApiTokenResponse.cpp
   src/v20180717/model/UserAgentFilter.cpp
   src/v20180717/model/ComplexAdaptiveDynamicStreamingTaskInput.cpp
   src/v20180717/model/SortBy.cpp
@@ -1368,8 +1377,10 @@ set(vod_src
   src/v20180717/model/HeadTailConfigureInfoForUpdate.cpp
   src/v20180717/model/ImageScale.cpp
   src/v20180717/model/ModifyJustInTimeTranscodeTemplateResponse.cpp
+  src/v20180717/model/MediaVideoStreamItem.cpp
   src/v20180717/model/TranscodePlayInfo2017.cpp
   src/v20180717/model/SplitMediaTask.cpp
+  src/v20180717/model/CreateWatermarkTemplateRequest.cpp
   src/v20180717/model/OthersPrivateAccess.cpp
   src/v20180717/model/ComposeMediaTaskInput.cpp
   src/v20180717/model/ModifyQualityInspectTemplateRequest.cpp
@@ -1544,7 +1555,7 @@ set(vod_src
   src/v20180717/model/ComposeMediaTaskOutput.cpp
   src/v20180717/model/DescribeQualityInspectTemplatesRequest.cpp
   src/v20180717/model/DescribeMediaInfosRequest.cpp
-  src/v20180717/model/ModifyPersonSampleRequest.cpp
+  src/v20180717/model/CreateAigcApiTokenRequest.cpp
   src/v20180717/model/AsrFullTextConfigureInfo.cpp
   src/v20180717/model/TerrorismImageResult.cpp
   src/v20180717/model/DeleteVodDomainRequest.cpp
@@ -1641,10 +1652,10 @@ set(vod_src
   src/v20180717/model/ProcedureTask.cpp
   src/v20180717/model/ExtractTraceWatermarkRequest.cpp
   src/v20180717/model/CDNDomainConfig.cpp
-  src/v20180717/model/TaskSimpleInfo.cpp
+  src/v20180717/model/DescribeAigcApiTokensResponse.cpp
   src/v20180717/model/ReviewAudioVideoTask.cpp
   src/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesResponse.cpp
-  src/v20180717/model/DomainQUICConfig.cpp
+  src/v20180717/model/DeleteAigcApiTokenRequest.cpp
   src/v20180717/model/SetDrmKeyProviderInfoRequest.cpp
   src/v20180717/model/SnapshotByTimeOffsetTemplate.cpp
   src/v20180717/model/DeleteSnapshotByTimeOffsetTemplateResponse.cpp
@@ -1655,6 +1666,7 @@ set(vod_src
   src/v20180717/model/CreateTranscodeTemplateResponse.cpp
   src/v20180717/model/CDNDomainConfigForUpdate.cpp
   src/v20180717/model/AiRecognitionTaskAsrWordsResultInput.cpp
+  src/v20180717/model/PornAsrReviewTemplateInfoForUpdate.cpp
   src/v20180717/model/ModifySubAppIdStatusResponse.cpp
   src/v20180717/model/CreateAIAnalysisTemplateRequest.cpp
   src/v20180717/model/AiReviewTerrorismTaskInput.cpp
@@ -1697,7 +1709,7 @@ set(vod_src
   src/v20180717/model/DescribeCurrentPlaylistRequest.cpp
   src/v20180717/model/UserDefineAsrTextReviewTemplateInfoForUpdate.cpp
   src/v20180717/model/DescribeCDNDomainsResponse.cpp
-  src/v20180717/model/MediaVideoStreamItem.cpp
+  src/v20180717/model/DomainQUICConfig.cpp
   src/v20180717/model/CreateRebuildMediaTemplateRequest.cpp
   src/v20180717/model/ImageOperation.cpp
   src/v20180717/model/MediaSubStreamInfoItem.cpp
@@ -1711,7 +1723,7 @@ set(vod_src
   src/v20180717/model/ExecuteFunctionRequest.cpp
   src/v20180717/model/RebuildMediaTask.cpp
   src/v20180717/model/ConfirmEventsResponse.cpp
-  src/v20180717/model/ModifyPersonSampleResponse.cpp
+  src/v20180717/model/CreateAigcApiTokenResponse.cpp
   src/v20180717/model/VideoTrackItem.cpp
   src/v20180717/model/VideoDenoiseInfo.cpp
   src/v20180717/model/DescribeLicenseUsageDataRequest.cpp

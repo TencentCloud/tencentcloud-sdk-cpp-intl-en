@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Recoverable time interval.
+                * Recoverable time interval
                 */
                 class ArchiveLogInterval : public AbstractModel
                 {

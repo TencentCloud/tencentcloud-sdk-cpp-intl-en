@@ -14,24 +14,33 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tdmysql/v20211122/model/DescribeBillingEnableRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateAigcApiTokenRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::Tdmysql::V20211122::Model;
+using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-DescribeBillingEnableRequest::DescribeBillingEnableRequest()
+CreateAigcApiTokenRequest::CreateAigcApiTokenRequest() :
+    m_subAppIdHasBeenSet(false)
 {
 }
 
-string DescribeBillingEnableRequest::ToJsonString() const
+string CreateAigcApiTokenRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_subAppIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubAppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subAppId, allocator);
+    }
 
 
     rapidjson::StringBuffer buffer;
@@ -40,5 +49,21 @@ string DescribeBillingEnableRequest::ToJsonString() const
     return buffer.GetString();
 }
 
+
+uint64_t CreateAigcApiTokenRequest::GetSubAppId() const
+{
+    return m_subAppId;
+}
+
+void CreateAigcApiTokenRequest::SetSubAppId(const uint64_t& _subAppId)
+{
+    m_subAppId = _subAppId;
+    m_subAppIdHasBeenSet = true;
+}
+
+bool CreateAigcApiTokenRequest::SubAppIdHasBeenSet() const
+{
+    return m_subAppIdHasBeenSet;
+}
 
 

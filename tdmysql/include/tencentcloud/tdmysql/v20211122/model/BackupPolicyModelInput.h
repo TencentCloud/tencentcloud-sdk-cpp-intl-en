@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<P>Backup end time.</p>.
-                     * @return BackupEndTime <P>Backup end time.</p>.
+                     * 获取<P>Backup end time.</p>
+                     * @return BackupEndTime <P>Backup end time.</p>
                      * 
                      */
                     std::string GetBackupEndTime() const;
 
                     /**
-                     * 设置<P>Backup end time.</p>.
-                     * @param _backupEndTime <P>Backup end time.</p>.
+                     * 设置<P>Backup end time.</p>
+                     * @param _backupEndTime <P>Backup end time.</p>
                      * 
                      */
                     void SetBackupEndTime(const std::string& _backupEndTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BackupEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<P>Backup method: physical physical backup, snapshot snapshot backup</p>.
-                     * @return BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+                     * 获取<P>Backup method: physical physical backup, snapshot snapshot backup</p>
+                     * @return BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置<P>Backup method: physical physical backup, snapshot snapshot backup</p>.
-                     * @param _backupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+                     * 设置<P>Backup method: physical physical backup, snapshot snapshot backup</p>
+                     * @param _backupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取<P>Backup start time</p>.
-                     * @return BackupStartTime <P>Backup start time</p>.
+                     * 获取<P>Backup start time</p>
+                     * @return BackupStartTime <P>Backup start time</p>
                      * 
                      */
                     std::string GetBackupStartTime() const;
 
                     /**
-                     * 设置<P>Backup start time</p>.
-                     * @param _backupStartTime <P>Backup start time</p>.
+                     * 设置<P>Backup start time</p>
+                     * @param _backupStartTime <P>Backup start time</p>
                      * 
                      */
                     void SetBackupStartTime(const std::string& _backupStartTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BackupStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<P>Whether full backup is enabled</p>.
-                     * @return EnableFull <P>Whether full backup is enabled</p>.
+                     * 获取<P>Whether full backup is enabled</p>
+                     * @return EnableFull <P>Whether full backup is enabled</p>
                      * 
                      */
                     int64_t GetEnableFull() const;
 
                     /**
-                     * 设置<P>Whether full backup is enabled</p>.
-                     * @param _enableFull <P>Whether full backup is enabled</p>.
+                     * 设置<P>Whether full backup is enabled</p>
+                     * @param _enableFull <P>Whether full backup is enabled</p>
                      * 
                      */
                     void SetEnableFull(const int64_t& _enableFull);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EnableFullHasBeenSet() const;
 
                     /**
-                     * 获取<P>Whether to enable log backup</p>.
-                     * @return EnableLog <P>Whether to enable log backup</p>.
+                     * 获取<P>Whether to enable log backup</p>
+                     * @return EnableLog <P>Whether to enable log backup</p>
                      * 
                      */
                     int64_t GetEnableLog() const;
 
                     /**
-                     * 设置<P>Whether to enable log backup</p>.
-                     * @param _enableLog <P>Whether to enable log backup</p>.
+                     * 设置<P>Whether to enable log backup</p>
+                     * @param _enableLog <P>Whether to enable log backup</p>
                      * 
                      */
                     void SetEnableLog(const int64_t& _enableLog);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EnableLogHasBeenSet() const;
 
                     /**
-                     * 获取<P>Full backup retention time can currently only be set to 7 days.</p>.
-                     * @return FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>.
+                     * 获取<P>Full backup retention time can currently only be set to 7 days.</p>
+                     * @return FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>
                      * 
                      */
                     int64_t GetFullRetentionPeriod() const;
 
                     /**
-                     * 设置<P>Full backup retention time can currently only be set to 7 days.</p>.
-                     * @param _fullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>.
+                     * 设置<P>Full backup retention time can currently only be set to 7 days.</p>
+                     * @param _fullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>
                      * 
                      */
                     void SetFullRetentionPeriod(const int64_t& _fullRetentionPeriod);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FullRetentionPeriodHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance ID.</p>.
-                     * @return InstanceId <p>Instance ID.</p>.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置<p>Instance ID.</p>.
-                     * @param _instanceId <p>Instance ID.</p>.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取<P>Log retention days. currently, can only set retention to 7 days.</p>.
-                     * @return LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>.
+                     * 获取<P>Log retention days. currently, can only set retention to 7 days.</p>
+                     * @return LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>
                      * 
                      */
                     int64_t GetLogRetentionPeriod() const;
 
                     /**
-                     * 设置<P>Log retention days. currently, can only set retention to 7 days.</p>.
-                     * @param _logRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>.
+                     * 设置<P>Log retention days. currently, can only set retention to 7 days.</p>
+                     * @param _logRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>
                      * 
                      */
                     void SetLogRetentionPeriod(const int64_t& _logRetentionPeriod);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool LogRetentionPeriodHasBeenSet() const;
 
                     /**
-                     * 获取<P>Days of the week to perform backup.</p>.
-                     * @return PeriodTime <P>Days of the week to perform backup.</p>.
+                     * 获取<P>Days of the week to perform backup.</p>
+                     * @return PeriodTime <P>Days of the week to perform backup.</p>
                      * 
                      */
                     std::string GetPeriodTime() const;
 
                     /**
-                     * 设置<P>Days of the week to perform backup.</p>.
-                     * @param _periodTime <P>Days of the week to perform backup.</p>.
+                     * 设置<P>Days of the week to perform backup.</p>
+                     * @param _periodTime <P>Days of the week to perform backup.</p>
                      * 
                      */
                     void SetPeriodTime(const std::string& _periodTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool PeriodTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
-                     * @return StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+                     * 获取<p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
+                     * @return StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置<p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
-                     * @param _storageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+                     * 设置<p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
+                     * @param _storageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <P>Backup end time.</p>.
+                     * <P>Backup end time.</p>
                      */
                     std::string m_backupEndTime;
                     bool m_backupEndTimeHasBeenSet;
 
                     /**
-                     * <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+                     * <P>Backup method: physical physical backup, snapshot snapshot backup</p>
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * <P>Backup start time</p>.
+                     * <P>Backup start time</p>
                      */
                     std::string m_backupStartTime;
                     bool m_backupStartTimeHasBeenSet;
 
                     /**
-                     * <P>Whether full backup is enabled</p>.
+                     * <P>Whether full backup is enabled</p>
                      */
                     int64_t m_enableFull;
                     bool m_enableFullHasBeenSet;
 
                     /**
-                     * <P>Whether to enable log backup</p>.
+                     * <P>Whether to enable log backup</p>
                      */
                     int64_t m_enableLog;
                     bool m_enableLogHasBeenSet;
 
                     /**
-                     * <P>Full backup retention time can currently only be set to 7 days.</p>.
+                     * <P>Full backup retention time can currently only be set to 7 days.</p>
                      */
                     int64_t m_fullRetentionPeriod;
                     bool m_fullRetentionPeriodHasBeenSet;
 
                     /**
-                     * <p>Instance ID.</p>.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * <P>Log retention days. currently, can only set retention to 7 days.</p>.
+                     * <P>Log retention days. currently, can only set retention to 7 days.</p>
                      */
                     int64_t m_logRetentionPeriod;
                     bool m_logRetentionPeriodHasBeenSet;
 
                     /**
-                     * <P>Days of the week to perform backup.</p>.
+                     * <P>Days of the week to perform backup.</p>
                      */
                     std::string m_periodTime;
                     bool m_periodTimeHasBeenSet;
 
                     /**
-                     * <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+                     * <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
