@@ -106,27 +106,6 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program team ID
-                     * @return MNPTeamId Mini program team ID
-                     * 
-                     */
-                    int64_t GetMNPTeamId() const;
-
-                    /**
-                     * 设置Mini program team ID
-                     * @param _mNPTeamId Mini program team ID
-                     * 
-                     */
-                    void SetMNPTeamId(const int64_t& _mNPTeamId);
-
-                    /**
-                     * 判断参数 MNPTeamId 是否已赋值
-                     * @return MNPTeamId 是否已赋值
-                     * 
-                     */
-                    bool MNPTeamIdHasBeenSet() const;
-
-                    /**
                      * 获取Mini program appid, required. When provided, the query is performed based on the mini program.
                      * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
                      * 
@@ -146,6 +125,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MNPIdHasBeenSet() const;
+
+                    /**
+                     * 获取Mini program team ID
+                     * @return MNPTeamId Mini program team ID
+                     * 
+                     */
+                    int64_t GetMNPTeamId() const;
+
+                    /**
+                     * 设置Mini program team ID
+                     * @param _mNPTeamId Mini program team ID
+                     * 
+                     */
+                    void SetMNPTeamId(const int64_t& _mNPTeamId);
+
+                    /**
+                     * 判断参数 MNPTeamId 是否已赋值
+                     * @return MNPTeamId 是否已赋值
+                     * 
+                     */
+                    bool MNPTeamIdHasBeenSet() const;
 
                 private:
 
@@ -168,16 +168,16 @@ namespace TencentCloud
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Mini program team ID
-                     */
-                    int64_t m_mNPTeamId;
-                    bool m_mNPTeamIdHasBeenSet;
-
-                    /**
                      * Mini program appid, required. When provided, the query is performed based on the mini program.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
+
+                    /**
+                     * Mini program team ID
+                     */
+                    int64_t m_mNPTeamId;
+                    bool m_mNPTeamIdHasBeenSet;
 
                 };
             }

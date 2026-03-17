@@ -154,12 +154,12 @@ namespace TencentCloud
                     /**
                      * 获取Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -169,12 +169,12 @@ Offline project deduction
 Offline product deduction
                      * @return ActionType Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -189,12 +189,12 @@ Offline product deduction
                     /**
                      * 设置Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -204,12 +204,12 @@ Offline project deduction
 Offline product deduction
                      * @param _actionType Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -398,12 +398,12 @@ This parameter can be used for querying bills after January 2021.
                     /**
                      * Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee

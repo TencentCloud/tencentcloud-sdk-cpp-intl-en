@@ -26,8 +26,8 @@ DescribeMNGMAULineChartRequest::DescribeMNGMAULineChartRequest() :
     m_dataTypeHasBeenSet(false),
     m_platformIdHasBeenSet(false),
     m_applicationIdHasBeenSet(false),
-    m_mNPTeamIdHasBeenSet(false),
-    m_mNPIdHasBeenSet(false)
+    m_mNPIdHasBeenSet(false),
+    m_mNPTeamIdHasBeenSet(false)
 {
 }
 
@@ -62,20 +62,20 @@ string DescribeMNGMAULineChartRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_applicationId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_mNPTeamIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MNPTeamId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_mNPTeamId, allocator);
-    }
-
     if (m_mNPIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MNPId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_mNPId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mNPTeamIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MNPTeamId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_mNPTeamId, allocator);
     }
 
 
@@ -134,22 +134,6 @@ bool DescribeMNGMAULineChartRequest::ApplicationIdHasBeenSet() const
     return m_applicationIdHasBeenSet;
 }
 
-int64_t DescribeMNGMAULineChartRequest::GetMNPTeamId() const
-{
-    return m_mNPTeamId;
-}
-
-void DescribeMNGMAULineChartRequest::SetMNPTeamId(const int64_t& _mNPTeamId)
-{
-    m_mNPTeamId = _mNPTeamId;
-    m_mNPTeamIdHasBeenSet = true;
-}
-
-bool DescribeMNGMAULineChartRequest::MNPTeamIdHasBeenSet() const
-{
-    return m_mNPTeamIdHasBeenSet;
-}
-
 string DescribeMNGMAULineChartRequest::GetMNPId() const
 {
     return m_mNPId;
@@ -164,6 +148,22 @@ void DescribeMNGMAULineChartRequest::SetMNPId(const string& _mNPId)
 bool DescribeMNGMAULineChartRequest::MNPIdHasBeenSet() const
 {
     return m_mNPIdHasBeenSet;
+}
+
+int64_t DescribeMNGMAULineChartRequest::GetMNPTeamId() const
+{
+    return m_mNPTeamId;
+}
+
+void DescribeMNGMAULineChartRequest::SetMNPTeamId(const int64_t& _mNPTeamId)
+{
+    m_mNPTeamId = _mNPTeamId;
+    m_mNPTeamIdHasBeenSet = true;
+}
+
+bool DescribeMNGMAULineChartRequest::MNPTeamIdHasBeenSet() const
+{
+    return m_mNPTeamIdHasBeenSet;
 }
 
 

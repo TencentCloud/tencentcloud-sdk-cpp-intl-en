@@ -108,21 +108,21 @@ namespace TencentCloud
                     /**
                      * 获取Cycle type, which can be `byUsedTime` (by billing cycle) or `byPayTime` (by deduction time). This value must be the same as the billing period type in Billing Center for that particular month. You can check your billing cycle at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
                      * @return PeriodType Cycle type, which can be `byUsedTime` (by billing cycle) or `byPayTime` (by deduction time). This value must be the same as the billing period type in Billing Center for that particular month. You can check your billing cycle at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * 
+                     * @deprecated
                      */
                     std::string GetPeriodType() const;
 
                     /**
                      * 设置Cycle type, which can be `byUsedTime` (by billing cycle) or `byPayTime` (by deduction time). This value must be the same as the billing period type in Billing Center for that particular month. You can check your billing cycle at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
                      * @param _periodType Cycle type, which can be `byUsedTime` (by billing cycle) or `byPayTime` (by deduction time). This value must be the same as the billing period type in Billing Center for that particular month. You can check your billing cycle at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * 
+                     * @deprecated
                      */
                     void SetPeriodType(const std::string& _periodType);
 
                     /**
                      * 判断参数 PeriodType 是否已赋值
                      * @return PeriodType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PeriodTypeHasBeenSet() const;
 
@@ -153,10 +153,10 @@ Valid values: `1` (required), `0` (not required).
 
                     /**
                      * 获取Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -172,20 +172,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * @return ActionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -201,13 +201,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * 
@@ -216,10 +216,10 @@ Hourly savings plan fee
 
                     /**
                      * 设置Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -235,20 +235,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * @param _actionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -264,13 +264,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * 
@@ -432,10 +432,10 @@ Valid values: `1` (required), `0` (not required).
 
                     /**
                      * Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -451,13 +451,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      */

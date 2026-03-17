@@ -307,12 +307,12 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     /**
                      * 获取Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -322,12 +322,12 @@ Offline project deduction
 Offline product deduction
                      * @return ActionType Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -342,12 +342,12 @@ Offline product deduction
                     /**
                      * 设置Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -357,12 +357,12 @@ Offline project deduction
 Offline product deduction
                      * @param _actionType Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee
@@ -547,12 +547,12 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     /**
                      * Hourly settlement
 Daily settlement
-Monthly settlement
+Yearly/monthly subscription
 Spot
 New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund
+Yearly/monthly subscription renewal
+Yearly/monthly subscription specification adjustment
+Yearly/monthly subscription refund
 Adjustment - deduction
 Adjustment - refund
 Hourly RI fee

@@ -105,6 +105,48 @@ namespace TencentCloud
                      */
                     bool TagKeyHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return OperateUin 
+                     * 
+                     */
+                    std::string GetOperateUin() const;
+
+                    /**
+                     * 设置
+                     * @param _operateUin 
+                     * 
+                     */
+                    void SetOperateUin(const std::string& _operateUin);
+
+                    /**
+                     * 判断参数 OperateUin 是否已赋值
+                     * @return OperateUin 是否已赋值
+                     * 
+                     */
+                    bool OperateUinHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PayerUin 
+                     * 
+                     */
+                    std::string GetPayerUin() const;
+
+                    /**
+                     * 设置
+                     * @param _payerUin 
+                     * 
+                     */
+                    void SetPayerUin(const std::string& _payerUin);
+
+                    /**
+                     * 判断参数 PayerUin 是否已赋值
+                     * @return PayerUin 是否已赋值
+                     * 
+                     */
+                    bool PayerUinHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +166,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_tagKey;
                     bool m_tagKeyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_operateUin;
+                    bool m_operateUinHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_payerUin;
+                    bool m_payerUinHasBeenSet;
 
                 };
             }

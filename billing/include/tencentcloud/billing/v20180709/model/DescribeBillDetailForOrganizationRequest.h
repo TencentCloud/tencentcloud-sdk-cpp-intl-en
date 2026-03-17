@@ -194,15 +194,15 @@ Valid values: `1` (required), `0` (not required).
                     bool NeedRecordNumHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
-                     * @return PayMode Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+                     * 获取Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
+                     * @return PayMode Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
-                     * @param _payMode Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+                     * 设置Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
+                     * @param _payMode Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -237,10 +237,10 @@ Valid values: `1` (required), `0` (not required).
 
                     /**
                      * 获取Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -256,20 +256,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * @return ActionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -285,13 +285,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * 
@@ -300,10 +300,10 @@ Hourly savings plan fee
 
                     /**
                      * 设置Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -319,20 +319,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * @param _actionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -348,13 +348,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      * 
@@ -481,7 +481,7 @@ Valid values: `1` (required), `0` (not required).
                     bool m_needRecordNumHasBeenSet;
 
                     /**
-                     * Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+                     * Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
@@ -494,10 +494,10 @@ Valid values: `1` (required), `0` (not required).
 
                     /**
                      * Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -513,13 +513,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
                      */
