@@ -43,23 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @return ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 获取The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
+                     * @return ImageBase64 The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @param _imageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 设置The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
+                     * @param _imageBase64 The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -101,36 +93,15 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                     bool ImageUrlHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return the character information. Default value: `false`
-                     * @return IsWords Whether to return the character information. Default value: `false`
-                     * 
-                     */
-                    bool GetIsWords() const;
-
-                    /**
-                     * 设置Whether to return the character information. Default value: `false`
-                     * @param _isWords Whether to return the character information. Default value: `false`
-                     * 
-                     */
-                    void SetIsWords(const bool& _isWords);
-
-                    /**
-                     * 判断参数 IsWords 是否已赋值
-                     * @return IsWords 是否已赋值
-                     * 
-                     */
-                    bool IsWordsHasBeenSet() const;
-
-                    /**
-                     * 获取Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
-                     * @return EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * 获取Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
+                     * @return EnableDetectSplit Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
                      * 
                      */
                     bool GetEnableDetectSplit() const;
 
                     /**
-                     * 设置Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
-                     * @param _enableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * 设置Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
+                     * @param _enableDetectSplit Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
                      * 
                      */
                     void SetEnableDetectSplit(const bool& _enableDetectSplit);
@@ -184,12 +155,52 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      */
                     bool PdfPageNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+                     * @return EnableDetectText Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+                     * 
+                     */
+                    bool GetEnableDetectText() const;
+
+                    /**
+                     * 设置Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+                     * @param _enableDetectText Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+                     * 
+                     */
+                    void SetEnableDetectText(const bool& _enableDetectText);
+
+                    /**
+                     * 判断参数 EnableDetectText 是否已赋值
+                     * @return EnableDetectText 是否已赋值
+                     * 
+                     */
+                    bool EnableDetectTextHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+                     * @return ConfigID Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+                     * 
+                     */
+                    std::string GetConfigID() const;
+
+                    /**
+                     * 设置Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+                     * @param _configID Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+                     * 
+                     */
+                    void SetConfigID(const std::string& _configID);
+
+                    /**
+                     * 判断参数 ConfigID 是否已赋值
+                     * @return ConfigID 是否已赋值
+                     * 
+                     */
+                    bool ConfigIDHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
@@ -203,13 +214,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                     bool m_imageUrlHasBeenSet;
 
                     /**
-                     * Whether to return the character information. Default value: `false`
-                     */
-                    bool m_isWords;
-                    bool m_isWordsHasBeenSet;
-
-                    /**
-                     * Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
                      */
                     bool m_enableDetectSplit;
                     bool m_enableDetectSplitHasBeenSet;
@@ -225,6 +230,18 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      */
                     uint64_t m_pdfPageNumber;
                     bool m_pdfPageNumberHasBeenSet;
+
+                    /**
+                     * Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+                     */
+                    bool m_enableDetectText;
+                    bool m_enableDetectTextHasBeenSet;
+
+                    /**
+                     * Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+                     */
+                    std::string m_configID;
+                    bool m_configIDHasBeenSet;
 
                 };
             }

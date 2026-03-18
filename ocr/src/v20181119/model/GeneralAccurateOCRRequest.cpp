@@ -25,10 +25,11 @@ using namespace std;
 GeneralAccurateOCRRequest::GeneralAccurateOCRRequest() :
     m_imageBase64HasBeenSet(false),
     m_imageUrlHasBeenSet(false),
-    m_isWordsHasBeenSet(false),
     m_enableDetectSplitHasBeenSet(false),
     m_isPdfHasBeenSet(false),
-    m_pdfPageNumberHasBeenSet(false)
+    m_pdfPageNumberHasBeenSet(false),
+    m_enableDetectTextHasBeenSet(false),
+    m_configIDHasBeenSet(false)
 {
 }
 
@@ -55,14 +56,6 @@ string GeneralAccurateOCRRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_imageUrl.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_isWordsHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IsWords";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_isWords, allocator);
-    }
-
     if (m_enableDetectSplitHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -85,6 +78,22 @@ string GeneralAccurateOCRRequest::ToJsonString() const
         string key = "PdfPageNumber";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pdfPageNumber, allocator);
+    }
+
+    if (m_enableDetectTextHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableDetectText";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableDetectText, allocator);
+    }
+
+    if (m_configIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConfigID";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_configID.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -125,22 +134,6 @@ void GeneralAccurateOCRRequest::SetImageUrl(const string& _imageUrl)
 bool GeneralAccurateOCRRequest::ImageUrlHasBeenSet() const
 {
     return m_imageUrlHasBeenSet;
-}
-
-bool GeneralAccurateOCRRequest::GetIsWords() const
-{
-    return m_isWords;
-}
-
-void GeneralAccurateOCRRequest::SetIsWords(const bool& _isWords)
-{
-    m_isWords = _isWords;
-    m_isWordsHasBeenSet = true;
-}
-
-bool GeneralAccurateOCRRequest::IsWordsHasBeenSet() const
-{
-    return m_isWordsHasBeenSet;
 }
 
 bool GeneralAccurateOCRRequest::GetEnableDetectSplit() const
@@ -189,6 +182,38 @@ void GeneralAccurateOCRRequest::SetPdfPageNumber(const uint64_t& _pdfPageNumber)
 bool GeneralAccurateOCRRequest::PdfPageNumberHasBeenSet() const
 {
     return m_pdfPageNumberHasBeenSet;
+}
+
+bool GeneralAccurateOCRRequest::GetEnableDetectText() const
+{
+    return m_enableDetectText;
+}
+
+void GeneralAccurateOCRRequest::SetEnableDetectText(const bool& _enableDetectText)
+{
+    m_enableDetectText = _enableDetectText;
+    m_enableDetectTextHasBeenSet = true;
+}
+
+bool GeneralAccurateOCRRequest::EnableDetectTextHasBeenSet() const
+{
+    return m_enableDetectTextHasBeenSet;
+}
+
+string GeneralAccurateOCRRequest::GetConfigID() const
+{
+    return m_configID;
+}
+
+void GeneralAccurateOCRRequest::SetConfigID(const string& _configID)
+{
+    m_configID = _configID;
+    m_configIDHasBeenSet = true;
+}
+
+bool GeneralAccurateOCRRequest::ConfigIDHasBeenSet() const
+{
+    return m_configIDHasBeenSet;
 }
 
 

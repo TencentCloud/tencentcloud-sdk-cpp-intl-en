@@ -61,16 +61,30 @@ namespace TencentCloud
                     /**
                      * 获取Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
-                     * 
+                     * @deprecated
                      */
                     double GetAngel() const;
 
                     /**
                      * 判断参数 Angel 是否已赋值
                      * @return Angel 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AngelHasBeenSet() const;
+
+                    /**
+                     * 获取Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+                     * @return Angle Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+                     * 
+                     */
+                    double GetAngle() const;
+
+                    /**
+                     * 判断参数 Angle 是否已赋值
+                     * @return Angle 是否已赋值
+                     * 
+                     */
+                    bool AngleHasBeenSet() const;
 
                 private:
 
@@ -85,6 +99,12 @@ namespace TencentCloud
                      */
                     double m_angel;
                     bool m_angelHasBeenSet;
+
+                    /**
+                     * Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+                     */
+                    double m_angle;
+                    bool m_angleHasBeenSet;
 
                 };
             }
