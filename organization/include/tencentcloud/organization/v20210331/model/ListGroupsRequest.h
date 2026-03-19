@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SortFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
-                     * @return SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+                     * 获取Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
+                     * @return SortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
                      * 
                      */
                     std::string GetSortType() const;
 
                     /**
-                     * 设置Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
-                     * @param _sortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+                     * 设置Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
+                     * @param _sortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
                      * 
                      */
                     void SetSortType(const std::string& _sortType);
@@ -276,7 +276,7 @@ namespace TencentCloud
                     bool m_sortFieldHasBeenSet;
 
                     /**
-                     * Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+                     * Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
                      */
                     std::string m_sortType;
                     bool m_sortTypeHasBeenSet;

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RolePolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRolePolicyId() const;
 
                     /**
                      * 设置Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _rolePolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRolePolicyId(const int64_t& _rolePolicyId);
@@ -159,7 +155,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_rolePolicyId;
                     bool m_rolePolicyIdHasBeenSet;

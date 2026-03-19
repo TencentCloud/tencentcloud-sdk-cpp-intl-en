@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
-                     * @return TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+                     * 获取<p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
+                     * @return TextDetections <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
                      * 
                      */
                     std::vector<TextDetection> GetTextDetections() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TextDetectionsHasBeenSet() const;
 
                     /**
-                     * 获取Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
-                     * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * 获取Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * @return Angel Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      * @deprecated
                      */
                     double GetAngel() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool AngelHasBeenSet() const;
 
                     /**
-                     * 获取Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
-                     * @return Angle Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+                     * 获取<p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
+                     * @return Angle <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
                      * 
                      */
                     double GetAngle() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+                     * <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
                      */
                     std::vector<TextDetection> m_textDetections;
                     bool m_textDetectionsHasBeenSet;
 
                     /**
-                     * Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      */
                     double m_angel;
                     bool m_angelHasBeenSet;
 
                     /**
-                     * Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+                     * <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
                      */
                     double m_angle;
                     bool m_angleHasBeenSet;

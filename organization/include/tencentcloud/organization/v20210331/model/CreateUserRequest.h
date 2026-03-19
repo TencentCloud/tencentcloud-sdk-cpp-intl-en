@@ -231,6 +231,27 @@ namespace TencentCloud
                      */
                     bool UserTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+                     * @return NeedResetPassword Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+                     * 
+                     */
+                    bool GetNeedResetPassword() const;
+
+                    /**
+                     * 设置Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+                     * @param _needResetPassword Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+                     * 
+                     */
+                    void SetNeedResetPassword(const bool& _needResetPassword);
+
+                    /**
+                     * 判断参数 NeedResetPassword 是否已赋值
+                     * @return NeedResetPassword 是否已赋值
+                     * 
+                     */
+                    bool NeedResetPasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -286,6 +307,12 @@ namespace TencentCloud
                      */
                     std::string m_userType;
                     bool m_userTypeHasBeenSet;
+
+                    /**
+                     * Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+                     */
+                    bool m_needResetPassword;
+                    bool m_needResetPasswordHasBeenSet;
 
                 };
             }

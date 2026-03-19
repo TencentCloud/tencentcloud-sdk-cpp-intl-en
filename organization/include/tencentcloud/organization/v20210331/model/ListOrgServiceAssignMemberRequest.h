@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 获取Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * @return ServiceId Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetServiceId() const;
 
                     /**
-                     * 设置Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @param _serviceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 设置Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * @param _serviceId Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
                      * 
                      */
                     void SetServiceId(const uint64_t& _serviceId);
@@ -104,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ServiceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * @return Product Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * @param _product Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     * 
+                     */
+                    bool ProductHasBeenSet() const;
 
                 private:
 
@@ -120,10 +141,16 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
                      */
                     uint64_t m_serviceId;
                     bool m_serviceIdHasBeenSet;
+
+                    /**
+                     * Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

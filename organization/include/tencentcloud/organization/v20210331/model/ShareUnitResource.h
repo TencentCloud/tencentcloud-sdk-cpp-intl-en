@@ -90,22 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -139,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SharedMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of members in a sharing unit.
+                     * @return SharedMemberNum Number of members in a sharing unit.
                      * 
                      */
                     uint64_t GetSharedMemberNum() const;
 
                     /**
-                     * 设置The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sharedMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of members in a sharing unit.
+                     * @param _sharedMemberNum Number of members in a sharing unit.
                      * 
                      */
                     void SetSharedMemberNum(const uint64_t& _sharedMemberNum);
@@ -164,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SharedMemberNumHasBeenSet() const;
 
                     /**
-                     * 获取The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SharedMemberUseNum The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of members using shared resources.
+                     * @return SharedMemberUseNum Number of members using shared resources.
                      * 
                      */
                     uint64_t GetSharedMemberUseNum() const;
 
                     /**
-                     * 设置The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sharedMemberUseNum The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of members using shared resources.
+                     * @param _sharedMemberUseNum Number of members using shared resources.
                      * 
                      */
                     void SetSharedMemberUseNum(const uint64_t& _sharedMemberUseNum);
@@ -189,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SharedMemberUseNumHasBeenSet() const;
 
                     /**
-                     * 获取Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShareManagerUin Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sharing unit administrator.
+                     * @return ShareManagerUin Sharing unit administrator.
                      * 
                      */
                     int64_t GetShareManagerUin() const;
 
                     /**
-                     * 设置Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shareManagerUin Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sharing unit administrator.
+                     * @param _shareManagerUin Sharing unit administrator.
                      * 
                      */
                     void SetShareManagerUin(const int64_t& _shareManagerUin);
@@ -229,8 +209,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -242,22 +220,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_productResourceIdHasBeenSet;
 
                     /**
-                     * The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of members in a sharing unit.
                      */
                     uint64_t m_sharedMemberNum;
                     bool m_sharedMemberNumHasBeenSet;
 
                     /**
-                     * The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of members using shared resources.
                      */
                     uint64_t m_sharedMemberUseNum;
                     bool m_sharedMemberUseNumHasBeenSet;
 
                     /**
-                     * Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sharing unit administrator.
                      */
                     int64_t m_shareManagerUin;
                     bool m_shareManagerUinHasBeenSet;

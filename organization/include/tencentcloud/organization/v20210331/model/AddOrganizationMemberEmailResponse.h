@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BindId Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetBindId() const;
@@ -63,7 +61,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_bindId;
                     bool m_bindIdHasBeenSet;

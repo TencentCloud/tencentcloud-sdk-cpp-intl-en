@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Total Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Group service list.
+                     * @return Items Group service list.
                      * 
                      */
                     std::vector<OrganizationServiceAssign> GetItems() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Group service list.
                      */
                     std::vector<OrganizationServiceAssign> m_items;
                     bool m_itemsHasBeenSet;

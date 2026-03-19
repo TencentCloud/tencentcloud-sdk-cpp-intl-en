@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Member UIN.
+                     * @return MemberUin Member UIN.
                      * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
-                     * 设置Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _memberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Member UIN.
+                     * @param _memberUin Member UIN.
                      * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
@@ -75,19 +71,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemberUinHasBeenSet() const;
 
                     /**
-                     * 获取Member name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Member name.
+                     * @return Name Member name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Member name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Member name.
+                     * @param _name Member name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -100,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemberType Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Member type. Invite: invited, Create: created.
+                     * @return MemberType Member type. Invite: invited, Create: created.
                      * 
                      */
                     std::string GetMemberType() const;
 
                     /**
-                     * 设置Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _memberType Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Member type. Invite: invited, Create: created.
+                     * @param _memberType Member type. Invite: invited, Create: created.
                      * 
                      */
                     void SetMemberType(const std::string& _memberType);
@@ -125,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemberTypeHasBeenSet() const;
 
                     /**
-                     * 获取Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrgPolicyType Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Relationship policy type.
+                     * @return OrgPolicyType Relationship policy type.
                      * 
                      */
                     std::string GetOrgPolicyType() const;
 
                     /**
-                     * 设置Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orgPolicyType Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Relationship policy type.
+                     * @param _orgPolicyType Relationship policy type.
                      * 
                      */
                     void SetOrgPolicyType(const std::string& _orgPolicyType);
@@ -150,19 +134,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrgPolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrgPolicyName Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Relational policy name.
+                     * @return OrgPolicyName Relational policy name.
                      * 
                      */
                     std::string GetOrgPolicyName() const;
 
                     /**
-                     * 设置Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orgPolicyName Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Relational policy name.
+                     * @param _orgPolicyName Relational policy name.
                      * 
                      */
                     void SetOrgPolicyName(const std::string& _orgPolicyName);
@@ -175,19 +155,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrgPolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrgPermission Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Relationship policy permission.
+                     * @return OrgPermission Relationship policy permission.
                      * 
                      */
                     std::vector<OrgPermission> GetOrgPermission() const;
 
                     /**
-                     * 设置Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orgPermission Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Relationship policy permission.
+                     * @param _orgPermission Relationship policy permission.
                      * 
                      */
                     void SetOrgPermission(const std::vector<OrgPermission>& _orgPermission);
@@ -200,19 +176,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrgPermissionHasBeenSet() const;
 
                     /**
-                     * 获取Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node ID.
+                     * @return NodeId Node ID.
                      * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
-                     * 设置Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node ID.
+                     * @param _nodeId Node ID.
                      * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
@@ -225,19 +197,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Node name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeName Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node name.
+                     * @return NodeName Node name.
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Node name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeName Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node name.
+                     * @param _nodeName Node name.
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -251,18 +219,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -276,18 +240,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -300,19 +260,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update date
+                     * @return UpdateTime Update date
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update date
+                     * @param _updateTime Update date
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -325,19 +281,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to allow a member to exit. Valid values: Allow, Denied.
+                     * @return IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
                      * 
                      */
                     std::string GetIsAllowQuit() const;
 
                     /**
-                     * 设置Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to allow a member to exit. Valid values: Allow, Denied.
+                     * @param _isAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
                      * 
                      */
                     void SetIsAllowQuit(const std::string& _isAllowQuit);
@@ -350,19 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsAllowQuitHasBeenSet() const;
 
                     /**
-                     * 获取Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayUin Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy payer UIN.
+                     * @return PayUin Proxy payer UIN.
                      * 
                      */
                     std::string GetPayUin() const;
 
                     /**
-                     * 设置Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payUin Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy payer UIN.
+                     * @param _payUin Proxy payer UIN.
                      * 
                      */
                     void SetPayUin(const std::string& _payUin);
@@ -375,19 +323,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayUinHasBeenSet() const;
 
                     /**
-                     * 获取Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayName Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy payer name.
+                     * @return PayName Proxy payer name.
                      * 
                      */
                     std::string GetPayName() const;
 
                     /**
-                     * 设置Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payName Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy payer name.
+                     * @param _payName Proxy payer name.
                      * 
                      */
                     void SetPayName(const std::string& _payName);
@@ -400,19 +344,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayNameHasBeenSet() const;
 
                     /**
-                     * 获取Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrgIdentity Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Admin identity.
+                     * @return OrgIdentity Admin identity.
                      * 
                      */
                     std::vector<MemberIdentity> GetOrgIdentity() const;
 
                     /**
-                     * 设置Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orgIdentity Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Admin identity.
+                     * @param _orgIdentity Admin identity.
                      * 
                      */
                     void SetOrgIdentity(const std::vector<MemberIdentity>& _orgIdentity);
@@ -425,19 +365,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrgIdentityHasBeenSet() const;
 
                     /**
-                     * 获取Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BindStatus Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
+                     * @return BindStatus Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
                      * 
                      */
                     std::string GetBindStatus() const;
 
                     /**
-                     * 设置Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bindStatus Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
+                     * @param _bindStatus Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
                      * 
                      */
                     void SetBindStatus(const std::string& _bindStatus);
@@ -450,19 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BindStatusHasBeenSet() const;
 
                     /**
-                     * 获取Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PermissionStatus Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Member's permission status. Valid values: Confirmed, UnConfirmed.
+                     * @return PermissionStatus Member's permission status. Valid values: Confirmed, UnConfirmed.
                      * 
                      */
                     std::string GetPermissionStatus() const;
 
                     /**
-                     * 设置Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _permissionStatus Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Member's permission status. Valid values: Confirmed, UnConfirmed.
+                     * @param _permissionStatus Member's permission status. Valid values: Confirmed, UnConfirmed.
                      * 
                      */
                     void SetPermissionStatus(const std::string& _permissionStatus);
@@ -476,18 +408,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -499,133 +427,142 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Tencent cloud nickname.
+                     * @return NickName Tencent cloud nickname.
+                     * 
+                     */
+                    std::string GetNickName() const;
+
+                    /**
+                     * 设置Tencent cloud nickname.
+                     * @param _nickName Tencent cloud nickname.
+                     * 
+                     */
+                    void SetNickName(const std::string& _nickName);
+
+                    /**
+                     * 判断参数 NickName 是否已赋值
+                     * @return NickName 是否已赋值
+                     * 
+                     */
+                    bool NickNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Member UIN.
                      */
                     int64_t m_memberUin;
                     bool m_memberUinHasBeenSet;
 
                     /**
-                     * Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Member name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Member type. Invite: invited, Create: created.
                      */
                     std::string m_memberType;
                     bool m_memberTypeHasBeenSet;
 
                     /**
-                     * Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Relationship policy type.
                      */
                     std::string m_orgPolicyType;
                     bool m_orgPolicyTypeHasBeenSet;
 
                     /**
-                     * Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Relational policy name.
                      */
                     std::string m_orgPolicyName;
                     bool m_orgPolicyNameHasBeenSet;
 
                     /**
-                     * Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Relationship policy permission.
                      */
                     std::vector<OrgPermission> m_orgPermission;
                     bool m_orgPermissionHasBeenSet;
 
                     /**
-                     * Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node ID.
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node name.
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
                      * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update date
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to allow a member to exit. Valid values: Allow, Denied.
                      */
                     std::string m_isAllowQuit;
                     bool m_isAllowQuitHasBeenSet;
 
                     /**
-                     * Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy payer UIN.
                      */
                     std::string m_payUin;
                     bool m_payUinHasBeenSet;
 
                     /**
-                     * Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy payer name.
                      */
                     std::string m_payName;
                     bool m_payNameHasBeenSet;
 
                     /**
-                     * Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Admin identity.
                      */
                     std::vector<MemberIdentity> m_orgIdentity;
                     bool m_orgIdentityHasBeenSet;
 
                     /**
-                     * Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
                      */
                     std::string m_bindStatus;
                     bool m_bindStatusHasBeenSet;
 
                     /**
-                     * Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Member's permission status. Valid values: Confirmed, UnConfirmed.
                      */
                     std::string m_permissionStatus;
                     bool m_permissionStatusHasBeenSet;
 
                     /**
                      * Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Tencent cloud nickname.
+                     */
+                    std::string m_nickName;
+                    bool m_nickNameHasBeenSet;
 
                 };
             }

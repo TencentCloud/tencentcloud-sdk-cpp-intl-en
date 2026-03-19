@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
                      * 设置Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIdentityAliasName() const;
 
                     /**
                      * 设置Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityAliasName(const std::string& _identityAliasName);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityPolicy Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<IdentityPolicy> GetIdentityPolicy() const;
 
                     /**
                      * 设置Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityPolicy Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityPolicy(const std::vector<IdentityPolicy>& _identityPolicy);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdentityPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentityType Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Identity type. 1: preset; 2: custom.
+                     * @return IdentityType Identity type. 1: preset; 2: custom.
                      * 
                      */
                     uint64_t GetIdentityType() const;
 
                     /**
-                     * 设置Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _identityType Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Identity type. 1: preset; 2: custom.
+                     * @param _identityType Identity type. 1: preset; 2: custom.
                      * 
                      */
                     void SetIdentityType(const uint64_t& _identityType);
@@ -174,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -201,42 +177,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_identityId;
                     bool m_identityIdHasBeenSet;
 
                     /**
                      * Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identityAliasName;
                     bool m_identityAliasNameHasBeenSet;
 
                     /**
                      * Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
                      * Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<IdentityPolicy> m_identityPolicy;
                     bool m_identityPolicyHasBeenSet;
 
                     /**
-                     * Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Identity type. 1: preset; 2: custom.
                      */
                     uint64_t m_identityType;
                     bool m_identityTypeHasBeenSet;
 
                     /**
                      * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

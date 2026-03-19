@@ -236,19 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailureReason Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reason for failure
+                     * @return FailureReason Reason for failure
                      * 
                      */
                     std::string GetFailureReason() const;
 
                     /**
-                     * 设置Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _failureReason Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reason for failure
+                     * @param _failureReason Reason for failure
                      * 
                      */
                     void SetFailureReason(const std::string& _failureReason);
@@ -317,8 +313,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reason for failure
                      */
                     std::string m_failureReason;
                     bool m_failureReasonHasBeenSet;

@@ -49,6 +49,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/CreateRotationPasswordResponse.h
   include/tencentcloud/cdb/v20170320/model/ModifyCdbProxyAddressDescRequest.h
   include/tencentcloud/cdb/v20170320/model/CdbRegionSellConf.h
+  include/tencentcloud/cdb/v20170320/model/ReadWriteNode.h
   include/tencentcloud/cdb/v20170320/model/DescribeRoGroupsRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeBackupDecryptionKeyRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateCdbProxyAddressResponse.h
@@ -80,6 +81,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/AuditPolicy.h
   include/tencentcloud/cdb/v20170320/model/ProxyNode.h
   include/tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigResponse.h
+  include/tencentcloud/cdb/v20170320/model/AccountInfo.h
   include/tencentcloud/cdb/v20170320/model/DescribeTablesRequest.h
   include/tencentcloud/cdb/v20170320/model/UpgradeDBInstanceRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyParamTemplateRequest.h
@@ -200,6 +202,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/AuditLogAggregationResult.h
   include/tencentcloud/cdb/v20170320/model/DatabasesWithCharacterLists.h
   include/tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigRequest.h
+  include/tencentcloud/cdb/v20170320/model/ClusterTopology.h
   include/tencentcloud/cdb/v20170320/model/TagInfo.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeBackupDownloadRestrictionRequest.h
@@ -211,6 +214,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplateModifyHistoryResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeAuditLogFilesRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyBackupConfigRequest.h
+  include/tencentcloud/cdb/v20170320/model/DiskTypeConfigItem.h
   include/tencentcloud/cdb/v20170320/model/DisassociateSecurityGroupsResponse.h
   include/tencentcloud/cdb/v20170320/model/AggregationCondition.h
   include/tencentcloud/cdb/v20170320/model/LocalBinlogConfig.h
@@ -293,7 +297,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DeviceCpuRateInfo.h
   include/tencentcloud/cdb/v20170320/model/ModifyAccountPrivilegesRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateBackupRequest.h
-  include/tencentcloud/cdb/v20170320/model/AccountInfo.h
+  include/tencentcloud/cdb/v20170320/model/ReadonlyNode.h
   include/tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/AdjustCdbProxyAddressResponse.h
   include/tencentcloud/cdb/v20170320/model/CreateAuditLogFileRequest.h
@@ -449,6 +453,7 @@ set(cdb_src
   src/v20170320/model/CreateRotationPasswordResponse.cpp
   src/v20170320/model/ModifyCdbProxyAddressDescRequest.cpp
   src/v20170320/model/CdbRegionSellConf.cpp
+  src/v20170320/model/ReadWriteNode.cpp
   src/v20170320/model/DescribeRoGroupsRequest.cpp
   src/v20170320/model/DescribeBackupDecryptionKeyRequest.cpp
   src/v20170320/model/CreateCdbProxyAddressResponse.cpp
@@ -480,6 +485,7 @@ set(cdb_src
   src/v20170320/model/AuditPolicy.cpp
   src/v20170320/model/ProxyNode.cpp
   src/v20170320/model/DescribeCdbZoneConfigResponse.cpp
+  src/v20170320/model/AccountInfo.cpp
   src/v20170320/model/DescribeTablesRequest.cpp
   src/v20170320/model/UpgradeDBInstanceRequest.cpp
   src/v20170320/model/ModifyParamTemplateRequest.cpp
@@ -600,6 +606,7 @@ set(cdb_src
   src/v20170320/model/AuditLogAggregationResult.cpp
   src/v20170320/model/DatabasesWithCharacterLists.cpp
   src/v20170320/model/DescribeRemoteBackupConfigRequest.cpp
+  src/v20170320/model/ClusterTopology.cpp
   src/v20170320/model/TagInfo.cpp
   src/v20170320/model/DescribeDBInstancesResponse.cpp
   src/v20170320/model/DescribeBackupDownloadRestrictionRequest.cpp
@@ -611,6 +618,7 @@ set(cdb_src
   src/v20170320/model/DescribeAuditRuleTemplateModifyHistoryResponse.cpp
   src/v20170320/model/DescribeAuditLogFilesRequest.cpp
   src/v20170320/model/ModifyBackupConfigRequest.cpp
+  src/v20170320/model/DiskTypeConfigItem.cpp
   src/v20170320/model/DisassociateSecurityGroupsResponse.cpp
   src/v20170320/model/AggregationCondition.cpp
   src/v20170320/model/LocalBinlogConfig.cpp
@@ -693,7 +701,7 @@ set(cdb_src
   src/v20170320/model/DeviceCpuRateInfo.cpp
   src/v20170320/model/ModifyAccountPrivilegesRequest.cpp
   src/v20170320/model/CreateBackupRequest.cpp
-  src/v20170320/model/AccountInfo.cpp
+  src/v20170320/model/ReadonlyNode.cpp
   src/v20170320/model/DescribeRemoteBackupConfigResponse.cpp
   src/v20170320/model/AdjustCdbProxyAddressResponse.cpp
   src/v20170320/model/CreateAuditLogFileRequest.cpp

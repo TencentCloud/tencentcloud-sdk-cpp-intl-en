@@ -214,6 +214,35 @@ namespace TencentCloud
                      */
                     bool MaxRoCpuHasBeenSet() const;
 
+                    /**
+                     * 获取Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+                     * @return DeviceType Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+                     * @param _deviceType Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +292,14 @@ namespace TencentCloud
                      */
                     double m_maxRoCpu;
                     bool m_maxRoCpuHasBeenSet;
+
+                    /**
+                     * Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
 
                 };
             }

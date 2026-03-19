@@ -987,6 +987,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OwnerNameHasBeenSet() const;
 
+                    /**
+                     * 获取Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Schema Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSchema() const;
+
+                    /**
+                     * 设置Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _schema Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSchema(const std::string& _schema);
+
+                    /**
+                     * 判断参数 Schema 是否已赋值
+                     * @return Schema 是否已赋值
+                     * 
+                     */
+                    bool SchemaHasBeenSet() const;
+
+                    /**
+                     * 获取Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DbVersion Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDbVersion() const;
+
+                    /**
+                     * 设置Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dbVersion Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDbVersion(const std::string& _dbVersion);
+
+                    /**
+                     * 判断参数 DbVersion 是否已赋值
+                     * @return DbVersion 是否已赋值
+                     * 
+                     */
+                    bool DbVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1252,6 +1302,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_ownerName;
                     bool m_ownerNameHasBeenSet;
+
+                    /**
+                     * Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_schema;
+                    bool m_schemaHasBeenSet;
+
+                    /**
+                     * Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dbVersion;
+                    bool m_dbVersionHasBeenSet;
 
                 };
             }

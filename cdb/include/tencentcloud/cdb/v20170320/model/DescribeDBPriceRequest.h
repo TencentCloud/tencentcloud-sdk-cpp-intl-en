@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size in MB. This parameter is required when `InstanceId` is empty.
-                     * @return Memory Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+                     * 获取Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
+                     * @return Memory Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in MB. This parameter is required when `InstanceId` is empty.
-                     * @param _memory Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+                     * 设置Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
+                     * @param _memory Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GB. This parameter is required when `InstanceId` is empty.
-                     * @return Volume Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+                     * 获取Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
+                     * @return Volume Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Instance disk size in GB. This parameter is required when `InstanceId` is empty.
-                     * @param _volume Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+                     * 设置Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
+                     * @param _volume Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
-                     * @return PayType Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+                     * 获取Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+                     * @return PayType Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
                      * 
                      */
                     std::string GetPayType() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
-                     * @param _payType Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+                     * 设置Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+                     * @param _payType Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
                      * 
                      */
                     void SetPayType(const std::string& _payType);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool ProtectModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
-                     * @return DeviceType Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+                     * 获取Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
+                     * @return DeviceType Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
-                     * @param _deviceType Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+                     * 设置Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
+                     * @param _deviceType Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -316,15 +316,15 @@ namespace TencentCloud
                     bool LadderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiskType 
+                     * 获取Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
+                     * @return DiskType Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置
-                     * @param _diskType 
+                     * 设置Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
+                     * @param _diskType Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -357,13 +357,13 @@ namespace TencentCloud
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+                     * Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+                     * Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
@@ -375,7 +375,7 @@ namespace TencentCloud
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+                     * Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
                      */
                     std::string m_payType;
                     bool m_payTypeHasBeenSet;
@@ -387,7 +387,7 @@ namespace TencentCloud
                     bool m_protectModeHasBeenSet;
 
                     /**
-                     * Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+                     * Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
@@ -417,7 +417,7 @@ namespace TencentCloud
                     bool m_ladderHasBeenSet;
 
                     /**
-                     * 
+                     * Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;

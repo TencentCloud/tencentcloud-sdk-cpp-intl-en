@@ -69,22 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -106,8 +98,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

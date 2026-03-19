@@ -60,7 +60,11 @@ CreateDBInstanceRequest::CreateDBInstanceRequest() :
     m_alarmPolicyIdListHasBeenSet(false),
     m_dryRunHasBeenSet(false),
     m_engineTypeHasBeenSet(false),
-    m_vipsHasBeenSet(false)
+    m_vipsHasBeenSet(false),
+    m_dataProtectVolumeHasBeenSet(false),
+    m_clusterTopologyHasBeenSet(false),
+    m_diskTypeHasBeenSet(false),
+    m_destroyProtectHasBeenSet(false)
 {
 }
 
@@ -408,6 +412,39 @@ string CreateDBInstanceRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_dataProtectVolumeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataProtectVolume";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_dataProtectVolume, allocator);
+    }
+
+    if (m_clusterTopologyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterTopology";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_clusterTopology.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_diskTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_destroyProtectHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DestroyProtect";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_destroyProtect.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -1024,6 +1061,70 @@ void CreateDBInstanceRequest::SetVips(const vector<string>& _vips)
 bool CreateDBInstanceRequest::VipsHasBeenSet() const
 {
     return m_vipsHasBeenSet;
+}
+
+int64_t CreateDBInstanceRequest::GetDataProtectVolume() const
+{
+    return m_dataProtectVolume;
+}
+
+void CreateDBInstanceRequest::SetDataProtectVolume(const int64_t& _dataProtectVolume)
+{
+    m_dataProtectVolume = _dataProtectVolume;
+    m_dataProtectVolumeHasBeenSet = true;
+}
+
+bool CreateDBInstanceRequest::DataProtectVolumeHasBeenSet() const
+{
+    return m_dataProtectVolumeHasBeenSet;
+}
+
+ClusterTopology CreateDBInstanceRequest::GetClusterTopology() const
+{
+    return m_clusterTopology;
+}
+
+void CreateDBInstanceRequest::SetClusterTopology(const ClusterTopology& _clusterTopology)
+{
+    m_clusterTopology = _clusterTopology;
+    m_clusterTopologyHasBeenSet = true;
+}
+
+bool CreateDBInstanceRequest::ClusterTopologyHasBeenSet() const
+{
+    return m_clusterTopologyHasBeenSet;
+}
+
+string CreateDBInstanceRequest::GetDiskType() const
+{
+    return m_diskType;
+}
+
+void CreateDBInstanceRequest::SetDiskType(const string& _diskType)
+{
+    m_diskType = _diskType;
+    m_diskTypeHasBeenSet = true;
+}
+
+bool CreateDBInstanceRequest::DiskTypeHasBeenSet() const
+{
+    return m_diskTypeHasBeenSet;
+}
+
+string CreateDBInstanceRequest::GetDestroyProtect() const
+{
+    return m_destroyProtect;
+}
+
+void CreateDBInstanceRequest::SetDestroyProtect(const string& _destroyProtect)
+{
+    m_destroyProtect = _destroyProtect;
+    m_destroyProtectHasBeenSet = true;
+}
+
+bool CreateDBInstanceRequest::DestroyProtectHasBeenSet() const
+{
+    return m_destroyProtectHasBeenSet;
 }
 
 

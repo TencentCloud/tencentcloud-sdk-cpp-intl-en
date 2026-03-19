@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetServiceId() const;
 
                     /**
                      * 设置Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serviceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServiceId(const uint64_t& _serviceId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _productName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsAssign Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
+                     * @return IsAssign Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
                      * 
                      */
                     uint64_t GetIsAssign() const;
 
                     /**
-                     * 设置Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isAssign Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
+                     * @param _isAssign Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
                      * 
                      */
                     void SetIsAssign(const uint64_t& _isAssign);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemberNum Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of delegated administrators.
+                     * @return MemberNum Number of delegated administrators.
                      * 
                      */
                     std::string GetMemberNum() const;
 
                     /**
-                     * 设置Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _memberNum Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of delegated administrators.
+                     * @param _memberNum Number of delegated administrators.
                      * 
                      */
                     void SetMemberNum(const std::string& _memberNum);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Document Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDocument() const;
 
                     /**
                      * 设置Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _document Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDocument(const std::string& _document);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentHasBeenSet() const;
 
                     /**
-                     * 获取Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConsoleUrl Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Path to the console for organization service products.
+                     * @return ConsoleUrl Path to the console for organization service products.
                      * 
                      */
                     std::string GetConsoleUrl() const;
 
                     /**
-                     * 设置Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _consoleUrl Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Path to the console for organization service products.
+                     * @param _consoleUrl Path to the console for organization service products.
                      * 
                      */
                     void SetConsoleUrl(const std::string& _consoleUrl);
@@ -222,23 +194,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConsoleUrlHasBeenSet() const;
 
                     /**
-                     * 获取Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsUsageStatus Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+                     * @return IsUsageStatus Whether to access the usage status. valid values: 1 (yes). 
+2: no.
                      * 
                      */
                     uint64_t GetIsUsageStatus() const;
 
                     /**
-                     * 设置Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isUsageStatus Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+                     * @param _isUsageStatus Whether to access the usage status. valid values: 1 (yes). 
+2: no.
                      * 
                      */
                     void SetIsUsageStatus(const uint64_t& _isUsageStatus);
@@ -251,19 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsUsageStatusHasBeenSet() const;
 
                     /**
-                     * 获取Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CanAssignCount Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Limit on the number of delegated administrators.
+                     * @return CanAssignCount Limit on the number of delegated administrators.
                      * 
                      */
                     uint64_t GetCanAssignCount() const;
 
                     /**
-                     * 设置Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _canAssignCount Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Limit on the number of delegated administrators.
+                     * @param _canAssignCount Limit on the number of delegated administrators.
                      * 
                      */
                     void SetCanAssignCount(const uint64_t& _canAssignCount);
@@ -276,19 +240,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CanAssignCountHasBeenSet() const;
 
                     /**
-                     * 获取Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Product Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Organization service product ID.
+                     * @return Product Organization service product ID.
                      * 
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _product Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Organization service product ID.
+                     * @param _product Organization service product ID.
                      * 
                      */
                     void SetProduct(const std::string& _product);
@@ -301,19 +261,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceGrant Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+                     * @return ServiceGrant Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
                      * 
                      */
                     uint64_t GetServiceGrant() const;
 
                     /**
-                     * 设置Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceGrant Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+                     * @param _serviceGrant Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
                      * 
                      */
                     void SetServiceGrant(const uint64_t& _serviceGrant);
@@ -326,19 +282,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceGrantHasBeenSet() const;
 
                     /**
-                     * 获取Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GrantStatus Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+                     * @return GrantStatus Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
                      * 
                      */
                     std::string GetGrantStatus() const;
 
                     /**
-                     * 设置Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _grantStatus Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+                     * @param _grantStatus Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
                      * 
                      */
                     void SetGrantStatus(const std::string& _grantStatus);
@@ -351,19 +303,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GrantStatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSetManagementScope Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
+                     * @return IsSetManagementScope Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
                      * 
                      */
                     uint64_t GetIsSetManagementScope() const;
 
                     /**
-                     * 设置Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSetManagementScope Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
+                     * @param _isSetManagementScope Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
                      * 
                      */
                     void SetIsSetManagementScope(const uint64_t& _isSetManagementScope);
@@ -379,92 +327,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_serviceId;
                     bool m_serviceIdHasBeenSet;
 
                     /**
                      * Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
                      */
                     uint64_t m_isAssign;
                     bool m_isAssignHasBeenSet;
 
                     /**
                      * Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of delegated administrators.
                      */
                     std::string m_memberNum;
                     bool m_memberNumHasBeenSet;
 
                     /**
                      * Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_document;
                     bool m_documentHasBeenSet;
 
                     /**
-                     * Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Path to the console for organization service products.
                      */
                     std::string m_consoleUrl;
                     bool m_consoleUrlHasBeenSet;
 
                     /**
-                     * Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to access the usage status. valid values: 1 (yes). 
+2: no.
                      */
                     uint64_t m_isUsageStatus;
                     bool m_isUsageStatusHasBeenSet;
 
                     /**
-                     * Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Limit on the number of delegated administrators.
                      */
                     uint64_t m_canAssignCount;
                     bool m_canAssignCountHasBeenSet;
 
                     /**
-                     * Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Organization service product ID.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
 
                     /**
-                     * Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
                      */
                     uint64_t m_serviceGrant;
                     bool m_serviceGrantHasBeenSet;
 
                     /**
-                     * Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
                      */
                     std::string m_grantStatus;
                     bool m_grantStatusHasBeenSet;
 
                     /**
-                     * Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
                      */
                     uint64_t m_isSetManagementScope;
                     bool m_isSetManagementScopeHasBeenSet;

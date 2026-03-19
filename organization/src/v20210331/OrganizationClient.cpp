@@ -390,6 +390,56 @@ OrganizationClient::AddShareUnitMembersOutcomeCallable OrganizationClient::AddSh
     return prom->get_future();
 }
 
+OrganizationClient::AddShareUnitNodeOutcome OrganizationClient::AddShareUnitNode(const AddShareUnitNodeRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddShareUnitNode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddShareUnitNodeResponse rsp = AddShareUnitNodeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddShareUnitNodeOutcome(rsp);
+        else
+            return AddShareUnitNodeOutcome(o.GetError());
+    }
+    else
+    {
+        return AddShareUnitNodeOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AddShareUnitNodeAsync(const AddShareUnitNodeRequest& request, const AddShareUnitNodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddShareUnitNodeRequest&;
+    using Resp = AddShareUnitNodeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddShareUnitNode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::AddShareUnitNodeOutcomeCallable OrganizationClient::AddShareUnitNodeCallable(const AddShareUnitNodeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddShareUnitNodeOutcome>>();
+    AddShareUnitNodeAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const AddShareUnitNodeRequest&,
+        AddShareUnitNodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::AddShareUnitResourcesOutcome OrganizationClient::AddShareUnitResources(const AddShareUnitResourcesRequest &request)
 {
     auto outcome = MakeRequest(request, "AddShareUnitResources");
@@ -490,6 +540,56 @@ OrganizationClient::AddUserToGroupOutcomeCallable OrganizationClient::AddUserToG
     return prom->get_future();
 }
 
+OrganizationClient::AttachPolicyOutcome OrganizationClient::AttachPolicy(const AttachPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "AttachPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AttachPolicyResponse rsp = AttachPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AttachPolicyOutcome(rsp);
+        else
+            return AttachPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return AttachPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AttachPolicyAsync(const AttachPolicyRequest& request, const AttachPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AttachPolicyRequest&;
+    using Resp = AttachPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AttachPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::AttachPolicyOutcomeCallable OrganizationClient::AttachPolicyCallable(const AttachPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AttachPolicyOutcome>>();
+    AttachPolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const AttachPolicyRequest&,
+        AttachPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::BindOrganizationMemberAuthAccountOutcome OrganizationClient::BindOrganizationMemberAuthAccount(const BindOrganizationMemberAuthAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "BindOrganizationMemberAuthAccount");
@@ -540,6 +640,56 @@ OrganizationClient::BindOrganizationMemberAuthAccountOutcomeCallable Organizatio
     return prom->get_future();
 }
 
+OrganizationClient::BindOrganizationPolicySubAccountOutcome OrganizationClient::BindOrganizationPolicySubAccount(const BindOrganizationPolicySubAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindOrganizationPolicySubAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindOrganizationPolicySubAccountResponse rsp = BindOrganizationPolicySubAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindOrganizationPolicySubAccountOutcome(rsp);
+        else
+            return BindOrganizationPolicySubAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return BindOrganizationPolicySubAccountOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::BindOrganizationPolicySubAccountAsync(const BindOrganizationPolicySubAccountRequest& request, const BindOrganizationPolicySubAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BindOrganizationPolicySubAccountRequest&;
+    using Resp = BindOrganizationPolicySubAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BindOrganizationPolicySubAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::BindOrganizationPolicySubAccountOutcomeCallable OrganizationClient::BindOrganizationPolicySubAccountCallable(const BindOrganizationPolicySubAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BindOrganizationPolicySubAccountOutcome>>();
+    BindOrganizationPolicySubAccountAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const BindOrganizationPolicySubAccountRequest&,
+        BindOrganizationPolicySubAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::CancelOrganizationMemberAuthAccountOutcome OrganizationClient::CancelOrganizationMemberAuthAccount(const CancelOrganizationMemberAuthAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "CancelOrganizationMemberAuthAccount");
@@ -582,6 +732,56 @@ OrganizationClient::CancelOrganizationMemberAuthAccountOutcomeCallable Organizat
         const OrganizationClient*,
         const CancelOrganizationMemberAuthAccountRequest&,
         CancelOrganizationMemberAuthAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::CancelOrganizationPolicySubAccountOutcome OrganizationClient::CancelOrganizationPolicySubAccount(const CancelOrganizationPolicySubAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "CancelOrganizationPolicySubAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CancelOrganizationPolicySubAccountResponse rsp = CancelOrganizationPolicySubAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CancelOrganizationPolicySubAccountOutcome(rsp);
+        else
+            return CancelOrganizationPolicySubAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return CancelOrganizationPolicySubAccountOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CancelOrganizationPolicySubAccountAsync(const CancelOrganizationPolicySubAccountRequest& request, const CancelOrganizationPolicySubAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CancelOrganizationPolicySubAccountRequest&;
+    using Resp = CancelOrganizationPolicySubAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CancelOrganizationPolicySubAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::CancelOrganizationPolicySubAccountOutcomeCallable OrganizationClient::CancelOrganizationPolicySubAccountCallable(const CancelOrganizationPolicySubAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CancelOrganizationPolicySubAccountOutcome>>();
+    CancelOrganizationPolicySubAccountAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const CancelOrganizationPolicySubAccountRequest&,
+        CancelOrganizationPolicySubAccountOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1032,6 +1232,56 @@ OrganizationClient::CreateOrganizationMembersPolicyOutcomeCallable OrganizationC
         const OrganizationClient*,
         const CreateOrganizationMembersPolicyRequest&,
         CreateOrganizationMembersPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::CreatePolicyOutcome OrganizationClient::CreatePolicy(const CreatePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreatePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreatePolicyResponse rsp = CreatePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreatePolicyOutcome(rsp);
+        else
+            return CreatePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreatePolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreatePolicyAsync(const CreatePolicyRequest& request, const CreatePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreatePolicyRequest&;
+    using Resp = CreatePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreatePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::CreatePolicyOutcomeCallable OrganizationClient::CreatePolicyCallable(const CreatePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreatePolicyOutcome>>();
+    CreatePolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const CreatePolicyRequest&,
+        CreatePolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1690,6 +1940,56 @@ OrganizationClient::DeleteOrganizationNodesOutcomeCallable OrganizationClient::D
     return prom->get_future();
 }
 
+OrganizationClient::DeletePolicyOutcome OrganizationClient::DeletePolicy(const DeletePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeletePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeletePolicyResponse rsp = DeletePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeletePolicyOutcome(rsp);
+        else
+            return DeletePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DeletePolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeletePolicyAsync(const DeletePolicyRequest& request, const DeletePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeletePolicyRequest&;
+    using Resp = DeletePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeletePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DeletePolicyOutcomeCallable OrganizationClient::DeletePolicyCallable(const DeletePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeletePolicyOutcome>>();
+    DeletePolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DeletePolicyRequest&,
+        DeletePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::DeleteRoleAssignmentOutcome OrganizationClient::DeleteRoleAssignment(const DeleteRoleAssignmentRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRoleAssignment");
@@ -1940,6 +2240,56 @@ OrganizationClient::DeleteShareUnitMembersOutcomeCallable OrganizationClient::De
     return prom->get_future();
 }
 
+OrganizationClient::DeleteShareUnitNodeOutcome OrganizationClient::DeleteShareUnitNode(const DeleteShareUnitNodeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteShareUnitNode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteShareUnitNodeResponse rsp = DeleteShareUnitNodeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteShareUnitNodeOutcome(rsp);
+        else
+            return DeleteShareUnitNodeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteShareUnitNodeOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteShareUnitNodeAsync(const DeleteShareUnitNodeRequest& request, const DeleteShareUnitNodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteShareUnitNodeRequest&;
+    using Resp = DeleteShareUnitNodeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteShareUnitNode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DeleteShareUnitNodeOutcomeCallable OrganizationClient::DeleteShareUnitNodeCallable(const DeleteShareUnitNodeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteShareUnitNodeOutcome>>();
+    DeleteShareUnitNodeAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DeleteShareUnitNodeRequest&,
+        DeleteShareUnitNodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::DeleteShareUnitResourcesOutcome OrganizationClient::DeleteShareUnitResources(const DeleteShareUnitResourcesRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteShareUnitResources");
@@ -2082,6 +2432,56 @@ OrganizationClient::DeleteUserSyncProvisioningOutcomeCallable OrganizationClient
         const OrganizationClient*,
         const DeleteUserSyncProvisioningRequest&,
         DeleteUserSyncProvisioningOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::DescribeEffectivePolicyOutcome OrganizationClient::DescribeEffectivePolicy(const DescribeEffectivePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEffectivePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEffectivePolicyResponse rsp = DescribeEffectivePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEffectivePolicyOutcome(rsp);
+        else
+            return DescribeEffectivePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEffectivePolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeEffectivePolicyAsync(const DescribeEffectivePolicyRequest& request, const DescribeEffectivePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeEffectivePolicyRequest&;
+    using Resp = DescribeEffectivePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeEffectivePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribeEffectivePolicyOutcomeCallable OrganizationClient::DescribeEffectivePolicyCallable(const DescribeEffectivePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeEffectivePolicyOutcome>>();
+    DescribeEffectivePolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribeEffectivePolicyRequest&,
+        DescribeEffectivePolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2440,6 +2840,56 @@ OrganizationClient::DescribeOrganizationMembersOutcomeCallable OrganizationClien
     return prom->get_future();
 }
 
+OrganizationClient::DescribeOrganizationMembersAuthPolicyOutcome OrganizationClient::DescribeOrganizationMembersAuthPolicy(const DescribeOrganizationMembersAuthPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOrganizationMembersAuthPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOrganizationMembersAuthPolicyResponse rsp = DescribeOrganizationMembersAuthPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOrganizationMembersAuthPolicyOutcome(rsp);
+        else
+            return DescribeOrganizationMembersAuthPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOrganizationMembersAuthPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeOrganizationMembersAuthPolicyAsync(const DescribeOrganizationMembersAuthPolicyRequest& request, const DescribeOrganizationMembersAuthPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeOrganizationMembersAuthPolicyRequest&;
+    using Resp = DescribeOrganizationMembersAuthPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeOrganizationMembersAuthPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribeOrganizationMembersAuthPolicyOutcomeCallable OrganizationClient::DescribeOrganizationMembersAuthPolicyCallable(const DescribeOrganizationMembersAuthPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeOrganizationMembersAuthPolicyOutcome>>();
+    DescribeOrganizationMembersAuthPolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribeOrganizationMembersAuthPolicyRequest&,
+        DescribeOrganizationMembersAuthPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::DescribeOrganizationNodesOutcome OrganizationClient::DescribeOrganizationNodes(const DescribeOrganizationNodesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeOrganizationNodes");
@@ -2482,6 +2932,156 @@ OrganizationClient::DescribeOrganizationNodesOutcomeCallable OrganizationClient:
         const OrganizationClient*,
         const DescribeOrganizationNodesRequest&,
         DescribeOrganizationNodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::DescribePolicyOutcome OrganizationClient::DescribePolicy(const DescribePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePolicyResponse rsp = DescribePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePolicyOutcome(rsp);
+        else
+            return DescribePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribePolicyAsync(const DescribePolicyRequest& request, const DescribePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePolicyRequest&;
+    using Resp = DescribePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribePolicyOutcomeCallable OrganizationClient::DescribePolicyCallable(const DescribePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePolicyOutcome>>();
+    DescribePolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribePolicyRequest&,
+        DescribePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::DescribePolicyConfigOutcome OrganizationClient::DescribePolicyConfig(const DescribePolicyConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePolicyConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePolicyConfigResponse rsp = DescribePolicyConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePolicyConfigOutcome(rsp);
+        else
+            return DescribePolicyConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePolicyConfigOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribePolicyConfigAsync(const DescribePolicyConfigRequest& request, const DescribePolicyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePolicyConfigRequest&;
+    using Resp = DescribePolicyConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePolicyConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribePolicyConfigOutcomeCallable OrganizationClient::DescribePolicyConfigCallable(const DescribePolicyConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePolicyConfigOutcome>>();
+    DescribePolicyConfigAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribePolicyConfigRequest&,
+        DescribePolicyConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::DescribeResourceToShareMemberOutcome OrganizationClient::DescribeResourceToShareMember(const DescribeResourceToShareMemberRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResourceToShareMember");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResourceToShareMemberResponse rsp = DescribeResourceToShareMemberResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResourceToShareMemberOutcome(rsp);
+        else
+            return DescribeResourceToShareMemberOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResourceToShareMemberOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeResourceToShareMemberAsync(const DescribeResourceToShareMemberRequest& request, const DescribeResourceToShareMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeResourceToShareMemberRequest&;
+    using Resp = DescribeResourceToShareMemberResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeResourceToShareMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribeResourceToShareMemberOutcomeCallable OrganizationClient::DescribeResourceToShareMemberCallable(const DescribeResourceToShareMemberRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeResourceToShareMemberOutcome>>();
+    DescribeResourceToShareMemberAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribeResourceToShareMemberRequest&,
+        DescribeResourceToShareMemberOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2590,6 +3190,56 @@ OrganizationClient::DescribeShareUnitMembersOutcomeCallable OrganizationClient::
     return prom->get_future();
 }
 
+OrganizationClient::DescribeShareUnitNodesOutcome OrganizationClient::DescribeShareUnitNodes(const DescribeShareUnitNodesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeShareUnitNodes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeShareUnitNodesResponse rsp = DescribeShareUnitNodesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeShareUnitNodesOutcome(rsp);
+        else
+            return DescribeShareUnitNodesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeShareUnitNodesOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeShareUnitNodesAsync(const DescribeShareUnitNodesRequest& request, const DescribeShareUnitNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeShareUnitNodesRequest&;
+    using Resp = DescribeShareUnitNodesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeShareUnitNodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DescribeShareUnitNodesOutcomeCallable OrganizationClient::DescribeShareUnitNodesCallable(const DescribeShareUnitNodesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeShareUnitNodesOutcome>>();
+    DescribeShareUnitNodesAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DescribeShareUnitNodesRequest&,
+        DescribeShareUnitNodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::DescribeShareUnitResourcesOutcome OrganizationClient::DescribeShareUnitResources(const DescribeShareUnitResourcesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeShareUnitResources");
@@ -2690,6 +3340,106 @@ OrganizationClient::DescribeShareUnitsOutcomeCallable OrganizationClient::Descri
     return prom->get_future();
 }
 
+OrganizationClient::DetachPolicyOutcome OrganizationClient::DetachPolicy(const DetachPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetachPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetachPolicyResponse rsp = DetachPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetachPolicyOutcome(rsp);
+        else
+            return DetachPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DetachPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DetachPolicyAsync(const DetachPolicyRequest& request, const DetachPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DetachPolicyRequest&;
+    using Resp = DetachPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DetachPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DetachPolicyOutcomeCallable OrganizationClient::DetachPolicyCallable(const DetachPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DetachPolicyOutcome>>();
+    DetachPolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DetachPolicyRequest&,
+        DetachPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::DisablePolicyTypeOutcome OrganizationClient::DisablePolicyType(const DisablePolicyTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisablePolicyType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisablePolicyTypeResponse rsp = DisablePolicyTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisablePolicyTypeOutcome(rsp);
+        else
+            return DisablePolicyTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return DisablePolicyTypeOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DisablePolicyTypeAsync(const DisablePolicyTypeRequest& request, const DisablePolicyTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DisablePolicyTypeRequest&;
+    using Resp = DisablePolicyTypeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DisablePolicyType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::DisablePolicyTypeOutcomeCallable OrganizationClient::DisablePolicyTypeCallable(const DisablePolicyTypeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DisablePolicyTypeOutcome>>();
+    DisablePolicyTypeAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const DisablePolicyTypeRequest&,
+        DisablePolicyTypeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::DismantleRoleConfigurationOutcome OrganizationClient::DismantleRoleConfiguration(const DismantleRoleConfigurationRequest &request)
 {
     auto outcome = MakeRequest(request, "DismantleRoleConfiguration");
@@ -2732,6 +3482,56 @@ OrganizationClient::DismantleRoleConfigurationOutcomeCallable OrganizationClient
         const OrganizationClient*,
         const DismantleRoleConfigurationRequest&,
         DismantleRoleConfigurationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::EnablePolicyTypeOutcome OrganizationClient::EnablePolicyType(const EnablePolicyTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnablePolicyType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnablePolicyTypeResponse rsp = EnablePolicyTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnablePolicyTypeOutcome(rsp);
+        else
+            return EnablePolicyTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return EnablePolicyTypeOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::EnablePolicyTypeAsync(const EnablePolicyTypeRequest& request, const EnablePolicyTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const EnablePolicyTypeRequest&;
+    using Resp = EnablePolicyTypeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "EnablePolicyType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::EnablePolicyTypeOutcomeCallable OrganizationClient::EnablePolicyTypeCallable(const EnablePolicyTypeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<EnablePolicyTypeOutcome>>();
+    EnablePolicyTypeAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const EnablePolicyTypeRequest&,
+        EnablePolicyTypeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3490,6 +4290,56 @@ OrganizationClient::ListJoinedGroupsForUserOutcomeCallable OrganizationClient::L
     return prom->get_future();
 }
 
+OrganizationClient::ListNonCompliantResourceOutcome OrganizationClient::ListNonCompliantResource(const ListNonCompliantResourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListNonCompliantResource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListNonCompliantResourceResponse rsp = ListNonCompliantResourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListNonCompliantResourceOutcome(rsp);
+        else
+            return ListNonCompliantResourceOutcome(o.GetError());
+    }
+    else
+    {
+        return ListNonCompliantResourceOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::ListNonCompliantResourceAsync(const ListNonCompliantResourceRequest& request, const ListNonCompliantResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListNonCompliantResourceRequest&;
+    using Resp = ListNonCompliantResourceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListNonCompliantResource", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::ListNonCompliantResourceOutcomeCallable OrganizationClient::ListNonCompliantResourceCallable(const ListNonCompliantResourceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListNonCompliantResourceOutcome>>();
+    ListNonCompliantResourceAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const ListNonCompliantResourceRequest&,
+        ListNonCompliantResourceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::ListOrgServiceAssignMemberOutcome OrganizationClient::ListOrgServiceAssignMember(const ListOrgServiceAssignMemberRequest &request)
 {
     auto outcome = MakeRequest(request, "ListOrgServiceAssignMember");
@@ -3690,6 +4540,56 @@ OrganizationClient::ListPermissionPoliciesInRoleConfigurationOutcomeCallable Org
     return prom->get_future();
 }
 
+OrganizationClient::ListPoliciesForTargetOutcome OrganizationClient::ListPoliciesForTarget(const ListPoliciesForTargetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListPoliciesForTarget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListPoliciesForTargetResponse rsp = ListPoliciesForTargetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListPoliciesForTargetOutcome(rsp);
+        else
+            return ListPoliciesForTargetOutcome(o.GetError());
+    }
+    else
+    {
+        return ListPoliciesForTargetOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::ListPoliciesForTargetAsync(const ListPoliciesForTargetRequest& request, const ListPoliciesForTargetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListPoliciesForTargetRequest&;
+    using Resp = ListPoliciesForTargetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListPoliciesForTarget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::ListPoliciesForTargetOutcomeCallable OrganizationClient::ListPoliciesForTargetCallable(const ListPoliciesForTargetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListPoliciesForTargetOutcome>>();
+    ListPoliciesForTargetAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const ListPoliciesForTargetRequest&,
+        ListPoliciesForTargetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::ListRoleAssignmentsOutcome OrganizationClient::ListRoleAssignments(const ListRoleAssignmentsRequest &request)
 {
     auto outcome = MakeRequest(request, "ListRoleAssignments");
@@ -3882,6 +4782,56 @@ OrganizationClient::ListSCIMCredentialsOutcomeCallable OrganizationClient::ListS
         const OrganizationClient*,
         const ListSCIMCredentialsRequest&,
         ListSCIMCredentialsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::ListTargetsForPolicyOutcome OrganizationClient::ListTargetsForPolicy(const ListTargetsForPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListTargetsForPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListTargetsForPolicyResponse rsp = ListTargetsForPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListTargetsForPolicyOutcome(rsp);
+        else
+            return ListTargetsForPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ListTargetsForPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::ListTargetsForPolicyAsync(const ListTargetsForPolicyRequest& request, const ListTargetsForPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListTargetsForPolicyRequest&;
+    using Resp = ListTargetsForPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListTargetsForPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::ListTargetsForPolicyOutcomeCallable OrganizationClient::ListTargetsForPolicyCallable(const ListTargetsForPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListTargetsForPolicyOutcome>>();
+    ListTargetsForPolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const ListTargetsForPolicyRequest&,
+        ListTargetsForPolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4790,6 +5740,56 @@ OrganizationClient::UpdateOrganizationMemberEmailBindOutcomeCallable Organizatio
     return prom->get_future();
 }
 
+OrganizationClient::UpdateOrganizationMembersPolicyOutcome OrganizationClient::UpdateOrganizationMembersPolicy(const UpdateOrganizationMembersPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateOrganizationMembersPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateOrganizationMembersPolicyResponse rsp = UpdateOrganizationMembersPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateOrganizationMembersPolicyOutcome(rsp);
+        else
+            return UpdateOrganizationMembersPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateOrganizationMembersPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateOrganizationMembersPolicyAsync(const UpdateOrganizationMembersPolicyRequest& request, const UpdateOrganizationMembersPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateOrganizationMembersPolicyRequest&;
+    using Resp = UpdateOrganizationMembersPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateOrganizationMembersPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::UpdateOrganizationMembersPolicyOutcomeCallable OrganizationClient::UpdateOrganizationMembersPolicyCallable(const UpdateOrganizationMembersPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateOrganizationMembersPolicyOutcome>>();
+    UpdateOrganizationMembersPolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const UpdateOrganizationMembersPolicyRequest&,
+        UpdateOrganizationMembersPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::UpdateOrganizationNodeOutcome OrganizationClient::UpdateOrganizationNode(const UpdateOrganizationNodeRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateOrganizationNode");
@@ -4832,6 +5832,56 @@ OrganizationClient::UpdateOrganizationNodeOutcomeCallable OrganizationClient::Up
         const OrganizationClient*,
         const UpdateOrganizationNodeRequest&,
         UpdateOrganizationNodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OrganizationClient::UpdatePolicyOutcome OrganizationClient::UpdatePolicy(const UpdatePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdatePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdatePolicyResponse rsp = UpdatePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdatePolicyOutcome(rsp);
+        else
+            return UpdatePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdatePolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdatePolicyAsync(const UpdatePolicyRequest& request, const UpdatePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdatePolicyRequest&;
+    using Resp = UpdatePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdatePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::UpdatePolicyOutcomeCallable OrganizationClient::UpdatePolicyCallable(const UpdatePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdatePolicyOutcome>>();
+    UpdatePolicyAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const UpdatePolicyRequest&,
+        UpdatePolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -190,6 +190,48 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Organizational unit ID.
+                     * @return NodeId Organizational unit ID.
+                     * 
+                     */
+                    uint64_t GetNodeId() const;
+
+                    /**
+                     * 设置Organizational unit ID.
+                     * @param _nodeId Organizational unit ID.
+                     * 
+                     */
+                    void SetNodeId(const uint64_t& _nodeId);
+
+                    /**
+                     * 判断参数 NodeId 是否已赋值
+                     * @return NodeId 是否已赋值
+                     * 
+                     */
+                    bool NodeIdHasBeenSet() const;
+
+                    /**
+                     * 获取Organizational unit name.
+                     * @return NodeName Organizational unit name.
+                     * 
+                     */
+                    std::string GetNodeName() const;
+
+                    /**
+                     * 设置Organizational unit name.
+                     * @param _nodeName Organizational unit name.
+                     * 
+                     */
+                    void SetNodeName(const std::string& _nodeName);
+
+                    /**
+                     * 判断参数 NodeName 是否已赋值
+                     * @return NodeName 是否已赋值
+                     * 
+                     */
+                    bool NodeNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -233,6 +275,18 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Organizational unit ID.
+                     */
+                    uint64_t m_nodeId;
+                    bool m_nodeIdHasBeenSet;
+
+                    /**
+                     * Organizational unit name.
+                     */
+                    std::string m_nodeName;
+                    bool m_nodeNameHasBeenSet;
 
                 };
             }

@@ -90,6 +90,56 @@ BiClient::ApplyEmbedIntervalOutcomeCallable BiClient::ApplyEmbedIntervalCallable
     return prom->get_future();
 }
 
+BiClient::ClearEmbedTokenOutcome BiClient::ClearEmbedToken(const ClearEmbedTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "ClearEmbedToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ClearEmbedTokenResponse rsp = ClearEmbedTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ClearEmbedTokenOutcome(rsp);
+        else
+            return ClearEmbedTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return ClearEmbedTokenOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::ClearEmbedTokenAsync(const ClearEmbedTokenRequest& request, const ClearEmbedTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ClearEmbedTokenRequest&;
+    using Resp = ClearEmbedTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ClearEmbedToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::ClearEmbedTokenOutcomeCallable BiClient::ClearEmbedTokenCallable(const ClearEmbedTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ClearEmbedTokenOutcome>>();
+    ClearEmbedTokenAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const ClearEmbedTokenRequest&,
+        ClearEmbedTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BiClient::CreateDatasourceOutcome BiClient::CreateDatasource(const CreateDatasourceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateDatasource");

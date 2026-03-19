@@ -47,15 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
-                     * @return TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * 获取Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
+                     * @return TypeName Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
-                     * @param _typeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * 设置Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
+                     * @param _typeName Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -112,7 +136,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;

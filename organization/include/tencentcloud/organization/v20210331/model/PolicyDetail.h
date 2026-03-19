@@ -69,18 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _policyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -102,7 +98,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;

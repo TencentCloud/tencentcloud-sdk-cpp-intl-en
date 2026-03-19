@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uin Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUin() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_uin;
                     bool m_uinHasBeenSet;

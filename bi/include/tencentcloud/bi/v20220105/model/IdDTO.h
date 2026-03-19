@@ -148,8 +148,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TranStatus Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -157,8 +165,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 设置Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tranStatus Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -203,6 +219,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_tranStatus;

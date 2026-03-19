@@ -43,7 +43,27 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Certificate ID.
+                     * @return CertificateIds Certificate ID.
+                     * 
+                     */
+                    std::vector<std::string> GetCertificateIds() const;
+
+                    /**
+                     * 判断参数 CertificateIds 是否已赋值
+                     * @return CertificateIds 是否已赋值
+                     * 
+                     */
+                    bool CertificateIdsHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Certificate ID.
+                     */
+                    std::vector<std::string> m_certificateIds;
+                    bool m_certificateIdsHasBeenSet;
 
                 };
             }

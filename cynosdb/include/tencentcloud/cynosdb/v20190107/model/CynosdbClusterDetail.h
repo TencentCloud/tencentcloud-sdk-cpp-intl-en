@@ -159,15 +159,51 @@ namespace TencentCloud
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
+                     * @return Status Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
+                     * @param _status Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -322,15 +358,15 @@ pausing
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
-                     * @return StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+                     * 获取Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+                     * @return StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
-                     * @param _storagePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+                     * 设置Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+                     * @param _storagePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -616,15 +652,15 @@ pausing
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取VIP and vport of the read-only instance in a cluster
-                     * @return RoAddr VIP and vport of the read-only instance in a cluster
+                     * 获取VIP and vport of the read-only instance in a cluster.
+                     * @return RoAddr VIP and vport of the read-only instance in a cluster.
                      * 
                      */
                     std::vector<Addr> GetRoAddr() const;
 
                     /**
-                     * 设置VIP and vport of the read-only instance in a cluster
-                     * @param _roAddr VIP and vport of the read-only instance in a cluster
+                     * 设置VIP and vport of the read-only instance in a cluster.
+                     * @param _roAddr VIP and vport of the read-only instance in a cluster.
                      * 
                      */
                     void SetRoAddr(const std::vector<Addr>& _roAddr);
@@ -1140,6 +1176,144 @@ pausing
                      */
                     bool CynosVersionTagHasBeenSet() const;
 
+                    /**
+                     * 获取Global database network unique id.
+                     * @return GdnId Global database network unique id.
+                     * 
+                     */
+                    std::string GetGdnId() const;
+
+                    /**
+                     * 设置Global database network unique id.
+                     * @param _gdnId Global database network unique id.
+                     * 
+                     */
+                    void SetGdnId(const std::string& _gdnId);
+
+                    /**
+                     * 判断参数 GdnId 是否已赋值
+                     * @return GdnId 是否已赋值
+                     * 
+                     */
+                    bool GdnIdHasBeenSet() const;
+
+                    /**
+                     * 获取The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+                     * @return GdnRole The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+                     * 
+                     */
+                    std::string GetGdnRole() const;
+
+                    /**
+                     * 设置The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+                     * @param _gdnRole The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+                     * 
+                     */
+                    void SetGdnRole(const std::string& _gdnRole);
+
+                    /**
+                     * 判断参数 GdnRole 是否已赋值
+                     * @return GdnRole 是否已赋值
+                     * 
+                     */
+                    bool GdnRoleHasBeenSet() const;
+
+                    /**
+                     * 获取Secondary storage usage, unit: G.
+                     * @return UsedArchiveStorage Secondary storage usage, unit: G.
+                     * 
+                     */
+                    int64_t GetUsedArchiveStorage() const;
+
+                    /**
+                     * 设置Secondary storage usage, unit: G.
+                     * @param _usedArchiveStorage Secondary storage usage, unit: G.
+                     * 
+                     */
+                    void SetUsedArchiveStorage(const int64_t& _usedArchiveStorage);
+
+                    /**
+                     * 判断参数 UsedArchiveStorage 是否已赋值
+                     * @return UsedArchiveStorage 是否已赋值
+                     * 
+                     */
+                    bool UsedArchiveStorageHasBeenSet() const;
+
+                    /**
+                     * 获取Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+                     * @return ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+                     * 
+                     */
+                    std::string GetArchiveStatus() const;
+
+                    /**
+                     * 设置Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+                     * @param _archiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+                     * 
+                     */
+                    void SetArchiveStatus(const std::string& _archiveStatus);
+
+                    /**
+                     * 判断参数 ArchiveStatus 是否已赋值
+                     * @return ArchiveStatus 是否已赋值
+                     * 
+                     */
+                    bool ArchiveStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Archive progress, percentage.
+                     * @return ArchiveProgress Archive progress, percentage.
+                     * 
+                     */
+                    int64_t GetArchiveProgress() const;
+
+                    /**
+                     * 设置Archive progress, percentage.
+                     * @param _archiveProgress Archive progress, percentage.
+                     * 
+                     */
+                    void SetArchiveProgress(const int64_t& _archiveProgress);
+
+                    /**
+                     * 判断参数 ArchiveProgress 是否已赋值
+                     * @return ArchiveProgress 是否已赋值
+                     * 
+                     */
+                    bool ArchiveProgressHasBeenSet() const;
+
+                    /**
+                     * 获取Whether transparent encryption is enabled.
+                     * @return IsOpenTDE Whether transparent encryption is enabled.
+                     * 
+                     */
+                    bool GetIsOpenTDE() const;
+
+                    /**
+                     * 设置Whether transparent encryption is enabled.
+                     * @param _isOpenTDE Whether transparent encryption is enabled.
+                     * 
+                     */
+                    void SetIsOpenTDE(const bool& _isOpenTDE);
+
+                    /**
+                     * 判断参数 IsOpenTDE 是否已赋值
+                     * @return IsOpenTDE 是否已赋值
+                     * 
+                     */
+                    bool IsOpenTDEHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1173,7 +1347,16 @@ pausing
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * Status
+                     * Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -1219,7 +1402,7 @@ pausing
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+                     * Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
@@ -1303,7 +1486,7 @@ pausing
                     bool m_vportHasBeenSet;
 
                     /**
-                     * VIP and vport of the read-only instance in a cluster
+                     * VIP and vport of the read-only instance in a cluster.
                      */
                     std::vector<Addr> m_roAddr;
                     bool m_roAddrHasBeenSet;
@@ -1451,6 +1634,45 @@ pausing
                      */
                     std::string m_cynosVersionTag;
                     bool m_cynosVersionTagHasBeenSet;
+
+                    /**
+                     * Global database network unique id.
+                     */
+                    std::string m_gdnId;
+                    bool m_gdnIdHasBeenSet;
+
+                    /**
+                     * The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+                     */
+                    std::string m_gdnRole;
+                    bool m_gdnRoleHasBeenSet;
+
+                    /**
+                     * Secondary storage usage, unit: G.
+                     */
+                    int64_t m_usedArchiveStorage;
+                    bool m_usedArchiveStorageHasBeenSet;
+
+                    /**
+                     * Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+                     */
+                    std::string m_archiveStatus;
+                    bool m_archiveStatusHasBeenSet;
+
+                    /**
+                     * Archive progress, percentage.
+                     */
+                    int64_t m_archiveProgress;
+                    bool m_archiveProgressHasBeenSet;
+
+                    /**
+                     * Whether transparent encryption is enabled.
+                     */
+                    bool m_isOpenTDE;
+                    bool m_isOpenTDEHasBeenSet;
 
                 };
             }

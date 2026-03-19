@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeId Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Organization node ID.
+                     * @return NodeId Organization node ID.
                      * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
-                     * 设置Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeId Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Organization node ID.
+                     * @param _nodeId Organization node ID.
                      * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ParentNodeId Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent Node ID
+                     * @return ParentNodeId Parent Node ID
                      * 
                      */
                     int64_t GetParentNodeId() const;
 
                     /**
-                     * 设置Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _parentNodeId Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parent Node ID
+                     * @param _parentNodeId Parent Node ID
                      * 
                      */
                     void SetParentNodeId(const int64_t& _parentNodeId);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -149,18 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -173,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update date
+                     * @return UpdateTime Update date
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update date
+                     * @param _updateTime Update date
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -199,18 +175,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -225,50 +197,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Organization node ID.
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
                      * Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent Node ID
                      */
                     int64_t m_parentNodeId;
                     bool m_parentNodeIdHasBeenSet;
 
                     /**
                      * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update date
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

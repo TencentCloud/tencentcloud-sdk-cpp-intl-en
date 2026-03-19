@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取File name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name File name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置File name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name File name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -73,22 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Url File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _url File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -104,15 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * File name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

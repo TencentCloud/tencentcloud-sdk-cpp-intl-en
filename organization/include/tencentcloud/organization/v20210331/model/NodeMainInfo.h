@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeId Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
                      * 设置Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nodeId Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeName Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nodeName Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
                      * Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;

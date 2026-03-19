@@ -69,18 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProductResourceId Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProductResourceId() const;
 
                     /**
                      * 设置Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _productResourceId Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProductResourceId(const std::string& _productResourceId);
@@ -102,7 +98,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productResourceId;
                     bool m_productResourceIdHasBeenSet;

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _memberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemberUinHasBeenSet() const;
 
                     /**
-                     * 获取Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemberName Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Member name.
+                     * @return MemberName Member name.
                      * 
                      */
                     std::string GetMemberName() const;
 
                     /**
-                     * 设置Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _memberName Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Member name.
+                     * @param _memberName Member name.
                      * 
                      */
                     void SetMemberName(const std::string& _memberName);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_memberUin;
                     bool m_memberUinHasBeenSet;
 
                     /**
-                     * Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Member name.
                      */
                     std::string m_memberName;
                     bool m_memberNameHasBeenSet;

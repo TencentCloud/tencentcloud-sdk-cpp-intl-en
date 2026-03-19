@@ -72,18 +72,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Visible/Available.
+                     * 获取Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeType Visible/Available.
+                     * @return IncludeType Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIncludeType() const;
 
                     /**
-                     * 设置Visible/Available.
+                     * 设置Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeType Visible/Available.
+                     * @param _includeType Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -181,7 +217,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_moduleIdHasBeenSet;
 
                     /**
-                     * Visible/Available.
+                     * Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_includeType;

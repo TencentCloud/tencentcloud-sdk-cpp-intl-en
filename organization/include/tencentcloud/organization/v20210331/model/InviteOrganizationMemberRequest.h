@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
-                     * @return PermissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
+                     * 获取List of member financial permission ids. valid values: 1: view bills. 2: view balance. 3: transfer funds (contact your business manager to enable internal fund transfer permission if required). 4: consolidate bills. 5: issue invoice. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: manage budget. 10: set credit limit (contact your business manager to enable internal credit limit setting privilege if required). 1 and 2 are required by default.
+                     * @return PermissionIds List of member financial permission ids. valid values: 1: view bills. 2: view balance. 3: transfer funds (contact your business manager to enable internal fund transfer permission if required). 4: consolidate bills. 5: issue invoice. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: manage budget. 10: set credit limit (contact your business manager to enable internal credit limit setting privilege if required). 1 and 2 are required by default.
                      * 
                      */
                     std::vector<uint64_t> GetPermissionIds() const;
 
                     /**
-                     * 设置Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
-                     * @param _permissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
+                     * 设置List of member financial permission ids. valid values: 1: view bills. 2: view balance. 3: transfer funds (contact your business manager to enable internal fund transfer permission if required). 4: consolidate bills. 5: issue invoice. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: manage budget. 10: set credit limit (contact your business manager to enable internal credit limit setting privilege if required). 1 and 2 are required by default.
+                     * @param _permissionIds List of member financial permission ids. valid values: 1: view bills. 2: view balance. 3: transfer funds (contact your business manager to enable internal fund transfer permission if required). 4: consolidate bills. 5: issue invoice. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: manage budget. 10: set credit limit (contact your business manager to enable internal credit limit setting privilege if required). 1 and 2 are required by default.
                      * 
                      */
                     void SetPermissionIds(const std::vector<uint64_t>& _permissionIds);
@@ -296,7 +296,7 @@ namespace TencentCloud
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
+                     * List of member financial permission ids. valid values: 1: view bills. 2: view balance. 3: transfer funds (contact your business manager to enable internal fund transfer permission if required). 4: consolidate bills. 5: issue invoice. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: manage budget. 10: set credit limit (contact your business manager to enable internal credit limit setting privilege if required). 1 and 2 are required by default.
                      */
                     std::vector<uint64_t> m_permissionIds;
                     bool m_permissionIdsHasBeenSet;

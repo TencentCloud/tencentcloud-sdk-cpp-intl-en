@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
-                     * @return ModifyPayType To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+                     * 获取To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+                     * @return ModifyPayType To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
                      * 
                      */
                     std::string GetModifyPayType() const;
 
                     /**
-                     * 设置To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
-                     * @param _modifyPayType To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+                     * 设置To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+                     * @param _modifyPayType To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
                      * 
                      */
                     void SetModifyPayType(const std::string& _modifyPayType);
@@ -104,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ModifyPayTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+                     * @return AutoRenew Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+                     * 
+                     */
+                    int64_t GetAutoRenew() const;
+
+                    /**
+                     * 设置Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+                     * @param _autoRenew Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+                     * 
+                     */
+                    void SetAutoRenew(const int64_t& _autoRenew);
+
+                    /**
+                     * 判断参数 AutoRenew 是否已赋值
+                     * @return AutoRenew 是否已赋值
+                     * 
+                     */
+                    bool AutoRenewHasBeenSet() const;
 
                 private:
 
@@ -120,10 +141,16 @@ namespace TencentCloud
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+                     * To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
                      */
                     std::string m_modifyPayType;
                     bool m_modifyPayTypeHasBeenSet;
+
+                    /**
+                     * Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+                     */
+                    int64_t m_autoRenew;
+                    bool m_autoRenewHasBeenSet;
 
                 };
             }

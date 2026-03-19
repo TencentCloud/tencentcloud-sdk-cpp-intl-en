@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdb/v20170320/model/ZoneConf.h>
 #include <tencentcloud/cdb/v20170320/model/CdbSellType.h>
+#include <tencentcloud/cdb/v20170320/model/DiskTypeConfigItem.h>
 
 
 namespace TencentCloud
@@ -217,15 +218,15 @@ namespace TencentCloud
                     bool IsBmHasBeenSet() const;
 
                     /**
-                     * 获取Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
-                     * @return PayType Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+                     * 获取Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+                     * @return PayType Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
                      * 
                      */
                     std::vector<std::string> GetPayType() const;
 
                     /**
-                     * 设置Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
-                     * @param _payType Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+                     * 设置Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+                     * @param _payType Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
                      * 
                      */
                     void SetPayType(const std::vector<std::string>& _payType);
@@ -510,6 +511,48 @@ namespace TencentCloud
                      */
                     bool EngineTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+                     * @return CloudNativeClusterStatus Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+                     * 
+                     */
+                    int64_t GetCloudNativeClusterStatus() const;
+
+                    /**
+                     * 设置Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+                     * @param _cloudNativeClusterStatus Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+                     * 
+                     */
+                    void SetCloudNativeClusterStatus(const int64_t& _cloudNativeClusterStatus);
+
+                    /**
+                     * 判断参数 CloudNativeClusterStatus 是否已赋值
+                     * @return CloudNativeClusterStatus 是否已赋值
+                     * 
+                     */
+                    bool CloudNativeClusterStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk edition or single-node basic edition supported disk type.
+                     * @return DiskTypeConf Cloud disk edition or single-node basic edition supported disk type.
+                     * 
+                     */
+                    std::vector<DiskTypeConfigItem> GetDiskTypeConf() const;
+
+                    /**
+                     * 设置Cloud disk edition or single-node basic edition supported disk type.
+                     * @param _diskTypeConf Cloud disk edition or single-node basic edition supported disk type.
+                     * 
+                     */
+                    void SetDiskTypeConf(const std::vector<DiskTypeConfigItem>& _diskTypeConf);
+
+                    /**
+                     * 判断参数 DiskTypeConf 是否已赋值
+                     * @return DiskTypeConf 是否已赋值
+                     * 
+                     */
+                    bool DiskTypeConfHasBeenSet() const;
+
                 private:
 
                     /**
@@ -561,7 +604,7 @@ namespace TencentCloud
                     bool m_isBmHasBeenSet;
 
                     /**
-                     * Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+                     * Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
                      */
                     std::vector<std::string> m_payType;
                     bool m_payTypeHasBeenSet;
@@ -643,6 +686,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_engineType;
                     bool m_engineTypeHasBeenSet;
+
+                    /**
+                     * Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+                     */
+                    int64_t m_cloudNativeClusterStatus;
+                    bool m_cloudNativeClusterStatusHasBeenSet;
+
+                    /**
+                     * Cloud disk edition or single-node basic edition supported disk type.
+                     */
+                    std::vector<DiskTypeConfigItem> m_diskTypeConf;
+                    bool m_diskTypeConfHasBeenSet;
 
                 };
             }

@@ -45,11 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPolicyId() const;
@@ -65,8 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;

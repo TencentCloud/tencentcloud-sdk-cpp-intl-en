@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
                      * 设置Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIdentityAliasName() const;
 
                     /**
                      * 设置Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityAliasName(const std::string& _identityAliasName);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_identityId;
                     bool m_identityIdHasBeenSet;
 
                     /**
                      * Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identityAliasName;
                     bool m_identityAliasNameHasBeenSet;

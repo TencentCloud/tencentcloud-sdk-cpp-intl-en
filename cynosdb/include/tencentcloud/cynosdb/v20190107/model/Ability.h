@@ -214,6 +214,90 @@ namespace TencentCloud
                      */
                     bool IsSupportManualLogicHasBeenSet() const;
 
+                    /**
+                     * 获取Enable global encryption.
+                     * @return IsSupportGlobalEncryption Enable global encryption.
+                     * 
+                     */
+                    std::string GetIsSupportGlobalEncryption() const;
+
+                    /**
+                     * 设置Enable global encryption.
+                     * @param _isSupportGlobalEncryption Enable global encryption.
+                     * 
+                     */
+                    void SetIsSupportGlobalEncryption(const std::string& _isSupportGlobalEncryption);
+
+                    /**
+                     * 判断参数 IsSupportGlobalEncryption 是否已赋值
+                     * @return IsSupportGlobalEncryption 是否已赋值
+                     * 
+                     */
+                    bool IsSupportGlobalEncryptionHasBeenSet() const;
+
+                    /**
+                     * 获取The causes for unsupported global encryption.
+                     * @return NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+                     * 
+                     */
+                    std::string GetNoSupportGlobalEncryptionReason() const;
+
+                    /**
+                     * 设置The causes for unsupported global encryption.
+                     * @param _noSupportGlobalEncryptionReason The causes for unsupported global encryption.
+                     * 
+                     */
+                    void SetNoSupportGlobalEncryptionReason(const std::string& _noSupportGlobalEncryptionReason);
+
+                    /**
+                     * 判断参数 NoSupportGlobalEncryptionReason 是否已赋值
+                     * @return NoSupportGlobalEncryptionReason 是否已赋值
+                     * 
+                     */
+                    bool NoSupportGlobalEncryptionReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Status code for unsupported tde reason.
+                     * @return NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+                     * 
+                     */
+                    std::string GetNoSupportTransparentDataEncryptionReasonCode() const;
+
+                    /**
+                     * 设置Status code for unsupported tde reason.
+                     * @param _noSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+                     * 
+                     */
+                    void SetNoSupportTransparentDataEncryptionReasonCode(const std::string& _noSupportTransparentDataEncryptionReasonCode);
+
+                    /**
+                     * 判断参数 NoSupportTransparentDataEncryptionReasonCode 是否已赋值
+                     * @return NoSupportTransparentDataEncryptionReasonCode 是否已赋值
+                     * 
+                     */
+                    bool NoSupportTransparentDataEncryptionReasonCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Status code for unsupported global encryption.
+                     * @return NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+                     * 
+                     */
+                    std::string GetNoSupportGlobalEncryptionReasonCode() const;
+
+                    /**
+                     * 设置Status code for unsupported global encryption.
+                     * @param _noSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+                     * 
+                     */
+                    void SetNoSupportGlobalEncryptionReasonCode(const std::string& _noSupportGlobalEncryptionReasonCode);
+
+                    /**
+                     * 判断参数 NoSupportGlobalEncryptionReasonCode 是否已赋值
+                     * @return NoSupportGlobalEncryptionReasonCode 是否已赋值
+                     * 
+                     */
+                    bool NoSupportGlobalEncryptionReasonCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +347,30 @@ namespace TencentCloud
                      */
                     std::string m_isSupportManualLogic;
                     bool m_isSupportManualLogicHasBeenSet;
+
+                    /**
+                     * Enable global encryption.
+                     */
+                    std::string m_isSupportGlobalEncryption;
+                    bool m_isSupportGlobalEncryptionHasBeenSet;
+
+                    /**
+                     * The causes for unsupported global encryption.
+                     */
+                    std::string m_noSupportGlobalEncryptionReason;
+                    bool m_noSupportGlobalEncryptionReasonHasBeenSet;
+
+                    /**
+                     * Status code for unsupported tde reason.
+                     */
+                    std::string m_noSupportTransparentDataEncryptionReasonCode;
+                    bool m_noSupportTransparentDataEncryptionReasonCodeHasBeenSet;
+
+                    /**
+                     * Status code for unsupported global encryption.
+                     */
+                    std::string m_noSupportGlobalEncryptionReasonCode;
+                    bool m_noSupportGlobalEncryptionReasonCodeHasBeenSet;
 
                 };
             }

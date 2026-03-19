@@ -343,14 +343,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
                      * @return InstanceDeviceType Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
                      * 
                      */
                     std::string GetInstanceDeviceType() const;
 
                     /**
                      * 设置Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
                      * @param _instanceDeviceType Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
                      * 
                      */
                     void SetInstanceDeviceType(const std::string& _instanceDeviceType);
@@ -364,14 +372,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
                      * @return InstanceStorageType Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
                      * 
                      */
                     std::string GetInstanceStorageType() const;
 
                     /**
                      * 设置Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
                      * @param _instanceStorageType Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
                      * 
                      */
                     void SetInstanceStorageType(const std::string& _instanceStorageType);
@@ -406,14 +418,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Node list
+Description: this parameter returns a value only when querying LibraDB resources.
                      * @return NodeList Node list
+Description: this parameter returns a value only when querying LibraDB resources.
                      * 
                      */
                     std::vector<std::string> GetNodeList() const;
 
                     /**
                      * 设置Node list
+Description: this parameter returns a value only when querying LibraDB resources.
                      * @param _nodeList Node list
+Description: this parameter returns a value only when querying LibraDB resources.
                      * 
                      */
                     void SetNodeList(const std::vector<std::string>& _nodeList);
@@ -513,12 +529,15 @@ namespace TencentCloud
 
                     /**
                      * Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
                      */
                     std::string m_instanceDeviceType;
                     bool m_instanceDeviceTypeHasBeenSet;
 
                     /**
                      * Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
                      */
                     std::string m_instanceStorageType;
                     bool m_instanceStorageTypeHasBeenSet;
@@ -531,6 +550,7 @@ namespace TencentCloud
 
                     /**
                      * Node list
+Description: this parameter returns a value only when querying LibraDB resources.
                      */
                     std::vector<std::string> m_nodeList;
                     bool m_nodeListHasBeenSet;

@@ -61,9 +61,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrorInfoHasBeenSet() const;
 
                     /**
-                     * 获取Success No.
+                     * 获取None.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Success No.
+                     * @return Data None.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -118,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_errorInfoHasBeenSet;
 
                     /**
-                     * Success No.
+                     * None.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_data;

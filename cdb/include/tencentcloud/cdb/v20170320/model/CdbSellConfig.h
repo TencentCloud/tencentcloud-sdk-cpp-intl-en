@@ -215,19 +215,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
+                     * @return DeviceType Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
+                     * @param _deviceType Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -332,8 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

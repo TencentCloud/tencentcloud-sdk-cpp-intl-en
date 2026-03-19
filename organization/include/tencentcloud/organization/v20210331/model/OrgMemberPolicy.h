@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _policyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _policyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
                      * 设置Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIdentityRoleName() const;
 
                     /**
                      * 设置Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _identityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdentityRoleName(const std::string& _identityRoleName);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdentityRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Role alias of an identity.
+                     * @return IdentityRoleAliasName Role alias of an identity.
                      * 
                      */
                     std::string GetIdentityRoleAliasName() const;
 
                     /**
-                     * 设置Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _identityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Role alias of an identity.
+                     * @param _identityRoleAliasName Role alias of an identity.
                      * 
                      */
                     void SetIdentityRoleAliasName(const std::string& _identityRoleAliasName);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -250,56 +218,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;
 
                     /**
                      * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
 
                     /**
                      * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_identityId;
                     bool m_identityIdHasBeenSet;
 
                     /**
                      * Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identityRoleName;
                     bool m_identityRoleNameHasBeenSet;
 
                     /**
-                     * Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Role alias of an identity.
                      */
                     std::string m_identityRoleAliasName;
                     bool m_identityRoleAliasNameHasBeenSet;
 
                     /**
                      * Description.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
                      * Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

@@ -298,6 +298,48 @@ namespace TencentCloud
                      */
                     bool IsSelectedHasBeenSet() const;
 
+                    /**
+                     * 获取User password.
+                     * @return Password User password.
+                     * 
+                     */
+                    std::string GetPassword() const;
+
+                    /**
+                     * 设置User password.
+                     * @param _password User password.
+                     * 
+                     */
+                    void SetPassword(const std::string& _password);
+
+                    /**
+                     * 判断参数 Password 是否已赋值
+                     * @return Password 是否已赋值
+                     * 
+                     */
+                    bool PasswordHasBeenSet() const;
+
+                    /**
+                     * 获取Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+                     * @return NeedResetPassword Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+                     * 
+                     */
+                    bool GetNeedResetPassword() const;
+
+                    /**
+                     * 设置Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+                     * @param _needResetPassword Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+                     * 
+                     */
+                    void SetNeedResetPassword(const bool& _needResetPassword);
+
+                    /**
+                     * 判断参数 NeedResetPassword 是否已赋值
+                     * @return NeedResetPassword 是否已赋值
+                     * 
+                     */
+                    bool NeedResetPasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -371,6 +413,18 @@ namespace TencentCloud
                      */
                     bool m_isSelected;
                     bool m_isSelectedHasBeenSet;
+
+                    /**
+                     * User password.
+                     */
+                    std::string m_password;
+                    bool m_passwordHasBeenSet;
+
+                    /**
+                     * Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+                     */
+                    bool m_needResetPassword;
+                    bool m_needResetPasswordHasBeenSet;
 
                 };
             }

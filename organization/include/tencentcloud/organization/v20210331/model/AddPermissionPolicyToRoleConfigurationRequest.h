@@ -169,6 +169,27 @@ namespace TencentCloud
                      */
                     bool CustomPolicyDocumentHasBeenSet() const;
 
+                    /**
+                     * 获取List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+                     * @return CustomPolicyDocuments List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+                     * 
+                     */
+                    std::vector<std::string> GetCustomPolicyDocuments() const;
+
+                    /**
+                     * 设置List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+                     * @param _customPolicyDocuments List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+                     * 
+                     */
+                    void SetCustomPolicyDocuments(const std::vector<std::string>& _customPolicyDocuments);
+
+                    /**
+                     * 判断参数 CustomPolicyDocuments 是否已赋值
+                     * @return CustomPolicyDocuments 是否已赋值
+                     * 
+                     */
+                    bool CustomPolicyDocumentsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +227,12 @@ namespace TencentCloud
                      */
                     std::string m_customPolicyDocument;
                     bool m_customPolicyDocumentHasBeenSet;
+
+                    /**
+                     * List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+                     */
+                    std::vector<std::string> m_customPolicyDocuments;
+                    bool m_customPolicyDocumentsHasBeenSet;
 
                 };
             }

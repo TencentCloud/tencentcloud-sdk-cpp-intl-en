@@ -361,15 +361,15 @@ deleted
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Payment mode. 0: pay-as-you-go; 1: monthly subscription.
-                     * @return PayMode Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * 获取Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * @return PayMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Payment mode. 0: pay-as-you-go; 1: monthly subscription.
-                     * @param _payMode Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * 设置Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * @param _payMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -527,6 +527,27 @@ deleted
                      * 
                      */
                     bool CynosVersionHasBeenSet() const;
+
+                    /**
+                     * 获取cynos version tag.
+                     * @return CynosVersionTag cynos version tag.
+                     * 
+                     */
+                    std::string GetCynosVersionTag() const;
+
+                    /**
+                     * 设置cynos version tag.
+                     * @param _cynosVersionTag cynos version tag.
+                     * 
+                     */
+                    void SetCynosVersionTag(const std::string& _cynosVersionTag);
+
+                    /**
+                     * 判断参数 CynosVersionTag 是否已赋值
+                     * @return CynosVersionTag 是否已赋值
+                     * 
+                     */
+                    bool CynosVersionTagHasBeenSet() const;
 
                     /**
                      * 获取Specifies the storage capacity.
@@ -726,15 +747,15 @@ pause
                     bool StorageIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
-                     * @return StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * 获取Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * @return StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
-                     * @param _storagePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * 设置Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * @param _storagePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -998,6 +1019,48 @@ pause
                      */
                     bool ResourcePackagesHasBeenSet() const;
 
+                    /**
+                     * 获取Global database unique Id.
+                     * @return GdnId Global database unique Id.
+                     * 
+                     */
+                    std::string GetGdnId() const;
+
+                    /**
+                     * 设置Global database unique Id.
+                     * @param _gdnId Global database unique Id.
+                     * 
+                     */
+                    void SetGdnId(const std::string& _gdnId);
+
+                    /**
+                     * 判断参数 GdnId 是否已赋值
+                     * @return GdnId 是否已赋值
+                     * 
+                     */
+                    bool GdnIdHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * @return GdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * 
+                     */
+                    std::string GetGdnRole() const;
+
+                    /**
+                     * 设置Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * @param _gdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * 
+                     */
+                    void SetGdnRole(const std::string& _gdnRole);
+
+                    /**
+                     * 判断参数 GdnRole 是否已赋值
+                     * @return GdnRole 是否已赋值
+                     * 
+                     */
+                    bool GdnRoleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1088,7 +1151,7 @@ deleted
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -1134,6 +1197,12 @@ deleted
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
+
+                    /**
+                     * cynos version tag.
+                     */
+                    std::string m_cynosVersionTag;
+                    bool m_cynosVersionTagHasBeenSet;
 
                     /**
                      * Specifies the storage capacity.
@@ -1192,7 +1261,7 @@ pause
                     bool m_storageIdHasBeenSet;
 
                     /**
-                     * Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+                     * Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
@@ -1268,6 +1337,18 @@ pause
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
+
+                    /**
+                     * Global database unique Id.
+                     */
+                    std::string m_gdnId;
+                    bool m_gdnIdHasBeenSet;
+
+                    /**
+                     * Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     */
+                    std::string m_gdnRole;
+                    bool m_gdnRoleHasBeenSet;
 
                 };
             }

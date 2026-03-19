@@ -73,8 +73,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IncludeType Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -82,8 +100,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 设置Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _includeType Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -132,6 +168,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_includeType;

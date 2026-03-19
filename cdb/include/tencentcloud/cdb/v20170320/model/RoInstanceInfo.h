@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Name of RO AZ, such as ap-shanghai-2
-                     * @return Zone Name of RO AZ, such as ap-shanghai-2
+                     * 获取Canonical name of the RO Availability Zone, for example ap-shanghai-2
+                     * @return Zone Canonical name of the RO Availability Zone, for example ap-shanghai-2
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Name of RO AZ, such as ap-shanghai-2
-                     * @param _zone Name of RO AZ, such as ap-shanghai-2
+                     * 设置Canonical name of the RO Availability Zone, for example ap-shanghai-2
+                     * @param _zone Canonical name of the RO Availability Zone, for example ap-shanghai-2
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -583,7 +583,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Name of RO AZ, such as ap-shanghai-2
+                     * Canonical name of the RO Availability Zone, for example ap-shanghai-2
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

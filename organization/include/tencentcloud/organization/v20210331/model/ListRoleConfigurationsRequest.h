@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MaxResultsHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
-                     * @return Filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+                     * 获取Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
+                     * @return Filter Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
                      * 
                      */
                     std::string GetFilter() const;
 
                     /**
-                     * 设置Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
-                     * @param _filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+                     * 设置Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
+                     * @param _filter Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
                      * 
                      */
                     void SetFilter(const std::string& _filter);
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_maxResultsHasBeenSet;
 
                     /**
-                     * Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+                     * Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
                      */
                     std::string m_filter;
                     bool m_filterHasBeenSet;

@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+                     * @return PolicyType Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
                      * 
                      */
                     uint64_t GetPolicyType() const;
 
                     /**
-                     * 设置Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _policyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+                     * @param _policyType Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
                      * 
                      */
                     void SetPolicyType(const uint64_t& _policyType);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
+                     * @return PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
                      * 
                      */
                     std::string GetPolicyDocument() const;
 
                     /**
-                     * 设置Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _policyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
+                     * @param _policyDocument Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
                      * 
                      */
                     void SetPolicyDocument(const std::string& _policyDocument);
@@ -153,15 +145,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
                      */
                     uint64_t m_policyType;
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
                      */
                     std::string m_policyDocument;
                     bool m_policyDocumentHasBeenSet;

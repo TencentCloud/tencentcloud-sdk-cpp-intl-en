@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shared unit ID.
-                     * @return UnitId Shared unit ID.
+                     * 获取<p>Shared unit ID.</p>.
+                     * @return UnitId <p>Shared unit ID.</p>.
                      * 
                      */
                     std::string GetUnitId() const;
 
                     /**
-                     * 设置Shared unit ID.
-                     * @param _unitId Shared unit ID.
+                     * 设置<p>Shared unit ID.</p>.
+                     * @param _unitId <p>Shared unit ID.</p>.
                      * 
                      */
                     void SetUnitId(const std::string& _unitId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UnitIdHasBeenSet() const;
 
                     /**
-                     * 获取Shared unit name.
-                     * @return Name Shared unit name.
+                     * 获取<P>Shared unit name.</p>.
+                     * @return Name <P>Shared unit name.</p>.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Shared unit name.
-                     * @param _name Shared unit name.
+                     * 设置<P>Shared unit name.</p>.
+                     * @param _name <P>Shared unit name.</p>.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Shared unit administrator UIN.
-                     * @return Uin Shared unit administrator UIN.
+                     * 获取<p>Shared unit administrator Uin.</p>.
+                     * @return Uin <p>Shared unit administrator Uin.</p>.
                      * 
                      */
                     int64_t GetUin() const;
 
                     /**
-                     * 设置Shared unit administrator UIN.
-                     * @param _uin Shared unit administrator UIN.
+                     * 设置<p>Shared unit administrator Uin.</p>.
+                     * @param _uin <p>Shared unit administrator Uin.</p>.
                      * 
                      */
                     void SetUin(const int64_t& _uin);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Shared unit administrator OwnerUin.
-                     * @return OwnerUin Shared unit administrator OwnerUin.
+                     * 获取<p>Shared unit administrator OwnerUin.</p>.
+                     * @return OwnerUin <p>Shared unit administrator OwnerUin.</p>.
                      * 
                      */
                     int64_t GetOwnerUin() const;
 
                     /**
-                     * 设置Shared unit administrator OwnerUin.
-                     * @param _ownerUin Shared unit administrator OwnerUin.
+                     * 设置<p>Shared unit administrator OwnerUin.</p>.
+                     * @param _ownerUin <p>Shared unit administrator OwnerUin.</p>.
                      * 
                      */
                     void SetOwnerUin(const int64_t& _ownerUin);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Shared unit region.
-                     * @return Area Shared unit region.
+                     * 获取<P>Shared unit region.</p>.
+                     * @return Area <P>Shared unit region.</p>.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Shared unit region.
-                     * @param _area Shared unit region.
+                     * 设置<P>Shared unit region.</p>.
+                     * @param _area <P>Shared unit region.</p>.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -152,23 +152,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<P>Description.</P>.
+                     * @return Description <P>Description.</P>.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<P>Description.</P>.
+                     * @param _description <P>Description.</P>.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -181,23 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<P>Creation time.</p>.
+                     * @return CreateTime <P>Creation time.</p>.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<P>Creation time.</p>.
+                     * @param _createTime <P>Creation time.</p>.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -210,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShareResourceNum The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<P>The number of resources in a shared unit.</p>.
+                     * @return ShareResourceNum <P>The number of resources in a shared unit.</p>.
                      * 
                      */
                     int64_t GetShareResourceNum() const;
 
                     /**
-                     * 设置The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shareResourceNum The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<P>The number of resources in a shared unit.</p>.
+                     * @param _shareResourceNum <P>The number of resources in a shared unit.</p>.
                      * 
                      */
                     void SetShareResourceNum(const int64_t& _shareResourceNum);
@@ -235,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ShareResourceNumHasBeenSet() const;
 
                     /**
-                     * 获取The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShareMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<P>The number of members in a shared unit.</p>.
+                     * @return ShareMemberNum <P>The number of members in a shared unit.</p>.
                      * 
                      */
                     int64_t GetShareMemberNum() const;
 
                     /**
-                     * 设置The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shareMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<P>The number of members in a shared unit.</p>.
+                     * @param _shareMemberNum <P>The number of members in a shared unit.</p>.
                      * 
                      */
                     void SetShareMemberNum(const int64_t& _shareMemberNum);
@@ -260,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ShareMemberNumHasBeenSet() const;
 
                     /**
-                     * 获取Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShareScope Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
+                     * @return ShareScope <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
                      * 
                      */
                     uint64_t GetShareScope() const;
 
                     /**
-                     * 设置Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shareScope Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
+                     * @param _shareScope <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
                      * 
                      */
                     void SetShareScope(const uint64_t& _shareScope);
@@ -284,74 +256,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ShareScopeHasBeenSet() const;
 
+                    /**
+                     * 获取<P>The number of departments in a shared unit.</p>.
+                     * @return ShareNodeNum <P>The number of departments in a shared unit.</p>.
+                     * 
+                     */
+                    int64_t GetShareNodeNum() const;
+
+                    /**
+                     * 设置<P>The number of departments in a shared unit.</p>.
+                     * @param _shareNodeNum <P>The number of departments in a shared unit.</p>.
+                     * 
+                     */
+                    void SetShareNodeNum(const int64_t& _shareNodeNum);
+
+                    /**
+                     * 判断参数 ShareNodeNum 是否已赋值
+                     * @return ShareNodeNum 是否已赋值
+                     * 
+                     */
+                    bool ShareNodeNumHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Shared unit ID.
+                     * <p>Shared unit ID.</p>.
                      */
                     std::string m_unitId;
                     bool m_unitIdHasBeenSet;
 
                     /**
-                     * Shared unit name.
+                     * <P>Shared unit name.</p>.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Shared unit administrator UIN.
+                     * <p>Shared unit administrator Uin.</p>.
                      */
                     int64_t m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Shared unit administrator OwnerUin.
+                     * <p>Shared unit administrator OwnerUin.</p>.
                      */
                     int64_t m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Shared unit region.
+                     * <P>Shared unit region.</p>.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <P>Description.</P>.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <P>Creation time.</p>.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <P>The number of resources in a shared unit.</p>.
                      */
                     int64_t m_shareResourceNum;
                     bool m_shareResourceNumHasBeenSet;
 
                     /**
-                     * The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <P>The number of members in a shared unit.</p>.
                      */
                     int64_t m_shareMemberNum;
                     bool m_shareMemberNumHasBeenSet;
 
                     /**
-                     * Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
                      */
                     uint64_t m_shareScope;
                     bool m_shareScopeHasBeenSet;
+
+                    /**
+                     * <P>The number of departments in a shared unit.</p>.
+                     */
+                    int64_t m_shareNodeNum;
+                    bool m_shareNodeNumHasBeenSet;
 
                 };
             }

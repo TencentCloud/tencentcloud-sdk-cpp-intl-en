@@ -132,18 +132,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TargetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetType() const;
 
                     /**
                      * 设置Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _targetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTargetType(const std::string& _targetType);
@@ -157,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskType Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
                      * 设置Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskType Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -182,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskStatus Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
                      * 设置Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskStatus Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -233,21 +221,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
                      * Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
                      * Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;

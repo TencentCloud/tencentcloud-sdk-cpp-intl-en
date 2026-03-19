@@ -127,19 +127,19 @@ namespace TencentCloud
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
-                     * @return PermissionIds List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+                     * 获取List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
+                     * @return PermissionIds List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
                      * 
                      */
                     std::vector<uint64_t> GetPermissionIds() const;
 
                     /**
-                     * 设置List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
-                     * @param _permissionIds List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+                     * 设置List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
+                     * @param _permissionIds List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
                      * 
                      */
                     void SetPermissionIds(const std::vector<uint64_t>& _permissionIds);
@@ -193,6 +193,27 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
                      */
                     bool PayUinHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+                     * @return IsModifyNickName Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+                     * 
+                     */
+                    uint64_t GetIsModifyNickName() const;
+
+                    /**
+                     * 设置Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+                     * @param _isModifyNickName Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+                     * 
+                     */
+                    void SetIsModifyNickName(const uint64_t& _isModifyNickName);
+
+                    /**
+                     * 判断参数 IsModifyNickName 是否已赋值
+                     * @return IsModifyNickName 是否已赋值
+                     * 
+                     */
+                    bool IsModifyNickNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,8 +241,8 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+                     * List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
                      */
                     std::vector<uint64_t> m_permissionIds;
                     bool m_permissionIdsHasBeenSet;
@@ -237,6 +258,12 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
                      */
                     std::string m_payUin;
                     bool m_payUinHasBeenSet;
+
+                    /**
+                     * Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+                     */
+                    uint64_t m_isModifyNickName;
+                    bool m_isModifyNickNameHasBeenSet;
 
                 };
             }

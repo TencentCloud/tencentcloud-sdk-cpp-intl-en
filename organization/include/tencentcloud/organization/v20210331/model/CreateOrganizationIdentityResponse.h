@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIdentityId() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_identityId;
                     bool m_identityIdHasBeenSet;

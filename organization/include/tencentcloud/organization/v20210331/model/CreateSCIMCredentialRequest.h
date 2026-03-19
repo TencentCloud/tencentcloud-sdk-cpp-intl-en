@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool ZoneIdHasBeenSet() const;
 
+                    /**
+                     * 获取Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+                     * @return ExpireDuration Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+                     * 
+                     */
+                    uint64_t GetExpireDuration() const;
+
+                    /**
+                     * 设置Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+                     * @param _expireDuration Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+                     * 
+                     */
+                    void SetExpireDuration(const uint64_t& _expireDuration);
+
+                    /**
+                     * 判断参数 ExpireDuration 是否已赋值
+                     * @return ExpireDuration 是否已赋值
+                     * 
+                     */
+                    bool ExpireDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+                     */
+                    uint64_t m_expireDuration;
+                    bool m_expireDurationHasBeenSet;
 
                 };
             }

@@ -25,6 +25,7 @@ using namespace std;
 CreateOrgServiceAssignRequest::CreateOrgServiceAssignRequest() :
     m_memberUinsHasBeenSet(false),
     m_serviceIdHasBeenSet(false),
+    m_productHasBeenSet(false),
     m_managementScopeHasBeenSet(false),
     m_managementScopeUinsHasBeenSet(false),
     m_managementScopeNodeIdsHasBeenSet(false)
@@ -57,6 +58,14 @@ string CreateOrgServiceAssignRequest::ToJsonString() const
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_serviceId, allocator);
+    }
+
+    if (m_productHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Product";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
     if (m_managementScopeHasBeenSet)
@@ -131,6 +140,22 @@ void CreateOrgServiceAssignRequest::SetServiceId(const uint64_t& _serviceId)
 bool CreateOrgServiceAssignRequest::ServiceIdHasBeenSet() const
 {
     return m_serviceIdHasBeenSet;
+}
+
+string CreateOrgServiceAssignRequest::GetProduct() const
+{
+    return m_product;
+}
+
+void CreateOrgServiceAssignRequest::SetProduct(const string& _product)
+{
+    m_product = _product;
+    m_productHasBeenSet = true;
+}
+
+bool CreateOrgServiceAssignRequest::ProductHasBeenSet() const
+{
+    return m_productHasBeenSet;
 }
 
 uint64_t CreateOrgServiceAssignRequest::GetManagementScope() const

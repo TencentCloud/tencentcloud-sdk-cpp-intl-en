@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shares the project ID. Required.
-                     * @return ProjectId Shares the project ID. Required.
+                     * 获取Shares the project ID.
+                     * @return ProjectId Shares the project ID.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Shares the project ID. Required.
-                     * @param _projectId Shares the project ID. Required.
+                     * 设置Shares the project ID.
+                     * @param _projectId Shares the project ID.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -183,7 +183,7 @@ project, during ChatBI embedding.
                 private:
 
                     /**
-                     * Shares the project ID. Required.
+                     * Shares the project ID.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

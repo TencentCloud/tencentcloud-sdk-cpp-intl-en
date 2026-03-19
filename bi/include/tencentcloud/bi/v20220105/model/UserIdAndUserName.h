@@ -164,18 +164,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastLoginHasBeenSet() const;
 
                     /**
-                     * 获取Enabled/Disabled status.
+                     * 获取User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Enabled/Disabled status.
+                     * @return Status User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Enabled/Disabled status.
+                     * 设置User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Enabled/Disabled status.
+                     * @param _status User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -189,18 +217,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether to change the password during the first-time login.
+                     * 获取Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FirstModify Whether to change the password during the first-time login.
+                     * @return FirstModify Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFirstModify() const;
 
                     /**
-                     * 设置Whether to change the password during the first-time login.
+                     * 设置Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _firstModify Whether to change the password during the first-time login.
+                     * @param _firstModify Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -364,18 +392,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdatedAtHasBeenSet() const;
 
                     /**
-                     * 获取Global role.
+                     * 获取System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GlobalUserName Global role.
+                     * @return GlobalUserName System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetGlobalUserName() const;
 
                     /**
-                     * 设置Global role.
+                     * 设置System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _globalUserName Global role.
+                     * @param _globalUserName System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -389,18 +417,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GlobalUserNameHasBeenSet() const;
 
                     /**
-                     * 获取Global role code.
+                     * 获取System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GlobalUserCode Global role code.
+                     * @return GlobalUserCode System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetGlobalUserCode() const;
 
                     /**
-                     * 设置Global role code.
+                     * 设置System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _globalUserCode Global role code.
+                     * @param _globalUserCode System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -653,14 +681,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lastLoginHasBeenSet;
 
                     /**
-                     * Enabled/Disabled status.
+                     * User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether to change the password during the first-time login.
+                     * Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_firstModify;
@@ -709,14 +744,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_updatedAtHasBeenSet;
 
                     /**
-                     * Global role.
+                     * System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_globalUserName;
                     bool m_globalUserNameHasBeenSet;
 
                     /**
-                     * Global role code.
+                     * System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_globalUserCode;

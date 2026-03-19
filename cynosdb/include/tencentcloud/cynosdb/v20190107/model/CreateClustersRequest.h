@@ -24,6 +24,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/ParamItem.h>
 #include <tencentcloud/cynosdb/v20190107/model/InstanceInitInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/ProxyConfig.h>
 
 
 namespace TencentCloud
@@ -339,15 +340,23 @@ Storage capacity in GB
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
-                     * @return PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+                     * 获取Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
+                     * @return PayMode Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
-                     * @param _payMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+                     * 设置Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
+                     * @param _payMode Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -503,18 +512,18 @@ Specified allowed time range for time point rollback
 
                     /**
                      * 获取Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
                      * @return StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
                      * 设置Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
                      * @param _storageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -527,15 +536,15 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration of monthly subscription plan
-                     * @return TimeSpan Purchase duration of monthly subscription plan
+                     * 获取Purchase duration of yearly/monthly subscription plan
+                     * @return TimeSpan Purchase duration of yearly/monthly subscription plan
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Purchase duration of monthly subscription plan
-                     * @param _timeSpan Purchase duration of monthly subscription plan
+                     * 设置Purchase duration of yearly/monthly subscription plan
+                     * @param _timeSpan Purchase duration of yearly/monthly subscription plan
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -548,15 +557,15 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
-                     * @return TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * 获取Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * @return TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
-                     * @param _timeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * 设置Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * @param _timeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -569,18 +578,18 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+                     * 获取Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-                     * @return AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+                     * @return AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+                     * 设置Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-                     * @param _autoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+                     * @param _autoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      * 
                      */
@@ -819,23 +828,23 @@ Default value: `600`
                     bool AutoPauseDelayHasBeenSet() const;
 
                     /**
-                     * 获取The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+                     * 获取The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
-                     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+                     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+                     * 设置The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
-                     * @param _storagePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+                     * @param _storagePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -890,15 +899,15 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool AlarmPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-                     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * 获取Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      * 
                      */
                     std::vector<ParamItem> GetClusterParams() const;
 
                     /**
-                     * 设置Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-                     * @param _clusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * 设置Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * @param _clusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      * 
                      */
                     void SetClusterParams(const std::vector<ParamItem>& _clusterParams);
@@ -932,15 +941,15 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
-                     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+                     * 获取Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+                     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
-                     * @param _paramTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+                     * 设置Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+                     * @param _paramTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -993,6 +1002,111 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                      * 
                      */
                     bool InstanceInitInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Global database unique identifier.
+                     * @return GdnId Global database unique identifier.
+                     * 
+                     */
+                    std::string GetGdnId() const;
+
+                    /**
+                     * 设置Global database unique identifier.
+                     * @param _gdnId Global database unique identifier.
+                     * 
+                     */
+                    void SetGdnId(const std::string& _gdnId);
+
+                    /**
+                     * 判断参数 GdnId 是否已赋值
+                     * @return GdnId 是否已赋值
+                     * 
+                     */
+                    bool GdnIdHasBeenSet() const;
+
+                    /**
+                     * 获取Database proxy configuration.
+                     * @return ProxyConfig Database proxy configuration.
+                     * 
+                     */
+                    ProxyConfig GetProxyConfig() const;
+
+                    /**
+                     * 设置Database proxy configuration.
+                     * @param _proxyConfig Database proxy configuration.
+                     * 
+                     */
+                    void SetProxyConfig(const ProxyConfig& _proxyConfig);
+
+                    /**
+                     * 判断参数 ProxyConfig 是否已赋值
+                     * @return ProxyConfig 是否已赋值
+                     * 
+                     */
+                    bool ProxyConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Automatically archive.
+                     * @return AutoArchive Automatically archive.
+                     * 
+                     */
+                    std::string GetAutoArchive() const;
+
+                    /**
+                     * 设置Automatically archive.
+                     * @param _autoArchive Automatically archive.
+                     * 
+                     */
+                    void SetAutoArchive(const std::string& _autoArchive);
+
+                    /**
+                     * 判断参数 AutoArchive 是否已赋值
+                     * @return AutoArchive 是否已赋值
+                     * 
+                     */
+                    bool AutoArchiveHasBeenSet() const;
+
+                    /**
+                     * 获取Archiving processing time after pausing.
+                     * @return AutoArchiveDelayHours Archiving processing time after pausing.
+                     * 
+                     */
+                    int64_t GetAutoArchiveDelayHours() const;
+
+                    /**
+                     * 设置Archiving processing time after pausing.
+                     * @param _autoArchiveDelayHours Archiving processing time after pausing.
+                     * 
+                     */
+                    void SetAutoArchiveDelayHours(const int64_t& _autoArchiveDelayHours);
+
+                    /**
+                     * 判断参数 AutoArchiveDelayHours 是否已赋值
+                     * @return AutoArchiveDelayHours 是否已赋值
+                     * 
+                     */
+                    bool AutoArchiveDelayHoursHasBeenSet() const;
+
+                    /**
+                     * 获取Kernel minor version number.
+                     * @return CynosVersion Kernel minor version number.
+                     * 
+                     */
+                    std::string GetCynosVersion() const;
+
+                    /**
+                     * 设置Kernel minor version number.
+                     * @param _cynosVersion Kernel minor version number.
+                     * 
+                     */
+                    void SetCynosVersion(const std::string& _cynosVersion);
+
+                    /**
+                     * 判断参数 CynosVersion 是否已赋值
+                     * @return CynosVersion 是否已赋值
+                     * 
+                     */
+                    bool CynosVersionHasBeenSet() const;
 
                 private:
 
@@ -1080,7 +1194,9 @@ Storage capacity in GB
                     bool m_portHasBeenSet;
 
                     /**
-                     * Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+                     * Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -1127,25 +1243,25 @@ Specified allowed time range for time point rollback
 
                     /**
                      * Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Purchase duration of monthly subscription plan
+                     * Purchase duration of yearly/monthly subscription plan
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+                     * Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      */
                     int64_t m_autoRenewFlag;
@@ -1215,9 +1331,9 @@ Default value: `600`
                     bool m_autoPauseDelayHasBeenSet;
 
                     /**
-                     * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+                     * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
@@ -1235,7 +1351,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool m_alarmPolicyIdsHasBeenSet;
 
                     /**
-                     * Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      */
                     std::vector<ParamItem> m_clusterParams;
                     bool m_clusterParamsHasBeenSet;
@@ -1247,7 +1363,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+                     * Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
@@ -1263,6 +1379,36 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                      */
                     std::vector<InstanceInitInfo> m_instanceInitInfos;
                     bool m_instanceInitInfosHasBeenSet;
+
+                    /**
+                     * Global database unique identifier.
+                     */
+                    std::string m_gdnId;
+                    bool m_gdnIdHasBeenSet;
+
+                    /**
+                     * Database proxy configuration.
+                     */
+                    ProxyConfig m_proxyConfig;
+                    bool m_proxyConfigHasBeenSet;
+
+                    /**
+                     * Automatically archive.
+                     */
+                    std::string m_autoArchive;
+                    bool m_autoArchiveHasBeenSet;
+
+                    /**
+                     * Archiving processing time after pausing.
+                     */
+                    int64_t m_autoArchiveDelayHours;
+                    bool m_autoArchiveDelayHoursHasBeenSet;
+
+                    /**
+                     * Kernel minor version number.
+                     */
+                    std::string m_cynosVersion;
+                    bool m_cynosVersionHasBeenSet;
 
                 };
             }

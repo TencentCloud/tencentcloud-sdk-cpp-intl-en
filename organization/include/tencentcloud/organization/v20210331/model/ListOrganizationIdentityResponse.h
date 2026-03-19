@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total quantity.
+                     * @return Total Total quantity.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Item details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Item details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<OrgIdentity> GetItems() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total quantity.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
                      * Item details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<OrgIdentity> m_items;
                     bool m_itemsHasBeenSet;

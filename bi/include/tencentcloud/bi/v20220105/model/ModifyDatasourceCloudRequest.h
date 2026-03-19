@@ -65,14 +65,38 @@ namespace TencentCloud
 
                     /**
                      * 获取Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
                      * @return DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
                      * @param _dbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -483,6 +507,48 @@ namespace TencentCloud
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Database schema.
+                     * @return Schema Database schema.
+                     * 
+                     */
+                    std::string GetSchema() const;
+
+                    /**
+                     * 设置Database schema.
+                     * @param _schema Database schema.
+                     * 
+                     */
+                    void SetSchema(const std::string& _schema);
+
+                    /**
+                     * 判断参数 Schema 是否已赋值
+                     * @return Schema 是否已赋值
+                     * 
+                     */
+                    bool SchemaHasBeenSet() const;
+
+                    /**
+                     * 获取Database version.
+                     * @return DbVersion Database version.
+                     * 
+                     */
+                    std::string GetDbVersion() const;
+
+                    /**
+                     * 设置Database version.
+                     * @param _dbVersion Database version.
+                     * 
+                     */
+                    void SetDbVersion(const std::string& _dbVersion);
+
+                    /**
+                     * 判断参数 DbVersion 是否已赋值
+                     * @return DbVersion 是否已赋值
+                     * 
+                     */
+                    bool DbVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -493,6 +559,12 @@ namespace TencentCloud
 
                     /**
                      * Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
@@ -610,6 +682,18 @@ namespace TencentCloud
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Database schema.
+                     */
+                    std::string m_schema;
+                    bool m_schemaHasBeenSet;
+
+                    /**
+                     * Database version.
+                     */
+                    std::string m_dbVersion;
+                    bool m_dbVersionHasBeenSet;
 
                 };
             }

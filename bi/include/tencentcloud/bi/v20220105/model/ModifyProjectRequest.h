@@ -195,14 +195,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
                      * @return DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
                      * 
                      */
                     int64_t GetDefaultPanelType() const;
 
                     /**
                      * 设置Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
                      * @param _defaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
                      * 
                      */
                     void SetDefaultPanelType(const int64_t& _defaultPanelType);
@@ -303,6 +315,9 @@ namespace TencentCloud
 
                     /**
                      * Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
                      */
                     int64_t m_defaultPanelType;
                     bool m_defaultPanelTypeHasBeenSet;
