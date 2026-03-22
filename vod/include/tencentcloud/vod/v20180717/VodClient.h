@@ -163,6 +163,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeAdaptiveDynamicStreamingTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAigcApiTokensRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAigcApiTokensResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeAigcUsageDataRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeAigcUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAllClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAllClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesRequest.h>
@@ -607,6 +609,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAigcApiTokensResponse> DescribeAigcApiTokensOutcome;
                 typedef std::future<DescribeAigcApiTokensOutcome> DescribeAigcApiTokensOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAigcApiTokensRequest&, DescribeAigcApiTokensOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcApiTokensAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAigcUsageDataResponse> DescribeAigcUsageDataOutcome;
+                typedef std::future<DescribeAigcUsageDataOutcome> DescribeAigcUsageDataOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeAigcUsageDataRequest&, DescribeAigcUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcUsageDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAllClassResponse> DescribeAllClassOutcome;
                 typedef std::future<DescribeAllClassOutcome> DescribeAllClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAllClassRequest&, DescribeAllClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllClassAsyncHandler;
@@ -1614,6 +1619,18 @@ This API is used to delete a player configuration.
                 DescribeAigcApiTokensOutcome DescribeAigcApiTokens(const Model::DescribeAigcApiTokensRequest &request);
                 void DescribeAigcApiTokensAsync(const Model::DescribeAigcApiTokensRequest& request, const DescribeAigcApiTokensAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAigcApiTokensOutcomeCallable DescribeAigcApiTokensCallable(const Model::DescribeAigcApiTokensRequest& request);
+
+                /**
+                 *This API is used to return statistical information of AIGC within a specified time range.
+1. AIGC stats from the last 365 days can be queried.
+   2. The query time span should not exceed 90 days.
+3. If the query time span exceeds 1 day, return data with day-level granularity. Otherwise, return data with 5-minute granularity.
+                 * @param req DescribeAigcUsageDataRequest
+                 * @return DescribeAigcUsageDataOutcome
+                 */
+                DescribeAigcUsageDataOutcome DescribeAigcUsageData(const Model::DescribeAigcUsageDataRequest &request);
+                void DescribeAigcUsageDataAsync(const Model::DescribeAigcUsageDataRequest& request, const DescribeAigcUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAigcUsageDataOutcomeCallable DescribeAigcUsageDataCallable(const Model::DescribeAigcUsageDataRequest& request);
 
                 /**
                  ** This API is used to get the information of all categories.

@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupMinInGroupHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-                     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * 获取Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-                     * @param _instanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * 设置Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @param _instanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -649,7 +649,7 @@ namespace TencentCloud
                     bool m_readOnlyGroupMinInGroupHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;

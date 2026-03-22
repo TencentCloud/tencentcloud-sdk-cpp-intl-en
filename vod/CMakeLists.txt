@@ -139,6 +139,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesRequest.h
   include/tencentcloud/vod/v20180717/model/DeleteImageProcessingTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListResponse.h
+  include/tencentcloud/vod/v20180717/model/SplitMediaOutputConfig.h
   include/tencentcloud/vod/v20180717/model/AbnormalLightingConfigureInfo.h
   include/tencentcloud/vod/v20180717/model/TextWatermarkTemplateInputForUpdate.h
   include/tencentcloud/vod/v20180717/model/DeleteSuperPlayerConfigRequest.h
@@ -151,7 +152,8 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/UserDefineAsrTextReviewTemplateInfo.h
   include/tencentcloud/vod/v20180717/model/CreateProcedureTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/MediaProcessTaskAnimatedGraphicResult.h
-  include/tencentcloud/vod/v20180717/model/DescribeMediaProcessUsageDataRequest.h
+  include/tencentcloud/vod/v20180717/model/DescribeAigcUsageDataResponse.h
+  include/tencentcloud/vod/v20180717/model/AigcUsageDataItem.h
   include/tencentcloud/vod/v20180717/model/MPSOutputFile.h
   include/tencentcloud/vod/v20180717/model/CreatePersonSampleRequest.h
   include/tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h
@@ -709,7 +711,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ReduceMediaBitrateMediaProcessTaskResult.h
   include/tencentcloud/vod/v20180717/model/ImageQualityEnhanceInfo.h
   include/tencentcloud/vod/v20180717/model/AiRecognitionTaskOcrFullTextResultInput.h
-  include/tencentcloud/vod/v20180717/model/SplitMediaOutputConfig.h
+  include/tencentcloud/vod/v20180717/model/DescribeAigcUsageDataRequest.h
   include/tencentcloud/vod/v20180717/model/CreateVodDomainResponse.h
   include/tencentcloud/vod/v20180717/model/ModifyVodDomainAccelerateConfigResponse.h
   include/tencentcloud/vod/v20180717/model/AiRecognitionTaskSegmentResultInput.h
@@ -859,6 +861,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkTask.h
   include/tencentcloud/vod/v20180717/model/MediaAiAnalysisFrameTagItem.h
   include/tencentcloud/vod/v20180717/model/QualityInspectItem.h
+  include/tencentcloud/vod/v20180717/model/DescribeMediaProcessUsageDataRequest.h
   include/tencentcloud/vod/v20180717/model/PullUploadTask.h
   include/tencentcloud/vod/v20180717/model/DescribeImageProcessingTemplatesResponse.h
   include/tencentcloud/vod/v20180717/model/UserDefineOcrTextReviewTemplateInfoForUpdate.h
@@ -1061,6 +1064,7 @@ set(vod_src
   src/v20180717/model/DescribeImageSpriteTemplatesRequest.cpp
   src/v20180717/model/DeleteImageProcessingTemplateRequest.cpp
   src/v20180717/model/DescribeDailyPlayStatFileListResponse.cpp
+  src/v20180717/model/SplitMediaOutputConfig.cpp
   src/v20180717/model/AbnormalLightingConfigureInfo.cpp
   src/v20180717/model/TextWatermarkTemplateInputForUpdate.cpp
   src/v20180717/model/DeleteSuperPlayerConfigRequest.cpp
@@ -1073,7 +1077,8 @@ set(vod_src
   src/v20180717/model/UserDefineAsrTextReviewTemplateInfo.cpp
   src/v20180717/model/CreateProcedureTemplateRequest.cpp
   src/v20180717/model/MediaProcessTaskAnimatedGraphicResult.cpp
-  src/v20180717/model/DescribeMediaProcessUsageDataRequest.cpp
+  src/v20180717/model/DescribeAigcUsageDataResponse.cpp
+  src/v20180717/model/AigcUsageDataItem.cpp
   src/v20180717/model/MPSOutputFile.cpp
   src/v20180717/model/CreatePersonSampleRequest.cpp
   src/v20180717/model/RemoveWatermarkTask.cpp
@@ -1631,7 +1636,7 @@ set(vod_src
   src/v20180717/model/ReduceMediaBitrateMediaProcessTaskResult.cpp
   src/v20180717/model/ImageQualityEnhanceInfo.cpp
   src/v20180717/model/AiRecognitionTaskOcrFullTextResultInput.cpp
-  src/v20180717/model/SplitMediaOutputConfig.cpp
+  src/v20180717/model/DescribeAigcUsageDataRequest.cpp
   src/v20180717/model/CreateVodDomainResponse.cpp
   src/v20180717/model/ModifyVodDomainAccelerateConfigResponse.cpp
   src/v20180717/model/AiRecognitionTaskSegmentResultInput.cpp
@@ -1781,6 +1786,7 @@ set(vod_src
   src/v20180717/model/ExtractCopyRightWatermarkTask.cpp
   src/v20180717/model/MediaAiAnalysisFrameTagItem.cpp
   src/v20180717/model/QualityInspectItem.cpp
+  src/v20180717/model/DescribeMediaProcessUsageDataRequest.cpp
   src/v20180717/model/PullUploadTask.cpp
   src/v20180717/model/DescribeImageProcessingTemplatesResponse.cpp
   src/v20180717/model/UserDefineOcrTextReviewTemplateInfoForUpdate.cpp

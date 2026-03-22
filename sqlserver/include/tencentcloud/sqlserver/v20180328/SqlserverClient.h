@@ -1546,7 +1546,7 @@ namespace TencentCloud
                 InquiryPriceCreateDBInstancesOutcomeCallable InquiryPriceCreateDBInstancesCallable(const Model::InquiryPriceCreateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query the upgrade prices of a monthly subscribed instance.
+                 *This API is used to query the upgrade prices of a yearly/monthly subscribed instance.
 .
                  * @param req InquiryPriceUpgradeDBInstanceRequest
                  * @return InquiryPriceUpgradeDBInstanceOutcome
