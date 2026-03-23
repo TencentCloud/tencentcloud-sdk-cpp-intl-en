@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
-                     * @return LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+                     * 获取Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
+                     * @return LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
                      * 
                      */
                     uint64_t GetLicenseType() const;
 
                     /**
-                     * 设置Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
-                     * @param _licenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+                     * 设置Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
+                     * @param _licenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
                      * 
                      */
                     void SetLicenseType(const uint64_t& _licenseType);
@@ -188,18 +188,18 @@ This parameter is only valid for monthly subscription.
 
                     /**
                      * 获取Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
                      * @return AutoRenewFlag Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
                      * 
                      */
                     bool GetAutoRenewFlag() const;
 
                     /**
                      * 设置Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
                      * @param _autoRenewFlag Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
                      * 
                      */
                     void SetAutoRenewFlag(const bool& _autoRenewFlag);
@@ -262,7 +262,7 @@ This parameter is only valid for monthly subscription.
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+                     * Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
                      */
                     uint64_t m_licenseType;
                     bool m_licenseTypeHasBeenSet;
@@ -297,7 +297,7 @@ This parameter is only valid for monthly subscription.
 
                     /**
                      * Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
                      */
                     bool m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

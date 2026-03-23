@@ -80,7 +80,13 @@ DescribeDBInstanceDetailResponse::DescribeDBInstanceDetailResponse() :
     m_exclusterTypeHasBeenSet(false),
     m_rsAccessStrategyHasBeenSet(false),
     m_reservedNetResourcesHasBeenSet(false),
-    m_isPhysicalReplicationSupportedHasBeenSet(false)
+    m_isPhysicalReplicationSupportedHasBeenSet(false),
+    m_isDcnStrongSyncSupportedHasBeenSet(false),
+    m_isDcnSwitchSupportedHasBeenSet(false),
+    m_proxyVersionHasBeenSet(false),
+    m_cpuTypeHasBeenSet(false),
+    m_protectedPropertyHasBeenSet(false),
+    m_flowIdHasBeenSet(false)
 {
 }
 
@@ -735,6 +741,66 @@ CoreInternalOutcome DescribeDBInstanceDetailResponse::Deserialize(const string &
         m_isPhysicalReplicationSupportedHasBeenSet = true;
     }
 
+    if (rsp.HasMember("IsDcnStrongSyncSupported") && !rsp["IsDcnStrongSyncSupported"].IsNull())
+    {
+        if (!rsp["IsDcnStrongSyncSupported"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsDcnStrongSyncSupported` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDcnStrongSyncSupported = rsp["IsDcnStrongSyncSupported"].GetInt64();
+        m_isDcnStrongSyncSupportedHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("IsDcnSwitchSupported") && !rsp["IsDcnSwitchSupported"].IsNull())
+    {
+        if (!rsp["IsDcnSwitchSupported"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsDcnSwitchSupported` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDcnSwitchSupported = rsp["IsDcnSwitchSupported"].GetInt64();
+        m_isDcnSwitchSupportedHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProxyVersion") && !rsp["ProxyVersion"].IsNull())
+    {
+        if (!rsp["ProxyVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProxyVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_proxyVersion = string(rsp["ProxyVersion"].GetString());
+        m_proxyVersionHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CpuType") && !rsp["CpuType"].IsNull())
+    {
+        if (!rsp["CpuType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CpuType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cpuType = string(rsp["CpuType"].GetString());
+        m_cpuTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProtectedProperty") && !rsp["ProtectedProperty"].IsNull())
+    {
+        if (!rsp["ProtectedProperty"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectedProperty` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_protectedProperty = rsp["ProtectedProperty"].GetInt64();
+        m_protectedPropertyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
+    {
+        if (!rsp["FlowId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_flowId = rsp["FlowId"].GetInt64();
+        m_flowIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1227,6 +1293,54 @@ string DescribeDBInstanceDetailResponse::ToJsonString() const
         string key = "IsPhysicalReplicationSupported";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isPhysicalReplicationSupported, allocator);
+    }
+
+    if (m_isDcnStrongSyncSupportedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDcnStrongSyncSupported";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDcnStrongSyncSupported, allocator);
+    }
+
+    if (m_isDcnSwitchSupportedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDcnSwitchSupported";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDcnSwitchSupported, allocator);
+    }
+
+    if (m_proxyVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proxyVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cpuTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CpuType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cpuType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protectedPropertyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtectedProperty";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_protectedProperty, allocator);
+    }
+
+    if (m_flowIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FlowId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_flowId, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -1809,6 +1923,66 @@ bool DescribeDBInstanceDetailResponse::GetIsPhysicalReplicationSupported() const
 bool DescribeDBInstanceDetailResponse::IsPhysicalReplicationSupportedHasBeenSet() const
 {
     return m_isPhysicalReplicationSupportedHasBeenSet;
+}
+
+int64_t DescribeDBInstanceDetailResponse::GetIsDcnStrongSyncSupported() const
+{
+    return m_isDcnStrongSyncSupported;
+}
+
+bool DescribeDBInstanceDetailResponse::IsDcnStrongSyncSupportedHasBeenSet() const
+{
+    return m_isDcnStrongSyncSupportedHasBeenSet;
+}
+
+int64_t DescribeDBInstanceDetailResponse::GetIsDcnSwitchSupported() const
+{
+    return m_isDcnSwitchSupported;
+}
+
+bool DescribeDBInstanceDetailResponse::IsDcnSwitchSupportedHasBeenSet() const
+{
+    return m_isDcnSwitchSupportedHasBeenSet;
+}
+
+string DescribeDBInstanceDetailResponse::GetProxyVersion() const
+{
+    return m_proxyVersion;
+}
+
+bool DescribeDBInstanceDetailResponse::ProxyVersionHasBeenSet() const
+{
+    return m_proxyVersionHasBeenSet;
+}
+
+string DescribeDBInstanceDetailResponse::GetCpuType() const
+{
+    return m_cpuType;
+}
+
+bool DescribeDBInstanceDetailResponse::CpuTypeHasBeenSet() const
+{
+    return m_cpuTypeHasBeenSet;
+}
+
+int64_t DescribeDBInstanceDetailResponse::GetProtectedProperty() const
+{
+    return m_protectedProperty;
+}
+
+bool DescribeDBInstanceDetailResponse::ProtectedPropertyHasBeenSet() const
+{
+    return m_protectedPropertyHasBeenSet;
+}
+
+int64_t DescribeDBInstanceDetailResponse::GetFlowId() const
+{
+    return m_flowId;
+}
+
+bool DescribeDBInstanceDetailResponse::FlowIdHasBeenSet() const
+{
+    return m_flowIdHasBeenSet;
 }
 
 

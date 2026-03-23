@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
-                     * @return LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+                     * 获取Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
+                     * @return LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
                      * 
                      */
                     uint64_t GetLicenseType() const;
 
                     /**
-                     * 设置Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
-                     * @param _licenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+                     * 设置Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
+                     * @param _licenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
                      * 
                      */
                     void SetLicenseType(const uint64_t& _licenseType);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+                     * Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
                      */
                     uint64_t m_licenseType;
                     bool m_licenseTypeHasBeenSet;

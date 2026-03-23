@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool ShardCountHasBeenSet() const;
 
                     /**
-                     * 获取Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
-                     * @return Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+                     * 获取Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
+                     * @return Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
                      * 
                      */
                     std::string GetPaymode() const;
 
                     /**
-                     * 设置Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
-                     * @param _paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+                     * 设置Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
+                     * @param _paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
                      * 
                      */
                     void SetPaymode(const std::string& _paymode);
@@ -250,6 +250,27 @@ namespace TencentCloud
                      * 
                      */
                     bool AmountUnitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CpuType 
+                     * 
+                     */
+                    std::string GetCpuType() const;
+
+                    /**
+                     * 设置
+                     * @param _cpuType 
+                     * 
+                     */
+                    void SetCpuType(const std::string& _cpuType);
+
+                    /**
+                     * 判断参数 CpuType 是否已赋值
+                     * @return CpuType 是否已赋值
+                     * 
+                     */
+                    bool CpuTypeHasBeenSet() const;
 
                 private:
 
@@ -299,7 +320,7 @@ namespace TencentCloud
                     bool m_shardCountHasBeenSet;
 
                     /**
-                     * Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+                     * Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
                      */
                     std::string m_paymode;
                     bool m_paymodeHasBeenSet;
@@ -311,6 +332,12 @@ namespace TencentCloud
                      */
                     std::string m_amountUnit;
                     bool m_amountUnitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_cpuType;
+                    bool m_cpuTypeHasBeenSet;
 
                 };
             }

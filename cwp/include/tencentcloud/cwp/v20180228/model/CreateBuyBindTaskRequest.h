@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DealNameHasBeenSet() const;
 
                     /**
-                     * 获取Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
-                     * @return LicenseType Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+                     * 获取Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
+                     * @return LicenseType Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
                      * 
                      */
                     uint64_t GetLicenseType() const;
 
                     /**
-                     * 设置Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
-                     * @param _licenseType Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+                     * 设置Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
+                     * @param _licenseType Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
                      * 
                      */
                     void SetLicenseType(const uint64_t& _licenseType);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_dealNameHasBeenSet;
 
                     /**
-                     * Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+                     * Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
                      */
                     uint64_t m_licenseType;
                     bool m_licenseTypeHasBeenSet;

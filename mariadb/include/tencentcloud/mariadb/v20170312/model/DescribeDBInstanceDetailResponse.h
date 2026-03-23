@@ -385,8 +385,8 @@ namespace TencentCloud
                     bool ExclusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `prepaid` (monthly subscription), `postpaid` (pay-as-you-go).
-                     * @return PayMode Billing mode. Valid values: `prepaid` (monthly subscription), `postpaid` (pay-as-you-go).
+                     * 获取Billing mode. Valid values: `prepaid` (yearly/monthly subscription), `postpaid` (pay-as-you-go).
+                     * @return PayMode Billing mode. Valid values: `prepaid` (yearly/monthly subscription), `postpaid` (pay-as-you-go).
                      * 
                      */
                     std::string GetPayMode() const;
@@ -884,6 +884,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsPhysicalReplicationSupportedHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsDcnStrongSyncSupported 
+                     * 
+                     */
+                    int64_t GetIsDcnStrongSyncSupported() const;
+
+                    /**
+                     * 判断参数 IsDcnStrongSyncSupported 是否已赋值
+                     * @return IsDcnStrongSyncSupported 是否已赋值
+                     * 
+                     */
+                    bool IsDcnStrongSyncSupportedHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsDcnSwitchSupported 
+                     * 
+                     */
+                    int64_t GetIsDcnSwitchSupported() const;
+
+                    /**
+                     * 判断参数 IsDcnSwitchSupported 是否已赋值
+                     * @return IsDcnSwitchSupported 是否已赋值
+                     * 
+                     */
+                    bool IsDcnSwitchSupportedHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ProxyVersion 
+                     * 
+                     */
+                    std::string GetProxyVersion() const;
+
+                    /**
+                     * 判断参数 ProxyVersion 是否已赋值
+                     * @return ProxyVersion 是否已赋值
+                     * 
+                     */
+                    bool ProxyVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CpuType 
+                     * 
+                     */
+                    std::string GetCpuType() const;
+
+                    /**
+                     * 判断参数 CpuType 是否已赋值
+                     * @return CpuType 是否已赋值
+                     * 
+                     */
+                    bool CpuTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ProtectedProperty 
+                     * 
+                     */
+                    int64_t GetProtectedProperty() const;
+
+                    /**
+                     * 判断参数 ProtectedProperty 是否已赋值
+                     * @return ProtectedProperty 是否已赋值
+                     * 
+                     */
+                    bool ProtectedPropertyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FlowId 
+                     * 
+                     */
+                    int64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     * 
+                     */
+                    bool FlowIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1031,7 +1115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_exclusterIdHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `prepaid` (monthly subscription), `postpaid` (pay-as-you-go).
+                     * Billing mode. Valid values: `prepaid` (yearly/monthly subscription), `postpaid` (pay-as-you-go).
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
@@ -1246,6 +1330,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_isPhysicalReplicationSupported;
                     bool m_isPhysicalReplicationSupportedHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isDcnStrongSyncSupported;
+                    bool m_isDcnStrongSyncSupportedHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isDcnSwitchSupported;
+                    bool m_isDcnSwitchSupportedHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_proxyVersion;
+                    bool m_proxyVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_cpuType;
+                    bool m_cpuTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_protectedProperty;
+                    bool m_protectedPropertyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }

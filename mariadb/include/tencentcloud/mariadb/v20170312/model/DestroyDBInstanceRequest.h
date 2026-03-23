@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
-                     * @return InstanceId Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+                     * 获取Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+                     * @return InstanceId Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
-                     * @param _instanceId Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+                     * 设置Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+                     * @param _instanceId Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+                     * Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

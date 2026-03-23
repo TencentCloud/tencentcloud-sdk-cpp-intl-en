@@ -501,6 +501,48 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DcnSyncMode 
+                     * 
+                     */
+                    int64_t GetDcnSyncMode() const;
+
+                    /**
+                     * 设置
+                     * @param _dcnSyncMode 
+                     * 
+                     */
+                    void SetDcnSyncMode(const int64_t& _dcnSyncMode);
+
+                    /**
+                     * 判断参数 DcnSyncMode 是否已赋值
+                     * @return DcnSyncMode 是否已赋值
+                     * 
+                     */
+                    bool DcnSyncModeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CpuType 
+                     * 
+                     */
+                    std::string GetCpuType() const;
+
+                    /**
+                     * 设置
+                     * @param _cpuType 
+                     * 
+                     */
+                    void SetCpuType(const std::string& _cpuType);
+
+                    /**
+                     * 判断参数 CpuType 是否已赋值
+                     * @return CpuType 是否已赋值
+                     * 
+                     */
+                    bool CpuTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -632,6 +674,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_dcnSyncMode;
+                    bool m_dcnSyncModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_cpuType;
+                    bool m_cpuTypeHasBeenSet;
 
                 };
             }

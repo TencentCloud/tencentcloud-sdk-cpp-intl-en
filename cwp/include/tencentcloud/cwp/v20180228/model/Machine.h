@@ -130,6 +130,48 @@ namespace TencentCloud
                     bool MachineStatusHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AgentStatus 
+                     * 
+                     */
+                    std::string GetAgentStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _agentStatus 
+                     * 
+                     */
+                    void SetAgentStatus(const std::string& _agentStatus);
+
+                    /**
+                     * 判断参数 AgentStatus 是否已赋值
+                     * @return AgentStatus 是否已赋值
+                     * 
+                     */
+                    bool AgentStatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceStatus 
+                     * 
+                     */
+                    std::string GetInstanceStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceStatus 
+                     * 
+                     */
+                    void SetInstanceStatus(const std::string& _instanceStatus);
+
+                    /**
+                     * 判断参数 InstanceStatus 是否已赋值
+                     * @return InstanceStatus 是否已赋值
+                     * 
+                     */
+                    bool InstanceStatusHasBeenSet() const;
+
+                    /**
                      * 获取Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
                      * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
                      * 
@@ -266,10 +308,10 @@ namespace TencentCloud
                     /**
                      * 获取Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
                      * @return PayMode Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
                      * 
                      */
                     std::string GetPayMode() const;
@@ -277,10 +319,10 @@ namespace TencentCloud
                     /**
                      * 设置Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
                      * @param _payMode Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -769,6 +811,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AgentVersion 
+                     * 
+                     */
+                    std::string GetAgentVersion() const;
+
+                    /**
+                     * 设置
+                     * @param _agentVersion 
+                     * 
+                     */
+                    void SetAgentVersion(const std::string& _agentVersion);
+
+                    /**
+                     * 判断参数 AgentVersion 是否已赋值
+                     * @return AgentVersion 是否已赋值
+                     * 
+                     */
+                    bool AgentVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -792,6 +855,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_machineStatus;
                     bool m_machineStatusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_agentStatus;
+                    bool m_agentStatusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceStatus;
+                    bool m_instanceStatusHasBeenSet;
 
                     /**
                      * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
@@ -834,7 +909,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
@@ -973,6 +1048,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_agentVersion;
+                    bool m_agentVersionHasBeenSet;
 
                 };
             }

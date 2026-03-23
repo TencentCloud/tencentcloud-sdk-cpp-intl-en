@@ -415,7 +415,7 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
 
                 /**
-                 *This API is used to create a monthly subscribed TDSQL instance by passing in information such as instance specifications, database version number, and purchased duration.
+                 *This API is used to create a yearly/monthly subscribed TDSQL instance by passing in information such as instance specifications, database version number, and purchased duration.
                  * @param req CreateDCDBInstanceRequest
                  * @return CreateDCDBInstanceOutcome
                  */
@@ -678,7 +678,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to terminate an isolated monthly subscribed TDSQL instance.
+                 *This API is used to terminate an isolated yearly/monthly subscribed TDSQL instance.
                  * @param req DestroyDCDBInstanceRequest
                  * @return DestroyDCDBInstanceOutcome
                  */
@@ -724,7 +724,7 @@ Note: accounts with the same username but different hosts are different accounts
                 InitDCDBInstancesOutcomeCallable InitDCDBInstancesCallable(const Model::InitDCDBInstancesRequest& request);
 
                 /**
-                 *This API is used to isolate a monthly subscribed TDSQL instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
+                 *This API is used to isolate a yearly/monthly subscribed TDSQL instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
                  * @param req IsolateDCDBInstanceRequest
                  * @return IsolateDCDBInstanceOutcome
                  */
