@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Protocol and sale details
-                     * @return Protocols Protocol and sale details
+                     * 获取<p>Protocol and sale details</p>
+                     * @return Protocols <p>Protocol and sale details</p>
                      * 
                      */
                     std::vector<AvailableProtoStatus> GetProtocols() const;
 
                     /**
-                     * 设置Protocol and sale details
-                     * @param _protocols Protocol and sale details
+                     * 设置<p>Protocol and sale details</p>
+                     * @param _protocols <p>Protocol and sale details</p>
                      * 
                      */
                     void SetProtocols(const std::vector<AvailableProtoStatus>& _protocols);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProtocolsHasBeenSet() const;
 
                     /**
-                     * 获取Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
-                     * @return Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+                     * 获取<p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+                     * @return Type <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
-                     * @param _type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+                     * 设置<p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+                     * @param _type <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether prepaid is supported. `true`: yes; `false`: no
-                     * @return Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * 获取<p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+                     * @return Prepayment <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
                      * 
                      */
                     bool GetPrepayment() const;
 
                     /**
-                     * 设置Indicates whether prepaid is supported. `true`: yes; `false`: no
-                     * @param _prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * 设置<p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+                     * @param _prepayment <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
                      * 
                      */
                     void SetPrepayment(const bool& _prepayment);
@@ -110,25 +110,52 @@ namespace TencentCloud
                      */
                     bool PrepaymentHasBeenSet() const;
 
+                    /**
+                     * 获取<p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+                     * @return Version <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+                     * 
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置<p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+                     * @param _version <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+                     * 
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     * 
+                     */
+                    bool VersionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Protocol and sale details
+                     * <p>Protocol and sale details</p>
                      */
                     std::vector<AvailableProtoStatus> m_protocols;
                     bool m_protocolsHasBeenSet;
 
                     /**
-                     * Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+                     * <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
                      */
                     bool m_prepayment;
                     bool m_prepaymentHasBeenSet;
+
+                    /**
+                     * <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information such as resource availability in each AZ and the supported storage classes and protocols
-                     * @return RegionZones Information such as resource availability in each AZ and the supported storage classes and protocols
+                     * 获取<p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
+                     * @return RegionZones <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
                      * 
                      */
                     std::vector<AvailableRegion> GetRegionZones() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Information such as resource availability in each AZ and the supported storage classes and protocols
+                     * <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
                      */
                     std::vector<AvailableRegion> m_regionZones;
                     bool m_regionZonesHasBeenSet;
