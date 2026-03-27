@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sentiment analysis result
                 */
                 class SentimentAnalysis : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Sentiment Tag
+                     * @return Label Sentiment Tag
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Sentiment Tag
+                     * @param _label Sentiment Tag
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Score 
+                     * 获取Tag score, ranging from 0 to 100
+                     * @return Score Tag score, ranging from 0 to 100
                      * 
                      */
                     int64_t GetScore() const;
 
                     /**
-                     * 设置
-                     * @param _score 
+                     * 设置Tag score, ranging from 0 to 100
+                     * @param _score Tag score, ranging from 0 to 100
                      * 
                      */
                     void SetScore(const int64_t& _score);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Detail 
+                     * 获取Sentiment analysis details
+                     * @return Detail Sentiment analysis details
                      * 
                      */
                     SentimentDetail GetDetail() const;
 
                     /**
-                     * 设置
-                     * @param _detail 
+                     * 设置Sentiment analysis details
+                     * @param _detail Sentiment analysis details
                      * 
                      */
                     void SetDetail(const SentimentDetail& _detail);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Code 
+                     * 获取Response code; "OK" for success, "InternalError" for failure
+                     * @return Code Response code; "OK" for success, "InternalError" for failure
                      * 
                      */
                     std::string GetCode() const;
 
                     /**
-                     * 设置
-                     * @param _code 
+                     * 设置Response code; "OK" for success, "InternalError" for failure
+                     * @param _code Response code; "OK" for success, "InternalError" for failure
                      * 
                      */
                     void SetCode(const std::string& _code);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Exception information
+                     * @return Message Exception information
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Exception information
+                     * @param _message Exception information
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sentiment Tag
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * 
+                     * Tag score, ranging from 0 to 100
                      */
                     int64_t m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * 
+                     * Sentiment analysis details
                      */
                     SentimentDetail m_detail;
                     bool m_detailHasBeenSet;
 
                     /**
-                     * 
+                     * Response code; "OK" for success, "InternalError" for failure
                      */
                     std::string m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * 
+                     * Exception information
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

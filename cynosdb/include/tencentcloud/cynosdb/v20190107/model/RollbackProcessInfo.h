@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Progress Details
                 */
                 class RollbackProcessInfo : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool VipSwitchableTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExchangeInstanceInfoList 
+                     * 获取Exchange Instance List
+                     * @return ExchangeInstanceInfoList Exchange Instance List
                      * 
                      */
                     std::vector<ExchangeInstanceInfo> GetExchangeInstanceInfoList() const;
 
                     /**
-                     * 设置
-                     * @param _exchangeInstanceInfoList 
+                     * 设置Exchange Instance List
+                     * @param _exchangeInstanceInfoList Exchange Instance List
                      * 
                      */
                     void SetExchangeInstanceInfoList(const std::vector<ExchangeInstanceInfo>& _exchangeInstanceInfoList);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ExchangeInstanceInfoListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExchangeRoGroupInfoList 
+                     * 获取Swap RO Group List
+                     * @return ExchangeRoGroupInfoList Swap RO Group List
                      * 
                      */
                     std::vector<ExchangeRoGroupInfo> GetExchangeRoGroupInfoList() const;
 
                     /**
-                     * 设置
-                     * @param _exchangeRoGroupInfoList 
+                     * 设置Swap RO Group List
+                     * @param _exchangeRoGroupInfoList Swap RO Group List
                      * 
                      */
                     void SetExchangeRoGroupInfoList(const std::vector<ExchangeRoGroupInfo>& _exchangeRoGroupInfoList);
@@ -210,13 +210,13 @@ namespace TencentCloud
                     bool m_vipSwitchableTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Exchange Instance List
                      */
                     std::vector<ExchangeInstanceInfo> m_exchangeInstanceInfoList;
                     bool m_exchangeInstanceInfoListHasBeenSet;
 
                     /**
-                     * 
+                     * Swap RO Group List
                      */
                     std::vector<ExchangeRoGroupInfo> m_exchangeRoGroupInfoList;
                     bool m_exchangeRoGroupInfoListHasBeenSet;

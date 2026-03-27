@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Database Information
                 */
                 class RollbackDatabase : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OldDatabase 
+                     * 获取Old Database Name
+                     * @return OldDatabase Old Database Name
                      * 
                      */
                     std::string GetOldDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _oldDatabase 
+                     * 设置Old Database Name
+                     * @param _oldDatabase Old Database Name
                      * 
                      */
                     void SetOldDatabase(const std::string& _oldDatabase);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OldDatabaseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NewDatabase 
+                     * 获取New Database Name
+                     * @return NewDatabase New Database Name
                      * 
                      */
                     std::string GetNewDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _newDatabase 
+                     * 设置New Database Name
+                     * @param _newDatabase New Database Name
                      * 
                      */
                     void SetNewDatabase(const std::string& _newDatabase);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Old Database Name
                      */
                     std::string m_oldDatabase;
                     bool m_oldDatabaseHasBeenSet;
 
                     /**
-                     * 
+                     * New Database Name
                      */
                     std::string m_newDatabase;
                     bool m_newDatabaseHasBeenSet;

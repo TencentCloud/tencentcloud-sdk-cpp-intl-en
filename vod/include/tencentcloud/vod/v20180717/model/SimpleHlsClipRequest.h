@@ -261,15 +261,15 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Precision 
+                     * 获取This field is deprecated.
+                     * @return Precision This field is deprecated.
                      * 
                      */
                     std::string GetPrecision() const;
 
                     /**
-                     * 设置
-                     * @param _precision 
+                     * 设置This field is deprecated.
+                     * @param _precision This field is deprecated.
                      * 
                      */
                     void SetPrecision(const std::string& _precision);
@@ -282,15 +282,15 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool PrecisionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputMediaType 
+                     * 获取Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+                     * @return OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
                      * 
                      */
                     std::string GetOutputMediaType() const;
 
                     /**
-                     * 设置
-                     * @param _outputMediaType 
+                     * 设置Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+                     * @param _outputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
                      * 
                      */
                     void SetOutputMediaType(const std::string& _outputMediaType);
@@ -303,15 +303,15 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool OutputMediaTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取Reserved field, used for special purposes. Example value: ""
+                     * @return ExtInfo Reserved field, used for special purposes. Example value: ""
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置Reserved field, used for special purposes. Example value: ""
+                     * @param _extInfo Reserved field, used for special purposes. Example value: ""
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -388,19 +388,19 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * This field is deprecated.
                      */
                     std::string m_precision;
                     bool m_precisionHasBeenSet;
 
                     /**
-                     * 
+                     * Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
                      */
                     std::string m_outputMediaType;
                     bool m_outputMediaTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Reserved field, used for special purposes. Example value: ""
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

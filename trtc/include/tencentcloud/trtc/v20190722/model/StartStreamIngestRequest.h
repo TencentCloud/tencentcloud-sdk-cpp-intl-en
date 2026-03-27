@@ -259,15 +259,15 @@ Source URL. Example value: https://a.b/test.mp4
                     bool SourceUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SeekSecond 
+                     * 获取Specify that the video plays from a specific second timestamp.
+                     * @return SeekSecond Specify that the video plays from a specific second timestamp.
                      * 
                      */
                     int64_t GetSeekSecond() const;
 
                     /**
-                     * 设置
-                     * @param _seekSecond 
+                     * 设置Specify that the video plays from a specific second timestamp.
+                     * @param _seekSecond Specify that the video plays from a specific second timestamp.
                      * 
                      */
                     void SetSeekSecond(const int64_t& _seekSecond);
@@ -427,7 +427,7 @@ Source URL. Example value: https://a.b/test.mp4
                     bool m_sourceUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Specify that the video plays from a specific second timestamp.
                      */
                     int64_t m_seekSecond;
                     bool m_seekSecondHasBeenSet;

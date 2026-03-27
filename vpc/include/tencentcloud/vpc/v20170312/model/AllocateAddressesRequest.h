@@ -264,15 +264,15 @@ namespace TencentCloud
                     bool AnycastZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VipCluster 
+                     * 获取Specify IP address to apply for an EIP; each account has a quota of three times per month.
+                     * @return VipCluster Specify IP address to apply for an EIP; each account has a quota of three times per month.
                      * 
                      */
                     std::vector<std::string> GetVipCluster() const;
 
                     /**
-                     * 设置
-                     * @param _vipCluster 
+                     * 设置Specify IP address to apply for an EIP; each account has a quota of three times per month.
+                     * @param _vipCluster Specify IP address to apply for an EIP; each account has a quota of three times per month.
                      * 
                      */
                     void SetVipCluster(const std::vector<std::string>& _vipCluster);
@@ -381,15 +381,15 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool AddressNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DedicatedClusterId 
+                     * 获取CDC unique ID
+                     * @return DedicatedClusterId CDC unique ID
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _dedicatedClusterId 
+                     * 设置CDC unique ID
+                     * @param _dedicatedClusterId CDC unique ID
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -402,15 +402,31 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool DedicatedClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsDedicatedAddressPool 
+                     * 获取Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
+                     * @return IsDedicatedAddressPool Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
                      * 
                      */
                     bool GetIsDedicatedAddressPool() const;
 
                     /**
-                     * 设置
-                     * @param _isDedicatedAddressPool 
+                     * 设置Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
+                     * @param _isDedicatedAddressPool Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
                      * 
                      */
                     void SetIsDedicatedAddressPool(const bool& _isDedicatedAddressPool);
@@ -548,7 +564,7 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool m_anycastZoneHasBeenSet;
 
                     /**
-                     * 
+                     * Specify IP address to apply for an EIP; each account has a quota of three times per month.
                      */
                     std::vector<std::string> m_vipCluster;
                     bool m_vipClusterHasBeenSet;
@@ -581,13 +597,17 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool m_addressNameHasBeenSet;
 
                     /**
-                     * 
+                     * CDC unique ID
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
                      */
                     bool m_isDedicatedAddressPool;
                     bool m_isDedicatedAddressPoolHasBeenSet;

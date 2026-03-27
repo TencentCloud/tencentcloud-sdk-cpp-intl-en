@@ -422,15 +422,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoLoadBalance 
+                     * 获取Whether to enable adaptive load balancing. Disabled by default.
+                     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
                      * 
                      */
                     bool GetAutoLoadBalance() const;
 
                     /**
-                     * 设置
-                     * @param _autoLoadBalance 
+                     * 设置Whether to enable adaptive load balancing. Disabled by default.
+                     * @param _autoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
                      * 
                      */
                     void SetAutoLoadBalance(const bool& _autoLoadBalance);
@@ -443,15 +443,15 @@ namespace TencentCloud
                     bool AutoLoadBalanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessMode 
+                     * 获取Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+                     * @return AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置
-                     * @param _accessMode 
+                     * 设置Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+                     * @param _accessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -574,13 +574,13 @@ namespace TencentCloud
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable adaptive load balancing. Disabled by default.
                      */
                     bool m_autoLoadBalance;
                     bool m_autoLoadBalanceHasBeenSet;
 
                     /**
-                     * 
+                     * Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;

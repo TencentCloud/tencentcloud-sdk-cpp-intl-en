@@ -223,15 +223,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PrivateParameterHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Proto 
+                     * 获取When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
+                     * @return Proto When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
                      * 
                      */
                     std::string GetProto() const;
 
                     /**
-                     * 设置
-                     * @param _proto 
+                     * 设置When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
+                     * @param _proto When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
                      * 
                      */
                     void SetProto(const std::string& _proto);
@@ -295,7 +295,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_privateParameterHasBeenSet;
 
                     /**
-                     * 
+                     * When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
                      */
                     std::string m_proto;
                     bool m_protoHasBeenSet;

@@ -249,15 +249,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseNetEnvHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnectType 
+                     * 获取TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
+                     * @return ConnectType TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
                      * 
                      */
                     std::string GetConnectType() const;
 
                     /**
-                     * 设置
-                     * @param _connectType 
+                     * 设置TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
+                     * @param _connectType TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
                      * 
                      */
                     void SetConnectType(const std::string& _connectType);
@@ -328,7 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_databaseNetEnvHasBeenSet;
 
                     /**
-                     * 
+                     * TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
                      */
                     std::string m_connectType;
                     bool m_connectTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取<p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+                     * @return SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置<p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+                     * @param _sdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Page size, upper limit 9,999.
-                     * @return PageSize Page size, upper limit 9,999.
+                     * 获取<P>Pagination size. upper limit: 9999.</p>.
+                     * @return PageSize <P>Pagination size. upper limit: 9999.</p>.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size, upper limit 9,999.
-                     * @param _pageSize Page size, upper limit 9,999.
+                     * 设置<P>Pagination size. upper limit: 9999.</p>.
+                     * @param _pageSize <P>Pagination size. upper limit: 9999.</p>.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Page number starting from 0.
-                     * @return PageNumber Page number starting from 0.
+                     * 获取<P>Page number, starting from 0.</p>.
+                     * @return PageNumber <P>Page number, starting from 0.</p>.
                      * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
-                     * 设置Page number starting from 0.
-                     * @param _pageNumber Page number starting from 0.
+                     * 设置<P>Page number, starting from 0.</p>.
+                     * @param _pageNumber <P>Page number, starting from 0.</p>.
                      * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Agent account used when querying a single agent.
-                     * @return StaffMail Agent account used when querying a single agent.
+                     * 获取<P>Agent account, used when query single agent.</p>.
+                     * @return StaffMail <P>Agent account, used when query single agent.</p>.
                      * 
                      */
                     std::string GetStaffMail() const;
 
                     /**
-                     * 设置Agent account used when querying a single agent.
-                     * @param _staffMail Agent account used when querying a single agent.
+                     * 设置<P>Agent account, used when query single agent.</p>.
+                     * @param _staffMail <P>Agent account, used when query single agent.</p>.
                      * 
                      */
                     void SetStaffMail(const std::string& _staffMail);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StaffMailHasBeenSet() const;
 
                     /**
-                     * 获取Use when querying for agents with a modification time greater or equal to modifiedtime.
-                     * @return ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
+                     * 获取<p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+                     * @return ModifiedTime <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
                      * 
                      */
                     int64_t GetModifiedTime() const;
 
                     /**
-                     * 设置Use when querying for agents with a modification time greater or equal to modifiedtime.
-                     * @param _modifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
+                     * 设置<p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+                     * @param _modifiedTime <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
                      * 
                      */
                     void SetModifiedTime(const int64_t& _modifiedTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ModifiedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Skill group id.
-                     * @return SkillGroupId Skill group id.
+                     * 获取<p>Skill group ID</p>.
+                     * @return SkillGroupId <p>Skill group ID</p>.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group id.
-                     * @param _skillGroupId Skill group id.
+                     * 设置<p>Skill group ID</p>.
+                     * @param _skillGroupId <p>Skill group ID</p>.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Page size, upper limit 9,999.
+                     * <P>Pagination size. upper limit: 9999.</p>.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Page number starting from 0.
+                     * <P>Page number, starting from 0.</p>.
                      */
                     int64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Agent account used when querying a single agent.
+                     * <P>Agent account, used when query single agent.</p>.
                      */
                     std::string m_staffMail;
                     bool m_staffMailHasBeenSet;
 
                     /**
-                     * Use when querying for agents with a modification time greater or equal to modifiedtime.
+                     * <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
                      */
                     int64_t m_modifiedTime;
                     bool m_modifiedTimeHasBeenSet;
 
                     /**
-                     * Skill group id.
+                     * <p>Skill group ID</p>.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;

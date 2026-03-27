@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BinlogSyncWayHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SemiSyncTimeout 
+                     * 获取Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
+                     * @return SemiSyncTimeout Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
                      * 
                      */
                     int64_t GetSemiSyncTimeout() const;
 
                     /**
-                     * 设置
-                     * @param _semiSyncTimeout 
+                     * 设置Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
+                     * @param _semiSyncTimeout Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
                      * 
                      */
                     void SetSemiSyncTimeout(const int64_t& _semiSyncTimeout);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_binlogSyncWayHasBeenSet;
 
                     /**
-                     * 
+                     * Semi-sync timeout period in ms. To ensure business stability, the semi-synchronous replication includes a degradation mechanism. If the primary AZ cluster exceeds this timeout while waiting for transaction confirmation from the secondary AZ cluster, the replication mode will fall back to asynchronous replication. Minimum setting: 1000 ms; maximum support: 4294967295 ms; default: 10000 ms.
                      */
                     int64_t m_semiSyncTimeout;
                     bool m_semiSyncTimeoutHasBeenSet;

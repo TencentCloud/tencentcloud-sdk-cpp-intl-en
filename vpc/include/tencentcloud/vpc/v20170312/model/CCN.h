@@ -337,15 +337,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RouteTableFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsSecurityLock 
+                     * 获取`true`: instance is blocked, traffic is blocked, `false`: unblocked.
+                     * @return IsSecurityLock `true`: instance is blocked, traffic is blocked, `false`: unblocked.
                      * 
                      */
                     bool GetIsSecurityLock() const;
 
                     /**
-                     * 设置
-                     * @param _isSecurityLock 
+                     * 设置`true`: instance is blocked, traffic is blocked, `false`: unblocked.
+                     * @param _isSecurityLock `true`: instance is blocked, traffic is blocked, `false`: unblocked.
                      * 
                      */
                     void SetIsSecurityLock(const bool& _isSecurityLock);
@@ -467,7 +467,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_routeTableFlagHasBeenSet;
 
                     /**
-                     * 
+                     * `true`: instance is blocked, traffic is blocked, `false`: unblocked.
                      */
                     bool m_isSecurityLock;
                     bool m_isSecurityLockHasBeenSet;

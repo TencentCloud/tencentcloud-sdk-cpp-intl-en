@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MiniOsType 
+                     * 获取MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+                     * @return MiniOsType MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
                      * 
                      */
                     std::string GetMiniOsType() const;
 
                     /**
-                     * 设置
-                     * @param _miniOsType 
+                     * 设置MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+                     * @param _miniOsType MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
                      * 
                      */
                     void SetMiniOsType(const std::string& _miniOsType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MiniOsTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BootType 
+                     * 获取Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+                     * @return BootType Server architecture and boot mode. Value: x86_legacy, arm_uefi.
                      * 
                      */
                     std::string GetBootType() const;
 
                     /**
-                     * 设置
-                     * @param _bootType 
+                     * 设置Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+                     * @param _bootType Server architecture and boot mode. Value: x86_legacy, arm_uefi.
                      * 
                      */
                     void SetBootType(const std::string& _bootType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BootTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BootFile 
+                     * 获取The boot file used by PXE. Default: pxelinux.0.
+                     * @return BootFile The boot file used by PXE. Default: pxelinux.0.
                      * 
                      */
                     std::string GetBootFile() const;
 
                     /**
-                     * 设置
-                     * @param _bootFile 
+                     * 设置The boot file used by PXE. Default: pxelinux.0.
+                     * @param _bootFile The boot file used by PXE. Default: pxelinux.0.
                      * 
                      */
                     void SetBootFile(const std::string& _bootFile);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BootFileHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NextServerAddress 
+                     * 获取tftp server ip address.
+                     * @return NextServerAddress tftp server ip address.
                      * 
                      */
                     std::string GetNextServerAddress() const;
 
                     /**
-                     * 设置
-                     * @param _nextServerAddress 
+                     * 设置tftp server ip address.
+                     * @param _nextServerAddress tftp server ip address.
                      * 
                      */
                     void SetNextServerAddress(const std::string& _nextServerAddress);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
                      */
                     std::string m_miniOsType;
                     bool m_miniOsTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Server architecture and boot mode. Value: x86_legacy, arm_uefi.
                      */
                     std::string m_bootType;
                     bool m_bootTypeHasBeenSet;
 
                     /**
-                     * 
+                     * The boot file used by PXE. Default: pxelinux.0.
                      */
                     std::string m_bootFile;
                     bool m_bootFileHasBeenSet;
 
                     /**
-                     * 
+                     * tftp server ip address.
                      */
                     std::string m_nextServerAddress;
                     bool m_nextServerAddressHasBeenSet;

@@ -648,15 +648,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CWPBlProcessHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrorCode 
+                     * 获取Exception status codes
+                     * @return ErrorCode Exception status codes
                      * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
-                     * 设置
-                     * @param _errorCode 
+                     * 设置Exception status codes
+                     * @param _errorCode Exception status codes
                      * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
@@ -1214,7 +1214,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cWPBlProcessHasBeenSet;
 
                     /**
-                     * 
+                     * Exception status codes
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;

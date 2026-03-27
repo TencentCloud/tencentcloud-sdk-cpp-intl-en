@@ -1108,15 +1108,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Namespace 
+                     * 获取Namespace
+                     * @return Namespace Namespace
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置
-                     * @param _namespace 
+                     * 设置Namespace
+                     * @param _namespace Namespace
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -1129,15 +1129,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkloadType 
+                     * 获取Workload
+                     * @return WorkloadType Workload
                      * 
                      */
                     std::string GetWorkloadType() const;
 
                     /**
-                     * 设置
-                     * @param _workloadType 
+                     * 设置Workload
+                     * @param _workloadType Workload
                      * 
                      */
                     void SetWorkloadType(const std::string& _workloadType);
@@ -1450,13 +1450,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Namespace
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * 
+                     * Workload
                      */
                     std::string m_workloadType;
                     bool m_workloadTypeHasBeenSet;

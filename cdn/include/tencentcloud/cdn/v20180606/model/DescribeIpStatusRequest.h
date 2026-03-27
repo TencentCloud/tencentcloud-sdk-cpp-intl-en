@@ -151,15 +151,15 @@ If this parameter is left empty, edge server information will be returned by def
                     bool SegmentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShowIpv6 
+                     * 获取whether to query node IPV6 information.
+                     * @return ShowIpv6 whether to query node IPV6 information.
                      * 
                      */
                     bool GetShowIpv6() const;
 
                     /**
-                     * 设置
-                     * @param _showIpv6 
+                     * 设置whether to query node IPV6 information.
+                     * @param _showIpv6 whether to query node IPV6 information.
                      * 
                      */
                     void SetShowIpv6(const bool& _showIpv6);
@@ -225,7 +225,7 @@ If this parameter is left empty, edge server information will be returned by def
                     bool m_segmentHasBeenSet;
 
                     /**
-                     * 
+                     * whether to query node IPV6 information.
                      */
                     bool m_showIpv6;
                     bool m_showIpv6HasBeenSet;

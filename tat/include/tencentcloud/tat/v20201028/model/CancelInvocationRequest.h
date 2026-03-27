@@ -45,10 +45,10 @@ namespace TencentCloud
                     /**
                      * 获取Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * @return InvocationId Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::string GetInvocationId() const;
@@ -56,10 +56,10 @@ Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/
                     /**
                      * 设置Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * @param _invocationId Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
@@ -117,7 +117,7 @@ Instance ID can be obtained through the query instance interface of correspondin
                     /**
                      * Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
                      */
                     std::string m_invocationId;
                     bool m_invocationIdHasBeenSet;

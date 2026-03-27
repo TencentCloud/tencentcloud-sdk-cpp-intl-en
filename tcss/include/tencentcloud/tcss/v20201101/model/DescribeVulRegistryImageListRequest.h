@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Offset, defaults to 0.
+                     * @return Offset Offset, defaults to 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Offset, defaults to 0.
+                     * @param _offset Offset, defaults to 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -216,7 +216,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Offset, defaults to 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

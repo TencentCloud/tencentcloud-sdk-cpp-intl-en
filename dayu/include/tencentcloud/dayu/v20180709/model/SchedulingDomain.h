@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TTL 
+                     * 获取ttl
+                     * @return TTL ttl
                      * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
-                     * 设置
-                     * @param _tTL 
+                     * 设置ttl
+                     * @param _tTL ttl
                      * 
                      */
                     void SetTTL(const uint64_t& _tTL);
@@ -328,7 +328,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * ttl
                      */
                     uint64_t m_tTL;
                     bool m_tTLHasBeenSet;

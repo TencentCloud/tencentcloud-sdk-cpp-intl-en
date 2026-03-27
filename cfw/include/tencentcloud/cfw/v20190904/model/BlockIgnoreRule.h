@@ -422,15 +422,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CountryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Remarks
+                     * @return Comment Remarks
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Remarks
+                     * @param _comment Remarks
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -550,7 +550,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_countryHasBeenSet;
 
                     /**
-                     * 
+                     * Remarks
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

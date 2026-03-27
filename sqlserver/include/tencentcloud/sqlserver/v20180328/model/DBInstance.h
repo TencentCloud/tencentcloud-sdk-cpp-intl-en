@@ -1187,15 +1187,15 @@ namespace TencentCloud
                     bool StyleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MultiSlaveZones 
+                     * 获取Multi-Node Instance Secondary AZ Information
+                     * @return MultiSlaveZones Multi-Node Instance Secondary AZ Information
                      * 
                      */
                     std::vector<SlaveZones> GetMultiSlaveZones() const;
 
                     /**
-                     * 设置
-                     * @param _multiSlaveZones 
+                     * 设置Multi-Node Instance Secondary AZ Information
+                     * @param _multiSlaveZones Multi-Node Instance Secondary AZ Information
                      * 
                      */
                     void SetMultiSlaveZones(const std::vector<SlaveZones>& _multiSlaveZones);
@@ -1535,7 +1535,7 @@ namespace TencentCloud
                     bool m_styleHasBeenSet;
 
                     /**
-                     * 
+                     * Multi-Node Instance Secondary AZ Information
                      */
                     std::vector<SlaveZones> m_multiSlaveZones;
                     bool m_multiSlaveZonesHasBeenSet;

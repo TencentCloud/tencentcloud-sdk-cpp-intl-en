@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Authentication-free condition information
                 */
                 class ConditionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Attributes 
+                     * 获取Condition attribute, currently supports only VpcID
+                     * @return Attributes Condition attribute, currently supports only VpcID
                      * 
                      */
                     std::string GetAttributes() const;
 
                     /**
-                     * 设置
-                     * @param _attributes 
+                     * 设置Condition attribute, currently supports only VpcID
+                     * @param _attributes Condition attribute, currently supports only VpcID
                      * 
                      */
                     void SetAttributes(const std::string& _attributes);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AttributesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Rule 
+                     * 获取Condition rule, 1: equal to, 2: not equal to
+                     * @return Rule Condition rule, 1: equal to, 2: not equal to
                      * 
                      */
                     uint64_t GetRule() const;
 
                     /**
-                     * 设置
-                     * @param _rule 
+                     * 设置Condition rule, 1: equal to, 2: not equal to
+                     * @param _rule Condition rule, 1: equal to, 2: not equal to
                      * 
                      */
                     void SetRule(const uint64_t& _rule);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RuleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConditionValue 
+                     * 获取Value of the corresponding condition attribute
+                     * @return ConditionValue Value of the corresponding condition attribute
                      * 
                      */
                     std::string GetConditionValue() const;
 
                     /**
-                     * 设置
-                     * @param _conditionValue 
+                     * 设置Value of the corresponding condition attribute
+                     * @param _conditionValue Value of the corresponding condition attribute
                      * 
                      */
                     void SetConditionValue(const std::string& _conditionValue);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Condition attribute, currently supports only VpcID
                      */
                     std::string m_attributes;
                     bool m_attributesHasBeenSet;
 
                     /**
-                     * 
+                     * Condition rule, 1: equal to, 2: not equal to
                      */
                     uint64_t m_rule;
                     bool m_ruleHasBeenSet;
 
                     /**
-                     * 
+                     * Value of the corresponding condition attribute
                      */
                     std::string m_conditionValue;
                     bool m_conditionValueHasBeenSet;

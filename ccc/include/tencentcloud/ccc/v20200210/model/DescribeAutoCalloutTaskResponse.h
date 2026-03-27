@@ -145,8 +145,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IvrIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - terminated.
-                     * @return State Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - terminated.
+                     * 获取Task status 0 initial 1 running 2 completed 3 ending 4 terminated 5 suspended.
+                     * @return State Task status 0 initial 1 running 2 completed 3 ending 4 terminated 5 suspended.
                      * 
                      */
                     uint64_t GetState() const;
@@ -157,6 +157,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool StateHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * 
+                     */
+                    int64_t GetMaxRingTimeoutSecond() const;
+
+                    /**
+                     * 判断参数 MaxRingTimeoutSecond 是否已赋值
+                     * @return MaxRingTimeoutSecond 是否已赋值
+                     * 
+                     */
+                    bool MaxRingTimeoutSecondHasBeenSet() const;
 
                 private:
 
@@ -204,10 +218,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ivrIdHasBeenSet;
 
                     /**
-                     * Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - terminated.
+                     * Task status 0 initial 1 running 2 completed 3 ending 4 terminated 5 suspended.
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;
+
+                    /**
+                     * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     */
+                    int64_t m_maxRingTimeoutSecond;
+                    bool m_maxRingTimeoutSecondHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Specification Sellable Status in a Specific Region's AZ
                 */
                 class ZoneStatus : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取Specification AZ
+                     * @return Zone Specification AZ
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param _zone 
+                     * 设置Specification AZ
+                     * @param _zone Specification AZ
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Specification Region
+                     * @return Region Specification Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Specification Region
+                     * @param _region Specification Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+                     * @return Status Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+                     * @param _status Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Specification AZ
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * Specification Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

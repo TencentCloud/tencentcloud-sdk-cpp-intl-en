@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Security Group Policy
                 */
                 class SecurityGroupPolicy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Action 
+                     * 获取Policy, ACCEPT or DROP
+                     * @return Action Policy, ACCEPT or DROP
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置
-                     * @param _action 
+                     * 设置Policy, ACCEPT or DROP
+                     * @param _action Policy, ACCEPT or DROP
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CidrIp 
+                     * 获取Destination IP or IP range, for example 172.16.0.0/12
+                     * @return CidrIp Destination IP or IP range, for example 172.16.0.0/12
                      * 
                      */
                     std::string GetCidrIp() const;
 
                     /**
-                     * 设置
-                     * @param _cidrIp 
+                     * 设置Destination IP or IP range, for example 172.16.0.0/12
+                     * @param _cidrIp Destination IP or IP range, for example 172.16.0.0/12
                      * 
                      */
                     void SetCidrIp(const std::string& _cidrIp);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CidrIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PortRange 
+                     * 获取port or port range
+                     * @return PortRange port or port range
                      * 
                      */
                     std::string GetPortRange() const;
 
                     /**
-                     * 设置
-                     * @param _portRange 
+                     * 设置port or port range
+                     * @param _portRange port or port range
                      * 
                      */
                     void SetPortRange(const std::string& _portRange);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PortRangeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IpProtocol 
+                     * 获取Network protocol supports UDP, TCP, etc.
+                     * @return IpProtocol Network protocol supports UDP, TCP, etc.
                      * 
                      */
                     std::string GetIpProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _ipProtocol 
+                     * 设置Network protocol supports UDP, TCP, etc.
+                     * @param _ipProtocol Network protocol supports UDP, TCP, etc.
                      * 
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IpProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Dir 
+                     * 获取Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
+                     * @return Dir Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
                      * 
                      */
                     std::string GetDir() const;
 
                     /**
-                     * 设置
-                     * @param _dir 
+                     * 设置Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
+                     * @param _dir Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
                      * 
                      */
                     void SetDir(const std::string& _dir);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Policy, ACCEPT or DROP
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * 
+                     * Destination IP or IP range, for example 172.16.0.0/12
                      */
                     std::string m_cidrIp;
                     bool m_cidrIpHasBeenSet;
 
                     /**
-                     * 
+                     * port or port range
                      */
                     std::string m_portRange;
                     bool m_portRangeHasBeenSet;
 
                     /**
-                     * 
+                     * Network protocol supports UDP, TCP, etc.
                      */
                     std::string m_ipProtocol;
                     bool m_ipProtocolHasBeenSet;
 
                     /**
-                     * 
+                     * Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
                      */
                     std::string m_dir;
                     bool m_dirHasBeenSet;

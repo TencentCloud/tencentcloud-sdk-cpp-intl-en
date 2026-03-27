@@ -257,15 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QUICConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPFilterPolicy 
+                     * 获取IP access limit configuration information.
+                     * @return IPFilterPolicy IP access limit configuration information.
                      * 
                      */
                     IPFilterPolicy GetIPFilterPolicy() const;
 
                     /**
-                     * 设置
-                     * @param _iPFilterPolicy 
+                     * 设置IP access limit configuration information.
+                     * @param _iPFilterPolicy IP access limit configuration information.
                      * 
                      */
                     void SetIPFilterPolicy(const IPFilterPolicy& _iPFilterPolicy);
@@ -362,7 +362,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_qUICConfigHasBeenSet;
 
                     /**
-                     * 
+                     * IP access limit configuration information.
                      */
                     IPFilterPolicy m_iPFilterPolicy;
                     bool m_iPFilterPolicyHasBeenSet;

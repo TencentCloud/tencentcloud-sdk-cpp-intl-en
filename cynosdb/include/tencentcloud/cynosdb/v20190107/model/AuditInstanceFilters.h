@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query filter conditions for audit instances
                 */
                 class AuditInstanceFilters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
+                     * @return Name Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
+                     * @param _name Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExactMatch 
+                     * 获取true indicates exact match; false indicates fuzzy match.
+                     * @return ExactMatch true indicates exact match; false indicates fuzzy match.
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置
-                     * @param _exactMatch 
+                     * 设置true indicates exact match; false indicates fuzzy match.
+                     * @param _exactMatch true indicates exact match; false indicates fuzzy match.
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExactMatchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Values 
+                     * 获取Filter value
+                     * @return Values Filter value
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置
-                     * @param _values 
+                     * 设置Filter value
+                     * @param _values Filter value
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Filter condition values. Supports InstanceId-Instance ID, InstanceName-Instance Name, ProjectId-Project ID, TagKey-Tag Key, Tag-Tag (separated by a vertical bar, e.g.: Tagkey|Tagvalue).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * true indicates exact match; false indicates fuzzy match.
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;
 
                     /**
-                     * 
+                     * Filter value
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

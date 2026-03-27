@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Audit template name, length limit: 64 characters.
+                     * @return Name Audit template name, length limit: 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Audit template name, length limit: 64 characters.
+                     * @param _name Audit template name, length limit: 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Audit template description, length limit: 256 characters.
+                     * @return Comment Audit template description, length limit: 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Audit template description, length limit: 256 characters.
+                     * @param _comment Audit template description, length limit: 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Audit template name, length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Audit template description, length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

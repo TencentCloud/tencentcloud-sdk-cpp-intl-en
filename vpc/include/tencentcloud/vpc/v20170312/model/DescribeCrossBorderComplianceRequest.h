@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LegalPersonHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LegalPersonId 
+                     * 获取(Exact match) Legal person ID number.
+                     * @return LegalPersonId (Exact match) Legal person ID number.
                      * 
                      */
                     std::string GetLegalPersonId() const;
 
                     /**
-                     * 设置
-                     * @param _legalPersonId 
+                     * 设置(Exact match) Legal person ID number.
+                     * @param _legalPersonId (Exact match) Legal person ID number.
                      * 
                      */
                     void SetLegalPersonId(const std::string& _legalPersonId);
@@ -474,7 +474,7 @@ namespace TencentCloud
                     bool m_legalPersonHasBeenSet;
 
                     /**
-                     * 
+                     * (Exact match) Legal person ID number.
                      */
                     std::string m_legalPersonId;
                     bool m_legalPersonIdHasBeenSet;

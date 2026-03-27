@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Offering Configuration Status
                 */
                 class SpecSellStatus : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Sellable Specification Unique ID
+                     * @return Id Sellable Specification Unique ID
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Sellable Specification Unique ID
+                     * @param _id Sellable Specification Unique ID
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SpecId 
+                     * 获取Instance Type ID
+                     * @return SpecId Instance Type ID
                      * 
                      */
                     uint64_t GetSpecId() const;
 
                     /**
-                     * 设置
-                     * @param _specId 
+                     * 设置Instance Type ID
+                     * @param _specId Instance Type ID
                      * 
                      */
                     void SetSpecId(const uint64_t& _specId);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool SpecIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PayModeStatus 
+                     * 获取Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+                     * @return PayModeStatus Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
                      * 
                      */
                     std::string GetPayModeStatus() const;
 
                     /**
-                     * 设置
-                     * @param _payModeStatus 
+                     * 设置Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+                     * @param _payModeStatus Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
                      * 
                      */
                     void SetPayModeStatus(const std::string& _payModeStatus);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool PayModeStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+                     * @return InstanceType Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceType 
+                     * 设置Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+                     * @param _instanceType Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MultiZonesStatus 
+                     * 获取Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+                     * @return MultiZonesStatus Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
                      * 
                      */
                     std::string GetMultiZonesStatus() const;
 
                     /**
-                     * 设置
-                     * @param _multiZonesStatus 
+                     * 设置Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+                     * @param _multiZonesStatus Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
                      * 
                      */
                     void SetMultiZonesStatus(const std::string& _multiZonesStatus);
@@ -154,15 +154,19 @@ namespace TencentCloud
                     bool MultiZonesStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Architecture 
+                     * 获取Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+                     * @return Architecture Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
                      * 
                      */
                     std::string GetArchitecture() const;
 
                     /**
-                     * 设置
-                     * @param _architecture 
+                     * 设置Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+                     * @param _architecture Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
                      * 
                      */
                     void SetArchitecture(const std::string& _architecture);
@@ -175,15 +179,15 @@ namespace TencentCloud
                     bool ArchitectureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Style 
+                     * 获取Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+                     * @return Style Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置
-                     * @param _style 
+                     * 设置Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+                     * @param _style Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -196,15 +200,15 @@ namespace TencentCloud
                     bool StyleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Version 
+                     * 获取Database Version Information
+                     * @return Version Database Version Information
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置
-                     * @param _version 
+                     * 设置Database Version Information
+                     * @param _version Database Version Information
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -217,15 +221,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ZoneStatusSet 
+                     * 获取Sellable Status Set Per AZ
+                     * @return ZoneStatusSet Sellable Status Set Per AZ
                      * 
                      */
                     std::vector<ZoneStatus> GetZoneStatusSet() const;
 
                     /**
-                     * 设置
-                     * @param _zoneStatusSet 
+                     * 设置Sellable Status Set Per AZ
+                     * @param _zoneStatusSet Sellable Status Set Per AZ
                      * 
                      */
                     void SetZoneStatusSet(const std::vector<ZoneStatus>& _zoneStatusSet);
@@ -238,15 +242,15 @@ namespace TencentCloud
                     bool ZoneStatusSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Price 
+                     * 获取Reference price for specifications. The actual price is subject to the quotation API.
+                     * @return Price Reference price for specifications. The actual price is subject to the quotation API.
                      * 
                      */
                     Price GetPrice() const;
 
                     /**
-                     * 设置
-                     * @param _price 
+                     * 设置Reference price for specifications. The actual price is subject to the quotation API.
+                     * @param _price Reference price for specifications. The actual price is subject to the quotation API.
                      * 
                      */
                     void SetPrice(const Price& _price);
@@ -259,15 +263,15 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+                     * @return Status Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+                     * @param _status Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -282,67 +286,68 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sellable Specification Unique ID
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Type ID
                      */
                     uint64_t m_specId;
                     bool m_specIdHasBeenSet;
 
                     /**
-                     * 
+                     * Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
                      */
                     std::string m_payModeStatus;
                     bool m_payModeStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
                      */
                     std::string m_multiZonesStatus;
                     bool m_multiZonesStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
                      */
                     std::string m_architecture;
                     bool m_architectureHasBeenSet;
 
                     /**
-                     * 
+                     * Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;
 
                     /**
-                     * 
+                     * Database Version Information
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * 
+                     * Sellable Status Set Per AZ
                      */
                     std::vector<ZoneStatus> m_zoneStatusSet;
                     bool m_zoneStatusSetHasBeenSet;
 
                     /**
-                     * 
+                     * Reference price for specifications. The actual price is subject to the quotation API.
                      */
                     Price m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * 
+                     * Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

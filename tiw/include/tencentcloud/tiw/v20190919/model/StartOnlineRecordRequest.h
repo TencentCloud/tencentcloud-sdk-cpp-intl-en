@@ -302,15 +302,39 @@ MIX_STREAM - Stream mixing feature
                     bool RecordControlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordMode 
+                     * 获取Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+                     * @return RecordMode Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
                      * 
                      */
                     std::string GetRecordMode() const;
 
                     /**
-                     * 设置
-                     * @param _recordMode 
+                     * 设置Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+                     * @param _recordMode Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
                      * 
                      */
                     void SetRecordMode(const std::string& _recordMode);
@@ -323,15 +347,31 @@ MIX_STREAM - Stream mixing feature
                     bool RecordModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChatGroupId 
+                     * 获取Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
+                     * @return ChatGroupId Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
                      * 
                      */
                     std::string GetChatGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _chatGroupId 
+                     * 设置Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
+                     * @param _chatGroupId Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
                      * 
                      */
                     void SetChatGroupId(const std::string& _chatGroupId);
@@ -468,13 +508,23 @@ MIX_STREAM - Stream mixing feature
                     bool m_recordControlHasBeenSet;
 
                     /**
-                     * 
+                     * Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
                      */
                     std::string m_recordMode;
                     bool m_recordModeHasBeenSet;
 
                     /**
-                     * 
+                     * Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
                      */
                     std::string m_chatGroupId;
                     bool m_chatGroupIdHasBeenSet;

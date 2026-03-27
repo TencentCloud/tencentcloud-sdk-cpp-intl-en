@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Mcu relay recording; third-party storage parameters.
                 */
                 class McuStorageParams : public AbstractModel
                 {

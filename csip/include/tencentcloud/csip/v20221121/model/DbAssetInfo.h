@@ -223,15 +223,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取vpc information
+                     * @return VpcId vpc information
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置vpc information
+                     * @param _vpcId vpc information
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -370,7 +370,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * vpc information
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

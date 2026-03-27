@@ -253,15 +253,31 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Area 
+                     * 获取Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
+                     * @return Area Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置
-                     * @param _area 
+                     * 设置Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
+                     * @param _area Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -334,7 +350,11 @@ namespace TencentCloud
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * 
+                     * Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

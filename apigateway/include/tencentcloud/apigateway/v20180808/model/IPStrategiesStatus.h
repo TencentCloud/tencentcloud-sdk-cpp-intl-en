@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Policy List
                 */
                 class IPStrategiesStatus : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Number of policies.
+                     * @return TotalCount Number of policies.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置
-                     * @param _totalCount 
+                     * 设置Number of policies.
+                     * @param _totalCount Number of policies.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StrategySet 
+                     * 获取Policy List.
+                     * @return StrategySet Policy List.
                      * 
                      */
                     std::vector<IPStrategy> GetStrategySet() const;
 
                     /**
-                     * 设置
-                     * @param _strategySet 
+                     * 设置Policy List.
+                     * @param _strategySet Policy List.
                      * 
                      */
                     void SetStrategySet(const std::vector<IPStrategy>& _strategySet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Number of policies.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Policy List.
                      */
                     std::vector<IPStrategy> m_strategySet;
                     bool m_strategySetHasBeenSet;

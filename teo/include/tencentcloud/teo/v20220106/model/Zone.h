@@ -378,15 +378,39 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Area 
+                     * 获取Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
+                     * @return Area Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置
-                     * @param _area 
+                     * 设置Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
+                     * @param _area Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -493,7 +517,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_modifiedOnHasBeenSet;
 
                     /**
-                     * 
+                     * Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

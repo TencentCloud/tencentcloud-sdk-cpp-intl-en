@@ -194,15 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixSuccessCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FixMethod 
+                     * 获取Repair method: 0 component update or patch installation, 1 disable service
+                     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
                      * 
                      */
                     uint64_t GetFixMethod() const;
 
                     /**
-                     * 设置
-                     * @param _fixMethod 
+                     * 设置Repair method: 0 component update or patch installation, 1 disable service
+                     * @param _fixMethod Repair method: 0 component update or patch installation, 1 disable service
                      * 
                      */
                     void SetFixMethod(const uint64_t& _fixMethod);
@@ -258,7 +258,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fixSuccessCntHasBeenSet;
 
                     /**
-                     * 
+                     * Repair method: 0 component update or patch installation, 1 disable service
                      */
                     uint64_t m_fixMethod;
                     bool m_fixMethodHasBeenSet;

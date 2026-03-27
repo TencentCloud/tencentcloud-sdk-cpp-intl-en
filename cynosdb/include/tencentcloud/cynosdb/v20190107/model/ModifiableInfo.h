@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return IsModifiable 
+                     * 获取Whether the parameter is modifiable. 1: Yes 0: No
+                     * @return IsModifiable Whether the parameter is modifiable. 1: Yes 0: No
                      * 
                      */
                     int64_t GetIsModifiable() const;
 
                     /**
-                     * 设置
-                     * @param _isModifiable 
+                     * 设置Whether the parameter is modifiable. 1: Yes 0: No
+                     * @param _isModifiable Whether the parameter is modifiable. 1: Yes 0: No
                      * 
                      */
                     void SetIsModifiable(const int64_t& _isModifiable);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether the parameter is modifiable. 1: Yes 0: No
                      */
                     int64_t m_isModifiable;
                     bool m_isModifiableHasBeenSet;

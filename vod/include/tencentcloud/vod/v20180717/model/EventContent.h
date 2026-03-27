@@ -758,15 +758,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ComplexAdaptiveDynamicStreamingCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProcessMediaByMPSCompleteEvent 
+                     * 获取MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+                     * @return ProcessMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
                      * 
                      */
                     ProcessMediaByMPS GetProcessMediaByMPSCompleteEvent() const;
 
                     /**
-                     * 设置
-                     * @param _processMediaByMPSCompleteEvent 
+                     * 设置MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+                     * @param _processMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
                      * 
                      */
                     void SetProcessMediaByMPSCompleteEvent(const ProcessMediaByMPS& _processMediaByMPSCompleteEvent);
@@ -1023,7 +1023,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_complexAdaptiveDynamicStreamingCompleteEventHasBeenSet;
 
                     /**
-                     * 
+                     * MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
                      */
                     ProcessMediaByMPS m_processMediaByMPSCompleteEvent;
                     bool m_processMediaByMPSCompleteEventHasBeenSet;

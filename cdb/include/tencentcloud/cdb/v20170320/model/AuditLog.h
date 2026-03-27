@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SqlType 
+                     * 获取SQL Type.
+                     * @return SqlType SQL Type.
                      * 
                      */
                     std::string GetSqlType() const;
 
                     /**
-                     * 设置
-                     * @param _sqlType 
+                     * 设置SQL Type.
+                     * @param _sqlType SQL Type.
                      * 
                      */
                     void SetSqlType(const std::string& _sqlType);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBName 
+                     * 获取Database Name.
+                     * @return DBName Database Name.
                      * 
                      */
                     std::string GetDBName() const;
 
                     /**
-                     * 设置
-                     * @param _dBName 
+                     * 设置Database Name.
+                     * @param _dBName Database Name.
                      * 
                      */
                     void SetDBName(const std::string& _dBName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DBNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sql 
+                     * 获取SQL Statement.
+                     * @return Sql SQL Statement.
                      * 
                      */
                     std::string GetSql() const;
 
                     /**
-                     * 设置
-                     * @param _sql 
+                     * 设置SQL Statement.
+                     * @param _sql SQL Statement.
                      * 
                      */
                     void SetSql(const std::string& _sql);
@@ -489,7 +489,7 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * SQL Type.
                      */
                     std::string m_sqlType;
                     bool m_sqlTypeHasBeenSet;
@@ -501,13 +501,13 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * 
+                     * Database Name.
                      */
                     std::string m_dBName;
                     bool m_dBNameHasBeenSet;
 
                     /**
-                     * 
+                     * SQL Statement.
                      */
                     std::string m_sql;
                     bool m_sqlHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Instance Information
                 */
                 class RollbackInstanceInfo : public AbstractModel
                 {

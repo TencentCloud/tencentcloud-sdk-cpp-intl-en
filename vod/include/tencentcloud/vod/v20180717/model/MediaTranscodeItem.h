@@ -353,15 +353,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyRightWatermarkText 
+                     * 获取Copyright information.
+                     * @return CopyRightWatermarkText Copyright information.
                      * 
                      */
                     std::string GetCopyRightWatermarkText() const;
 
                     /**
-                     * 设置
-                     * @param _copyRightWatermarkText 
+                     * 设置Copyright information.
+                     * @param _copyRightWatermarkText Copyright information.
                      * 
                      */
                     void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
@@ -461,7 +461,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_digitalWatermarkTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Copyright information.
                      */
                     std::string m_copyRightWatermarkText;
                     bool m_copyRightWatermarkTextHasBeenSet;

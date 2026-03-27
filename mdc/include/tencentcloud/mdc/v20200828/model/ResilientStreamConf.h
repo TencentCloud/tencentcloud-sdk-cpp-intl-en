@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Delayed broadcast smooth stream delivery configuration.
                 */
                 class ResilientStreamConf : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Enable 
+                     * 获取Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
+                     * @return Enable Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
                      * 
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置
-                     * @param _enable 
+                     * 设置Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
+                     * @param _enable Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
                      * 
                      */
                     void SetEnable(const bool& _enable);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BufferTime 
+                     * 获取Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
+                     * @return BufferTime Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
                      * 
                      */
                     uint64_t GetBufferTime() const;
 
                     /**
-                     * 设置
-                     * @param _bufferTime 
+                     * 设置Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
+                     * @param _bufferTime Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
                      * 
                      */
                     void SetBufferTime(const uint64_t& _bufferTime);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * 
+                     * Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
                      */
                     uint64_t m_bufferTime;
                     bool m_bufferTimeHasBeenSet;

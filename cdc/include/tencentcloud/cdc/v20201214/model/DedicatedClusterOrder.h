@@ -504,15 +504,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CheckStatus 
+                     * 获取Acceptance Status
+                     * @return CheckStatus Acceptance Status
                      * 
                      */
                     std::string GetCheckStatus() const;
 
                     /**
-                     * 设置
-                     * @param _checkStatus 
+                     * 设置Acceptance Status
+                     * @param _checkStatus Acceptance Status
                      * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
@@ -525,15 +525,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeliverExpectTime 
+                     * 获取Expected Delivery Time
+                     * @return DeliverExpectTime Expected Delivery Time
                      * 
                      */
                     std::string GetDeliverExpectTime() const;
 
                     /**
-                     * 设置
-                     * @param _deliverExpectTime 
+                     * 设置Expected Delivery Time
+                     * @param _deliverExpectTime Expected Delivery Time
                      * 
                      */
                     void SetDeliverExpectTime(const std::string& _deliverExpectTime);
@@ -546,15 +546,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool DeliverExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeliverFinishTime 
+                     * 获取Actual Delivery Completion Time
+                     * @return DeliverFinishTime Actual Delivery Completion Time
                      * 
                      */
                     std::string GetDeliverFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _deliverFinishTime 
+                     * 设置Actual Delivery Completion Time
+                     * @param _deliverFinishTime Actual Delivery Completion Time
                      * 
                      */
                     void SetDeliverFinishTime(const std::string& _deliverFinishTime);
@@ -567,15 +567,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool DeliverFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CheckExpectTime 
+                     * 获取Expected Acceptance Time
+                     * @return CheckExpectTime Expected Acceptance Time
                      * 
                      */
                     std::string GetCheckExpectTime() const;
 
                     /**
-                     * 设置
-                     * @param _checkExpectTime 
+                     * 设置Expected Acceptance Time
+                     * @param _checkExpectTime Expected Acceptance Time
                      * 
                      */
                     void SetCheckExpectTime(const std::string& _checkExpectTime);
@@ -588,15 +588,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CheckFinishTime 
+                     * 获取Actual Acceptance Completion Time
+                     * @return CheckFinishTime Actual Acceptance Completion Time
                      * 
                      */
                     std::string GetCheckFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _checkFinishTime 
+                     * 设置Actual Acceptance Completion Time
+                     * @param _checkFinishTime Actual Acceptance Completion Time
                      * 
                      */
                     void SetCheckFinishTime(const std::string& _checkFinishTime);
@@ -609,15 +609,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderSLA 
+                     * 获取Order SLA
+                     * @return OrderSLA Order SLA
                      * 
                      */
                     std::string GetOrderSLA() const;
 
                     /**
-                     * 设置
-                     * @param _orderSLA 
+                     * 设置Order SLA
+                     * @param _orderSLA Order SLA
                      * 
                      */
                     void SetOrderSLA(const std::string& _orderSLA);
@@ -630,15 +630,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool OrderSLAHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderPayPlan 
+                     * 获取Order Payment Plan
+                     * @return OrderPayPlan Order Payment Plan
                      * 
                      */
                     std::string GetOrderPayPlan() const;
 
                     /**
-                     * 设置
-                     * @param _orderPayPlan 
+                     * 设置Order Payment Plan
+                     * @param _orderPayPlan Order Payment Plan
                      * 
                      */
                     void SetOrderPayPlan(const std::string& _orderPayPlan);
@@ -782,43 +782,43 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Acceptance Status
                      */
                     std::string m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Expected Delivery Time
                      */
                     std::string m_deliverExpectTime;
                     bool m_deliverExpectTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Actual Delivery Completion Time
                      */
                     std::string m_deliverFinishTime;
                     bool m_deliverFinishTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Expected Acceptance Time
                      */
                     std::string m_checkExpectTime;
                     bool m_checkExpectTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Actual Acceptance Completion Time
                      */
                     std::string m_checkFinishTime;
                     bool m_checkFinishTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Order SLA
                      */
                     std::string m_orderSLA;
                     bool m_orderSLAHasBeenSet;
 
                     /**
-                     * 
+                     * Order Payment Plan
                      */
                     std::string m_orderPayPlan;
                     bool m_orderPayPlanHasBeenSet;

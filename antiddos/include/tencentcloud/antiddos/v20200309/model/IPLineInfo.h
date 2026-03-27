@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Eip 
+                     * 获取line IP
+                     * @return Eip line IP
                      * 
                      */
                     std::string GetEip() const;
 
                     /**
-                     * 设置
-                     * @param _eip 
+                     * 设置line IP
+                     * @param _eip line IP
                      * 
                      */
                     void SetEip(const std::string& _eip);
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * line IP
                      */
                     std::string m_eip;
                     bool m_eipHasBeenSet;

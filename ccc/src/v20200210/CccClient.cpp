@@ -2940,6 +2940,56 @@ CccClient::ModifyStaffPasswordOutcomeCallable CccClient::ModifyStaffPasswordCall
     return prom->get_future();
 }
 
+CccClient::PauseAutoCalloutTaskOutcome CccClient::PauseAutoCalloutTask(const PauseAutoCalloutTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "PauseAutoCalloutTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PauseAutoCalloutTaskResponse rsp = PauseAutoCalloutTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PauseAutoCalloutTaskOutcome(rsp);
+        else
+            return PauseAutoCalloutTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return PauseAutoCalloutTaskOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::PauseAutoCalloutTaskAsync(const PauseAutoCalloutTaskRequest& request, const PauseAutoCalloutTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const PauseAutoCalloutTaskRequest&;
+    using Resp = PauseAutoCalloutTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "PauseAutoCalloutTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CccClient::PauseAutoCalloutTaskOutcomeCallable CccClient::PauseAutoCalloutTaskCallable(const PauseAutoCalloutTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<PauseAutoCalloutTaskOutcome>>();
+    PauseAutoCalloutTaskAsync(
+    request,
+    [prom](
+        const CccClient*,
+        const PauseAutoCalloutTaskRequest&,
+        PauseAutoCalloutTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CccClient::PausePredictiveDialingCampaignOutcome CccClient::PausePredictiveDialingCampaign(const PausePredictiveDialingCampaignRequest &request)
 {
     auto outcome = MakeRequest(request, "PausePredictiveDialingCampaign");
@@ -2982,6 +3032,56 @@ CccClient::PausePredictiveDialingCampaignOutcomeCallable CccClient::PausePredict
         const CccClient*,
         const PausePredictiveDialingCampaignRequest&,
         PausePredictiveDialingCampaignOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CccClient::PlaySoundCallOutcome CccClient::PlaySoundCall(const PlaySoundCallRequest &request)
+{
+    auto outcome = MakeRequest(request, "PlaySoundCall");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PlaySoundCallResponse rsp = PlaySoundCallResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PlaySoundCallOutcome(rsp);
+        else
+            return PlaySoundCallOutcome(o.GetError());
+    }
+    else
+    {
+        return PlaySoundCallOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::PlaySoundCallAsync(const PlaySoundCallRequest& request, const PlaySoundCallAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const PlaySoundCallRequest&;
+    using Resp = PlaySoundCallResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "PlaySoundCall", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CccClient::PlaySoundCallOutcomeCallable CccClient::PlaySoundCallCallable(const PlaySoundCallRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<PlaySoundCallOutcome>>();
+    PlaySoundCallAsync(
+    request,
+    [prom](
+        const CccClient*,
+        const PlaySoundCallRequest&,
+        PlaySoundCallOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3082,6 +3182,56 @@ CccClient::RestoreMemberOnlineOutcomeCallable CccClient::RestoreMemberOnlineCall
         const CccClient*,
         const RestoreMemberOnlineRequest&,
         RestoreMemberOnlineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CccClient::ResumeAutoCalloutTaskOutcome CccClient::ResumeAutoCalloutTask(const ResumeAutoCalloutTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResumeAutoCalloutTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResumeAutoCalloutTaskResponse rsp = ResumeAutoCalloutTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResumeAutoCalloutTaskOutcome(rsp);
+        else
+            return ResumeAutoCalloutTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ResumeAutoCalloutTaskOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::ResumeAutoCalloutTaskAsync(const ResumeAutoCalloutTaskRequest& request, const ResumeAutoCalloutTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResumeAutoCalloutTaskRequest&;
+    using Resp = ResumeAutoCalloutTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResumeAutoCalloutTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CccClient::ResumeAutoCalloutTaskOutcomeCallable CccClient::ResumeAutoCalloutTaskCallable(const ResumeAutoCalloutTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResumeAutoCalloutTaskOutcome>>();
+    ResumeAutoCalloutTaskAsync(
+    request,
+    [prom](
+        const CccClient*,
+        const ResumeAutoCalloutTaskRequest&,
+        ResumeAutoCalloutTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

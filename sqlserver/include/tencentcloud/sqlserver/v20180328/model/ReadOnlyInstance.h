@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Read-Only Replica Instance
                 */
                 class ReadOnlyInstance : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
+                     * @return InstanceId Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
+                     * @param _instanceId Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Read-Only Replica Name
+                     * @return Name Read-Only Replica Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Read-Only Replica Name
+                     * @param _name Read-Only Replica Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uid 
+                     * 获取Read-Only Replica Unique UID
+                     * @return Uid Read-Only Replica Unique UID
                      * 
                      */
                     std::string GetUid() const;
 
                     /**
-                     * 设置
-                     * @param _uid 
+                     * 设置Read-Only Replica Unique UID
+                     * @param _uid Read-Only Replica Unique UID
                      * 
                      */
                     void SetUid(const std::string& _uid);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProjectId 
+                     * 获取Read-Only Replica Project ID
+                     * @return ProjectId Read-Only Replica Project ID
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置
-                     * @param _projectId 
+                     * 设置Read-Only Replica Project ID
+                     * @param _projectId Read-Only Replica Project ID
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
+                     * @return Status Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
+                     * @param _status Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Read-Only Replica Creation Time
+                     * @return CreateTime Read-Only Replica Creation Time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Read-Only Replica Creation Time
+                     * @param _createTime Read-Only Replica Creation Time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取Read-Only Replica Update Time
+                     * @return UpdateTime Read-Only Replica Update Time
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置Read-Only Replica Update Time
+                     * @param _updateTime Read-Only Replica Update Time
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Read-Only Replica Memory Size (Unit: GB)
+                     * @return Memory Read-Only Replica Memory Size (Unit: GB)
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Read-Only Replica Memory Size (Unit: GB)
+                     * @param _memory Read-Only Replica Memory Size (Unit: GB)
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Storage 
+                     * 获取Read-Only Replica Storage Space Size (Unit: GB)
+                     * @return Storage Read-Only Replica Storage Space Size (Unit: GB)
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置
-                     * @param _storage 
+                     * 设置Read-Only Replica Storage Space Size (Unit: GB)
+                     * @param _storage Read-Only Replica Storage Space Size (Unit: GB)
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Read-Only Replica cpu Core Count
+                     * @return Cpu Read-Only Replica cpu Core Count
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置Read-Only Replica cpu Core Count
+                     * @param _cpu Read-Only Replica cpu Core Count
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Version 
+                     * 获取Read-Only Replica Codenames
+                     * @return Version Read-Only Replica Codenames
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置
-                     * @param _version 
+                     * 设置Read-Only Replica Codenames
+                     * @param _version Read-Only Replica Codenames
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Host Machine Code
+                     * @return Type Host Machine Code
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Host Machine Code
+                     * @param _type Host Machine Code
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Model 
+                     * 获取Read-Only Replica Mode, 2-Standalone
+                     * @return Model Read-Only Replica Mode, 2-Standalone
                      * 
                      */
                     int64_t GetModel() const;
 
                     /**
-                     * 设置
-                     * @param _model 
+                     * 设置Read-Only Replica Mode, 2-Standalone
+                     * @param _model Read-Only Replica Mode, 2-Standalone
                      * 
                      */
                     void SetModel(const int64_t& _model);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool ModelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PayMode 
+                     * 获取Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
+                     * @return PayMode Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置
-                     * @param _payMode 
+                     * 设置Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
+                     * @param _payMode Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Weight 
+                     * 获取Read-Only Replica Weight
+                     * @return Weight Read-Only Replica Weight
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置
-                     * @param _weight 
+                     * 设置Read-Only Replica Weight
+                     * @param _weight Read-Only Replica Weight
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DelayTime 
+                     * 获取Read-Only Replica Latency Time (Unit: seconds)
+                     * @return DelayTime Read-Only Replica Latency Time (Unit: seconds)
                      * 
                      */
                     std::string GetDelayTime() const;
 
                     /**
-                     * 设置
-                     * @param _delayTime 
+                     * 设置Read-Only Replica Latency Time (Unit: seconds)
+                     * @param _delayTime Read-Only Replica Latency Time (Unit: seconds)
                      * 
                      */
                     void SetDelayTime(const std::string& _delayTime);
@@ -383,15 +383,127 @@ namespace TencentCloud
                     bool DelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SynStatus 
+                     * 获取Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
+                     * @return SynStatus Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
                      * 
                      */
                     std::string GetSynStatus() const;
 
                     /**
-                     * 设置
-                     * @param _synStatus 
+                     * 设置Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
+                     * @param _synStatus Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
                      * 
                      */
                     void SetSynStatus(const std::string& _synStatus);
@@ -404,15 +516,15 @@ namespace TencentCloud
                     bool SynStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DatabaseDifference 
+                     * 获取Databases not synchronized between the read-only replica and the primary instance
+                     * @return DatabaseDifference Databases not synchronized between the read-only replica and the primary instance
                      * 
                      */
                     std::string GetDatabaseDifference() const;
 
                     /**
-                     * 设置
-                     * @param _databaseDifference 
+                     * 设置Databases not synchronized between the read-only replica and the primary instance
+                     * @param _databaseDifference Databases not synchronized between the read-only replica and the primary instance
                      * 
                      */
                     void SetDatabaseDifference(const std::string& _databaseDifference);
@@ -425,15 +537,15 @@ namespace TencentCloud
                     bool DatabaseDifferenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccountDifference 
+                     * 获取Accounts not synchronized between the read-only replica and the primary instance
+                     * @return AccountDifference Accounts not synchronized between the read-only replica and the primary instance
                      * 
                      */
                     std::string GetAccountDifference() const;
 
                     /**
-                     * 设置
-                     * @param _accountDifference 
+                     * 设置Accounts not synchronized between the read-only replica and the primary instance
+                     * @param _accountDifference Accounts not synchronized between the read-only replica and the primary instance
                      * 
                      */
                     void SetAccountDifference(const std::string& _accountDifference);
@@ -446,15 +558,15 @@ namespace TencentCloud
                     bool AccountDifferenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Read-Only Replica Billing Start Time
+                     * @return StartTime Read-Only Replica Billing Start Time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Read-Only Replica Billing Start Time
+                     * @param _startTime Read-Only Replica Billing Start Time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -467,15 +579,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取Read-Only Replica Billing End Time
+                     * @return EndTime Read-Only Replica Billing End Time
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置Read-Only Replica Billing End Time
+                     * @param _endTime Read-Only Replica Billing End Time
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -488,15 +600,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsolateTime 
+                     * 获取Read-Only Replica Isolation Time
+                     * @return IsolateTime Read-Only Replica Isolation Time
                      * 
                      */
                     std::string GetIsolateTime() const;
 
                     /**
-                     * 设置
-                     * @param _isolateTime 
+                     * 设置Read-Only Replica Isolation Time
+                     * @param _isolateTime Read-Only Replica Isolation Time
                      * 
                      */
                     void SetIsolateTime(const std::string& _isolateTime);
@@ -509,15 +621,15 @@ namespace TencentCloud
                     bool IsolateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegionId 
+                     * 获取Read-Only Replica Region Location
+                     * @return RegionId Read-Only Replica Region Location
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置
-                     * @param _regionId 
+                     * 设置Read-Only Replica Region Location
+                     * @param _regionId Read-Only Replica Region Location
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -530,15 +642,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ZoneId 
+                     * 获取Read-Only Replica AZ Location
+                     * @return ZoneId Read-Only Replica AZ Location
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置
-                     * @param _zoneId 
+                     * 设置Read-Only Replica AZ Location
+                     * @param _zoneId Read-Only Replica AZ Location
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -553,145 +665,173 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Unique UID
                      */
                     std::string m_uid;
                     bool m_uidHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Project ID
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Creation Time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Update Time
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Memory Size (Unit: GB)
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Storage Space Size (Unit: GB)
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica cpu Core Count
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Codenames
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * 
+                     * Host Machine Code
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Mode, 2-Standalone
                      */
                     int64_t m_model;
                     bool m_modelHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Weight
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Latency Time (Unit: seconds)
                      */
                     std::string m_delayTime;
                     bool m_delayTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
                      */
                     std::string m_synStatus;
                     bool m_synStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Databases not synchronized between the read-only replica and the primary instance
                      */
                     std::string m_databaseDifference;
                     bool m_databaseDifferenceHasBeenSet;
 
                     /**
-                     * 
+                     * Accounts not synchronized between the read-only replica and the primary instance
                      */
                     std::string m_accountDifference;
                     bool m_accountDifferenceHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Billing Start Time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Billing End Time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Isolation Time
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica Region Location
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Replica AZ Location
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;

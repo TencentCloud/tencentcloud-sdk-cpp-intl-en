@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * API Binding Policy List
                 */
                 class ApiEnvironmentStrategyStatus : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取The quantity of rate limiting policies bound to APIs.
+                     * @return TotalCount The quantity of rate limiting policies bound to APIs.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置
-                     * @param _totalCount 
+                     * 设置The quantity of rate limiting policies bound to APIs.
+                     * @param _totalCount The quantity of rate limiting policies bound to APIs.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiEnvironmentStrategySet 
+                     * 获取API Binding Rate Limiting Policy List.
+                     * @return ApiEnvironmentStrategySet API Binding Rate Limiting Policy List.
                      * 
                      */
                     std::vector<ApiEnvironmentStrategy> GetApiEnvironmentStrategySet() const;
 
                     /**
-                     * 设置
-                     * @param _apiEnvironmentStrategySet 
+                     * 设置API Binding Rate Limiting Policy List.
+                     * @param _apiEnvironmentStrategySet API Binding Rate Limiting Policy List.
                      * 
                      */
                     void SetApiEnvironmentStrategySet(const std::vector<ApiEnvironmentStrategy>& _apiEnvironmentStrategySet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The quantity of rate limiting policies bound to APIs.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * API Binding Rate Limiting Policy List.
                      */
                     std::vector<ApiEnvironmentStrategy> m_apiEnvironmentStrategySet;
                     bool m_apiEnvironmentStrategySetHasBeenSet;

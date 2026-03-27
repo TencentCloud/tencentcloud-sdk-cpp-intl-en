@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool QuuidsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FixMethod 
+                     * 获取Repair method: 0 component update or patch installation, 1 disable service
+                     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
                      * 
                      */
                     uint64_t GetFixMethod() const;
 
                     /**
-                     * 设置
-                     * @param _fixMethod 
+                     * 设置Repair method: 0 component update or patch installation, 1 disable service
+                     * @param _fixMethod Repair method: 0 component update or patch installation, 1 disable service
                      * 
                      */
                     void SetFixMethod(const uint64_t& _fixMethod);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_quuidsHasBeenSet;
 
                     /**
-                     * 
+                     * Repair method: 0 component update or patch installation, 1 disable service
                      */
                     uint64_t m_fixMethod;
                     bool m_fixMethodHasBeenSet;

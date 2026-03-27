@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio track configuration list.
                 */
                 class InputTracks : public AbstractModel
                 {

@@ -309,7 +309,7 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -324,7 +324,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -344,7 +344,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -359,7 +359,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -549,7 +549,7 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund

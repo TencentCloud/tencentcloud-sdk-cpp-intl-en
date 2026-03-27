@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Task Record
                 */
                 class RestoreTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TargetInstanceId 
+                     * 获取Target Instance ID
+                     * @return TargetInstanceId Target Instance ID
                      * 
                      */
                     std::string GetTargetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _targetInstanceId 
+                     * 设置Target Instance ID
+                     * @param _targetInstanceId Target Instance ID
                      * 
                      */
                     void SetTargetInstanceId(const std::string& _targetInstanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TargetInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetInstanceName 
+                     * 获取Target Instance Name
+                     * @return TargetInstanceName Target Instance Name
                      * 
                      */
                     std::string GetTargetInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _targetInstanceName 
+                     * 设置Target Instance Name
+                     * @param _targetInstanceName Target Instance Name
                      * 
                      */
                     void SetTargetInstanceName(const std::string& _targetInstanceName);
@@ -89,15 +89,63 @@ namespace TencentCloud
                     bool TargetInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetInstanceStatus 
+                     * 获取Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+                     * @return TargetInstanceStatus Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
                      * 
                      */
                     int64_t GetTargetInstanceStatus() const;
 
                     /**
-                     * 设置
-                     * @param _targetInstanceStatus 
+                     * 设置Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+                     * @param _targetInstanceStatus Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
                      * 
                      */
                     void SetTargetInstanceStatus(const int64_t& _targetInstanceStatus);
@@ -110,15 +158,15 @@ namespace TencentCloud
                     bool TargetInstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetRegion 
+                     * 获取Target Instance Region
+                     * @return TargetRegion Target Instance Region
                      * 
                      */
                     std::string GetTargetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _targetRegion 
+                     * 设置Target Instance Region
+                     * @param _targetRegion Target Instance Region
                      * 
                      */
                     void SetTargetRegion(const std::string& _targetRegion);
@@ -131,15 +179,15 @@ namespace TencentCloud
                     bool TargetRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RestoreId 
+                     * 获取Rollback Record ID
+                     * @return RestoreId Rollback Record ID
                      * 
                      */
                     int64_t GetRestoreId() const;
 
                     /**
-                     * 设置
-                     * @param _restoreId 
+                     * 设置Rollback Record ID
+                     * @param _restoreId Rollback Record ID
                      * 
                      */
                     void SetRestoreId(const int64_t& _restoreId);
@@ -152,15 +200,15 @@ namespace TencentCloud
                     bool RestoreIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetType 
+                     * 获取Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+                     * @return TargetType Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
                      * 
                      */
                     int64_t GetTargetType() const;
 
                     /**
-                     * 设置
-                     * @param _targetType 
+                     * 设置Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+                     * @param _targetType Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
                      * 
                      */
                     void SetTargetType(const int64_t& _targetType);
@@ -173,15 +221,15 @@ namespace TencentCloud
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RestoreType 
+                     * 获取Rollback method: 0 - by point-in-time, 1 - by backup set
+                     * @return RestoreType Rollback method: 0 - by point-in-time, 1 - by backup set
                      * 
                      */
                     int64_t GetRestoreType() const;
 
                     /**
-                     * 设置
-                     * @param _restoreType 
+                     * 设置Rollback method: 0 - by point-in-time, 1 - by backup set
+                     * @param _restoreType Rollback method: 0 - by point-in-time, 1 - by backup set
                      * 
                      */
                     void SetRestoreType(const int64_t& _restoreType);
@@ -194,15 +242,15 @@ namespace TencentCloud
                     bool RestoreTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RestoreTime 
+                     * 获取Rollback Target Time
+                     * @return RestoreTime Rollback Target Time
                      * 
                      */
                     std::string GetRestoreTime() const;
 
                     /**
-                     * 设置
-                     * @param _restoreTime 
+                     * 设置Rollback Target Time
+                     * @param _restoreTime Rollback Target Time
                      * 
                      */
                     void SetRestoreTime(const std::string& _restoreTime);
@@ -215,15 +263,15 @@ namespace TencentCloud
                     bool RestoreTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Start Time
+                     * @return StartTime Start Time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Start Time
+                     * @param _startTime Start Time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -236,15 +284,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取End Time
+                     * @return EndTime End Time
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置End Time
+                     * @param _endTime End Time
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -257,15 +305,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+                     * @return Status Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+                     * @param _status Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -278,15 +326,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FlowId 
+                     * 获取Rollback Asynchronous Task ID
+                     * @return FlowId Rollback Asynchronous Task ID
                      * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
-                     * 设置
-                     * @param _flowId 
+                     * 设置Rollback Asynchronous Task ID
+                     * @param _flowId Rollback Asynchronous Task ID
                      * 
                      */
                     void SetFlowId(const int64_t& _flowId);
@@ -301,73 +349,85 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Target Instance ID
                      */
                     std::string m_targetInstanceId;
                     bool m_targetInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Target Instance Name
                      */
                     std::string m_targetInstanceName;
                     bool m_targetInstanceNameHasBeenSet;
 
                     /**
-                     * 
+                     * Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
                      */
                     int64_t m_targetInstanceStatus;
                     bool m_targetInstanceStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Target Instance Region
                      */
                     std::string m_targetRegion;
                     bool m_targetRegionHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Record ID
                      */
                     int64_t m_restoreId;
                     bool m_restoreIdHasBeenSet;
 
                     /**
-                     * 
+                     * Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
                      */
                     int64_t m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback method: 0 - by point-in-time, 1 - by backup set
                      */
                     int64_t m_restoreType;
                     bool m_restoreTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Target Time
                      */
                     std::string m_restoreTime;
                     bool m_restoreTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Start Time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * End Time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Asynchronous Task ID
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

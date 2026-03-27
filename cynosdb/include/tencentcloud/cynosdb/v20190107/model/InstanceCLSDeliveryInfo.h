@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance Log Delivery Information
                 */
                 class InstanceCLSDeliveryInfo : public AbstractModel
                 {

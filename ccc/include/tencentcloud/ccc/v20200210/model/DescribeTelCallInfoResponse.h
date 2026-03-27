@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of minutes consumed by outbound package.
-                     * @return TelCallOutCount Number of minutes consumed by outbound package.
+                     * 获取<P>Minutes consumed by outbound package</p>.
+                     * @return TelCallOutCount <P>Minutes consumed by outbound package</p>.
                      * 
                      */
                     int64_t GetTelCallOutCount() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TelCallOutCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by inbound package.
-                     * @return TelCallInCount Number of minutes consumed by inbound package.
+                     * 获取<P>Minutes consumed by inbound package</p>.
+                     * @return TelCallInCount <P>Minutes consumed by inbound package</p>.
                      * 
                      */
                     int64_t GetTelCallInCount() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool TelCallInCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of agent usage statistics.
-                     * @return SeatUsedCount Number of agent usage statistics.
+                     * 获取<P>Number of agent usage statistics</p>.
+                     * @return SeatUsedCount <P>Number of agent usage statistics</p>.
                      * 
                      */
                     int64_t GetSeatUsedCount() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SeatUsedCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by audio package.
-                     * @return VoipCallInCount Number of minutes consumed by audio package.
+                     * 获取<P>Minutes consumed by audio package</p>.
+                     * @return VoipCallInCount <P>Minutes consumed by audio package</p>.
                      * @deprecated
                      */
                     int64_t GetVoipCallInCount() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VoipCallInCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by audio package.
-                     * @return VOIPCallInCount Number of minutes consumed by audio package.
+                     * 获取<P>Minutes consumed by audio package</p>.
+                     * @return VOIPCallInCount <P>Minutes consumed by audio package</p>.
                      * 
                      */
                     int64_t GetVOIPCallInCount() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool VOIPCallInCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by offline speech-to-text package.
-                     * @return AsrOfflineCount Number of minutes consumed by offline speech-to-text package.
+                     * 获取<P>Minutes consumed by offline speech-to-text package</p>.
+                     * @return AsrOfflineCount <P>Minutes consumed by offline speech-to-text package</p>.
                      * 
                      */
                     int64_t GetAsrOfflineCount() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool AsrOfflineCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by real-time speech-to-text package.
-                     * @return AsrRealtimeCount Number of minutes consumed by real-time speech-to-text package.
+                     * 获取<P>Minutes consumed by real-time speech-to-text package</p>.
+                     * @return AsrRealtimeCount <P>Minutes consumed by real-time speech-to-text package</p>.
                      * 
                      */
                     int64_t GetAsrRealtimeCount() const;
@@ -144,43 +144,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of minutes consumed by outbound package.
+                     * <P>Minutes consumed by outbound package</p>.
                      */
                     int64_t m_telCallOutCount;
                     bool m_telCallOutCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by inbound package.
+                     * <P>Minutes consumed by inbound package</p>.
                      */
                     int64_t m_telCallInCount;
                     bool m_telCallInCountHasBeenSet;
 
                     /**
-                     * Number of agent usage statistics.
+                     * <P>Number of agent usage statistics</p>.
                      */
                     int64_t m_seatUsedCount;
                     bool m_seatUsedCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by audio package.
+                     * <P>Minutes consumed by audio package</p>.
                      */
                     int64_t m_voipCallInCount;
                     bool m_voipCallInCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by audio package.
+                     * <P>Minutes consumed by audio package</p>.
                      */
                     int64_t m_vOIPCallInCount;
                     bool m_vOIPCallInCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by offline speech-to-text package.
+                     * <P>Minutes consumed by offline speech-to-text package</p>.
                      */
                     int64_t m_asrOfflineCount;
                     bool m_asrOfflineCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by real-time speech-to-text package.
+                     * <P>Minutes consumed by real-time speech-to-text package</p>.
                      */
                     int64_t m_asrRealtimeCount;
                     bool m_asrRealtimeCountHasBeenSet;

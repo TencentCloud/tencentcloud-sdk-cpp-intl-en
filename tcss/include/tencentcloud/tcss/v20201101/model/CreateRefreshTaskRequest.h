@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ClusterIDs 
+                     * 获取Specify the cluster list. If empty, it indicates synchronization of all clusters.
+                     * @return ClusterIDs Specify the cluster list. If empty, it indicates synchronization of all clusters.
                      * 
                      */
                     std::vector<std::string> GetClusterIDs() const;
 
                     /**
-                     * 设置
-                     * @param _clusterIDs 
+                     * 设置Specify the cluster list. If empty, it indicates synchronization of all clusters.
+                     * @param _clusterIDs Specify the cluster list. If empty, it indicates synchronization of all clusters.
                      * 
                      */
                     void SetClusterIDs(const std::vector<std::string>& _clusterIDs);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIDsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsSyncListOnly 
+                     * 获取Whether to synchronize only the list
+                     * @return IsSyncListOnly Whether to synchronize only the list
                      * 
                      */
                     bool GetIsSyncListOnly() const;
 
                     /**
-                     * 设置
-                     * @param _isSyncListOnly 
+                     * 设置Whether to synchronize only the list
+                     * @param _isSyncListOnly Whether to synchronize only the list
                      * 
                      */
                     void SetIsSyncListOnly(const bool& _isSyncListOnly);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Specify the cluster list. If empty, it indicates synchronization of all clusters.
                      */
                     std::vector<std::string> m_clusterIDs;
                     bool m_clusterIDsHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to synchronize only the list
                      */
                     bool m_isSyncListOnly;
                     bool m_isSyncListOnlyHasBeenSet;

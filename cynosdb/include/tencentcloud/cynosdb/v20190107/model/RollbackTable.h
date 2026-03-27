@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Database and Tables
                 */
                 class RollbackTable : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Database 
+                     * 获取Database Name
+                     * @return Database Database Name
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _database 
+                     * 设置Database Name
+                     * @param _database Database Name
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tables 
+                     * 获取Database Table
+                     * @return Tables Database Table
                      * 
                      */
                     std::vector<RollbackTableInfo> GetTables() const;
 
                     /**
-                     * 设置
-                     * @param _tables 
+                     * 设置Database Table
+                     * @param _tables Database Table
                      * 
                      */
                     void SetTables(const std::vector<RollbackTableInfo>& _tables);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Database Name
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * 
+                     * Database Table
                      */
                     std::vector<RollbackTableInfo> m_tables;
                     bool m_tablesHasBeenSet;

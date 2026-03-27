@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+                     * 获取<p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+                     * @return SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+                     * 设置<p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+                     * @param _sdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the session id of the call.
-                     * @return SessionId Specifies the session id of the call.
+                     * 获取<P>Call session id</p>.
+                     * @return SessionId <P>Call session id</p>.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Specifies the session id of the call.
-                     * @param _sessionId Specifies the session id of the call.
+                     * 设置<P>Call session id</p>.
+                     * @param _sessionId <P>Call session id</p>.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
-                     * @return StartTimestamp Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+                     * 获取<p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+                     * @return StartTimestamp <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
                      * 
                      */
                     int64_t GetStartTimestamp() const;
 
                     /**
-                     * 设置Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
-                     * @param _startTimestamp Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+                     * 设置<p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+                     * @param _startTimestamp <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
                      * 
                      */
                     void SetStartTimestamp(const int64_t& _startTimestamp);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StartTimestampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
-                     * @return EndTimestamp End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+                     * 获取<p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
+                     * @return EndTimestamp <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
                      * 
                      */
                     int64_t GetEndTimestamp() const;
 
                     /**
-                     * 设置End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
-                     * @param _endTimestamp End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+                     * 设置<p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
+                     * @param _endTimestamp <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
                      * 
                      */
                     void SetEndTimestamp(const int64_t& _endTimestamp);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+                     * <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Specifies the session id of the call.
+                     * <P>Call session id</p>.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+                     * <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
                      */
                     int64_t m_startTimestamp;
                     bool m_startTimestampHasBeenSet;
 
                     /**
-                     * End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+                     * <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
                      */
                     int64_t m_endTimestamp;
                     bool m_endTimestampHasBeenSet;

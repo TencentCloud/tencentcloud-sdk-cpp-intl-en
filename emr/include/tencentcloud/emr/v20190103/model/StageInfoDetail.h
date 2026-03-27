@@ -378,15 +378,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeConsumingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取id, for frontend
+                     * @return Id id, for frontend
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置id, for frontend
+                     * @param _id id, for frontend
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -495,7 +495,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeConsumingHasBeenSet;
 
                     /**
-                     * 
+                     * id, for frontend
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;

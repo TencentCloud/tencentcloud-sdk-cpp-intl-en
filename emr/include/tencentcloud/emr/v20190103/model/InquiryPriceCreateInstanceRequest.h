@@ -400,15 +400,15 @@ namespace TencentCloud
                     bool ExternalServiceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VersionID 
+                     * 获取The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+                     * @return VersionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
                      * 
                      */
                     uint64_t GetVersionID() const;
 
                     /**
-                     * 设置
-                     * @param _versionID 
+                     * 设置The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+                     * @param _versionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
                      * 
                      */
                     void SetVersionID(const uint64_t& _versionID);
@@ -543,7 +543,7 @@ namespace TencentCloud
                     bool m_externalServiceHasBeenSet;
 
                     /**
-                     * 
+                     * The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
                      */
                     uint64_t m_versionID;
                     bool m_versionIDHasBeenSet;

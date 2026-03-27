@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * rabbitmq Prometheus Information
                 */
                 class PrometheusEndpointInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PrometheusEndpointStatus 
+                     * 获取Status of the Prometheus switch
+                     * @return PrometheusEndpointStatus Status of the Prometheus switch
                      * 
                      */
                     std::string GetPrometheusEndpointStatus() const;
 
                     /**
-                     * 设置
-                     * @param _prometheusEndpointStatus 
+                     * 设置Status of the Prometheus switch
+                     * @param _prometheusEndpointStatus Status of the Prometheus switch
                      * 
                      */
                     void SetPrometheusEndpointStatus(const std::string& _prometheusEndpointStatus);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PrometheusEndpointStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcPrometheusEndpoint 
+                     * 获取prometheus Information
+                     * @return VpcPrometheusEndpoint prometheus Information
                      * 
                      */
                     std::vector<std::string> GetVpcPrometheusEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _vpcPrometheusEndpoint 
+                     * 设置prometheus Information
+                     * @param _vpcPrometheusEndpoint prometheus Information
                      * 
                      */
                     void SetVpcPrometheusEndpoint(const std::vector<std::string>& _vpcPrometheusEndpoint);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VpcPrometheusEndpointHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodePrometheusAddress 
+                     * 获取Node Information
+                     * @return NodePrometheusAddress Node Information
                      * 
                      */
                     std::vector<std::string> GetNodePrometheusAddress() const;
 
                     /**
-                     * 设置
-                     * @param _nodePrometheusAddress 
+                     * 设置Node Information
+                     * @param _nodePrometheusAddress Node Information
                      * 
                      */
                     void SetNodePrometheusAddress(const std::vector<std::string>& _nodePrometheusAddress);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NodePrometheusAddressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcEndpointInfo 
+                     * 获取vpc information
+                     * @return VpcEndpointInfo vpc information
                      * 
                      */
                     VpcEndpointInfo GetVpcEndpointInfo() const;
 
                     /**
-                     * 设置
-                     * @param _vpcEndpointInfo 
+                     * 设置vpc information
+                     * @param _vpcEndpointInfo vpc information
                      * 
                      */
                     void SetVpcEndpointInfo(const VpcEndpointInfo& _vpcEndpointInfo);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Status of the Prometheus switch
                      */
                     std::string m_prometheusEndpointStatus;
                     bool m_prometheusEndpointStatusHasBeenSet;
 
                     /**
-                     * 
+                     * prometheus Information
                      */
                     std::vector<std::string> m_vpcPrometheusEndpoint;
                     bool m_vpcPrometheusEndpointHasBeenSet;
 
                     /**
-                     * 
+                     * Node Information
                      */
                     std::vector<std::string> m_nodePrometheusAddress;
                     bool m_nodePrometheusAddressHasBeenSet;
 
                     /**
-                     * 
+                     * vpc information
                      */
                     VpcEndpointInfo m_vpcEndpointInfo;
                     bool m_vpcEndpointInfoHasBeenSet;

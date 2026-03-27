@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Database Subscription Publication Relationship Collection to be Modified
                 */
                 class ModifyDataBaseTuple : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DatabaseTuple 
+                     * 获取Subscription Relationship to be Modified
+                     * @return DatabaseTuple Subscription Relationship to be Modified
                      * 
                      */
                     DatabaseTuple GetDatabaseTuple() const;
 
                     /**
-                     * 设置
-                     * @param _databaseTuple 
+                     * 设置Subscription Relationship to be Modified
+                     * @param _databaseTuple Subscription Relationship to be Modified
                      * 
                      */
                     void SetDatabaseTuple(const DatabaseTuple& _databaseTuple);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DatabaseTupleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NewDatabaseTuple 
+                     * 获取Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+                     * @return NewDatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
                      * 
                      */
                     DatabaseTuple GetNewDatabaseTuple() const;
 
                     /**
-                     * 设置
-                     * @param _newDatabaseTuple 
+                     * 设置Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+                     * @param _newDatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
                      * 
                      */
                     void SetNewDatabaseTuple(const DatabaseTuple& _newDatabaseTuple);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NewDatabaseTupleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteDataBasesTuple 
+                     * 获取Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
+                     * @return DeleteDataBasesTuple Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
                      * 
                      */
                     bool GetDeleteDataBasesTuple() const;
 
                     /**
-                     * 设置
-                     * @param _deleteDataBasesTuple 
+                     * 设置Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
+                     * @param _deleteDataBasesTuple Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
                      * 
                      */
                     void SetDeleteDataBasesTuple(const bool& _deleteDataBasesTuple);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Subscription Relationship to be Modified
                      */
                     DatabaseTuple m_databaseTuple;
                     bool m_databaseTupleHasBeenSet;
 
                     /**
-                     * 
+                     * Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
                      */
                     DatabaseTuple m_newDatabaseTuple;
                     bool m_newDatabaseTupleHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
                      */
                     bool m_deleteDataBasesTuple;
                     bool m_deleteDataBasesTupleHasBeenSet;

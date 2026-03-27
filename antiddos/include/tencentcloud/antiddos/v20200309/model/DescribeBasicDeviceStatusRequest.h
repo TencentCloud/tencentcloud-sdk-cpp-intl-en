@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool IpListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IdList 
+                     * 获取Pass id for domain-bound resources
+                     * @return IdList Pass id for domain-bound resources
                      * 
                      */
                     std::vector<std::string> GetIdList() const;
 
                     /**
-                     * 设置
-                     * @param _idList 
+                     * 设置Pass id for domain-bound resources
+                     * @param _idList Pass id for domain-bound resources
                      * 
                      */
                     void SetIdList(const std::vector<std::string>& _idList);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IdListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterRegion 
+                     * 获取region name
+                     * @return FilterRegion region name
                      * 
                      */
                     uint64_t GetFilterRegion() const;
 
                     /**
-                     * 设置
-                     * @param _filterRegion 
+                     * 设置region name
+                     * @param _filterRegion region name
                      * 
                      */
                     void SetFilterRegion(const uint64_t& _filterRegion);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool FilterRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CnameWafIdList 
+                     * 获取CNAME WAF resource
+                     * @return CnameWafIdList CNAME WAF resource
                      * 
                      */
                     std::vector<std::string> GetCnameWafIdList() const;
 
                     /**
-                     * 设置
-                     * @param _cnameWafIdList 
+                     * 设置CNAME WAF resource
+                     * @param _cnameWafIdList CNAME WAF resource
                      * 
                      */
                     void SetCnameWafIdList(const std::vector<std::string>& _cnameWafIdList);
@@ -135,19 +135,19 @@ namespace TencentCloud
                     bool m_ipListHasBeenSet;
 
                     /**
-                     * 
+                     * Pass id for domain-bound resources
                      */
                     std::vector<std::string> m_idList;
                     bool m_idListHasBeenSet;
 
                     /**
-                     * 
+                     * region name
                      */
                     uint64_t m_filterRegion;
                     bool m_filterRegionHasBeenSet;
 
                     /**
-                     * 
+                     * CNAME WAF resource
                      */
                     std::vector<std::string> m_cnameWafIdList;
                     bool m_cnameWafIdListHasBeenSet;

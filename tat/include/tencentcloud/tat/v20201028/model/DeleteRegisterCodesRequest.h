@@ -45,10 +45,10 @@ namespace TencentCloud
                     /**
                      * 获取Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
                      * @return RegisterCodeIds Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
                      * 
                      */
                     std::vector<std::string> GetRegisterCodeIds() const;
@@ -56,10 +56,10 @@ Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/134
                     /**
                      * 设置Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
                      * @param _registerCodeIds Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
                      * 
                      */
                     void SetRegisterCodeIds(const std::vector<std::string>& _registerCodeIds);
@@ -76,7 +76,7 @@ Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/134
                     /**
                      * Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
                      */
                     std::vector<std::string> m_registerCodeIds;
                     bool m_registerCodeIdsHasBeenSet;

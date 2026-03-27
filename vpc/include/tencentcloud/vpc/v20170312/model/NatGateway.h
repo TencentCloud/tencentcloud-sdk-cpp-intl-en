@@ -511,15 +511,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NatProductVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartScheduleMode 
+                     * 获取Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
+                     * @return SmartScheduleMode Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
                      * 
                      */
                     bool GetSmartScheduleMode() const;
 
                     /**
-                     * 设置
-                     * @param _smartScheduleMode 
+                     * 设置Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
+                     * @param _smartScheduleMode Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
                      * 
                      */
                     void SetSmartScheduleMode(const bool& _smartScheduleMode);
@@ -664,7 +664,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_natProductVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
                      */
                     bool m_smartScheduleMode;
                     bool m_smartScheduleModeHasBeenSet;

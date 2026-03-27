@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Ad insertion channel configuration information.
                 */
                 class SSAIChannelInfo : public AbstractModel
                 {

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audit instance details
                 */
                 class AuditInstanceInfo : public AbstractModel
                 {

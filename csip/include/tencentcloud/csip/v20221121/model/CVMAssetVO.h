@@ -248,15 +248,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取vpc id
+                     * @return VpcId vpc id
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置vpc id
+                     * @param _vpcId vpc id
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -1377,7 +1377,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * 
+                     * vpc id
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

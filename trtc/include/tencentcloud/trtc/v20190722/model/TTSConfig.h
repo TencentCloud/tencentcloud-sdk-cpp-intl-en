@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * TTS-related configurations
                 */
                 class TTSConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取Voice ID
+                     * @return VoiceId Voice ID
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置Voice ID
+                     * @param _voiceId Voice ID
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Voice ID
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

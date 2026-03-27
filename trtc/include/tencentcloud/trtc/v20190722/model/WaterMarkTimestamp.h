@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Timestamp watermark data structure
                 */
                 class WaterMarkTimestamp : public AbstractModel
                 {

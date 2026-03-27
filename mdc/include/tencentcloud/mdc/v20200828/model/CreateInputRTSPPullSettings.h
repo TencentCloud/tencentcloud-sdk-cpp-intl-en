@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Created input RTSP pull stream configuration.
                 */
                 class CreateInputRTSPPullSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceAddresses 
+                     * 获取The origin server address for the RTSP origin server. There can be only one.
+                     * @return SourceAddresses The origin server address for the RTSP origin server. There can be only one.
                      * 
                      */
                     std::vector<RTSPPullSourceAddress> GetSourceAddresses() const;
 
                     /**
-                     * 设置
-                     * @param _sourceAddresses 
+                     * 设置The origin server address for the RTSP origin server. There can be only one.
+                     * @param _sourceAddresses The origin server address for the RTSP origin server. There can be only one.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<RTSPPullSourceAddress>& _sourceAddresses);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The origin server address for the RTSP origin server. There can be only one.
                      */
                     std::vector<RTSPPullSourceAddress> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;

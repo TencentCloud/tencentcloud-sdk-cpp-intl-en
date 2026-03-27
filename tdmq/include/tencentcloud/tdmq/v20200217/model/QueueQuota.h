@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * queue usage quota information
                 */
                 class QueueQuota : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxQueue 
+                     * 获取Maximum number of creatable queues
+                     * @return MaxQueue Maximum number of creatable queues
                      * 
                      */
                     int64_t GetMaxQueue() const;
 
                     /**
-                     * 设置
-                     * @param _maxQueue 
+                     * 设置Maximum number of creatable queues
+                     * @param _maxQueue Maximum number of creatable queues
                      * 
                      */
                     void SetMaxQueue(const int64_t& _maxQueue);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Maximum number of creatable queues
                      */
                     int64_t m_maxQueue;
                     bool m_maxQueueHasBeenSet;

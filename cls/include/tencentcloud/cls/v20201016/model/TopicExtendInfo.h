@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Log topic extended information
                 */
                 class TopicExtendInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AnonymousAccess 
+                     * 获取Log topic authentication-free configuration information
+                     * @return AnonymousAccess Log topic authentication-free configuration information
                      * 
                      */
                     AnonymousInfo GetAnonymousAccess() const;
 
                     /**
-                     * 设置
-                     * @param _anonymousAccess 
+                     * 设置Log topic authentication-free configuration information
+                     * @param _anonymousAccess Log topic authentication-free configuration information
                      * 
                      */
                     void SetAnonymousAccess(const AnonymousInfo& _anonymousAccess);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Log topic authentication-free configuration information
                      */
                     AnonymousInfo m_anonymousAccess;
                     bool m_anonymousAccessHasBeenSet;

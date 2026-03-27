@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取 
-                     * @return Relegation  
+                     * 获取Deployment mechanism: 1 for enabled, 0 for disabled
+                     * @return Relegation Deployment mechanism: 1 for enabled, 0 for disabled
                      * 
                      */
                     uint64_t GetRelegation() const;
 
                     /**
-                     * 设置 
-                     * @param _relegation  
+                     * 设置Deployment mechanism: 1 for enabled, 0 for disabled
+                     * @param _relegation Deployment mechanism: 1 for enabled, 0 for disabled
                      * 
                      */
                     void SetRelegation(const uint64_t& _relegation);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     *  
+                     * Deployment mechanism: 1 for enabled, 0 for disabled
                      */
                     uint64_t m_relegation;
                     bool m_relegationHasBeenSet;

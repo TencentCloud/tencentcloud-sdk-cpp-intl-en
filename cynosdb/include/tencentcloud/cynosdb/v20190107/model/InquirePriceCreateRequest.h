@@ -127,15 +127,23 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取device type:common, exclusive
-                     * @return DeviceType device type:common, exclusive
+                     * 获取Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
+                     * @return DeviceType Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置device type:common, exclusive
-                     * @param _deviceType device type:common, exclusive
+                     * 设置Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
+                     * @param _deviceType Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -300,7 +308,9 @@ namespace TencentCloud
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * device type:common, exclusive
+                     * Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

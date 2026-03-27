@@ -163,15 +163,31 @@ namespace TencentCloud
                     bool RepeatTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Transparency 
+                     * 获取Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
+                     * @return Transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
                      * 
                      */
                     int64_t GetTransparency() const;
 
                     /**
-                     * 设置
-                     * @param _transparency 
+                     * 设置Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
+                     * @param _transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
                      * 
                      */
                     void SetTransparency(const int64_t& _transparency);
@@ -218,7 +234,11 @@ namespace TencentCloud
                     bool m_repeatTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
                      */
                     int64_t m_transparency;
                     bool m_transparencyHasBeenSet;

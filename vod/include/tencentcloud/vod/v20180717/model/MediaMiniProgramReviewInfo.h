@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * Mini Program Audio-Video Review Information
                 */
                 class MediaMiniProgramReviewInfo : public AbstractModel
                 {

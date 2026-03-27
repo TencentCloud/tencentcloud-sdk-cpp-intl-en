@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * RabbitMQ Cluster Specifications Information
                 */
                 class RabbitMQClusterSpecInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SpecName 
+                     * 获取Cluster Specification Name
+                     * @return SpecName Cluster Specification Name
                      * 
                      */
                     std::string GetSpecName() const;
 
                     /**
-                     * 设置
-                     * @param _specName 
+                     * 设置Cluster Specification Name
+                     * @param _specName Cluster Specification Name
                      * 
                      */
                     void SetSpecName(const std::string& _specName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SpecNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodeCount 
+                     * 获取Number of Nodes
+                     * @return NodeCount Number of Nodes
                      * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
-                     * 设置
-                     * @param _nodeCount 
+                     * 设置Number of Nodes
+                     * @param _nodeCount Number of Nodes
                      * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NodeCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxTps 
+                     * 获取Peak tps
+                     * @return MaxTps Peak tps
                      * 
                      */
                     uint64_t GetMaxTps() const;
 
                     /**
-                     * 设置
-                     * @param _maxTps 
+                     * 设置Peak tps
+                     * @param _maxTps Peak tps
                      * 
                      */
                     void SetMaxTps(const uint64_t& _maxTps);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MaxTpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxBandWidth 
+                     * 获取Peak bandwidth Unit: mbps
+                     * @return MaxBandWidth Peak bandwidth Unit: mbps
                      * 
                      */
                     uint64_t GetMaxBandWidth() const;
 
                     /**
-                     * 设置
-                     * @param _maxBandWidth 
+                     * 设置Peak bandwidth Unit: mbps
+                     * @param _maxBandWidth Peak bandwidth Unit: mbps
                      * 
                      */
                     void SetMaxBandWidth(const uint64_t& _maxBandWidth);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MaxBandWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxStorage 
+                     * 获取Storage capacity Unit: GB
+                     * @return MaxStorage Storage capacity Unit: GB
                      * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
-                     * 设置
-                     * @param _maxStorage 
+                     * 设置Storage capacity Unit: GB
+                     * @param _maxStorage Storage capacity Unit: GB
                      * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MaxStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicNetworkTps 
+                     * 获取public network bandwidth tps. Unit: Mbps
+                     * @return PublicNetworkTps public network bandwidth tps. Unit: Mbps
                      * 
                      */
                     uint64_t GetPublicNetworkTps() const;
 
                     /**
-                     * 设置
-                     * @param _publicNetworkTps 
+                     * 设置public network bandwidth tps. Unit: Mbps
+                     * @param _publicNetworkTps public network bandwidth tps. Unit: Mbps
                      * 
                      */
                     void SetPublicNetworkTps(const uint64_t& _publicNetworkTps);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Cluster Specification Name
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
 
                     /**
-                     * 
+                     * Number of Nodes
                      */
                     uint64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;
 
                     /**
-                     * 
+                     * Peak tps
                      */
                     uint64_t m_maxTps;
                     bool m_maxTpsHasBeenSet;
 
                     /**
-                     * 
+                     * Peak bandwidth Unit: mbps
                      */
                     uint64_t m_maxBandWidth;
                     bool m_maxBandWidthHasBeenSet;
 
                     /**
-                     * 
+                     * Storage capacity Unit: GB
                      */
                     uint64_t m_maxStorage;
                     bool m_maxStorageHasBeenSet;
 
                     /**
-                     * 
+                     * public network bandwidth tps. Unit: Mbps
                      */
                     uint64_t m_publicNetworkTps;
                     bool m_publicNetworkTpsHasBeenSet;

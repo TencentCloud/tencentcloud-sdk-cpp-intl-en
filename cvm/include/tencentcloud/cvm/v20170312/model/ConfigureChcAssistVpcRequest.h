@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool DeploySecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChcDeployExtraConfig 
+                     * 获取Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
+                     * @return ChcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
                      * 
                      */
                     ChcDeployExtraConfig GetChcDeployExtraConfig() const;
 
                     /**
-                     * 设置
-                     * @param _chcDeployExtraConfig 
+                     * 设置Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
+                     * @param _chcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
                      * 
                      */
                     void SetChcDeployExtraConfig(const ChcDeployExtraConfig& _chcDeployExtraConfig);
@@ -203,7 +203,7 @@ namespace TencentCloud
                     bool m_deploySecurityGroupIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
                      */
                     ChcDeployExtraConfig m_chcDeployExtraConfig;
                     bool m_chcDeployExtraConfigHasBeenSet;

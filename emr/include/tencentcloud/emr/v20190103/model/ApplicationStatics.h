@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SumMemorySecondsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SumVCoreSeconds 
+                     * 获取Total VCore Seconds
+                     * @return SumVCoreSeconds Total VCore Seconds
                      * 
                      */
                     int64_t GetSumVCoreSeconds() const;
 
                     /**
-                     * 设置
-                     * @param _sumVCoreSeconds 
+                     * 设置Total VCore Seconds
+                     * @param _sumVCoreSeconds Total VCore Seconds
                      * 
                      */
                     void SetSumVCoreSeconds(const int64_t& _sumVCoreSeconds);
@@ -241,7 +241,7 @@ namespace TencentCloud
                     bool m_sumMemorySecondsHasBeenSet;
 
                     /**
-                     * 
+                     * Total VCore Seconds
                      */
                     int64_t m_sumVCoreSeconds;
                     bool m_sumVCoreSecondsHasBeenSet;

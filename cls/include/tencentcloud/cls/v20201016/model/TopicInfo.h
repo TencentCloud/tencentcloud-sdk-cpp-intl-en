@@ -463,15 +463,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsWebTrackingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Extends 
+                     * 获取Log topic extended information
+                     * @return Extends Log topic extended information
                      * 
                      */
                     TopicExtendInfo GetExtends() const;
 
                     /**
-                     * 设置
-                     * @param _extends 
+                     * 设置Log topic extended information
+                     * @param _extends Log topic extended information
                      * 
                      */
                     void SetExtends(const TopicExtendInfo& _extends);
@@ -603,7 +603,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isWebTrackingHasBeenSet;
 
                     /**
-                     * 
+                     * Log topic extended information
                      */
                     TopicExtendInfo m_extends;
                     bool m_extendsHasBeenSet;

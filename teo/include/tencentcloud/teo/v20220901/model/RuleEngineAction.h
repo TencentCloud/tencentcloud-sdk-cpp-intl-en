@@ -648,15 +648,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ForceRedirectHTTPSParametersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginPullProtocolParameters 
+                     * 获取Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+                     * @return OriginPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
                      * 
                      */
                     OriginPullProtocolParameters GetOriginPullProtocolParameters() const;
 
                     /**
-                     * 设置
-                     * @param _originPullProtocolParameters 
+                     * 设置Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+                     * @param _originPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
                      * 
                      */
                     void SetOriginPullProtocolParameters(const OriginPullProtocolParameters& _originPullProtocolParameters);
@@ -1300,7 +1300,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_forceRedirectHTTPSParametersHasBeenSet;
 
                     /**
-                     * 
+                     * Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
                      */
                     OriginPullProtocolParameters m_originPullProtocolParameters;
                     bool m_originPullProtocolParametersHasBeenSet;

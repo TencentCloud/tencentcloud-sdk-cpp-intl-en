@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DataEngineConfigCommandHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UseLakeFs 
+                     * 获取Whether to use managed storage as result storage
+                     * @return UseLakeFs Whether to use managed storage as result storage
                      * 
                      */
                     bool GetUseLakeFs() const;
 
                     /**
-                     * 设置
-                     * @param _useLakeFs 
+                     * 设置Whether to use managed storage as result storage
+                     * @param _useLakeFs Whether to use managed storage as result storage
                      * 
                      */
                     void SetUseLakeFs(const bool& _useLakeFs);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UseLakeFsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CustomResultPath 
+                     * 获取User-defined Result Storage Path
+                     * @return CustomResultPath User-defined Result Storage Path
                      * 
                      */
                     std::string GetCustomResultPath() const;
 
                     /**
-                     * 设置
-                     * @param _customResultPath 
+                     * 设置User-defined Result Storage Path
+                     * @param _customResultPath User-defined Result Storage Path
                      * 
                      */
                     void SetCustomResultPath(const std::string& _customResultPath);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_dataEngineConfigCommandHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to use managed storage as result storage
                      */
                     bool m_useLakeFs;
                     bool m_useLakeFsHasBeenSet;
 
                     /**
-                     * 
+                     * User-defined Result Storage Path
                      */
                     std::string m_customResultPath;
                     bool m_customResultPathHasBeenSet;

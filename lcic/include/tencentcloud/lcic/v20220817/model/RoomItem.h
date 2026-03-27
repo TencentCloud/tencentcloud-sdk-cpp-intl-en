@@ -380,15 +380,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool EnableDirectControlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InteractionMode 
+                     * 获取Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+                     * @return InteractionMode Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
                      * 
                      */
                     int64_t GetInteractionMode() const;
 
                     /**
-                     * 设置
-                     * @param _interactionMode 
+                     * 设置Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+                     * @param _interactionMode Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
                      * 
                      */
                     void SetInteractionMode(const int64_t& _interactionMode);
@@ -401,15 +401,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool InteractionModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoOrientation 
+                     * 获取Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+                     * @return VideoOrientation Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
                      * 
                      */
                     int64_t GetVideoOrientation() const;
 
                     /**
-                     * 设置
-                     * @param _videoOrientation 
+                     * 设置Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+                     * @param _videoOrientation Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
                      * 
                      */
                     void SetVideoOrientation(const int64_t& _videoOrientation);
@@ -422,15 +422,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool VideoOrientationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsGradingRequiredPostClass 
+                     * 获取Enable post-class evaluation. 0: Disable (default) 1: Enable
+                     * @return IsGradingRequiredPostClass Enable post-class evaluation. 0: Disable (default) 1: Enable
                      * 
                      */
                     int64_t GetIsGradingRequiredPostClass() const;
 
                     /**
-                     * 设置
-                     * @param _isGradingRequiredPostClass 
+                     * 设置Enable post-class evaluation. 0: Disable (default) 1: Enable
+                     * @param _isGradingRequiredPostClass Enable post-class evaluation. 0: Disable (default) 1: Enable
                      * 
                      */
                     void SetIsGradingRequiredPostClass(const int64_t& _isGradingRequiredPostClass);
@@ -464,15 +464,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RoomTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndDelayTime 
+                     * 获取Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+                     * @return EndDelayTime Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
                      * 
                      */
                     int64_t GetEndDelayTime() const;
 
                     /**
-                     * 设置
-                     * @param _endDelayTime 
+                     * 设置Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+                     * @param _endDelayTime Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
                      * 
                      */
                     void SetEndDelayTime(const int64_t& _endDelayTime);
@@ -485,15 +485,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool EndDelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LiveType 
+                     * 获取Live Streaming Type: 0: Regular (default) 1: Simulated Live
+                     * @return LiveType Live Streaming Type: 0: Regular (default) 1: Simulated Live
                      * 
                      */
                     uint64_t GetLiveType() const;
 
                     /**
-                     * 设置
-                     * @param _liveType 
+                     * 设置Live Streaming Type: 0: Regular (default) 1: Simulated Live
+                     * @param _liveType Live Streaming Type: 0: Regular (default) 1: Simulated Live
                      * 
                      */
                     void SetLiveType(const uint64_t& _liveType);
@@ -506,15 +506,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool LiveTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordLiveUrl 
+                     * 获取Simulated Live Playback Link
+                     * @return RecordLiveUrl Simulated Live Playback Link
                      * 
                      */
                     std::string GetRecordLiveUrl() const;
 
                     /**
-                     * 设置
-                     * @param _recordLiveUrl 
+                     * 设置Simulated Live Playback Link
+                     * @param _recordLiveUrl Simulated Live Playback Link
                      * 
                      */
                     void SetRecordLiveUrl(const std::string& _recordLiveUrl);
@@ -527,15 +527,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RecordLiveUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableAutoStart 
+                     * 获取Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+                     * @return EnableAutoStart Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
                      * 
                      */
                     uint64_t GetEnableAutoStart() const;
 
                     /**
-                     * 设置
-                     * @param _enableAutoStart 
+                     * 设置Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+                     * @param _enableAutoStart Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
                      * 
                      */
                     void SetEnableAutoStart(const uint64_t& _enableAutoStart);
@@ -548,15 +548,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool EnableAutoStartHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordBackground 
+                     * 获取Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+                     * @return RecordBackground Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
                      * 
                      */
                     std::string GetRecordBackground() const;
 
                     /**
-                     * 设置
-                     * @param _recordBackground 
+                     * 设置Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+                     * @param _recordBackground Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
                      * 
                      */
                     void SetRecordBackground(const std::string& _recordBackground);
@@ -569,15 +569,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RecordBackgroundHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordScene 
+                     * 获取Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+                     * @return RecordScene Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
                      * 
                      */
                     std::string GetRecordScene() const;
 
                     /**
-                     * 设置
-                     * @param _recordScene 
+                     * 设置Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+                     * @param _recordScene Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
                      * 
                      */
                     void SetRecordScene(const std::string& _recordScene);
@@ -590,15 +590,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RecordSceneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordLang 
+                     * 获取Recording custom language. This parameter is valid only when recordlayout=9.
+                     * @return RecordLang Recording custom language. This parameter is valid only when recordlayout=9.
                      * 
                      */
                     std::string GetRecordLang() const;
 
                     /**
-                     * 设置
-                     * @param _recordLang 
+                     * 设置Recording custom language. This parameter is valid only when recordlayout=9.
+                     * @param _recordLang Recording custom language. This parameter is valid only when recordlayout=9.
                      * 
                      */
                     void SetRecordLang(const std::string& _recordLang);
@@ -706,19 +706,19 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_enableDirectControlHasBeenSet;
 
                     /**
-                     * 
+                     * Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
                      */
                     int64_t m_interactionMode;
                     bool m_interactionModeHasBeenSet;
 
                     /**
-                     * 
+                     * Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
                      */
                     int64_t m_videoOrientation;
                     bool m_videoOrientationHasBeenSet;
 
                     /**
-                     * 
+                     * Enable post-class evaluation. 0: Disable (default) 1: Enable
                      */
                     int64_t m_isGradingRequiredPostClass;
                     bool m_isGradingRequiredPostClassHasBeenSet;
@@ -730,43 +730,43 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_roomTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
                      */
                     int64_t m_endDelayTime;
                     bool m_endDelayTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Live Streaming Type: 0: Regular (default) 1: Simulated Live
                      */
                     uint64_t m_liveType;
                     bool m_liveTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Simulated Live Playback Link
                      */
                     std::string m_recordLiveUrl;
                     bool m_recordLiveUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
                      */
                     uint64_t m_enableAutoStart;
                     bool m_enableAutoStartHasBeenSet;
 
                     /**
-                     * 
+                     * Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
                      */
                     std::string m_recordBackground;
                     bool m_recordBackgroundHasBeenSet;
 
                     /**
-                     * 
+                     * Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
                      */
                     std::string m_recordScene;
                     bool m_recordSceneHasBeenSet;
 
                     /**
-                     * 
+                     * Recording custom language. This parameter is valid only when recordlayout=9.
                      */
                     std::string m_recordLang;
                     bool m_recordLangHasBeenSet;

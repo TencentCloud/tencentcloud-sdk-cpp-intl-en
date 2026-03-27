@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom Message
                 */
                 class CustomMsgContent : public AbstractModel
                 {

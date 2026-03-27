@@ -124,15 +124,15 @@ namespace TencentCloud
                     bool DstPortScopesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
+                     * @return Id Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
+                     * @param _id Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -238,7 +238,7 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
                     bool m_dstPortScopesHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

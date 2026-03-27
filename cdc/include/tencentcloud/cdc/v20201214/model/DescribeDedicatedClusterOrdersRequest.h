@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderTypes 
+                     * 获取Order Type List
+                     * @return OrderTypes Order Type List
                      * 
                      */
                     std::vector<std::string> GetOrderTypes() const;
 
                     /**
-                     * 设置
-                     * @param _orderTypes 
+                     * 设置Order Type List
+                     * @param _orderTypes Order Type List
                      * 
                      */
                     void SetOrderTypes(const std::vector<std::string>& _orderTypes);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Order Type List
                      */
                     std::vector<std::string> m_orderTypes;
                     bool m_orderTypesHasBeenSet;

@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool TopicDistributionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxQueuesPerTopic 
+                     * 获取Maximum number of queues per topic
+                     * @return MaxQueuesPerTopic Maximum number of queues per topic
                      * 
                      */
                     uint64_t GetMaxQueuesPerTopic() const;
 
                     /**
-                     * 设置
-                     * @param _maxQueuesPerTopic 
+                     * 设置Maximum number of queues per topic
+                     * @param _maxQueuesPerTopic Maximum number of queues per topic
                      * 
                      */
                     void SetMaxQueuesPerTopic(const uint64_t& _maxQueuesPerTopic);
@@ -515,7 +515,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicDistributionHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum number of queues per topic
                      */
                     uint64_t m_maxQueuesPerTopic;
                     bool m_maxQueuesPerTopicHasBeenSet;

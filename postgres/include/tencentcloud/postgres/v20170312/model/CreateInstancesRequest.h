@@ -727,15 +727,15 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                     bool KMSRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KMSClusterId 
+                     * 获取<p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
+                     * @return KMSClusterId <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
                      * 
                      */
                     std::string GetKMSClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _kMSClusterId 
+                     * 设置<p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
+                     * @param _kMSClusterId <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
                      * 
                      */
                     void SetKMSClusterId(const std::string& _kMSClusterId);
@@ -1092,7 +1092,7 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                     bool m_kMSRegionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
                      */
                     std::string m_kMSClusterId;
                     bool m_kMSClusterIdHasBeenSet;

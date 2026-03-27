@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GenerationMode 
+                     * 获取Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+                     * @return GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
                      * 
                      */
                     std::string GetGenerationMode() const;
 
                     /**
-                     * 设置
-                     * @param _generationMode 
+                     * 设置Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+                     * @param _generationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
                      * 
                      */
                     void SetGenerationMode(const std::string& _generationMode);
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * 
+                     * Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
                      */
                     std::string m_generationMode;
                     bool m_generationModeHasBeenSet;

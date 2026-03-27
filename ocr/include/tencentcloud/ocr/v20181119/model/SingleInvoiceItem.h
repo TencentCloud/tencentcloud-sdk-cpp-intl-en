@@ -613,15 +613,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TrainTicketHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MedicalOutpatientInvoice 
+                     * 获取Medical Outpatient Fee Invoice (Electronic).
+                     * @return MedicalOutpatientInvoice Medical Outpatient Fee Invoice (Electronic).
                      * 
                      */
                     MedicalInvoice GetMedicalOutpatientInvoice() const;
 
                     /**
-                     * 设置
-                     * @param _medicalOutpatientInvoice 
+                     * 设置Medical Outpatient Fee Invoice (Electronic).
+                     * @param _medicalOutpatientInvoice Medical Outpatient Fee Invoice (Electronic).
                      * 
                      */
                     void SetMedicalOutpatientInvoice(const MedicalInvoice& _medicalOutpatientInvoice);
@@ -634,15 +634,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MedicalOutpatientInvoiceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MedicalHospitalizedInvoice 
+                     * 获取Inpatient Medical Fee Invoice (Electronic).
+                     * @return MedicalHospitalizedInvoice Inpatient Medical Fee Invoice (Electronic).
                      * 
                      */
                     MedicalInvoice GetMedicalHospitalizedInvoice() const;
 
                     /**
-                     * 设置
-                     * @param _medicalHospitalizedInvoice 
+                     * 设置Inpatient Medical Fee Invoice (Electronic).
+                     * @param _medicalHospitalizedInvoice Inpatient Medical Fee Invoice (Electronic).
                      * 
                      */
                     void SetMedicalHospitalizedInvoice(const MedicalInvoice& _medicalHospitalizedInvoice);
@@ -811,13 +811,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_trainTicketHasBeenSet;
 
                     /**
-                     * 
+                     * Medical Outpatient Fee Invoice (Electronic).
                      */
                     MedicalInvoice m_medicalOutpatientInvoice;
                     bool m_medicalOutpatientInvoiceHasBeenSet;
 
                     /**
-                     * 
+                     * Inpatient Medical Fee Invoice (Electronic).
                      */
                     MedicalInvoice m_medicalHospitalizedInvoice;
                     bool m_medicalHospitalizedInvoiceHasBeenSet;

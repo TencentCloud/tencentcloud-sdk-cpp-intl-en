@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool DeploySecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChcDeployExtraConfig 
+                     * 获取dhcp option parameters required for deployment
+                     * @return ChcDeployExtraConfig dhcp option parameters required for deployment
                      * 
                      */
                     ChcDeployExtraConfig GetChcDeployExtraConfig() const;
 
                     /**
-                     * 设置
-                     * @param _chcDeployExtraConfig 
+                     * 设置dhcp option parameters required for deployment
+                     * @param _chcDeployExtraConfig dhcp option parameters required for deployment
                      * 
                      */
                     void SetChcDeployExtraConfig(const ChcDeployExtraConfig& _chcDeployExtraConfig);
@@ -149,7 +149,7 @@ namespace TencentCloud
                     bool m_deploySecurityGroupIdsHasBeenSet;
 
                     /**
-                     * 
+                     * dhcp option parameters required for deployment
                      */
                     ChcDeployExtraConfig m_chcDeployExtraConfig;
                     bool m_chcDeployExtraConfigHasBeenSet;

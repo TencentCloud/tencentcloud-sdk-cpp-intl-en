@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Created input RTMP pull stream origin server configuration.
                 */
                 class RTMPPullSourceAddress : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TcUrl 
+                     * 获取The TcUrl address of the RTMP origin server.
+                     * @return TcUrl The TcUrl address of the RTMP origin server.
                      * 
                      */
                     std::string GetTcUrl() const;
 
                     /**
-                     * 设置
-                     * @param _tcUrl 
+                     * 设置The TcUrl address of the RTMP origin server.
+                     * @param _tcUrl The TcUrl address of the RTMP origin server.
                      * 
                      */
                     void SetTcUrl(const std::string& _tcUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TcUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamKey 
+                     * 获取The StreamKey of the RTMP origin server.
+                     * @return StreamKey The StreamKey of the RTMP origin server.
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置
-                     * @param _streamKey 
+                     * 设置The StreamKey of the RTMP origin server.
+                     * @param _streamKey The StreamKey of the RTMP origin server.
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The TcUrl address of the RTMP origin server.
                      */
                     std::string m_tcUrl;
                     bool m_tcUrlHasBeenSet;
 
                     /**
-                     * 
+                     * The StreamKey of the RTMP origin server.
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

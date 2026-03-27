@@ -88,6 +88,27 @@ namespace TencentCloud
                      */
                     bool AIAgentNameHasBeenSet() const;
 
+                    /**
+                     * 获取List of intelligent agent variable names.
+                     * @return VariableNames List of intelligent agent variable names.
+                     * 
+                     */
+                    std::vector<std::string> GetVariableNames() const;
+
+                    /**
+                     * 设置List of intelligent agent variable names.
+                     * @param _variableNames List of intelligent agent variable names.
+                     * 
+                     */
+                    void SetVariableNames(const std::vector<std::string>& _variableNames);
+
+                    /**
+                     * 判断参数 VariableNames 是否已赋值
+                     * @return VariableNames 是否已赋值
+                     * 
+                     */
+                    bool VariableNamesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +122,12 @@ namespace TencentCloud
                      */
                     std::string m_aIAgentName;
                     bool m_aIAgentNameHasBeenSet;
+
+                    /**
+                     * List of intelligent agent variable names.
+                     */
+                    std::vector<std::string> m_variableNames;
+                    bool m_variableNamesHasBeenSet;
 
                 };
             }

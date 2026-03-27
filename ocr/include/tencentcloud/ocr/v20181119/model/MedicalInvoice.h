@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Medical bill information.
                 */
                 class MedicalInvoice : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Title 
+                     * 获取Invoice name.
+                     * @return Title Invoice name.
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置
-                     * @param _title 
+                     * 设置Invoice name.
+                     * @param _title Invoice name.
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Code 
+                     * 获取Invoice code.
+                     * @return Code Invoice code.
                      * 
                      */
                     std::string GetCode() const;
 
                     /**
-                     * 设置
-                     * @param _code 
+                     * 设置Invoice code.
+                     * @param _code Invoice code.
                      * 
                      */
                     void SetCode(const std::string& _code);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Number 
+                     * 获取Invoice number.
+                     * @return Number Invoice number.
                      * 
                      */
                     std::string GetNumber() const;
 
                     /**
-                     * 设置
-                     * @param _number 
+                     * 设置Invoice number.
+                     * @param _number Invoice number.
                      * 
                      */
                     void SetNumber(const std::string& _number);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Total 
+                     * 获取Total amount (in figures).
+                     * @return Total Total amount (in figures).
                      * 
                      */
                     std::string GetTotal() const;
 
                     /**
-                     * 设置
-                     * @param _total 
+                     * 设置Total amount (in figures).
+                     * @param _total Total amount (in figures).
                      * 
                      */
                     void SetTotal(const std::string& _total);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCn 
+                     * 获取Total Amount (in words).
+                     * @return TotalCn Total Amount (in words).
                      * 
                      */
                     std::string GetTotalCn() const;
 
                     /**
-                     * 设置
-                     * @param _totalCn 
+                     * 设置Total Amount (in words).
+                     * @param _totalCn Total Amount (in words).
                      * 
                      */
                     void SetTotalCn(const std::string& _totalCn);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TotalCnHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Date 
+                     * 获取Invoice date.
+                     * @return Date Invoice date.
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置
-                     * @param _date 
+                     * 设置Invoice date.
+                     * @param _date Invoice date.
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CheckCode 
+                     * 获取Verification code
+                     * @return CheckCode Verification code
                      * 
                      */
                     std::string GetCheckCode() const;
 
                     /**
-                     * 设置
-                     * @param _checkCode 
+                     * 设置Verification code
+                     * @param _checkCode Verification code
                      * 
                      */
                     void SetCheckCode(const std::string& _checkCode);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool CheckCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Place 
+                     * 获取Place of Issue.
+                     * @return Place Place of Issue.
                      * 
                      */
                     std::string GetPlace() const;
 
                     /**
-                     * 设置
-                     * @param _place 
+                     * 设置Place of Issue.
+                     * @param _place Place of Issue.
                      * 
                      */
                     void SetPlace(const std::string& _place);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool PlaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Reviewer 
+                     * 获取Reviewer.
+                     * @return Reviewer Reviewer.
                      * 
                      */
                     std::string GetReviewer() const;
 
                     /**
-                     * 设置
-                     * @param _reviewer 
+                     * 设置Reviewer.
+                     * @param _reviewer Reviewer.
                      * 
                      */
                     void SetReviewer(const std::string& _reviewer);
@@ -238,55 +238,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Invoice name.
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * 
+                     * Invoice code.
                      */
                     std::string m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * 
+                     * Invoice number.
                      */
                     std::string m_number;
                     bool m_numberHasBeenSet;
 
                     /**
-                     * 
+                     * Total amount (in figures).
                      */
                     std::string m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * 
+                     * Total Amount (in words).
                      */
                     std::string m_totalCn;
                     bool m_totalCnHasBeenSet;
 
                     /**
-                     * 
+                     * Invoice date.
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * 
+                     * Verification code
                      */
                     std::string m_checkCode;
                     bool m_checkCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Place of Issue.
                      */
                     std::string m_place;
                     bool m_placeHasBeenSet;
 
                     /**
-                     * 
+                     * Reviewer.
                      */
                     std::string m_reviewer;
                     bool m_reviewerHasBeenSet;

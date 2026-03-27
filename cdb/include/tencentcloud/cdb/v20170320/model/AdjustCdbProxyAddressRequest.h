@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool ProxyAllocationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoLoadBalance 
+                     * 获取Whether to enable adaptive load balancing. Disabled by default.
+                     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
                      * 
                      */
                     bool GetAutoLoadBalance() const;
 
                     /**
-                     * 设置
-                     * @param _autoLoadBalance 
+                     * 设置Whether to enable adaptive load balancing. Disabled by default.
+                     * @param _autoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
                      * 
                      */
                     void SetAutoLoadBalance(const bool& _autoLoadBalance);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool AutoLoadBalanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessMode 
+                     * 获取Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+                     * @return AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置
-                     * @param _accessMode 
+                     * 设置Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+                     * @param _accessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -412,13 +412,13 @@ namespace TencentCloud
                     bool m_proxyAllocationHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable adaptive load balancing. Disabled by default.
                      */
                     bool m_autoLoadBalance;
                     bool m_autoLoadBalanceHasBeenSet;
 
                     /**
-                     * 
+                     * Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;

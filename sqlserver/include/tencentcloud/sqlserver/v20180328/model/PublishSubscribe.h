@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Pub/Sub Object
                 */
                 class PublishSubscribe : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Pub/Sub ID
+                     * @return Id Pub/Sub ID
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Pub/Sub ID
+                     * @param _id Pub/Sub ID
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Pub/Sub Name
+                     * @return Name Pub/Sub Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Pub/Sub Name
+                     * @param _name Pub/Sub Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublishInstanceId 
+                     * 获取Published Instance ID
+                     * @return PublishInstanceId Published Instance ID
                      * 
                      */
                     std::string GetPublishInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _publishInstanceId 
+                     * 设置Published Instance ID
+                     * @param _publishInstanceId Published Instance ID
                      * 
                      */
                     void SetPublishInstanceId(const std::string& _publishInstanceId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PublishInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublishInstanceName 
+                     * 获取Published Instance Name
+                     * @return PublishInstanceName Published Instance Name
                      * 
                      */
                     std::string GetPublishInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _publishInstanceName 
+                     * 设置Published Instance Name
+                     * @param _publishInstanceName Published Instance Name
                      * 
                      */
                     void SetPublishInstanceName(const std::string& _publishInstanceName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PublishInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublishInstanceIp 
+                     * 获取Published Instance IP
+                     * @return PublishInstanceIp Published Instance IP
                      * 
                      */
                     std::string GetPublishInstanceIp() const;
 
                     /**
-                     * 设置
-                     * @param _publishInstanceIp 
+                     * 设置Published Instance IP
+                     * @param _publishInstanceIp Published Instance IP
                      * 
                      */
                     void SetPublishInstanceIp(const std::string& _publishInstanceIp);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool PublishInstanceIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeInstanceId 
+                     * 获取Subscription Instance ID
+                     * @return SubscribeInstanceId Subscription Instance ID
                      * 
                      */
                     std::string GetSubscribeInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeInstanceId 
+                     * 设置Subscription Instance ID
+                     * @param _subscribeInstanceId Subscription Instance ID
                      * 
                      */
                     void SetSubscribeInstanceId(const std::string& _subscribeInstanceId);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool SubscribeInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeInstanceName 
+                     * 获取Subscription Instance Name
+                     * @return SubscribeInstanceName Subscription Instance Name
                      * 
                      */
                     std::string GetSubscribeInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeInstanceName 
+                     * 设置Subscription Instance Name
+                     * @param _subscribeInstanceName Subscription Instance Name
                      * 
                      */
                     void SetSubscribeInstanceName(const std::string& _subscribeInstanceName);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool SubscribeInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeInstanceIp 
+                     * 获取Subscription Instance IP
+                     * @return SubscribeInstanceIp Subscription Instance IP
                      * 
                      */
                     std::string GetSubscribeInstanceIp() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeInstanceIp 
+                     * 设置Subscription Instance IP
+                     * @param _subscribeInstanceIp Subscription Instance IP
                      * 
                      */
                     void SetSubscribeInstanceIp(const std::string& _subscribeInstanceIp);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool SubscribeInstanceIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DatabaseTupleSet 
+                     * 获取Publication-Subscription Relationship Collection of Database
+                     * @return DatabaseTupleSet Publication-Subscription Relationship Collection of Database
                      * 
                      */
                     std::vector<DatabaseTupleStatus> GetDatabaseTupleSet() const;
 
                     /**
-                     * 设置
-                     * @param _databaseTupleSet 
+                     * 设置Publication-Subscription Relationship Collection of Database
+                     * @param _databaseTupleSet Publication-Subscription Relationship Collection of Database
                      * 
                      */
                     void SetDatabaseTupleSet(const std::vector<DatabaseTupleStatus>& _databaseTupleSet);
@@ -239,55 +239,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Pub/Sub ID
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * Pub/Sub Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Published Instance ID
                      */
                     std::string m_publishInstanceId;
                     bool m_publishInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Published Instance Name
                      */
                     std::string m_publishInstanceName;
                     bool m_publishInstanceNameHasBeenSet;
 
                     /**
-                     * 
+                     * Published Instance IP
                      */
                     std::string m_publishInstanceIp;
                     bool m_publishInstanceIpHasBeenSet;
 
                     /**
-                     * 
+                     * Subscription Instance ID
                      */
                     std::string m_subscribeInstanceId;
                     bool m_subscribeInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Subscription Instance Name
                      */
                     std::string m_subscribeInstanceName;
                     bool m_subscribeInstanceNameHasBeenSet;
 
                     /**
-                     * 
+                     * Subscription Instance IP
                      */
                     std::string m_subscribeInstanceIp;
                     bool m_subscribeInstanceIpHasBeenSet;
 
                     /**
-                     * 
+                     * Publication-Subscription Relationship Collection of Database
                      */
                     std::vector<DatabaseTupleStatus> m_databaseTupleSet;
                     bool m_databaseTupleSetHasBeenSet;

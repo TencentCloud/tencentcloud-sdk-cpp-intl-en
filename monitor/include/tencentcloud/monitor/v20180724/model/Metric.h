@@ -346,15 +346,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsLatenessMetric 
+                     * 获取Whether delay metrics
+                     * @return IsLatenessMetric Whether delay metrics
                      * 
                      */
                     int64_t GetIsLatenessMetric() const;
 
                     /**
-                     * 设置
-                     * @param _isLatenessMetric 
+                     * 设置Whether delay metrics
+                     * @param _isLatenessMetric Whether delay metrics
                      * 
                      */
                     void SetIsLatenessMetric(const int64_t& _isLatenessMetric);
@@ -453,7 +453,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_periodsHasBeenSet;
 
                     /**
-                     * 
+                     * Whether delay metrics
                      */
                     int64_t m_isLatenessMetric;
                     bool m_isLatenessMetricHasBeenSet;

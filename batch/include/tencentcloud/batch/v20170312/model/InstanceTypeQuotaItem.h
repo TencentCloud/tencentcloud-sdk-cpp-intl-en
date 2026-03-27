@@ -478,15 +478,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GpuCount 
+                     * 获取The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+                     * @return GpuCount The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
                      * 
                      */
                     double GetGpuCount() const;
 
                     /**
-                     * 设置
-                     * @param _gpuCount 
+                     * 设置The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+                     * @param _gpuCount The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
                      * 
                      */
                     void SetGpuCount(const double& _gpuCount);
@@ -644,7 +644,7 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 
+                     * The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
                      */
                     double m_gpuCount;
                     bool m_gpuCountHasBeenSet;

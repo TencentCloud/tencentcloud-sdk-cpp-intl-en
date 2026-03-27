@@ -45,10 +45,10 @@ namespace TencentCloud
                     /**
                      * 获取Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * @return InvokerIds Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     std::vector<std::string> GetInvokerIds() const;
@@ -56,10 +56,10 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
                     /**
                      * 设置Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * @param _invokerIds Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      * 
                      */
                     void SetInvokerIds(const std::vector<std::string>& _invokerIds);
@@ -118,7 +118,7 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
                     /**
                      * Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
                      */
                     std::vector<std::string> m_invokerIds;
                     bool m_invokerIdsHasBeenSet;

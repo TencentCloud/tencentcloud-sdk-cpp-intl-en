@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Swap RO group information
                 */
                 class ExchangeRoGroupInfo : public AbstractModel
                 {

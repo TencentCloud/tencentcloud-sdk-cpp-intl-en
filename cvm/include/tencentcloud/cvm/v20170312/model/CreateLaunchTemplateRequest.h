@@ -646,15 +646,15 @@ false (default): sends a normal request. after passing the check, creates an ins
                     bool DisableApiTerminationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableJumboFrame 
+                     * 获取Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * @return EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
                      * 
                      */
                     bool GetEnableJumboFrame() const;
 
                     /**
-                     * 设置
-                     * @param _enableJumboFrame 
+                     * 设置Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * @param _enableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
                      * 
                      */
                     void SetEnableJumboFrame(const bool& _enableJumboFrame);
@@ -920,7 +920,7 @@ false (default): sends a normal request. after passing the check, creates an ins
                     bool m_disableApiTerminationHasBeenSet;
 
                     /**
-                     * 
+                     * Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
                      */
                     bool m_enableJumboFrame;
                     bool m_enableJumboFrameHasBeenSet;

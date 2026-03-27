@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Render mobile mode parameters. Do not set this parameter when not rendering the mobile mode.
                 */
                 class EmulateMobileParams : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MobileDeviceType 
+                     * 获取Mobile device types,
+0: Phone
+1: Tablet
+                     * @return MobileDeviceType Mobile device types,
+0: Phone
+1: Tablet
                      * 
                      */
                     uint64_t GetMobileDeviceType() const;
 
                     /**
-                     * 设置
-                     * @param _mobileDeviceType 
+                     * 设置Mobile device types,
+0: Phone
+1: Tablet
+                     * @param _mobileDeviceType Mobile device types,
+0: Phone
+1: Tablet
                      * 
                      */
                     void SetMobileDeviceType(const uint64_t& _mobileDeviceType);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool MobileDeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScreenOrientation 
+                     * 获取Screen orientation,
+0: Portrait,
+1: Landscape
+                     * @return ScreenOrientation Screen orientation,
+0: Portrait,
+1: Landscape
                      * 
                      */
                     uint64_t GetScreenOrientation() const;
 
                     /**
-                     * 设置
-                     * @param _screenOrientation 
+                     * 设置Screen orientation,
+0: Portrait,
+1: Landscape
+                     * @param _screenOrientation Screen orientation,
+0: Portrait,
+1: Landscape
                      * 
                      */
                     void SetScreenOrientation(const uint64_t& _screenOrientation);
@@ -91,13 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Mobile device types,
+0: Phone
+1: Tablet
                      */
                     uint64_t m_mobileDeviceType;
                     bool m_mobileDeviceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Screen orientation,
+0: Portrait,
+1: Landscape
                      */
                     uint64_t m_screenOrientation;
                     bool m_screenOrientationHasBeenSet;

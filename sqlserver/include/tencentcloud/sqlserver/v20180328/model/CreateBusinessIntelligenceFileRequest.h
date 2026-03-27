@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileURL 
+                     * 获取COS_URL
+                     * @return FileURL COS_URL
                      * 
                      */
                     std::string GetFileURL() const;
 
                     /**
-                     * 设置
-                     * @param _fileURL 
+                     * 设置COS_URL
+                     * @param _fileURL COS_URL
                      * 
                      */
                     void SetFileURL(const std::string& _fileURL);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * COS_URL
                      */
                     std::string m_fileURL;
                     bool m_fileURLHasBeenSet;

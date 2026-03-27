@@ -654,15 +654,15 @@ namespace TencentCloud
                     bool RollbackTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DcnSyncMode 
+                     * 获取DCN synchronization mode: 0: asynchronous, 1: strong synchronization
+                     * @return DcnSyncMode DCN synchronization mode: 0: asynchronous, 1: strong synchronization
                      * 
                      */
                     int64_t GetDcnSyncMode() const;
 
                     /**
-                     * 设置
-                     * @param _dcnSyncMode 
+                     * 设置DCN synchronization mode: 0: asynchronous, 1: strong synchronization
+                     * @param _dcnSyncMode DCN synchronization mode: 0: asynchronous, 1: strong synchronization
                      * 
                      */
                     void SetDcnSyncMode(const int64_t& _dcnSyncMode);
@@ -851,7 +851,7 @@ namespace TencentCloud
                     bool m_rollbackTimeHasBeenSet;
 
                     /**
-                     * 
+                     * DCN synchronization mode: 0: asynchronous, 1: strong synchronization
                      */
                     int64_t m_dcnSyncMode;
                     bool m_dcnSyncModeHasBeenSet;

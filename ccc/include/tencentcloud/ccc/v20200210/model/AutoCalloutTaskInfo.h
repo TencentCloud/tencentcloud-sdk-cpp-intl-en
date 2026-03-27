@@ -182,34 +182,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
                      * @return State Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
                      * 
                      */
                     uint64_t GetState() const;
 
                     /**
                      * 设置Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
                      * @param _state Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
                      * 
                      */
                     void SetState(const uint64_t& _state);
@@ -241,6 +245,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TaskIdHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * 
+                     */
+                    int64_t GetMaxRingTimeoutSecond() const;
+
+                    /**
+                     * 设置Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * @param _maxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * 
+                     */
+                    void SetMaxRingTimeoutSecond(const int64_t& _maxRingTimeoutSecond);
+
+                    /**
+                     * 判断参数 MaxRingTimeoutSecond 是否已赋值
+                     * @return MaxRingTimeoutSecond 是否已赋值
+                     * 
+                     */
+                    bool MaxRingTimeoutSecondHasBeenSet() const;
 
                 private:
 
@@ -284,11 +309,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;
@@ -298,6 +324,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;
+
+                    /**
+                     * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     */
+                    int64_t m_maxRingTimeoutSecond;
+                    bool m_maxRingTimeoutSecondHasBeenSet;
 
                 };
             }

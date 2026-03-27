@@ -215,15 +215,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Affinity 
+                     * 获取placement group affinity
+                     * @return Affinity placement group affinity
                      * 
                      */
                     int64_t GetAffinity() const;
 
                     /**
-                     * 设置
-                     * @param _affinity 
+                     * 设置placement group affinity
+                     * @param _affinity placement group affinity
                      * 
                      */
                     void SetAffinity(const int64_t& _affinity);
@@ -306,7 +306,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * placement group affinity
                      */
                     int64_t m_affinity;
                     bool m_affinityHasBeenSet;

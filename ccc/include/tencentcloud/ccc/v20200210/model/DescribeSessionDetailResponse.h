@@ -47,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Calling number.
-                     * @return Caller Calling number.
+                     * 获取<P>Calling number</p>.
+                     * @return Caller <P>Calling number</p>.
                      * 
                      */
                     std::string GetCaller() const;
@@ -61,8 +61,8 @@ namespace TencentCloud
                     bool CallerHasBeenSet() const;
 
                     /**
-                     * 获取Called number.
-                     * @return Callee Called number.
+                     * 获取<P>Called number</p>.
+                     * @return Callee <P>Called number</p>.
                      * 
                      */
                     std::string GetCallee() const;
@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
-                     * @return CallType Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+                     * 获取<P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
+                     * @return CallType <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
                      * 
                      */
                     int64_t GetCallType() const;
@@ -89,8 +89,8 @@ namespace TencentCloud
                     bool CallTypeHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp. Unix second-level timestamp.
-                     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+                     * 获取<p>Start timestamp, Unix second-level timestamp</p>.
+                     * @return StartTimeStamp <p>Start timestamp, Unix second-level timestamp</p>.
                      * 
                      */
                     int64_t GetStartTimeStamp() const;
@@ -103,8 +103,8 @@ namespace TencentCloud
                     bool StartTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Ring timestamp. UNIX second-level timestamp.
-                     * @return RingTimestamp Ring timestamp. UNIX second-level timestamp.
+                     * 获取<p>Ring timestamp, UNIX second-level timestamp</p>.
+                     * @return RingTimestamp <p>Ring timestamp, UNIX second-level timestamp</p>.
                      * 
                      */
                     int64_t GetRingTimestamp() const;
@@ -117,8 +117,8 @@ namespace TencentCloud
                     bool RingTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Answer timestamp. UNIX second-level timestamp.
-                     * @return AcceptTimestamp Answer timestamp. UNIX second-level timestamp.
+                     * 获取<p>Answer timestamp, UNIX second-level timestamp</p>.
+                     * @return AcceptTimestamp <p>Answer timestamp, UNIX second-level timestamp</p>.
                      * 
                      */
                     int64_t GetAcceptTimestamp() const;
@@ -131,8 +131,8 @@ namespace TencentCloud
                     bool AcceptTimestampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, UNIX second-level timestamp.
-                     * @return EndedTimestamp End timestamp, UNIX second-level timestamp.
+                     * 获取<p>End timestamp, UNIX second-level timestamp</p>.
+                     * @return EndedTimestamp <p>End timestamp, UNIX second-level timestamp</p>.
                      * 
                      */
                     int64_t GetEndedTimestamp() const;
@@ -145,8 +145,8 @@ namespace TencentCloud
                     bool EndedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Queue entry time. Unix second-level timestamp.
-                     * @return QueuedTimestamp Queue entry time. Unix second-level timestamp.
+                     * 获取<p>Queue entry time, Unix second-level timestamp</p>.
+                     * @return QueuedTimestamp <p>Queue entry time, Unix second-level timestamp</p>.
                      * 
                      */
                     int64_t GetQueuedTimestamp() const;
@@ -159,8 +159,8 @@ namespace TencentCloud
                     bool QueuedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Agent account.
-                     * @return StaffUserId Agent account.
+                     * 获取<P>Agent account</p>.
+                     * @return StaffUserId <P>Agent account</p>.
                      * 
                      */
                     std::string GetStaffUserId() const;
@@ -173,8 +173,8 @@ namespace TencentCloud
                     bool StaffUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Refers to the EndStatus field in the DescribeTelCdr api.
-                     * @return EndStatus Refers to the EndStatus field in the DescribeTelCdr api.
+                     * 获取<p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
+                     * @return EndStatus <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
                      * 
                      */
                     int64_t GetEndStatus() const;
@@ -187,8 +187,8 @@ namespace TencentCloud
                     bool EndStatusHasBeenSet() const;
 
                     /**
-                     * 获取Queue skill group ID.
-                     * @return QueuedSkillGroupId Queue skill group ID.
+                     * 获取<p>Queue skill group ID</p>.
+                     * @return QueuedSkillGroupId <p>Queue skill group ID</p>.
                      * 
                      */
                     int64_t GetQueuedSkillGroupId() const;
@@ -201,8 +201,8 @@ namespace TencentCloud
                     bool QueuedSkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Queue skill group name.
-                     * @return QueuedSkillGroupName Queue skill group name.
+                     * 获取<P>Queue skill group name</p>.
+                     * @return QueuedSkillGroupName <P>Queue skill group name</p>.
                      * 
                      */
                     std::string GetQueuedSkillGroupName() const;
@@ -215,8 +215,8 @@ namespace TencentCloud
                     bool QueuedSkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
-                     * @return RecordURL Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+                     * 获取<P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
+                     * @return RecordURL <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
                      * 
                      */
                     std::string GetRecordURL() const;
@@ -229,8 +229,8 @@ namespace TencentCloud
                     bool RecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the COS link for recording transfer to a third party.
-                     * @return CustomRecordURL Specifies the COS link for recording transfer to a third party.
+                     * 获取<p>Recording transfer to external COS link</p>.
+                     * @return CustomRecordURL <p>Recording transfer to external COS link</p>.
                      * 
                      */
                     std::string GetCustomRecordURL() const;
@@ -243,8 +243,8 @@ namespace TencentCloud
                     bool CustomRecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
-                     * @return AsrURL Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+                     * 获取<P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
+                     * @return AsrURL <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
                      * 
                      */
                     std::string GetAsrURL() const;
@@ -257,8 +257,8 @@ namespace TencentCloud
                     bool AsrURLHasBeenSet() const;
 
                     /**
-                     * 获取Voicemail recording url.
-                     * @return VoicemailRecordURL Voicemail recording url.
+                     * 获取<P>Voicemail recording link</p>.
+                     * @return VoicemailRecordURL <P>Voicemail recording link</p>.
                      * 
                      */
                     std::vector<std::string> GetVoicemailRecordURL() const;
@@ -271,8 +271,8 @@ namespace TencentCloud
                     bool VoicemailRecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
-                     * @return VoicemailAsrURL Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+                     * 获取<P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
+                     * @return VoicemailAsrURL <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
                      * 
                      */
                     std::vector<std::string> GetVoicemailAsrURL() const;
@@ -285,8 +285,8 @@ namespace TencentCloud
                     bool VoicemailAsrURLHasBeenSet() const;
 
                     /**
-                     * 获取IVR key information.
-                     * @return IVRKeyPressed IVR key information.
+                     * 获取<P>IVR key information</p>.
+                     * @return IVRKeyPressed <P>IVR key information</p>.
                      * 
                      */
                     std::vector<IVRKeyPressedElement> GetIVRKeyPressed() const;
@@ -299,8 +299,8 @@ namespace TencentCloud
                     bool IVRKeyPressedHasBeenSet() const;
 
                     /**
-                     * 获取Satisfaction rate keystroke information.
-                     * @return PostIVRKeyPressed Satisfaction rate keystroke information.
+                     * 获取<P>Key information of satisfaction rate</p>.
+                     * @return PostIVRKeyPressed <P>Key information of satisfaction rate</p>.
                      * 
                      */
                     std::vector<IVRKeyPressedElement> GetPostIVRKeyPressed() const;
@@ -313,8 +313,8 @@ namespace TencentCloud
                     bool PostIVRKeyPressedHasBeenSet() const;
 
                     /**
-                     * 获取Hang-Up side. valid values: seat, user, system.
-                     * @return HungUpSide Hang-Up side. valid values: seat, user, system.
+                     * 获取<P>Hang-Up side seat agent user system</p>.
+                     * @return HungUpSide <P>Hang-Up side seat agent user system</p>.
                      * 
                      */
                     std::string GetHungUpSide() const;
@@ -327,8 +327,8 @@ namespace TencentCloud
                     bool HungUpSideHasBeenSet() const;
 
                     /**
-                     * 获取Customer custom data (User-to-User Interface).
-                     * @return UUI Customer custom data (User-to-User Interface).
+                     * 获取<p>Customer custom data (User-to-User Interface)</p>.
+                     * @return UUI <p>Customer custom data (User-to-User Interface)</p>.
                      * 
                      */
                     std::string GetUUI() const;
@@ -341,8 +341,8 @@ namespace TencentCloud
                     bool UUIHasBeenSet() const;
 
                     /**
-                     * 获取List of events during a call.
-                     * @return Events List of events during a call.
+                     * 获取<P>Event list for calls in progress</p>.
+                     * @return Events <P>Event list for calls in progress</p>.
                      * 
                      */
                     std::vector<SessionEvent> GetEvents() const;
@@ -355,8 +355,8 @@ namespace TencentCloud
                     bool EventsHasBeenSet() const;
 
                     /**
-                     * 获取List of service participants.
-                     * @return ServeParticipants List of service participants.
+                     * 获取<P>Service participant list</p>.
+                     * @return ServeParticipants <P>Service participant list</p>.
                      * 
                      */
                     std::vector<ServeParticipant> GetServeParticipants() const;
@@ -368,145 +368,185 @@ namespace TencentCloud
                      */
                     bool ServeParticipantsHasBeenSet() const;
 
+                    /**
+                     * 获取<P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     * @return SysHangupReason <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     * 
+                     */
+                    int64_t GetSysHangupReason() const;
+
+                    /**
+                     * 判断参数 SysHangupReason 是否已赋值
+                     * @return SysHangupReason 是否已赋值
+                     * 
+                     */
+                    bool SysHangupReasonHasBeenSet() const;
+
+                    /**
+                     * 获取<P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     * @return SysHangupReasonString <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     * 
+                     */
+                    std::string GetSysHangupReasonString() const;
+
+                    /**
+                     * 判断参数 SysHangupReasonString 是否已赋值
+                     * @return SysHangupReasonString 是否已赋值
+                     * 
+                     */
+                    bool SysHangupReasonStringHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Calling number.
+                     * <P>Calling number</p>.
                      */
                     std::string m_caller;
                     bool m_callerHasBeenSet;
 
                     /**
-                     * Called number.
+                     * <P>Called number</p>.
                      */
                     std::string m_callee;
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+                     * <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
                      */
                     int64_t m_callType;
                     bool m_callTypeHasBeenSet;
 
                     /**
-                     * Start timestamp. Unix second-level timestamp.
+                     * <p>Start timestamp, Unix second-level timestamp</p>.
                      */
                     int64_t m_startTimeStamp;
                     bool m_startTimeStampHasBeenSet;
 
                     /**
-                     * Ring timestamp. UNIX second-level timestamp.
+                     * <p>Ring timestamp, UNIX second-level timestamp</p>.
                      */
                     int64_t m_ringTimestamp;
                     bool m_ringTimestampHasBeenSet;
 
                     /**
-                     * Answer timestamp. UNIX second-level timestamp.
+                     * <p>Answer timestamp, UNIX second-level timestamp</p>.
                      */
                     int64_t m_acceptTimestamp;
                     bool m_acceptTimestampHasBeenSet;
 
                     /**
-                     * End timestamp, UNIX second-level timestamp.
+                     * <p>End timestamp, UNIX second-level timestamp</p>.
                      */
                     int64_t m_endedTimestamp;
                     bool m_endedTimestampHasBeenSet;
 
                     /**
-                     * Queue entry time. Unix second-level timestamp.
+                     * <p>Queue entry time, Unix second-level timestamp</p>.
                      */
                     int64_t m_queuedTimestamp;
                     bool m_queuedTimestampHasBeenSet;
 
                     /**
-                     * Agent account.
+                     * <P>Agent account</p>.
                      */
                     std::string m_staffUserId;
                     bool m_staffUserIdHasBeenSet;
 
                     /**
-                     * Refers to the EndStatus field in the DescribeTelCdr api.
+                     * <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
                      */
                     int64_t m_endStatus;
                     bool m_endStatusHasBeenSet;
 
                     /**
-                     * Queue skill group ID.
+                     * <p>Queue skill group ID</p>.
                      */
                     int64_t m_queuedSkillGroupId;
                     bool m_queuedSkillGroupIdHasBeenSet;
 
                     /**
-                     * Queue skill group name.
+                     * <P>Queue skill group name</p>.
                      */
                     std::string m_queuedSkillGroupName;
                     bool m_queuedSkillGroupNameHasBeenSet;
 
                     /**
-                     * Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+                     * <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
                      */
                     std::string m_recordURL;
                     bool m_recordURLHasBeenSet;
 
                     /**
-                     * Specifies the COS link for recording transfer to a third party.
+                     * <p>Recording transfer to external COS link</p>.
                      */
                     std::string m_customRecordURL;
                     bool m_customRecordURLHasBeenSet;
 
                     /**
-                     * Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+                     * <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
                      */
                     std::string m_asrURL;
                     bool m_asrURLHasBeenSet;
 
                     /**
-                     * Voicemail recording url.
+                     * <P>Voicemail recording link</p>.
                      */
                     std::vector<std::string> m_voicemailRecordURL;
                     bool m_voicemailRecordURLHasBeenSet;
 
                     /**
-                     * Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+                     * <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
                      */
                     std::vector<std::string> m_voicemailAsrURL;
                     bool m_voicemailAsrURLHasBeenSet;
 
                     /**
-                     * IVR key information.
+                     * <P>IVR key information</p>.
                      */
                     std::vector<IVRKeyPressedElement> m_iVRKeyPressed;
                     bool m_iVRKeyPressedHasBeenSet;
 
                     /**
-                     * Satisfaction rate keystroke information.
+                     * <P>Key information of satisfaction rate</p>.
                      */
                     std::vector<IVRKeyPressedElement> m_postIVRKeyPressed;
                     bool m_postIVRKeyPressedHasBeenSet;
 
                     /**
-                     * Hang-Up side. valid values: seat, user, system.
+                     * <P>Hang-Up side seat agent user system</p>.
                      */
                     std::string m_hungUpSide;
                     bool m_hungUpSideHasBeenSet;
 
                     /**
-                     * Customer custom data (User-to-User Interface).
+                     * <p>Customer custom data (User-to-User Interface)</p>.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;
 
                     /**
-                     * List of events during a call.
+                     * <P>Event list for calls in progress</p>.
                      */
                     std::vector<SessionEvent> m_events;
                     bool m_eventsHasBeenSet;
 
                     /**
-                     * List of service participants.
+                     * <P>Service participant list</p>.
                      */
                     std::vector<ServeParticipant> m_serveParticipants;
                     bool m_serveParticipantsHasBeenSet;
+
+                    /**
+                     * <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     */
+                    int64_t m_sysHangupReason;
+                    bool m_sysHangupReasonHasBeenSet;
+
+                    /**
+                     * <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+                     */
+                    std::string m_sysHangupReasonString;
+                    bool m_sysHangupReasonStringHasBeenSet;
 
                 };
             }

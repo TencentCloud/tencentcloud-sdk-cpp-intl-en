@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Cross-Region Backup Real-Time Statistics List Items
                 */
                 class CrossSummaryDetailRes : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Instance Status
+                     * @return Status Instance Status
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Instance Status
+                     * @param _status Instance Status
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Instance Region
+                     * @return Region Instance Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Instance Region
+                     * @param _region Instance Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Instance ID
+                     * @param _instanceId Instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Instance Name
+                     * @return Name Instance Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Instance Name
+                     * @param _name Instance Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CrossBackupEnabled 
+                     * 获取Cross-Region Backup Status: enable - Enabled, disable - Disabled
+                     * @return CrossBackupEnabled Cross-Region Backup Status: enable - Enabled, disable - Disabled
                      * 
                      */
                     std::string GetCrossBackupEnabled() const;
 
                     /**
-                     * 设置
-                     * @param _crossBackupEnabled 
+                     * 设置Cross-Region Backup Status: enable - Enabled, disable - Disabled
+                     * @param _crossBackupEnabled Cross-Region Backup Status: enable - Enabled, disable - Disabled
                      * 
                      */
                     void SetCrossBackupEnabled(const std::string& _crossBackupEnabled);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CrossBackupEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CrossRegions 
+                     * 获取Cross-Region Backup Target Region
+                     * @return CrossRegions Cross-Region Backup Target Region
                      * 
                      */
                     std::vector<std::string> GetCrossRegions() const;
 
                     /**
-                     * 设置
-                     * @param _crossRegions 
+                     * 设置Cross-Region Backup Target Region
+                     * @param _crossRegions Cross-Region Backup Target Region
                      * 
                      */
                     void SetCrossRegions(const std::vector<std::string>& _crossRegions);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastBackupStartTime 
+                     * 获取Latest Backup Start Time
+                     * @return LastBackupStartTime Latest Backup Start Time
                      * 
                      */
                     std::string GetLastBackupStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _lastBackupStartTime 
+                     * 设置Latest Backup Start Time
+                     * @param _lastBackupStartTime Latest Backup Start Time
                      * 
                      */
                     void SetLastBackupStartTime(const std::string& _lastBackupStartTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool LastBackupStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CrossBackupSaveDays 
+                     * 获取Cross-Region Backup Retention Days
+                     * @return CrossBackupSaveDays Cross-Region Backup Retention Days
                      * 
                      */
                     int64_t GetCrossBackupSaveDays() const;
 
                     /**
-                     * 设置
-                     * @param _crossBackupSaveDays 
+                     * 设置Cross-Region Backup Retention Days
+                     * @param _crossBackupSaveDays Cross-Region Backup Retention Days
                      * 
                      */
                     void SetCrossBackupSaveDays(const int64_t& _crossBackupSaveDays);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CrossBackupSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataBackupSpace 
+                     * 获取Cross-Region Data Backup Total Space
+                     * @return DataBackupSpace Cross-Region Data Backup Total Space
                      * 
                      */
                     uint64_t GetDataBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _dataBackupSpace 
+                     * 设置Cross-Region Data Backup Total Space
+                     * @param _dataBackupSpace Cross-Region Data Backup Total Space
                      * 
                      */
                     void SetDataBackupSpace(const uint64_t& _dataBackupSpace);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool DataBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataBackupCount 
+                     * 获取Cross-Region Data Backup Total File Count
+                     * @return DataBackupCount Cross-Region Data Backup Total File Count
                      * 
                      */
                     uint64_t GetDataBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _dataBackupCount 
+                     * 设置Cross-Region Data Backup Total File Count
+                     * @param _dataBackupCount Cross-Region Data Backup Total File Count
                      * 
                      */
                     void SetDataBackupCount(const uint64_t& _dataBackupCount);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool DataBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogBackupSpace 
+                     * 获取Cross-Region Log Backup Total Space
+                     * @return LogBackupSpace Cross-Region Log Backup Total Space
                      * 
                      */
                     uint64_t GetLogBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _logBackupSpace 
+                     * 设置Cross-Region Log Backup Total Space
+                     * @param _logBackupSpace Cross-Region Log Backup Total Space
                      * 
                      */
                     void SetLogBackupSpace(const uint64_t& _logBackupSpace);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool LogBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogBackupCount 
+                     * 获取Cross-Region Log Backup Total File Count
+                     * @return LogBackupCount Cross-Region Log Backup Total File Count
                      * 
                      */
                     uint64_t GetLogBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _logBackupCount 
+                     * 设置Cross-Region Log Backup Total File Count
+                     * @param _logBackupCount Cross-Region Log Backup Total File Count
                      * 
                      */
                     void SetLogBackupCount(const uint64_t& _logBackupCount);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool LogBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActualUsedSpace 
+                     * 获取Cross-Region Backup Total Space
+                     * @return ActualUsedSpace Cross-Region Backup Total Space
                      * 
                      */
                     uint64_t GetActualUsedSpace() const;
 
                     /**
-                     * 设置
-                     * @param _actualUsedSpace 
+                     * 设置Cross-Region Backup Total Space
+                     * @param _actualUsedSpace Cross-Region Backup Total Space
                      * 
                      */
                     void SetActualUsedSpace(const uint64_t& _actualUsedSpace);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool ActualUsedSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActualUsedCount 
+                     * 获取Cross-Region Backup Total Count
+                     * @return ActualUsedCount Cross-Region Backup Total Count
                      * 
                      */
                     uint64_t GetActualUsedCount() const;
 
                     /**
-                     * 设置
-                     * @param _actualUsedCount 
+                     * 设置Cross-Region Backup Total Count
+                     * @param _actualUsedCount Cross-Region Backup Total Count
                      * 
                      */
                     void SetActualUsedCount(const uint64_t& _actualUsedCount);
@@ -343,85 +343,85 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance Status
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Backup Status: enable - Enabled, disable - Disabled
                      */
                     std::string m_crossBackupEnabled;
                     bool m_crossBackupEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Backup Target Region
                      */
                     std::vector<std::string> m_crossRegions;
                     bool m_crossRegionsHasBeenSet;
 
                     /**
-                     * 
+                     * Latest Backup Start Time
                      */
                     std::string m_lastBackupStartTime;
                     bool m_lastBackupStartTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Backup Retention Days
                      */
                     int64_t m_crossBackupSaveDays;
                     bool m_crossBackupSaveDaysHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Data Backup Total Space
                      */
                     uint64_t m_dataBackupSpace;
                     bool m_dataBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Data Backup Total File Count
                      */
                     uint64_t m_dataBackupCount;
                     bool m_dataBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Log Backup Total Space
                      */
                     uint64_t m_logBackupSpace;
                     bool m_logBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Log Backup Total File Count
                      */
                     uint64_t m_logBackupCount;
                     bool m_logBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Backup Total Space
                      */
                     uint64_t m_actualUsedSpace;
                     bool m_actualUsedSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-Region Backup Total Count
                      */
                     uint64_t m_actualUsedCount;
                     bool m_actualUsedCountHasBeenSet;

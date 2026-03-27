@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Origin HTTPS configuration parameters.
                 */
                 class OriginPullProtocolParameters : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Protocol 
+                     * 获取Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
+                     * @return Protocol Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _protocol 
+                     * 设置Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
+                     * @param _protocol Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -70,7 +82,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

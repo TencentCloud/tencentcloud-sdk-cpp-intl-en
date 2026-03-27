@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyWords 
+                     * 获取Keywords, supports fuzzy search
+                     * @return KeyWords Keywords, supports fuzzy search
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置
-                     * @param _keyWords 
+                     * 设置Keywords, supports fuzzy search
+                     * @param _keyWords Keywords, supports fuzzy search
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * 
+                     * Keywords, supports fuzzy search
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;

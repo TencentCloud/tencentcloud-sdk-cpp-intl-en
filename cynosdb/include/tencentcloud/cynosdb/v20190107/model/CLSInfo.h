@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * CLS Log Delivery Configuration
                 */
                 class CLSInfo : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TopicOperation 
+                     * 获取Log topic operation: optional create, reuse.
+create: create a new log topic using TopicName.
+reuse: use an existing log topic by specifying TopicId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * @return TopicOperation Log topic operation: optional create, reuse.
+create: create a new log topic using TopicName.
+reuse: use an existing log topic by specifying TopicId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      * 
                      */
                     std::string GetTopicOperation() const;
 
                     /**
-                     * 设置
-                     * @param _topicOperation 
+                     * 设置Log topic operation: optional create, reuse.
+create: create a new log topic using TopicName.
+reuse: use an existing log topic by specifying TopicId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * @param _topicOperation Log topic operation: optional create, reuse.
+create: create a new log topic using TopicName.
+reuse: use an existing log topic by specifying TopicId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      * 
                      */
                     void SetTopicOperation(const std::string& _topicOperation);
@@ -68,15 +80,27 @@ namespace TencentCloud
                     bool TopicOperationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GroupOperation 
+                     * 获取Log set operation: optional create, reuse.
+create: create a new log set using GroupName.
+reuse: use an existing log set by specifying GroupId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * @return GroupOperation Log set operation: optional create, reuse.
+create: create a new log set using GroupName.
+reuse: use an existing log set by specifying GroupId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      * 
                      */
                     std::string GetGroupOperation() const;
 
                     /**
-                     * 设置
-                     * @param _groupOperation 
+                     * 设置Log set operation: optional create, reuse.
+create: create a new log set using GroupName.
+reuse: use an existing log set by specifying GroupId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * @param _groupOperation Log set operation: optional create, reuse.
+create: create a new log set using GroupName.
+reuse: use an existing log set by specifying GroupId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      * 
                      */
                     void SetGroupOperation(const std::string& _groupOperation);
@@ -89,15 +113,15 @@ namespace TencentCloud
                     bool GroupOperationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Log Delivery Region
+                     * @return Region Log Delivery Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Log Delivery Region
+                     * @param _region Log Delivery Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -110,15 +134,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TopicId 
+                     * 获取log topic id
+                     * @return TopicId log topic id
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置
-                     * @param _topicId 
+                     * 设置log topic id
+                     * @param _topicId log topic id
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -131,15 +155,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TopicName 
+                     * 获取log topic name
+                     * @return TopicName log topic name
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置
-                     * @param _topicName 
+                     * 设置log topic name
+                     * @param _topicName log topic name
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -152,15 +176,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GroupId 
+                     * 获取log set id
+                     * @return GroupId log set id
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _groupId 
+                     * 设置log set id
+                     * @param _groupId log set id
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -173,15 +197,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GroupName 
+                     * 获取log set name
+                     * @return GroupName log set name
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _groupName 
+                     * 设置log set name
+                     * @param _groupName log set name
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -196,43 +220,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Log topic operation: optional create, reuse.
+create: create a new log topic using TopicName.
+reuse: use an existing log topic by specifying TopicId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      */
                     std::string m_topicOperation;
                     bool m_topicOperationHasBeenSet;
 
                     /**
-                     * 
+                     * Log set operation: optional create, reuse.
+create: create a new log set using GroupName.
+reuse: use an existing log set by specifying GroupId.
+Combining the use of an existing log topic and creating a new log set is not allowed.
                      */
                     std::string m_groupOperation;
                     bool m_groupOperationHasBeenSet;
 
                     /**
-                     * 
+                     * Log Delivery Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * log topic id
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * 
+                     * log topic name
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * 
+                     * log set id
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * 
+                     * log set name
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;

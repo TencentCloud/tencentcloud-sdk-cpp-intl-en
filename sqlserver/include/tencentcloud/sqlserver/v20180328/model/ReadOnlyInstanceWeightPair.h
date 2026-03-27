@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Read-Only Instance to Weight Mapping
                 */
                 class ReadOnlyInstanceWeightPair : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ReadOnlyInstanceId 
+                     * 获取Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+                     * @return ReadOnlyInstanceId Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
                      * 
                      */
                     std::string GetReadOnlyInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyInstanceId 
+                     * 设置Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+                     * @param _readOnlyInstanceId Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
                      * 
                      */
                     void SetReadOnlyInstanceId(const std::string& _readOnlyInstanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ReadOnlyInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyWeight 
+                     * 获取Read-Only Instance Weight, in the range of 0-100
+                     * @return ReadOnlyWeight Read-Only Instance Weight, in the range of 0-100
                      * 
                      */
                     int64_t GetReadOnlyWeight() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyWeight 
+                     * 设置Read-Only Instance Weight, in the range of 0-100
+                     * @param _readOnlyWeight Read-Only Instance Weight, in the range of 0-100
                      * 
                      */
                     void SetReadOnlyWeight(const int64_t& _readOnlyWeight);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
                      */
                     std::string m_readOnlyInstanceId;
                     bool m_readOnlyInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Instance Weight, in the range of 0-100
                      */
                     int64_t m_readOnlyWeight;
                     bool m_readOnlyWeightHasBeenSet;

@@ -72,15 +72,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubProductName 
+                     * 获取Product Details
+                     * @return SubProductName Product Details
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置
-                     * @param _subProductName 
+                     * 设置Product Details
+                     * @param _subProductName Product Details
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -102,7 +102,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * 
+                     * Product Details
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;

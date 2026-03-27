@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * IP access restriction rules, currently supports configuring IP blocklist and allowlist.
                 */
                 class IPFilterPolicy : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
+                     * @return Status IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
+                     * @param _status IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterType 
+                     * 获取IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+                     * @return FilterType IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置
-                     * @param _filterType 
+                     * 设置IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+                     * @param _filterType IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -89,15 +105,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPList 
+                     * 获取IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+                     * @return IPList IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
                      * 
                      */
                     std::vector<std::string> GetIPList() const;
 
                     /**
-                     * 设置
-                     * @param _iPList 
+                     * 设置IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+                     * @param _iPList IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
                      * 
                      */
                     void SetIPList(const std::vector<std::string>& _iPList);
@@ -112,19 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * IP access restriction status. Optional values:
+<li>Enabled: enable;</li>
+<li>Disabled: disable.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * IP access restriction type:
+<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
                      */
                     std::vector<std::string> m_iPList;
                     bool m_iPListHasBeenSet;

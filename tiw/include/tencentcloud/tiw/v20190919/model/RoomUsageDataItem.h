@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoomID 
+                     * 获取Interactive whiteboard room ID
+                     * @return RoomID Interactive whiteboard room ID
                      * 
                      */
                     uint64_t GetRoomID() const;
 
                     /**
-                     * 设置
-                     * @param _roomID 
+                     * 设置Interactive whiteboard room ID
+                     * @param _roomID Interactive whiteboard room ID
                      * 
                      */
                     void SetRoomID(const uint64_t& _roomID);
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_valueHasBeenSet;
 
                     /**
-                     * 
+                     * Interactive whiteboard room ID
                      */
                     uint64_t m_roomID;
                     bool m_roomIDHasBeenSet;

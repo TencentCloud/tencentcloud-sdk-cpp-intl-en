@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Primary/Secondary Switchover Log
                 */
                 class SwitchLog : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EventId 
+                     * 获取Switchover Event ID
+                     * @return EventId Switchover Event ID
                      * 
                      */
                     std::string GetEventId() const;
 
                     /**
-                     * 设置
-                     * @param _eventId 
+                     * 设置Switchover Event ID
+                     * @param _eventId Switchover Event ID
                      * 
                      */
                     void SetEventId(const std::string& _eventId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SwitchType 
+                     * 获取Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
+                     * @return SwitchType Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
                      * 
                      */
                     uint64_t GetSwitchType() const;
 
                     /**
-                     * 设置
-                     * @param _switchType 
+                     * 设置Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
+                     * @param _switchType Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
                      * 
                      */
                     void SetSwitchType(const uint64_t& _switchType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SwitchTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Switchover Start Time
+                     * @return StartTime Switchover Start Time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Switchover Start Time
+                     * @param _startTime Switchover Start Time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取Switchover End Time
+                     * @return EndTime Switchover End Time
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置Switchover End Time
+                     * @param _endTime Switchover End Time
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Reason 
+                     * 获取Machine failure causes automatic switchover.
+                     * @return Reason Machine failure causes automatic switchover.
                      * 
                      */
                     std::string GetReason() const;
 
                     /**
-                     * 设置
-                     * @param _reason 
+                     * 设置Machine failure causes automatic switchover.
+                     * @param _reason Machine failure causes automatic switchover.
                      * 
                      */
                     void SetReason(const std::string& _reason);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Switchover Event ID
                      */
                     std::string m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * 
+                     * Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
                      */
                     uint64_t m_switchType;
                     bool m_switchTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Switchover Start Time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Switchover End Time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Machine failure causes automatic switchover.
                      */
                     std::string m_reason;
                     bool m_reasonHasBeenSet;

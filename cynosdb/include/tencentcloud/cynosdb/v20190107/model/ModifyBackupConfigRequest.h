@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogicBackupConfig 
+                     * 获取Logical Backup Configuration
+                     * @return LogicBackupConfig Logical Backup Configuration
                      * 
                      */
                     LogicBackupConfigInfo GetLogicBackupConfig() const;
 
                     /**
-                     * 设置
-                     * @param _logicBackupConfig 
+                     * 设置Logical Backup Configuration
+                     * @param _logicBackupConfig Logical Backup Configuration
                      * 
                      */
                     void SetLogicBackupConfig(const LogicBackupConfigInfo& _logicBackupConfig);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool LogicBackupConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteAutoLogicBackup 
+                     * 获取Whether to delete the automatic logical backup
+                     * @return DeleteAutoLogicBackup Whether to delete the automatic logical backup
                      * 
                      */
                     bool GetDeleteAutoLogicBackup() const;
 
                     /**
-                     * 设置
-                     * @param _deleteAutoLogicBackup 
+                     * 设置Whether to delete the automatic logical backup
+                     * @param _deleteAutoLogicBackup Whether to delete the automatic logical backup
                      * 
                      */
                     void SetDeleteAutoLogicBackup(const bool& _deleteAutoLogicBackup);
@@ -250,13 +250,13 @@ namespace TencentCloud
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Logical Backup Configuration
                      */
                     LogicBackupConfigInfo m_logicBackupConfig;
                     bool m_logicBackupConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to delete the automatic logical backup
                      */
                     bool m_deleteAutoLogicBackup;
                     bool m_deleteAutoLogicBackupHasBeenSet;

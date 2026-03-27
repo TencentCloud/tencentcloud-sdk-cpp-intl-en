@@ -546,15 +546,27 @@ Note: This field may return "null", indicating that no valid value can be obtain
                     bool OsImageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取**Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
+                     * @return InstanceId **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置**Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
+                     * @param _instanceId **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -710,7 +722,10 @@ Note: This field may return "null", indicating that no valid value can be obtain
                     bool m_osImageHasBeenSet;
 
                     /**
-                     * 
+                     * **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

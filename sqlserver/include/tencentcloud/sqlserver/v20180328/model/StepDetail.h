@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Progress Steps Details
                 */
                 class StepDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Msg 
+                     * 获取Detailed Steps Return Information
+                     * @return Msg Detailed Steps Return Information
                      * 
                      */
                     std::string GetMsg() const;
 
                     /**
-                     * 设置
-                     * @param _msg 
+                     * 设置Detailed Steps Return Information
+                     * @param _msg Detailed Steps Return Information
                      * 
                      */
                     void SetMsg(const std::string& _msg);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Current Step Status, 0 Success, -2 Not Started
+                     * @return Status Current Step Status, 0 Success, -2 Not Started
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Current Step Status, 0 Success, -2 Not Started
+                     * @param _status Current Step Status, 0 Success, -2 Not Started
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Step Name
+                     * @return Name Step Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Step Name
+                     * @param _name Step Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Detailed Steps Return Information
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * Current Step Status, 0 Success, -2 Not Started
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Step Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

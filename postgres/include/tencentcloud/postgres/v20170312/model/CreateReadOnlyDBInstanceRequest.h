@@ -528,15 +528,15 @@ Default value: `0`.
                     bool DBVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DedicatedClusterId 
+                     * 获取<p>Dedicated Cluster ID</p>
+                     * @return DedicatedClusterId <p>Dedicated Cluster ID</p>
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _dedicatedClusterId 
+                     * 设置<p>Dedicated Cluster ID</p>
+                     * @param _dedicatedClusterId <p>Dedicated Cluster ID</p>
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -687,7 +687,7 @@ Default value: `0`.
                     bool m_dBVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Dedicated Cluster ID</p>
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;

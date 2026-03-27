@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool SubScenesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AppType 
+                     * 获取Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+                     * @return AppType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
                      * 
                      */
                     std::string GetAppType() const;
 
                     /**
-                     * 设置
-                     * @param _appType 
+                     * 设置Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+                     * @param _appType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
                      * 
                      */
                     void SetAppType(const std::string& _appType);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool AppTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SpaceId 
+                     * 获取Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+                     * @return SpaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
                      * 
                      */
                     std::string GetSpaceId() const;
 
                     /**
-                     * 设置
-                     * @param _spaceId 
+                     * 设置Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+                     * @param _spaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
                      * 
                      */
                     void SetSpaceId(const std::string& _spaceId);
@@ -330,13 +330,13 @@ namespace TencentCloud
                     bool m_subScenesHasBeenSet;
 
                     /**
-                     * 
+                     * Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
                      */
                     std::string m_appType;
                     bool m_appTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
                      */
                     std::string m_spaceId;
                     bool m_spaceIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Finalized editing task information.
                 */
                 class PersistenceCompleteTask : public AbstractModel
                 {

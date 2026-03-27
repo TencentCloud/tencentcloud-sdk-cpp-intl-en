@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback Task Information
                 */
                 class RollbackData : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Instance CPU
+                     * @return Cpu Instance CPU
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置Instance CPU
+                     * @param _cpu Instance CPU
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Instance Memory
+                     * @return Memory Instance Memory
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Instance Memory
+                     * @param _memory Instance Memory
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageLimit 
+                     * 获取Cluster storage limit
+                     * @return StorageLimit Cluster storage limit
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置
-                     * @param _storageLimit 
+                     * 设置Cluster storage limit
+                     * @param _storageLimit Cluster storage limit
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginalClusterId 
+                     * 获取Original Cluster id
+                     * @return OriginalClusterId Original Cluster id
                      * 
                      */
                     std::string GetOriginalClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _originalClusterId 
+                     * 设置Original Cluster id
+                     * @param _originalClusterId Original Cluster id
                      * 
                      */
                     void SetOriginalClusterId(const std::string& _originalClusterId);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool OriginalClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginalClusterName 
+                     * 获取Original Cluster Name
+                     * @return OriginalClusterName Original Cluster Name
                      * 
                      */
                     std::string GetOriginalClusterName() const;
 
                     /**
-                     * 设置
-                     * @param _originalClusterName 
+                     * 设置Original Cluster Name
+                     * @param _originalClusterName Original Cluster Name
                      * 
                      */
                     void SetOriginalClusterName(const std::string& _originalClusterName);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool OriginalClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RollbackStrategy 
+                     * 获取Rollback Method
+                     * @return RollbackStrategy Rollback Method
                      * 
                      */
                     std::string GetRollbackStrategy() const;
 
                     /**
-                     * 设置
-                     * @param _rollbackStrategy 
+                     * 设置Rollback Method
+                     * @param _rollbackStrategy Rollback Method
                      * 
                      */
                     void SetRollbackStrategy(const std::string& _rollbackStrategy);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool RollbackStrategyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnapshotTime 
+                     * 获取Snapshot Time
+                     * @return SnapshotTime Snapshot Time
                      * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
-                     * 设置
-                     * @param _snapshotTime 
+                     * 设置Snapshot Time
+                     * @param _snapshotTime Snapshot Time
                      * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool SnapShotIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RollbackDatabases 
+                     * 获取Rollback Database
+                     * @return RollbackDatabases Rollback Database
                      * 
                      */
                     std::vector<RollbackDatabase> GetRollbackDatabases() const;
 
                     /**
-                     * 设置
-                     * @param _rollbackDatabases 
+                     * 设置Rollback Database
+                     * @param _rollbackDatabases Rollback Database
                      * 
                      */
                     void SetRollbackDatabases(const std::vector<RollbackDatabase>& _rollbackDatabases);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool RollbackDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RollbackTables 
+                     * 获取Rollback Data Table
+                     * @return RollbackTables Rollback Data Table
                      * 
                      */
                     std::vector<RollbackTable> GetRollbackTables() const;
 
                     /**
-                     * 设置
-                     * @param _rollbackTables 
+                     * 设置Rollback Data Table
+                     * @param _rollbackTables Rollback Data Table
                      * 
                      */
                     void SetRollbackTables(const std::vector<RollbackTable>& _rollbackTables);
@@ -346,43 +346,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance CPU
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Memory
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster storage limit
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * 
+                     * Original Cluster id
                      */
                     std::string m_originalClusterId;
                     bool m_originalClusterIdHasBeenSet;
 
                     /**
-                     * 
+                     * Original Cluster Name
                      */
                     std::string m_originalClusterName;
                     bool m_originalClusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Method
                      */
                     std::string m_rollbackStrategy;
                     bool m_rollbackStrategyHasBeenSet;
 
                     /**
-                     * 
+                     * Snapshot Time
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;
@@ -406,13 +406,13 @@ namespace TencentCloud
                     bool m_snapShotIdHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Database
                      */
                     std::vector<RollbackDatabase> m_rollbackDatabases;
                     bool m_rollbackDatabasesHasBeenSet;
 
                     /**
-                     * 
+                     * Rollback Data Table
                      */
                     std::vector<RollbackTable> m_rollbackTables;
                     bool m_rollbackTablesHasBeenSet;

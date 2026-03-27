@@ -360,6 +360,48 @@ namespace TencentCloud
                      */
                     bool AIAgentIdHasBeenSet() const;
 
+                    /**
+                     * 获取Retry interval for task failure. value range: 600-86400 seconds.
+                     * @return RetryInterval Retry interval for task failure. value range: 600-86400 seconds.
+                     * 
+                     */
+                    int64_t GetRetryInterval() const;
+
+                    /**
+                     * 设置Retry interval for task failure. value range: 600-86400 seconds.
+                     * @param _retryInterval Retry interval for task failure. value range: 600-86400 seconds.
+                     * 
+                     */
+                    void SetRetryInterval(const int64_t& _retryInterval);
+
+                    /**
+                     * 判断参数 RetryInterval 是否已赋值
+                     * @return RetryInterval 是否已赋值
+                     * 
+                     */
+                    bool RetryIntervalHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * 
+                     */
+                    int64_t GetMaxRingTimeoutSecond() const;
+
+                    /**
+                     * 设置Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * @param _maxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     * 
+                     */
+                    void SetMaxRingTimeoutSecond(const int64_t& _maxRingTimeoutSecond);
+
+                    /**
+                     * 判断参数 MaxRingTimeoutSecond 是否已赋值
+                     * @return MaxRingTimeoutSecond 是否已赋值
+                     * 
+                     */
+                    bool MaxRingTimeoutSecondHasBeenSet() const;
+
                 private:
 
                     /**
@@ -451,6 +493,18 @@ namespace TencentCloud
                      */
                     int64_t m_aIAgentId;
                     bool m_aIAgentIdHasBeenSet;
+
+                    /**
+                     * Retry interval for task failure. value range: 600-86400 seconds.
+                     */
+                    int64_t m_retryInterval;
+                    bool m_retryIntervalHasBeenSet;
+
+                    /**
+                     * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+                     */
+                    int64_t m_maxRingTimeoutSecond;
+                    bool m_maxRingTimeoutSecondHasBeenSet;
 
                 };
             }

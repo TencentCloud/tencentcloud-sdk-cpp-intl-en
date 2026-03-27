@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return All 
+                     * 获取Whether to synchronize all image repositories
+                     * @return All Whether to synchronize all image repositories
                      * 
                      */
                     bool GetAll() const;
 
                     /**
-                     * 设置
-                     * @param _all 
+                     * 设置Whether to synchronize all image repositories
+                     * @param _all Whether to synchronize all image repositories
                      * 
                      */
                     void SetAll(const bool& _all);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegistryIds 
+                     * 获取Partial image repositories requiring synchronization
+                     * @return RegistryIds Partial image repositories requiring synchronization
                      * 
                      */
                     std::vector<uint64_t> GetRegistryIds() const;
 
                     /**
-                     * 设置
-                     * @param _registryIds 
+                     * 设置Partial image repositories requiring synchronization
+                     * @param _registryIds Partial image repositories requiring synchronization
                      * 
                      */
                     void SetRegistryIds(const std::vector<uint64_t>& _registryIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to synchronize all image repositories
                      */
                     bool m_all;
                     bool m_allHasBeenSet;
 
                     /**
-                     * 
+                     * Partial image repositories requiring synchronization
                      */
                     std::vector<uint64_t> m_registryIds;
                     bool m_registryIdsHasBeenSet;

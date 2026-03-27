@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback RO Group Information
                 */
                 class RollbackRoGroupInfo : public AbstractModel
                 {

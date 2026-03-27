@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AIGC image generation task output.
                 */
                 class AigcImageTaskOutput : public AbstractModel
                 {

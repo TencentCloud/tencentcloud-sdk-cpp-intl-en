@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * vhost usage quota information
                 */
                 class VirtualHostQuota : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxVirtualHost 
+                     * 获取Maximum number of vhosts allowed to be created
+                     * @return MaxVirtualHost Maximum number of vhosts allowed to be created
                      * 
                      */
                     int64_t GetMaxVirtualHost() const;
 
                     /**
-                     * 设置
-                     * @param _maxVirtualHost 
+                     * 设置Maximum number of vhosts allowed to be created
+                     * @param _maxVirtualHost Maximum number of vhosts allowed to be created
                      * 
                      */
                     void SetMaxVirtualHost(const int64_t& _maxVirtualHost);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Maximum number of vhosts allowed to be created
                      */
                     int64_t m_maxVirtualHost;
                     bool m_maxVirtualHostHasBeenSet;

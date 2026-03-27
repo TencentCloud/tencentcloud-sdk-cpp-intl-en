@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Overseas Document Address
                 */
                 class Address : public AbstractModel
                 {

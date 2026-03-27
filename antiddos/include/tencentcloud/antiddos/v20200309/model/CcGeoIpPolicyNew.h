@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取domain name
+                     * @return Domain domain name
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param _domain 
+                     * 设置domain name
+                     * @param _domain domain name
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -277,7 +277,7 @@ namespace TencentCloud
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * domain name
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;

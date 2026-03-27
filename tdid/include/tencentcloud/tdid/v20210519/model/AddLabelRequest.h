@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LabelIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Did 
+                     * 获取tdid
+                     * @return Did tdid
                      * 
                      */
                     std::string GetDid() const;
 
                     /**
-                     * 设置
-                     * @param _did 
+                     * 设置tdid
+                     * @param _did tdid
                      * 
                      */
                     void SetDid(const std::string& _did);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_labelIdHasBeenSet;
 
                     /**
-                     * 
+                     * tdid
                      */
                     std::string m_did;
                     bool m_didHasBeenSet;

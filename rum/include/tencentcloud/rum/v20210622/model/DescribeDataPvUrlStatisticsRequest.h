@@ -484,15 +484,27 @@ namespace TencentCloud
                     bool EnvHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GroupByType 
+                     * 获取group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
+                     * @return GroupByType group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
                      * 
                      */
                     int64_t GetGroupByType() const;
 
                     /**
-                     * 设置
-                     * @param _groupByType 
+                     * 设置group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
+                     * @param _groupByType group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
                      * 
                      */
                     void SetGroupByType(const int64_t& _groupByType);
@@ -505,15 +517,19 @@ namespace TencentCloud
                     bool GroupByTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsNewData 
+                     * 获取1: Query Intelligent Research
+0: Use old logic, already offline, do not use
+                     * @return IsNewData 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
                      * 
                      */
                     int64_t GetIsNewData() const;
 
                     /**
-                     * 设置
-                     * @param _isNewData 
+                     * 设置1: Query Intelligent Research
+0: Use old logic, already offline, do not use
+                     * @param _isNewData 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
                      * 
                      */
                     void SetIsNewData(const int64_t& _isNewData);
@@ -654,13 +670,17 @@ namespace TencentCloud
                     bool m_envHasBeenSet;
 
                     /**
-                     * 
+                     * group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
                      */
                     int64_t m_groupByType;
                     bool m_groupByTypeHasBeenSet;
 
                     /**
-                     * 
+                     * 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
                      */
                     int64_t m_isNewData;
                     bool m_isNewDataHasBeenSet;

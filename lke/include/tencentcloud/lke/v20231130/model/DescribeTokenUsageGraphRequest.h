@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AppBizIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AppType 
+                     * 获取Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+                     * @return AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
                      * 
                      */
                     std::string GetAppType() const;
 
                     /**
-                     * 设置
-                     * @param _appType 
+                     * 设置Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+                     * @param _appType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
                      * 
                      */
                     void SetAppType(const std::string& _appType);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool AppTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubScenes 
+                     * 获取Filter Sub-scenarios
+                     * @return SubScenes Filter Sub-scenarios
                      * 
                      */
                     std::vector<std::string> GetSubScenes() const;
 
                     /**
-                     * 设置
-                     * @param _subScenes 
+                     * 设置Filter Sub-scenarios
+                     * @param _subScenes Filter Sub-scenarios
                      * 
                      */
                     void SetSubScenes(const std::vector<std::string>& _subScenes);
@@ -249,13 +249,13 @@ namespace TencentCloud
                     bool m_appBizIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
                      */
                     std::string m_appType;
                     bool m_appTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Filter Sub-scenarios
                      */
                     std::vector<std::string> m_subScenes;
                     bool m_subScenesHasBeenSet;

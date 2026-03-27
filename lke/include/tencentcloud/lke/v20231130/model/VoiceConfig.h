@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Timbre Parameters
                 */
                 class VoiceConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceType 
+                     * 获取Public Cloud Timbre ID
+                     * @return VoiceType Public Cloud Timbre ID
                      * 
                      */
                     uint64_t GetVoiceType() const;
 
                     /**
-                     * 设置
-                     * @param _voiceType 
+                     * 设置Public Cloud Timbre ID
+                     * @param _voiceType Public Cloud Timbre ID
                      * 
                      */
                     void SetVoiceType(const uint64_t& _voiceType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VoiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimbreKey 
+                     * 获取Timbre Key
+                     * @return TimbreKey Timbre Key
                      * 
                      */
                     std::string GetTimbreKey() const;
 
                     /**
-                     * 设置
-                     * @param _timbreKey 
+                     * 设置Timbre Key
+                     * @param _timbreKey Timbre Key
                      * 
                      */
                     void SetTimbreKey(const std::string& _timbreKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TimbreKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceName 
+                     * 获取Timbre Name
+                     * @return VoiceName Timbre Name
                      * 
                      */
                     std::string GetVoiceName() const;
 
                     /**
-                     * 设置
-                     * @param _voiceName 
+                     * 设置Timbre Name
+                     * @param _voiceName Timbre Name
                      * 
                      */
                     void SetVoiceName(const std::string& _voiceName);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Public Cloud Timbre ID
                      */
                     uint64_t m_voiceType;
                     bool m_voiceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Timbre Key
                      */
                     std::string m_timbreKey;
                     bool m_timbreKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Timbre Name
                      */
                     std::string m_voiceName;
                     bool m_voiceNameHasBeenSet;

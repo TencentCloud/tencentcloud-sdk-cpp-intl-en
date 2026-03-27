@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool QuuidsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExcludedQuuids 
+                     * 获取Machines to be excluded
+                     * @return ExcludedQuuids Machines to be excluded
                      * 
                      */
                     std::vector<std::string> GetExcludedQuuids() const;
 
                     /**
-                     * 设置
-                     * @param _excludedQuuids 
+                     * 设置Machines to be excluded
+                     * @param _excludedQuuids Machines to be excluded
                      * 
                      */
                     void SetExcludedQuuids(const std::vector<std::string>& _excludedQuuids);
@@ -313,7 +313,7 @@ namespace TencentCloud
                     bool m_quuidsHasBeenSet;
 
                     /**
-                     * 
+                     * Machines to be excluded
                      */
                     std::vector<std::string> m_excludedQuuids;
                     bool m_excludedQuuidsHasBeenSet;

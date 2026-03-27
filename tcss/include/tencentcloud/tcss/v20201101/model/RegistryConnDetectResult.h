@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image Repository Connectivity Detection Result
                 */
                 class RegistryConnDetectResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Quuid 
+                     * 获取Host quuid or backend for Connectivity Detection
+                     * @return Quuid Host quuid or backend for Connectivity Detection
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置
-                     * @param _quuid 
+                     * 设置Host quuid or backend for Connectivity Detection
+                     * @param _quuid Host quuid or backend for Connectivity Detection
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uuid 
+                     * 获取Host uuid or backend for Connectivity Detection
+                     * @return Uuid Host uuid or backend for Connectivity Detection
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置
-                     * @param _uuid 
+                     * 设置Host uuid or backend for Connectivity Detection
+                     * @param _uuid Host uuid or backend for Connectivity Detection
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnDetectStatus 
+                     * 获取Detection Result Status
+                     * @return ConnDetectStatus Detection Result Status
                      * 
                      */
                     std::string GetConnDetectStatus() const;
 
                     /**
-                     * 设置
-                     * @param _connDetectStatus 
+                     * 设置Detection Result Status
+                     * @param _connDetectStatus Detection Result Status
                      * 
                      */
                     void SetConnDetectStatus(const std::string& _connDetectStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ConnDetectStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnDetectMessage 
+                     * 获取Detection Result Information
+                     * @return ConnDetectMessage Detection Result Information
                      * 
                      */
                     std::string GetConnDetectMessage() const;
 
                     /**
-                     * 设置
-                     * @param _connDetectMessage 
+                     * 设置Detection Result Information
+                     * @param _connDetectMessage Detection Result Information
                      * 
                      */
                     void SetConnDetectMessage(const std::string& _connDetectMessage);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConnDetectMessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Solution 
+                     * 获取Failure Resolution
+                     * @return Solution Failure Resolution
                      * 
                      */
                     std::string GetSolution() const;
 
                     /**
-                     * 设置
-                     * @param _solution 
+                     * 设置Failure Resolution
+                     * @param _solution Failure Resolution
                      * 
                      */
                     void SetSolution(const std::string& _solution);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FailReason 
+                     * 获取Failure Cause
+                     * @return FailReason Failure Cause
                      * 
                      */
                     std::string GetFailReason() const;
 
                     /**
-                     * 设置
-                     * @param _failReason 
+                     * 设置Failure Cause
+                     * @param _failReason Failure Cause
                      * 
                      */
                     void SetFailReason(const std::string& _failReason);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Host quuid or backend for Connectivity Detection
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * 
+                     * Host uuid or backend for Connectivity Detection
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * 
+                     * Detection Result Status
                      */
                     std::string m_connDetectStatus;
                     bool m_connDetectStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Detection Result Information
                      */
                     std::string m_connDetectMessage;
                     bool m_connDetectMessageHasBeenSet;
 
                     /**
-                     * 
+                     * Failure Resolution
                      */
                     std::string m_solution;
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * 
+                     * Failure Cause
                      */
                     std::string m_failReason;
                     bool m_failReasonHasBeenSet;

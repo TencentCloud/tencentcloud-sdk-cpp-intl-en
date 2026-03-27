@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Face Fusion is not suitable for the returned parameter item in CR.
                 */
                 class FuseFaceReviewResult : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Category 
+                     * 获取Reserved Field
+                     * @return Category Reserved Field
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置
-                     * @param _category 
+                     * 设置Reserved Field
+                     * @param _category Reserved Field
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Code 
+                     * 获取Status code; 0 indicates successful processing, other values indicate processing failure
+                     * @return Code Status code; 0 indicates successful processing, other values indicate processing failure
                      * 
                      */
                     std::string GetCode() const;
 
                     /**
-                     * 设置
-                     * @param _code 
+                     * 设置Status code; 0 indicates successful processing, other values indicate processing failure
+                     * @param _code Status code; 0 indicates successful processing, other values indicate processing failure
                      * 
                      */
                     void SetCode(const std::string& _code);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CodeDescription 
+                     * 获取Description for the status code
+                     * @return CodeDescription Description for the status code
                      * 
                      */
                     std::string GetCodeDescription() const;
 
                     /**
-                     * 设置
-                     * @param _codeDescription 
+                     * 设置Description for the status code
+                     * @param _codeDescription Description for the status code
                      * 
                      */
                     void SetCodeDescription(const std::string& _codeDescription);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool CodeDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Reserved Field
+                     * @return Confidence Reserved Field
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Reserved Field
+                     * @param _confidence Reserved Field
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Reserved Field
+                     * @return Suggestion Reserved Field
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Reserved Field
+                     * @param _suggestion Reserved Field
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DetailSet 
+                     * 获取Audit Details
+                     * @return DetailSet Audit Details
                      * 
                      */
                     std::vector<FuseFaceReviewDetail> GetDetailSet() const;
 
                     /**
-                     * 设置
-                     * @param _detailSet 
+                     * 设置Audit Details
+                     * @param _detailSet Audit Details
                      * 
                      */
                     void SetDetailSet(const std::vector<FuseFaceReviewDetail>& _detailSet);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Reserved Field
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * 
+                     * Status code; 0 indicates successful processing, other values indicate processing failure
                      */
                     std::string m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * 
+                     * Description for the status code
                      */
                     std::string m_codeDescription;
                     bool m_codeDescriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Reserved Field
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Reserved Field
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Audit Details
                      */
                     std::vector<FuseFaceReviewDetail> m_detailSet;
                     bool m_detailSetHasBeenSet;

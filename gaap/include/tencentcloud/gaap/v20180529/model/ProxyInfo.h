@@ -821,15 +821,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool BanStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPList 
+                     * 获取IP List
+                     * @return IPList IP List
                      * 
                      */
                     std::vector<IPDetail> GetIPList() const;
 
                     /**
-                     * 设置
-                     * @param _iPList 
+                     * 设置IP List
+                     * @param _iPList IP List
                      * 
                      */
                     void SetIPList(const std::vector<IPDetail>& _iPList);
@@ -1187,7 +1187,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_banStatusHasBeenSet;
 
                     /**
-                     * 
+                     * IP List
                      */
                     std::vector<IPDetail> m_iPList;
                     bool m_iPListHasBeenSet;

@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool UuidsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanMethod 
+                     * 获取0 version comparison, 2 version comparison + poc
+                     * @return ScanMethod 0 version comparison, 2 version comparison + poc
                      * 
                      */
                     uint64_t GetScanMethod() const;
 
                     /**
-                     * 设置
-                     * @param _scanMethod 
+                     * 设置0 version comparison, 2 version comparison + poc
+                     * @param _scanMethod 0 version comparison, 2 version comparison + poc
                      * 
                      */
                     void SetScanMethod(const uint64_t& _scanMethod);
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_uuidsHasBeenSet;
 
                     /**
-                     * 
+                     * 0 version comparison, 2 version comparison + poc
                      */
                     uint64_t m_scanMethod;
                     bool m_scanMethodHasBeenSet;

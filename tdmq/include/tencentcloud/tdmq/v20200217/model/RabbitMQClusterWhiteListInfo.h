@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * RabbitMQ Cluster Allowlist Information
                 */
                 class RabbitMQClusterWhiteListInfo : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PublicDataStreamWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicControlConsoleWhiteListStatus 
+                     * 获取Public Network Management Console Allowlist Status
+                     * @return PublicControlConsoleWhiteListStatus Public Network Management Console Allowlist Status
                      * 
                      */
                     std::string GetPublicControlConsoleWhiteListStatus() const;
 
                     /**
-                     * 设置
-                     * @param _publicControlConsoleWhiteListStatus 
+                     * 设置Public Network Management Console Allowlist Status
+                     * @param _publicControlConsoleWhiteListStatus Public Network Management Console Allowlist Status
                      * 
                      */
                     void SetPublicControlConsoleWhiteListStatus(const std::string& _publicControlConsoleWhiteListStatus);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PublicControlConsoleWhiteListStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicDataStreamWhiteListStatus 
+                     * 获取Public Network Data Flow Allowlist Status
+                     * @return PublicDataStreamWhiteListStatus Public Network Data Flow Allowlist Status
                      * 
                      */
                     std::string GetPublicDataStreamWhiteListStatus() const;
 
                     /**
-                     * 设置
-                     * @param _publicDataStreamWhiteListStatus 
+                     * 设置Public Network Data Flow Allowlist Status
+                     * @param _publicDataStreamWhiteListStatus Public Network Data Flow Allowlist Status
                      * 
                      */
                     void SetPublicDataStreamWhiteListStatus(const std::string& _publicDataStreamWhiteListStatus);
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_publicDataStreamWhiteListHasBeenSet;
 
                     /**
-                     * 
+                     * Public Network Management Console Allowlist Status
                      */
                     std::string m_publicControlConsoleWhiteListStatus;
                     bool m_publicControlConsoleWhiteListStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Public Network Data Flow Allowlist Status
                      */
                     std::string m_publicDataStreamWhiteListStatus;
                     bool m_publicDataStreamWhiteListStatusHasBeenSet;

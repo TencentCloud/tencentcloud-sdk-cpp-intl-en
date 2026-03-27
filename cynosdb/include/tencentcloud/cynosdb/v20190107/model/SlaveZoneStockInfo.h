@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Secondary AZ Inventory Information
                 */
                 class SlaveZoneStockInfo : public AbstractModel
                 {

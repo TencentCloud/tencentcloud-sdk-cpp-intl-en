@@ -301,15 +301,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterBeginCommit 
+                     * 获取Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+                     * @return FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      * 
                      */
                     bool GetFilterBeginCommit() const;
 
                     /**
-                     * 设置
-                     * @param _filterBeginCommit 
+                     * 设置Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+                     * @param _filterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      * 
                      */
                     void SetFilterBeginCommit(const bool& _filterBeginCommit);
@@ -322,15 +322,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilterBeginCommitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterCheckpoint 
+                     * 获取Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+                     * @return FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      * 
                      */
                     bool GetFilterCheckpoint() const;
 
                     /**
-                     * 设置
-                     * @param _filterCheckpoint 
+                     * 设置Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+                     * @param _filterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      * 
                      */
                     void SetFilterCheckpoint(const bool& _filterCheckpoint);
@@ -415,13 +415,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      */
                     bool m_filterBeginCommit;
                     bool m_filterBeginCommitHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
                      */
                     bool m_filterCheckpoint;
                     bool m_filterCheckpointHasBeenSet;

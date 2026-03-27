@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Security Group
                 */
                 class SecurityGroup : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ProjectId 
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置
-                     * @param _projectId 
+                     * 设置Project ID
+                     * @param _projectId Project ID
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Creation Time, Time format: yyyy-mm-dd hh:mm:ss
+                     * @return CreateTime Creation Time, Time format: yyyy-mm-dd hh:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Creation Time, Time format: yyyy-mm-dd hh:mm:ss
+                     * @param _createTime Creation Time, Time format: yyyy-mm-dd hh:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InboundSet 
+                     * 获取Inbound Rules
+                     * @return InboundSet Inbound Rules
                      * 
                      */
                     std::vector<SecurityGroupPolicy> GetInboundSet() const;
 
                     /**
-                     * 设置
-                     * @param _inboundSet 
+                     * 设置Inbound Rules
+                     * @param _inboundSet Inbound Rules
                      * 
                      */
                     void SetInboundSet(const std::vector<SecurityGroupPolicy>& _inboundSet);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool InboundSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutboundSet 
+                     * 获取Outbound Rules
+                     * @return OutboundSet Outbound Rules
                      * 
                      */
                     std::vector<SecurityGroupPolicy> GetOutboundSet() const;
 
                     /**
-                     * 设置
-                     * @param _outboundSet 
+                     * 设置Outbound Rules
+                     * @param _outboundSet Outbound Rules
                      * 
                      */
                     void SetOutboundSet(const std::vector<SecurityGroupPolicy>& _outboundSet);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OutboundSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityGroupId 
+                     * 获取Security Group ID
+                     * @return SecurityGroupId Security Group ID
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _securityGroupId 
+                     * 设置Security Group ID
+                     * @param _securityGroupId Security Group ID
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityGroupName 
+                     * 获取Security Group Name
+                     * @return SecurityGroupName Security Group Name
                      * 
                      */
                     std::string GetSecurityGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _securityGroupName 
+                     * 设置Security Group Name
+                     * @param _securityGroupName Security Group Name
                      * 
                      */
                     void SetSecurityGroupName(const std::string& _securityGroupName);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool SecurityGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityGroupRemark 
+                     * 获取Security Group Remarks
+                     * @return SecurityGroupRemark Security Group Remarks
                      * 
                      */
                     std::string GetSecurityGroupRemark() const;
 
                     /**
-                     * 设置
-                     * @param _securityGroupRemark 
+                     * 设置Security Group Remarks
+                     * @param _securityGroupRemark Security Group Remarks
                      * 
                      */
                     void SetSecurityGroupRemark(const std::string& _securityGroupRemark);
@@ -197,43 +197,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Project ID
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Creation Time, Time format: yyyy-mm-dd hh:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Inbound Rules
                      */
                     std::vector<SecurityGroupPolicy> m_inboundSet;
                     bool m_inboundSetHasBeenSet;
 
                     /**
-                     * 
+                     * Outbound Rules
                      */
                     std::vector<SecurityGroupPolicy> m_outboundSet;
                     bool m_outboundSetHasBeenSet;
 
                     /**
-                     * 
+                     * Security Group ID
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * Security Group Name
                      */
                     std::string m_securityGroupName;
                     bool m_securityGroupNameHasBeenSet;
 
                     /**
-                     * 
+                     * Security Group Remarks
                      */
                     std::string m_securityGroupRemark;
                     bool m_securityGroupRemarkHasBeenSet;

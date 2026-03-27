@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extended Information
                 */
                 class ExtraInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EChartsInfo 
+                     * 获取ECharts Information
+                     * @return EChartsInfo ECharts Information
                      * 
                      */
                     std::vector<std::string> GetEChartsInfo() const;
 
                     /**
-                     * 设置
-                     * @param _eChartsInfo 
+                     * 设置ECharts Information
+                     * @param _eChartsInfo ECharts Information
                      * 
                      */
                     void SetEChartsInfo(const std::vector<std::string>& _eChartsInfo);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * ECharts Information
                      */
                     std::vector<std::string> m_eChartsInfo;
                     bool m_eChartsInfoHasBeenSet;

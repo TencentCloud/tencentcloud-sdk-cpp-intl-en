@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Service status: 0 not started, · in progress, 2 completed
+                     * @return Status Service status: 0 not started, · in progress, 2 completed
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Service status: 0 not started, · in progress, 2 completed
+                     * @param _status Service status: 0 not started, · in progress, 2 completed
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_hostNumHasBeenSet;
 
                     /**
-                     * 
+                     * Service status: 0 not started, · in progress, 2 completed
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

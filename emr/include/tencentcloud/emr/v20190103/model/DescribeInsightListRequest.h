@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MustHasContext 
+                     * 获取Whether it includes specific parameter suggestions and other information
+                     * @return MustHasContext Whether it includes specific parameter suggestions and other information
                      * 
                      */
                     bool GetMustHasContext() const;
 
                     /**
-                     * 设置
-                     * @param _mustHasContext 
+                     * 设置Whether it includes specific parameter suggestions and other information
+                     * @param _mustHasContext Whether it includes specific parameter suggestions and other information
                      * 
                      */
                     void SetMustHasContext(const bool& _mustHasContext);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether it includes specific parameter suggestions and other information
                      */
                     bool m_mustHasContext;
                     bool m_mustHasContextHasBeenSet;

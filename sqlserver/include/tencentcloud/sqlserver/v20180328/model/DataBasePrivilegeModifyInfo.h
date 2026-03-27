@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Database Account Permission Modification Information
                 */
                 class DataBasePrivilegeModifyInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DataBaseName 
+                     * 获取Database Name
+                     * @return DataBaseName Database Name
                      * 
                      */
                     std::string GetDataBaseName() const;
 
                     /**
-                     * 设置
-                     * @param _dataBaseName 
+                     * 设置Database Name
+                     * @param _dataBaseName Database Name
                      * 
                      */
                     void SetDataBaseName(const std::string& _dataBaseName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DataBaseNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccountPrivileges 
+                     * 获取Database Permission Modification Information
+                     * @return AccountPrivileges Database Permission Modification Information
                      * 
                      */
                     std::vector<AccountPrivilege> GetAccountPrivileges() const;
 
                     /**
-                     * 设置
-                     * @param _accountPrivileges 
+                     * 设置Database Permission Modification Information
+                     * @param _accountPrivileges Database Permission Modification Information
                      * 
                      */
                     void SetAccountPrivileges(const std::vector<AccountPrivilege>& _accountPrivileges);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Database Name
                      */
                     std::string m_dataBaseName;
                     bool m_dataBaseNameHasBeenSet;
 
                     /**
-                     * 
+                     * Database Permission Modification Information
                      */
                     std::vector<AccountPrivilege> m_accountPrivileges;
                     bool m_accountPrivilegesHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * catalog Level Permission
                 */
                 class CatalogPermission : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CatalogName 
+                     * 获取catalog Name
+                     * @return CatalogName catalog Name
                      * 
                      */
                     std::string GetCatalogName() const;
 
                     /**
-                     * 设置
-                     * @param _catalogName 
+                     * 设置catalog Name
+                     * @param _catalogName catalog Name
                      * 
                      */
                     void SetCatalogName(const std::string& _catalogName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CatalogNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Permissions 
+                     * 获取catalog permission
+                     * @return Permissions catalog permission
                      * 
                      */
                     std::vector<std::string> GetPermissions() const;
 
                     /**
-                     * 设置
-                     * @param _permissions 
+                     * 设置catalog permission
+                     * @param _permissions catalog permission
                      * 
                      */
                     void SetPermissions(const std::vector<std::string>& _permissions);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * catalog Name
                      */
                     std::string m_catalogName;
                     bool m_catalogNameHasBeenSet;
 
                     /**
-                     * 
+                     * catalog permission
                      */
                     std::vector<std::string> m_permissions;
                     bool m_permissionsHasBeenSet;

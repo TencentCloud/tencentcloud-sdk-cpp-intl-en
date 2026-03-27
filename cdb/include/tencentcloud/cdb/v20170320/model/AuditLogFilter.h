@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBName 
+                     * 获取Database Name.
+                     * @return DBName Database Name.
                      * 
                      */
                     std::vector<std::string> GetDBName() const;
 
                     /**
-                     * 设置
-                     * @param _dBName 
+                     * 设置Database Name.
+                     * @param _dBName Database Name.
                      * 
                      */
                     void SetDBName(const std::vector<std::string>& _dBName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sql 
+                     * 获取SQL statement. Supports fuzzy matching.
+                     * @return Sql SQL statement. Supports fuzzy matching.
                      * 
                      */
                     std::string GetSql() const;
 
                     /**
-                     * 设置
-                     * @param _sql 
+                     * 设置SQL statement. Supports fuzzy matching.
+                     * @param _sql SQL statement. Supports fuzzy matching.
                      * 
                      */
                     void SetSql(const std::string& _sql);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool SqlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SqlType 
+                     * 获取SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
+                     * @return SqlType SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
                      * 
                      */
                     std::string GetSqlType() const;
 
                     /**
-                     * 设置
-                     * @param _sqlType 
+                     * 设置SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
+                     * @param _sqlType SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
                      * 
                      */
                     void SetSqlType(const std::string& _sqlType);
@@ -481,7 +481,7 @@ namespace TencentCloud
                     bool m_userHasBeenSet;
 
                     /**
-                     * 
+                     * Database Name.
                      */
                     std::vector<std::string> m_dBName;
                     bool m_dBNameHasBeenSet;
@@ -499,13 +499,13 @@ namespace TencentCloud
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * 
+                     * SQL statement. Supports fuzzy matching.
                      */
                     std::string m_sql;
                     bool m_sqlHasBeenSet;
 
                     /**
-                     * 
+                     * SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
                      */
                     std::string m_sqlType;
                     bool m_sqlTypeHasBeenSet;

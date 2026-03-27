@@ -308,15 +308,15 @@ Default value: `bandwidth`
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeZone 
+                     * 获取Specify the time zone for query time, default UTC+08:00
+                     * @return TimeZone Specify the time zone for query time, default UTC+08:00
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置
-                     * @param _timeZone 
+                     * 设置Specify the time zone for query time, default UTC+08:00
+                     * @param _timeZone Specify the time zone for query time, default UTC+08:00
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -404,7 +404,7 @@ Default value: `bandwidth`
                     bool m_productHasBeenSet;
 
                     /**
-                     * 
+                     * Specify the time zone for query time, default UTC+08:00
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;

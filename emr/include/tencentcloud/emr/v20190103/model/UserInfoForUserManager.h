@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserGroupHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PassWord 
+                     * 获取Password
+                     * @return PassWord Password
                      * 
                      */
                     std::string GetPassWord() const;
 
                     /**
-                     * 设置
-                     * @param _passWord 
+                     * 设置Password
+                     * @param _passWord Password
                      * 
                      */
                     void SetPassWord(const std::string& _passWord);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PassWordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReMark 
+                     * 获取Remarks
+                     * @return ReMark Remarks
                      * 
                      */
                     std::string GetReMark() const;
 
                     /**
-                     * 设置
-                     * @param _reMark 
+                     * 设置Remarks
+                     * @param _reMark Remarks
                      * 
                      */
                     void SetReMark(const std::string& _reMark);
@@ -166,13 +166,13 @@ namespace TencentCloud
                     bool m_userGroupHasBeenSet;
 
                     /**
-                     * 
+                     * Password
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
 
                     /**
-                     * 
+                     * Remarks
                      */
                     std::string m_reMark;
                     bool m_reMarkHasBeenSet;

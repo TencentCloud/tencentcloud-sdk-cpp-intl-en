@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Backup Overview Real-Time Statistics
                 */
                 class SummaryDetailRes : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RegionId 
+                     * 获取Region Identifier
+                     * @return RegionId Region Identifier
                      * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
-                     * 设置
-                     * @param _regionId 
+                     * 设置Region Identifier
+                     * @param _regionId Region Identifier
                      * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
@@ -68,15 +68,55 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+                     * @return Status Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+                     * @param _status Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -89,15 +129,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Instance ID
+                     * @param _instanceId Instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -110,15 +150,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Instance Name
+                     * @return Name Instance Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Instance Name
+                     * @param _name Instance Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -131,15 +171,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActualUsedSpace 
+                     * 获取Backup Space
+                     * @return ActualUsedSpace Backup Space
                      * 
                      */
                     uint64_t GetActualUsedSpace() const;
 
                     /**
-                     * 设置
-                     * @param _actualUsedSpace 
+                     * 设置Backup Space
+                     * @param _actualUsedSpace Backup Space
                      * 
                      */
                     void SetActualUsedSpace(const uint64_t& _actualUsedSpace);
@@ -152,15 +192,15 @@ namespace TencentCloud
                     bool ActualUsedSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataBackupSpace 
+                     * 获取Data Backup Space
+                     * @return DataBackupSpace Data Backup Space
                      * 
                      */
                     uint64_t GetDataBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _dataBackupSpace 
+                     * 设置Data Backup Space
+                     * @param _dataBackupSpace Data Backup Space
                      * 
                      */
                     void SetDataBackupSpace(const uint64_t& _dataBackupSpace);
@@ -173,15 +213,15 @@ namespace TencentCloud
                     bool DataBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataBackupCount 
+                     * 获取Data Backup Total File Count
+                     * @return DataBackupCount Data Backup Total File Count
                      * 
                      */
                     uint64_t GetDataBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _dataBackupCount 
+                     * 设置Data Backup Total File Count
+                     * @param _dataBackupCount Data Backup Total File Count
                      * 
                      */
                     void SetDataBackupCount(const uint64_t& _dataBackupCount);
@@ -194,15 +234,15 @@ namespace TencentCloud
                     bool DataBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogBackupSpace 
+                     * 获取Log Backup Space
+                     * @return LogBackupSpace Log Backup Space
                      * 
                      */
                     uint64_t GetLogBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _logBackupSpace 
+                     * 设置Log Backup Space
+                     * @param _logBackupSpace Log Backup Space
                      * 
                      */
                     void SetLogBackupSpace(const uint64_t& _logBackupSpace);
@@ -215,15 +255,15 @@ namespace TencentCloud
                     bool LogBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogBackupCount 
+                     * 获取Log Backup Total File Count
+                     * @return LogBackupCount Log Backup Total File Count
                      * 
                      */
                     uint64_t GetLogBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _logBackupCount 
+                     * 设置Log Backup Total File Count
+                     * @param _logBackupCount Log Backup Total File Count
                      * 
                      */
                     void SetLogBackupCount(const uint64_t& _logBackupCount);
@@ -236,15 +276,15 @@ namespace TencentCloud
                     bool LogBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoBackupSpace 
+                     * 获取Automatic Backup Space
+                     * @return AutoBackupSpace Automatic Backup Space
                      * 
                      */
                     uint64_t GetAutoBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _autoBackupSpace 
+                     * 设置Automatic Backup Space
+                     * @param _autoBackupSpace Automatic Backup Space
                      * 
                      */
                     void SetAutoBackupSpace(const uint64_t& _autoBackupSpace);
@@ -257,15 +297,15 @@ namespace TencentCloud
                     bool AutoBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoBackupCount 
+                     * 获取Automatic Backup Total File Count
+                     * @return AutoBackupCount Automatic Backup Total File Count
                      * 
                      */
                     uint64_t GetAutoBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _autoBackupCount 
+                     * 设置Automatic Backup Total File Count
+                     * @param _autoBackupCount Automatic Backup Total File Count
                      * 
                      */
                     void SetAutoBackupCount(const uint64_t& _autoBackupCount);
@@ -278,15 +318,15 @@ namespace TencentCloud
                     bool AutoBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ManualBackupSpace 
+                     * 获取Manual Backup Space
+                     * @return ManualBackupSpace Manual Backup Space
                      * 
                      */
                     uint64_t GetManualBackupSpace() const;
 
                     /**
-                     * 设置
-                     * @param _manualBackupSpace 
+                     * 设置Manual Backup Space
+                     * @param _manualBackupSpace Manual Backup Space
                      * 
                      */
                     void SetManualBackupSpace(const uint64_t& _manualBackupSpace);
@@ -299,15 +339,15 @@ namespace TencentCloud
                     bool ManualBackupSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ManualBackupCount 
+                     * 获取Manual Backup Total File Count
+                     * @return ManualBackupCount Manual Backup Total File Count
                      * 
                      */
                     uint64_t GetManualBackupCount() const;
 
                     /**
-                     * 设置
-                     * @param _manualBackupCount 
+                     * 设置Manual Backup Total File Count
+                     * @param _manualBackupCount Manual Backup Total File Count
                      * 
                      */
                     void SetManualBackupCount(const uint64_t& _manualBackupCount);
@@ -320,15 +360,15 @@ namespace TencentCloud
                     bool ManualBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Instance Region Code
+                     * @return Region Instance Region Code
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Instance Region Code
+                     * @param _region Instance Region Code
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -343,85 +383,95 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Region Identifier
                      */
                     uint64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Backup Space
                      */
                     uint64_t m_actualUsedSpace;
                     bool m_actualUsedSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Data Backup Space
                      */
                     uint64_t m_dataBackupSpace;
                     bool m_dataBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Data Backup Total File Count
                      */
                     uint64_t m_dataBackupCount;
                     bool m_dataBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Log Backup Space
                      */
                     uint64_t m_logBackupSpace;
                     bool m_logBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Log Backup Total File Count
                      */
                     uint64_t m_logBackupCount;
                     bool m_logBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Automatic Backup Space
                      */
                     uint64_t m_autoBackupSpace;
                     bool m_autoBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Automatic Backup Total File Count
                      */
                     uint64_t m_autoBackupCount;
                     bool m_autoBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Manual Backup Space
                      */
                     uint64_t m_manualBackupSpace;
                     bool m_manualBackupSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Manual Backup Total File Count
                      */
                     uint64_t m_manualBackupCount;
                     bool m_manualBackupCountHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Region Code
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

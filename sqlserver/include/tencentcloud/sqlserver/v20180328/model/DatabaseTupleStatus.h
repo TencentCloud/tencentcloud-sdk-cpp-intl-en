@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * This data structure represents two databases with a publish-subscribe relationship, along with the status information of that relationship between them.
                 */
                 class DatabaseTupleStatus : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PublishDatabase 
+                     * 获取Publish Database Name
+                     * @return PublishDatabase Publish Database Name
                      * 
                      */
                     std::string GetPublishDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _publishDatabase 
+                     * 设置Publish Database Name
+                     * @param _publishDatabase Publish Database Name
                      * 
                      */
                     void SetPublishDatabase(const std::string& _publishDatabase);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PublishDatabaseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeDatabase 
+                     * 获取Subscription Database Name
+                     * @return SubscribeDatabase Subscription Database Name
                      * 
                      */
                     std::string GetSubscribeDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeDatabase 
+                     * 设置Subscription Database Name
+                     * @param _subscribeDatabase Subscription Database Name
                      * 
                      */
                     void SetSubscribeDatabase(const std::string& _subscribeDatabase);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubscribeDatabaseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastSyncTime 
+                     * 获取Latest Synchronization Time
+                     * @return LastSyncTime Latest Synchronization Time
                      * 
                      */
                     std::string GetLastSyncTime() const;
 
                     /**
-                     * 设置
-                     * @param _lastSyncTime 
+                     * 设置Latest Synchronization Time
+                     * @param _lastSyncTime Latest Synchronization Time
                      * 
                      */
                     void SetLastSyncTime(const std::string& _lastSyncTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LastSyncTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Publish/Subscribe Status Between Databases: running, success, fail, unknow
+                     * @return Status Publish/Subscribe Status Between Databases: running, success, fail, unknow
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Publish/Subscribe Status Between Databases: running, success, fail, unknow
+                     * @param _status Publish/Subscribe Status Between Databases: running, success, fail, unknow
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Publish Database Name
                      */
                     std::string m_publishDatabase;
                     bool m_publishDatabaseHasBeenSet;
 
                     /**
-                     * 
+                     * Subscription Database Name
                      */
                     std::string m_subscribeDatabase;
                     bool m_subscribeDatabaseHasBeenSet;
 
                     /**
-                     * 
+                     * Latest Synchronization Time
                      */
                     std::string m_lastSyncTime;
                     bool m_lastSyncTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Publish/Subscribe Status Between Databases: running, success, fail, unknow
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

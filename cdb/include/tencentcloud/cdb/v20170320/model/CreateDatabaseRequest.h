@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBName 
+                     * 获取Database Name, up to 64 characters in length.
+                     * @return DBName Database Name, up to 64 characters in length.
                      * 
                      */
                     std::string GetDBName() const;
 
                     /**
-                     * 设置
-                     * @param _dBName 
+                     * 设置Database Name, up to 64 characters in length.
+                     * @param _dBName Database Name, up to 64 characters in length.
                      * 
                      */
                     void SetDBName(const std::string& _dBName);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Database Name, up to 64 characters in length.
                      */
                     std::string m_dBName;
                     bool m_dBNameHasBeenSet;

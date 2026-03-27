@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ServiceCIDRHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return K8SVersion 
+                     * 获取k8s version number
+                     * @return K8SVersion k8s version number
                      * 
                      */
                     std::string GetK8SVersion() const;
 
                     /**
-                     * 设置
-                     * @param _k8SVersion 
+                     * 设置k8s version number
+                     * @param _k8SVersion k8s version number
                      * 
                      */
                     void SetK8SVersion(const std::string& _k8SVersion);
@@ -466,7 +466,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_serviceCIDRHasBeenSet;
 
                     /**
-                     * 
+                     * k8s version number
                      */
                     std::string m_k8SVersion;
                     bool m_k8SVersionHasBeenSet;

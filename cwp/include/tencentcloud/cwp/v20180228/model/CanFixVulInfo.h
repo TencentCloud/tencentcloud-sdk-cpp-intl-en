@@ -148,15 +148,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixTagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VulCategory 
+                     * 获取Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+                     * @return VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
                      * 
                      */
                     uint64_t GetVulCategory() const;
 
                     /**
-                     * 设置
-                     * @param _vulCategory 
+                     * 设置Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+                     * @param _vulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
                      * 
                      */
                     void SetVulCategory(const uint64_t& _vulCategory);
@@ -199,7 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fixTagHasBeenSet;
 
                     /**
-                     * 
+                     * Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
                      */
                     uint64_t m_vulCategory;
                     bool m_vulCategoryHasBeenSet;

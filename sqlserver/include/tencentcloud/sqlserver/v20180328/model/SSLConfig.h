@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * SSL Encryption Configuration
                 */
                 class SSLConfig : public AbstractModel
                 {
@@ -47,15 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Encryption 
+                     * 获取SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+                     * @return Encryption SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
                      * 
                      */
                     std::string GetEncryption() const;
 
                     /**
-                     * 设置
-                     * @param _encryption 
+                     * 设置SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+                     * @param _encryption SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
                      * 
                      */
                     void SetEncryption(const std::string& _encryption);
@@ -68,15 +92,15 @@ namespace TencentCloud
                     bool EncryptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SSLValidityPeriod 
+                     * 获取SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+                     * @return SSLValidityPeriod SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     std::string GetSSLValidityPeriod() const;
 
                     /**
-                     * 设置
-                     * @param _sSLValidityPeriod 
+                     * 设置SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+                     * @param _sSLValidityPeriod SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     void SetSSLValidityPeriod(const std::string& _sSLValidityPeriod);
@@ -89,15 +113,15 @@ namespace TencentCloud
                     bool SSLValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SSLValidity 
+                     * 获取SSL Certificates Validity: 0 - Invalid, 1 - Valid
+                     * @return SSLValidity SSL Certificates Validity: 0 - Invalid, 1 - Valid
                      * 
                      */
                     uint64_t GetSSLValidity() const;
 
                     /**
-                     * 设置
-                     * @param _sSLValidity 
+                     * 设置SSL Certificates Validity: 0 - Invalid, 1 - Valid
+                     * @param _sSLValidity SSL Certificates Validity: 0 - Invalid, 1 - Valid
                      * 
                      */
                     void SetSSLValidity(const uint64_t& _sSLValidity);
@@ -112,19 +136,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
                      */
                     std::string m_encryption;
                     bool m_encryptionHasBeenSet;
 
                     /**
-                     * 
+                     * SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
                      */
                     std::string m_sSLValidityPeriod;
                     bool m_sSLValidityPeriodHasBeenSet;
 
                     /**
-                     * 
+                     * SSL Certificates Validity: 0 - Invalid, 1 - Valid
                      */
                     uint64_t m_sSLValidity;
                     bool m_sSLValidityHasBeenSet;

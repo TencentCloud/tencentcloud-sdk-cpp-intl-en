@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Channel-associated domain record information.
                 */
                 class DomainRecordInfo : public AbstractModel
                 {

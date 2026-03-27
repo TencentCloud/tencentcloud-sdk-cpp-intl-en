@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * IP blocking records
                 */
                 class IpBlockData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+                     * @return Status Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+                     * @param _status Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Resource IP
+                     * @return Ip Resource IP
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param _ip 
+                     * 设置Resource IP
+                     * @param _ip Resource IP
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlockTime 
+                     * 获取Blocking Time
+                     * @return BlockTime Blocking Time
                      * 
                      */
                     std::string GetBlockTime() const;
 
                     /**
-                     * 设置
-                     * @param _blockTime 
+                     * 设置Blocking Time
+                     * @param _blockTime Blocking Time
                      * 
                      */
                     void SetBlockTime(const std::string& _blockTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BlockTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UnBlockTime 
+                     * 获取Unblock Time (Estimated Unblock Time)
+                     * @return UnBlockTime Unblock Time (Estimated Unblock Time)
                      * 
                      */
                     std::string GetUnBlockTime() const;
 
                     /**
-                     * 设置
-                     * @param _unBlockTime 
+                     * 设置Unblock Time (Estimated Unblock Time)
+                     * @param _unBlockTime Unblock Time (Estimated Unblock Time)
                      * 
                      */
                     void SetUnBlockTime(const std::string& _unBlockTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UnBlockTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActionType 
+                     * 获取Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+                     * @return ActionType Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置
-                     * @param _actionType 
+                     * 设置Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+                     * @param _actionType Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProtectFlag 
+                     * 获取Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
+                     * @return ProtectFlag Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
                      * 
                      */
                     uint64_t GetProtectFlag() const;
 
                     /**
-                     * 设置
-                     * @param _protectFlag 
+                     * 设置Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
+                     * @param _protectFlag Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
                      * 
                      */
                     void SetProtectFlag(const uint64_t& _protectFlag);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Resource IP
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * Blocking Time
                      */
                     std::string m_blockTime;
                     bool m_blockTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Unblock Time (Estimated Unblock Time)
                      */
                     std::string m_unBlockTime;
                     bool m_unBlockTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
                      */
                     uint64_t m_protectFlag;
                     bool m_protectFlagHasBeenSet;

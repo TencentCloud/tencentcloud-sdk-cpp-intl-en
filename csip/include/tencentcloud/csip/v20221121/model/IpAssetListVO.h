@@ -248,15 +248,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PublicIpTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取vpc
+                     * @return VpcId vpc
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置vpc
+                     * @param _vpcId vpc
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -977,7 +977,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_publicIpTypeHasBeenSet;
 
                     /**
-                     * 
+                     * vpc
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

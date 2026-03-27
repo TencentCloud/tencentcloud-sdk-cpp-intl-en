@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NeedRouterInfo 
+                     * 获取Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
+                     * @return NeedRouterInfo Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
                      * 
                      */
                     bool GetNeedRouterInfo() const;
 
                     /**
-                     * 设置
-                     * @param _needRouterInfo 
+                     * 设置Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
+                     * @param _needRouterInfo Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
                      * 
                      */
                     void SetNeedRouterInfo(const bool& _needRouterInfo);
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
                      */
                     bool m_needRouterInfo;
                     bool m_needRouterInfoHasBeenSet;

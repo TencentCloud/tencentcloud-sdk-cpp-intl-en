@@ -230,15 +230,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool MetricHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Cycle 
+                     * 获取Detection Cycle, Unit: Minutes, 60 or 1440
+                     * @return Cycle Detection Cycle, Unit: Minutes, 60 or 1440
                      * 
                      */
                     uint64_t GetCycle() const;
 
                     /**
-                     * 设置
-                     * @param _cycle 
+                     * 设置Detection Cycle, Unit: Minutes, 60 or 1440
+                     * @param _cycle Detection Cycle, Unit: Minutes, 60 or 1440
                      * 
                      */
                     void SetCycle(const uint64_t& _cycle);
@@ -337,7 +337,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_metricHasBeenSet;
 
                     /**
-                     * 
+                     * Detection Cycle, Unit: Minutes, 60 or 1440
                      */
                     uint64_t m_cycle;
                     bool m_cycleHasBeenSet;

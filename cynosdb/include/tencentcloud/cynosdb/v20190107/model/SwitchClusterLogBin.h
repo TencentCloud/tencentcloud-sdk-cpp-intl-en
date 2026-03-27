@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Toggle Cluster log bin Switch
                 */
                 class SwitchClusterLogBin : public AbstractModel
                 {

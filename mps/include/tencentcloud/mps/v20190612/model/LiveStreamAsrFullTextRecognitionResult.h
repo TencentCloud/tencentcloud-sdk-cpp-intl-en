@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Recognition start UTC time.
+                     * @return StartTime Recognition start UTC time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Recognition start UTC time.
+                     * @param _startTime Recognition start UTC time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取Recognition end UTC time.
+                     * @return EndTime Recognition end UTC time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置Recognition end UTC time.
+                     * @param _endTime Recognition end UTC time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SteadyState 
+                     * 获取Steady state marker.
+                     * @return SteadyState Steady state marker.
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置
-                     * @param _steadyState 
+                     * 设置Steady state marker.
+                     * @param _steadyState Steady state marker.
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -241,19 +241,19 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Recognition start UTC time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Recognition end UTC time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Steady state marker.
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;

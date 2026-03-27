@@ -303,18 +303,18 @@ Supported image format: JPG or PNG
 
                     /**
                      * 获取Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
                      * @return FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
                      * 
                      */
                     int64_t GetFaceCount() const;
 
                     /**
                      * 设置Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
                      * @param _faceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
                      * 
                      */
                     void SetFaceCount(const int64_t& _faceCount);
@@ -473,7 +473,7 @@ Supported image format: JPG or PNG
 
                     /**
                      * Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
                      */
                     int64_t m_faceCount;
                     bool m_faceCountHasBeenSet;

@@ -815,15 +815,15 @@ Hadoop-Hbase
                     bool ExternalServiceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VersionID 
+                     * 获取If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+                     * @return VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
                      * 
                      */
                     int64_t GetVersionID() const;
 
                     /**
-                     * 设置
-                     * @param _versionID 
+                     * 设置If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+                     * @param _versionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
                      * 
                      */
                     void SetVersionID(const int64_t& _versionID);
@@ -1155,7 +1155,7 @@ Hadoop-Hbase
                     bool m_externalServiceHasBeenSet;
 
                     /**
-                     * 
+                     * If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
                      */
                     int64_t m_versionID;
                     bool m_versionIDHasBeenSet;

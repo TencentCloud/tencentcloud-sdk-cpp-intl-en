@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * This data structure represents two databases that have a publish-subscribe relationship.
                 */
                 class DatabaseTuple : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PublishDatabase 
+                     * 获取Publish Database Name
+                     * @return PublishDatabase Publish Database Name
                      * 
                      */
                     std::string GetPublishDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _publishDatabase 
+                     * 设置Publish Database Name
+                     * @param _publishDatabase Publish Database Name
                      * 
                      */
                     void SetPublishDatabase(const std::string& _publishDatabase);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PublishDatabaseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeDatabase 
+                     * 获取Subscription Database Name
+                     * @return SubscribeDatabase Subscription Database Name
                      * 
                      */
                     std::string GetSubscribeDatabase() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeDatabase 
+                     * 设置Subscription Database Name
+                     * @param _subscribeDatabase Subscription Database Name
                      * 
                      */
                     void SetSubscribeDatabase(const std::string& _subscribeDatabase);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Publish Database Name
                      */
                     std::string m_publishDatabase;
                     bool m_publishDatabaseHasBeenSet;
 
                     /**
-                     * 
+                     * Subscription Database Name
                      */
                     std::string m_subscribeDatabase;
                     bool m_subscribeDatabaseHasBeenSet;

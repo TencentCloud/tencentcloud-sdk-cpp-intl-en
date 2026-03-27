@@ -646,15 +646,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodMemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterName 
+                     * 获取Cluster Name
+                     * @return ClusterName Cluster Name
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置
-                     * @param _clusterName 
+                     * 设置Cluster Name
+                     * @param _clusterName Cluster Name
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -667,15 +667,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterID 
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置
-                     * @param _clusterID 
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -688,15 +688,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PodUid 
+                     * 获取pod uid
+                     * @return PodUid pod uid
                      * 
                      */
                     std::string GetPodUid() const;
 
                     /**
-                     * 设置
-                     * @param _podUid 
+                     * 设置pod uid
+                     * @param _podUid pod uid
                      * 
                      */
                     void SetPodUid(const std::string& _podUid);
@@ -881,19 +881,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_podMemHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster Name
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster ID
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * 
+                     * pod uid
                      */
                     std::string m_podUid;
                     bool m_podUidHasBeenSet;

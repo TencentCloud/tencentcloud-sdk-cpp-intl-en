@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Document list filter flag
                 */
                 class DocFilterFlag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Flag 
+                     * 获取Flag
+                     * @return Flag Flag
                      * 
                      */
                     std::string GetFlag() const;
 
                     /**
-                     * 设置
-                     * @param _flag 
+                     * 设置Flag
+                     * @param _flag Flag
                      * 
                      */
                     void SetFlag(const std::string& _flag);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取ID Value
+                     * @return Value ID Value
                      * 
                      */
                     bool GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置ID Value
+                     * @param _value ID Value
                      * 
                      */
                     void SetValue(const bool& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Flag
                      */
                     std::string m_flag;
                     bool m_flagHasBeenSet;
 
                     /**
-                     * 
+                     * ID Value
                      */
                     bool m_value;
                     bool m_valueHasBeenSet;

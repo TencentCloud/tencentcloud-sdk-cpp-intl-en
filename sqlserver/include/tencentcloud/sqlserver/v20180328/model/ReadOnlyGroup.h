@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Read-Only Group Object
                 */
                 class ReadOnlyGroup : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupId 
+                     * 获取Read-Only Group ID
+                     * @return ReadOnlyGroupId Read-Only Group ID
                      * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupId 
+                     * 设置Read-Only Group ID
+                     * @param _readOnlyGroupId Read-Only Group ID
                      * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupName 
+                     * 获取Read-Only Group Name
+                     * @return ReadOnlyGroupName Read-Only Group Name
                      * 
                      */
                     std::string GetReadOnlyGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupName 
+                     * 设置Read-Only Group Name
+                     * @param _readOnlyGroupName Read-Only Group Name
                      * 
                      */
                     void SetReadOnlyGroupName(const std::string& _readOnlyGroupName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegionId 
+                     * 获取Region ID of the Read-Only Group, same as the Primary Instance
+                     * @return RegionId Region ID of the Read-Only Group, same as the Primary Instance
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置
-                     * @param _regionId 
+                     * 设置Region ID of the Read-Only Group, same as the Primary Instance
+                     * @param _regionId Region ID of the Read-Only Group, same as the Primary Instance
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ZoneId 
+                     * 获取Read-Only Group's AZ ID, same as the Primary Instance
+                     * @return ZoneId Read-Only Group's AZ ID, same as the Primary Instance
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置
-                     * @param _zoneId 
+                     * 设置Read-Only Group's AZ ID, same as the Primary Instance
+                     * @param _zoneId Read-Only Group's AZ ID, same as the Primary Instance
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsOfflineDelay 
+                     * 获取Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+                     * @return IsOfflineDelay Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
                      * 
                      */
                     int64_t GetIsOfflineDelay() const;
 
                     /**
-                     * 设置
-                     * @param _isOfflineDelay 
+                     * 设置Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+                     * @param _isOfflineDelay Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
                      * 
                      */
                     void SetIsOfflineDelay(const int64_t& _isOfflineDelay);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool IsOfflineDelayHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyMaxDelayTime 
+                     * 获取Timeout threshold used after enabling the timeout culling feature
+                     * @return ReadOnlyMaxDelayTime Timeout threshold used after enabling the timeout culling feature
                      * 
                      */
                     int64_t GetReadOnlyMaxDelayTime() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyMaxDelayTime 
+                     * 设置Timeout threshold used after enabling the timeout culling feature
+                     * @param _readOnlyMaxDelayTime Timeout threshold used after enabling the timeout culling feature
                      * 
                      */
                     void SetReadOnlyMaxDelayTime(const int64_t& _readOnlyMaxDelayTime);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ReadOnlyMaxDelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MinReadOnlyInGroup 
+                     * 获取Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+                     * @return MinReadOnlyInGroup Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
                      * 
                      */
                     int64_t GetMinReadOnlyInGroup() const;
 
                     /**
-                     * 设置
-                     * @param _minReadOnlyInGroup 
+                     * 设置Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+                     * @param _minReadOnlyInGroup Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
                      * 
                      */
                     void SetMinReadOnlyInGroup(const int64_t& _minReadOnlyInGroup);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool MinReadOnlyInGroupHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vip 
+                     * 获取Read-Only Group vip
+                     * @return Vip Read-Only Group vip
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置
-                     * @param _vip 
+                     * 设置Read-Only Group vip
+                     * @param _vip Read-Only Group vip
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vport 
+                     * 获取Read-Only Group vport
+                     * @return Vport Read-Only Group vport
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置
-                     * @param _vport 
+                     * 设置Read-Only Group vport
+                     * @param _vport Read-Only Group vport
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取Read-Only Group VPC ID
+                     * @return VpcId Read-Only Group VPC ID
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置Read-Only Group VPC ID
+                     * @param _vpcId Read-Only Group VPC ID
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取Read-Only Group VPC Subnet ID
+                     * @return SubnetId Read-Only Group VPC Subnet ID
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _subnetId 
+                     * 设置Read-Only Group VPC Subnet ID
+                     * @param _subnetId Read-Only Group VPC Subnet ID
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Read-Only Group Status: 1-Running, 5-Creating
+                     * @return Status Read-Only Group Status: 1-Running, 5-Creating
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Read-Only Group Status: 1-Running, 5-Creating
+                     * @param _status Read-Only Group Status: 1-Running, 5-Creating
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MasterInstanceId 
+                     * 获取Primary instance ID, in the form of mssql-sgeshe3th
+                     * @return MasterInstanceId Primary instance ID, in the form of mssql-sgeshe3th
                      * 
                      */
                     std::string GetMasterInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _masterInstanceId 
+                     * 设置Primary instance ID, in the form of mssql-sgeshe3th
+                     * @param _masterInstanceId Primary instance ID, in the form of mssql-sgeshe3th
                      * 
                      */
                     void SetMasterInstanceId(const std::string& _masterInstanceId);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool MasterInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyInstanceSet 
+                     * 获取Read-Only Instance Replica Set
+                     * @return ReadOnlyInstanceSet Read-Only Instance Replica Set
                      * 
                      */
                     std::vector<ReadOnlyInstance> GetReadOnlyInstanceSet() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyInstanceSet 
+                     * 设置Read-Only Instance Replica Set
+                     * @param _readOnlyInstanceSet Read-Only Instance Replica Set
                      * 
                      */
                     void SetReadOnlyInstanceSet(const std::vector<ReadOnlyInstance>& _readOnlyInstanceSet);
@@ -386,85 +386,85 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Read-Only Group ID
                      */
                     std::string m_readOnlyGroupId;
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group Name
                      */
                     std::string m_readOnlyGroupName;
                     bool m_readOnlyGroupNameHasBeenSet;
 
                     /**
-                     * 
+                     * Region ID of the Read-Only Group, same as the Primary Instance
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group's AZ ID, same as the Primary Instance
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
                      */
                     int64_t m_isOfflineDelay;
                     bool m_isOfflineDelayHasBeenSet;
 
                     /**
-                     * 
+                     * Timeout threshold used after enabling the timeout culling feature
                      */
                     int64_t m_readOnlyMaxDelayTime;
                     bool m_readOnlyMaxDelayTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
                      */
                     int64_t m_minReadOnlyInGroup;
                     bool m_minReadOnlyInGroupHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group vip
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group vport
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group VPC Subnet ID
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Group Status: 1-Running, 5-Creating
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Primary instance ID, in the form of mssql-sgeshe3th
                      */
                     std::string m_masterInstanceId;
                     bool m_masterInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Read-Only Instance Replica Set
                      */
                     std::vector<ReadOnlyInstance> m_readOnlyInstanceSet;
                     bool m_readOnlyInstanceSetHasBeenSet;

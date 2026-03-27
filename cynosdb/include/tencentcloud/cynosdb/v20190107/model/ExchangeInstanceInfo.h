@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Exchange Instance Information
                 */
                 class ExchangeInstanceInfo : public AbstractModel
                 {

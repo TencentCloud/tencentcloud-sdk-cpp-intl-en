@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * exchange usage quota information
                 */
                 class ExchangeQuota : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxExchange 
+                     * 获取Maximum number of creatable exchanges
+                     * @return MaxExchange Maximum number of creatable exchanges
                      * 
                      */
                     int64_t GetMaxExchange() const;
 
                     /**
-                     * 设置
-                     * @param _maxExchange 
+                     * 设置Maximum number of creatable exchanges
+                     * @param _maxExchange Maximum number of creatable exchanges
                      * 
                      */
                     void SetMaxExchange(const int64_t& _maxExchange);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Maximum number of creatable exchanges
                      */
                     int64_t m_maxExchange;
                     bool m_maxExchangeHasBeenSet;

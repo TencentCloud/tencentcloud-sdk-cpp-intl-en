@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Agent Debugging Information
                 */
                 class AgentDebugInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Input Information for Tools and Large Models, json
+                     * @return Input Input Information for Tools and Large Models, json
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Input Information for Tools and Large Models, json
+                     * @param _input Input Information for Tools and Large Models, json
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output Information for Tools and Large Models, json
+                     * @return Output Output Information for Tools and Large Models, json
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output Information for Tools and Large Models, json
+                     * @param _output Output Information for Tools and Large Models, json
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input Information for Tools and Large Models, json
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output Information for Tools and Large Models, json
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;

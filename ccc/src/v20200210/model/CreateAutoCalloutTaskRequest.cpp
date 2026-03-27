@@ -37,7 +37,9 @@ CreateAutoCalloutTaskRequest::CreateAutoCalloutTaskRequest() :
     m_calleeAttributesHasBeenSet(false),
     m_timeZoneHasBeenSet(false),
     m_availableTimeHasBeenSet(false),
-    m_aIAgentIdHasBeenSet(false)
+    m_aIAgentIdHasBeenSet(false),
+    m_retryIntervalHasBeenSet(false),
+    m_maxRingTimeoutSecondHasBeenSet(false)
 {
 }
 
@@ -197,6 +199,22 @@ string CreateAutoCalloutTaskRequest::ToJsonString() const
         string key = "AIAgentId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_aIAgentId, allocator);
+    }
+
+    if (m_retryIntervalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetryInterval";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retryInterval, allocator);
+    }
+
+    if (m_maxRingTimeoutSecondHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxRingTimeoutSecond";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxRingTimeoutSecond, allocator);
     }
 
 
@@ -445,6 +463,38 @@ void CreateAutoCalloutTaskRequest::SetAIAgentId(const int64_t& _aIAgentId)
 bool CreateAutoCalloutTaskRequest::AIAgentIdHasBeenSet() const
 {
     return m_aIAgentIdHasBeenSet;
+}
+
+int64_t CreateAutoCalloutTaskRequest::GetRetryInterval() const
+{
+    return m_retryInterval;
+}
+
+void CreateAutoCalloutTaskRequest::SetRetryInterval(const int64_t& _retryInterval)
+{
+    m_retryInterval = _retryInterval;
+    m_retryIntervalHasBeenSet = true;
+}
+
+bool CreateAutoCalloutTaskRequest::RetryIntervalHasBeenSet() const
+{
+    return m_retryIntervalHasBeenSet;
+}
+
+int64_t CreateAutoCalloutTaskRequest::GetMaxRingTimeoutSecond() const
+{
+    return m_maxRingTimeoutSecond;
+}
+
+void CreateAutoCalloutTaskRequest::SetMaxRingTimeoutSecond(const int64_t& _maxRingTimeoutSecond)
+{
+    m_maxRingTimeoutSecond = _maxRingTimeoutSecond;
+    m_maxRingTimeoutSecondHasBeenSet = true;
+}
+
+bool CreateAutoCalloutTaskRequest::MaxRingTimeoutSecondHasBeenSet() const
+{
+    return m_maxRingTimeoutSecondHasBeenSet;
 }
 
 

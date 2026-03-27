@@ -266,15 +266,15 @@ namespace TencentCloud
                     bool NodeCountSummaryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoscalingGroupStatus 
+                     * 获取Status information
+                     * @return AutoscalingGroupStatus Status information
                      * 
                      */
                     std::string GetAutoscalingGroupStatus() const;
 
                     /**
-                     * 设置
-                     * @param _autoscalingGroupStatus 
+                     * 设置Status information
+                     * @param _autoscalingGroupStatus Status information
                      * 
                      */
                     void SetAutoscalingGroupStatus(const std::string& _autoscalingGroupStatus);
@@ -782,7 +782,7 @@ Note: This field may return "null", indicating that no valid value can be obtain
                     bool m_nodeCountSummaryHasBeenSet;
 
                     /**
-                     * 
+                     * Status information
                      */
                     std::string m_autoscalingGroupStatus;
                     bool m_autoscalingGroupStatusHasBeenSet;

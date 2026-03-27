@@ -1840,6 +1840,56 @@ BillingClient::DescribeGatherRuleDetailOutcomeCallable BillingClient::DescribeGa
     return prom->get_future();
 }
 
+BillingClient::DescribeRenewInstancesOutcome BillingClient::DescribeRenewInstances(const DescribeRenewInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRenewInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRenewInstancesResponse rsp = DescribeRenewInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRenewInstancesOutcome(rsp);
+        else
+            return DescribeRenewInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRenewInstancesOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeRenewInstancesAsync(const DescribeRenewInstancesRequest& request, const DescribeRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRenewInstancesRequest&;
+    using Resp = DescribeRenewInstancesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRenewInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeRenewInstancesOutcomeCallable BillingClient::DescribeRenewInstancesCallable(const DescribeRenewInstancesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRenewInstancesOutcome>>();
+    DescribeRenewInstancesAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeRenewInstancesRequest&,
+        DescribeRenewInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DescribeTagListOutcome BillingClient::DescribeTagList(const DescribeTagListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTagList");
@@ -2282,6 +2332,56 @@ BillingClient::RenewInstanceOutcomeCallable BillingClient::RenewInstanceCallable
         const BillingClient*,
         const RenewInstanceRequest&,
         RenewInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::SetRenewalOutcome BillingClient::SetRenewal(const SetRenewalRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetRenewal");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetRenewalResponse rsp = SetRenewalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetRenewalOutcome(rsp);
+        else
+            return SetRenewalOutcome(o.GetError());
+    }
+    else
+    {
+        return SetRenewalOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::SetRenewalAsync(const SetRenewalRequest& request, const SetRenewalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SetRenewalRequest&;
+    using Resp = SetRenewalResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SetRenewal", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::SetRenewalOutcomeCallable BillingClient::SetRenewalCallable(const SetRenewalRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SetRenewalOutcome>>();
+    SetRenewalAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const SetRenewalRequest&,
+        SetRenewalOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

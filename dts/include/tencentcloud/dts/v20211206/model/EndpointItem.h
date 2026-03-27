@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ExtraAttrHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceId 
+                     * 获取The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+                     * @return ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      * 
                      */
                     std::string GetChildInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceId 
+                     * 设置The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+                     * @param _childInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      * 
                      */
                     void SetChildInstanceId(const std::string& _childInstanceId);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool ChildInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceType 
+                     * 获取When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+                     * @return ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      * 
                      */
                     std::string GetChildInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceType 
+                     * 设置When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+                     * @param _childInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      * 
                      */
                     void SetChildInstanceType(const std::string& _childInstanceType);
@@ -524,13 +524,13 @@ namespace TencentCloud
                     bool m_extraAttrHasBeenSet;
 
                     /**
-                     * 
+                     * The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      */
                     std::string m_childInstanceId;
                     bool m_childInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      */
                     std::string m_childInstanceType;
                     bool m_childInstanceTypeHasBeenSet;

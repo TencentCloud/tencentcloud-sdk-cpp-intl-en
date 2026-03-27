@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sentiment analysis details
                 */
                 class SentimentDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Positive 
+                     * 获取Positive score, ranging from 0 to 100
+                     * @return Positive Positive score, ranging from 0 to 100
                      * 
                      */
                     int64_t GetPositive() const;
 
                     /**
-                     * 设置
-                     * @param _positive 
+                     * 设置Positive score, ranging from 0 to 100
+                     * @param _positive Positive score, ranging from 0 to 100
                      * 
                      */
                     void SetPositive(const int64_t& _positive);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PositiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Negative 
+                     * 获取Negative score, ranging from 0 to 100
+                     * @return Negative Negative score, ranging from 0 to 100
                      * 
                      */
                     int64_t GetNegative() const;
 
                     /**
-                     * 设置
-                     * @param _negative 
+                     * 设置Negative score, ranging from 0 to 100
+                     * @param _negative Negative score, ranging from 0 to 100
                      * 
                      */
                     void SetNegative(const int64_t& _negative);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Positive score, ranging from 0 to 100
                      */
                     int64_t m_positive;
                     bool m_positiveHasBeenSet;
 
                     /**
-                     * 
+                     * Negative score, ranging from 0 to 100
                      */
                     int64_t m_negative;
                     bool m_negativeHasBeenSet;

@@ -292,15 +292,15 @@ hi: Hindi
                     bool UntranslatedTextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TermRepoIDList 
+                     * 获取Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+                     * @return TermRepoIDList Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
                      * 
                      */
                     std::vector<std::string> GetTermRepoIDList() const;
 
                     /**
-                     * 设置
-                     * @param _termRepoIDList 
+                     * 设置Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+                     * @param _termRepoIDList Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
                      * 
                      */
                     void SetTermRepoIDList(const std::vector<std::string>& _termRepoIDList);
@@ -313,15 +313,15 @@ hi: Hindi
                     bool TermRepoIDListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SentRepoIDList 
+                     * 获取The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
+                     * @return SentRepoIDList The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
                      * 
                      */
                     std::vector<std::string> GetSentRepoIDList() const;
 
                     /**
-                     * 设置
-                     * @param _sentRepoIDList 
+                     * 设置The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
+                     * @param _sentRepoIDList The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
                      * 
                      */
                     void SetSentRepoIDList(const std::vector<std::string>& _sentRepoIDList);
@@ -402,13 +402,13 @@ hi: Hindi
                     bool m_untranslatedTextHasBeenSet;
 
                     /**
-                     * 
+                     * Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
                      */
                     std::vector<std::string> m_termRepoIDList;
                     bool m_termRepoIDListHasBeenSet;
 
                     /**
-                     * 
+                     * The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
                      */
                     std::vector<std::string> m_sentRepoIDList;
                     bool m_sentRepoIDListHasBeenSet;

@@ -227,15 +227,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeSpan 
+                     * 获取Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
+                     * @return TimeSpan Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置
-                     * @param _timeSpan 
+                     * 设置Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
+                     * @param _timeSpan Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -330,7 +330,7 @@ center_egress1,center_egress2,center_egress3
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * 
+                     * Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;

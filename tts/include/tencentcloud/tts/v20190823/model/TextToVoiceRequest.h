@@ -210,15 +210,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool VoiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FastVoiceType 
+                     * 获取One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+                     * @return FastVoiceType One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
                      * 
                      */
                     std::string GetFastVoiceType() const;
 
                     /**
-                     * 设置
-                     * @param _fastVoiceType 
+                     * 设置One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+                     * @param _fastVoiceType One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
                      * 
                      */
                     void SetFastVoiceType(const std::string& _fastVoiceType);
@@ -336,15 +336,19 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool SegmentRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmotionCategory 
+                     * 获取Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+Sample value: neutral
+                     * @return EmotionCategory Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+Sample value: neutral
                      * 
                      */
                     std::string GetEmotionCategory() const;
 
                     /**
-                     * 设置
-                     * @param _emotionCategory 
+                     * 设置Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+Sample value: neutral
+                     * @param _emotionCategory Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+Sample value: neutral
                      * 
                      */
                     void SetEmotionCategory(const std::string& _emotionCategory);
@@ -357,15 +361,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool EmotionCategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmotionIntensity 
+                     * 获取Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+                     * @return EmotionIntensity Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
                      * 
                      */
                     int64_t GetEmotionIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _emotionIntensity 
+                     * 设置Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+                     * @param _emotionIntensity Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
                      * 
                      */
                     void SetEmotionIntensity(const int64_t& _emotionIntensity);
@@ -427,7 +431,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool m_voiceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
                      */
                     std::string m_fastVoiceType;
                     bool m_fastVoiceTypeHasBeenSet;
@@ -463,13 +467,14 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool m_segmentRateHasBeenSet;
 
                     /**
-                     * 
+                     * Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+Sample value: neutral
                      */
                     std::string m_emotionCategory;
                     bool m_emotionCategoryHasBeenSet;
 
                     /**
-                     * 
+                     * Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
                      */
                     int64_t m_emotionIntensity;
                     bool m_emotionIntensityHasBeenSet;

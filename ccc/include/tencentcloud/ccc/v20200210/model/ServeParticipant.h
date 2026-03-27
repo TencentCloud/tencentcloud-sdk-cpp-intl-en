@@ -299,15 +299,31 @@ namespace TencentCloud
                     bool SkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Ending status.
-                     * @return EndStatusString Ending status.
+                     * 获取End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+                     * @return EndStatusString End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * 
                      */
                     std::string GetEndStatusString() const;
 
                     /**
-                     * 设置Ending status.
-                     * @param _endStatusString Ending status.
+                     * 设置End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+                     * @param _endStatusString End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      * 
                      */
                     void SetEndStatusString(const std::string& _endStatusString);
@@ -499,7 +515,11 @@ namespace TencentCloud
                     bool m_skillGroupIdHasBeenSet;
 
                     /**
-                     * Ending status.
+                     * End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
                      */
                     std::string m_endStatusString;
                     bool m_endStatusStringHasBeenSet;

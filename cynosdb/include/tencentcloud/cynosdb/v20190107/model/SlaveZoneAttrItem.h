@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AZ Attribute Item
                 */
                 class SlaveZoneAttrItem : public AbstractModel
                 {

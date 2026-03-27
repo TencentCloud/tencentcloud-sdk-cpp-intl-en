@@ -85,27 +85,6 @@ namespace TencentCloud
                     bool UidHasBeenSet() const;
 
                     /**
-                     * 获取Valid period, in seconds, no more than 1 hr.
-                     * @return ExpiredTime Valid period, in seconds, no more than 1 hr.
-                     * 
-                     */
-                    int64_t GetExpiredTime() const;
-
-                    /**
-                     * 设置Valid period, in seconds, no more than 1 hr.
-                     * @param _expiredTime Valid period, in seconds, no more than 1 hr.
-                     * 
-                     */
-                    void SetExpiredTime(const int64_t& _expiredTime);
-
-                    /**
-                     * 判断参数 ExpiredTime 是否已赋值
-                     * @return ExpiredTime 是否已赋值
-                     * 
-                     */
-                    bool ExpiredTimeHasBeenSet() const;
-
-                    /**
                      * 获取Signature data of the user. required field. standard JSON format.
                      * @return ClientData Signature data of the user. required field. standard JSON format.
                      * 
@@ -126,6 +105,27 @@ namespace TencentCloud
                      */
                     bool ClientDataHasBeenSet() const;
 
+                    /**
+                     * 获取Valid period, in seconds, no more than 1 hr.
+                     * @return ExpiredTime Valid period, in seconds, no more than 1 hr.
+                     * 
+                     */
+                    int64_t GetExpiredTime() const;
+
+                    /**
+                     * 设置Valid period, in seconds, no more than 1 hr.
+                     * @param _expiredTime Valid period, in seconds, no more than 1 hr.
+                     * 
+                     */
+                    void SetExpiredTime(const int64_t& _expiredTime);
+
+                    /**
+                     * 判断参数 ExpiredTime 是否已赋值
+                     * @return ExpiredTime 是否已赋值
+                     * 
+                     */
+                    bool ExpiredTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,16 +141,16 @@ namespace TencentCloud
                     bool m_uidHasBeenSet;
 
                     /**
-                     * Valid period, in seconds, no more than 1 hr.
-                     */
-                    int64_t m_expiredTime;
-                    bool m_expiredTimeHasBeenSet;
-
-                    /**
                      * Signature data of the user. required field. standard JSON format.
                      */
                     std::string m_clientData;
                     bool m_clientDataHasBeenSet;
+
+                    /**
+                     * Valid period, in seconds, no more than 1 hr.
+                     */
+                    int64_t m_expiredTime;
+                    bool m_expiredTimeHasBeenSet;
 
                 };
             }

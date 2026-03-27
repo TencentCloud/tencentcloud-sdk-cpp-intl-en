@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IOS2 
+                     * 获取ISO2 standard country/region code
+                     * @return IOS2 ISO2 standard country/region code
                      * 
                      */
                     std::string GetIOS2() const;
 
                     /**
-                     * 设置
-                     * @param _iOS2 
+                     * 设置ISO2 standard country/region code
+                     * @param _iOS2 ISO2 standard country/region code
                      * 
                      */
                     void SetIOS2(const std::string& _iOS2);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool IOS2HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IOS3 
+                     * 获取ISO3 standard country/region code
+                     * @return IOS3 ISO3 standard country/region code
                      * 
                      */
                     std::string GetIOS3() const;
 
                     /**
-                     * 设置
-                     * @param _iOS3 
+                     * 设置ISO3 standard country/region code
+                     * @param _iOS3 ISO3 standard country/region code
                      * 
                      */
                     void SetIOS3(const std::string& _iOS3);
@@ -166,13 +166,13 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * ISO2 standard country/region code
                      */
                     std::string m_iOS2;
                     bool m_iOS2HasBeenSet;
 
                     /**
-                     * 
+                     * ISO3 standard country/region code
                      */
                     std::string m_iOS3;
                     bool m_iOS3HasBeenSet;

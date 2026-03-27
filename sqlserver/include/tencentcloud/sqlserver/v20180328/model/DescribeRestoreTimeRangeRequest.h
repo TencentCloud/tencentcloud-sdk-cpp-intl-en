@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Instance ID
+                     * @param _instanceId Instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetInstanceId 
+                     * 获取Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
+                     * @return TargetInstanceId Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
                      * 
                      */
                     std::string GetTargetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _targetInstanceId 
+                     * 设置Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
+                     * @param _targetInstanceId Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
                      * 
                      */
                     void SetTargetInstanceId(const std::string& _targetInstanceId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
                      */
                     std::string m_targetInstanceId;
                     bool m_targetInstanceIdHasBeenSet;

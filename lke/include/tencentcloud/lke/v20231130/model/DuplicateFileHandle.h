@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Duplicate document handling method
                 */
                 class DuplicateFileHandle : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CheckType 
+                     * 获取Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
+                     * @return CheckType Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
                      * 
                      */
                     uint64_t GetCheckType() const;
 
                     /**
-                     * 设置
-                     * @param _checkType 
+                     * 设置Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
+                     * @param _checkType Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
                      * 
                      */
                     void SetCheckType(const uint64_t& _checkType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HandleType 
+                     * 获取Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+                     * @return HandleType Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
                      * 
                      */
                     uint64_t GetHandleType() const;
 
                     /**
-                     * 设置
-                     * @param _handleType 
+                     * 设置Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+                     * @param _handleType Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
                      * 
                      */
                     void SetHandleType(const uint64_t& _handleType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
                      */
                     uint64_t m_checkType;
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
                      */
                     uint64_t m_handleType;
                     bool m_handleTypeHasBeenSet;

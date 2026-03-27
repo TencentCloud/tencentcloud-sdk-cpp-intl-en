@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of agent users.
-                     * @return TotalCount Total number of agent users.
+                     * 获取<P>Total number of agent users</p>.
+                     * @return TotalCount <P>Total number of agent users</p>.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Agent user information list.
-                     * @return StaffList Agent user information list.
+                     * 获取<P>Agent user information list</p>.
+                     * @return StaffList <P>Agent user information list</p>.
                      * 
                      */
                     std::vector<StaffInfo> GetStaffList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of agent users.
+                     * <P>Total number of agent users</p>.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Agent user information list.
+                     * <P>Agent user information list</p>.
                      */
                     std::vector<StaffInfo> m_staffList;
                     bool m_staffListHasBeenSet;

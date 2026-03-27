@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ttl 
+                     * 获取Time to Live Value
+                     * @return Ttl Time to Live Value
                      * 
                      */
                     int64_t GetTtl() const;
 
                     /**
-                     * 设置
-                     * @param _ttl 
+                     * 设置Time to Live Value
+                     * @param _ttl Time to Live Value
                      * 
                      */
                     void SetTtl(const int64_t& _ttl);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_modeHasBeenSet;
 
                     /**
-                     * 
+                     * Time to Live Value
                      */
                     int64_t m_ttl;
                     bool m_ttlHasBeenSet;

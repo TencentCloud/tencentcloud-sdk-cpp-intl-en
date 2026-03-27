@@ -58,7 +58,11 @@ TelCdrInfo::TelCdrInfo() :
     m_remarkHasBeenSet(false),
     m_queuedSkillGroupNameHasBeenSet(false),
     m_voicemailRecordURLHasBeenSet(false),
-    m_voicemailAsrURLHasBeenSet(false)
+    m_voicemailAsrURLHasBeenSet(false),
+    m_aIAgentIdHasBeenSet(false),
+    m_aIAgentNameHasBeenSet(false),
+    m_sysHangupReasonHasBeenSet(false),
+    m_sysHangupReasonStringHasBeenSet(false)
 {
 }
 
@@ -493,6 +497,46 @@ CoreInternalOutcome TelCdrInfo::Deserialize(const rapidjson::Value &value)
         m_voicemailAsrURLHasBeenSet = true;
     }
 
+    if (value.HasMember("AIAgentId") && !value["AIAgentId"].IsNull())
+    {
+        if (!value["AIAgentId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TelCdrInfo.AIAgentId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_aIAgentId = value["AIAgentId"].GetInt64();
+        m_aIAgentIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("AIAgentName") && !value["AIAgentName"].IsNull())
+    {
+        if (!value["AIAgentName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TelCdrInfo.AIAgentName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_aIAgentName = string(value["AIAgentName"].GetString());
+        m_aIAgentNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("SysHangupReason") && !value["SysHangupReason"].IsNull())
+    {
+        if (!value["SysHangupReason"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TelCdrInfo.SysHangupReason` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sysHangupReason = value["SysHangupReason"].GetInt64();
+        m_sysHangupReasonHasBeenSet = true;
+    }
+
+    if (value.HasMember("SysHangupReasonString") && !value["SysHangupReasonString"].IsNull())
+    {
+        if (!value["SysHangupReasonString"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TelCdrInfo.SysHangupReasonString` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sysHangupReasonString = string(value["SysHangupReasonString"].GetString());
+        m_sysHangupReasonStringHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -839,6 +883,38 @@ void TelCdrInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_aIAgentIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AIAgentId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_aIAgentId, allocator);
+    }
+
+    if (m_aIAgentNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AIAgentName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_aIAgentName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sysHangupReasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SysHangupReason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sysHangupReason, allocator);
+    }
+
+    if (m_sysHangupReasonStringHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SysHangupReasonString";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sysHangupReasonString.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1450,5 +1526,69 @@ void TelCdrInfo::SetVoicemailAsrURL(const vector<string>& _voicemailAsrURL)
 bool TelCdrInfo::VoicemailAsrURLHasBeenSet() const
 {
     return m_voicemailAsrURLHasBeenSet;
+}
+
+int64_t TelCdrInfo::GetAIAgentId() const
+{
+    return m_aIAgentId;
+}
+
+void TelCdrInfo::SetAIAgentId(const int64_t& _aIAgentId)
+{
+    m_aIAgentId = _aIAgentId;
+    m_aIAgentIdHasBeenSet = true;
+}
+
+bool TelCdrInfo::AIAgentIdHasBeenSet() const
+{
+    return m_aIAgentIdHasBeenSet;
+}
+
+string TelCdrInfo::GetAIAgentName() const
+{
+    return m_aIAgentName;
+}
+
+void TelCdrInfo::SetAIAgentName(const string& _aIAgentName)
+{
+    m_aIAgentName = _aIAgentName;
+    m_aIAgentNameHasBeenSet = true;
+}
+
+bool TelCdrInfo::AIAgentNameHasBeenSet() const
+{
+    return m_aIAgentNameHasBeenSet;
+}
+
+int64_t TelCdrInfo::GetSysHangupReason() const
+{
+    return m_sysHangupReason;
+}
+
+void TelCdrInfo::SetSysHangupReason(const int64_t& _sysHangupReason)
+{
+    m_sysHangupReason = _sysHangupReason;
+    m_sysHangupReasonHasBeenSet = true;
+}
+
+bool TelCdrInfo::SysHangupReasonHasBeenSet() const
+{
+    return m_sysHangupReasonHasBeenSet;
+}
+
+string TelCdrInfo::GetSysHangupReasonString() const
+{
+    return m_sysHangupReasonString;
+}
+
+void TelCdrInfo::SetSysHangupReasonString(const string& _sysHangupReasonString)
+{
+    m_sysHangupReasonString = _sysHangupReasonString;
+    m_sysHangupReasonStringHasBeenSet = true;
+}
+
+bool TelCdrInfo::SysHangupReasonStringHasBeenSet() const
+{
+    return m_sysHangupReasonStringHasBeenSet;
 }
 

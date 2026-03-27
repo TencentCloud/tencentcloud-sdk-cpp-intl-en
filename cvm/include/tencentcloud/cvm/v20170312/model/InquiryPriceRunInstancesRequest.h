@@ -517,15 +517,15 @@ namespace TencentCloud
                     bool CpuTopologyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LaunchTemplate 
+                     * 获取Instance launch template.
+                     * @return LaunchTemplate Instance launch template.
                      * 
                      */
                     LaunchTemplate GetLaunchTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _launchTemplate 
+                     * 设置Instance launch template.
+                     * @param _launchTemplate Instance launch template.
                      * 
                      */
                     void SetLaunchTemplate(const LaunchTemplate& _launchTemplate);
@@ -671,7 +671,7 @@ namespace TencentCloud
                     bool m_cpuTopologyHasBeenSet;
 
                     /**
-                     * 
+                     * Instance launch template.
                      */
                     LaunchTemplate m_launchTemplate;
                     bool m_launchTemplateHasBeenSet;

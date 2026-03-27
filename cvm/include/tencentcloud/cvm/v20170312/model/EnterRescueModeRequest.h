@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ForceStopHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StopType 
+                     * 获取The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
+                     * @return StopType The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
                      * 
                      */
                     std::string GetStopType() const;
 
                     /**
-                     * 设置
-                     * @param _stopType 
+                     * 设置The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
+                     * @param _stopType The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
                      * 
                      */
                     void SetStopType(const std::string& _stopType);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_forceStopHasBeenSet;
 
                     /**
-                     * 
+                     * The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
                      */
                     std::string m_stopType;
                     bool m_stopTypeHasBeenSet;

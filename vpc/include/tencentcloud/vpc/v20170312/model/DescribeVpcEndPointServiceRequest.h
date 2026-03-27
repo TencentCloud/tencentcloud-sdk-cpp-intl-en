@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool EndPointServiceIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsListAuthorizedEndPointService 
+                     * 获取<li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
+                     * @return IsListAuthorizedEndPointService <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
                      * 
                      */
                     bool GetIsListAuthorizedEndPointService() const;
 
                     /**
-                     * 设置
-                     * @param _isListAuthorizedEndPointService 
+                     * 设置<li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
+                     * @param _isListAuthorizedEndPointService <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
                      * 
                      */
                     void SetIsListAuthorizedEndPointService(const bool& _isListAuthorizedEndPointService);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_endPointServiceIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
                      */
                     bool m_isListAuthorizedEndPointService;
                     bool m_isListAuthorizedEndPointServiceHasBeenSet;

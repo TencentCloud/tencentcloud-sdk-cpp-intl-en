@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RuleName 
+                     * 获取Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+                     * @return RuleName Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置
-                     * @param _ruleName 
+                     * 设置Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+                     * @param _ruleName Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -417,7 +417,7 @@ Default: `source_to_eo`.
                 private:
 
                     /**
-                     * 
+                     * Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;

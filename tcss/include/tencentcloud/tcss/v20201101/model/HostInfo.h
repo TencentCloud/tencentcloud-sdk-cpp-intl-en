@@ -435,15 +435,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterName 
+                     * 获取Cluster Name
+                     * @return ClusterName Cluster Name
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置
-                     * @param _clusterName 
+                     * 设置Cluster Name
+                     * @param _clusterName Cluster Name
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -456,15 +456,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterAccessedStatus 
+                     * 获取Cluster Access Status
+                     * @return ClusterAccessedStatus Cluster Access Status
                      * 
                      */
                     std::string GetClusterAccessedStatus() const;
 
                     /**
-                     * 设置
-                     * @param _clusterAccessedStatus 
+                     * 设置Cluster Access Status
+                     * @param _clusterAccessedStatus Cluster Access Status
                      * 
                      */
                     void SetClusterAccessedStatus(const std::string& _clusterAccessedStatus);
@@ -589,13 +589,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster Name
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster Access Status
                      */
                     std::string m_clusterAccessedStatus;
                     bool m_clusterAccessedStatusHasBeenSet;

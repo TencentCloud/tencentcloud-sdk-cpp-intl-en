@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * VPC Access Point Information
                 */
                 class VpcEndpointInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取vpc id
+                     * @return VpcId vpc id
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置vpc id
+                     * @param _vpcId vpc id
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取subnet id
+                     * @return SubnetId subnet id
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _subnetId 
+                     * 设置subnet id
+                     * @param _subnetId subnet id
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcEndpoint 
+                     * 获取vpc Access Point Information
+                     * @return VpcEndpoint vpc Access Point Information
                      * 
                      */
                     std::string GetVpcEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _vpcEndpoint 
+                     * 设置vpc Access Point Information
+                     * @param _vpcEndpoint vpc Access Point Information
                      * 
                      */
                     void SetVpcEndpoint(const std::string& _vpcEndpoint);
@@ -154,19 +154,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * vpc id
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * subnet id
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * vpc Access Point Information
                      */
                     std::string m_vpcEndpoint;
                     bool m_vpcEndpointHasBeenSet;

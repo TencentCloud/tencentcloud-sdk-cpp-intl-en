@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
-                     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * 获取Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     std::string GetCommandId() const;
 
                     /**
-                     * 设置Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
-                     * @param _commandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * 设置Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * @param _commandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      * 
                      */
                     void SetCommandId(const std::string& _commandId);
@@ -107,13 +107,13 @@ Instance ID can be obtained through the query instance interface of correspondin
                     /**
                      * 获取Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * @return Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -124,13 +124,13 @@ The custom parameter name must meet the following standard: the number of charac
                     /**
                      * 设置Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
                      * @param _parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -269,7 +269,7 @@ The principle of the least privilege is the best practice for permission managem
                 private:
 
                     /**
-                     * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+                     * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
                      */
                     std::string m_commandId;
                     bool m_commandIdHasBeenSet;
@@ -288,7 +288,7 @@ Instance ID can be obtained through the query instance interface of correspondin
                     /**
                      * Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].

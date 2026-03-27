@@ -167,15 +167,39 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                     bool RepeatTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Transparency 
+                     * 获取Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
+                     * @return Transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetTransparency() const;
 
                     /**
-                     * 设置
-                     * @param _transparency 
+                     * 设置Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
+                     * @param _transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
                      * 
                      */
                     void SetTransparency(const int64_t& _transparency);
@@ -223,7 +247,13 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                     bool m_repeatTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent</li>
+
+Default value: 0.
                      */
                     int64_t m_transparency;
                     bool m_transparencyHasBeenSet;

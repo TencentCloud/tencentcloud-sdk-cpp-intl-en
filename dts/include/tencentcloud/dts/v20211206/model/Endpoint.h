@@ -710,15 +710,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CcnOwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceId 
+                     * 获取The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+                     * @return ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      * 
                      */
                     std::string GetChildInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceId 
+                     * 设置The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+                     * @param _childInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      * 
                      */
                     void SetChildInstanceId(const std::string& _childInstanceId);
@@ -731,15 +731,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ChildInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceType 
+                     * 获取When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+                     * @return ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      * 
                      */
                     std::string GetChildInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceType 
+                     * 设置When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+                     * @param _childInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      * 
                      */
                     void SetChildInstanceType(const std::string& _childInstanceType);
@@ -752,15 +752,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ChildInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SetId 
+                     * 获取Shard id of tdsql. Mandatory when node type is set.
+                     * @return SetId Shard id of tdsql. Mandatory when node type is set.
                      * 
                      */
                     std::string GetSetId() const;
 
                     /**
-                     * 设置
-                     * @param _setId 
+                     * 设置Shard id of tdsql. Mandatory when node type is set.
+                     * @param _setId Shard id of tdsql. Mandatory when node type is set.
                      * 
                      */
                     void SetSetId(const std::string& _setId);
@@ -961,19 +961,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_ccnOwnerUinHasBeenSet;
 
                     /**
-                     * 
+                     * The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
                      */
                     std::string m_childInstanceId;
                     bool m_childInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
                      */
                     std::string m_childInstanceType;
                     bool m_childInstanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Shard id of tdsql. Mandatory when node type is set.
                      */
                     std::string m_setId;
                     bool m_setIdHasBeenSet;

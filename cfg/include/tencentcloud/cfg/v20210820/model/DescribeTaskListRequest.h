@@ -339,15 +339,15 @@ namespace TencentCloud
                     bool TaskStatusListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ArchId 
+                     * 获取Architecture ID
+                     * @return ArchId Architecture ID
                      * 
                      */
                     std::string GetArchId() const;
 
                     /**
-                     * 设置
-                     * @param _archId 
+                     * 设置Architecture ID
+                     * @param _archId Architecture ID
                      * 
                      */
                     void SetArchId(const std::string& _archId);
@@ -360,15 +360,15 @@ namespace TencentCloud
                     bool ArchIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ArchName 
+                     * 获取Architecture Name
+                     * @return ArchName Architecture Name
                      * 
                      */
                     std::string GetArchName() const;
 
                     /**
-                     * 设置
-                     * @param _archName 
+                     * 设置Architecture Name
+                     * @param _archName Architecture Name
                      * 
                      */
                     void SetArchName(const std::string& _archName);
@@ -467,13 +467,13 @@ namespace TencentCloud
                     bool m_taskStatusListHasBeenSet;
 
                     /**
-                     * 
+                     * Architecture ID
                      */
                     std::string m_archId;
                     bool m_archIdHasBeenSet;
 
                     /**
-                     * 
+                     * Architecture Name
                      */
                     std::string m_archName;
                     bool m_archNameHasBeenSet;

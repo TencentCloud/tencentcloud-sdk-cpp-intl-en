@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnapShotType 
+                     * 获取Snapshot type. Optional values: full, full backup; increment, incremental backup
+                     * @return SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
                      * 
                      */
                     std::string GetSnapShotType() const;
 
                     /**
-                     * 设置
-                     * @param _snapShotType 
+                     * 设置Snapshot type. Optional values: full, full backup; increment, incremental backup
+                     * @param _snapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
                      * 
                      */
                     void SetSnapShotType(const std::string& _snapShotType);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileNames 
+                     * 获取Backup file name, fuzzy search
+                     * @return FileNames Backup file name, fuzzy search
                      * 
                      */
                     std::vector<std::string> GetFileNames() const;
 
                     /**
-                     * 设置
-                     * @param _fileNames 
+                     * 设置Backup file name, fuzzy search
+                     * @param _fileNames Backup file name, fuzzy search
                      * 
                      */
                     void SetFileNames(const std::vector<std::string>& _fileNames);
@@ -365,7 +365,7 @@ namespace TencentCloud
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * 
+                     * Snapshot type. Optional values: full, full backup; increment, incremental backup
                      */
                     std::string m_snapShotType;
                     bool m_snapShotTypeHasBeenSet;
@@ -383,7 +383,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Backup file name, fuzzy search
                      */
                     std::vector<std::string> m_fileNames;
                     bool m_fileNamesHasBeenSet;

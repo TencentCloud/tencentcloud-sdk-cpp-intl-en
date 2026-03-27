@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EngineTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sort 
+                     * 获取Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+                     * @return Sort Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
                      * 
                      */
                     std::string GetSort() const;
 
                     /**
-                     * 设置
-                     * @param _sort 
+                     * 设置Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+                     * @param _sort Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
                      * 
                      */
                     void SetSort(const std::string& _sort);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Asc 
+                     * 获取Sort order: false (descending, default), true (ascending)
+                     * @return Asc Sort order: false (descending, default), true (ascending)
                      * 
                      */
                     bool GetAsc() const;
 
                     /**
-                     * 设置
-                     * @param _asc 
+                     * 设置Sort order: false (descending, default), true (ascending)
+                     * @param _asc Sort order: false (descending, default), true (ascending)
                      * 
                      */
                     void SetAsc(const bool& _asc);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_engineTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
                      */
                     std::string m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * 
+                     * Sort order: false (descending, default), true (ascending)
                      */
                     bool m_asc;
                     bool m_ascHasBeenSet;

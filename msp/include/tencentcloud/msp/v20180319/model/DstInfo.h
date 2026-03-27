@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Migration destination Ip
+                     * @return Ip Migration destination Ip
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param _ip 
+                     * 设置Migration destination Ip
+                     * @param _ip Migration destination Ip
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Migration destination Ip
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;

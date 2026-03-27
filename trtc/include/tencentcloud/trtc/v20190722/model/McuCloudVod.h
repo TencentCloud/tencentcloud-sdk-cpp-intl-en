@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Mcu relay recording; video on demand (VOD) related parameters.
                 */
                 class McuCloudVod : public AbstractModel
                 {

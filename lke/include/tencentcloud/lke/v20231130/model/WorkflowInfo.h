@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Workflow Information
                 */
                 class WorkflowInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return WorkflowId 
+                     * 获取Workflow ID
+                     * @return WorkflowId Workflow ID
                      * 
                      */
                     std::string GetWorkflowId() const;
 
                     /**
-                     * 设置
-                     * @param _workflowId 
+                     * 设置Workflow ID
+                     * @param _workflowId Workflow ID
                      * 
                      */
                     void SetWorkflowId(const std::string& _workflowId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WorkflowIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkflowName 
+                     * 获取Workflow Name
+                     * @return WorkflowName Workflow Name
                      * 
                      */
                     std::string GetWorkflowName() const;
 
                     /**
-                     * 设置
-                     * @param _workflowName 
+                     * 设置Workflow Name
+                     * @param _workflowName Workflow Name
                      * 
                      */
                     void SetWorkflowName(const std::string& _workflowName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WorkflowNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkflowRunId 
+                     * 获取Workflow Run ID
+                     * @return WorkflowRunId Workflow Run ID
                      * 
                      */
                     std::string GetWorkflowRunId() const;
 
                     /**
-                     * 设置
-                     * @param _workflowRunId 
+                     * 设置Workflow Run ID
+                     * @param _workflowRunId Workflow Run ID
                      * 
                      */
                     void SetWorkflowRunId(const std::string& _workflowRunId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool WorkflowRunIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OptionCards 
+                     * 获取Tab
+                     * @return OptionCards Tab
                      * 
                      */
                     std::vector<std::string> GetOptionCards() const;
 
                     /**
-                     * 设置
-                     * @param _optionCards 
+                     * 设置Tab
+                     * @param _optionCards Tab
                      * 
                      */
                     void SetOptionCards(const std::vector<std::string>& _optionCards);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OptionCardsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Outputs 
+                     * 获取Multi-bubble output results
+                     * @return Outputs Multi-bubble output results
                      * 
                      */
                     std::vector<std::string> GetOutputs() const;
 
                     /**
-                     * 设置
-                     * @param _outputs 
+                     * 设置Multi-bubble output results
+                     * @param _outputs Multi-bubble output results
                      * 
                      */
                     void SetOutputs(const std::vector<std::string>& _outputs);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OutputsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkflowReleaseTime 
+                     * 获取Workflow Publish Time, unix timestamp
+                     * @return WorkflowReleaseTime Workflow Publish Time, unix timestamp
                      * 
                      */
                     std::string GetWorkflowReleaseTime() const;
 
                     /**
-                     * 设置
-                     * @param _workflowReleaseTime 
+                     * 设置Workflow Publish Time, unix timestamp
+                     * @param _workflowReleaseTime Workflow Publish Time, unix timestamp
                      * 
                      */
                     void SetWorkflowReleaseTime(const std::string& _workflowReleaseTime);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Workflow ID
                      */
                     std::string m_workflowId;
                     bool m_workflowIdHasBeenSet;
 
                     /**
-                     * 
+                     * Workflow Name
                      */
                     std::string m_workflowName;
                     bool m_workflowNameHasBeenSet;
 
                     /**
-                     * 
+                     * Workflow Run ID
                      */
                     std::string m_workflowRunId;
                     bool m_workflowRunIdHasBeenSet;
 
                     /**
-                     * 
+                     * Tab
                      */
                     std::vector<std::string> m_optionCards;
                     bool m_optionCardsHasBeenSet;
 
                     /**
-                     * 
+                     * Multi-bubble output results
                      */
                     std::vector<std::string> m_outputs;
                     bool m_outputsHasBeenSet;
 
                     /**
-                     * 
+                     * Workflow Publish Time, unix timestamp
                      */
                     std::string m_workflowReleaseTime;
                     bool m_workflowReleaseTimeHasBeenSet;

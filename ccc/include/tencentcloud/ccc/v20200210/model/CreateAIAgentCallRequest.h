@@ -185,6 +185,27 @@ dify-inputs-xxx specifies the inputs variable for dify.
                      */
                     bool VariablesHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+                     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+                     * 
+                     */
+                    int64_t GetMaxRingTimeoutSecond() const;
+
+                    /**
+                     * 设置Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+                     * @param _maxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+                     * 
+                     */
+                    void SetMaxRingTimeoutSecond(const int64_t& _maxRingTimeoutSecond);
+
+                    /**
+                     * 判断参数 MaxRingTimeoutSecond 是否已赋值
+                     * @return MaxRingTimeoutSecond 是否已赋值
+                     * 
+                     */
+                    bool MaxRingTimeoutSecondHasBeenSet() const;
+
                 private:
 
                     /**
@@ -226,6 +247,12 @@ dify-inputs-xxx specifies the inputs variable for dify.
                      */
                     std::vector<Variable> m_variables;
                     bool m_variablesHasBeenSet;
+
+                    /**
+                     * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+                     */
+                    int64_t m_maxRingTimeoutSecond;
+                    bool m_maxRingTimeoutSecondHasBeenSet;
 
                 };
             }

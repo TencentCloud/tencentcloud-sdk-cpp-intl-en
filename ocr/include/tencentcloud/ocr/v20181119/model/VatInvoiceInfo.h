@@ -867,15 +867,15 @@ namespace TencentCloud
                     bool ReceiptorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElectronicFullMark 
+                     * 获取Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+                     * @return ElectronicFullMark Whether fully electronic and paper tickets exist (0: No, 1: Yes).
                      * 
                      */
                     int64_t GetElectronicFullMark() const;
 
                     /**
-                     * 设置
-                     * @param _electronicFullMark 
+                     * 设置Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+                     * @param _electronicFullMark Whether fully electronic and paper tickets exist (0: No, 1: Yes).
                      * 
                      */
                     void SetElectronicFullMark(const int64_t& _electronicFullMark);
@@ -888,15 +888,15 @@ namespace TencentCloud
                     bool ElectronicFullMarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElectronicFullNumber 
+                     * 获取Fully Electronic Number
+                     * @return ElectronicFullNumber Fully Electronic Number
                      * 
                      */
                     std::string GetElectronicFullNumber() const;
 
                     /**
-                     * 设置
-                     * @param _electronicFullNumber 
+                     * 设置Fully Electronic Number
+                     * @param _electronicFullNumber Fully Electronic Number
                      * 
                      */
                     void SetElectronicFullNumber(const std::string& _electronicFullNumber);
@@ -909,15 +909,15 @@ namespace TencentCloud
                     bool ElectronicFullNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FormName 
+                     * 获取Co-branded Invoice.
+                     * @return FormName Co-branded Invoice.
                      * 
                      */
                     std::string GetFormName() const;
 
                     /**
-                     * 设置
-                     * @param _formName 
+                     * 设置Co-branded Invoice.
+                     * @param _formName Co-branded Invoice.
                      * 
                      */
                     void SetFormName(const std::string& _formName);
@@ -1166,19 +1166,19 @@ namespace TencentCloud
                     bool m_receiptorHasBeenSet;
 
                     /**
-                     * 
+                     * Whether fully electronic and paper tickets exist (0: No, 1: Yes).
                      */
                     int64_t m_electronicFullMark;
                     bool m_electronicFullMarkHasBeenSet;
 
                     /**
-                     * 
+                     * Fully Electronic Number
                      */
                     std::string m_electronicFullNumber;
                     bool m_electronicFullNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Co-branded Invoice.
                      */
                     std::string m_formName;
                     bool m_formNameHasBeenSet;

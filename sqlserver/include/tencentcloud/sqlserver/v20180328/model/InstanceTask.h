@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance Asynchronous Task
                 */
                 class InstanceTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Unique id
+                     * @return Id Unique id
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Unique id
+                     * @param _id Unique id
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Job Type
+                     * @return Type Job Type
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Job Type
+                     * @param _type Job Type
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Job Status
+                     * @return Status Job Status
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Job Status
+                     * @param _status Job Status
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Progress Percentage 0~100
+                     * @return Progress Progress Percentage 0~100
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Progress Percentage 0~100
+                     * @param _progress Progress Percentage 0~100
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Start Time
+                     * @return StartTime Start Time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Start Time
+                     * @param _startTime Start Time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取End Time
+                     * @return EndTime End Time
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置End Time
+                     * @param _endTime End Time
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrorCode 
+                     * 获取Error Code
+                     * @return ErrorCode Error Code
                      * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
-                     * 设置
-                     * @param _errorCode 
+                     * 设置Error Code
+                     * @param _errorCode Error Code
                      * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error Message Description
+                     * @return Message Error Message Description
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error Message Description
+                     * @param _message Error Message Description
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique id
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * Job Type
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Job Status
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Progress Percentage 0~100
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * 
+                     * Start Time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * End Time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Error Code
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error Message Description
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

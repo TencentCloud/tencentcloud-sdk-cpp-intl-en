@@ -86,27 +86,6 @@ namespace TencentCloud
                     bool StaffEmailHasBeenSet() const;
 
                     /**
-                     * 获取Bound skill group list.
-                     * @return SkillGroupList Bound skill group list.
-                     * @deprecated
-                     */
-                    std::vector<int64_t> GetSkillGroupList() const;
-
-                    /**
-                     * 设置Bound skill group list.
-                     * @param _skillGroupList Bound skill group list.
-                     * @deprecated
-                     */
-                    void SetSkillGroupList(const std::vector<int64_t>& _skillGroupList);
-
-                    /**
-                     * 判断参数 SkillGroupList 是否已赋值
-                     * @return SkillGroupList 是否已赋值
-                     * @deprecated
-                     */
-                    bool SkillGroupListHasBeenSet() const;
-
-                    /**
                      * 获取Bound skill group list (required).
                      * @return StaffSkillGroupList Bound skill group list (required).
                      * 
@@ -127,6 +106,27 @@ namespace TencentCloud
                      */
                     bool StaffSkillGroupListHasBeenSet() const;
 
+                    /**
+                     * 获取Bound skill group list.
+                     * @return SkillGroupList Bound skill group list.
+                     * @deprecated
+                     */
+                    std::vector<int64_t> GetSkillGroupList() const;
+
+                    /**
+                     * 设置Bound skill group list.
+                     * @param _skillGroupList Bound skill group list.
+                     * @deprecated
+                     */
+                    void SetSkillGroupList(const std::vector<int64_t>& _skillGroupList);
+
+                    /**
+                     * 判断参数 SkillGroupList 是否已赋值
+                     * @return SkillGroupList 是否已赋值
+                     * @deprecated
+                     */
+                    bool SkillGroupListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -142,16 +142,16 @@ namespace TencentCloud
                     bool m_staffEmailHasBeenSet;
 
                     /**
-                     * Bound skill group list.
-                     */
-                    std::vector<int64_t> m_skillGroupList;
-                    bool m_skillGroupListHasBeenSet;
-
-                    /**
                      * Bound skill group list (required).
                      */
                     std::vector<StaffSkillGroupList> m_staffSkillGroupList;
                     bool m_staffSkillGroupListHasBeenSet;
+
+                    /**
+                     * Bound skill group list.
+                     */
+                    std::vector<int64_t> m_skillGroupList;
+                    bool m_skillGroupListHasBeenSet;
 
                 };
             }

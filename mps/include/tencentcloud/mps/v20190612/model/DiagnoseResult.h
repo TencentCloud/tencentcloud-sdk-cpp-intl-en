@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Diagnosis result item.
                 */
                 class DiagnoseResult : public AbstractModel
                 {
@@ -289,15 +289,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Timestamp 
+                     * 获取The PTS timestamp for the exception start.
+                     * @return Timestamp The PTS timestamp for the exception start.
                      * 
                      */
                     double GetTimestamp() const;
 
                     /**
-                     * 设置
-                     * @param _timestamp 
+                     * 设置The PTS timestamp for the exception start.
+                     * @param _timestamp The PTS timestamp for the exception start.
                      * 
                      */
                     void SetTimestamp(const double& _timestamp);
@@ -310,15 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取Diagnosed abnormal description.
+                     * @return Description Diagnosed abnormal description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置Diagnosed abnormal description.
+                     * @param _description Diagnosed abnormal description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -331,15 +331,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DateTime 
+                     * 获取Abnormality detection time in Beijing time, using ISO date format.
+                     * @return DateTime Abnormality detection time in Beijing time, using ISO date format.
                      * 
                      */
                     std::string GetDateTime() const;
 
                     /**
-                     * 设置
-                     * @param _dateTime 
+                     * 设置Abnormality detection time in Beijing time, using ISO date format.
+                     * @param _dateTime Abnormality detection time in Beijing time, using ISO date format.
                      * 
                      */
                     void SetDateTime(const std::string& _dateTime);
@@ -461,19 +461,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * The PTS timestamp for the exception start.
                      */
                     double m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * 
+                     * Diagnosed abnormal description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Abnormality detection time in Beijing time, using ISO date format.
                      */
                     std::string m_dateTime;
                     bool m_dateTimeHasBeenSet;

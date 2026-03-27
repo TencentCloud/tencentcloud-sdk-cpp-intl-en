@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource total price under prepaid mode, excluding discounts. unit: cent.
-                     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
+                     * 获取Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+                     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
                      * 
                      */
                     int64_t GetTotalPrice() const;
 
                     /**
-                     * 设置Resource total price under prepaid mode, excluding discounts. unit: cent.
-                     * @param _totalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
+                     * 设置Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+                     * @param _totalPrice Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
                      * 
                      */
                     void SetTotalPrice(const int64_t& _totalPrice);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
-                     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+                     * 获取Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+                     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
                      * 
                      */
                     int64_t GetTotalPriceDiscount() const;
 
                     /**
-                     * 设置Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
-                     * @param _totalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+                     * 设置Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+                     * @param _totalPriceDiscount Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
                      * 
                      */
                     void SetTotalPriceDiscount(const int64_t& _totalPriceDiscount);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TotalPriceDiscountHasBeenSet() const;
 
                     /**
-                     * 获取Unit resource price in postpaid mode, excluding discounts. unit: cent.
-                     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
+                     * 获取Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+                     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
                      * 
                      */
                     int64_t GetUnitPrice() const;
 
                     /**
-                     * 设置Unit resource price in postpaid mode, excluding discounts. unit: cent.
-                     * @param _unitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
+                     * 设置Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+                     * @param _unitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
                      * 
                      */
                     void SetUnitPrice(const int64_t& _unitPrice);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
-                     * @return UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+                     * 获取Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+                     * @return UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
                      * 
                      */
                     int64_t GetUnitPriceDiscount() const;
 
                     /**
-                     * 设置Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
-                     * @param _unitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+                     * 设置Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+                     * @param _unitPriceDiscount Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
                      * 
                      */
                     void SetUnitPriceDiscount(const int64_t& _unitPriceDiscount);
@@ -172,10 +172,73 @@ namespace TencentCloud
                      */
                     bool ChargeUnitHasBeenSet() const;
 
+                    /**
+                     * 获取Excludes discounted rates under high precision.
+                     * @return UnitPriceHighPrecision Excludes discounted rates under high precision.
+                     * 
+                     */
+                    std::string GetUnitPriceHighPrecision() const;
+
+                    /**
+                     * 设置Excludes discounted rates under high precision.
+                     * @param _unitPriceHighPrecision Excludes discounted rates under high precision.
+                     * 
+                     */
+                    void SetUnitPriceHighPrecision(const std::string& _unitPriceHighPrecision);
+
+                    /**
+                     * 判断参数 UnitPriceHighPrecision 是否已赋值
+                     * @return UnitPriceHighPrecision 是否已赋值
+                     * 
+                     */
+                    bool UnitPriceHighPrecisionHasBeenSet() const;
+
+                    /**
+                     * 获取Discounted price under high precision.
+                     * @return UnitPriceDiscountHighPrecision Discounted price under high precision.
+                     * 
+                     */
+                    std::string GetUnitPriceDiscountHighPrecision() const;
+
+                    /**
+                     * 设置Discounted price under high precision.
+                     * @param _unitPriceDiscountHighPrecision Discounted price under high precision.
+                     * 
+                     */
+                    void SetUnitPriceDiscountHighPrecision(const std::string& _unitPriceDiscountHighPrecision);
+
+                    /**
+                     * 判断参数 UnitPriceDiscountHighPrecision 是否已赋值
+                     * @return UnitPriceDiscountHighPrecision 是否已赋值
+                     * 
+                     */
+                    bool UnitPriceDiscountHighPrecisionHasBeenSet() const;
+
+                    /**
+                     * 获取Currency unit.
+                     * @return AmountUnit Currency unit.
+                     * 
+                     */
+                    std::string GetAmountUnit() const;
+
+                    /**
+                     * 设置Currency unit.
+                     * @param _amountUnit Currency unit.
+                     * 
+                     */
+                    void SetAmountUnit(const std::string& _amountUnit);
+
+                    /**
+                     * 判断参数 AmountUnit 是否已赋值
+                     * @return AmountUnit 是否已赋值
+                     * 
+                     */
+                    bool AmountUnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Resource total price under prepaid mode, excluding discounts. unit: cent.
+                     * Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
                      */
                     int64_t m_totalPrice;
                     bool m_totalPriceHasBeenSet;
@@ -187,19 +250,19 @@ namespace TencentCloud
                     bool m_discountHasBeenSet;
 
                     /**
-                     * Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+                     * Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
                      */
                     int64_t m_totalPriceDiscount;
                     bool m_totalPriceDiscountHasBeenSet;
 
                     /**
-                     * Unit resource price in postpaid mode, excluding discounts. unit: cent.
+                     * Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
                      */
                     int64_t m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+                     * Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
                      */
                     int64_t m_unitPriceDiscount;
                     bool m_unitPriceDiscountHasBeenSet;
@@ -209,6 +272,24 @@ namespace TencentCloud
                      */
                     std::string m_chargeUnit;
                     bool m_chargeUnitHasBeenSet;
+
+                    /**
+                     * Excludes discounted rates under high precision.
+                     */
+                    std::string m_unitPriceHighPrecision;
+                    bool m_unitPriceHighPrecisionHasBeenSet;
+
+                    /**
+                     * Discounted price under high precision.
+                     */
+                    std::string m_unitPriceDiscountHighPrecision;
+                    bool m_unitPriceDiscountHighPrecisionHasBeenSet;
+
+                    /**
+                     * Currency unit.
+                     */
+                    std::string m_amountUnit;
+                    bool m_amountUnitHasBeenSet;
 
                 };
             }

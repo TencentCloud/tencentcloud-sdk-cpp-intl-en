@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance Resizing Inspection Items
                 */
                 class CheckItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CheckName 
+                     * 获取Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+                     * @return CheckName Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
                      * 
                      */
                     std::string GetCheckName() const;
 
                     /**
-                     * 设置
-                     * @param _checkName 
+                     * 设置Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+                     * @param _checkName Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
                      * 
                      */
                     void SetCheckName(const std::string& _checkName);
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool CheckNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CurrentValue 
+                     * 获取Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+                     * @return CurrentValue Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置
-                     * @param _currentValue 
+                     * 设置Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+                     * @param _currentValue Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Passed 
+                     * 获取Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+                     * @return Passed Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
                      * 
                      */
                     int64_t GetPassed() const;
 
                     /**
-                     * 设置
-                     * @param _passed 
+                     * 设置Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+                     * @param _passed Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
                      * 
                      */
                     void SetPassed(const int64_t& _passed);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool PassedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsAffect 
+                     * 获取Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+                     * @return IsAffect Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
                      * 
                      */
                     int64_t GetIsAffect() const;
 
                     /**
-                     * 设置
-                     * @param _isAffect 
+                     * 设置Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+                     * @param _isAffect Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
                      * 
                      */
                     void SetIsAffect(const int64_t& _isAffect);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool IsAffectHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Msg 
+                     * 获取Required description when impact exists or the check is not passed
+                     * @return Msg Required description when impact exists or the check is not passed
                      * 
                      */
                     std::string GetMsg() const;
 
                     /**
-                     * 设置
-                     * @param _msg 
+                     * 设置Required description when impact exists or the check is not passed
+                     * @param _msg Required description when impact exists or the check is not passed
                      * 
                      */
                     void SetMsg(const std::string& _msg);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MsgCode 
+                     * 获取Describe the corresponding code
+                     * @return MsgCode Describe the corresponding code
                      * 
                      */
                     int64_t GetMsgCode() const;
 
                     /**
-                     * 设置
-                     * @param _msgCode 
+                     * 设置Describe the corresponding code
+                     * @param _msgCode Describe the corresponding code
                      * 
                      */
                     void SetMsgCode(const int64_t& _msgCode);
@@ -175,37 +183,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
                      */
                     std::string m_checkName;
                     bool m_checkNameHasBeenSet;
 
                     /**
-                     * 
+                     * Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * 
+                     * Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
                      */
                     int64_t m_passed;
                     bool m_passedHasBeenSet;
 
                     /**
-                     * 
+                     * Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
                      */
                     int64_t m_isAffect;
                     bool m_isAffectHasBeenSet;
 
                     /**
-                     * 
+                     * Required description when impact exists or the check is not passed
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * Describe the corresponding code
                      */
                     int64_t m_msgCode;
                     bool m_msgCodeHasBeenSet;

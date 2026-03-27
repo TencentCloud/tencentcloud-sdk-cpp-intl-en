@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Affinity 
+                     * 获取The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
+                     * @return Affinity The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
                      * 
                      */
                     int64_t GetAffinity() const;
 
                     /**
-                     * 设置
-                     * @param _affinity 
+                     * 设置The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
+                     * @param _affinity The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
                      * 
                      */
                     void SetAffinity(const int64_t& _affinity);
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * 
+                     * The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
                      */
                     int64_t m_affinity;
                     bool m_affinityHasBeenSet;

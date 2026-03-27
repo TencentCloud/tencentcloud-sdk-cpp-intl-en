@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterName 
+                     * 获取Cluster Name
+                     * @return ClusterName Cluster Name
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置
-                     * @param _clusterName 
+                     * 设置Cluster Name
+                     * @param _clusterName Cluster Name
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Region Information
+                     * @return Region Region Information
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Region Information
+                     * @param _region Region Information
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vpcs 
+                     * 获取VPC and network information
+                     * @return Vpcs VPC and network information
                      * 
                      */
                     std::vector<VpcEndpointInfo> GetVpcs() const;
 
                     /**
-                     * 设置
-                     * @param _vpcs 
+                     * 设置VPC and network information
+                     * @param _vpcs VPC and network information
                      * 
                      */
                     void SetVpcs(const std::vector<VpcEndpointInfo>& _vpcs);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VirtualHostNumber 
+                     * 获取Virtual Host Quantity
+                     * @return VirtualHostNumber Virtual Host Quantity
                      * 
                      */
                     int64_t GetVirtualHostNumber() const;
 
                     /**
-                     * 设置
-                     * @param _virtualHostNumber 
+                     * 设置Virtual Host Quantity
+                     * @param _virtualHostNumber Virtual Host Quantity
                      * 
                      */
                     void SetVirtualHostNumber(const int64_t& _virtualHostNumber);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool VirtualHostNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QueueNumber 
+                     * 获取Number of Queues
+                     * @return QueueNumber Number of Queues
                      * 
                      */
                     int64_t GetQueueNumber() const;
 
                     /**
-                     * 设置
-                     * @param _queueNumber 
+                     * 设置Number of Queues
+                     * @param _queueNumber Number of Queues
                      * 
                      */
                     void SetQueueNumber(const int64_t& _queueNumber);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool QueueNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MessagePublishRate 
+                     * 获取Number of messages produced per second Unit: messages/second
+                     * @return MessagePublishRate Number of messages produced per second Unit: messages/second
                      * 
                      */
                     double GetMessagePublishRate() const;
 
                     /**
-                     * 设置
-                     * @param _messagePublishRate 
+                     * 设置Number of messages produced per second Unit: messages/second
+                     * @param _messagePublishRate Number of messages produced per second Unit: messages/second
                      * 
                      */
                     void SetMessagePublishRate(const double& _messagePublishRate);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool MessagePublishRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MessageStackNumber 
+                     * 获取Number of backlogged messages Unit: messages
+                     * @return MessageStackNumber Number of backlogged messages Unit: messages
                      * 
                      */
                     int64_t GetMessageStackNumber() const;
 
                     /**
-                     * 设置
-                     * @param _messageStackNumber 
+                     * 设置Number of backlogged messages Unit: messages
+                     * @param _messageStackNumber Number of backlogged messages Unit: messages
                      * 
                      */
                     void SetMessageStackNumber(const int64_t& _messageStackNumber);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChannelNumber 
+                     * 获取Channel Count
+                     * @return ChannelNumber Channel Count
                      * 
                      */
                     int64_t GetChannelNumber() const;
 
                     /**
-                     * 设置
-                     * @param _channelNumber 
+                     * 设置Channel Count
+                     * @param _channelNumber Channel Count
                      * 
                      */
                     void SetChannelNumber(const int64_t& _channelNumber);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool ChannelNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnectionNumber 
+                     * 获取Connection Count
+                     * @return ConnectionNumber Connection Count
                      * 
                      */
                     int64_t GetConnectionNumber() const;
 
                     /**
-                     * 设置
-                     * @param _connectionNumber 
+                     * 设置Connection Count
+                     * @param _connectionNumber Connection Count
                      * 
                      */
                     void SetConnectionNumber(const int64_t& _connectionNumber);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool ConnectionNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConsumerNumber 
+                     * 获取Consumer Count
+                     * @return ConsumerNumber Consumer Count
                      * 
                      */
                     int64_t GetConsumerNumber() const;
 
                     /**
-                     * 设置
-                     * @param _consumerNumber 
+                     * 设置Consumer Count
+                     * @param _consumerNumber Consumer Count
                      * 
                      */
                     void SetConsumerNumber(const int64_t& _consumerNumber);
@@ -364,15 +364,15 @@ namespace TencentCloud
                     bool ConsumerNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExchangeNumber 
+                     * 获取Exchange Count
+                     * @return ExchangeNumber Exchange Count
                      * 
                      */
                     int64_t GetExchangeNumber() const;
 
                     /**
-                     * 设置
-                     * @param _exchangeNumber 
+                     * 设置Exchange Count
+                     * @param _exchangeNumber Exchange Count
                      * 
                      */
                     void SetExchangeNumber(const int64_t& _exchangeNumber);
@@ -649,13 +649,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster Name
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Region Information
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -673,7 +673,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 
+                     * VPC and network information
                      */
                     std::vector<VpcEndpointInfo> m_vpcs;
                     bool m_vpcsHasBeenSet;
@@ -685,25 +685,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Virtual Host Quantity
                      */
                     int64_t m_virtualHostNumber;
                     bool m_virtualHostNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Number of Queues
                      */
                     int64_t m_queueNumber;
                     bool m_queueNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Number of messages produced per second Unit: messages/second
                      */
                     double m_messagePublishRate;
                     bool m_messagePublishRateHasBeenSet;
 
                     /**
-                     * 
+                     * Number of backlogged messages Unit: messages
                      */
                     int64_t m_messageStackNumber;
                     bool m_messageStackNumberHasBeenSet;
@@ -715,25 +715,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Channel Count
                      */
                     int64_t m_channelNumber;
                     bool m_channelNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Connection Count
                      */
                     int64_t m_connectionNumber;
                     bool m_connectionNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Consumer Count
                      */
                     int64_t m_consumerNumber;
                     bool m_consumerNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Exchange Count
                      */
                     int64_t m_exchangeNumber;
                     bool m_exchangeNumberHasBeenSet;

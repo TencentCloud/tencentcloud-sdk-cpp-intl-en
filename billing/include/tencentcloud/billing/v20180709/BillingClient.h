@@ -95,6 +95,8 @@
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeRenewInstancesRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeRenewInstancesResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeTagListRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeTagListResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h>
@@ -113,6 +115,8 @@
 #include <tencentcloud/billing/v20180709/model/RefundInstanceResponse.h>
 #include <tencentcloud/billing/v20180709/model/RenewInstanceRequest.h>
 #include <tencentcloud/billing/v20180709/model/RenewInstanceResponse.h>
+#include <tencentcloud/billing/v20180709/model/SetRenewalRequest.h>
+#include <tencentcloud/billing/v20180709/model/SetRenewalResponse.h>
 
 
 namespace TencentCloud
@@ -235,6 +239,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGatherRuleDetailResponse> DescribeGatherRuleDetailOutcome;
                 typedef std::future<DescribeGatherRuleDetailOutcome> DescribeGatherRuleDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeGatherRuleDetailRequest&, DescribeGatherRuleDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatherRuleDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRenewInstancesResponse> DescribeRenewInstancesOutcome;
+                typedef std::future<DescribeRenewInstancesOutcome> DescribeRenewInstancesOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeRenewInstancesRequest&, DescribeRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRenewInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTagListResponse> DescribeTagListOutcome;
                 typedef std::future<DescribeTagListOutcome> DescribeTagListOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeTagListRequest&, DescribeTagListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagListAsyncHandler;
@@ -262,6 +269,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RenewInstanceResponse> RenewInstanceOutcome;
                 typedef std::future<RenewInstanceOutcome> RenewInstanceOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::RenewInstanceRequest&, RenewInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetRenewalResponse> SetRenewalOutcome;
+                typedef std::future<SetRenewalOutcome> SetRenewalOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::SetRenewalRequest&, SetRenewalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetRenewalAsyncHandler;
 
 
 
@@ -595,6 +605,17 @@ Note: The API request may fail due to network instability or other exceptions. I
                 DescribeGatherRuleDetailOutcomeCallable DescribeGatherRuleDetailCallable(const Model::DescribeGatherRuleDetailRequest& request);
 
                 /**
+                 *Notes:
+1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
+2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.
+                 * @param req DescribeRenewInstancesRequest
+                 * @return DescribeRenewInstancesOutcome
+                 */
+                DescribeRenewInstancesOutcome DescribeRenewInstances(const Model::DescribeRenewInstancesRequest &request);
+                void DescribeRenewInstancesAsync(const Model::DescribeRenewInstancesRequest& request, const DescribeRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRenewInstancesOutcomeCallable DescribeRenewInstancesCallable(const Model::DescribeRenewInstancesRequest& request);
+
+                /**
                  *This API is used to get cost allocation tags.
                  * @param req DescribeTagListRequest
                  * @return DescribeTagListOutcome
@@ -676,6 +697,18 @@ Currently, the integrated and supported product for renewal includes: Cloud Fire
                 RenewInstanceOutcome RenewInstance(const Model::RenewInstanceRequest &request);
                 void RenewInstanceAsync(const Model::RenewInstanceRequest& request, const RenewInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RenewInstanceOutcomeCallable RenewInstanceCallable(const Model::RenewInstanceRequest& request);
+
+                /**
+                 *Notes:
+1. This API supports setting auto-renewal mode and period for annual and monthly subscription instances.
+2. Obtain the product code and region code through an instance query API.
+3. When using this API, a sub-user must possess the QcloudFinanceRenewManageFullAccess permission policy.
+                 * @param req SetRenewalRequest
+                 * @return SetRenewalOutcome
+                 */
+                SetRenewalOutcome SetRenewal(const Model::SetRenewalRequest &request);
+                void SetRenewalAsync(const Model::SetRenewalRequest& request, const SetRenewalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetRenewalOutcomeCallable SetRenewalCallable(const Model::SetRenewalRequest& request);
 
             };
         }

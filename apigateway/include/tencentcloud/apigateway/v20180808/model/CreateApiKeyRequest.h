@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool AccessKeySecretHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取Tag
+                     * @return Tags Tag
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置Tag
+                     * @param _tags Tag
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -175,7 +175,7 @@ namespace TencentCloud
                     bool m_accessKeySecretHasBeenSet;
 
                     /**
-                     * 
+                     * Tag
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

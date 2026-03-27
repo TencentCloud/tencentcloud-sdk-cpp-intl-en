@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * cos input information
                 */
                 class CosInputInfo : public AbstractModel
                 {

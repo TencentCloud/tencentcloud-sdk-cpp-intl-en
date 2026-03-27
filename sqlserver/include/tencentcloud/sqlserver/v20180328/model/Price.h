@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Reference price. This price covers CPU and memory specifications, excluding disk usage. The actual price is subject to the quotation API.
                 */
                 class Price : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PrepaidPrice 
+                     * 获取Reference price for yearly/monthly subscription, unit-cent
+                     * @return PrepaidPrice Reference price for yearly/monthly subscription, unit-cent
                      * 
                      */
                     uint64_t GetPrepaidPrice() const;
 
                     /**
-                     * 设置
-                     * @param _prepaidPrice 
+                     * 设置Reference price for yearly/monthly subscription, unit-cent
+                     * @param _prepaidPrice Reference price for yearly/monthly subscription, unit-cent
                      * 
                      */
                     void SetPrepaidPrice(const uint64_t& _prepaidPrice);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PrepaidPriceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PrepaidPriceUnit 
+                     * 获取Price unit for yearly/monthly subscription, M-month
+                     * @return PrepaidPriceUnit Price unit for yearly/monthly subscription, M-month
                      * 
                      */
                     std::string GetPrepaidPriceUnit() const;
 
                     /**
-                     * 设置
-                     * @param _prepaidPriceUnit 
+                     * 设置Price unit for yearly/monthly subscription, M-month
+                     * @param _prepaidPriceUnit Price unit for yearly/monthly subscription, M-month
                      * 
                      */
                     void SetPrepaidPriceUnit(const std::string& _prepaidPriceUnit);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PrepaidPriceUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PostpaidPrice 
+                     * 获取Pay-as-you-go price, unit-cent
+                     * @return PostpaidPrice Pay-as-you-go price, unit-cent
                      * 
                      */
                     uint64_t GetPostpaidPrice() const;
 
                     /**
-                     * 设置
-                     * @param _postpaidPrice 
+                     * 设置Pay-as-you-go price, unit-cent
+                     * @param _postpaidPrice Pay-as-you-go price, unit-cent
                      * 
                      */
                     void SetPostpaidPrice(const uint64_t& _postpaidPrice);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PostpaidPriceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PostpaidPriceUnit 
+                     * 获取Pay-as-you-go price unit, H-hour
+                     * @return PostpaidPriceUnit Pay-as-you-go price unit, H-hour
                      * 
                      */
                     std::string GetPostpaidPriceUnit() const;
 
                     /**
-                     * 设置
-                     * @param _postpaidPriceUnit 
+                     * 设置Pay-as-you-go price unit, H-hour
+                     * @param _postpaidPriceUnit Pay-as-you-go price unit, H-hour
                      * 
                      */
                     void SetPostpaidPriceUnit(const std::string& _postpaidPriceUnit);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Reference price for yearly/monthly subscription, unit-cent
                      */
                     uint64_t m_prepaidPrice;
                     bool m_prepaidPriceHasBeenSet;
 
                     /**
-                     * 
+                     * Price unit for yearly/monthly subscription, M-month
                      */
                     std::string m_prepaidPriceUnit;
                     bool m_prepaidPriceUnitHasBeenSet;
 
                     /**
-                     * 
+                     * Pay-as-you-go price, unit-cent
                      */
                     uint64_t m_postpaidPrice;
                     bool m_postpaidPriceHasBeenSet;
 
                     /**
-                     * 
+                     * Pay-as-you-go price unit, H-hour
                      */
                     std::string m_postpaidPriceUnit;
                     bool m_postpaidPriceUnitHasBeenSet;
