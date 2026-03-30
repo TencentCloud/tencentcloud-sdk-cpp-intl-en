@@ -107,31 +107,27 @@ namespace TencentCloud
                     bool OriginInfoHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>Default: `FOLLOW`</li>
-                     * @return OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>Default: `FOLLOW`</li>
+                     * 获取Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol;</li>.
+<Li>HTTP: http protocol for origin-pull;</li>.
+<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
+                     * @return OriginProtocol Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol;</li>.
+<Li>HTTP: http protocol for origin-pull;</li>.
+<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>Default: `FOLLOW`</li>
-                     * @param _originProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>Default: `FOLLOW`</li>
+                     * 设置Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol;</li>.
+<Li>HTTP: http protocol for origin-pull;</li>.
+<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
+                     * @param _originProtocol Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol;</li>.
+<Li>HTTP: http protocol for origin-pull;</li>.
+<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -144,15 +140,19 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
-                     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+                     * 获取HTTP origin port. default value 80. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
+                     * @return HttpOriginPort HTTP origin port. default value 80. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
                      * 
                      */
                     uint64_t GetHttpOriginPort() const;
 
                     /**
-                     * 设置Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
-                     * @param _httpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+                     * 设置HTTP origin port. default value 80. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
+                     * @param _httpOriginPort HTTP origin port. default value 80. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
                      * 
                      */
                     void SetHttpOriginPort(const uint64_t& _httpOriginPort);
@@ -165,15 +165,19 @@ namespace TencentCloud
                     bool HttpOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
-                     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+                     * 获取HTTPS origin port. default value 443. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
+                     * @return HttpsOriginPort HTTPS origin port. default value 443. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
                      * 
                      */
                     uint64_t GetHttpsOriginPort() const;
 
                     /**
-                     * 设置Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
-                     * @param _httpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+                     * 设置HTTPS origin port. default value 443. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
+                     * @param _httpsOriginPort HTTPS origin port. default value 443. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
                      * 
                      */
                     void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
@@ -186,31 +190,27 @@ namespace TencentCloud
                     bool HttpsOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default: `follow`</li>
-                     * @return IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default: `follow`</li>
+                     * 获取IPv6 status. valid values:.
+<li>follow: adhere to the site IPv6 configuration;</li>.
+<li>on: enabled status;</li>.
+<li>off: disabled.</li>if left empty, the default value is follow.
+                     * @return IPv6Status IPv6 status. valid values:.
+<li>follow: adhere to the site IPv6 configuration;</li>.
+<li>on: enabled status;</li>.
+<li>off: disabled.</li>if left empty, the default value is follow.
                      * 
                      */
                     std::string GetIPv6Status() const;
 
                     /**
-                     * 设置IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default: `follow`</li>
-                     * @param _iPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default: `follow`</li>
+                     * 设置IPv6 status. valid values:.
+<li>follow: adhere to the site IPv6 configuration;</li>.
+<li>on: enabled status;</li>.
+<li>off: disabled.</li>if left empty, the default value is follow.
+                     * @param _iPv6Status IPv6 status. valid values:.
+<li>follow: adhere to the site IPv6 configuration;</li>.
+<li>on: enabled status;</li>.
+<li>off: disabled.</li>if left empty, the default value is follow.
                      * 
                      */
                     void SetIPv6Status(const std::string& _iPv6Status);
@@ -221,6 +221,51 @@ namespace TencentCloud
                      * 
                      */
                     bool IPv6StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+-IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+-Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+-Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+
+Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+                     * @return SharedCNAME Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+-IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+-Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+-Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+
+Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+                     * 
+                     */
+                    std::string GetSharedCNAME() const;
+
+                    /**
+                     * 设置Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+-IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+-Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+-Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+
+Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+                     * @param _sharedCNAME Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+-IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+-Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+-Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+
+Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+                     * 
+                     */
+                    void SetSharedCNAME(const std::string& _sharedCNAME);
+
+                    /**
+                     * 判断参数 SharedCNAME 是否已赋值
+                     * @return SharedCNAME 是否已赋值
+                     * 
+                     */
+                    bool SharedCNAMEHasBeenSet() const;
 
                 private:
 
@@ -243,36 +288,48 @@ namespace TencentCloud
                     bool m_originInfoHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>Default: `FOLLOW`</li>
+                     * Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol;</li>.
+<Li>HTTP: http protocol for origin-pull;</li>.
+<li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+                     * HTTP origin port. default value 80. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
                      */
                     uint64_t m_httpOriginPort;
                     bool m_httpOriginPortHasBeenSet;
 
                     /**
-                     * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+                     * HTTPS origin port. default value 443. value range: 1–65535.
+This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
                      */
                     uint64_t m_httpsOriginPort;
                     bool m_httpsOriginPortHasBeenSet;
 
                     /**
-                     * IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default: `follow`</li>
+                     * IPv6 status. valid values:.
+<li>follow: adhere to the site IPv6 configuration;</li>.
+<li>on: enabled status;</li>.
+<li>off: disabled.</li>if left empty, the default value is follow.
                      */
                     std::string m_iPv6Status;
                     bool m_iPv6StatusHasBeenSet;
+
+                    /**
+                     * Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+-IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+-Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+-Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+
+Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+                     */
+                    std::string m_sharedCNAME;
+                    bool m_sharedCNAMEHasBeenSet;
 
                 };
             }
