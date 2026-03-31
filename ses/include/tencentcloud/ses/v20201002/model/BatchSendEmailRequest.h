@@ -48,23 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
-                     * @return FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+                     * 获取<p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+                     * @return FromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
                      * 
                      */
                     std::string GetFromEmailAddress() const;
 
                     /**
-                     * 设置Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
-                     * @param _fromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+                     * 设置<p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+                     * @param _fromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
                      * 
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
@@ -77,15 +69,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取Recipient list ID.
-                     * @return ReceiverId Recipient list ID.
+                     * 获取<p>Recipient list ID</p>
+                     * @return ReceiverId <p>Recipient list ID</p>
                      * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
-                     * 设置Recipient list ID.
-                     * @param _receiverId Recipient list ID.
+                     * 设置<p>Recipient list ID</p>
+                     * @param _receiverId <p>Recipient list ID</p>
                      * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
@@ -98,15 +90,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
-                     * 获取Email subject.
-                     * @return Subject Email subject.
+                     * 获取<p>Email Subject</p>
+                     * @return Subject <p>Email Subject</p>
                      * 
                      */
                     std::string GetSubject() const;
 
                     /**
-                     * 设置Email subject.
-                     * @param _subject Email subject.
+                     * 设置<p>Email Subject</p>
+                     * @param _subject <p>Email Subject</p>
                      * 
                      */
                     void SetSubject(const std::string& _subject);
@@ -119,15 +111,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool SubjectHasBeenSet() const;
 
                     /**
-                     * 获取Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
-                     * @return TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+                     * 获取<p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+                     * @return TaskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
                      * 
                      */
                     uint64_t GetTaskType() const;
 
                     /**
-                     * 设置Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
-                     * @param _taskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+                     * 设置<p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+                     * @param _taskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
                      * 
                      */
                     void SetTaskType(const uint64_t& _taskType);
@@ -140,15 +132,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-                     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * 获取<p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+                     * @return ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      * 
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
-                     * 设置The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-                     * @param _replyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * 设置<p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+                     * @param _replyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      * 
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
@@ -161,19 +153,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
-                     * 获取When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-                     * @return Template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * 获取<p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+                     * @return Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      * 
                      */
                     Template GetTemplate() const;
 
                     /**
-                     * 设置When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-                     * @param _template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * 设置<p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+                     * @param _template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      * 
                      */
                     void SetTemplate(const Template& _template);
@@ -186,15 +174,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool TemplateHasBeenSet() const;
 
                     /**
-                     * 获取Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-                     * @return Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * 获取<p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+                     * @return Simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
                      * 
                      */
                     Simple GetSimple() const;
 
                     /**
-                     * 设置Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-                     * @param _simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * 设置<p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+                     * @param _simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
                      * 
                      */
                     void SetSimple(const Simple& _simple);
@@ -207,15 +195,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool SimpleHasBeenSet() const;
 
                     /**
-                     * 获取Send attachment when required. fill in related parameters (not supported).
-                     * @return Attachments Send attachment when required. fill in related parameters (not supported).
+                     * 获取<p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+                     * @return Attachments <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
                      * 
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
-                     * 设置Send attachment when required. fill in related parameters (not supported).
-                     * @param _attachments Send attachment when required. fill in related parameters (not supported).
+                     * 设置<p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+                     * @param _attachments <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
                      * 
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
@@ -228,15 +216,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool AttachmentsHasBeenSet() const;
 
                     /**
-                     * 获取Required parameter for sending tasks periodically.
-                     * @return CycleParam Required parameter for sending tasks periodically.
+                     * 获取<p>Required parameter for sending tasks periodically</p>
+                     * @return CycleParam <p>Required parameter for sending tasks periodically</p>
                      * 
                      */
                     CycleEmailParam GetCycleParam() const;
 
                     /**
-                     * 设置Required parameter for sending tasks periodically.
-                     * @param _cycleParam Required parameter for sending tasks periodically.
+                     * 设置<p>Required parameter for sending tasks periodically</p>
+                     * @param _cycleParam <p>Required parameter for sending tasks periodically</p>
                      * 
                      */
                     void SetCycleParam(const CycleEmailParam& _cycleParam);
@@ -249,15 +237,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool CycleParamHasBeenSet() const;
 
                     /**
-                     * 获取Required parameter for scheduled task assignment.
-                     * @return TimedParam Required parameter for scheduled task assignment.
+                     * 获取<p>Required parameter of scheduled task assignment</p>
+                     * @return TimedParam <p>Required parameter of scheduled task assignment</p>
                      * 
                      */
                     TimedEmailParam GetTimedParam() const;
 
                     /**
-                     * 设置Required parameter for scheduled task assignment.
-                     * @param _timedParam Required parameter for scheduled task assignment.
+                     * 设置<p>Required parameter of scheduled task assignment</p>
+                     * @param _timedParam <p>Required parameter of scheduled task assignment</p>
                      * 
                      */
                     void SetTimedParam(const TimedEmailParam& _timedParam);
@@ -270,15 +258,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool TimedParamHasBeenSet() const;
 
                     /**
-                     * 获取Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-                     * @return Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * 获取Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+                     * @return Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
                      * 
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
-                     * 设置Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-                     * @param _unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * 设置Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+                     * @param _unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
                      * 
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
@@ -291,15 +279,15 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                     bool UnsubscribeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
-                     * @return ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+                     * 获取<p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
+                     * @return ADLocation <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
                      * 
                      */
                     uint64_t GetADLocation() const;
 
                     /**
-                     * 设置Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
-                     * @param _aDLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+                     * 设置<p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
+                     * @param _aDLocation <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
                      * 
                      */
                     void SetADLocation(const uint64_t& _aDLocation);
@@ -314,76 +302,73 @@ Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
                 private:
 
                     /**
-                     * Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+                     * <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
                      */
                     std::string m_fromEmailAddress;
                     bool m_fromEmailAddressHasBeenSet;
 
                     /**
-                     * Recipient list ID.
+                     * <p>Recipient list ID</p>
                      */
                     uint64_t m_receiverId;
                     bool m_receiverIdHasBeenSet;
 
                     /**
-                     * Email subject.
+                     * <p>Email Subject</p>
                      */
                     std::string m_subject;
                     bool m_subjectHasBeenSet;
 
                     /**
-                     * Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+                     * <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
                      */
                     uint64_t m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      */
                     std::string m_replyToAddresses;
                     bool m_replyToAddressesHasBeenSet;
 
                     /**
-                     * When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      */
                     Template m_template;
                     bool m_templateHasBeenSet;
 
                     /**
-                     * Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
                      */
                     Simple m_simple;
                     bool m_simpleHasBeenSet;
 
                     /**
-                     * Send attachment when required. fill in related parameters (not supported).
+                     * <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
                      */
                     std::vector<Attachment> m_attachments;
                     bool m_attachmentsHasBeenSet;
 
                     /**
-                     * Required parameter for sending tasks periodically.
+                     * <p>Required parameter for sending tasks periodically</p>
                      */
                     CycleEmailParam m_cycleParam;
                     bool m_cycleParamHasBeenSet;
 
                     /**
-                     * Required parameter for scheduled task assignment.
+                     * <p>Required parameter of scheduled task assignment</p>
                      */
                     TimedEmailParam m_timedParam;
                     bool m_timedParamHasBeenSet;
 
                     /**
-                     * Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
 
                     /**
-                     * Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+                     * <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
                      */
                     uint64_t m_aDLocation;
                     bool m_aDLocationHasBeenSet;

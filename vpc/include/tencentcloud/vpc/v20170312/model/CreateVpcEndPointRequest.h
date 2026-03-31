@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VPC instance ID
-                     * @return VpcId VPC instance ID
+                     * 获取VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+                     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC instance ID
-                     * @param _vpcId VPC instance ID
+                     * 设置VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+                     * @param _vpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet instance ID
-                     * @return SubnetId Subnet instance ID
+                     * 获取Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet instance ID
-                     * @param _subnetId Subnet instance ID
+                     * 设置Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * @param _subnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint name
-                     * @return EndPointName Endpoint name
+                     * 获取Endpoint name. limited to 60 characters.
+                     * @return EndPointName Endpoint name. limited to 60 characters.
                      * 
                      */
                     std::string GetEndPointName() const;
 
                     /**
-                     * 设置Endpoint name
-                     * @param _endPointName Endpoint name
+                     * 设置Endpoint name. limited to 60 characters.
+                     * @param _endPointName Endpoint name. limited to 60 characters.
                      * 
                      */
                     void SetEndPointName(const std::string& _endPointName);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool EndPointNameHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint service ID
-                     * @return EndPointServiceId Endpoint service ID
+                     * 获取Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+                     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetEndPointServiceId() const;
 
                     /**
-                     * 设置Endpoint service ID
-                     * @param _endPointServiceId Endpoint service ID
+                     * 设置Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+                     * @param _endPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
                      * 
                      */
                     void SetEndPointServiceId(const std::string& _endPointServiceId);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool EndPointVipHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID
-                     * @return SecurityGroupId Security group ID
+                     * 获取Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group ID
-                     * @param _securityGroupId Security group ID
+                     * 设置Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * @param _securityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -168,28 +169,70 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+                     * @return Tags List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+                     * @return IpAddressType Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+                     * 
+                     */
+                    std::string GetIpAddressType() const;
+
+                    /**
+                     * 设置Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+                     * @param _ipAddressType Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+                     * 
+                     */
+                    void SetIpAddressType(const std::string& _ipAddressType);
+
+                    /**
+                     * 判断参数 IpAddressType 是否已赋值
+                     * @return IpAddressType 是否已赋值
+                     * 
+                     */
+                    bool IpAddressTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * VPC instance ID
+                     * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet instance ID
+                     * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Endpoint name
+                     * Endpoint name. limited to 60 characters.
                      */
                     std::string m_endPointName;
                     bool m_endPointNameHasBeenSet;
 
                     /**
-                     * Endpoint service ID
+                     * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
                      */
                     std::string m_endPointServiceId;
                     bool m_endPointServiceIdHasBeenSet;
@@ -201,10 +244,22 @@ namespace TencentCloud
                     bool m_endPointVipHasBeenSet;
 
                     /**
-                     * Security group ID
+                     * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
+
+                    /**
+                     * List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+                     */
+                    std::string m_ipAddressType;
+                    bool m_ipAddressTypeHasBeenSet;
 
                 };
             }

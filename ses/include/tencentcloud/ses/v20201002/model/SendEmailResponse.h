@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Uniquely generated message identifier for receive message.
-                     * @return MessageId Uniquely generated message identifier for receive message.
+                     * 获取<p>Uniquely generated message identifier for receiving messages.</p>
+                     * @return MessageId <p>Uniquely generated message identifier for receiving messages.</p>
                      * 
                      */
                     std::string GetMessageId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Uniquely generated message identifier for receive message.
+                     * <p>Uniquely generated message identifier for receiving messages.</p>
                      */
                     std::string m_messageId;
                     bool m_messageIdHasBeenSet;

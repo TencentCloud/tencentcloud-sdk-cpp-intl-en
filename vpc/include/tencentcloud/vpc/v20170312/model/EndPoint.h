@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool EndPointIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @param _vpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -257,15 +258,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time. format: YYYY-MM-DD HH:MM:SS.
+                     * @return CreateTime Creation time. format: YYYY-MM-DD HH:MM:SS.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time. format: YYYY-MM-DD HH:MM:SS.
+                     * @param _createTime Creation time. format: YYYY-MM-DD HH:MM:SS.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -299,19 +300,15 @@ namespace TencentCloud
                     bool GroupSetHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ServiceName Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Endpoint service name.
+                     * @return ServiceName Endpoint service name.
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _serviceName Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Endpoint service name.
+                     * @param _serviceName Endpoint service name.
                      * 
                      */
                     void SetServiceName(const std::string& _serviceName);
@@ -323,6 +320,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ServiceNameHasBeenSet() const;
 
+                    /**
+                     * 获取CDC cluster unique ID.
+                     * @return CdcId CDC cluster unique ID.
+                     * 
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置CDC cluster unique ID.
+                     * @param _cdcId CDC cluster unique ID.
+                     * 
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tag key-value pair.		
+                     * @return TagSet Tag key-value pair.		
+                     * 
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置Tag key-value pair.		
+                     * @param _tagSet Tag key-value pair.		
+                     * 
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     * 
+                     */
+                    bool TagSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -332,7 +371,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_endPointIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -386,7 +425,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time. format: YYYY-MM-DD HH:MM:SS.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -398,11 +437,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_groupSetHasBeenSet;
 
                     /**
-                     * Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Endpoint service name.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
+
+                    /**
+                     * CDC cluster unique ID.
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * Tag key-value pair.		
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
 
                 };
             }

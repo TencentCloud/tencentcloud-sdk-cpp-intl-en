@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size in GB
-                     * @return Memory Instance memory size in GB
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in GB
-                     * @param _memory Instance memory size in GB
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GB
-                     * @return Storage Instance disk size in GB
+                     * 获取Instance disk size in GB.
+                     * @return Storage Instance disk size in GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Instance disk size in GB
-                     * @param _storage Instance disk size in GB
+                     * 设置Instance disk size in GB.
+                     * @param _storage Instance disk size in GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return Cpu Number of CPU cores
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cpu Number of CPU cores
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-                     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * 获取Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-                     * @param _instanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * 设置Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @param _instanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 获取Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 设置Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool DBVersionHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
-                     * @return AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+                     * 获取Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+                     * @return AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
-                     * @param _autoRenewFlag Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+                     * 设置Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+                     * @param _autoRenewFlag Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -422,15 +422,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
-                     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+                     * 获取Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
+                     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
                      * 
                      */
                     int64_t GetSpan() const;
 
                     /**
-                     * 设置Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
-                     * @param _span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+                     * 设置Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
+                     * @param _span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
                      * 
                      */
                     void SetSpan(const int64_t& _span);
@@ -464,15 +464,15 @@ namespace TencentCloud
                     bool MultiZonesHasBeenSet() const;
 
                     /**
-                     * 获取Tags associated with the instances to be created
-                     * @return ResourceTags Tags associated with the instances to be created
+                     * 获取Tags associated with the instances to be created.
+                     * @return ResourceTags Tags associated with the instances to be created.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置Tags associated with the instances to be created
-                     * @param _resourceTags Tags associated with the instances to be created
+                     * 设置Tags associated with the instances to be created.
+                     * @param _resourceTags Tags associated with the instances to be created.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -526,6 +526,69 @@ namespace TencentCloud
                      */
                     bool TimeZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * @return MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * 
+                     */
+                    bool GetMultiNodes() const;
+
+                    /**
+                     * 设置Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * @param _multiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * 
+                     */
+                    void SetMultiNodes(const bool& _multiNodes);
+
+                    /**
+                     * 判断参数 MultiNodes 是否已赋值
+                     * @return MultiNodes 是否已赋值
+                     * 
+                     */
+                    bool MultiNodesHasBeenSet() const;
+
+                    /**
+                     * 获取The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * @return DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * 
+                     */
+                    std::vector<std::string> GetDrZones() const;
+
+                    /**
+                     * 设置The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * @param _drZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * 
+                     */
+                    void SetDrZones(const std::vector<std::string>& _drZones);
+
+                    /**
+                     * 判断参数 DrZones 是否已赋值
+                     * @return DrZones 是否已赋值
+                     * 
+                     */
+                    bool DrZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * @return DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * 
+                     */
+                    int64_t GetDiskEncryptFlag() const;
+
+                    /**
+                     * 设置Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * @param _diskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * 
+                     */
+                    void SetDiskEncryptFlag(const int64_t& _diskEncryptFlag);
+
+                    /**
+                     * 判断参数 DiskEncryptFlag 是否已赋值
+                     * @return DiskEncryptFlag 是否已赋值
+                     * 
+                     */
+                    bool DiskEncryptFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -535,19 +598,19 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance memory size in GB
+                     * Instance memory size in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GB
+                     * Instance disk size in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * Number of CPU cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -559,13 +622,13 @@ namespace TencentCloud
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -601,7 +664,7 @@ namespace TencentCloud
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Array of voucher IDs (currently, only one voucher can be used per order)
+                     * Array of voucher IDs (currently, only one voucher can be used per order).
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
@@ -613,7 +676,7 @@ namespace TencentCloud
                     bool m_dBVersionHasBeenSet;
 
                     /**
-                     * Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+                     * Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -637,7 +700,7 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+                     * Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
                      */
                     int64_t m_span;
                     bool m_spanHasBeenSet;
@@ -649,7 +712,7 @@ namespace TencentCloud
                     bool m_multiZonesHasBeenSet;
 
                     /**
-                     * Tags associated with the instances to be created
+                     * Tags associated with the instances to be created.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -665,6 +728,24 @@ namespace TencentCloud
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     */
+                    bool m_multiNodes;
+                    bool m_multiNodesHasBeenSet;
+
+                    /**
+                     * The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     */
+                    std::vector<std::string> m_drZones;
+                    bool m_drZonesHasBeenSet;
+
+                    /**
+                     * Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     */
+                    int64_t m_diskEncryptFlag;
+                    bool m_diskEncryptFlagHasBeenSet;
 
                 };
             }

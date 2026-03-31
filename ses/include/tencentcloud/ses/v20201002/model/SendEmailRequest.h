@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
-                     * @return FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+                     * 获取<p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+                     * @return FromEmailAddress <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
                      * 
                      */
                     std::string GetFromEmailAddress() const;
 
                     /**
-                     * 设置Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
-                     * @param _fromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+                     * 设置<p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+                     * @param _fromEmailAddress <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
                      * 
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取Email subject.
-                     * @return Subject Email subject.
+                     * 获取<p>Email Subject</p>
+                     * @return Subject <p>Email Subject</p>
                      * 
                      */
                     std::string GetSubject() const;
 
                     /**
-                     * 设置Email subject.
-                     * @param _subject Email subject.
+                     * 设置<p>Email Subject</p>
+                     * @param _subject <p>Email Subject</p>
                      * 
                      */
                     void SetSubject(const std::string& _subject);
@@ -88,19 +88,15 @@ namespace TencentCloud
                     bool SubjectHasBeenSet() const;
 
                     /**
-                     * 获取Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
-                     * @return Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * 获取<p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+                     * @return Destination <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
                      * 
                      */
                     std::vector<std::string> GetDestination() const;
 
                     /**
-                     * 设置Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
-                     * @param _destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * 设置<p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+                     * @param _destination <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
                      * 
                      */
                     void SetDestination(const std::vector<std::string>& _destination);
@@ -113,15 +109,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool DestinationHasBeenSet() const;
 
                     /**
-                     * 获取The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-                     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * 获取<p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+                     * @return ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      * 
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
-                     * 设置The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-                     * @param _replyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * 设置<p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+                     * @param _replyToAddresses <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      * 
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
@@ -134,15 +130,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Cc recipient email address, supports up to 20 carbon copies.
-                     * @return Cc Cc recipient email address, supports up to 20 carbon copies.
+                     * 获取<p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+                     * @return Cc <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
                      * 
                      */
                     std::vector<std::string> GetCc() const;
 
                     /**
-                     * 设置Cc recipient email address, supports up to 20 carbon copies.
-                     * @param _cc Cc recipient email address, supports up to 20 carbon copies.
+                     * 设置<p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+                     * @param _cc <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
                      * 
                      */
                     void SetCc(const std::vector<std::string>& _cc);
@@ -155,15 +151,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool CcHasBeenSet() const;
 
                     /**
-                     * 获取Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
-                     * @return Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+                     * 获取<p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+                     * @return Bcc <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
                      * 
                      */
                     std::vector<std::string> GetBcc() const;
 
                     /**
-                     * 设置Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
-                     * @param _bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+                     * 设置<p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+                     * @param _bcc <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
                      * 
                      */
                     void SetBcc(const std::vector<std::string>& _bcc);
@@ -176,19 +172,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool BccHasBeenSet() const;
 
                     /**
-                     * 获取Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-                     * @return Template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * 获取<p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+                     * @return Template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      * 
                      */
                     Template GetTemplate() const;
 
                     /**
-                     * 设置Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-                     * @param _template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * 设置<p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+                     * @param _template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      * 
                      */
                     void SetTemplate(const Template& _template);
@@ -201,19 +193,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool TemplateHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-                     * @return Simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * 获取<p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+                     * @return Simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
                      * 
                      */
                     Simple GetSimple() const;
 
                     /**
-                     * 设置This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-                     * @param _simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * 设置<p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+                     * @param _simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
                      * 
                      */
                     void SetSimple(const Simple& _simple);
@@ -226,15 +214,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool SimpleHasBeenSet() const;
 
                     /**
-                     * 获取When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
-                     * @return Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+                     * 获取<p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+                     * @return Attachments <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
                      * 
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
-                     * 设置When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
-                     * @param _attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+                     * 设置<p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+                     * @param _attachments <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
                      * 
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
@@ -247,15 +235,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool AttachmentsHasBeenSet() const;
 
                     /**
-                     * 获取Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-                     * @return Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * 获取Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+                     * @return Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
                      * 
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
-                     * 设置Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-                     * @param _unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * 设置Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+                     * @param _unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
                      * 
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
@@ -268,15 +256,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool UnsubscribeHasBeenSet() const;
 
                     /**
-                     * 获取Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
-                     * @return TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+                     * 获取<p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+                     * @return TriggerType <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
                      * 
                      */
                     uint64_t GetTriggerType() const;
 
                     /**
-                     * 设置Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
-                     * @param _triggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+                     * 设置<p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+                     * @param _triggerType <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
                      * 
                      */
                     void SetTriggerType(const uint64_t& _triggerType);
@@ -289,15 +277,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool TriggerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Message-Id field in the smtp header.
-                     * @return SmtpMessageId Message-Id field in the smtp header.
+                     * 获取<p>Message-Id field in the smtp header</p>
+                     * @return SmtpMessageId <p>Message-Id field in the smtp header</p>
                      * 
                      */
                     std::string GetSmtpMessageId() const;
 
                     /**
-                     * 设置Message-Id field in the smtp header.
-                     * @param _smtpMessageId Message-Id field in the smtp header.
+                     * 设置<p>Message-Id field in the smtp header</p>
+                     * @param _smtpMessageId <p>Message-Id field in the smtp header</p>
                      * 
                      */
                     void SetSmtpMessageId(const std::string& _smtpMessageId);
@@ -310,15 +298,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool SmtpMessageIdHasBeenSet() const;
 
                     /**
-                     * 获取Other fields that can be set in the smtp header.
-                     * @return SmtpHeaders Other fields that can be set in the smtp header.
+                     * 获取<p>Other fields that can be set in the smtp header</p>
+                     * @return SmtpHeaders <p>Other fields that can be set in the smtp header</p>
                      * 
                      */
                     std::string GetSmtpHeaders() const;
 
                     /**
-                     * 设置Other fields that can be set in the smtp header.
-                     * @param _smtpHeaders Other fields that can be set in the smtp header.
+                     * 设置<p>Other fields that can be set in the smtp header</p>
+                     * @param _smtpHeaders <p>Other fields that can be set in the smtp header</p>
                      * 
                      */
                     void SetSmtpHeaders(const std::string& _smtpHeaders);
@@ -331,15 +319,15 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                     bool SmtpHeadersHasBeenSet() const;
 
                     /**
-                     * 获取from field in the smtp header. the domain name should be consistent with FromEmailAddress.
-                     * @return HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+                     * 获取<p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
+                     * @return HeaderFrom <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
                      * 
                      */
                     std::string GetHeaderFrom() const;
 
                     /**
-                     * 设置from field in the smtp header. the domain name should be consistent with FromEmailAddress.
-                     * @param _headerFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+                     * 设置<p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
+                     * @param _headerFrom <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
                      * 
                      */
                     void SetHeaderFrom(const std::string& _headerFrom);
@@ -354,88 +342,85 @@ Specifies that at least one of the Destination, Cc, or Bcc parameters must exist
                 private:
 
                     /**
-                     * Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+                     * <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
                      */
                     std::string m_fromEmailAddress;
                     bool m_fromEmailAddressHasBeenSet;
 
                     /**
-                     * Email subject.
+                     * <p>Email Subject</p>
                      */
                     std::string m_subject;
                     bool m_subjectHasBeenSet;
 
                     /**
-                     * Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+                     * <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
                      */
                     std::vector<std::string> m_destination;
                     bool m_destinationHasBeenSet;
 
                     /**
-                     * The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+                     * <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
                      */
                     std::string m_replyToAddresses;
                     bool m_replyToAddressesHasBeenSet;
 
                     /**
-                     * Cc recipient email address, supports up to 20 carbon copies.
+                     * <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
                      */
                     std::vector<std::string> m_cc;
                     bool m_ccHasBeenSet;
 
                     /**
-                     * Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+                     * <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
                      */
                     std::vector<std::string> m_bcc;
                     bool m_bccHasBeenSet;
 
                     /**
-                     * Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+                     * <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
                      */
                     Template m_template;
                     bool m_templateHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+                     * <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
                      */
                     Simple m_simple;
                     bool m_simpleHasBeenSet;
 
                     /**
-                     * When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+                     * <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
                      */
                     std::vector<Attachment> m_attachments;
                     bool m_attachmentsHasBeenSet;
 
                     /**
-                     * Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+                     * Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
 
                     /**
-                     * Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+                     * <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
                      */
                     uint64_t m_triggerType;
                     bool m_triggerTypeHasBeenSet;
 
                     /**
-                     * Message-Id field in the smtp header.
+                     * <p>Message-Id field in the smtp header</p>
                      */
                     std::string m_smtpMessageId;
                     bool m_smtpMessageIdHasBeenSet;
 
                     /**
-                     * Other fields that can be set in the smtp header.
+                     * <p>Other fields that can be set in the smtp header</p>
                      */
                     std::string m_smtpHeaders;
                     bool m_smtpHeadersHasBeenSet;
 
                     /**
-                     * from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+                     * <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
                      */
                     std::string m_headerFrom;
                     bool m_headerFromHasBeenSet;
