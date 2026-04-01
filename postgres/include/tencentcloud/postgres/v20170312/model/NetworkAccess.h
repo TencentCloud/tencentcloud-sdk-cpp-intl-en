@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ResourceId Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Network resource id, instance id, or RO group id.
+                     * @return ResourceId Network resource id, instance id, or RO group id.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _resourceId Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Network resource id, instance id, or RO group id.
+                     * @param _resourceId Network resource id, instance id, or RO group id.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Resource type. valid values: 1 (instance), 2 (RO group).
+                     * @return ResourceType Resource type. valid values: 1 (instance), 2 (RO group).
                      * 
                      */
                     uint64_t GetResourceType() const;
 
                     /**
-                     * 设置Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _resourceType Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Resource type. valid values: 1 (instance), 2 (RO group).
+                     * @param _resourceType Resource type. valid values: 1 (instance), 2 (RO group).
                      * 
                      */
                     void SetResourceType(const uint64_t& _resourceType);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取VPC ID. specifies the ID of the virtual private cloud.
+                     * @return VpcId VPC ID. specifies the ID of the virtual private cloud.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置VPC ID. specifies the ID of the virtual private cloud.
+                     * @param _vpcId VPC ID. specifies the ID of the virtual private cloud.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -122,19 +110,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Vip IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取IPv4 Address
+                     * @return Vip IPv4 Address
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vip IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置IPv4 Address
+                     * @param _vip IPv4 Address
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -147,19 +131,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Vip6 IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取IPv6 Address
+                     * @return Vip6 IPv6 Address
                      * 
                      */
                     std::string GetVip6() const;
 
                     /**
-                     * 设置IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vip6 IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置IPv6 Address
+                     * @param _vip6 IPv6 Address
                      * 
                      */
                     void SetVip6(const std::string& _vip6);
@@ -172,19 +152,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool Vip6HasBeenSet() const;
 
                     /**
-                     * 获取Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Vport Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the access port.
+                     * @return Vport Specifies the access port.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vport Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the access port.
+                     * @param _vport Specifies the access port.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -197,19 +173,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _subnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Subnet ID.
+                     * @param _subnetId Subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -222,19 +194,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VpcStatus Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
+                     * @return VpcStatus Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
                      * 
                      */
                     int64_t GetVpcStatus() const;
 
                     /**
-                     * 设置Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vpcStatus Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
+                     * @param _vpcStatus Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
                      * 
                      */
                     void SetVpcStatus(const int64_t& _vpcStatus);
@@ -249,57 +217,49 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Network resource id, instance id, or RO group id.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Resource type. valid values: 1 (instance), 2 (RO group).
                      */
                     uint64_t m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * VPC ID. specifies the ID of the virtual private cloud.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * IPv4 Address
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * IPv6 Address
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
 
                     /**
-                     * Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the access port.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
                      */
                     int64_t m_vpcStatus;
                     bool m_vpcStatusHasBeenSet;

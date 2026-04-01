@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order number list. Each instance corresponds to an order number.
-                     * @return DealNames Order number list. Each instance corresponds to an order number.
+                     * 获取<p>Order number list. Each instance corresponds to an order number.</p>
+                     * @return DealNames <p>Order number list. Each instance corresponds to an order number.</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Bill ID of frozen fees
-                     * @return BillId Bill ID of frozen fees
+                     * 获取<p>Frozen transaction ID.</p>
+                     * @return BillId <p>Frozen transaction ID.</p>
                      * 
                      */
                     std::string GetBillId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BillIdHasBeenSet() const;
 
                     /**
-                     * 获取ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
-                     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+                     * 获取<p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
+                     * @return DBInstanceIdSet <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order number list. Each instance corresponds to an order number.
+                     * <p>Order number list. Each instance corresponds to an order number.</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Bill ID of frozen fees
+                     * <p>Frozen transaction ID.</p>
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
 
                     /**
-                     * ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+                     * <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;

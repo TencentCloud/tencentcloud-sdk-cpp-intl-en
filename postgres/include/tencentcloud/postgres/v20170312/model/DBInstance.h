@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
-                     * @return Region Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
+                     * 获取<p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
+                     * @return Region <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
-                     * @param _region Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
+                     * 设置<p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
+                     * @param _region <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
-                     * @return Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
+                     * 获取<p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
+                     * @return Zone <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
-                     * @param _zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
+                     * 设置<p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
+                     * @param _zone <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
-                     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
+                     * 获取<p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
+                     * @return VpcId <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
-                     * @param _vpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
+                     * 设置<p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
+                     * @param _vpcId <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-                     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * 获取<p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
+                     * @return SubnetId <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-                     * @param _subnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * 设置<p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
+                     * @param _subnetId <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return DBInstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _dBInstanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return DBInstanceName Instance name
+                     * 获取<p>Instance name.</p>
+                     * @return DBInstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetDBInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _dBInstanceName Instance name
+                     * 设置<p>Instance name.</p>
+                     * @param _dBInstanceName <p>Instance name.</p>
                      * 
                      */
                     void SetDBInstanceName(const std::string& _dBInstanceName);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool DBInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
-                     * @return DBInstanceStatus Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
+                     * 获取<p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
+                     * @return DBInstanceStatus <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
                      * 
                      */
                     std::string GetDBInstanceStatus() const;
 
                     /**
-                     * 设置Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
-                     * @param _dBInstanceStatus Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
+                     * 设置<p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
+                     * @param _dBInstanceStatus <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
                      * 
                      */
                     void SetDBInstanceStatus(const std::string& _dBInstanceStatus);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool DBInstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Assigned instance memory size in GB
-                     * @return DBInstanceMemory Assigned instance memory size in GB
+                     * 获取<p>Memory size allocated to the instance, measurement unit: GB</p>
+                     * @return DBInstanceMemory <p>Memory size allocated to the instance, measurement unit: GB</p>
                      * 
                      */
                     uint64_t GetDBInstanceMemory() const;
 
                     /**
-                     * 设置Assigned instance memory size in GB
-                     * @param _dBInstanceMemory Assigned instance memory size in GB
+                     * 设置<p>Memory size allocated to the instance, measurement unit: GB</p>
+                     * @param _dBInstanceMemory <p>Memory size allocated to the instance, measurement unit: GB</p>
                      * 
                      */
                     void SetDBInstanceMemory(const uint64_t& _dBInstanceMemory);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool DBInstanceMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Assigned instance storage capacity in GB
-                     * @return DBInstanceStorage Assigned instance storage capacity in GB
+                     * 获取<p>Storage space size allocated to the instance, measurement unit: GB</p>
+                     * @return DBInstanceStorage <p>Storage space size allocated to the instance, measurement unit: GB</p>
                      * 
                      */
                     uint64_t GetDBInstanceStorage() const;
 
                     /**
-                     * 设置Assigned instance storage capacity in GB
-                     * @param _dBInstanceStorage Assigned instance storage capacity in GB
+                     * 设置<p>Storage space size allocated to the instance, measurement unit: GB</p>
+                     * @param _dBInstanceStorage <p>Storage space size allocated to the instance, measurement unit: GB</p>
                      * 
                      */
                     void SetDBInstanceStorage(const uint64_t& _dBInstanceStorage);
@@ -240,15 +240,15 @@ namespace TencentCloud
                     bool DBInstanceStorageHasBeenSet() const;
 
                     /**
-                     * 获取Number of assigned CPUs
-                     * @return DBInstanceCpu Number of assigned CPUs
+                     * 获取<p>Number of CPUs allocated to the instance, unit: piece</p>
+                     * @return DBInstanceCpu <p>Number of CPUs allocated to the instance, unit: piece</p>
                      * 
                      */
                     uint64_t GetDBInstanceCpu() const;
 
                     /**
-                     * 设置Number of assigned CPUs
-                     * @param _dBInstanceCpu Number of assigned CPUs
+                     * 设置<p>Number of CPUs allocated to the instance, unit: piece</p>
+                     * @param _dBInstanceCpu <p>Number of CPUs allocated to the instance, unit: piece</p>
                      * 
                      */
                     void SetDBInstanceCpu(const uint64_t& _dBInstanceCpu);
@@ -261,15 +261,15 @@ namespace TencentCloud
                     bool DBInstanceCpuHasBeenSet() const;
 
                     /**
-                     * 获取Purchasable specification ID
-                     * @return DBInstanceClass Purchasable specification ID
+                     * 获取<p>Purchasable specification ID.</p>
+                     * @return DBInstanceClass <p>Purchasable specification ID.</p>
                      * 
                      */
                     std::string GetDBInstanceClass() const;
 
                     /**
-                     * 设置Purchasable specification ID
-                     * @param _dBInstanceClass Purchasable specification ID
+                     * 设置<p>Purchasable specification ID.</p>
+                     * @param _dBInstanceClass <p>Purchasable specification ID.</p>
                      * 
                      */
                     void SetDBInstanceClass(const std::string& _dBInstanceClass);
@@ -282,19 +282,15 @@ namespace TencentCloud
                     bool DBInstanceClassHasBeenSet() const;
 
                     /**
-                     * 获取The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
+                     * @return DBMajorVersion <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
+                     * @param _dBMajorVersion <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -307,15 +303,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-                     * @return DBVersion Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+                     * 获取<p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+                     * @return DBVersion <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      * 
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-                     * @param _dBVersion Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+                     * 设置<p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+                     * @param _dBVersion <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      * 
                      */
                     void SetDBVersion(const std::string& _dBVersion);
@@ -328,19 +324,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBVersionHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+                     * @return DBKernelVersion <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      * 
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
+                     * @param _dBKernelVersion <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      * 
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
@@ -353,31 +345,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBKernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
-                     * @return DBInstanceType Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
+                     * 获取<p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
+                     * @return DBInstanceType <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
                      * 
                      */
                     std::string GetDBInstanceType() const;
 
                     /**
-                     * 设置Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
-                     * @param _dBInstanceType Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
+                     * 设置<p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
+                     * @param _dBInstanceType <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
                      * 
                      */
                     void SetDBInstanceType(const std::string& _dBInstanceType);
@@ -390,15 +366,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
-                     * @return DBInstanceVersion Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
+                     * 获取<p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
+                     * @return DBInstanceVersion <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
                      * 
                      */
                     std::string GetDBInstanceVersion() const;
 
                     /**
-                     * 设置Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
-                     * @param _dBInstanceVersion Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
+                     * 设置<p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
+                     * @param _dBInstanceVersion <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
                      * 
                      */
                     void SetDBInstanceVersion(const std::string& _dBInstanceVersion);
@@ -411,23 +387,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBInstanceVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
-                     * @return DBCharset Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
+                     * 获取<p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
+                     * @return DBCharset <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
                      * 
                      */
                     std::string GetDBCharset() const;
 
                     /**
-                     * 设置Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
-                     * @param _dBCharset Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
+                     * 设置<p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
+                     * @param _dBCharset <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
                      * 
                      */
                     void SetDBCharset(const std::string& _dBCharset);
@@ -440,15 +408,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBCharsetHasBeenSet() const;
 
                     /**
-                     * 获取Instance creation time
-                     * @return CreateTime Instance creation time
+                     * 获取<p>Instance creation time.</p>
+                     * @return CreateTime <p>Instance creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Instance creation time
-                     * @param _createTime Instance creation time
+                     * 设置<p>Instance creation time.</p>
+                     * @param _createTime <p>Instance creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -461,15 +429,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last updated time of the instance attribute
-                     * @return UpdateTime Last updated time of the instance attribute
+                     * 获取<p>The time when the instance executed the last update.</p>
+                     * @return UpdateTime <p>The time when the instance executed the last update.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last updated time of the instance attribute
-                     * @param _updateTime Last updated time of the instance attribute
+                     * 设置<p>The time when the instance executed the last update.</p>
+                     * @param _updateTime <p>The time when the instance executed the last update.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -482,15 +450,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance expiration time
-                     * @return ExpireTime Instance expiration time
+                     * 获取<p>Instance expiration time.</p>
+                     * @return ExpireTime <p>Instance expiration time.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Instance expiration time
-                     * @param _expireTime Instance expiration time
+                     * 设置<p>Instance expiration time.</p>
+                     * @param _expireTime <p>Instance expiration time.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -503,15 +471,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance isolation time
-                     * @return IsolatedTime Instance isolation time
+                     * 获取<p>Instance isolation time.</p>
+                     * @return IsolatedTime <p>Instance isolation time.</p>
                      * 
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
-                     * 设置Instance isolation time
-                     * @param _isolatedTime Instance isolation time
+                     * 设置<p>Instance isolation time.</p>
+                     * @param _isolatedTime <p>Instance isolation time.</p>
                      * 
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
@@ -524,23 +492,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
-                     * @return PayType Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
+                     * 获取<p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
+                     * @return PayType <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
                      * 
                      */
                     std::string GetPayType() const;
 
                     /**
-                     * 设置Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
-                     * @param _payType Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
+                     * 设置<p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
+                     * @param _payType <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
                      * 
                      */
                     void SetPayType(const std::string& _payType);
@@ -553,27 +513,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
-                     * @return AutoRenew Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
+                     * 获取<p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
+                     * @return AutoRenew <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
                      * 
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
-                     * @param _autoRenew Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
+                     * 设置<p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
+                     * @param _autoRenew <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
                      * 
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
@@ -586,15 +534,15 @@ Default value: 0
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Instance network connection information
-                     * @return DBInstanceNetInfo Instance network connection information
+                     * 获取<p>Instance network connection information.</p>
+                     * @return DBInstanceNetInfo <p>Instance network connection information.</p>
                      * 
                      */
                     std::vector<DBInstanceNetInfo> GetDBInstanceNetInfo() const;
 
                     /**
-                     * 设置Instance network connection information
-                     * @param _dBInstanceNetInfo Instance network connection information
+                     * 设置<p>Instance network connection information.</p>
+                     * @param _dBInstanceNetInfo <p>Instance network connection information.</p>
                      * 
                      */
                     void SetDBInstanceNetInfo(const std::vector<DBInstanceNetInfo>& _dBInstanceNetInfo);
@@ -607,15 +555,15 @@ Default value: 0
                     bool DBInstanceNetInfoHasBeenSet() const;
 
                     /**
-                     * 获取Machine type
-                     * @return Type Machine type
+                     * 获取<p>Machine type.</p>
+                     * @return Type <p>Machine type.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Machine type
-                     * @param _type Machine type
+                     * 设置<p>Machine type.</p>
+                     * @param _type <p>Machine type.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -628,15 +576,15 @@ Default value: 0
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取User `AppId`
-                     * @return AppId User `AppId`
+                     * 获取<p>User's app id.</p>
+                     * @return AppId <p>User's app id.</p>
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置User `AppId`
-                     * @param _appId User `AppId`
+                     * 设置<p>User's app id.</p>
+                     * @param _appId <p>User's app id.</p>
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -649,15 +597,15 @@ Default value: 0
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance `Uid`
-                     * @return Uid Instance `Uid`
+                     * 获取<p>Uid of the instance.</p>
+                     * @return Uid <p>Uid of the instance.</p>
                      * 
                      */
                     uint64_t GetUid() const;
 
                     /**
-                     * 设置Instance `Uid`
-                     * @param _uid Instance `Uid`
+                     * 设置<p>Uid of the instance.</p>
+                     * @param _uid <p>Uid of the instance.</p>
                      * 
                      */
                     void SetUid(const uint64_t& _uid);
@@ -670,15 +618,15 @@ Default value: 0
                     bool UidHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectId <p>Project ID.</p>
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置<p>Project ID.</p>
+                     * @param _projectId <p>Project ID.</p>
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -691,19 +639,15 @@ Default value: 0
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TagList The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Tag information associated with the instance.</p>
+                     * @return TagList <p>Tag information associated with the instance.</p>
                      * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
-                     * 设置The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tagList The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Tag information associated with the instance.</p>
+                     * @param _tagList <p>Tag information associated with the instance.</p>
                      * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
@@ -716,19 +660,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Primary instance information. Returned only when the instance is a read-only instance.</p>
+                     * @return MasterDBInstanceId <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
                      * 
                      */
                     std::string GetMasterDBInstanceId() const;
 
                     /**
-                     * 设置Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _masterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Primary instance information. Returned only when the instance is a read-only instance.</p>
+                     * @param _masterDBInstanceId <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
                      * 
                      */
                     void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
@@ -741,19 +681,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MasterDBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadOnlyInstanceNum Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Number of read-only instances.</p>
+                     * @return ReadOnlyInstanceNum <p>Number of read-only instances.</p>
                      * 
                      */
                     int64_t GetReadOnlyInstanceNum() const;
 
                     /**
-                     * 设置Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readOnlyInstanceNum Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Number of read-only instances.</p>
+                     * @param _readOnlyInstanceNum <p>Number of read-only instances.</p>
                      * 
                      */
                     void SetReadOnlyInstanceNum(const int64_t& _readOnlyInstanceNum);
@@ -766,19 +702,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReadOnlyInstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>State of the read-only instance in the read-only group.</p>
+                     * @return StatusInReadonlyGroup <p>State of the read-only instance in the read-only group.</p>
                      * 
                      */
                     std::string GetStatusInReadonlyGroup() const;
 
                     /**
-                     * 设置The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _statusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>State of the read-only instance in the read-only group.</p>
+                     * @param _statusInReadonlyGroup <p>State of the read-only instance in the read-only group.</p>
                      * 
                      */
                     void SetStatusInReadonlyGroup(const std::string& _statusInReadonlyGroup);
@@ -791,19 +723,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusInReadonlyGroupHasBeenSet() const;
 
                     /**
-                     * 获取Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Offline time.</p>
+                     * @return OfflineTime <p>Offline time.</p>
                      * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
-                     * 设置Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _offlineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Offline time.</p>
+                     * @param _offlineTime <p>Offline time.</p>
                      * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
@@ -816,18 +744,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance node information
+                     * 获取<p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBNodeSet Instance node information
+                     * @return DBNodeSet <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
-                     * 设置Instance node information
+                     * 设置<p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBNodeSet Instance node information
+                     * @param _dBNodeSet <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -841,31 +769,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSupportTDE Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
+                     * @return IsSupportTDE <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetIsSupportTDE() const;
 
                     /**
-                     * 设置Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSupportTDE Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
+                     * @param _isSupportTDE <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
                      * 
                      */
                     void SetIsSupportTDE(const int64_t& _isSupportTDE);
@@ -878,31 +790,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSupportTDEHasBeenSet() const;
 
                     /**
-                     * 获取Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBEngine Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
+                     * @return DBEngine <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
                      * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
-                     * 设置Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBEngine Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
+                     * @param _dBEngine <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
                      * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
@@ -915,47 +811,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBEngineHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBEngineConfig Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
+                     * @return DBEngineConfig <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
                      * 
                      */
                     std::string GetDBEngineConfig() const;
 
                     /**
-                     * 设置Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBEngineConfig Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
+                     * @param _dBEngineConfig <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
                      * 
                      */
                     void SetDBEngineConfig(const std::string& _dBEngineConfig);
@@ -968,19 +832,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBEngineConfigHasBeenSet() const;
 
                     /**
-                     * 获取Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return NetworkAccessList Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NetworkAccessList <p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NetworkAccess> GetNetworkAccessList() const;
 
                     /**
-                     * 设置Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _networkAccessList Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _networkAccessList <p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNetworkAccessList(const std::vector<NetworkAccess>& _networkAccessList);
@@ -993,27 +857,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NetworkAccessListHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
-                     * @return SupportIpv6 Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+                     * 获取<p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
+                     * @return SupportIpv6 <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
                      * 
                      */
                     uint64_t GetSupportIpv6() const;
 
                     /**
-                     * 设置Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
-                     * @param _supportIpv6 Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+                     * 设置<p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
+                     * @param _supportIpv6 <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
                      * 
                      */
                     void SetSupportIpv6(const uint64_t& _supportIpv6);
@@ -1025,280 +877,324 @@ Default value: 0
                      */
                     bool SupportIpv6HasBeenSet() const;
 
+                    /**
+                     * 获取<p>Number of cpu cores that have been elastically scaled out for the instance</p>
+                     * @return ExpandedCpu <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+                     * 
+                     */
+                    uint64_t GetExpandedCpu() const;
+
+                    /**
+                     * 设置<p>Number of cpu cores that have been elastically scaled out for the instance</p>
+                     * @param _expandedCpu <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+                     * 
+                     */
+                    void SetExpandedCpu(const uint64_t& _expandedCpu);
+
+                    /**
+                     * 判断参数 ExpandedCpu 是否已赋值
+                     * @return ExpandedCpu 是否已赋值
+                     * 
+                     */
+                    bool ExpandedCpuHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+                     * @return DeletionProtection <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+                     * 
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置<p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+                     * @param _deletionProtection <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+                     * 
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+                     * @return DBInstanceStorageType <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+                     * 
+                     */
+                    std::string GetDBInstanceStorageType() const;
+
+                    /**
+                     * 设置<p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+                     * @param _dBInstanceStorageType <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+                     * 
+                     */
+                    void SetDBInstanceStorageType(const std::string& _dBInstanceStorageType);
+
+                    /**
+                     * 判断参数 DBInstanceStorageType 是否已赋值
+                     * @return DBInstanceStorageType 是否已赋值
+                     * 
+                     */
+                    bool DBInstanceStorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
+                     * <p>Region of the instance, for example: ap-guangzhou, corresponds to the region field in RegionSet.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
+                     * <p>Availability zone to which the instance belongs, for example: ap-guangzhou-3, corresponds to the Zone field in ZoneSet.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) API.
+                     * <p>VPC ID, such as vpc-e6w23k31. A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpcs</a> and acquiring the unVpcId field in API return.</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * <p>VPC subnet ID, such as subnet-51lcif9y. An effective VPC subnet ID can be obtained by logging in to the console to query. You can also call API <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> and get it from the unSubnetId field in API return.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name.</p>
                      */
                     std::string m_dBInstanceName;
                     bool m_dBInstanceNameHasBeenSet;
 
                     /**
-                     * Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), and `primary-switching` (primary-secondary switching)
+                     * <p>Instance status, including: `applying` (applying), `init` (to be initialized), `initing` (initializing), `running` (running), `limited run` (restricted operation), `isolating` (isolating), `isolated` (isolated), `disisolating` (de-isolating), `recycling` (recycling), `recycled` (recycled), `job running` (task executing), `offline` (offline), `migrating` (migrating), `expanding` (scaling out), `waitSwitch` (waiting to switch), `switching` (switching), `readonly` (readonly), `restarting` (restarting), `network changing` (network modification in progress), `upgrading` (kernel version upgrading), `audit-switching` (audit status changing), `primary-switching` (primary-secondary switching), `offlining` (offline), `deployment changing` (modify AZ), `cloning` (recovering data), `parameter modifying` (parameter modification in progress), `log-switching` (log status change), `restoring` (recovering), and `expanding` (scaling out)</p>
                      */
                     std::string m_dBInstanceStatus;
                     bool m_dBInstanceStatusHasBeenSet;
 
                     /**
-                     * Assigned instance memory size in GB
+                     * <p>Memory size allocated to the instance, measurement unit: GB</p>
                      */
                     uint64_t m_dBInstanceMemory;
                     bool m_dBInstanceMemoryHasBeenSet;
 
                     /**
-                     * Assigned instance storage capacity in GB
+                     * <p>Storage space size allocated to the instance, measurement unit: GB</p>
                      */
                     uint64_t m_dBInstanceStorage;
                     bool m_dBInstanceStorageHasBeenSet;
 
                     /**
-                     * Number of assigned CPUs
+                     * <p>Number of CPUs allocated to the instance, unit: piece</p>
                      */
                     uint64_t m_dBInstanceCpu;
                     bool m_dBInstanceCpuHasBeenSet;
 
                     /**
-                     * Purchasable specification ID
+                     * <p>Purchasable specification ID.</p>
                      */
                     std::string m_dBInstanceClass;
                     bool m_dBInstanceClassHasBeenSet;
 
                     /**
-                     * The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>PostgreSQL major version number. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15.</p>
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+                     * <p>PostgreSQL community major version + minor version number, such as 12.4. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>PostgreSQL Kernel Version, for example v12.7_r1.8. Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>.</p>
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;
 
                     /**
-                     * Instance type, which includes:
-<li>primary: primary instance </li>
-<li>readonly: read-only instance</li>
-<li>guard: disaster recovery instance</li>
-<li>temp: temporary instance</li>
+                     * <p>Instance types:</p><li>primary: Primary instance</li><li>readonly: Read-only instance</li><li>guard: Disaster recovery instance</li><li>temp: Temporary instance</li>
                      */
                     std::string m_dBInstanceType;
                     bool m_dBInstanceTypeHasBeenSet;
 
                     /**
-                     * Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
+                     * <p>Instance version currently only supports standard (dual-server high-availability edition, one master and one slave).</p>
                      */
                     std::string m_dBInstanceVersion;
                     bool m_dBInstanceVersionHasBeenSet;
 
                     /**
-                     * Instance character set, which currently supports only:
-<li>UTF8</li>
-<li>LATIN1</li>
+                     * <p>Instance character set, which currently supports only:</p><li>UTF8</li><li>LATIN1</li>
                      */
                     std::string m_dBCharset;
                     bool m_dBCharsetHasBeenSet;
 
                     /**
-                     * Instance creation time
+                     * <p>Instance creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last updated time of the instance attribute
+                     * <p>The time when the instance executed the last update.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Instance expiration time
+                     * <p>Instance expiration time.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Instance isolation time
+                     * <p>Instance isolation time.</p>
                      */
                     std::string m_isolatedTime;
                     bool m_isolatedTimeHasBeenSet;
 
                     /**
-                     * Billing mode:
-<li>prepaid: monthly subscription, prepaid</li>
-<li>postpaid: pay-as-you-go, postpaid</li>
+                     * <p>Billing mode:</p><li>prepaid: Yearly/monthly subscription, prepayment</li><li>postpaid: Pay-as-you-go, postpaid</li>
                      */
                     std::string m_payType;
                     bool m_payTypeHasBeenSet;
 
                     /**
-                     * Auto-renewal or not:
-<li>`0`: manual renewal</li>
-<li>`1`: auto-renewal</li>
-Default value: 0
+                     * <p>Auto-renewal or not:</p><li>0: Manual renewal</li><li>1: Auto renewal</li>Default value: 0
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Instance network connection information
+                     * <p>Instance network connection information.</p>
                      */
                     std::vector<DBInstanceNetInfo> m_dBInstanceNetInfo;
                     bool m_dBInstanceNetInfoHasBeenSet;
 
                     /**
-                     * Machine type
+                     * <p>Machine type.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * User `AppId`
+                     * <p>User's app id.</p>
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Instance `Uid`
+                     * <p>Uid of the instance.</p>
                      */
                     uint64_t m_uid;
                     bool m_uidHasBeenSet;
 
                     /**
-                     * Project ID
+                     * <p>Project ID.</p>
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * The information of tags associated with instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Tag information associated with the instance.</p>
                      */
                     std::vector<Tag> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Primary instance information, which is returned only when the instance is read-only.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Primary instance information. Returned only when the instance is a read-only instance.</p>
                      */
                     std::string m_masterDBInstanceId;
                     bool m_masterDBInstanceIdHasBeenSet;
 
                     /**
-                     * Number of read-only instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Number of read-only instances.</p>
                      */
                     int64_t m_readOnlyInstanceNum;
                     bool m_readOnlyInstanceNumHasBeenSet;
 
                     /**
-                     * The status of a read-only instance in a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>State of the read-only instance in the read-only group.</p>
                      */
                     std::string m_statusInReadonlyGroup;
                     bool m_statusInReadonlyGroupHasBeenSet;
 
                     /**
-                     * Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Offline time.</p>
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
 
                     /**
-                     * Instance node information
+                     * <p>Instance node information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Whether the instance supports TDE data encryption:
-<li>0: not supported</li>
-<li>1: supported</li>
-Default value: 0For TDE data encryption, see [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether the instance supports TDE data encryption:</p><li>0: Not supported</li><li>1: Supported</li>Default value: 0. For TDE data encryption, see [Overview of Data Transparent Encryption](https://www.tencentcloud.com/document/product/409/71748?from_cn_redirect=1).
                      */
                     int64_t m_isSupportTDE;
                     bool m_isSupportTDEHasBeenSet;
 
                     /**
-                     * Database engine, which supports:
-<li>`postgresql`: TencentDB for PostgreSQL</li>
-<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
-Default value: `postgresql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database engine, support:</p><li>`postgresql`: TencentDB for PostgreSQL</li><li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>Default value: postgresql
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
 
                     /**
-                     * Configuration information for the database engine, and the configuration format is as follows:
-{"$key1":"$value1", "$key2":"$value2"}
-Supported engines include:
-mssql_compatible engine:
-<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
-<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
-<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Configuration information for the database engine. The configuration format is as follows:<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>Supported engines:<br>mssql_compatible engine:</p><li>migrationMode: Database schema, optional parameter. Valid values: single-db (single-database mode), multi-db (multi-database mode). Default is single-db.</li><li>defaultLocale: Sorting area rule, optional parameter, cannot be modified after initialization. Default is en_US. Valid values include: "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".</li><li>serverCollationName: Collation name, optional parameter, cannot be modified after initialization. Default is sql_latin1_general_cp1_ci_as. Valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".</li>
                      */
                     std::string m_dBEngineConfig;
                     bool m_dBEngineConfigHasBeenSet;
 
                     /**
-                     * Network access list of the instance (this field has been deprecated)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Instance network information list (deprecated)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetworkAccess> m_networkAccessList;
                     bool m_networkAccessListHasBeenSet;
 
                     /**
-                     * Whether the instance supports IPv6:
-<li>`0`: no</li>
-<li>`1`: yes</li>
-Default value: 0
+                     * <p>Whether the instance supports Ipv6:</p><li>0: No</li><li>1: Yes</li>Default value: 0
                      */
                     uint64_t m_supportIpv6;
                     bool m_supportIpv6HasBeenSet;
+
+                    /**
+                     * <p>Number of cpu cores that have been elastically scaled out for the instance</p>
+                     */
+                    uint64_t m_expandedCpu;
+                    bool m_expandedCpuHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable deletion protection for the instance, values as follows:</p><ul><li>true: enable deletion protection</li><li>false: disable deletion protection</li></ul>
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
+
+                    /**
+                     * <p>Instance storage type. Available values: PHYSICAL_LOCAL_SSD: LOCAL SSD hard disk of PHYSICAL machine; CLOUD_PREMIUM: high-performance CLOUD block storage; CLOUD_SSD: SSD CLOUD disk; CLOUD_HSSD: enhanced SSD CLOUD disk.</p>
+                     */
+                    std::string m_dBInstanceStorageType;
+                    bool m_dBInstanceStorageTypeHasBeenSet;
 
                 };
             }

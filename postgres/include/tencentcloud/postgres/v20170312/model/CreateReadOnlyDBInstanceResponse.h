@@ -85,6 +85,20 @@ namespace TencentCloud
                      */
                     bool DBInstanceIdSetHasBeenSet() const;
 
+                    /**
+                     * 获取BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+                     * @return BillingParameters BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+                     * 
+                     */
+                    std::string GetBillingParameters() const;
+
+                    /**
+                     * 判断参数 BillingParameters 是否已赋值
+                     * @return BillingParameters 是否已赋值
+                     * 
+                     */
+                    bool BillingParametersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -104,6 +118,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
+
+                    /**
+                     * BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+                     */
+                    std::string m_billingParameters;
+                    bool m_billingParametersHasBeenSet;
 
                 };
             }

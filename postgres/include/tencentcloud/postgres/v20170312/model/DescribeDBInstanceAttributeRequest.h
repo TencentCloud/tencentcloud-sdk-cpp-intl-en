@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;

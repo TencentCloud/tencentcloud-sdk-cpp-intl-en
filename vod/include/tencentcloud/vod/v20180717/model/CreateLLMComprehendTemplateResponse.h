@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_SEARCHMEDIABYSEMANTICSRESPONSE_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_SEARCHMEDIABYSEMANTICSRESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_CREATELLMCOMPREHENDTEMPLATERESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_CREATELLMCOMPREHENDTEMPLATERESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/SemanticsSearchResult.h>
 
 
 namespace TencentCloud
@@ -33,38 +32,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SearchMediaBySemantics response structure.
+                * CreateLLMComprehendTemplate response structure.
                 */
-                class SearchMediaBySemanticsResponse : public AbstractModel
+                class CreateLLMComprehendTemplateResponse : public AbstractModel
                 {
                 public:
-                    SearchMediaBySemanticsResponse();
-                    ~SearchMediaBySemanticsResponse() = default;
+                    CreateLLMComprehendTemplateResponse();
+                    ~CreateLLMComprehendTemplateResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取<p>Media list.</p>
-                     * @return SearchResults <p>Media list.</p>
+                     * 获取<p>Unique identifier of the Large Model Understanding Template</p>
+                     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
                      * 
                      */
-                    std::vector<SemanticsSearchResult> GetSearchResults() const;
+                    int64_t GetDefinition() const;
 
                     /**
-                     * 判断参数 SearchResults 是否已赋值
-                     * @return SearchResults 是否已赋值
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
                      * 
                      */
-                    bool SearchResultsHasBeenSet() const;
+                    bool DefinitionHasBeenSet() const;
 
                 private:
 
                     /**
-                     * <p>Media list.</p>
+                     * <p>Unique identifier of the Large Model Understanding Template</p>
                      */
-                    std::vector<SemanticsSearchResult> m_searchResults;
-                    bool m_searchResultsHasBeenSet;
+                    int64_t m_definition;
+                    bool m_definitionHasBeenSet;
 
                 };
             }
@@ -72,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_SEARCHMEDIABYSEMANTICSRESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_CREATELLMCOMPREHENDTEMPLATERESPONSE_H_

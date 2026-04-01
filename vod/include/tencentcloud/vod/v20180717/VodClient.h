@@ -69,6 +69,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateJustInTimeTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateJustInTimeTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateLLMComprehendTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateLLMComprehendTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreatePersonSampleRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreatePersonSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateProcedureTemplateRequest.h>
@@ -127,6 +129,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteJustInTimeTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteJustInTimeTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteLLMComprehendTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteLLMComprehendTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeletePersonSampleRequest.h>
@@ -203,6 +207,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeJustInTimeTranscodeTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeJustInTimeTranscodeTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeLLMComprehendTemplatesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeLLMComprehendTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeLicenseUsageDataRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeLicenseUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaInfosRequest.h>
@@ -303,6 +309,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyJustInTimeTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyJustInTimeTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyLLMComprehendTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyLLMComprehendTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyMediaInfoRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyMediaInfoResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyMediaStorageClassRequest.h>
@@ -468,6 +476,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateJustInTimeTranscodeTemplateResponse> CreateJustInTimeTranscodeTemplateOutcome;
                 typedef std::future<CreateJustInTimeTranscodeTemplateOutcome> CreateJustInTimeTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateJustInTimeTranscodeTemplateRequest&, CreateJustInTimeTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateJustInTimeTranscodeTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLLMComprehendTemplateResponse> CreateLLMComprehendTemplateOutcome;
+                typedef std::future<CreateLLMComprehendTemplateOutcome> CreateLLMComprehendTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateLLMComprehendTemplateRequest&, CreateLLMComprehendTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLLMComprehendTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePersonSampleResponse> CreatePersonSampleOutcome;
                 typedef std::future<CreatePersonSampleOutcome> CreatePersonSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreatePersonSampleRequest&, CreatePersonSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePersonSampleAsyncHandler;
@@ -555,6 +566,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteJustInTimeTranscodeTemplateResponse> DeleteJustInTimeTranscodeTemplateOutcome;
                 typedef std::future<DeleteJustInTimeTranscodeTemplateOutcome> DeleteJustInTimeTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteJustInTimeTranscodeTemplateRequest&, DeleteJustInTimeTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteJustInTimeTranscodeTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLLMComprehendTemplateResponse> DeleteLLMComprehendTemplateOutcome;
+                typedef std::future<DeleteLLMComprehendTemplateOutcome> DeleteLLMComprehendTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteLLMComprehendTemplateRequest&, DeleteLLMComprehendTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLLMComprehendTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteMediaResponse> DeleteMediaOutcome;
                 typedef std::future<DeleteMediaOutcome> DeleteMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteMediaRequest&, DeleteMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMediaAsyncHandler;
@@ -669,6 +683,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeJustInTimeTranscodeTemplatesResponse> DescribeJustInTimeTranscodeTemplatesOutcome;
                 typedef std::future<DescribeJustInTimeTranscodeTemplatesOutcome> DescribeJustInTimeTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeJustInTimeTranscodeTemplatesRequest&, DescribeJustInTimeTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeJustInTimeTranscodeTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLLMComprehendTemplatesResponse> DescribeLLMComprehendTemplatesOutcome;
+                typedef std::future<DescribeLLMComprehendTemplatesOutcome> DescribeLLMComprehendTemplatesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeLLMComprehendTemplatesRequest&, DescribeLLMComprehendTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLLMComprehendTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLicenseUsageDataResponse> DescribeLicenseUsageDataOutcome;
                 typedef std::future<DescribeLicenseUsageDataOutcome> DescribeLicenseUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeLicenseUsageDataRequest&, DescribeLicenseUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLicenseUsageDataAsyncHandler;
@@ -819,6 +836,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyJustInTimeTranscodeTemplateResponse> ModifyJustInTimeTranscodeTemplateOutcome;
                 typedef std::future<ModifyJustInTimeTranscodeTemplateOutcome> ModifyJustInTimeTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyJustInTimeTranscodeTemplateRequest&, ModifyJustInTimeTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyJustInTimeTranscodeTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLLMComprehendTemplateResponse> ModifyLLMComprehendTemplateOutcome;
+                typedef std::future<ModifyLLMComprehendTemplateOutcome> ModifyLLMComprehendTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyLLMComprehendTemplateRequest&, ModifyLLMComprehendTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLLMComprehendTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMediaInfoResponse> ModifyMediaInfoOutcome;
                 typedef std::future<ModifyMediaInfoOutcome> ModifyMediaInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyMediaInfoRequest&, ModifyMediaInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMediaInfoAsyncHandler;
@@ -1181,6 +1201,15 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
                 CreateJustInTimeTranscodeTemplateOutcomeCallable CreateJustInTimeTranscodeTemplateCallable(const Model::CreateJustInTimeTranscodeTemplateRequest& request);
 
                 /**
+                 *Create a large model comprehend template
+                 * @param req CreateLLMComprehendTemplateRequest
+                 * @return CreateLLMComprehendTemplateOutcome
+                 */
+                CreateLLMComprehendTemplateOutcome CreateLLMComprehendTemplate(const Model::CreateLLMComprehendTemplateRequest &request);
+                void CreateLLMComprehendTemplateAsync(const Model::CreateLLMComprehendTemplateRequest& request, const CreateLLMComprehendTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLLMComprehendTemplateOutcomeCallable CreateLLMComprehendTemplateCallable(const Model::CreateLLMComprehendTemplateRequest& request);
+
+                /**
                  *This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
                  * @param req CreatePersonSampleRequest
                  * @return CreatePersonSampleOutcome
@@ -1451,6 +1480,17 @@ This API is used to delete a custom audio/video moderation template.
                 DeleteJustInTimeTranscodeTemplateOutcome DeleteJustInTimeTranscodeTemplate(const Model::DeleteJustInTimeTranscodeTemplateRequest &request);
                 void DeleteJustInTimeTranscodeTemplateAsync(const Model::DeleteJustInTimeTranscodeTemplateRequest& request, const DeleteJustInTimeTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteJustInTimeTranscodeTemplateOutcomeCallable DeleteJustInTimeTranscodeTemplateCallable(const Model::DeleteJustInTimeTranscodeTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a user-customized  large model comprehend template.
+
+Note: Templates with an ID below 10000 are system-preset templates and cannot be deleted.
+                 * @param req DeleteLLMComprehendTemplateRequest
+                 * @return DeleteLLMComprehendTemplateOutcome
+                 */
+                DeleteLLMComprehendTemplateOutcome DeleteLLMComprehendTemplate(const Model::DeleteLLMComprehendTemplateRequest &request);
+                void DeleteLLMComprehendTemplateAsync(const Model::DeleteLLMComprehendTemplateRequest& request, const DeleteLLMComprehendTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLLMComprehendTemplateOutcomeCallable DeleteLLMComprehendTemplateCallable(const Model::DeleteLLMComprehendTemplateRequest& request);
 
                 /**
                  ** This API is used to delete a media file and its processed files, such as the transcoded video files, image sprites, screenshots, and videos for publishing on WeChat.
@@ -1828,6 +1868,15 @@ This API is used to get the information of custom and [preset](https://intl.clou
                 DescribeJustInTimeTranscodeTemplatesOutcome DescribeJustInTimeTranscodeTemplates(const Model::DescribeJustInTimeTranscodeTemplatesRequest &request);
                 void DescribeJustInTimeTranscodeTemplatesAsync(const Model::DescribeJustInTimeTranscodeTemplatesRequest& request, const DescribeJustInTimeTranscodeTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeJustInTimeTranscodeTemplatesOutcomeCallable DescribeJustInTimeTranscodeTemplatesCallable(const Model::DescribeJustInTimeTranscodeTemplatesRequest& request);
+
+                /**
+                 *This API is used to obtain the template detail list based on the Template Unique Identifier of the large model comprehend template. The returned results include all eligible customized large model parsing templates.
+                 * @param req DescribeLLMComprehendTemplatesRequest
+                 * @return DescribeLLMComprehendTemplatesOutcome
+                 */
+                DescribeLLMComprehendTemplatesOutcome DescribeLLMComprehendTemplates(const Model::DescribeLLMComprehendTemplatesRequest &request);
+                void DescribeLLMComprehendTemplatesAsync(const Model::DescribeLLMComprehendTemplatesRequest& request, const DescribeLLMComprehendTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLLMComprehendTemplatesOutcomeCallable DescribeLLMComprehendTemplatesCallable(const Model::DescribeLLMComprehendTemplatesRequest& request);
 
                 /**
                  *This interface returns information about the number of license requests per day within the query time range.
@@ -2360,6 +2409,15 @@ Developers can achieve this by calling this interface:
                 ModifyJustInTimeTranscodeTemplateOutcome ModifyJustInTimeTranscodeTemplate(const Model::ModifyJustInTimeTranscodeTemplateRequest &request);
                 void ModifyJustInTimeTranscodeTemplateAsync(const Model::ModifyJustInTimeTranscodeTemplateRequest& request, const ModifyJustInTimeTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyJustInTimeTranscodeTemplateOutcomeCallable ModifyJustInTimeTranscodeTemplateCallable(const Model::ModifyJustInTimeTranscodeTemplateRequest& request);
+
+                /**
+                 *Modify the parsing template of a large model
+                 * @param req ModifyLLMComprehendTemplateRequest
+                 * @return ModifyLLMComprehendTemplateOutcome
+                 */
+                ModifyLLMComprehendTemplateOutcome ModifyLLMComprehendTemplate(const Model::ModifyLLMComprehendTemplateRequest &request);
+                void ModifyLLMComprehendTemplateAsync(const Model::ModifyLLMComprehendTemplateRequest& request, const ModifyLLMComprehendTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLLMComprehendTemplateOutcomeCallable ModifyLLMComprehendTemplateCallable(const Model::ModifyLLMComprehendTemplateRequest& request);
 
                 /**
                  *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Order number.
+                     * @return DealName Order number.
                      * 
                      */
                     std::string GetDealName() const;
@@ -60,10 +58,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DealNameHasBeenSet() const;
 
                     /**
-                     * 获取Bill ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return BillId Bill ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Order transaction number.
+                     * @return BillId Order transaction number.
                      * 
                      */
                     std::string GetBillId() const;
@@ -76,10 +72,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BillIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBInstanceId ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the instance ID of the cloned instance. only support postpaid return this value.
+                     * @return DBInstanceId Specifies the instance ID of the cloned instance. only support postpaid return this value.
                      * 
                      */
                     std::string GetDBInstanceId() const;
@@ -94,22 +88,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Order number.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;
 
                     /**
-                     * Bill ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Order transaction number.
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
 
                     /**
-                     * ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the instance ID of the cloned instance. only support postpaid return this value.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;

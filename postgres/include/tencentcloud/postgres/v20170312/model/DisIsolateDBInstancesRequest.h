@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
-                     * @return DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+                     * 获取Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+                     * @return DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
-                     * 设置Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
-                     * @param _dBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+                     * 设置Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+                     * @param _dBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
                      * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
@@ -64,23 +64,23 @@ namespace TencentCloud
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @return Period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 获取Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+                     * @return Period Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @param _period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 设置Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+                     * @param _period Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -93,26 +93,26 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+                     * 获取Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
-                     * @return AutoVoucher Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+                     * @return AutoVoucher Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
                      * 
                      */
                     bool GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+                     * 设置Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
-                     * @param _autoVoucher Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+                     * @param _autoVoucher Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
                      * 
                      */
@@ -149,23 +149,23 @@ Default value: `false`.
                 private:
 
                     /**
-                     * Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+                     * Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
 
                     /**
-                     * Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * Purchase duration, in months.
+<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to use vouchers. Valid values:
-<li>`true`: Yes.
-u200c<li>`false`: No.
+                     * Whether to use vouchers.
+<li>true: use.</li>.
+<li>false: non-use.</li>.
 Default value: `false`.
                      */
                     bool m_autoVoucher;

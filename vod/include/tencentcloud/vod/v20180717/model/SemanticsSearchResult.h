@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the end time of the video clip, in seconds.
-                     * @return EndTimeOffset Specifies the end time of the video clip, in seconds.
+                     * 获取Segment end time of the video, in seconds.
+                     * @return EndTimeOffset Segment end time of the video, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置Specifies the end time of the video clip, in seconds.
-                     * @param _endTimeOffset Specifies the end time of the video clip, in seconds.
+                     * 设置Segment end time of the video, in seconds.
+                     * @param _endTimeOffset Segment end time of the video, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * Specifies the end time of the video clip, in seconds.
+                     * Segment end time of the video, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

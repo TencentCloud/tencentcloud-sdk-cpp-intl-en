@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance node information including node type and AZ.
+                * Describes the instance node information, including the node type, availability zone where the node is located, and dedicated cluster where the node resides.
                 */
                 class DBNode : public AbstractModel
                 {
@@ -96,6 +96,27 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取CDC ID.
+                     * @return DedicatedClusterId CDC ID.
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置CDC ID.
+                     * @param _dedicatedClusterId CDC ID.
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -111,6 +132,12 @@ namespace TencentCloud
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * CDC ID.
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

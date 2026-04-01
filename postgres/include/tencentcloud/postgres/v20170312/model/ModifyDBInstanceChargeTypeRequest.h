@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of `postgres-6fego161`
-                     * @return DBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 获取Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of `postgres-6fego161`
-                     * @param _dBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 设置Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,27 +64,27 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-                     * @return InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * 获取Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
+                     * @return InstanceChargeType Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-                     * @param _instanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * 设置Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
+                     * @param _instanceChargeType Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -97,23 +97,23 @@ Default value: `PREPAID`.
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @return Period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 获取Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+                     * @return Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @param _period Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 设置Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+                     * @param _period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -126,27 +126,27 @@ Default value: `PREPAID`.
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-                     * @return AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * 获取Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+                     * @return AutoRenewFlag Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-                     * @param _autoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * 设置Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+                     * @param _autoRenewFlag Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -159,27 +159,27 @@ Default value: `0`.
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 获取Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+                     * @return AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 设置Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+                     * @param _autoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -194,42 +194,42 @@ Default value: `0`.
                 private:
 
                     /**
-                     * Instance ID in the format of `postgres-6fego161`
+                     * Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Validity period in months
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the original instance to be cloned.
-                     * @return DBInstanceId ID of the original instance to be cloned.
+                     * 获取The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置ID of the original instance to be cloned.
-                     * @param _dBInstanceId ID of the original instance to be cloned.
+                     * 设置The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取Instance storage capacity in GB.
-                     * @return Storage Instance storage capacity in GB.
+                     * 获取Instance disk capacity size. set step size to 10. unit: GB.
+                     * @return Storage Instance disk capacity size. set step size to 10. unit: GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Instance storage capacity in GB.
-                     * @param _storage Instance storage capacity in GB.
+                     * 设置Instance disk capacity size. set step size to 10. unit: GB.
+                     * @param _storage Instance disk capacity size. set step size to 10. unit: GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -145,16 +145,18 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Renewal Flag:
+                     * 获取Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
-                     * @return AutoRenewFlag Renewal Flag:
+                     * @return AutoRenewFlag Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
                      * 
@@ -162,16 +164,18 @@ Default value: 0
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Renewal Flag:
+                     * 设置Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
-                     * @param _autoRenewFlag Renewal Flag:
+                     * @param _autoRenewFlag Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
                      * 
@@ -228,15 +232,15 @@ Default value: 0
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
-                     * @return Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * 获取Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
+                     * @return Name Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
-                     * @param _name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * 设置Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
+                     * @param _name Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -251,13 +255,13 @@ Default value: 0
                     /**
                      * 获取Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
                      * @return InstanceChargeType Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -268,13 +272,13 @@ Default value: PREPAID
                     /**
                      * 设置Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
                      * @param _instanceChargeType Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -290,18 +294,18 @@ Default value: PREPAID
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+                     * 获取Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
-                     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+                     * @return SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+                     * 设置Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
-                     * @param _securityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+                     * @param _securityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      * 
                      */
@@ -315,15 +319,15 @@ Default value: PREPAID
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取Project ID. default value is 0, which means it belongs to the default project.
+                     * @return ProjectId Project ID. default value is 0, which means it belongs to the default project.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param _projectId Project ID.
+                     * 设置Project ID. default value is 0, which means it belongs to the default project.
+                     * @param _projectId Project ID. default value is 0, which means it belongs to the default project.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -357,19 +361,19 @@ Default value: PREPAID
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-                     * @return DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 获取Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+                     * @return DBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * 
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
-                     * 设置Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-                     * @param _dBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 设置Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+                     * @param _dBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * 
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
@@ -465,15 +469,15 @@ Default value: 0
                     bool ActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Basic backup set ID.
-                     * @return BackupSetId Basic backup set ID.
+                     * 获取Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+                     * @return BackupSetId Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      * 
                      */
                     std::string GetBackupSetId() const;
 
                     /**
-                     * 设置Basic backup set ID.
-                     * @param _backupSetId Basic backup set ID.
+                     * 设置Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+                     * @param _backupSetId Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      * 
                      */
                     void SetBackupSetId(const std::string& _backupSetId);
@@ -486,15 +490,15 @@ Default value: 0
                     bool BackupSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Restoration point in time.
-                     * @return RecoveryTargetTime Restoration point in time.
+                     * 获取Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+                     * @return RecoveryTargetTime Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      * 
                      */
                     std::string GetRecoveryTargetTime() const;
 
                     /**
-                     * 设置Restoration point in time.
-                     * @param _recoveryTargetTime Restoration point in time.
+                     * 设置Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+                     * @param _recoveryTargetTime Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      * 
                      */
                     void SetRecoveryTargetTime(const std::string& _recoveryTargetTime);
@@ -543,10 +547,31 @@ Default value for the read-only instance: Async
                      */
                     bool SyncModeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+                     * @return DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+                     * 
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+                     * @param _deletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+                     * 
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the original instance to be cloned.
+                     * The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -558,7 +583,7 @@ Default value for the read-only instance: Async
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * Instance storage capacity in GB.
+                     * Instance disk capacity size. set step size to 10. unit: GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -574,10 +599,11 @@ Default value for the read-only instance: Async
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Renewal Flag:
+                     * Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
                      */
@@ -597,7 +623,7 @@ Default value: 0
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -605,7 +631,7 @@ Default value: 0
                     /**
                      * Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -614,14 +640,14 @@ Default value: PREPAID
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+                     * Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID. default value is 0, which means it belongs to the default project.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -633,8 +659,8 @@ Default value: PREPAID
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;
@@ -663,13 +689,13 @@ Default value: 0
                     bool m_activityIdHasBeenSet;
 
                     /**
-                     * Basic backup set ID.
+                     * Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      */
                     std::string m_backupSetId;
                     bool m_backupSetIdHasBeenSet;
 
                     /**
-                     * Restoration point in time.
+                     * Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
                      */
                     std::string m_recoveryTargetTime;
                     bool m_recoveryTargetTimeHasBeenSet;
@@ -683,6 +709,12 @@ Default value for the read-only instance: Async
                      */
                     std::string m_syncMode;
                     bool m_syncModeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

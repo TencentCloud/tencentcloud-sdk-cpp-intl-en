@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the search content.
-                     * @return Text Specifies the search content.
+                     * 获取<p>Search content</p>
+                     * @return Text <p>Search content</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Specifies the search content.
-                     * @param _text Specifies the search content.
+                     * 设置<p>Search content</p>
+                     * @param _text <p>Search content</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the number of returned records. the default value is 20.
-                     * @return Limit Specifies the number of returned records. the default value is 20.
+                     * 获取<p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
+                     * @return Limit <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Specifies the number of returned records. the default value is 20.
-                     * @param _limit Specifies the number of returned records. the default value is 20.
+                     * 设置<p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
+                     * @param _limit <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
-                     * @return Categories File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+                     * 获取<p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+                     * @return Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      * 
                      */
                     std::vector<std::string> GetCategories() const;
 
                     /**
-                     * 设置File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
-                     * @param _categories File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+                     * 设置<p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+                     * @param _categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      * 
                      */
                     void SetCategories(const std::vector<std::string>& _categories);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool CategoriesHasBeenSet() const;
 
                     /**
-                     * 获取Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
-                     * @return Tags Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+                     * 获取<p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
+                     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
-                     * @param _tags Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+                     * 设置<p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
+                     * @param _tags <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -148,23 +148,36 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
-                     * @return TaskTypes Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+                     * 获取<p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+                     * @return Persons <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetPersons() const;
+
+                    /**
+                     * 设置<p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+                     * @param _persons <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+                     * 
+                     */
+                    void SetPersons(const std::vector<std::string>& _persons);
+
+                    /**
+                     * 判断参数 Persons 是否已赋值
+                     * @return Persons 是否已赋值
+                     * 
+                     */
+                    bool PersonsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @return TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * 
                      */
                     std::vector<std::string> GetTaskTypes() const;
 
                     /**
-                     * 设置Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
-                     * @param _taskTypes Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+                     * 设置<p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @param _taskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * 
                      */
                     void SetTaskTypes(const std::vector<std::string>& _taskTypes);
@@ -179,39 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Specifies the search content.
+                     * <p>Search content</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Specifies the number of returned records. the default value is 20.
+                     * <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+                     * <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      */
                     std::vector<std::string> m_categories;
                     bool m_categoriesHasBeenSet;
 
                     /**
-                     * Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+                     * <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+                     * <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+                     */
+                    std::vector<std::string> m_persons;
+                    bool m_personsHasBeenSet;
+
+                    /**
+                     * <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      */
                     std::vector<std::string> m_taskTypes;
                     bool m_taskTypesHasBeenSet;

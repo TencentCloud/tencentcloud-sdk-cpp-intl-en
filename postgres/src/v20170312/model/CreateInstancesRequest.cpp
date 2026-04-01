@@ -53,7 +53,9 @@ CreateInstancesRequest::CreateInstancesRequest() :
     m_dBEngineHasBeenSet(false),
     m_dBEngineConfigHasBeenSet(false),
     m_syncModeHasBeenSet(false),
-    m_needSupportIpv6HasBeenSet(false)
+    m_needSupportIpv6HasBeenSet(false),
+    m_deletionProtectionHasBeenSet(false),
+    m_storageTypeHasBeenSet(false)
 {
 }
 
@@ -334,6 +336,22 @@ string CreateInstancesRequest::ToJsonString() const
         string key = "NeedSupportIpv6";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_needSupportIpv6, allocator);
+    }
+
+    if (m_deletionProtectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeletionProtection";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deletionProtection, allocator);
+    }
+
+    if (m_storageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StorageType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_storageType.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -838,6 +856,38 @@ void CreateInstancesRequest::SetNeedSupportIpv6(const uint64_t& _needSupportIpv6
 bool CreateInstancesRequest::NeedSupportIpv6HasBeenSet() const
 {
     return m_needSupportIpv6HasBeenSet;
+}
+
+bool CreateInstancesRequest::GetDeletionProtection() const
+{
+    return m_deletionProtection;
+}
+
+void CreateInstancesRequest::SetDeletionProtection(const bool& _deletionProtection)
+{
+    m_deletionProtection = _deletionProtection;
+    m_deletionProtectionHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::DeletionProtectionHasBeenSet() const
+{
+    return m_deletionProtectionHasBeenSet;
+}
+
+string CreateInstancesRequest::GetStorageType() const
+{
+    return m_storageType;
+}
+
+void CreateInstancesRequest::SetStorageType(const string& _storageType)
+{
+    m_storageType = _storageType;
+    m_storageTypeHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::StorageTypeHasBeenSet() const
+{
+    return m_storageTypeHasBeenSet;
 }
 
 

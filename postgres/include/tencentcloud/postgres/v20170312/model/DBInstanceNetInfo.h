@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取VPC ID. specifies the ID of the virtual private cloud.
+                     * @return VpcId VPC ID. specifies the ID of the virtual private cloud.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _vpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置VPC ID. specifies the ID of the virtual private cloud.
+                     * @param _vpcId VPC ID. specifies the ID of the virtual private cloud.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -177,19 +173,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _subnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Subnet ID.
+                     * @param _subnetId Subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -202,19 +194,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
+                     * @return ProtocolType Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
                      * 
                      */
                     std::string GetProtocolType() const;
 
                     /**
-                     * 设置Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
+                     * @param _protocolType Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
                      * 
                      */
                     void SetProtocolType(const std::string& _protocolType);
@@ -259,22 +247,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * VPC ID. specifies the ID of the virtual private cloud.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
                      */
                     std::string m_protocolType;
                     bool m_protocolTypeHasBeenSet;

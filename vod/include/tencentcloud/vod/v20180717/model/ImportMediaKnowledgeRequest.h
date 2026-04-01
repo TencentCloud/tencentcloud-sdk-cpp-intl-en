@@ -85,13 +85,34 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
+                     * 获取Unique identifier of the Large Model Comprehend Template
+                     * @return Definition Unique identifier of the Large Model Comprehend Template
+                     * 
+                     */
+                    int64_t GetDefinition() const;
+
+                    /**
+                     * 设置Unique identifier of the Large Model Comprehend Template
+                     * @param _definition Unique identifier of the Large Model Comprehend Template
+                     * 
+                     */
+                    void SetDefinition(const int64_t& _definition);
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     * 
+                     */
+                    bool DefinitionHasBeenSet() const;
+
+                    /**
                      * 获取Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
                      * @return ImportTasks Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
-                     * 
+                     * @deprecated
                      */
                     std::vector<std::string> GetImportTasks() const;
 
@@ -102,14 +123,14 @@ namespace TencentCloud
                      * @param _importTasks Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
-                     * 
+                     * @deprecated
                      */
                     void SetImportTasks(const std::vector<std::string>& _importTasks);
 
                     /**
                      * 判断参数 ImportTasks 是否已赋值
                      * @return ImportTasks 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ImportTasksHasBeenSet() const;
 
@@ -126,6 +147,12 @@ namespace TencentCloud
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
+
+                    /**
+                     * Unique identifier of the Large Model Comprehend Template
+                     */
+                    int64_t m_definition;
+                    bool m_definitionHasBeenSet;
 
                     /**
                      * Specifies the task type for importing the knowledge base. valid values:.
