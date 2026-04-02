@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
-                     * @return InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+                     * 获取The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+                     * @return InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
-                     * @param _instanceChargeType The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+                     * 设置The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+                     * @param _instanceChargeType The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
-                     * @return InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * 获取Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @return InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
-                     * @param _instanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * 设置Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @param _instanceChargePrepaid Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -254,6 +254,27 @@ namespace TencentCloud
                      */
                     bool MaxConnectionHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BgpAsn 
+                     * 
+                     */
+                    uint64_t GetBgpAsn() const;
+
+                    /**
+                     * 设置
+                     * @param _bgpAsn 
+                     * 
+                     */
+                    void SetBgpAsn(const uint64_t& _bgpAsn);
+
+                    /**
+                     * 判断参数 BgpAsn 是否已赋值
+                     * @return BgpAsn 是否已赋值
+                     * 
+                     */
+                    bool BgpAsnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -275,13 +296,13 @@ namespace TencentCloud
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
+                     * The VPN gateway billing mode. PREPAID: prepaid means yearly/monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * Parameter settings for prepaid billing mode, also known as yearly/monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
@@ -315,6 +336,12 @@ namespace TencentCloud
                      */
                     uint64_t m_maxConnection;
                     bool m_maxConnectionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_bgpAsn;
+                    bool m_bgpAsnHasBeenSet;
 
                 };
             }

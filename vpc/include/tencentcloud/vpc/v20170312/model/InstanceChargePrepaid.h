@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Prepaid (monthly subscription) billing object.
+                * Prepaid (yearly/monthly subscription) billing object.
                 */
                 class InstanceChargePrepaid : public AbstractModel
                 {

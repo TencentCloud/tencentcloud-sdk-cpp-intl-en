@@ -25,7 +25,9 @@ using namespace std;
 ModifyVpnGatewayAttributeRequest::ModifyVpnGatewayAttributeRequest() :
     m_vpnGatewayIdHasBeenSet(false),
     m_vpnGatewayNameHasBeenSet(false),
-    m_instanceChargeTypeHasBeenSet(false)
+    m_instanceChargeTypeHasBeenSet(false),
+    m_bgpAsnHasBeenSet(false),
+    m_maxConnectionHasBeenSet(false)
 {
 }
 
@@ -58,6 +60,22 @@ string ModifyVpnGatewayAttributeRequest::ToJsonString() const
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bgpAsnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BgpAsn";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_bgpAsn, allocator);
+    }
+
+    if (m_maxConnectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxConnection";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxConnection, allocator);
     }
 
 
@@ -114,6 +132,38 @@ void ModifyVpnGatewayAttributeRequest::SetInstanceChargeType(const string& _inst
 bool ModifyVpnGatewayAttributeRequest::InstanceChargeTypeHasBeenSet() const
 {
     return m_instanceChargeTypeHasBeenSet;
+}
+
+uint64_t ModifyVpnGatewayAttributeRequest::GetBgpAsn() const
+{
+    return m_bgpAsn;
+}
+
+void ModifyVpnGatewayAttributeRequest::SetBgpAsn(const uint64_t& _bgpAsn)
+{
+    m_bgpAsn = _bgpAsn;
+    m_bgpAsnHasBeenSet = true;
+}
+
+bool ModifyVpnGatewayAttributeRequest::BgpAsnHasBeenSet() const
+{
+    return m_bgpAsnHasBeenSet;
+}
+
+uint64_t ModifyVpnGatewayAttributeRequest::GetMaxConnection() const
+{
+    return m_maxConnection;
+}
+
+void ModifyVpnGatewayAttributeRequest::SetMaxConnection(const uint64_t& _maxConnection)
+{
+    m_maxConnection = _maxConnection;
+    m_maxConnectionHasBeenSet = true;
+}
+
+bool ModifyVpnGatewayAttributeRequest::MaxConnectionHasBeenSet() const
+{
+    return m_maxConnectionHasBeenSet;
 }
 
 

@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool IsAddressBlockedHasBeenSet() const;
 
                     /**
-                     * 获取Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
-                     * @return NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+                     * 获取Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
+                     * @return NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
                      * 
                      */
                     std::string GetNewPurchasePlan() const;
 
                     /**
-                     * 设置Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
-                     * @param _newPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+                     * 设置Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
+                     * @param _newPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
                      * 
                      */
                     void SetNewPurchasePlan(const std::string& _newPurchasePlan);
@@ -467,6 +467,27 @@ namespace TencentCloud
                      */
                     bool MaxConnectionHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BgpAsn 
+                     * 
+                     */
+                    uint64_t GetBgpAsn() const;
+
+                    /**
+                     * 设置
+                     * @param _bgpAsn 
+                     * 
+                     */
+                    void SetBgpAsn(const uint64_t& _bgpAsn);
+
+                    /**
+                     * 判断参数 BgpAsn 是否已赋值
+                     * @return BgpAsn 是否已赋值
+                     * 
+                     */
+                    bool BgpAsnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -542,7 +563,7 @@ namespace TencentCloud
                     bool m_isAddressBlockedHasBeenSet;
 
                     /**
-                     * Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+                     * Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
                      */
                     std::string m_newPurchasePlan;
                     bool m_newPurchasePlanHasBeenSet;
@@ -588,6 +609,12 @@ namespace TencentCloud
                      */
                     uint64_t m_maxConnection;
                     bool m_maxConnectionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_bgpAsn;
+                    bool m_bgpAsnHasBeenSet;
 
                 };
             }

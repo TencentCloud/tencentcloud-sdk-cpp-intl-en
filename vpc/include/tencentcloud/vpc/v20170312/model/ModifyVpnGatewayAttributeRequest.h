@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VpnGatewayNameHasBeenSet() const;
 
                     /**
-                     * 获取VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
-                     * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * 获取VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
-                     * @param _instanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * 设置VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * @param _instanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -104,6 +104,48 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BgpAsn 
+                     * 
+                     */
+                    uint64_t GetBgpAsn() const;
+
+                    /**
+                     * 设置
+                     * @param _bgpAsn 
+                     * 
+                     */
+                    void SetBgpAsn(const uint64_t& _bgpAsn);
+
+                    /**
+                     * 判断参数 BgpAsn 是否已赋值
+                     * @return BgpAsn 是否已赋值
+                     * 
+                     */
+                    bool BgpAsnHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MaxConnection 
+                     * 
+                     */
+                    uint64_t GetMaxConnection() const;
+
+                    /**
+                     * 设置
+                     * @param _maxConnection 
+                     * 
+                     */
+                    void SetMaxConnection(const uint64_t& _maxConnection);
+
+                    /**
+                     * 判断参数 MaxConnection 是否已赋值
+                     * @return MaxConnection 是否已赋值
+                     * 
+                     */
+                    bool MaxConnectionHasBeenSet() const;
 
                 private:
 
@@ -120,10 +162,22 @@ namespace TencentCloud
                     bool m_vpnGatewayNameHasBeenSet;
 
                     /**
-                     * VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_bgpAsn;
+                    bool m_bgpAsnHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_maxConnection;
+                    bool m_maxConnectionHasBeenSet;
 
                 };
             }
