@@ -31,12 +31,16 @@
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAITranscriptionRequest.h>
@@ -49,6 +53,8 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeCloudTranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeCloudTranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeRecordingUsageRequest.h>
@@ -151,6 +157,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCloudSliceTaskResponse> CreateCloudSliceTaskOutcome;
                 typedef std::future<CreateCloudSliceTaskOutcome> CreateCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudSliceTaskRequest&, CreateCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudTranscriptionResponse> CreateCloudTranscriptionOutcome;
+                typedef std::future<CreateCloudTranscriptionOutcome> CreateCloudTranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::CreateCloudTranscriptionRequest&, CreateCloudTranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudTranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCloudModerationResponse> DeleteCloudModerationOutcome;
                 typedef std::future<DeleteCloudModerationOutcome> DeleteCloudModerationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudModerationRequest&, DeleteCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudModerationAsyncHandler;
@@ -160,6 +169,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCloudSliceTaskResponse> DeleteCloudSliceTaskOutcome;
                 typedef std::future<DeleteCloudSliceTaskOutcome> DeleteCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudSliceTaskRequest&, DeleteCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudTranscriptionResponse> DeleteCloudTranscriptionOutcome;
+                typedef std::future<DeleteCloudTranscriptionOutcome> DeleteCloudTranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DeleteCloudTranscriptionRequest&, DeleteCloudTranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudTranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAIConversationResponse> DescribeAIConversationOutcome;
                 typedef std::future<DescribeAIConversationOutcome> DescribeAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeAIConversationRequest&, DescribeAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIConversationAsyncHandler;
@@ -178,6 +190,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCloudSliceTaskResponse> DescribeCloudSliceTaskOutcome;
                 typedef std::future<DescribeCloudSliceTaskOutcome> DescribeCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeCloudSliceTaskRequest&, DescribeCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudTranscriptionResponse> DescribeCloudTranscriptionOutcome;
+                typedef std::future<DescribeCloudTranscriptionOutcome> DescribeCloudTranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeCloudTranscriptionRequest&, DescribeCloudTranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudTranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMixTranscodingUsageResponse> DescribeMixTranscodingUsageOutcome;
                 typedef std::future<DescribeMixTranscodingUsageOutcome> DescribeMixTranscodingUsageOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeMixTranscodingUsageRequest&, DescribeMixTranscodingUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMixTranscodingUsageAsyncHandler;
@@ -353,6 +368,16 @@ This API is used to achieve the following goals:
                 CreateCloudSliceTaskOutcomeCallable CreateCloudSliceTaskCallable(const Model::CreateCloudSliceTaskRequest& request);
 
                 /**
+                 *API description:
+Enable the cloud transcription feature.
+                 * @param req CreateCloudTranscriptionRequest
+                 * @return CreateCloudTranscriptionOutcome
+                 */
+                CreateCloudTranscriptionOutcome CreateCloudTranscription(const Model::CreateCloudTranscriptionRequest &request);
+                void CreateCloudTranscriptionAsync(const Model::CreateCloudTranscriptionRequest& request, const CreateCloudTranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudTranscriptionOutcomeCallable CreateCloudTranscriptionCallable(const Model::CreateCloudTranscriptionRequest& request);
+
+                /**
                  *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
                  * @param req DeleteCloudModerationRequest
                  * @return DeleteCloudModerationOutcome
@@ -378,6 +403,15 @@ This API is used to achieve the following goals:
                 DeleteCloudSliceTaskOutcome DeleteCloudSliceTask(const Model::DeleteCloudSliceTaskRequest &request);
                 void DeleteCloudSliceTaskAsync(const Model::DeleteCloudSliceTaskRequest& request, const DeleteCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteCloudSliceTaskOutcomeCallable DeleteCloudSliceTaskCallable(const Model::DeleteCloudSliceTaskRequest& request);
+
+                /**
+                 *This API is used to terminate the transcription task after successful activation.
+                 * @param req DeleteCloudTranscriptionRequest
+                 * @return DeleteCloudTranscriptionOutcome
+                 */
+                DeleteCloudTranscriptionOutcome DeleteCloudTranscription(const Model::DeleteCloudTranscriptionRequest &request);
+                void DeleteCloudTranscriptionAsync(const Model::DeleteCloudTranscriptionRequest& request, const DeleteCloudTranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudTranscriptionOutcomeCallable DeleteCloudTranscriptionCallable(const Model::DeleteCloudTranscriptionRequest& request);
 
                 /**
                  *Describe the AI conversation task status
@@ -436,6 +470,15 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
                 DescribeCloudSliceTaskOutcome DescribeCloudSliceTask(const Model::DescribeCloudSliceTaskRequest &request);
                 void DescribeCloudSliceTaskAsync(const Model::DescribeCloudSliceTaskRequest& request, const DescribeCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCloudSliceTaskOutcomeCallable DescribeCloudSliceTaskCallable(const Model::DescribeCloudSliceTaskRequest& request);
+
+                /**
+                 *This API is used to query the transcription status after starting a transcription task. It is effective only when the transcription task is in process. Querying after termination will return an error.
+                 * @param req DescribeCloudTranscriptionRequest
+                 * @return DescribeCloudTranscriptionOutcome
+                 */
+                DescribeCloudTranscriptionOutcome DescribeCloudTranscription(const Model::DescribeCloudTranscriptionRequest &request);
+                void DescribeCloudTranscriptionAsync(const Model::DescribeCloudTranscriptionRequest& request, const DescribeCloudTranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudTranscriptionOutcomeCallable DescribeCloudTranscriptionCallable(const Model::DescribeCloudTranscriptionRequest& request);
 
                 /**
                  *This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.

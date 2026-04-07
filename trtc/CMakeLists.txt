@@ -22,7 +22,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudModerationResponse.h
   include/tencentcloud/trtc/v20190722/model/AgentConfig.h
-  include/tencentcloud/trtc/v20190722/model/DescribeRecordingUsageResponse.h
+  include/tencentcloud/trtc/v20190722/model/McuLayout.h
   include/tencentcloud/trtc/v20190722/model/SubscribeModerationUserIds.h
   include/tencentcloud/trtc/v20190722/model/AudioEncodeParams.h
   include/tencentcloud/trtc/v20190722/model/ServerPushText.h
@@ -41,6 +41,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/WaterMarkChar.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/StopPublishCdnStreamResponse.h
+  include/tencentcloud/trtc/v20190722/model/TranscriptionUserInfoParams.h
   include/tencentcloud/trtc/v20190722/model/AbnormalEvent.h
   include/tencentcloud/trtc/v20190722/model/DescribeScaleInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/ScaleInfomation.h
@@ -57,6 +58,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/TranslationConfig.h
   include/tencentcloud/trtc/v20190722/model/McuTencentVod.h
   include/tencentcloud/trtc/v20190722/model/DescribeWebRecordResponse.h
+  include/tencentcloud/trtc/v20190722/model/DescribeCloudTranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudModerationResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeRelayUsageRequest.h
@@ -79,8 +81,9 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeQualityDataRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/MixTranscodeParams.h
-  include/tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h
+  include/tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCMarketQualityDataResponse.h
+  include/tencentcloud/trtc/v20190722/model/TranslationParam.h
   include/tencentcloud/trtc/v20190722/model/SubscribeStreamUserIds.h
   include/tencentcloud/trtc/v20190722/model/WaterMarkImage.h
   include/tencentcloud/trtc/v20190722/model/McuUserInfoParams.h
@@ -88,11 +91,12 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/EventList.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeRoomInfoResponse.h
-  include/tencentcloud/trtc/v20190722/model/DismissRoomRequest.h
+  include/tencentcloud/trtc/v20190722/model/McuLayoutParams.h
   include/tencentcloud/trtc/v20190722/model/StartWebRecordRequest.h
   include/tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeAITranscriptionRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeAIConversationResponse.h
+  include/tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdResponse.h
   include/tencentcloud/trtc/v20190722/model/UpdateStreamIngestResponse.h
@@ -102,7 +106,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/TrtcUsage.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudSliceTaskResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeRelayUsageResponse.h
-  include/tencentcloud/trtc/v20190722/model/McuLayout.h
+  include/tencentcloud/trtc/v20190722/model/DescribeRecordingUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/SliceParams.h
   include/tencentcloud/trtc/v20190722/model/ModerationSupplierParam.h
   include/tencentcloud/trtc/v20190722/model/DescribeRecordingUsageRequest.h
@@ -113,10 +117,11 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/MixLayoutParams.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageResponse.h
+  include/tencentcloud/trtc/v20190722/model/AsrParam.h
   include/tencentcloud/trtc/v20190722/model/McuFeedBackRoomParams.h
   include/tencentcloud/trtc/v20190722/model/AudioEncode.h
   include/tencentcloud/trtc/v20190722/model/RemoveUserRequest.h
-  include/tencentcloud/trtc/v20190722/model/McuLayoutParams.h
+  include/tencentcloud/trtc/v20190722/model/DismissRoomRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeUnusualEventRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/TencentVod.h
@@ -137,8 +142,9 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeAIConversationRequest.h
   include/tencentcloud/trtc/v20190722/model/RowValues.h
+  include/tencentcloud/trtc/v20190722/model/TranscriptionParam.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h
-  include/tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h
+  include/tencentcloud/trtc/v20190722/model/DescribeCloudTranscriptionRequest.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskResponse.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudModerationResponse.h
@@ -148,6 +154,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudModerationRequest.h
+  include/tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/WebRecordVideoParams.h
   include/tencentcloud/trtc/v20190722/model/UserInformation.h
   include/tencentcloud/trtc/v20190722/model/DescribeScaleInfoRequest.h
@@ -156,11 +163,13 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeUnusualEventResponse.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h
   include/tencentcloud/trtc/v20190722/model/SingleSubscribeParams.h
+  include/tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionRequest.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskRequest.h
   include/tencentcloud/trtc/v20190722/model/ModerationParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudSliceTaskRequest.h
   include/tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/MixUserInfo.h
+  include/tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionRequest.h
   include/tencentcloud/trtc/v20190722/model/EventMessage.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCMarketQualityDataRequest.h
   include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
@@ -184,6 +193,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/TTSConfig.h
   include/tencentcloud/trtc/v20190722/model/McuAudioParams.h
   include/tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h
+  include/tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
   include/tencentcloud/trtc/v20190722/model/StopAITranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/WaterMarkTimestamp.h
@@ -203,7 +213,7 @@ set(trtc_src
   src/v20190722/model/ModifyCloudSliceTaskResponse.cpp
   src/v20190722/model/DescribeCloudModerationResponse.cpp
   src/v20190722/model/AgentConfig.cpp
-  src/v20190722/model/DescribeRecordingUsageResponse.cpp
+  src/v20190722/model/McuLayout.cpp
   src/v20190722/model/SubscribeModerationUserIds.cpp
   src/v20190722/model/AudioEncodeParams.cpp
   src/v20190722/model/ServerPushText.cpp
@@ -222,6 +232,7 @@ set(trtc_src
   src/v20190722/model/WaterMarkChar.cpp
   src/v20190722/model/DescribeTrtcRoomUsageResponse.cpp
   src/v20190722/model/StopPublishCdnStreamResponse.cpp
+  src/v20190722/model/TranscriptionUserInfoParams.cpp
   src/v20190722/model/AbnormalEvent.cpp
   src/v20190722/model/DescribeScaleInfoResponse.cpp
   src/v20190722/model/ScaleInfomation.cpp
@@ -238,6 +249,7 @@ set(trtc_src
   src/v20190722/model/TranslationConfig.cpp
   src/v20190722/model/McuTencentVod.cpp
   src/v20190722/model/DescribeWebRecordResponse.cpp
+  src/v20190722/model/DescribeCloudTranscriptionResponse.cpp
   src/v20190722/model/DescribeUserInfoRequest.cpp
   src/v20190722/model/DeleteCloudModerationResponse.cpp
   src/v20190722/model/DescribeRelayUsageRequest.cpp
@@ -260,8 +272,9 @@ set(trtc_src
   src/v20190722/model/DescribeTRTCRealTimeQualityDataRequest.cpp
   src/v20190722/model/DescribeStreamIngestResponse.cpp
   src/v20190722/model/MixTranscodeParams.cpp
-  src/v20190722/model/StopStreamIngestRequest.cpp
+  src/v20190722/model/CreateCloudTranscriptionResponse.cpp
   src/v20190722/model/DescribeTRTCMarketQualityDataResponse.cpp
+  src/v20190722/model/TranslationParam.cpp
   src/v20190722/model/SubscribeStreamUserIds.cpp
   src/v20190722/model/WaterMarkImage.cpp
   src/v20190722/model/McuUserInfoParams.cpp
@@ -269,11 +282,12 @@ set(trtc_src
   src/v20190722/model/EventList.cpp
   src/v20190722/model/DescribeTrtcUsageRequest.cpp
   src/v20190722/model/DescribeRoomInfoResponse.cpp
-  src/v20190722/model/DismissRoomRequest.cpp
+  src/v20190722/model/McuLayoutParams.cpp
   src/v20190722/model/StartWebRecordRequest.cpp
   src/v20190722/model/StartStreamIngestRequest.cpp
   src/v20190722/model/DescribeAITranscriptionRequest.cpp
   src/v20190722/model/DescribeAIConversationResponse.cpp
+  src/v20190722/model/DeleteCloudTranscriptionResponse.cpp
   src/v20190722/model/DescribeUserInfoResponse.cpp
   src/v20190722/model/RemoveUserByStrRoomIdResponse.cpp
   src/v20190722/model/UpdateStreamIngestResponse.cpp
@@ -283,7 +297,7 @@ set(trtc_src
   src/v20190722/model/TrtcUsage.cpp
   src/v20190722/model/DeleteCloudSliceTaskResponse.cpp
   src/v20190722/model/DescribeRelayUsageResponse.cpp
-  src/v20190722/model/McuLayout.cpp
+  src/v20190722/model/DescribeRecordingUsageResponse.cpp
   src/v20190722/model/SliceParams.cpp
   src/v20190722/model/ModerationSupplierParam.cpp
   src/v20190722/model/DescribeRecordingUsageRequest.cpp
@@ -294,10 +308,11 @@ set(trtc_src
   src/v20190722/model/MixLayoutParams.cpp
   src/v20190722/model/ModifyCloudSliceTaskRequest.cpp
   src/v20190722/model/DescribeMixTranscodingUsageResponse.cpp
+  src/v20190722/model/AsrParam.cpp
   src/v20190722/model/McuFeedBackRoomParams.cpp
   src/v20190722/model/AudioEncode.cpp
   src/v20190722/model/RemoveUserRequest.cpp
-  src/v20190722/model/McuLayoutParams.cpp
+  src/v20190722/model/DismissRoomRequest.cpp
   src/v20190722/model/DescribeUnusualEventRequest.cpp
   src/v20190722/model/DescribeCloudRecordingRequest.cpp
   src/v20190722/model/TencentVod.cpp
@@ -318,8 +333,9 @@ set(trtc_src
   src/v20190722/model/StartPublishCdnStreamRequest.cpp
   src/v20190722/model/DescribeAIConversationRequest.cpp
   src/v20190722/model/RowValues.cpp
+  src/v20190722/model/TranscriptionParam.cpp
   src/v20190722/model/DismissRoomByStrRoomIdRequest.cpp
-  src/v20190722/model/StartStreamIngestResponse.cpp
+  src/v20190722/model/DescribeCloudTranscriptionRequest.cpp
   src/v20190722/model/CreateCloudSliceTaskResponse.cpp
   src/v20190722/model/DeleteCloudRecordingRequest.cpp
   src/v20190722/model/ModifyCloudModerationResponse.cpp
@@ -329,6 +345,7 @@ set(trtc_src
   src/v20190722/model/SetUserBlockedByStrRoomIdRequest.cpp
   src/v20190722/model/DescribeTrtcRoomUsageRequest.cpp
   src/v20190722/model/CreateCloudModerationRequest.cpp
+  src/v20190722/model/StopStreamIngestRequest.cpp
   src/v20190722/model/WebRecordVideoParams.cpp
   src/v20190722/model/UserInformation.cpp
   src/v20190722/model/DescribeScaleInfoRequest.cpp
@@ -337,11 +354,13 @@ set(trtc_src
   src/v20190722/model/DescribeUnusualEventResponse.cpp
   src/v20190722/model/ModifyCloudRecordingResponse.cpp
   src/v20190722/model/SingleSubscribeParams.cpp
+  src/v20190722/model/CreateCloudTranscriptionRequest.cpp
   src/v20190722/model/CreateCloudSliceTaskRequest.cpp
   src/v20190722/model/ModerationParams.cpp
   src/v20190722/model/DescribeCloudSliceTaskRequest.cpp
   src/v20190722/model/StopPublishCdnStreamRequest.cpp
   src/v20190722/model/MixUserInfo.cpp
+  src/v20190722/model/DeleteCloudTranscriptionRequest.cpp
   src/v20190722/model/EventMessage.cpp
   src/v20190722/model/DescribeTRTCMarketQualityDataRequest.cpp
   src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
@@ -365,6 +384,7 @@ set(trtc_src
   src/v20190722/model/TTSConfig.cpp
   src/v20190722/model/McuAudioParams.cpp
   src/v20190722/model/McuPublishCdnParam.cpp
+  src/v20190722/model/StartStreamIngestResponse.cpp
   src/v20190722/model/AudioParams.cpp
   src/v20190722/model/StopAITranscriptionResponse.cpp
   src/v20190722/model/WaterMarkTimestamp.cpp

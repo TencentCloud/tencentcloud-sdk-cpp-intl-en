@@ -49,6 +49,8 @@
 #include <tencentcloud/cvm/v20170312/model/DeleteDisasterRecoverGroupsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteImagesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteImagesResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DeleteInstancesDisasterRecoverGroupsRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DeleteInstancesDisasterRecoverGroupsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteKeyPairsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteKeyPairsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateRequest.h>
@@ -244,6 +246,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteImagesResponse> DeleteImagesOutcome;
                 typedef std::future<DeleteImagesOutcome> DeleteImagesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteImagesRequest&, DeleteImagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteInstancesDisasterRecoverGroupsResponse> DeleteInstancesDisasterRecoverGroupsOutcome;
+                typedef std::future<DeleteInstancesDisasterRecoverGroupsOutcome> DeleteInstancesDisasterRecoverGroupsOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DeleteInstancesDisasterRecoverGroupsRequest&, DeleteInstancesDisasterRecoverGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancesDisasterRecoverGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteKeyPairsResponse> DeleteKeyPairsOutcome;
                 typedef std::future<DeleteKeyPairsOutcome> DeleteKeyPairsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteKeyPairsRequest&, DeleteKeyPairsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteKeyPairsAsyncHandler;
@@ -594,6 +599,15 @@ This API is used to create an instance launch template. After the initial creati
                 DeleteImagesOutcome DeleteImages(const Model::DeleteImagesRequest &request);
                 void DeleteImagesAsync(const Model::DeleteImagesRequest& request, const DeleteImagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteImagesOutcomeCallable DeleteImagesCallable(const Model::DeleteImagesRequest& request);
+
+                /**
+                 *This API is used to batch remove CVM instances from specified placement groups.
+                 * @param req DeleteInstancesDisasterRecoverGroupsRequest
+                 * @return DeleteInstancesDisasterRecoverGroupsOutcome
+                 */
+                DeleteInstancesDisasterRecoverGroupsOutcome DeleteInstancesDisasterRecoverGroups(const Model::DeleteInstancesDisasterRecoverGroupsRequest &request);
+                void DeleteInstancesDisasterRecoverGroupsAsync(const Model::DeleteInstancesDisasterRecoverGroupsRequest& request, const DeleteInstancesDisasterRecoverGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteInstancesDisasterRecoverGroupsOutcomeCallable DeleteInstancesDisasterRecoverGroupsCallable(const Model::DeleteInstancesDisasterRecoverGroupsRequest& request);
 
                 /**
                  *This API is used to delete the key pairs hosted in Tencent Cloud.
