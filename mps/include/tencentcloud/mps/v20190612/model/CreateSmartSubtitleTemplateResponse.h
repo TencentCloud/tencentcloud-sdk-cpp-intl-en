@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the smart subtitle template.
-                     * @return Definition Unique identifier of the smart subtitle template.
+                     * 获取<p>Unique identifier of the smart subtitle template.</p>
+                     * @return Definition <p>Unique identifier of the smart subtitle template.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the smart subtitle template.
+                     * <p>Unique identifier of the smart subtitle template.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

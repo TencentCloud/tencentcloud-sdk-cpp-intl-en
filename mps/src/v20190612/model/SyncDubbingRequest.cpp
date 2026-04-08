@@ -27,7 +27,9 @@ SyncDubbingRequest::SyncDubbingRequest() :
     m_textLangHasBeenSet(false),
     m_voiceIdHasBeenSet(false),
     m_audioDataHasBeenSet(false),
+    m_audioUrlHasBeenSet(false),
     m_audioLangHasBeenSet(false),
+    m_outputHasBeenSet(false),
     m_extParamHasBeenSet(false)
 {
 }
@@ -71,12 +73,29 @@ string SyncDubbingRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_audioData.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_audioUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_audioUrl.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_audioLangHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioLang";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_audioLang.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outputHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Output";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_output.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_extParamHasBeenSet)
@@ -159,6 +178,22 @@ bool SyncDubbingRequest::AudioDataHasBeenSet() const
     return m_audioDataHasBeenSet;
 }
 
+string SyncDubbingRequest::GetAudioUrl() const
+{
+    return m_audioUrl;
+}
+
+void SyncDubbingRequest::SetAudioUrl(const string& _audioUrl)
+{
+    m_audioUrl = _audioUrl;
+    m_audioUrlHasBeenSet = true;
+}
+
+bool SyncDubbingRequest::AudioUrlHasBeenSet() const
+{
+    return m_audioUrlHasBeenSet;
+}
+
 string SyncDubbingRequest::GetAudioLang() const
 {
     return m_audioLang;
@@ -173,6 +208,22 @@ void SyncDubbingRequest::SetAudioLang(const string& _audioLang)
 bool SyncDubbingRequest::AudioLangHasBeenSet() const
 {
     return m_audioLangHasBeenSet;
+}
+
+SyncDubbingOutputOption SyncDubbingRequest::GetOutput() const
+{
+    return m_output;
+}
+
+void SyncDubbingRequest::SetOutput(const SyncDubbingOutputOption& _output)
+{
+    m_output = _output;
+    m_outputHasBeenSet = true;
+}
+
+bool SyncDubbingRequest::OutputHasBeenSet() const
+{
+    return m_outputHasBeenSet;
 }
 
 string SyncDubbingRequest::GetExtParam() const

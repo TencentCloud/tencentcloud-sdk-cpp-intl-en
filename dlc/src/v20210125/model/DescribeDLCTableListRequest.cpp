@@ -33,7 +33,8 @@ DescribeDLCTableListRequest::DescribeDLCTableListRequest() :
     m_offsetHasBeenSet(false),
     m_sortHasBeenSet(false),
     m_ascHasBeenSet(false),
-    m_tableFormatHasBeenSet(false)
+    m_tableFormatHasBeenSet(false),
+    m_datasourceConnectionNameHasBeenSet(false)
 {
 }
 
@@ -131,6 +132,14 @@ string DescribeDLCTableListRequest::ToJsonString() const
         string key = "TableFormat";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_tableFormat.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_datasourceConnectionNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DatasourceConnectionName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_datasourceConnectionName.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -315,6 +324,22 @@ void DescribeDLCTableListRequest::SetTableFormat(const string& _tableFormat)
 bool DescribeDLCTableListRequest::TableFormatHasBeenSet() const
 {
     return m_tableFormatHasBeenSet;
+}
+
+string DescribeDLCTableListRequest::GetDatasourceConnectionName() const
+{
+    return m_datasourceConnectionName;
+}
+
+void DescribeDLCTableListRequest::SetDatasourceConnectionName(const string& _datasourceConnectionName)
+{
+    m_datasourceConnectionName = _datasourceConnectionName;
+    m_datasourceConnectionNameHasBeenSet = true;
+}
+
+bool DescribeDLCTableListRequest::DatasourceConnectionNameHasBeenSet() const
+{
+    return m_datasourceConnectionNameHasBeenSet;
 }
 
 

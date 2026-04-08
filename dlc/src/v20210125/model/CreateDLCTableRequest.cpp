@@ -30,7 +30,8 @@ CreateDLCTableRequest::CreateDLCTableRequest() :
     m_propertiesHasBeenSet(false),
     m_externalDataConfigurationHasBeenSet(false),
     m_dataEngineNameHasBeenSet(false),
-    m_resourceGroupnameHasBeenSet(false)
+    m_resourceGroupnameHasBeenSet(false),
+    m_catalogHasBeenSet(false)
 {
 }
 
@@ -126,6 +127,14 @@ string CreateDLCTableRequest::ToJsonString() const
         string key = "ResourceGroupname";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_resourceGroupname.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_catalogHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Catalog";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_catalog.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -262,6 +271,22 @@ void CreateDLCTableRequest::SetResourceGroupname(const string& _resourceGroupnam
 bool CreateDLCTableRequest::ResourceGroupnameHasBeenSet() const
 {
     return m_resourceGroupnameHasBeenSet;
+}
+
+string CreateDLCTableRequest::GetCatalog() const
+{
+    return m_catalog;
+}
+
+void CreateDLCTableRequest::SetCatalog(const string& _catalog)
+{
+    m_catalog = _catalog;
+    m_catalogHasBeenSet = true;
+}
+
+bool CreateDLCTableRequest::CatalogHasBeenSet() const
+{
+    return m_catalogHasBeenSet;
 }
 
 

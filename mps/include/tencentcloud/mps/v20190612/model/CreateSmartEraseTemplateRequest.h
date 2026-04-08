@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Length limit for the smart erasing template name: 64 characters.
-                     * @return Name Length limit for the smart erasing template name: 64 characters.
+                     * 获取<p>Length limit for the smart erasing template name: 64 characters.</p>
+                     * @return Name <p>Length limit for the smart erasing template name: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Length limit for the smart erasing template name: 64 characters.
-                     * @param _name Length limit for the smart erasing template name: 64 characters.
+                     * 设置<p>Length limit for the smart erasing template name: 64 characters.</p>
+                     * @param _name <p>Length limit for the smart erasing template name: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -67,27 +67,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-                     * @return EraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * 获取<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     std::string GetEraseType() const;
 
                     /**
-                     * 设置Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-                     * @param _eraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * 设置<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @param _eraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     void SetEraseType(const std::string& _eraseType);
@@ -100,15 +88,15 @@ namespace TencentCloud
                     bool EraseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Length limit for the description information of the smart erasing template: 256 characters.
-                     * @return Comment Length limit for the description information of the smart erasing template: 256 characters.
+                     * 获取<p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+                     * @return Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Length limit for the description information of the smart erasing template: 256 characters.
-                     * @param _comment Length limit for the description information of the smart erasing template: 256 characters.
+                     * 设置<p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+                     * @param _comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -121,15 +109,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
-                     * @return EraseSubtitleConfig Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+                     * 获取<p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+                     * @return EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     SmartEraseSubtitleConfig GetEraseSubtitleConfig() const;
 
                     /**
-                     * 设置Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
-                     * @param _eraseSubtitleConfig Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+                     * 设置<p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+                     * @param _eraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     void SetEraseSubtitleConfig(const SmartEraseSubtitleConfig& _eraseSubtitleConfig);
@@ -142,15 +130,15 @@ namespace TencentCloud
                     bool EraseSubtitleConfigHasBeenSet() const;
 
                     /**
-                     * 获取Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
-                     * @return EraseWatermarkConfig Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+                     * 获取<p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+                     * @return EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     SmartEraseWatermarkConfig GetEraseWatermarkConfig() const;
 
                     /**
-                     * 设置Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
-                     * @param _eraseWatermarkConfig Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+                     * 设置<p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+                     * @param _eraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     void SetEraseWatermarkConfig(const SmartEraseWatermarkConfig& _eraseWatermarkConfig);
@@ -163,15 +151,15 @@ namespace TencentCloud
                     bool EraseWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
-                     * @return ErasePrivacyConfig Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+                     * 获取<p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+                     * @return ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
                      * 
                      */
                     SmartErasePrivacyConfig GetErasePrivacyConfig() const;
 
                     /**
-                     * 设置Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
-                     * @param _erasePrivacyConfig Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+                     * 设置<p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+                     * @param _erasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
                      * 
                      */
                     void SetErasePrivacyConfig(const SmartErasePrivacyConfig& _erasePrivacyConfig);
@@ -186,40 +174,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Length limit for the smart erasing template name: 64 characters.
+                     * <p>Length limit for the smart erasing template name: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      */
                     std::string m_eraseType;
                     bool m_eraseTypeHasBeenSet;
 
                     /**
-                     * Length limit for the description information of the smart erasing template: 256 characters.
+                     * <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+                     * <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
                      */
                     SmartEraseSubtitleConfig m_eraseSubtitleConfig;
                     bool m_eraseSubtitleConfigHasBeenSet;
 
                     /**
-                     * Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+                     * <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
                      */
                     SmartEraseWatermarkConfig m_eraseWatermarkConfig;
                     bool m_eraseWatermarkConfigHasBeenSet;
 
                     /**
-                     * Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+                     * <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
                      */
                     SmartErasePrivacyConfig m_erasePrivacyConfig;
                     bool m_erasePrivacyConfigHasBeenSet;

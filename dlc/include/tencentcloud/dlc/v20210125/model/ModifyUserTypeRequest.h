@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool UserTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AccountType 
+                     * 
+                     */
+                    std::string GetAccountType() const;
+
+                    /**
+                     * 设置
+                     * @param _accountType 
+                     * 
+                     */
+                    void SetAccountType(const std::string& _accountType);
+
+                    /**
+                     * 判断参数 AccountType 是否已赋值
+                     * @return AccountType 是否已赋值
+                     * 
+                     */
+                    bool AccountTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     std::string m_userType;
                     bool m_userTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_accountType;
+                    bool m_accountTypeHasBeenSet;
 
                 };
             }

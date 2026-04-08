@@ -215,6 +215,27 @@ namespace TencentCloud
                      */
                     bool ResourceGroupnameHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Catalog 
+                     * 
+                     */
+                    std::string GetCatalog() const;
+
+                    /**
+                     * 设置
+                     * @param _catalog 
+                     * 
+                     */
+                    void SetCatalog(const std::string& _catalog);
+
+                    /**
+                     * 判断参数 Catalog 是否已赋值
+                     * @return Catalog 是否已赋值
+                     * 
+                     */
+                    bool CatalogHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +285,12 @@ namespace TencentCloud
                      */
                     std::string m_resourceGroupname;
                     bool m_resourceGroupnameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_catalog;
+                    bool m_catalogHasBeenSet;
 
                 };
             }

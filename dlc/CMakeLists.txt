@@ -121,6 +121,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/UpdateDataEngineResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeTaskStatisticsResponse.h
   include/tencentcloud/dlc/v20210125/model/DeleteUserResponse.h
+  include/tencentcloud/dlc/v20210125/model/SortOrder.h
   include/tencentcloud/dlc/v20210125/model/SparkSessionBatchLog.h
   include/tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoRequest.h
   include/tencentcloud/dlc/v20210125/model/SmartOptimizerWrittenPolicy.h
@@ -216,6 +217,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/RenewDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeTaskResultRequest.h
   include/tencentcloud/dlc/v20210125/model/UpdateUserDataEngineConfigRequest.h
+  include/tencentcloud/dlc/v20210125/model/WrittenAdvancePolicy.h
   include/tencentcloud/dlc/v20210125/model/Filter.h
   include/tencentcloud/dlc/v20210125/model/DescribeLakeFsDirSummaryResponse.h
   include/tencentcloud/dlc/v20210125/model/TableBaseInfo.h
@@ -428,6 +430,7 @@ set(dlc_src
   src/v20210125/model/UpdateDataEngineResponse.cpp
   src/v20210125/model/DescribeTaskStatisticsResponse.cpp
   src/v20210125/model/DeleteUserResponse.cpp
+  src/v20210125/model/SortOrder.cpp
   src/v20210125/model/SparkSessionBatchLog.cpp
   src/v20210125/model/DescribeEngineUsageInfoRequest.cpp
   src/v20210125/model/SmartOptimizerWrittenPolicy.cpp
@@ -523,6 +526,7 @@ set(dlc_src
   src/v20210125/model/RenewDataEngineRequest.cpp
   src/v20210125/model/DescribeTaskResultRequest.cpp
   src/v20210125/model/UpdateUserDataEngineConfigRequest.cpp
+  src/v20210125/model/WrittenAdvancePolicy.cpp
   src/v20210125/model/Filter.cpp
   src/v20210125/model/DescribeLakeFsDirSummaryResponse.cpp
   src/v20210125/model/TableBaseInfo.cpp

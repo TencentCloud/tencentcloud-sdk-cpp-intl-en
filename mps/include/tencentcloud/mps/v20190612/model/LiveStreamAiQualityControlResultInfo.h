@@ -74,15 +74,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlResultsHasBeenSet() const;
 
                     /**
-                     * 获取Format diagnostic results list.
-                     * @return DiagnoseResults Format diagnostic results list.
+                     * 获取
+                     * @return DiagnoseResults 
                      * @deprecated
                      */
                     std::vector<DiagnoseResult> GetDiagnoseResults() const;
 
                     /**
-                     * 设置Format diagnostic results list.
-                     * @param _diagnoseResults Format diagnostic results list.
+                     * 设置
+                     * @param _diagnoseResults 
                      * @deprecated
                      */
                     void SetDiagnoseResults(const std::vector<DiagnoseResult>& _diagnoseResults);
@@ -154,7 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_qualityControlResultsHasBeenSet;
 
                     /**
-                     * Format diagnostic results list.
+                     * 
                      */
                     std::vector<DiagnoseResult> m_diagnoseResults;
                     bool m_diagnoseResultsHasBeenSet;

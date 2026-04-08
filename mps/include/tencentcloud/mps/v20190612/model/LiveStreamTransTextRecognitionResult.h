@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取Translation start UTC time.
-                     * @return StartTime Translation start UTC time.
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Translation start UTC time.
-                     * @param _startTime Translation start UTC time.
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Translation end UTC time.
-                     * @return EndTime Translation end UTC time.
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Translation end UTC time.
-                     * @param _endTime Translation end UTC time.
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Steady state marker.
-                     * @return SteadyState Steady state marker.
+                     * 获取
+                     * @return SteadyState 
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置Steady state marker.
-                     * @param _steadyState Steady state marker.
+                     * 设置
+                     * @param _steadyState 
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -272,19 +272,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_transHasBeenSet;
 
                     /**
-                     * Translation start UTC time.
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Translation end UTC time.
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Steady state marker.
+                     * 
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;

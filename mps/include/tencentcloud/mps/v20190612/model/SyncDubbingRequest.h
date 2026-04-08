@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/SyncDubbingOutputOption.h>
 
 
 namespace TencentCloud
@@ -295,6 +296,27 @@ sl: Slovenian.
                     bool AudioDataHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AudioUrl 
+                     * 
+                     */
+                    std::string GetAudioUrl() const;
+
+                    /**
+                     * 设置
+                     * @param _audioUrl 
+                     * 
+                     */
+                    void SetAudioUrl(const std::string& _audioUrl);
+
+                    /**
+                     * 判断参数 AudioUrl 是否已赋值
+                     * @return AudioUrl 是否已赋值
+                     * 
+                     */
+                    bool AudioUrlHasBeenSet() const;
+
+                    /**
                      * 获取Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
                      * @return AudioLang Cloning audio language. The default language is Chinese.
@@ -318,6 +340,27 @@ Supported languages are the same as those for TextLang.
                      * 
                      */
                     bool AudioLangHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Output 
+                     * 
+                     */
+                    SyncDubbingOutputOption GetOutput() const;
+
+                    /**
+                     * 设置
+                     * @param _output 
+                     * 
+                     */
+                    void SetOutput(const SyncDubbingOutputOption& _output);
+
+                    /**
+                     * 判断参数 Output 是否已赋值
+                     * @return Output 是否已赋值
+                     * 
+                     */
+                    bool OutputHasBeenSet() const;
 
                     /**
                      * 获取Extended parameters in the format of a JSON string.
@@ -409,11 +452,23 @@ sl: Slovenian.
                     bool m_audioDataHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_audioUrl;
+                    bool m_audioUrlHasBeenSet;
+
+                    /**
                      * Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
                      */
                     std::string m_audioLang;
                     bool m_audioLangHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    SyncDubbingOutputOption m_output;
+                    bool m_outputHasBeenSet;
 
                     /**
                      * Extended parameters in the format of a JSON string.

@@ -101,7 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DropTable Whether to delete the table
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     bool GetDropTable() const;
 
@@ -110,14 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dropTable Whether to delete the table
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetDropTable(const bool& _dropTable);
 
                     /**
                      * 判断参数 DropTable 是否已赋值
                      * @return DropTable 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DropTableHasBeenSet() const;
 

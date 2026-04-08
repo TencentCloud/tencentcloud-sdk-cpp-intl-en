@@ -88,6 +88,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioDataHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AudioUrl 
+                     * 
+                     */
+                    std::string GetAudioUrl() const;
+
+                    /**
+                     * 判断参数 AudioUrl 是否已赋值
+                     * @return AudioUrl 是否已赋值
+                     * 
+                     */
+                    bool AudioUrlHasBeenSet() const;
+
+                    /**
                      * 获取Cloned voice type ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VoiceId Cloned voice type ID.
@@ -102,6 +116,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool VoiceIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ExtInfo 
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
 
                 private:
 
@@ -125,11 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioDataHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_audioUrl;
+                    bool m_audioUrlHasBeenSet;
+
+                    /**
                      * Cloned voice type ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

@@ -85,6 +85,20 @@ namespace TencentCloud
                      */
                     bool AvailableHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AvailPercent 
+                     * 
+                     */
+                    int64_t GetAvailPercent() const;
+
+                    /**
+                     * 判断参数 AvailPercent 是否已赋值
+                     * @return AvailPercent 是否已赋值
+                     * 
+                     */
+                    bool AvailPercentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -104,6 +118,12 @@ namespace TencentCloud
                      */
                     int64_t m_available;
                     bool m_availableHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_availPercent;
+                    bool m_availPercentHasBeenSet;
 
                 };
             }

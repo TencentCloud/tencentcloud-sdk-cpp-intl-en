@@ -63,6 +63,8 @@
 #include <tencentcloud/mps/v20190612/model/CreateSmartSubtitleTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateSnapshotByTimeOffsetTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateSnapshotByTimeOffsetTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/CreateSubtitleEmbedTemplateRequest.h>
+#include <tencentcloud/mps/v20190612/model/CreateSubtitleEmbedTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateTranscodeTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateTranscodeTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateWatermarkTemplateRequest.h>
@@ -105,6 +107,8 @@
 #include <tencentcloud/mps/v20190612/model/DeleteSmartSubtitleTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteSnapshotByTimeOffsetTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteSnapshotByTimeOffsetTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/DeleteSubtitleEmbedTemplateRequest.h>
+#include <tencentcloud/mps/v20190612/model/DeleteSubtitleEmbedTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteTranscodeTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteTranscodeTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteWatermarkTemplateRequest.h>
@@ -161,6 +165,8 @@
 #include <tencentcloud/mps/v20190612/model/DescribeSnapshotByTimeOffsetTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeStreamLinkSecurityGroupRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeStreamLinkSecurityGroupResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeSubtitleEmbedTemplatesRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeSubtitleEmbedTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTaskDetailRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTaskDetailResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTasksRequest.h>
@@ -225,6 +231,8 @@
 #include <tencentcloud/mps/v20190612/model/ModifySmartSubtitleTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifySnapshotByTimeOffsetTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/ModifySnapshotByTimeOffsetTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/ModifySubtitleEmbedTemplateRequest.h>
+#include <tencentcloud/mps/v20190612/model/ModifySubtitleEmbedTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifyTranscodeTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/ModifyTranscodeTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifyWatermarkTemplateRequest.h>
@@ -323,6 +331,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSnapshotByTimeOffsetTemplateResponse> CreateSnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<CreateSnapshotByTimeOffsetTemplateOutcome> CreateSnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateSnapshotByTimeOffsetTemplateRequest&, CreateSnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotByTimeOffsetTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateSubtitleEmbedTemplateResponse> CreateSubtitleEmbedTemplateOutcome;
+                typedef std::future<CreateSubtitleEmbedTemplateOutcome> CreateSubtitleEmbedTemplateOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::CreateSubtitleEmbedTemplateRequest&, CreateSubtitleEmbedTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSubtitleEmbedTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTranscodeTemplateResponse> CreateTranscodeTemplateOutcome;
                 typedef std::future<CreateTranscodeTemplateOutcome> CreateTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateTranscodeTemplateRequest&, CreateTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTranscodeTemplateAsyncHandler;
@@ -386,6 +397,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSnapshotByTimeOffsetTemplateResponse> DeleteSnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<DeleteSnapshotByTimeOffsetTemplateOutcome> DeleteSnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteSnapshotByTimeOffsetTemplateRequest&, DeleteSnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSnapshotByTimeOffsetTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteSubtitleEmbedTemplateResponse> DeleteSubtitleEmbedTemplateOutcome;
+                typedef std::future<DeleteSubtitleEmbedTemplateOutcome> DeleteSubtitleEmbedTemplateOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DeleteSubtitleEmbedTemplateRequest&, DeleteSubtitleEmbedTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSubtitleEmbedTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteTranscodeTemplateResponse> DeleteTranscodeTemplateOutcome;
                 typedef std::future<DeleteTranscodeTemplateOutcome> DeleteTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteTranscodeTemplateRequest&, DeleteTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTranscodeTemplateAsyncHandler;
@@ -470,6 +484,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamLinkSecurityGroupResponse> DescribeStreamLinkSecurityGroupOutcome;
                 typedef std::future<DescribeStreamLinkSecurityGroupOutcome> DescribeStreamLinkSecurityGroupOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeStreamLinkSecurityGroupRequest&, DescribeStreamLinkSecurityGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLinkSecurityGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSubtitleEmbedTemplatesResponse> DescribeSubtitleEmbedTemplatesOutcome;
+                typedef std::future<DescribeSubtitleEmbedTemplatesOutcome> DescribeSubtitleEmbedTemplatesOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeSubtitleEmbedTemplatesRequest&, DescribeSubtitleEmbedTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubtitleEmbedTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTaskDetailResponse> DescribeTaskDetailOutcome;
                 typedef std::future<DescribeTaskDetailOutcome> DescribeTaskDetailOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeTaskDetailRequest&, DescribeTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskDetailAsyncHandler;
@@ -566,6 +583,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySnapshotByTimeOffsetTemplateResponse> ModifySnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<ModifySnapshotByTimeOffsetTemplateOutcome> ModifySnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ModifySnapshotByTimeOffsetTemplateRequest&, ModifySnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotByTimeOffsetTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySubtitleEmbedTemplateResponse> ModifySubtitleEmbedTemplateOutcome;
+                typedef std::future<ModifySubtitleEmbedTemplateOutcome> ModifySubtitleEmbedTemplateOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::ModifySubtitleEmbedTemplateRequest&, ModifySubtitleEmbedTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubtitleEmbedTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyTranscodeTemplateResponse> ModifyTranscodeTemplateOutcome;
                 typedef std::future<ModifyTranscodeTemplateOutcome> ModifyTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ModifyTranscodeTemplateRequest&, ModifyTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTranscodeTemplateAsyncHandler;
@@ -803,6 +823,15 @@ This API is used to create an orchestration, which is in disable status by defau
                 CreateSnapshotByTimeOffsetTemplateOutcomeCallable CreateSnapshotByTimeOffsetTemplateCallable(const Model::CreateSnapshotByTimeOffsetTemplateRequest& request);
 
                 /**
+                 *This API is used to create a custom subtitle suppression template.
+                 * @param req CreateSubtitleEmbedTemplateRequest
+                 * @return CreateSubtitleEmbedTemplateOutcome
+                 */
+                CreateSubtitleEmbedTemplateOutcome CreateSubtitleEmbedTemplate(const Model::CreateSubtitleEmbedTemplateRequest &request);
+                void CreateSubtitleEmbedTemplateAsync(const Model::CreateSubtitleEmbedTemplateRequest& request, const CreateSubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateSubtitleEmbedTemplateOutcomeCallable CreateSubtitleEmbedTemplateCallable(const Model::CreateSubtitleEmbedTemplateRequest& request);
+
+                /**
                  *This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
                  * @param req CreateTranscodeTemplateRequest
                  * @return CreateTranscodeTemplateOutcome
@@ -1003,6 +1032,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteSnapshotByTimeOffsetTemplateOutcome DeleteSnapshotByTimeOffsetTemplate(const Model::DeleteSnapshotByTimeOffsetTemplateRequest &request);
                 void DeleteSnapshotByTimeOffsetTemplateAsync(const Model::DeleteSnapshotByTimeOffsetTemplateRequest& request, const DeleteSnapshotByTimeOffsetTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteSnapshotByTimeOffsetTemplateOutcomeCallable DeleteSnapshotByTimeOffsetTemplateCallable(const Model::DeleteSnapshotByTimeOffsetTemplateRequest& request);
+
+                /**
+                 *Delete a user-customized Subtitle Suppression Template.
+                 * @param req DeleteSubtitleEmbedTemplateRequest
+                 * @return DeleteSubtitleEmbedTemplateOutcome
+                 */
+                DeleteSubtitleEmbedTemplateOutcome DeleteSubtitleEmbedTemplate(const Model::DeleteSubtitleEmbedTemplateRequest &request);
+                void DeleteSubtitleEmbedTemplateAsync(const Model::DeleteSubtitleEmbedTemplateRequest& request, const DeleteSubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteSubtitleEmbedTemplateOutcomeCallable DeleteSubtitleEmbedTemplateCallable(const Model::DeleteSubtitleEmbedTemplateRequest& request);
 
                 /**
                  *This API is used to delete a custom transcoding template.
@@ -1255,6 +1293,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeStreamLinkSecurityGroupOutcome DescribeStreamLinkSecurityGroup(const Model::DescribeStreamLinkSecurityGroupRequest &request);
                 void DescribeStreamLinkSecurityGroupAsync(const Model::DescribeStreamLinkSecurityGroupRequest& request, const DescribeStreamLinkSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamLinkSecurityGroupOutcomeCallable DescribeStreamLinkSecurityGroupCallable(const Model::DescribeStreamLinkSecurityGroupRequest& request);
+
+                /**
+                 *This API is used to retrieve the subtitle suppression template details list based on template unique identifier. The returned results include all eligible user-customized subtitle suppression templates and system preset subtitle suppression templates.
+                 * @param req DescribeSubtitleEmbedTemplatesRequest
+                 * @return DescribeSubtitleEmbedTemplatesOutcome
+                 */
+                DescribeSubtitleEmbedTemplatesOutcome DescribeSubtitleEmbedTemplates(const Model::DescribeSubtitleEmbedTemplatesRequest &request);
+                void DescribeSubtitleEmbedTemplatesAsync(const Model::DescribeSubtitleEmbedTemplatesRequest& request, const DescribeSubtitleEmbedTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSubtitleEmbedTemplatesOutcomeCallable DescribeSubtitleEmbedTemplatesCallable(const Model::DescribeSubtitleEmbedTemplatesRequest& request);
 
                 /**
                  *This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.
@@ -1561,6 +1608,15 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifySnapshotByTimeOffsetTemplateOutcome ModifySnapshotByTimeOffsetTemplate(const Model::ModifySnapshotByTimeOffsetTemplateRequest &request);
                 void ModifySnapshotByTimeOffsetTemplateAsync(const Model::ModifySnapshotByTimeOffsetTemplateRequest& request, const ModifySnapshotByTimeOffsetTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySnapshotByTimeOffsetTemplateOutcomeCallable ModifySnapshotByTimeOffsetTemplateCallable(const Model::ModifySnapshotByTimeOffsetTemplateRequest& request);
+
+                /**
+                 *This API is used to modify a user-customized subtitle suppression template.
+                 * @param req ModifySubtitleEmbedTemplateRequest
+                 * @return ModifySubtitleEmbedTemplateOutcome
+                 */
+                ModifySubtitleEmbedTemplateOutcome ModifySubtitleEmbedTemplate(const Model::ModifySubtitleEmbedTemplateRequest &request);
+                void ModifySubtitleEmbedTemplateAsync(const Model::ModifySubtitleEmbedTemplateRequest& request, const ModifySubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySubtitleEmbedTemplateOutcomeCallable ModifySubtitleEmbedTemplateCallable(const Model::ModifySubtitleEmbedTemplateRequest& request);
 
                 /**
                  *This API is used to modify a custom transcoding template.

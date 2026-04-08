@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming AI tagging recognition results
+                * 
                 */
                 class LiveStreamTagRecognitionResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tagging events.
-                     * @return Id Tagging events.
+                     * 获取
+                     * @return Id 
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Tagging events.
-                     * @param _id Tagging events.
+                     * 设置
+                     * @param _id 
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Start PTS time of the recognition segment, unit: seconds.
-                     * @return StartPtsTime Start PTS time of the recognition segment, unit: seconds.
+                     * 获取
+                     * @return StartPtsTime 
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of the recognition segment, unit: seconds.
-                     * @param _startPtsTime Start PTS time of the recognition segment, unit: seconds.
+                     * 设置
+                     * @param _startPtsTime 
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Termination PTS time of the recognition segment, unit: seconds.
-                     * @return EndPtsTime Termination PTS time of the recognition segment, unit: seconds.
+                     * 获取
+                     * @return EndPtsTime 
                      * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
-                     * 设置Termination PTS time of the recognition segment, unit: seconds.
-                     * @param _endPtsTime Termination PTS time of the recognition segment, unit: seconds.
+                     * 设置
+                     * @param _endPtsTime 
                      * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Recognition segment confidence. Range: 0-100.
-                     * @return Confidence Recognition segment confidence. Range: 0-100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Recognition segment confidence. Range: 0-100.
-                     * @param _confidence Recognition segment confidence. Range: 0-100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tagging events.
+                     * 
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Start PTS time of the recognition segment, unit: seconds.
+                     * 
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
 
                     /**
-                     * Termination PTS time of the recognition segment, unit: seconds.
+                     * 
                      */
                     double m_endPtsTime;
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Recognition segment confidence. Range: 0-100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

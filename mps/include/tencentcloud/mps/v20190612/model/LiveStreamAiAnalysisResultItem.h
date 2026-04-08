@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming AI analysis results
+                * 
                 */
                 class LiveStreamAiAnalysisResultItem : public AbstractModel
                 {
@@ -83,19 +83,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Segmentation results are valid when Type is
-SegmentRecognition.
-                     * @return SegmentResultSet Segmentation results are valid when Type is
-SegmentRecognition.
+                     * 获取
+                     * @return SegmentResultSet 
                      * 
                      */
                     std::vector<SegmentRecognitionItem> GetSegmentResultSet() const;
 
                     /**
-                     * 设置Segmentation results are valid when Type is
-SegmentRecognition.
-                     * @param _segmentResultSet Segmentation results are valid when Type is
-SegmentRecognition.
+                     * 设置
+                     * @param _segmentResultSet 
                      * 
                      */
                     void SetSegmentResultSet(const std::vector<SegmentRecognitionItem>& _segmentResultSet);
@@ -165,8 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Segmentation results are valid when Type is
-SegmentRecognition.
+                     * 
                      */
                     std::vector<SegmentRecognitionItem> m_segmentResultSet;
                     bool m_segmentResultSetHasBeenSet;

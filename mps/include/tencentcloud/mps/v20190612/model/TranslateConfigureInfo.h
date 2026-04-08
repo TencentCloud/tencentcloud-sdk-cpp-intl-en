@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Video source language.
-                     * @return SourceLanguage Video source language.
+                     * 获取
+                     * @return SourceLanguage 
                      * 
                      */
                     std::string GetSourceLanguage() const;
 
                     /**
-                     * 设置Video source language.
-                     * @param _sourceLanguage Video source language.
+                     * 设置
+                     * @param _sourceLanguage 
                      * 
                      */
                     void SetSourceLanguage(const std::string& _sourceLanguage);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool SourceLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Translated target language.
-                     * @return DestinationLanguage Translated target language.
+                     * 获取
+                     * @return DestinationLanguage 
                      * 
                      */
                     std::string GetDestinationLanguage() const;
 
                     /**
-                     * 设置Translated target language.
-                     * @param _destinationLanguage Translated target language.
+                     * 设置
+                     * @param _destinationLanguage 
                      * 
                      */
                     void SetDestinationLanguage(const std::string& _destinationLanguage);
@@ -161,13 +161,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Video source language.
+                     * 
                      */
                     std::string m_sourceLanguage;
                     bool m_sourceLanguageHasBeenSet;
 
                     /**
-                     * Translated target language.
+                     * 
                      */
                     std::string m_destinationLanguage;
                     bool m_destinationLanguageHasBeenSet;

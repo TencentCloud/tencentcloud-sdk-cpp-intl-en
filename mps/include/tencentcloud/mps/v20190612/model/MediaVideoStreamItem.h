@@ -272,15 +272,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HdrTypeHasBeenSet() const;
 
                     /**
-                     * 获取Video Codecs.
-                     * @return Codecs Video Codecs.
+                     * 获取
+                     * @return Codecs 
                      * 
                      */
                     std::string GetCodecs() const;
 
                     /**
-                     * 设置Video Codecs.
-                     * @param _codecs Video Codecs.
+                     * 设置
+                     * @param _codecs 
                      * 
                      */
                     void SetCodecs(const std::string& _codecs);
@@ -408,7 +408,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_hdrTypeHasBeenSet;
 
                     /**
-                     * Video Codecs.
+                     * 
                      */
                     std::string m_codecs;
                     bool m_codecsHasBeenSet;

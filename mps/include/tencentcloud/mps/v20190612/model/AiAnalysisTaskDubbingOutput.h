@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the video path for translation.
-                     * @return VideoPath Specifies the video path for translation.
+                     * 获取<p>Dubbed video path.</p>
+                     * @return VideoPath <p>Dubbed video path.</p>
                      * 
                      */
                     std::string GetVideoPath() const;
 
                     /**
-                     * 设置Specifies the video path for translation.
-                     * @param _videoPath Specifies the video path for translation.
+                     * 设置<p>Dubbed video path.</p>
+                     * @param _videoPath <p>Dubbed video path.</p>
                      * 
                      */
                     void SetVideoPath(const std::string& _videoPath);
@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool VideoPathHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the file path of the tag.
-
-                     * @return SpeakerPath Specifies the file path of the tag.
-
+                     * 获取<p>Tag file path</p>
+                     * @return SpeakerPath <p>Tag file path</p>
                      * 
                      */
                     std::string GetSpeakerPath() const;
 
                     /**
-                     * 设置Specifies the file path of the tag.
-
-                     * @param _speakerPath Specifies the file path of the tag.
-
+                     * 设置<p>Tag file path</p>
+                     * @param _speakerPath <p>Tag file path</p>
                      * 
                      */
                     void SetSpeakerPath(const std::string& _speakerPath);
@@ -94,15 +90,15 @@ namespace TencentCloud
                     bool SpeakerPathHasBeenSet() const;
 
                     /**
-                     * 获取Voice type ID.
-                     * @return VoiceId Voice type ID.
+                     * 获取<p>Voice type id</p>
+                     * @return VoiceId <p>Voice type id</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置Voice type ID.
-                     * @param _voiceId Voice type ID.
+                     * 设置<p>Voice type id</p>
+                     * @param _voiceId <p>Voice type id</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -115,15 +111,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage location of the transcoded video.
-                     * @return OutputStorage Specifies the storage location of the transcoded video.
+                     * 获取<p>Storage location of the dubbed video.</p>
+                     * @return OutputStorage <p>Storage location of the dubbed video.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Specifies the storage location of the transcoded video.
-                     * @param _outputStorage Specifies the storage location of the transcoded video.
+                     * 设置<p>Storage location of the dubbed video.</p>
+                     * @param _outputStorage <p>Storage location of the dubbed video.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -138,26 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the video path for translation.
+                     * <p>Dubbed video path.</p>
                      */
                     std::string m_videoPath;
                     bool m_videoPathHasBeenSet;
 
                     /**
-                     * Specifies the file path of the tag.
-
+                     * <p>Tag file path</p>
                      */
                     std::string m_speakerPath;
                     bool m_speakerPathHasBeenSet;
 
                     /**
-                     * Voice type ID.
+                     * <p>Voice type id</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * Specifies the storage location of the transcoded video.
+                     * <p>Storage location of the dubbed video.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

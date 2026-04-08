@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dlc/v20210125/model/WrittenAdvancePolicy.h>
 
 
 namespace TencentCloud
@@ -71,6 +72,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WrittenEnableHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AdvancePolicy 
+                     * 
+                     */
+                    WrittenAdvancePolicy GetAdvancePolicy() const;
+
+                    /**
+                     * 设置
+                     * @param _advancePolicy 
+                     * 
+                     */
+                    void SetAdvancePolicy(const WrittenAdvancePolicy& _advancePolicy);
+
+                    /**
+                     * 判断参数 AdvancePolicy 是否已赋值
+                     * @return AdvancePolicy 是否已赋值
+                     * 
+                     */
+                    bool AdvancePolicyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +101,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_writtenEnable;
                     bool m_writtenEnableHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    WrittenAdvancePolicy m_advancePolicy;
+                    bool m_advancePolicyHasBeenSet;
 
                 };
             }

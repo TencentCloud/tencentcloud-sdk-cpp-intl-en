@@ -127,6 +127,27 @@ namespace TencentCloud
                      */
                     bool AssetHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DatasourceConnectionName 
+                     * 
+                     */
+                    std::string GetDatasourceConnectionName() const;
+
+                    /**
+                     * 设置
+                     * @param _datasourceConnectionName 
+                     * 
+                     */
+                    void SetDatasourceConnectionName(const std::string& _datasourceConnectionName);
+
+                    /**
+                     * 判断参数 DatasourceConnectionName 是否已赋值
+                     * @return DatasourceConnectionName 是否已赋值
+                     * 
+                     */
+                    bool DatasourceConnectionNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +173,12 @@ namespace TencentCloud
                      */
                     Asset m_asset;
                     bool m_assetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_datasourceConnectionName;
+                    bool m_datasourceConnectionNameHasBeenSet;
 
                 };
             }

@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool ObjectRecognitionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Tagging results are valid when Type is TagRecognition.
-                     * @return TagRecognitionResultSet Tagging results are valid when Type is TagRecognition.
+                     * 获取
+                     * @return TagRecognitionResultSet 
                      * 
                      */
                     std::vector<LiveStreamTagRecognitionResult> GetTagRecognitionResultSet() const;
 
                     /**
-                     * 设置Tagging results are valid when Type is TagRecognition.
-                     * @param _tagRecognitionResultSet Tagging results are valid when Type is TagRecognition.
+                     * 设置
+                     * @param _tagRecognitionResultSet 
                      * 
                      */
                     void SetTagRecognitionResultSet(const std::vector<LiveStreamTagRecognitionResult>& _tagRecognitionResultSet);
@@ -364,7 +364,7 @@ namespace TencentCloud
                     bool m_objectRecognitionResultSetHasBeenSet;
 
                     /**
-                     * Tagging results are valid when Type is TagRecognition.
+                     * 
                      */
                     std::vector<LiveStreamTagRecognitionResult> m_tagRecognitionResultSet;
                     bool m_tagRecognitionResultSetHasBeenSet;

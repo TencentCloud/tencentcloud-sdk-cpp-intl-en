@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
-                     * @return CategorySet Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+                     * 获取
+                     * @return CategorySet 
                      * 
                      */
                     std::vector<std::string> GetCategorySet() const;
 
                     /**
-                     * 设置Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
-                     * @param _categorySet Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+                     * 设置
+                     * @param _categorySet 
                      * 
                      */
                     void SetCategorySet(const std::vector<std::string>& _categorySet);
@@ -126,9 +118,7 @@ For example, when the Tag is "tower", CategorySet contains two elements: Categor
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
-
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+                     * 
                      */
                     std::vector<std::string> m_categorySet;
                     bool m_categorySetHasBeenSet;

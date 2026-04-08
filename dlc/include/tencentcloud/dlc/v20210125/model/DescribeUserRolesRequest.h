@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool SortingHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsDefault 
+                     * 
+                     */
+                    int64_t GetIsDefault() const;
+
+                    /**
+                     * 设置
+                     * @param _isDefault 
+                     * 
+                     */
+                    void SetIsDefault(const int64_t& _isDefault);
+
+                    /**
+                     * 判断参数 IsDefault 是否已赋值
+                     * @return IsDefault 是否已赋值
+                     * 
+                     */
+                    bool IsDefaultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_sorting;
                     bool m_sortingHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isDefault;
+                    bool m_isDefaultHasBeenSet;
 
                 };
             }

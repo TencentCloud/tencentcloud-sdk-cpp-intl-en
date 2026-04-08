@@ -1040,6 +1040,56 @@ MpsClient::CreateSnapshotByTimeOffsetTemplateOutcomeCallable MpsClient::CreateSn
     return prom->get_future();
 }
 
+MpsClient::CreateSubtitleEmbedTemplateOutcome MpsClient::CreateSubtitleEmbedTemplate(const CreateSubtitleEmbedTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSubtitleEmbedTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSubtitleEmbedTemplateResponse rsp = CreateSubtitleEmbedTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSubtitleEmbedTemplateOutcome(rsp);
+        else
+            return CreateSubtitleEmbedTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSubtitleEmbedTemplateOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::CreateSubtitleEmbedTemplateAsync(const CreateSubtitleEmbedTemplateRequest& request, const CreateSubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSubtitleEmbedTemplateRequest&;
+    using Resp = CreateSubtitleEmbedTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSubtitleEmbedTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::CreateSubtitleEmbedTemplateOutcomeCallable MpsClient::CreateSubtitleEmbedTemplateCallable(const CreateSubtitleEmbedTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSubtitleEmbedTemplateOutcome>>();
+    CreateSubtitleEmbedTemplateAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const CreateSubtitleEmbedTemplateRequest&,
+        CreateSubtitleEmbedTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MpsClient::CreateTranscodeTemplateOutcome MpsClient::CreateTranscodeTemplate(const CreateTranscodeTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateTranscodeTemplate");
@@ -2082,6 +2132,56 @@ MpsClient::DeleteSnapshotByTimeOffsetTemplateOutcomeCallable MpsClient::DeleteSn
         const MpsClient*,
         const DeleteSnapshotByTimeOffsetTemplateRequest&,
         DeleteSnapshotByTimeOffsetTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::DeleteSubtitleEmbedTemplateOutcome MpsClient::DeleteSubtitleEmbedTemplate(const DeleteSubtitleEmbedTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSubtitleEmbedTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSubtitleEmbedTemplateResponse rsp = DeleteSubtitleEmbedTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSubtitleEmbedTemplateOutcome(rsp);
+        else
+            return DeleteSubtitleEmbedTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSubtitleEmbedTemplateOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DeleteSubtitleEmbedTemplateAsync(const DeleteSubtitleEmbedTemplateRequest& request, const DeleteSubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteSubtitleEmbedTemplateRequest&;
+    using Resp = DeleteSubtitleEmbedTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteSubtitleEmbedTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DeleteSubtitleEmbedTemplateOutcomeCallable MpsClient::DeleteSubtitleEmbedTemplateCallable(const DeleteSubtitleEmbedTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteSubtitleEmbedTemplateOutcome>>();
+    DeleteSubtitleEmbedTemplateAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DeleteSubtitleEmbedTemplateRequest&,
+        DeleteSubtitleEmbedTemplateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3482,6 +3582,56 @@ MpsClient::DescribeStreamLinkSecurityGroupOutcomeCallable MpsClient::DescribeStr
         const MpsClient*,
         const DescribeStreamLinkSecurityGroupRequest&,
         DescribeStreamLinkSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::DescribeSubtitleEmbedTemplatesOutcome MpsClient::DescribeSubtitleEmbedTemplates(const DescribeSubtitleEmbedTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubtitleEmbedTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubtitleEmbedTemplatesResponse rsp = DescribeSubtitleEmbedTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubtitleEmbedTemplatesOutcome(rsp);
+        else
+            return DescribeSubtitleEmbedTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubtitleEmbedTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DescribeSubtitleEmbedTemplatesAsync(const DescribeSubtitleEmbedTemplatesRequest& request, const DescribeSubtitleEmbedTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSubtitleEmbedTemplatesRequest&;
+    using Resp = DescribeSubtitleEmbedTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSubtitleEmbedTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DescribeSubtitleEmbedTemplatesOutcomeCallable MpsClient::DescribeSubtitleEmbedTemplatesCallable(const DescribeSubtitleEmbedTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSubtitleEmbedTemplatesOutcome>>();
+    DescribeSubtitleEmbedTemplatesAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DescribeSubtitleEmbedTemplatesRequest&,
+        DescribeSubtitleEmbedTemplatesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -5082,6 +5232,56 @@ MpsClient::ModifySnapshotByTimeOffsetTemplateOutcomeCallable MpsClient::ModifySn
         const MpsClient*,
         const ModifySnapshotByTimeOffsetTemplateRequest&,
         ModifySnapshotByTimeOffsetTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::ModifySubtitleEmbedTemplateOutcome MpsClient::ModifySubtitleEmbedTemplate(const ModifySubtitleEmbedTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySubtitleEmbedTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySubtitleEmbedTemplateResponse rsp = ModifySubtitleEmbedTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySubtitleEmbedTemplateOutcome(rsp);
+        else
+            return ModifySubtitleEmbedTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySubtitleEmbedTemplateOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::ModifySubtitleEmbedTemplateAsync(const ModifySubtitleEmbedTemplateRequest& request, const ModifySubtitleEmbedTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifySubtitleEmbedTemplateRequest&;
+    using Resp = ModifySubtitleEmbedTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifySubtitleEmbedTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::ModifySubtitleEmbedTemplateOutcomeCallable MpsClient::ModifySubtitleEmbedTemplateCallable(const ModifySubtitleEmbedTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifySubtitleEmbedTemplateOutcome>>();
+    ModifySubtitleEmbedTemplateAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const ModifySubtitleEmbedTemplateRequest&,
+        ModifySubtitleEmbedTemplateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

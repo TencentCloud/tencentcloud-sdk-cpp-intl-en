@@ -49,18 +49,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle recognition result.
+                     * 获取<p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecognizeSubtitleResult Subtitle recognition result.
+                     * @return RecognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SubtitleResult> GetRecognizeSubtitleResult() const;
 
                     /**
-                     * 设置Subtitle recognition result.
+                     * 设置<p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recognizeSubtitleResult Subtitle recognition result.
+                     * @param _recognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,18 +74,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecognizeSubtitleResultHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle translation result.
+                     * 获取<p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransSubtitleResult Subtitle translation result.
+                     * @return TransSubtitleResult <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SubtitleResult> GetTransSubtitleResult() const;
 
                     /**
-                     * 设置Subtitle translation result.
+                     * 设置<p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transSubtitleResult Subtitle translation result.
+                     * @param _transSubtitleResult <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -99,18 +99,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransSubtitleResultHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of the subtitle file.
+                     * 获取<p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Storage location of the subtitle file.
+                     * @return OutputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of the subtitle file.
+                     * 设置<p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Storage location of the subtitle file.
+                     * @param _outputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -126,21 +126,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Subtitle recognition result.
+                     * <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SubtitleResult> m_recognizeSubtitleResult;
                     bool m_recognizeSubtitleResultHasBeenSet;
 
                     /**
-                     * Subtitle translation result.
+                     * <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SubtitleResult> m_transSubtitleResult;
                     bool m_transSubtitleResultHasBeenSet;
 
                     /**
-                     * Storage location of the subtitle file.
+                     * <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;

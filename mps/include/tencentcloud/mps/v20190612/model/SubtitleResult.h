@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Language of the subtitle file.
-                     * @return Language Language of the subtitle file.
+                     * 获取<p>Language of the subtitle file</p>
+                     * @return Language <p>Language of the subtitle file</p>
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置Language of the subtitle file.
-                     * @param _language Language of the subtitle file.
+                     * 设置<p>Language of the subtitle file</p>
+                     * @param _language <p>Language of the subtitle file</p>
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Whether the processing is successful.
-                     * @return Status Whether the processing is successful.
+                     * 获取<p>Whether the processing is successful.</p>
+                     * @return Status <p>Whether the processing is successful.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Whether the processing is successful.
-                     * @param _status Whether the processing is successful.
+                     * 设置<p>Whether the processing is successful.</p>
+                     * @param _status <p>Whether the processing is successful.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle file URL.
-                     * @return Path Subtitle file URL.
+                     * 获取<p>Subtitle file path</p>
+                     * @return Path <p>Subtitle file path</p>
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Subtitle file URL.
-                     * @param _path Subtitle file URL.
+                     * 设置<p>Subtitle file path</p>
+                     * @param _path <p>Subtitle file path</p>
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -109,25 +109,52 @@ namespace TencentCloud
                      */
                     bool PathHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Subtitle suppression video path.</p>
+                     * @return SubtitleEmbedPath <p>Subtitle suppression video path.</p>
+                     * 
+                     */
+                    std::string GetSubtitleEmbedPath() const;
+
+                    /**
+                     * 设置<p>Subtitle suppression video path.</p>
+                     * @param _subtitleEmbedPath <p>Subtitle suppression video path.</p>
+                     * 
+                     */
+                    void SetSubtitleEmbedPath(const std::string& _subtitleEmbedPath);
+
+                    /**
+                     * 判断参数 SubtitleEmbedPath 是否已赋值
+                     * @return SubtitleEmbedPath 是否已赋值
+                     * 
+                     */
+                    bool SubtitleEmbedPathHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Language of the subtitle file.
+                     * <p>Language of the subtitle file</p>
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Whether the processing is successful.
+                     * <p>Whether the processing is successful.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Subtitle file URL.
+                     * <p>Subtitle file path</p>
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
+
+                    /**
+                     * <p>Subtitle suppression video path.</p>
+                     */
+                    std::string m_subtitleEmbedPath;
+                    bool m_subtitleEmbedPathHasBeenSet;
 
                 };
             }

@@ -50,27 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-                     * @return EraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * 获取<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     std::string GetEraseType() const;
 
                     /**
-                     * 设置Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-                     * @param _eraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * 设置<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @param _eraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     void SetEraseType(const std::string& _eraseType);
@@ -83,19 +71,15 @@ namespace TencentCloud
                     bool EraseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle erasing configuration.
-This field is required when the value of EraseType is subtitle.
-                     * @return EraseSubtitleConfig Subtitle erasing configuration.
-This field is required when the value of EraseType is subtitle.
+                     * 获取<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+                     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     UpdateSmartEraseSubtitleConfig GetEraseSubtitleConfig() const;
 
                     /**
-                     * 设置Subtitle erasing configuration.
-This field is required when the value of EraseType is subtitle.
-                     * @param _eraseSubtitleConfig Subtitle erasing configuration.
-This field is required when the value of EraseType is subtitle.
+                     * 设置<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+                     * @param _eraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     void SetEraseSubtitleConfig(const UpdateSmartEraseSubtitleConfig& _eraseSubtitleConfig);
@@ -108,19 +92,15 @@ This field is required when the value of EraseType is subtitle.
                     bool EraseSubtitleConfigHasBeenSet() const;
 
                     /**
-                     * 获取Watermark erasing configuration.
-This field is required when the value of EraseType is watermark.
-                     * @return EraseWatermarkConfig Watermark erasing configuration.
-This field is required when the value of EraseType is watermark.
+                     * 获取<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+                     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     UpdateSmartEraseWatermarkConfig GetEraseWatermarkConfig() const;
 
                     /**
-                     * 设置Watermark erasing configuration.
-This field is required when the value of EraseType is watermark.
-                     * @param _eraseWatermarkConfig Watermark erasing configuration.
-This field is required when the value of EraseType is watermark.
+                     * 设置<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+                     * @param _eraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     void SetEraseWatermarkConfig(const UpdateSmartEraseWatermarkConfig& _eraseWatermarkConfig);
@@ -133,19 +113,15 @@ This field is required when the value of EraseType is watermark.
                     bool EraseWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取Privacy protection configuration.
-This field is required when the value of EraseType is privacy.
-                     * @return ErasePrivacyConfig Privacy protection configuration.
-This field is required when the value of EraseType is privacy.
+                     * 获取<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+                     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      * 
                      */
                     UpdateSmartErasePrivacyConfig GetErasePrivacyConfig() const;
 
                     /**
-                     * 设置Privacy protection configuration.
-This field is required when the value of EraseType is privacy.
-                     * @param _erasePrivacyConfig Privacy protection configuration.
-This field is required when the value of EraseType is privacy.
+                     * 设置<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+                     * @param _erasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      * 
                      */
                     void SetErasePrivacyConfig(const UpdateSmartErasePrivacyConfig& _erasePrivacyConfig);
@@ -157,37 +133,58 @@ This field is required when the value of EraseType is privacy.
                      */
                     bool ErasePrivacyConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>id of the subtitle removal suppression template.</p>
+                     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+                     * 
+                     */
+                    int64_t GetSubtitleEmbedId() const;
+
+                    /**
+                     * 设置<p>id of the subtitle removal suppression template.</p>
+                     * @param _subtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+                     * 
+                     */
+                    void SetSubtitleEmbedId(const int64_t& _subtitleEmbedId);
+
+                    /**
+                     * 判断参数 SubtitleEmbedId 是否已赋值
+                     * @return SubtitleEmbedId 是否已赋值
+                     * 
+                     */
+                    bool SubtitleEmbedIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+                     * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      */
                     std::string m_eraseType;
                     bool m_eraseTypeHasBeenSet;
 
                     /**
-                     * Subtitle erasing configuration.
-This field is required when the value of EraseType is subtitle.
+                     * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      */
                     UpdateSmartEraseSubtitleConfig m_eraseSubtitleConfig;
                     bool m_eraseSubtitleConfigHasBeenSet;
 
                     /**
-                     * Watermark erasing configuration.
-This field is required when the value of EraseType is watermark.
+                     * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      */
                     UpdateSmartEraseWatermarkConfig m_eraseWatermarkConfig;
                     bool m_eraseWatermarkConfigHasBeenSet;
 
                     /**
-                     * Privacy protection configuration.
-This field is required when the value of EraseType is privacy.
+                     * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      */
                     UpdateSmartErasePrivacyConfig m_erasePrivacyConfig;
                     bool m_erasePrivacyConfigHasBeenSet;
+
+                    /**
+                     * <p>id of the subtitle removal suppression template.</p>
+                     */
+                    int64_t m_subtitleEmbedId;
+                    bool m_subtitleEmbedIdHasBeenSet;
 
                 };
             }

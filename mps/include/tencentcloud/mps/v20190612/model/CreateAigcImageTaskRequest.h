@@ -46,27 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Model name.
-Supported models:Hunyuan,
-GEM,
-Qwen.
-                     * @return ModelName Model name.
-Supported models:Hunyuan,
-GEM,
-Qwen.
+                     * 获取<p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
+                     * @return ModelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置Model name.
-Supported models:Hunyuan,
-GEM,
-Qwen.
-                     * @param _modelName Model name.
-Supported models:Hunyuan,
-GEM,
-Qwen.
+                     * 设置<p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
+                     * @param _modelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -79,15 +67,15 @@ Qwen.
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
-                     * @return ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+                     * 获取<p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
+                     * @return ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
-                     * @param _modelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+                     * 设置<p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
+                     * @param _modelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -100,15 +88,15 @@ Qwen.
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
-                     * @return Prompt Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+                     * 获取<p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
+                     * @return Prompt <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
-                     * @param _prompt Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+                     * 设置<p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
+                     * @param _prompt <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -121,15 +109,15 @@ Qwen.
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
-                     * @return NegativePrompt Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+                     * 获取<p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+                     * @return NegativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
-                     * @param _negativePrompt Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+                     * 设置<p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+                     * @param _negativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -142,15 +130,15 @@ Qwen.
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
-                     * @return EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+                     * 获取<p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+                     * @return EnhancePrompt <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
                      * 
                      */
                     bool GetEnhancePrompt() const;
 
                     /**
-                     * 设置The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
-                     * @param _enhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+                     * 设置<p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+                     * @param _enhancePrompt <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
                      * 
                      */
                     void SetEnhancePrompt(const bool& _enhancePrompt);
@@ -163,15 +151,15 @@ Qwen.
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
-                     * @return ImageInfos Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+                     * 获取<p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
+                     * @return ImageInfos <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
                      * 
                      */
                     std::vector<AigcImageInfo> GetImageInfos() const;
 
                     /**
-                     * 设置Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
-                     * @param _imageInfos Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+                     * 设置<p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
+                     * @param _imageInfos <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
                      * 
                      */
                     void SetImageInfos(const std::vector<AigcImageInfo>& _imageInfos);
@@ -184,15 +172,15 @@ Qwen.
                     bool ImageInfosHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameters required for the model.
-                     * @return ExtraParameters Additional parameters required for the model.
+                     * 获取<p>Additional parameters required for the model.</p>
+                     * @return ExtraParameters <p>Additional parameters required for the model.</p>
                      * 
                      */
                     AigcImageExtraParam GetExtraParameters() const;
 
                     /**
-                     * 设置Additional parameters required for the model.
-                     * @param _extraParameters Additional parameters required for the model.
+                     * 设置<p>Additional parameters required for the model.</p>
+                     * @param _extraParameters <p>Additional parameters required for the model.</p>
                      * 
                      */
                     void SetExtraParameters(const AigcImageExtraParam& _extraParameters);
@@ -205,15 +193,36 @@ Qwen.
                     bool ExtraParametersHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
-                     * @return StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+                     * 获取<p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+                     * @return AdditionalParameters <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+                     * 
+                     */
+                    std::string GetAdditionalParameters() const;
+
+                    /**
+                     * 设置<p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+                     * @param _additionalParameters <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+                     * 
+                     */
+                    void SetAdditionalParameters(const std::string& _additionalParameters);
+
+                    /**
+                     * 判断参数 AdditionalParameters 是否已赋值
+                     * @return AdditionalParameters 是否已赋值
+                     * 
+                     */
+                    bool AdditionalParametersHasBeenSet() const;
+
+                    /**
+                     * 获取<p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+                     * @return StoreCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
                      * 
                      */
                     AigcStoreCosParam GetStoreCosParam() const;
 
                     /**
-                     * 设置COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
-                     * @param _storeCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+                     * 设置<p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+                     * @param _storeCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
                      * 
                      */
                     void SetStoreCosParam(const AigcStoreCosParam& _storeCosParam);
@@ -226,15 +235,15 @@ Qwen.
                     bool StoreCosParamHasBeenSet() const;
 
                     /**
-                     * 获取API operator name.
-                     * @return Operator API operator name.
+                     * 获取<p>API operator name.</p>
+                     * @return Operator <p>API operator name.</p>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置API operator name.
-                     * @param _operator API operator name.
+                     * 设置<p>API operator name.</p>
+                     * @param _operator <p>API operator name.</p>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -249,58 +258,61 @@ Qwen.
                 private:
 
                     /**
-                     * Model name.
-Supported models:Hunyuan,
-GEM,
-Qwen.
+                     * <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+                     * <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+                     * <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+                     * <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+                     * <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
                      */
                     bool m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+                     * <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
                      */
                     std::vector<AigcImageInfo> m_imageInfos;
                     bool m_imageInfosHasBeenSet;
 
                     /**
-                     * Additional parameters required for the model.
+                     * <p>Additional parameters required for the model.</p>
                      */
                     AigcImageExtraParam m_extraParameters;
                     bool m_extraParametersHasBeenSet;
 
                     /**
-                     * COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+                     * <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+                     */
+                    std::string m_additionalParameters;
+                    bool m_additionalParametersHasBeenSet;
+
+                    /**
+                     * <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
                      */
                     AigcStoreCosParam m_storeCosParam;
                     bool m_storeCosParamHasBeenSet;
 
                     /**
-                     * API operator name.
+                     * <p>API operator name.</p>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
