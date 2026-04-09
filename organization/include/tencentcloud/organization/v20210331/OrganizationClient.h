@@ -203,6 +203,8 @@
 #include <tencentcloud/organization/v20210331/model/ListOrganizationServiceResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListPermissionPoliciesInRoleConfigurationRequest.h>
 #include <tencentcloud/organization/v20210331/model/ListPermissionPoliciesInRoleConfigurationResponse.h>
+#include <tencentcloud/organization/v20210331/model/ListPoliciesRequest.h>
+#include <tencentcloud/organization/v20210331/model/ListPoliciesResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListPoliciesForTargetRequest.h>
 #include <tencentcloud/organization/v20210331/model/ListPoliciesForTargetResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListRoleAssignmentsRequest.h>
@@ -557,6 +559,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListPermissionPoliciesInRoleConfigurationResponse> ListPermissionPoliciesInRoleConfigurationOutcome;
                 typedef std::future<ListPermissionPoliciesInRoleConfigurationOutcome> ListPermissionPoliciesInRoleConfigurationOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::ListPermissionPoliciesInRoleConfigurationRequest&, ListPermissionPoliciesInRoleConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPermissionPoliciesInRoleConfigurationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListPoliciesResponse> ListPoliciesOutcome;
+                typedef std::future<ListPoliciesOutcome> ListPoliciesOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::ListPoliciesRequest&, ListPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPoliciesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListPoliciesForTargetResponse> ListPoliciesForTargetOutcome;
                 typedef std::future<ListPoliciesForTargetOutcome> ListPoliciesForTargetOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::ListPoliciesForTargetRequest&, ListPoliciesForTargetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPoliciesForTargetAsyncHandler;
@@ -1474,6 +1479,15 @@ namespace TencentCloud
                 ListPermissionPoliciesInRoleConfigurationOutcome ListPermissionPoliciesInRoleConfiguration(const Model::ListPermissionPoliciesInRoleConfigurationRequest &request);
                 void ListPermissionPoliciesInRoleConfigurationAsync(const Model::ListPermissionPoliciesInRoleConfigurationRequest& request, const ListPermissionPoliciesInRoleConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListPermissionPoliciesInRoleConfigurationOutcomeCallable ListPermissionPoliciesInRoleConfigurationCallable(const Model::ListPermissionPoliciesInRoleConfigurationRequest& request);
+
+                /**
+                 *This API is used to query and view the policy list data.
+                 * @param req ListPoliciesRequest
+                 * @return ListPoliciesOutcome
+                 */
+                ListPoliciesOutcome ListPolicies(const Model::ListPoliciesRequest &request);
+                void ListPoliciesAsync(const Model::ListPoliciesRequest& request, const ListPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListPoliciesOutcomeCallable ListPoliciesCallable(const Model::ListPoliciesRequest& request);
 
                 /**
                  *This API is used to query the list of policies associated with a target.

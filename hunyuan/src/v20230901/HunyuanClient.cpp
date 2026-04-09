@@ -190,6 +190,56 @@ HunyuanClient::Describe3DSmartTopologyJobOutcomeCallable HunyuanClient::Describe
     return prom->get_future();
 }
 
+HunyuanClient::DescribeConvert3DFormatJobOutcome HunyuanClient::DescribeConvert3DFormatJob(const DescribeConvert3DFormatJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConvert3DFormatJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConvert3DFormatJobResponse rsp = DescribeConvert3DFormatJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConvert3DFormatJobOutcome(rsp);
+        else
+            return DescribeConvert3DFormatJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConvert3DFormatJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::DescribeConvert3DFormatJobAsync(const DescribeConvert3DFormatJobRequest& request, const DescribeConvert3DFormatJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConvert3DFormatJobRequest&;
+    using Resp = DescribeConvert3DFormatJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConvert3DFormatJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::DescribeConvert3DFormatJobOutcomeCallable HunyuanClient::DescribeConvert3DFormatJobCallable(const DescribeConvert3DFormatJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConvert3DFormatJobOutcome>>();
+    DescribeConvert3DFormatJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const DescribeConvert3DFormatJobRequest&,
+        DescribeConvert3DFormatJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 HunyuanClient::DescribeHunyuanTo3DUVJobOutcome HunyuanClient::DescribeHunyuanTo3DUVJob(const DescribeHunyuanTo3DUVJobRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeHunyuanTo3DUVJob");
@@ -482,6 +532,56 @@ HunyuanClient::Submit3DSmartTopologyJobOutcomeCallable HunyuanClient::Submit3DSm
         const HunyuanClient*,
         const Submit3DSmartTopologyJobRequest&,
         Submit3DSmartTopologyJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+HunyuanClient::SubmitConvert3DFormatJobOutcome HunyuanClient::SubmitConvert3DFormatJob(const SubmitConvert3DFormatJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "SubmitConvert3DFormatJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SubmitConvert3DFormatJobResponse rsp = SubmitConvert3DFormatJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SubmitConvert3DFormatJobOutcome(rsp);
+        else
+            return SubmitConvert3DFormatJobOutcome(o.GetError());
+    }
+    else
+    {
+        return SubmitConvert3DFormatJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::SubmitConvert3DFormatJobAsync(const SubmitConvert3DFormatJobRequest& request, const SubmitConvert3DFormatJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SubmitConvert3DFormatJobRequest&;
+    using Resp = SubmitConvert3DFormatJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SubmitConvert3DFormatJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::SubmitConvert3DFormatJobOutcomeCallable HunyuanClient::SubmitConvert3DFormatJobCallable(const SubmitConvert3DFormatJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SubmitConvert3DFormatJobOutcome>>();
+    SubmitConvert3DFormatJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const SubmitConvert3DFormatJobRequest&,
+        SubmitConvert3DFormatJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

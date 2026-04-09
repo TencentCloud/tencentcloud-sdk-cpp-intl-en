@@ -29,6 +29,8 @@
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h>
@@ -41,6 +43,8 @@
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitConvert3DFormatJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitConvert3DFormatJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h>
@@ -74,6 +78,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Describe3DSmartTopologyJobResponse> Describe3DSmartTopologyJobOutcome;
                 typedef std::future<Describe3DSmartTopologyJobOutcome> Describe3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Describe3DSmartTopologyJobRequest&, Describe3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Describe3DSmartTopologyJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConvert3DFormatJobResponse> DescribeConvert3DFormatJobOutcome;
+                typedef std::future<DescribeConvert3DFormatJobOutcome> DescribeConvert3DFormatJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::DescribeConvert3DFormatJobRequest&, DescribeConvert3DFormatJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConvert3DFormatJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHunyuanTo3DUVJobResponse> DescribeHunyuanTo3DUVJobOutcome;
                 typedef std::future<DescribeHunyuanTo3DUVJobOutcome> DescribeHunyuanTo3DUVJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::DescribeHunyuanTo3DUVJobRequest&, DescribeHunyuanTo3DUVJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHunyuanTo3DUVJobAsyncHandler;
@@ -92,6 +99,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Submit3DSmartTopologyJobResponse> Submit3DSmartTopologyJobOutcome;
                 typedef std::future<Submit3DSmartTopologyJobOutcome> Submit3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Submit3DSmartTopologyJobRequest&, Submit3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Submit3DSmartTopologyJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitConvert3DFormatJobResponse> SubmitConvert3DFormatJobOutcome;
+                typedef std::future<SubmitConvert3DFormatJobOutcome> SubmitConvert3DFormatJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::SubmitConvert3DFormatJobRequest&, SubmitConvert3DFormatJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitConvert3DFormatJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::SubmitHunyuan3DPartJobResponse> SubmitHunyuan3DPartJobOutcome;
                 typedef std::future<SubmitHunyuan3DPartJobOutcome> SubmitHunyuan3DPartJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitHunyuan3DPartJobRequest&, SubmitHunyuan3DPartJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuan3DPartJobAsyncHandler;
@@ -142,6 +152,15 @@ namespace TencentCloud
                 Describe3DSmartTopologyJobOutcome Describe3DSmartTopologyJob(const Model::Describe3DSmartTopologyJobRequest &request);
                 void Describe3DSmartTopologyJobAsync(const Model::Describe3DSmartTopologyJobRequest& request, const Describe3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 Describe3DSmartTopologyJobOutcomeCallable Describe3DSmartTopologyJobCallable(const Model::Describe3DSmartTopologyJobRequest& request);
+
+                /**
+                 *According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
+                 * @param req DescribeConvert3DFormatJobRequest
+                 * @return DescribeConvert3DFormatJobOutcome
+                 */
+                DescribeConvert3DFormatJobOutcome DescribeConvert3DFormatJob(const Model::DescribeConvert3DFormatJobRequest &request);
+                void DescribeConvert3DFormatJobAsync(const Model::DescribeConvert3DFormatJobRequest& request, const DescribeConvert3DFormatJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeConvert3DFormatJobOutcomeCallable DescribeConvert3DFormatJobCallable(const Model::DescribeConvert3DFormatJobRequest& request);
 
                 /**
                  *Query component splitting tasks.
@@ -199,6 +218,15 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 Submit3DSmartTopologyJobOutcome Submit3DSmartTopologyJob(const Model::Submit3DSmartTopologyJobRequest &request);
                 void Submit3DSmartTopologyJobAsync(const Model::Submit3DSmartTopologyJobRequest& request, const Submit3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 Submit3DSmartTopologyJobOutcomeCallable Submit3DSmartTopologyJobCallable(const Model::Submit3DSmartTopologyJobRequest& request);
+
+                /**
+                 *After inputting the 3D model file, the system will automatically convert it to the required format. The maximum supported file size is 200MB.
+                 * @param req SubmitConvert3DFormatJobRequest
+                 * @return SubmitConvert3DFormatJobOutcome
+                 */
+                SubmitConvert3DFormatJobOutcome SubmitConvert3DFormatJob(const Model::SubmitConvert3DFormatJobRequest &request);
+                void SubmitConvert3DFormatJobAsync(const Model::SubmitConvert3DFormatJobRequest& request, const SubmitConvert3DFormatJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitConvert3DFormatJobOutcomeCallable SubmitConvert3DFormatJobCallable(const Model::SubmitConvert3DFormatJobRequest& request);
 
                 /**
                  *This API is used to automatically perform component identification and generation based on the model structure after inputting a 3D model file.

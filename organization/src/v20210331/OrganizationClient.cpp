@@ -4540,6 +4540,56 @@ OrganizationClient::ListPermissionPoliciesInRoleConfigurationOutcomeCallable Org
     return prom->get_future();
 }
 
+OrganizationClient::ListPoliciesOutcome OrganizationClient::ListPolicies(const ListPoliciesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListPolicies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListPoliciesResponse rsp = ListPoliciesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListPoliciesOutcome(rsp);
+        else
+            return ListPoliciesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListPoliciesOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::ListPoliciesAsync(const ListPoliciesRequest& request, const ListPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListPoliciesRequest&;
+    using Resp = ListPoliciesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListPolicies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OrganizationClient::ListPoliciesOutcomeCallable OrganizationClient::ListPoliciesCallable(const ListPoliciesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListPoliciesOutcome>>();
+    ListPoliciesAsync(
+    request,
+    [prom](
+        const OrganizationClient*,
+        const ListPoliciesRequest&,
+        ListPoliciesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OrganizationClient::ListPoliciesForTargetOutcome OrganizationClient::ListPoliciesForTarget(const ListPoliciesForTargetRequest &request)
 {
     auto outcome = MakeRequest(request, "ListPoliciesForTarget");

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of records per page. The default is 20, and the maximum is 1,000.
-                     * @return Limit The number of records per page. The default is 20, and the maximum is 1,000.
+                     * 获取<p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+                     * @return Limit <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of records per page. The default is 20, and the maximum is 1,000.
-                     * @param _limit The number of records per page. The default is 20, and the maximum is 1,000.
+                     * 设置<p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+                     * @param _limit <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The page number the records start from. The default is 1.
-                     * @return Offset The page number the records start from. The default is 1.
+                     * 获取<p>Page number, starts from 1 by default</p>
+                     * @return Offset <p>Page number, starts from 1 by default</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page number the records start from. The default is 1.
-                     * @param _offset The page number the records start from. The default is 1.
+                     * 设置<p>Page number, starts from 1 by default</p>
+                     * @param _offset <p>Page number, starts from 1 by default</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
-                     * @return Status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+                     * 获取<p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+                     * @return Status <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
-                     * @param _status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+                     * 设置<p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+                     * @param _status <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The voucher ID.
-                     * @return VoucherId The voucher ID.
+                     * 获取<p>Voucher id</p>
+                     * @return VoucherId <p>Voucher id</p>
                      * 
                      */
                     std::string GetVoucherId() const;
 
                     /**
-                     * 设置The voucher ID.
-                     * @param _voucherId The voucher ID.
+                     * 设置<p>Voucher id</p>
+                     * @param _voucherId <p>Voucher id</p>
                      * 
                      */
                     void SetVoucherId(const std::string& _voucherId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VoucherIdHasBeenSet() const;
 
                     /**
-                     * 获取The voucher order ID.
-                     * @return CodeId The voucher order ID.
+                     * 获取<p>Voucher order id</p>
+                     * @return CodeId <p>Voucher order id</p>
                      * 
                      */
                     std::string GetCodeId() const;
 
                     /**
-                     * 设置The voucher order ID.
-                     * @param _codeId The voucher order ID.
+                     * 设置<p>Voucher order id</p>
+                     * @param _codeId <p>Voucher order id</p>
                      * 
                      */
                     void SetCodeId(const std::string& _codeId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool CodeIdHasBeenSet() const;
 
                     /**
-                     * 获取The product code.
-                     * @return ProductCode The product code.
+                     * 获取<p>product code</p>
+                     * @return ProductCode <p>product code</p>
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置The product code.
-                     * @param _productCode The product code.
+                     * 设置<p>product code</p>
+                     * @param _productCode <p>product code</p>
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取The campaign ID.
-                     * @return ActivityId The campaign ID.
+                     * 获取<p>Activity id</p>
+                     * @return ActivityId <p>Activity id</p>
                      * 
                      */
                     std::string GetActivityId() const;
 
                     /**
-                     * 设置The campaign ID.
-                     * @param _activityId The campaign ID.
+                     * 设置<p>Activity id</p>
+                     * @param _activityId <p>Activity id</p>
                      * 
                      */
                     void SetActivityId(const std::string& _activityId);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool ActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取The voucher name.
-                     * @return VoucherName The voucher name.
+                     * 获取<p>Voucher name</p>
+                     * @return VoucherName <p>Voucher name</p>
                      * 
                      */
                     std::string GetVoucherName() const;
 
                     /**
-                     * 设置The voucher name.
-                     * @param _voucherName The voucher name.
+                     * 设置<p>Voucher name</p>
+                     * @param _voucherName <p>Voucher name</p>
                      * 
                      */
                     void SetVoucherName(const std::string& _voucherName);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool VoucherNameHasBeenSet() const;
 
                     /**
-                     * 获取The start date of the voucher issuance, such as `2021-01-01`.
-                     * @return TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
+                     * 获取<p>Start time of delivery. Example: 2021-01-01</p>
+                     * @return TimeFrom <p>Start time of delivery. Example: 2021-01-01</p>
                      * 
                      */
                     std::string GetTimeFrom() const;
 
                     /**
-                     * 设置The start date of the voucher issuance, such as `2021-01-01`.
-                     * @param _timeFrom The start date of the voucher issuance, such as `2021-01-01`.
+                     * 设置<p>Start time of delivery. Example: 2021-01-01</p>
+                     * @param _timeFrom <p>Start time of delivery. Example: 2021-01-01</p>
                      * 
                      */
                     void SetTimeFrom(const std::string& _timeFrom);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool TimeFromHasBeenSet() const;
 
                     /**
-                     * 获取The end date of the voucher issuance, such as `2021-01-01`.
-                     * @return TimeTo The end date of the voucher issuance, such as `2021-01-01`.
+                     * 获取<p>Delivery end time. Example: 2021-01-01</p>
+                     * @return TimeTo <p>Delivery end time. Example: 2021-01-01</p>
                      * 
                      */
                     std::string GetTimeTo() const;
 
                     /**
-                     * 设置The end date of the voucher issuance, such as `2021-01-01`.
-                     * @param _timeTo The end date of the voucher issuance, such as `2021-01-01`.
+                     * 设置<p>Delivery end time. Example: 2021-01-01</p>
+                     * @param _timeTo <p>Delivery end time. Example: 2021-01-01</p>
                      * 
                      */
                     void SetTimeTo(const std::string& _timeTo);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool TimeToHasBeenSet() const;
 
                     /**
-                     * 获取The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
-                     * @return SortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+                     * 获取<p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+                     * @return SortField <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
                      * 
                      */
                     std::string GetSortField() const;
 
                     /**
-                     * 设置The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
-                     * @param _sortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+                     * 设置<p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+                     * @param _sortField <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
                      * 
                      */
                     void SetSortField(const std::string& _sortField);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool SortFieldHasBeenSet() const;
 
                     /**
-                     * 获取Whether to sort the records in ascending or descending order. Valid values: desc, asc.
-                     * @return SortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+                     * 获取<p>Specify ascending/descending order: desc, asc</p>
+                     * @return SortOrder <p>Specify ascending/descending order: desc, asc</p>
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置Whether to sort the records in ascending or descending order. Valid values: desc, asc.
-                     * @param _sortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+                     * 设置<p>Specify ascending/descending order: desc, asc</p>
+                     * @param _sortOrder <p>Specify ascending/descending order: desc, asc</p>
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -295,15 +295,15 @@ namespace TencentCloud
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
-                     * @return PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+                     * 获取<p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+                     * @return PayMode <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
-                     * @param _payMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+                     * 设置<p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+                     * @param _payMode <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -316,15 +316,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
-                     * @return PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+                     * 获取<p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+                     * @return PayScene <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
                      * 
                      */
                     std::string GetPayScene() const;
 
                     /**
-                     * 设置If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
-                     * @param _payScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+                     * 设置<p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+                     * @param _payScene <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
                      * 
                      */
                     void SetPayScene(const std::string& _payScene);
@@ -337,15 +337,15 @@ namespace TencentCloud
                     bool PaySceneHasBeenSet() const;
 
                     /**
-                     * 获取The operator. The default is the UIN of the current user.
-                     * @return Operator The operator. The default is the UIN of the current user.
+                     * 获取<p>Operator is used by default as user uin</p>
+                     * @return Operator <p>Operator is used by default as user uin</p>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置The operator. The default is the UIN of the current user.
-                     * @param _operator The operator. The default is the UIN of the current user.
+                     * 设置<p>Operator is used by default as user uin</p>
+                     * @param _operator <p>Operator is used by default as user uin</p>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -358,15 +358,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
-                     * @return VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * 获取<p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+                     * @return VoucherMainType <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
                      * 
                      */
                     std::string GetVoucherMainType() const;
 
                     /**
-                     * 设置The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
-                     * @param _voucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * 设置<p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+                     * @param _voucherMainType <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
                      * 
                      */
                     void SetVoucherMainType(const std::string& _voucherMainType);
@@ -379,15 +379,15 @@ namespace TencentCloud
                     bool VoucherMainTypeHasBeenSet() const;
 
                     /**
-                     * 获取Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
-                     * @return VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * 获取<p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+                     * @return VoucherSubType <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
                      * 
                      */
                     std::string GetVoucherSubType() const;
 
                     /**
-                     * 设置Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
-                     * @param _voucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * 设置<p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+                     * @param _voucherSubType <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
                      * 
                      */
                     void SetVoucherSubType(const std::string& _voucherSubType);
@@ -399,109 +399,298 @@ namespace TencentCloud
                      */
                     bool VoucherSubTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Voucher validity start time</p>
+                     * @return StartTimeFrom <p>Voucher validity start time</p>
+                     * 
+                     */
+                    std::string GetStartTimeFrom() const;
+
+                    /**
+                     * 设置<p>Voucher validity start time</p>
+                     * @param _startTimeFrom <p>Voucher validity start time</p>
+                     * 
+                     */
+                    void SetStartTimeFrom(const std::string& _startTimeFrom);
+
+                    /**
+                     * 判断参数 StartTimeFrom 是否已赋值
+                     * @return StartTimeFrom 是否已赋值
+                     * 
+                     */
+                    bool StartTimeFromHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voucher validity time end time</p>
+                     * @return StartTimeTo <p>Voucher validity time end time</p>
+                     * 
+                     */
+                    std::string GetStartTimeTo() const;
+
+                    /**
+                     * 设置<p>Voucher validity time end time</p>
+                     * @param _startTimeTo <p>Voucher validity time end time</p>
+                     * 
+                     */
+                    void SetStartTimeTo(const std::string& _startTimeTo);
+
+                    /**
+                     * 判断参数 StartTimeTo 是否已赋值
+                     * @return StartTimeTo 是否已赋值
+                     * 
+                     */
+                    bool StartTimeToHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voucher expiration time start time</p>
+                     * @return EndTimeFrom <p>Voucher expiration time start time</p>
+                     * 
+                     */
+                    std::string GetEndTimeFrom() const;
+
+                    /**
+                     * 设置<p>Voucher expiration time start time</p>
+                     * @param _endTimeFrom <p>Voucher expiration time start time</p>
+                     * 
+                     */
+                    void SetEndTimeFrom(const std::string& _endTimeFrom);
+
+                    /**
+                     * 判断参数 EndTimeFrom 是否已赋值
+                     * @return EndTimeFrom 是否已赋值
+                     * 
+                     */
+                    bool EndTimeFromHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voucher expiration time end time</p>
+                     * @return EndTimeTo <p>Voucher expiration time end time</p>
+                     * 
+                     */
+                    std::string GetEndTimeTo() const;
+
+                    /**
+                     * 设置<p>Voucher expiration time end time</p>
+                     * @param _endTimeTo <p>Voucher expiration time end time</p>
+                     * 
+                     */
+                    void SetEndTimeTo(const std::string& _endTimeTo);
+
+                    /**
+                     * 判断参数 EndTimeTo 是否已赋值
+                     * @return EndTimeTo 是否已赋值
+                     * 
+                     */
+                    bool EndTimeToHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voucher issuance start time</p>
+                     * @return CreateTimeFrom <p>Voucher issuance start time</p>
+                     * 
+                     */
+                    std::string GetCreateTimeFrom() const;
+
+                    /**
+                     * 设置<p>Voucher issuance start time</p>
+                     * @param _createTimeFrom <p>Voucher issuance start time</p>
+                     * 
+                     */
+                    void SetCreateTimeFrom(const std::string& _createTimeFrom);
+
+                    /**
+                     * 判断参数 CreateTimeFrom 是否已赋值
+                     * @return CreateTimeFrom 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeFromHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voucher issuance time end time</p>
+                     * @return CreateTimeTo <p>Voucher issuance time end time</p>
+                     * 
+                     */
+                    std::string GetCreateTimeTo() const;
+
+                    /**
+                     * 设置<p>Voucher issuance time end time</p>
+                     * @param _createTimeTo <p>Voucher issuance time end time</p>
+                     * 
+                     */
+                    void SetCreateTimeTo(const std::string& _createTimeTo);
+
+                    /**
+                     * 判断参数 CreateTimeTo 是否已赋值
+                     * @return CreateTimeTo 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeToHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+                     * @return Lang <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+                     * 
+                     */
+                    std::string GetLang() const;
+
+                    /**
+                     * 设置<p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+                     * @param _lang <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+                     * 
+                     */
+                    void SetLang(const std::string& _lang);
+
+                    /**
+                     * 判断参数 Lang 是否已赋值
+                     * @return Lang 是否已赋值
+                     * 
+                     */
+                    bool LangHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The number of records per page. The default is 20, and the maximum is 1,000.
+                     * <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The page number the records start from. The default is 1.
+                     * <p>Page number, starts from 1 by default</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+                     * <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The voucher ID.
+                     * <p>Voucher id</p>
                      */
                     std::string m_voucherId;
                     bool m_voucherIdHasBeenSet;
 
                     /**
-                     * The voucher order ID.
+                     * <p>Voucher order id</p>
                      */
                     std::string m_codeId;
                     bool m_codeIdHasBeenSet;
 
                     /**
-                     * The product code.
+                     * <p>product code</p>
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * The campaign ID.
+                     * <p>Activity id</p>
                      */
                     std::string m_activityId;
                     bool m_activityIdHasBeenSet;
 
                     /**
-                     * The voucher name.
+                     * <p>Voucher name</p>
                      */
                     std::string m_voucherName;
                     bool m_voucherNameHasBeenSet;
 
                     /**
-                     * The start date of the voucher issuance, such as `2021-01-01`.
+                     * <p>Start time of delivery. Example: 2021-01-01</p>
                      */
                     std::string m_timeFrom;
                     bool m_timeFromHasBeenSet;
 
                     /**
-                     * The end date of the voucher issuance, such as `2021-01-01`.
+                     * <p>Delivery end time. Example: 2021-01-01</p>
                      */
                     std::string m_timeTo;
                     bool m_timeToHasBeenSet;
 
                     /**
-                     * The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+                     * <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
                      */
                     std::string m_sortField;
                     bool m_sortFieldHasBeenSet;
 
                     /**
-                     * Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+                     * <p>Specify ascending/descending order: desc, asc</p>
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+                     * <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+                     * <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
                      */
                     std::string m_payScene;
                     bool m_paySceneHasBeenSet;
 
                     /**
-                     * The operator. The default is the UIN of the current user.
+                     * <p>Operator is used by default as user uin</p>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
                      */
                     std::string m_voucherMainType;
                     bool m_voucherMainTypeHasBeenSet;
 
                     /**
-                     * Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
                      */
                     std::string m_voucherSubType;
                     bool m_voucherSubTypeHasBeenSet;
+
+                    /**
+                     * <p>Voucher validity start time</p>
+                     */
+                    std::string m_startTimeFrom;
+                    bool m_startTimeFromHasBeenSet;
+
+                    /**
+                     * <p>Voucher validity time end time</p>
+                     */
+                    std::string m_startTimeTo;
+                    bool m_startTimeToHasBeenSet;
+
+                    /**
+                     * <p>Voucher expiration time start time</p>
+                     */
+                    std::string m_endTimeFrom;
+                    bool m_endTimeFromHasBeenSet;
+
+                    /**
+                     * <p>Voucher expiration time end time</p>
+                     */
+                    std::string m_endTimeTo;
+                    bool m_endTimeToHasBeenSet;
+
+                    /**
+                     * <p>Voucher issuance start time</p>
+                     */
+                    std::string m_createTimeFrom;
+                    bool m_createTimeFromHasBeenSet;
+
+                    /**
+                     * <p>Voucher issuance time end time</p>
+                     */
+                    std::string m_createTimeTo;
+                    bool m_createTimeToHasBeenSet;
+
+                    /**
+                     * <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+                     */
+                    std::string m_lang;
+                    bool m_langHasBeenSet;
 
                 };
             }

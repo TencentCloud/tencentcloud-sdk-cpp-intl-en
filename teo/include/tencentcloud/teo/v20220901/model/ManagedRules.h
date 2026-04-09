@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/ManagedRuleAutoUpdate.h>
 #include <tencentcloud/teo/v20220901/model/ManagedRuleGroup.h>
+#include <tencentcloud/teo/v20220901/model/FrequentScanningProtection.h>
 
 
 namespace TencentCloud
@@ -153,6 +154,27 @@ namespace TencentCloud
                      */
                     bool ManagedRuleGroupsHasBeenSet() const;
 
+                    /**
+                     * 获取High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * @return FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * 
+                     */
+                    FrequentScanningProtection GetFrequentScanningProtection() const;
+
+                    /**
+                     * 设置High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * @param _frequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * 
+                     */
+                    void SetFrequentScanningProtection(const FrequentScanningProtection& _frequentScanningProtection);
+
+                    /**
+                     * 判断参数 FrequentScanningProtection 是否已赋值
+                     * @return FrequentScanningProtection 是否已赋值
+                     * 
+                     */
+                    bool FrequentScanningProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -184,6 +206,12 @@ namespace TencentCloud
                      */
                     std::vector<ManagedRuleGroup> m_managedRuleGroups;
                     bool m_managedRuleGroupsHasBeenSet;
+
+                    /**
+                     * High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     */
+                    FrequentScanningProtection m_frequentScanningProtection;
+                    bool m_frequentScanningProtectionHasBeenSet;
 
                 };
             }

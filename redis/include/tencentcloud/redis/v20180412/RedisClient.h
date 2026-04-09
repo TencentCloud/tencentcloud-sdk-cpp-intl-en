@@ -191,6 +191,8 @@
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceAvailabilityZonesResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceBackupModeRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceBackupModeResponse.h>
+#include <tencentcloud/redis/v20180412/model/ModifyInstanceChargeTypeRequest.h>
+#include <tencentcloud/redis/v20180412/model/ModifyInstanceChargeTypeResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceEventRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceEventResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceLogDeliveryRequest.h>
@@ -507,6 +509,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstanceBackupModeResponse> ModifyInstanceBackupModeOutcome;
                 typedef std::future<ModifyInstanceBackupModeOutcome> ModifyInstanceBackupModeOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyInstanceBackupModeRequest&, ModifyInstanceBackupModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceBackupModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceChargeTypeResponse> ModifyInstanceChargeTypeOutcome;
+                typedef std::future<ModifyInstanceChargeTypeOutcome> ModifyInstanceChargeTypeOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::ModifyInstanceChargeTypeRequest&, ModifyInstanceChargeTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceChargeTypeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceEventResponse> ModifyInstanceEventOutcome;
                 typedef std::future<ModifyInstanceEventOutcome> ModifyInstanceEventOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyInstanceEventRequest&, ModifyInstanceEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceEventAsyncHandler;
@@ -1340,6 +1345,15 @@ namespace TencentCloud
                 ModifyInstanceBackupModeOutcome ModifyInstanceBackupMode(const Model::ModifyInstanceBackupModeRequest &request);
                 void ModifyInstanceBackupModeAsync(const Model::ModifyInstanceBackupModeRequest& request, const ModifyInstanceBackupModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstanceBackupModeOutcomeCallable ModifyInstanceBackupModeCallable(const Model::ModifyInstanceBackupModeRequest& request);
+
+                /**
+                 *This API is used to change the billing type of an instance.
+                 * @param req ModifyInstanceChargeTypeRequest
+                 * @return ModifyInstanceChargeTypeOutcome
+                 */
+                ModifyInstanceChargeTypeOutcome ModifyInstanceChargeType(const Model::ModifyInstanceChargeTypeRequest &request);
+                void ModifyInstanceChargeTypeAsync(const Model::ModifyInstanceChargeTypeRequest& request, const ModifyInstanceChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceChargeTypeOutcomeCallable ModifyInstanceChargeTypeCallable(const Model::ModifyInstanceChargeTypeRequest& request);
 
                 /**
                  *This API is used to modify the operations event execution schedule of an instance.

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of vouchers.
-                     * @return TotalCount The total number of vouchers.
+                     * 获取<p>Total count</p>
+                     * @return TotalCount <p>Total count</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
-                     * @return TotalBalance The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * 获取<p>Total balance (differential)</p>
+                     * @return TotalBalance <p>Total balance (differential)</p>
                      * 
                      */
                     int64_t GetTotalBalance() const;
@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool TotalBalanceHasBeenSet() const;
 
                     /**
-                     * 获取The voucher information.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return VoucherInfos The voucher information.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Voucher information related to</p>
+                     * @return VoucherInfos <p>Voucher information related to</p>
                      * 
                      */
                     std::vector<VoucherInfos> GetVoucherInfos() const;
@@ -88,26 +86,45 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool VoucherInfosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Unit of the amount field in the API response</p><p>Default value: micro</p><p>Currency unit: micro (microcent)<br>Voucher issuance and use are processed with 8-digit high-precision, so the currency unit defaults to micro (microcent). If CNY or USD is needed, convert using the following formula:<br>CNY: 1 micro = 0.00000001  yuan<br>USD: 1 micro = 0.00000001  USD</p>
+                     * @return Unit <p>Unit of the amount field in the API response</p><p>Default value: micro</p><p>Currency unit: micro (microcent)<br>Voucher issuance and use are processed with 8-digit high-precision, so the currency unit defaults to micro (microcent). If CNY or USD is needed, convert using the following formula:<br>CNY: 1 micro = 0.00000001  yuan<br>USD: 1 micro = 0.00000001  USD</p>
+                     * 
+                     */
+                    std::string GetUnit() const;
+
+                    /**
+                     * 判断参数 Unit 是否已赋值
+                     * @return Unit 是否已赋值
+                     * 
+                     */
+                    bool UnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The total number of vouchers.
+                     * <p>Total count</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * <p>Total balance (differential)</p>
                      */
                     int64_t m_totalBalance;
                     bool m_totalBalanceHasBeenSet;
 
                     /**
-                     * The voucher information.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Voucher information related to</p>
                      */
                     std::vector<VoucherInfos> m_voucherInfos;
                     bool m_voucherInfosHasBeenSet;
+
+                    /**
+                     * <p>Unit of the amount field in the API response</p><p>Default value: micro</p><p>Currency unit: micro (microcent)<br>Voucher issuance and use are processed with 8-digit high-precision, so the currency unit defaults to micro (microcent). If CNY or USD is needed, convert using the following formula:<br>CNY: 1 micro = 0.00000001  yuan<br>USD: 1 micro = 0.00000001  USD</p>
+                     */
+                    std::string m_unit;
+                    bool m_unitHasBeenSet;
 
                 };
             }

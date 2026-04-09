@@ -30,6 +30,7 @@
 #include <tencentcloud/teo/v20220901/model/RateLimitingRules.h>
 #include <tencentcloud/teo/v20220901/model/ExceptionRules.h>
 #include <tencentcloud/teo/v20220901/model/BotManagement.h>
+#include <tencentcloud/teo/v20220901/model/BotManagementLite.h>
 
 
 namespace TencentCloud
@@ -186,6 +187,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool BotManagementHasBeenSet() const;
 
+                    /**
+                     * 获取Basic Bot management configuration.
+                     * @return BotManagementLite Basic Bot management configuration.
+                     * 
+                     */
+                    BotManagementLite GetBotManagementLite() const;
+
+                    /**
+                     * 设置Basic Bot management configuration.
+                     * @param _botManagementLite Basic Bot management configuration.
+                     * 
+                     */
+                    void SetBotManagementLite(const BotManagementLite& _botManagementLite);
+
+                    /**
+                     * 判断参数 BotManagementLite 是否已赋值
+                     * @return BotManagementLite 是否已赋值
+                     * 
+                     */
+                    bool BotManagementLiteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -225,6 +247,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     BotManagement m_botManagement;
                     bool m_botManagementHasBeenSet;
+
+                    /**
+                     * Basic Bot management configuration.
+                     */
+                    BotManagementLite m_botManagementLite;
+                    bool m_botManagementLiteHasBeenSet;
 
                 };
             }

@@ -238,19 +238,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ApplicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Product information applies to
+                     * @return ApplicableProducts Product information applies to
                      * 
                      */
                     ApplicableProducts GetApplicableProducts() const;
 
                     /**
-                     * 设置The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _applicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Product information applies to
+                     * @param _applicableProducts Product information applies to
                      * 
                      */
                     void SetApplicableProducts(const ApplicableProducts& _applicableProducts);
@@ -263,19 +259,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ApplicableProductsHasBeenSet() const;
 
                     /**
-                     * 获取The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ExcludedProducts The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Product information not applicable
+                     * @return ExcludedProducts Product information not applicable
                      * 
                      */
                     std::vector<ExcludedProducts> GetExcludedProducts() const;
 
                     /**
-                     * 设置The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _excludedProducts The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Product information not applicable
+                     * @param _excludedProducts Product information not applicable
                      * 
                      */
                     void SetExcludedProducts(const std::vector<ExcludedProducts>& _excludedProducts);
@@ -286,6 +278,48 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool ExcludedProductsHasBeenSet() const;
+
+                    /**
+                     * 获取Instructions/Batch Remarks
+                     * @return PolicyRemark Instructions/Batch Remarks
+                     * 
+                     */
+                    std::string GetPolicyRemark() const;
+
+                    /**
+                     * 设置Instructions/Batch Remarks
+                     * @param _policyRemark Instructions/Batch Remarks
+                     * 
+                     */
+                    void SetPolicyRemark(const std::string& _policyRemark);
+
+                    /**
+                     * 判断参数 PolicyRemark 是否已赋值
+                     * @return PolicyRemark 是否已赋值
+                     * 
+                     */
+                    bool PolicyRemarkHasBeenSet() const;
+
+                    /**
+                     * 获取Coupon issuance time
+                     * @return CreateTime Coupon issuance time
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Coupon issuance time
+                     * @param _createTime Coupon issuance time
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
 
                 private:
 
@@ -344,18 +378,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Product information applies to
                      */
                     ApplicableProducts m_applicableProducts;
                     bool m_applicableProductsHasBeenSet;
 
                     /**
-                     * The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Product information not applicable
                      */
                     std::vector<ExcludedProducts> m_excludedProducts;
                     bool m_excludedProductsHasBeenSet;
+
+                    /**
+                     * Instructions/Batch Remarks
+                     */
+                    std::string m_policyRemark;
+                    bool m_policyRemarkHasBeenSet;
+
+                    /**
+                     * Coupon issuance time
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                 };
             }

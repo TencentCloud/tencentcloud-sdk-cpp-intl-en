@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Minimum minimum body transfer rate threshold configuration. ```.
+                * Minimum minimum body transfer rate threshold configuration.
                 */
                 class MinimalRequestBodyTransferRate : public AbstractModel
                 {
