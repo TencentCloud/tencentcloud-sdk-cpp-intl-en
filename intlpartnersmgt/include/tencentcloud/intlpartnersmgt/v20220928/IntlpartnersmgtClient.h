@@ -63,6 +63,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherListResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherUsageDetailsRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherUsageDetailsResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNRequest.h>
@@ -181,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerVoucherListResponse> DescribeCustomerVoucherListOutcome;
                 typedef std::future<DescribeCustomerVoucherListOutcome> DescribeCustomerVoucherListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerVoucherListRequest&, DescribeCustomerVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerVoucherListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerVoucherUsageDetailsResponse> DescribeCustomerVoucherUsageDetailsOutcome;
+                typedef std::future<DescribeCustomerVoucherUsageDetailsOutcome> DescribeCustomerVoucherUsageDetailsOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerVoucherUsageDetailsRequest&, DescribeCustomerVoucherUsageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerVoucherUsageDetailsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRebateDownloadUrlResponse> DescribeRebateDownloadUrlOutcome;
                 typedef std::future<DescribeRebateDownloadUrlOutcome> DescribeRebateDownloadUrlOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeRebateDownloadUrlRequest&, DescribeRebateDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRebateDownloadUrlAsyncHandler;
@@ -464,6 +469,16 @@ Callable roles: Reseller, Second-level Reseller or Distributor.
                 DescribeCustomerVoucherListOutcome DescribeCustomerVoucherList(const Model::DescribeCustomerVoucherListRequest &request);
                 void DescribeCustomerVoucherListAsync(const Model::DescribeCustomerVoucherListRequest& request, const DescribeCustomerVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerVoucherListOutcomeCallable DescribeCustomerVoucherListCallable(const Model::DescribeCustomerVoucherListRequest& request);
+
+                /**
+                 *Description: The current API is used to query the usage details of reseller's customer vouchers by Reseller, Second-level Reseller or Distributor.
+Reseller, Second-level Reseller or Distributor can call this API.
+                 * @param req DescribeCustomerVoucherUsageDetailsRequest
+                 * @return DescribeCustomerVoucherUsageDetailsOutcome
+                 */
+                DescribeCustomerVoucherUsageDetailsOutcome DescribeCustomerVoucherUsageDetails(const Model::DescribeCustomerVoucherUsageDetailsRequest &request);
+                void DescribeCustomerVoucherUsageDetailsAsync(const Model::DescribeCustomerVoucherUsageDetailsRequest& request, const DescribeCustomerVoucherUsageDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerVoucherUsageDetailsOutcomeCallable DescribeCustomerVoucherUsageDetailsCallable(const Model::DescribeCustomerVoucherUsageDetailsRequest& request);
 
                 /**
                  *This API is used to download the commission bill file by resellers/agents. The file URL is returned.
