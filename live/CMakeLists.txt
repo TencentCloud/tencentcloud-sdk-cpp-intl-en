@@ -68,12 +68,14 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DeleteLivePullStreamTaskRequest.h
   include/tencentcloud/live/v20180801/model/CreateLiveTimeShiftRuleRequest.h
   include/tencentcloud/live/v20180801/model/CommonMixOutputParams.h
+  include/tencentcloud/live/v20180801/model/DescribePushBandwidthAndFluxListResponse.h
   include/tencentcloud/live/v20180801/model/DescribeUploadStreamNumsRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveSnapshotRulesResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveTranscodeDetailInfoResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveDomainRequest.h
   include/tencentcloud/live/v20180801/model/AuthenticateDomainOwnerResponse.h
   include/tencentcloud/live/v20180801/model/DeleteLiveTranscodeRuleRequest.h
+  include/tencentcloud/live/v20180801/model/DescribePushBandwidthAndFluxListRequest.h
   include/tencentcloud/live/v20180801/model/CreateLiveRecordRuleRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveSnapshotTemplatesRequest.h
   include/tencentcloud/live/v20180801/model/AddLiveWatermarkResponse.h
@@ -373,12 +375,14 @@ set(live_src
   src/v20180801/model/DeleteLivePullStreamTaskRequest.cpp
   src/v20180801/model/CreateLiveTimeShiftRuleRequest.cpp
   src/v20180801/model/CommonMixOutputParams.cpp
+  src/v20180801/model/DescribePushBandwidthAndFluxListResponse.cpp
   src/v20180801/model/DescribeUploadStreamNumsRequest.cpp
   src/v20180801/model/DescribeLiveSnapshotRulesResponse.cpp
   src/v20180801/model/DescribeLiveTranscodeDetailInfoResponse.cpp
   src/v20180801/model/DescribeLiveDomainRequest.cpp
   src/v20180801/model/AuthenticateDomainOwnerResponse.cpp
   src/v20180801/model/DeleteLiveTranscodeRuleRequest.cpp
+  src/v20180801/model/DescribePushBandwidthAndFluxListRequest.cpp
   src/v20180801/model/CreateLiveRecordRuleRequest.cpp
   src/v20180801/model/DescribeLiveSnapshotTemplatesRequest.cpp
   src/v20180801/model/AddLiveWatermarkResponse.cpp

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return DBInstanceId Instance ID.
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _dBInstanceId Instance ID.
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Validity period of a URL, which is 12 hours by default.
-                     * @return URLExpireTime Validity period of a URL, which is 12 hours by default.
+                     * 获取Validity time of the connection. value range: [0,36]. default value: 12 hours.
+                     * @return URLExpireTime Validity time of the connection. value range: [0,36]. default value: 12 hours.
                      * 
                      */
                     uint64_t GetURLExpireTime() const;
 
                     /**
-                     * 设置Validity period of a URL, which is 12 hours by default.
-                     * @param _uRLExpireTime Validity period of a URL, which is 12 hours by default.
+                     * 设置Validity time of the connection. value range: [0,36]. default value: 12 hours.
+                     * @param _uRLExpireTime Validity time of the connection. value range: [0,36]. default value: 12 hours.
                      * 
                      */
                     void SetURLExpireTime(const uint64_t& _uRLExpireTime);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Validity period of a URL, which is 12 hours by default.
+                     * Validity time of the connection. value range: [0,36]. default value: 12 hours.
                      */
                     uint64_t m_uRLExpireTime;
                     bool m_uRLExpireTimeHasBeenSet;

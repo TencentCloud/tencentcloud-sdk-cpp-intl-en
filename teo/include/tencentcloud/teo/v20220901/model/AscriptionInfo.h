@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Host record.
-                     * @return Subdomain Host record.
+                     * 获取
+                     * @return Subdomain 
                      * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
-                     * 设置Host record.
-                     * @param _subdomain Host record.
+                     * 设置
+                     * @param _subdomain 
                      * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Host record.
+                     * 
                      */
                     std::string m_subdomain;
                     bool m_subdomainHasBeenSet;

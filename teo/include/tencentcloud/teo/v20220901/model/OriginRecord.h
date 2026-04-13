@@ -123,19 +123,19 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取[Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置[Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -225,8 +225,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Published price in US Cent
-                     * @return OriginalPrice Published price in US Cent
+                     * 获取<p>List price, in cents.</p>
+                     * @return OriginalPrice <p>List price, in cents.</p>
                      * 
                      */
                     uint64_t GetOriginalPrice() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted total amount in US Cent
-                     * @return Price Discounted total amount in US Cent
+                     * 获取<p>Actual payment amount after discount, in cents.</p>
+                     * @return Price <p>Actual payment amount after discount, in cents.</p>
                      * 
                      */
                     uint64_t GetPrice() const;
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Published price in US Cent
+                     * <p>List price, in cents.</p>
                      */
                     uint64_t m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discounted total amount in US Cent
+                     * <p>Actual payment amount after discount, in cents.</p>
                      */
                     uint64_t m_price;
                     bool m_priceHasBeenSet;

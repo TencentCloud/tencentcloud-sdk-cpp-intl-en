@@ -86,12 +86,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
                      * @return Operate Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
                      * 
                      */
@@ -99,12 +99,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
                      * @param _operate Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
                      * 
                      */
@@ -191,8 +191,8 @@ Note: After unbinding, the domain name will use an independent policy and rule q
 
                     /**
                      * Bind or unbind operation option. valid values:.
-<Li>`Bind`: bind the domain name to the policy template.</li>.
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+<Li>bind: bind the domain name to the policy template.</li>
+<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
 <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
                      */
                     std::string m_operate;

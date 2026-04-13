@@ -85,6 +85,55 @@ namespace TencentCloud
                      */
                     bool OriginACLEntitiesHasBeenSet() const;
 
+                    /**
+                     * 获取The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * @return OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * 
+                     */
+                    std::string GetOriginACLFamily() const;
+
+                    /**
+                     * 设置The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * @param _originACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * 
+                     */
+                    void SetOriginACLFamily(const std::string& _originACLFamily);
+
+                    /**
+                     * 判断参数 OriginACLFamily 是否已赋值
+                     * @return OriginACLFamily 是否已赋值
+                     * 
+                     */
+                    bool OriginACLFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -98,6 +147,19 @@ namespace TencentCloud
                      */
                     std::vector<OriginACLEntity> m_originACLEntities;
                     bool m_originACLEntitiesHasBeenSet;
+
+                    /**
+                     * The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     */
+                    std::string m_originACLFamily;
+                    bool m_originACLFamilyHasBeenSet;
 
                 };
             }

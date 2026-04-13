@@ -44,31 +44,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
-                     * @return Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+                     * 获取Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
+                     * @return Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
-                     * @param _type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+                     * 设置Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
+                     * @param _type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -262,11 +266,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
                 private:
 
                     /**
-                     * Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+                     * Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

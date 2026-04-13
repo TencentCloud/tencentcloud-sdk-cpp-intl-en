@@ -47,87 +47,87 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target language for translation. Example: `["en", "ja"]`.
+                     * 获取Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-                     * @return TargetLang Target language for translation. Example: `["en", "ja"]`.
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+                     * @return TargetLang Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
                      * 
                      */
                     std::vector<std::string> GetTargetLang() const;
 
                     /**
-                     * 设置Target language for translation. Example: `["en", "ja"]`.
+                     * 设置Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-                     * @param _targetLang Target language for translation. Example: `["en", "ja"]`.
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+                     * @param _targetLang Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
                      * 
                      */
                     void SetTargetLang(const std::vector<std::string>& _targetLang);
@@ -142,25 +142,25 @@ Supported target languages:
                 private:
 
                     /**
-                     * Target language for translation. Example: `["en", "ja"]`.
+                     * Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
                      */
                     std::vector<std::string> m_targetLang;
                     bool m_targetLangHasBeenSet;

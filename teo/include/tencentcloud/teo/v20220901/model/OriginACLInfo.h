@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The binding relationship between L7 acceleration domains/L4 proxy instances and origin IP ranges, as well as origin IP range details.
+                * The binding relationship between L7 acceleration domains/layer-4 proxy instances and origin IP ranges contains both origin IP range details and a switchable origin IP range list.
                 */
                 class OriginACLInfo : public AbstractModel
                 {
@@ -173,6 +173,27 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Origin protection back-to-origin ACL control domain.
+                     * @return OriginACLFamily Origin protection back-to-origin ACL control domain.
+                     * 
+                     */
+                    std::string GetOriginACLFamily() const;
+
+                    /**
+                     * 设置Origin protection back-to-origin ACL control domain.
+                     * @param _originACLFamily Origin protection back-to-origin ACL control domain.
+                     * 
+                     */
+                    void SetOriginACLFamily(const std::string& _originACLFamily);
+
+                    /**
+                     * 判断参数 OriginACLFamily 是否已赋值
+                     * @return OriginACLFamily 是否已赋值
+                     * 
+                     */
+                    bool OriginACLFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -209,6 +230,12 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Origin protection back-to-origin ACL control domain.
+                     */
+                    std::string m_originACLFamily;
+                    bool m_originACLFamilyHasBeenSet;
 
                 };
             }

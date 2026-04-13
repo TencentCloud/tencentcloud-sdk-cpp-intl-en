@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Backup method, including physical and logical.
-                     * @return BackupMethod Backup method, including physical and logical.
+                     * 获取Specifies the backup method: physical - physical backup, logical - logical backup.
+                     * @return BackupMethod Specifies the backup method: physical - physical backup, logical - logical backup.
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method, including physical and logical.
-                     * @param _backupMethod Backup method, including physical and logical.
+                     * 设置Specifies the backup method: physical - physical backup, logical - logical backup.
+                     * @param _backupMethod Specifies the backup method: physical - physical backup, logical - logical backup.
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode, including automatic and manual.
-                     * @return BackupMode Backup mode, including automatic and manual.
+                     * 获取Backup mode: automatic - automatic backup, manual - manual backup.
+                     * @return BackupMode Backup mode: automatic - automatic backup, manual - manual backup.
                      * 
                      */
                     std::string GetBackupMode() const;
 
                     /**
-                     * 设置Backup mode, including automatic and manual.
-                     * @param _backupMode Backup mode, including automatic and manual.
+                     * 设置Backup mode: automatic - automatic backup, manual - manual backup.
+                     * @param _backupMode Backup mode: automatic - automatic backup, manual - manual backup.
                      * 
                      */
                     void SetBackupMode(const std::string& _backupMode);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool BackupModeHasBeenSet() const;
 
                     /**
-                     * 获取Backup task status
-                     * @return State Backup task status
+                     * 获取Backup task status. valid values: init, running, finished, failed, canceled.
+                     * @return State Backup task status. valid values: init, running, finished, failed, canceled.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Backup task status
-                     * @param _state Backup task status
+                     * 设置Backup task status. valid values: init, running, finished, failed, canceled.
+                     * @param _state Backup task status. valid values: init, running, finished, failed, canceled.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -277,19 +277,19 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Backup method, including physical and logical.
+                     * Specifies the backup method: physical - physical backup, logical - logical backup.
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup mode, including automatic and manual.
+                     * Backup mode: automatic - automatic backup, manual - manual backup.
                      */
                     std::string m_backupMode;
                     bool m_backupModeHasBeenSet;
 
                     /**
-                     * Backup task status
+                     * Backup task status. valid values: init, running, finished, failed, canceled.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;

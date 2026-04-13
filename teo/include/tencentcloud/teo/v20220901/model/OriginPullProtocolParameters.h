@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin HTTPS configuration parameters.
+                * HTTPS origin-pull configuration parameters.
                 */
                 class OriginPullProtocolParameters : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
-                     * @return Protocol Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+                     * 获取Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
+                     * @return Protocol Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
-                     * @param _protocol Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+                     * 设置Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
+                     * @param _protocol Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -82,10 +82,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+                     * Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

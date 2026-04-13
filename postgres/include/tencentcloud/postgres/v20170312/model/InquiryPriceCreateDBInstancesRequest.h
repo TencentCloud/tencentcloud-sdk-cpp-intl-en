@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-                     * @return Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * 获取<p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+                     * @return Zone <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-                     * @param _zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * 设置<p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+                     * @param _zone <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
-                     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+                     * 获取<p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+                     * @return SpecCode <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
-                     * @param _specCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+                     * 设置<p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+                     * @param _specCode <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取Storage capacity size in GB.
-                     * @return Storage Storage capacity size in GB.
+                     * 获取<p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+                     * @return Storage <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
                      * 
                      */
                     uint64_t GetStorage() const;
 
                     /**
-                     * 设置Storage capacity size in GB.
-                     * @param _storage Storage capacity size in GB.
+                     * 设置<p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+                     * @param _storage <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
                      * 
                      */
                     void SetStorage(const uint64_t& _storage);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
-                     * @return InstanceCount Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+                     * 获取<p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
+                     * @return InstanceCount <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
                      * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
-                     * @param _instanceCount Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+                     * 设置<p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
+                     * @param _instanceCount <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
                      * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
-                     * @return Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+                     * 获取<p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
+                     * @return Period <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
-                     * @param _period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+                     * 设置<p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
+                     * @param _period <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取[Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-                     * @return Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * 获取<p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
+                     * @return Pid <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
                      * 
                      */
                     uint64_t GetPid() const;
 
                     /**
-                     * 设置[Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-                     * @param _pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * 设置<p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
+                     * @param _pid <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
                      * 
                      */
                     void SetPid(const uint64_t& _pid);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
-                     * @return InstanceChargeType Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+                     * 获取<p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
+                     * @return InstanceChargeType <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
-                     * @param _instanceChargeType Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+                     * 设置<p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
+                     * @param _instanceChargeType <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -190,23 +190,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
-                     * @return InstanceType Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+                     * 获取<p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
+                     * @return InstanceType <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
-                     * @param _instanceType Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+                     * 设置<p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
+                     * @param _instanceType <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -219,15 +211,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
-                     * @return DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+                     * 获取<p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+                     * @return DBEngine <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
-                     * 设置<p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
-                     * @param _dBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+                     * 设置<p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+                     * @param _dBEngine <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
@@ -239,63 +231,88 @@ namespace TencentCloud
                      */
                     bool DBEngineHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+                     * @return StorageType <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置<p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+                     * @param _storageType <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+                     * <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * Storage capacity size in GB.
+                     * <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
                      */
                     uint64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+                     * <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
                      */
                     uint64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+                     * <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
                      */
                     uint64_t m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+                     * <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+                     * <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+                     * <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
+
+                    /**
+                     * <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

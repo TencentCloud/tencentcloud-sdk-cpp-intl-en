@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/FunctionRuleCondition.h>
+#include <tencentcloud/teo/v20220901/model/FunctionRegionSelection.h>
+#include <tencentcloud/teo/v20220901/model/FunctionWeightedSelection.h>
 
 
 namespace TencentCloud
@@ -90,15 +92,52 @@ namespace TencentCloud
                     bool FunctionRuleConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Function ID, specifying a function executed when a trigger rule condition is met.
-                     * @return FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+                     * 获取Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+                     * @return TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+                     * 
+                     */
+                    std::string GetTriggerType() const;
+
+                    /**
+                     * 设置Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+                     * @param _triggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+                     * 
+                     */
+                    void SetTriggerType(const std::string& _triggerType);
+
+                    /**
+                     * 判断参数 TriggerType 是否已赋值
+                     * @return TriggerType 是否已赋值
+                     * 
+                     */
+                    bool TriggerTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the function ID to be executed. valid only when TriggerType is direct.
+                     * @return FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
                      * 
                      */
                     std::string GetFunctionId() const;
 
                     /**
-                     * 设置Function ID, specifying a function executed when a trigger rule condition is met.
-                     * @param _functionId Function ID, specifying a function executed when a trigger rule condition is met.
+                     * 设置Specifies the function ID to be executed. valid only when TriggerType is direct.
+                     * @param _functionId Specifies the function ID to be executed. valid only when TriggerType is direct.
                      * 
                      */
                     void SetFunctionId(const std::string& _functionId);
@@ -111,36 +150,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule description.
-                     * @return Remark Rule description.
-                     * 
-                     */
-                    std::string GetRemark() const;
-
-                    /**
-                     * 设置Rule description.
-                     * @param _remark Rule description.
-                     * 
-                     */
-                    void SetRemark(const std::string& _remark);
-
-                    /**
-                     * 判断参数 Remark 是否已赋值
-                     * @return Remark 是否已赋值
-                     * 
-                     */
-                    bool RemarkHasBeenSet() const;
-
-                    /**
-                     * 获取Function name.
-                     * @return FunctionName Function name.
+                     * 获取Specifies the name of the function executed.
+                     * @return FunctionName Specifies the name of the function executed.
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Function name.
-                     * @param _functionName Function name.
+                     * 设置Specifies the name of the function executed.
+                     * @param _functionName Specifies the name of the function executed.
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -151,6 +169,48 @@ namespace TencentCloud
                      * 
                      */
                     bool FunctionNameHasBeenSet() const;
+
+                    /**
+                     * 获取Function selection configuration based on client IP country/region.
+                     * @return RegionMappingSelections Function selection configuration based on client IP country/region.
+                     * 
+                     */
+                    std::vector<FunctionRegionSelection> GetRegionMappingSelections() const;
+
+                    /**
+                     * 设置Function selection configuration based on client IP country/region.
+                     * @param _regionMappingSelections Function selection configuration based on client IP country/region.
+                     * 
+                     */
+                    void SetRegionMappingSelections(const std::vector<FunctionRegionSelection>& _regionMappingSelections);
+
+                    /**
+                     * 判断参数 RegionMappingSelections 是否已赋值
+                     * @return RegionMappingSelections 是否已赋值
+                     * 
+                     */
+                    bool RegionMappingSelectionsHasBeenSet() const;
+
+                    /**
+                     * 获取Describes the function selection configuration based on weight.
+                     * @return WeightedSelections Describes the function selection configuration based on weight.
+                     * 
+                     */
+                    std::vector<FunctionWeightedSelection> GetWeightedSelections() const;
+
+                    /**
+                     * 设置Describes the function selection configuration based on weight.
+                     * @param _weightedSelections Describes the function selection configuration based on weight.
+                     * 
+                     */
+                    void SetWeightedSelections(const std::vector<FunctionWeightedSelection>& _weightedSelections);
+
+                    /**
+                     * 判断参数 WeightedSelections 是否已赋值
+                     * @return WeightedSelections 是否已赋值
+                     * 
+                     */
+                    bool WeightedSelectionsHasBeenSet() const;
 
                     /**
                      * 获取Priority of a trigger rule for a function. The larger the value, the higher the priority.
@@ -172,6 +232,27 @@ namespace TencentCloud
                      * 
                      */
                     bool PriorityHasBeenSet() const;
+
+                    /**
+                     * 获取Rule description.
+                     * @return Remark Rule description.
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Rule description.
+                     * @param _remark Rule description.
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
@@ -230,28 +311,50 @@ namespace TencentCloud
                     bool m_functionRuleConditionsHasBeenSet;
 
                     /**
-                     * Function ID, specifying a function executed when a trigger rule condition is met.
+                     * Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+                     */
+                    std::string m_triggerType;
+                    bool m_triggerTypeHasBeenSet;
+
+                    /**
+                     * Specifies the function ID to be executed. valid only when TriggerType is direct.
                      */
                     std::string m_functionId;
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Rule description.
-                     */
-                    std::string m_remark;
-                    bool m_remarkHasBeenSet;
-
-                    /**
-                     * Function name.
+                     * Specifies the name of the function executed.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
+
+                    /**
+                     * Function selection configuration based on client IP country/region.
+                     */
+                    std::vector<FunctionRegionSelection> m_regionMappingSelections;
+                    bool m_regionMappingSelectionsHasBeenSet;
+
+                    /**
+                     * Describes the function selection configuration based on weight.
+                     */
+                    std::vector<FunctionWeightedSelection> m_weightedSelections;
+                    bool m_weightedSelectionsHasBeenSet;
 
                     /**
                      * Priority of a trigger rule for a function. The larger the value, the higher the priority.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
+
+                    /**
+                     * Rule description.
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                     /**
                      * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.

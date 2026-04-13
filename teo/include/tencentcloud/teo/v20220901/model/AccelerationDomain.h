@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/OriginDetail.h>
 #include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
+#include <tencentcloud/teo/v20220901/model/OriginDetail.h>
 #include <tencentcloud/teo/v20220901/model/AccelerationDomainCertificate.h>
 
 
@@ -92,35 +92,35 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
-                     * @return DomainStatus Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+                     * 获取Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
+                     * @return DomainStatus Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
                      * 
                      */
                     std::string GetDomainStatus() const;
 
                     /**
-                     * 设置Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
-                     * @param _domainStatus Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+                     * 设置Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
+                     * @param _domainStatus Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
                      * 
                      */
                     void SetDomainStatus(const std::string& _domainStatus);
@@ -131,6 +131,122 @@ namespace TencentCloud
                      * 
                      */
                     bool DomainStatusHasBeenSet() const;
+
+                    /**
+                     * 获取The CNAME address.
+                     * @return Cname The CNAME address.
+                     * 
+                     */
+                    std::string GetCname() const;
+
+                    /**
+                     * 设置The CNAME address.
+                     * @param _cname The CNAME address.
+                     * 
+                     */
+                    void SetCname(const std::string& _cname);
+
+                    /**
+                     * 判断参数 Cname 是否已赋值
+                     * @return Cname 是否已赋值
+                     * 
+                     */
+                    bool CnameHasBeenSet() const;
+
+                    /**
+                     * 获取IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return IPv6Status IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    std::string GetIPv6Status() const;
+
+                    /**
+                     * 设置IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _iPv6Status IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetIPv6Status(const std::string& _iPv6Status);
+
+                    /**
+                     * 判断参数 IPv6Status 是否已赋值
+                     * @return IPv6Status 是否已赋值
+                     * 
+                     */
+                    bool IPv6StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return IdentificationStatus Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    std::string GetIdentificationStatus() const;
+
+                    /**
+                     * 设置Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _identificationStatus Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetIdentificationStatus(const std::string& _identificationStatus);
+
+                    /**
+                     * 判断参数 IdentificationStatus 是否已赋值
+                     * @return IdentificationStatus 是否已赋值
+                     * 
+                     */
+                    bool IdentificationStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return OwnershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    OwnershipVerification GetOwnershipVerification() const;
+
+                    /**
+                     * 设置Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _ownershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
+
+                    /**
+                     * 判断参数 OwnershipVerification 是否已赋值
+                     * @return OwnershipVerification 是否已赋值
+                     * 
+                     */
+                    bool OwnershipVerificationHasBeenSet() const;
 
                     /**
                      * 获取Details of the origin.
@@ -158,31 +274,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginDetailHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return OriginProtocol Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _originProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _originProtocol Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -195,19 +311,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return HttpOriginPort The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return HttpOriginPort Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     uint64_t GetHttpOriginPort() const;
 
                     /**
-                     * 设置The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _httpOriginPort The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _httpOriginPort Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetHttpOriginPort(const uint64_t& _httpOriginPort);
@@ -220,19 +336,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool HttpOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return HttpsOriginPort The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return HttpsOriginPort Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     uint64_t GetHttpsOriginPort() const;
 
                     /**
-                     * 设置The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _httpsOriginPort The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _httpsOriginPort Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
@@ -245,87 +361,29 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool HttpsOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Certificate Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    std::string GetIPv6Status() const;
+                    AccelerationDomainCertificate GetCertificate() const;
 
                     /**
-                     * 设置IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _iPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _certificate Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    void SetIPv6Status(const std::string& _iPv6Status);
+                    void SetCertificate(const AccelerationDomainCertificate& _certificate);
 
                     /**
-                     * 判断参数 IPv6Status 是否已赋值
-                     * @return IPv6Status 是否已赋值
+                     * 判断参数 Certificate 是否已赋值
+                     * @return Certificate 是否已赋值
                      * 
                      */
-                    bool IPv6StatusHasBeenSet() const;
-
-                    /**
-                     * 获取The CNAME address.
-                     * @return Cname The CNAME address.
-                     * 
-                     */
-                    std::string GetCname() const;
-
-                    /**
-                     * 设置The CNAME address.
-                     * @param _cname The CNAME address.
-                     * 
-                     */
-                    void SetCname(const std::string& _cname);
-
-                    /**
-                     * 判断参数 Cname 是否已赋值
-                     * @return Cname 是否已赋值
-                     * 
-                     */
-                    bool CnameHasBeenSet() const;
-
-                    /**
-                     * 获取Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetIdentificationStatus() const;
-
-                    /**
-                     * 设置Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _identificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetIdentificationStatus(const std::string& _identificationStatus);
-
-                    /**
-                     * 判断参数 IdentificationStatus 是否已赋值
-                     * @return IdentificationStatus 是否已赋值
-                     * 
-                     */
-                    bool IdentificationStatusHasBeenSet() const;
+                    bool CertificateHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the accelerated domain name.
@@ -369,56 +427,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ModifiedOnHasBeenSet() const;
 
-                    /**
-                     * 获取Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OwnershipVerification Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    OwnershipVerification GetOwnershipVerification() const;
-
-                    /**
-                     * 设置Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _ownershipVerification Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
-
-                    /**
-                     * 判断参数 OwnershipVerification 是否已赋值
-                     * @return OwnershipVerification 是否已赋值
-                     * 
-                     */
-                    bool OwnershipVerificationHasBeenSet() const;
-
-                    /**
-                     * 获取Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Certificate Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    AccelerationDomainCertificate GetCertificate() const;
-
-                    /**
-                     * 设置Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _certificate Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetCertificate(const AccelerationDomainCertificate& _certificate);
-
-                    /**
-                     * 判断参数 Certificate 是否已赋值
-                     * @return Certificate 是否已赋值
-                     * 
-                     */
-                    bool CertificateHasBeenSet() const;
-
                 private:
 
                     /**
@@ -434,15 +442,47 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Status of the accelerated domain name. Values:
-<li>`online`: Activated</li>
-<li>`process`: Being deployed</li>
-<li>`offline`: Disabled</li>
-<li>`forbidden`: Blocked</li>
-<li>`init`: Pending activation</li>
+                     * Accelerated domain name status. valid values:.
+<li>online: in effect;</li>.
+<li>process: deployment in progress.</li>.
+<li>offline: disabled;</li>.
+<li>`forbidden`: banned.</li>.
+<li>init: not applied, site to be activated.</li>.
                      */
                     std::string m_domainStatus;
                     bool m_domainStatusHasBeenSet;
+
+                    /**
+                     * The CNAME address.
+                     */
+                    std::string m_cname;
+                    bool m_cnameHasBeenSet;
+
+                    /**
+                     * IPv6 status. valid values:.
+<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
+<li>on: enabled status.</li>.
+<li>off: disabled.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    std::string m_iPv6Status;
+                    bool m_iPv6StatusHasBeenSet;
+
+                    /**
+                     * Acceleration domain ownership verification status. valid values:. 
+<li>pending: to be verified.</li>.
+<li>finished: verified.</li>.	
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    std::string m_identificationStatus;
+                    bool m_identificationStatusHasBeenSet;
+
+                    /**
+                     * Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    OwnershipVerification m_ownershipVerification;
+                    bool m_ownershipVerificationHasBeenSet;
 
                     /**
                      * Details of the origin.
@@ -452,51 +492,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_originDetailHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Origin-Pull protocol. valid values:.
+<Li>FOLLOW: follow protocol.</li>.
+<Li>HTTP: specifies the http protocol for origin-pull.</li>.
+<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * The port used for HTTP origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the HTTP origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     uint64_t m_httpOriginPort;
                     bool m_httpOriginPortHasBeenSet;
 
                     /**
-                     * The port used for HTTPS origin-pull requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the HTTPS origin port.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     uint64_t m_httpsOriginPort;
                     bool m_httpsOriginPortHasBeenSet;
 
                     /**
-                     * IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Accelerates domain name certificate information.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
-                    std::string m_iPv6Status;
-                    bool m_iPv6StatusHasBeenSet;
-
-                    /**
-                     * The CNAME address.
-                     */
-                    std::string m_cname;
-                    bool m_cnameHasBeenSet;
-
-                    /**
-                     * Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_identificationStatus;
-                    bool m_identificationStatusHasBeenSet;
+                    AccelerationDomainCertificate m_certificate;
+                    bool m_certificateHasBeenSet;
 
                     /**
                      * Creation time of the accelerated domain name.
@@ -509,20 +533,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;
-
-                    /**
-                     * Information required to verify the ownership of a domain name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     */
-                    OwnershipVerification m_ownershipVerification;
-                    bool m_ownershipVerificationHasBeenSet;
-
-                    /**
-                     * Domain name certificate information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     */
-                    AccelerationDomainCertificate m_certificate;
-                    bool m_certificateHasBeenSet;
 
                 };
             }

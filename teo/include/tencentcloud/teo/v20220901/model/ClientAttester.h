@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/TCRCEOption.h>
 #include <tencentcloud/teo/v20220901/model/TCCaptchaOption.h>
+#include <tencentcloud/teo/v20220901/model/TCEOCaptchaOption.h>
 
 
 namespace TencentCloud
@@ -120,23 +121,27 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
-                     * @return AttesterSource Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+                     * 获取Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
+                     * @return AttesterSource Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
                      * 
                      */
                     std::string GetAttesterSource() const;
 
                     /**
-                     * 设置Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
-                     * @param _attesterSource Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+                     * 设置Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
+                     * @param _attesterSource Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
                      * 
                      */
                     void SetAttesterSource(const std::string& _attesterSource);
@@ -231,6 +236,31 @@ namespace TencentCloud
                      */
                     bool TCCaptchaOptionHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * @return TCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * 
+                     */
+                    TCEOCaptchaOption GetTCEOCaptchaOption() const;
+
+                    /**
+                     * 设置Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * @param _tCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * 
+                     */
+                    void SetTCEOCaptchaOption(const TCEOCaptchaOption& _tCEOCaptchaOption);
+
+                    /**
+                     * 判断参数 TCEOCaptchaOption 是否已赋值
+                     * @return TCEOCaptchaOption 是否已赋值
+                     * 
+                     */
+                    bool TCEOCaptchaOptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -254,9 +284,10 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+                     * Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
                      */
                     std::string m_attesterSource;
                     bool m_attesterSourceHasBeenSet;
@@ -283,6 +314,13 @@ namespace TencentCloud
                      */
                     TCCaptchaOption m_tCCaptchaOption;
                     bool m_tCCaptchaOptionHasBeenSet;
+
+                    /**
+                     * Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     */
+                    TCEOCaptchaOption m_tCEOCaptchaOption;
+                    bool m_tCEOCaptchaOptionHasBeenSet;
 
                 };
             }

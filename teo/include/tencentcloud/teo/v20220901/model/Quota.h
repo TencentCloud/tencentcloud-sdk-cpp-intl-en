@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Single batch submission quota limit.
-                     * @return Batch Single batch submission quota limit.
+                     * 获取
+                     * @return Batch 
                      * 
                      */
                     int64_t GetBatch() const;
 
                     /**
-                     * 设置Single batch submission quota limit.
-                     * @param _batch Single batch submission quota limit.
+                     * 设置
+                     * @param _batch 
                      * 
                      */
                     void SetBatch(const int64_t& _batch);
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Single batch submission quota limit.
+                     * 
                      */
                     int64_t m_batch;
                     bool m_batchHasBeenSet;

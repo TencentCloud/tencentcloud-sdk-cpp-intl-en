@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _paramName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -73,19 +69,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EventCount The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Number of modified events.
+                     * @return EventCount Number of modified events.
                      * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
-                     * 设置The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _eventCount The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Number of modified events.
+                     * @param _eventCount Number of modified events.
                      * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
@@ -98,19 +90,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool EventCountHasBeenSet() const;
 
                     /**
-                     * 获取Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EventDetail Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Last modification time.
+                     * @return EventDetail Last modification time.
                      * 
                      */
                     std::vector<EventInfo> GetEventDetail() const;
 
                     /**
-                     * 设置Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _eventDetail Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Last modification time.
+                     * @param _eventDetail Last modification time.
                      * 
                      */
                     void SetEventDetail(const std::vector<EventInfo>& _eventDetail);
@@ -125,22 +113,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Number of modified events.
                      */
                     int64_t m_eventCount;
                     bool m_eventCountHasBeenSet;
 
                     /**
-                     * Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Last modification time.
                      */
                     std::vector<EventInfo> m_eventDetail;
                     bool m_eventDetailHasBeenSet;

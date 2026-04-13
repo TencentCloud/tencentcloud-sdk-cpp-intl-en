@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/FunctionRuleCondition.h>
+#include <tencentcloud/teo/v20220901/model/FunctionRegionSelection.h>
+#include <tencentcloud/teo/v20220901/model/FunctionWeightedSelection.h>
 
 
 namespace TencentCloud
@@ -65,15 +67,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID.
-                     * @return RuleId Rule ID.
+                     * 获取Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
+                     * @return RuleId Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Rule ID.
-                     * @param _ruleId Rule ID.
+                     * 设置Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
+                     * @param _ruleId Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -107,15 +109,52 @@ namespace TencentCloud
                     bool FunctionRuleConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Function ID, specifying a function executed when a trigger rule condition is met. If this parameter is not input, the original configuration is maintained.
-                     * @return FunctionId Function ID, specifying a function executed when a trigger rule condition is met. If this parameter is not input, the original configuration is maintained.
+                     * 获取Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+                     * @return TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+                     * 
+                     */
+                    std::string GetTriggerType() const;
+
+                    /**
+                     * 设置Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+                     * @param _triggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+                     * 
+                     */
+                    void SetTriggerType(const std::string& _triggerType);
+
+                    /**
+                     * 判断参数 TriggerType 是否已赋值
+                     * @return TriggerType 是否已赋值
+                     * 
+                     */
+                    bool TriggerTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+                     * @return FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
                      * 
                      */
                     std::string GetFunctionId() const;
 
                     /**
-                     * 设置Function ID, specifying a function executed when a trigger rule condition is met. If this parameter is not input, the original configuration is maintained.
-                     * @param _functionId Function ID, specifying a function executed when a trigger rule condition is met. If this parameter is not input, the original configuration is maintained.
+                     * 设置Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+                     * @param _functionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
                      * 
                      */
                     void SetFunctionId(const std::string& _functionId);
@@ -126,6 +165,48 @@ namespace TencentCloud
                      * 
                      */
                     bool FunctionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+                     * @return RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+                     * 
+                     */
+                    std::vector<FunctionRegionSelection> GetRegionMappingSelections() const;
+
+                    /**
+                     * 设置Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+                     * @param _regionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+                     * 
+                     */
+                    void SetRegionMappingSelections(const std::vector<FunctionRegionSelection>& _regionMappingSelections);
+
+                    /**
+                     * 判断参数 RegionMappingSelections 是否已赋值
+                     * @return RegionMappingSelections 是否已赋值
+                     * 
+                     */
+                    bool RegionMappingSelectionsHasBeenSet() const;
+
+                    /**
+                     * 获取Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+                     * @return WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+                     * 
+                     */
+                    std::vector<FunctionWeightedSelection> GetWeightedSelections() const;
+
+                    /**
+                     * 设置Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+                     * @param _weightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+                     * 
+                     */
+                    void SetWeightedSelections(const std::vector<FunctionWeightedSelection>& _weightedSelections);
+
+                    /**
+                     * 判断参数 WeightedSelections 是否已赋值
+                     * @return WeightedSelections 是否已赋值
+                     * 
+                     */
+                    bool WeightedSelectionsHasBeenSet() const;
 
                     /**
                      * 获取Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
@@ -157,7 +238,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Rule ID.
+                     * Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
@@ -169,10 +250,32 @@ namespace TencentCloud
                     bool m_functionRuleConditionsHasBeenSet;
 
                     /**
-                     * Function ID, specifying a function executed when a trigger rule condition is met. If this parameter is not input, the original configuration is maintained.
+                     * Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+                     */
+                    std::string m_triggerType;
+                    bool m_triggerTypeHasBeenSet;
+
+                    /**
+                     * Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
                      */
                     std::string m_functionId;
                     bool m_functionIdHasBeenSet;
+
+                    /**
+                     * Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+                     */
+                    std::vector<FunctionRegionSelection> m_regionMappingSelections;
+                    bool m_regionMappingSelectionsHasBeenSet;
+
+                    /**
+                     * Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+                     */
+                    std::vector<FunctionWeightedSelection> m_weightedSelections;
+                    bool m_weightedSelectionsHasBeenSet;
 
                     /**
                      * Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.

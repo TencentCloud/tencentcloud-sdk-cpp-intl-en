@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RO group ID in the format of pgro-4t9c6g7k.
-                     * @return ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+                     * 获取ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
+                     * @return ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
                      * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
-                     * 设置RO group ID in the format of pgro-4t9c6g7k.
-                     * @param _readOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+                     * 设置ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
+                     * @param _readOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
                      * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsAssignVipHasBeenSet() const;
 
                     /**
-                     * 获取Target VIP.
-                     * @return Vip Target VIP.
+                     * 获取Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+                     * @return Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Target VIP.
-                     * @param _vip Target VIP.
+                     * 设置Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+                     * @param _vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RO group ID in the format of pgro-4t9c6g7k.
+                     * ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
                      */
                     std::string m_readOnlyGroupId;
                     bool m_readOnlyGroupIdHasBeenSet;
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_isAssignVipHasBeenSet;
 
                     /**
-                     * Target VIP.
+                     * Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;

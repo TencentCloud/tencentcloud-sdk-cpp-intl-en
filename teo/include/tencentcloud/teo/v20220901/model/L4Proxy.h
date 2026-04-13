@@ -278,27 +278,31 @@ namespace TencentCloud
                     bool AccelerateMainlandHasBeenSet() const;
 
                     /**
-                     * 获取Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * 
+                     * 获取Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return DDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @deprecated
                      */
                     DDosProtectionConfig GetDDosProtectionConfig() const;
 
                     /**
-                     * 设置Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _dDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * 
+                     * 设置Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _dDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @deprecated
                      */
                     void SetDDosProtectionConfig(const DDosProtectionConfig& _dDosProtectionConfig);
 
                     /**
                      * 判断参数 DDosProtectionConfig 是否已赋值
                      * @return DDosProtectionConfig 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DDosProtectionConfigHasBeenSet() const;
 
@@ -412,8 +416,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_accelerateMainlandHasBeenSet;
 
                     /**
-                     * Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     DDosProtectionConfig m_dDosProtectionConfig;
                     bool m_dDosProtectionConfigHasBeenSet;

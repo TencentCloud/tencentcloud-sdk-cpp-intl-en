@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return EncryptionKeys Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the key information list of the instance.
+                     * @return EncryptionKeys Specifies the key information list of the instance.
                      * 
                      */
                     std::vector<EncryptionKey> GetEncryptionKeys() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the key information list of the instance.
                      */
                     std::vector<EncryptionKey> m_encryptionKeys;
                     bool m_encryptionKeysHasBeenSet;

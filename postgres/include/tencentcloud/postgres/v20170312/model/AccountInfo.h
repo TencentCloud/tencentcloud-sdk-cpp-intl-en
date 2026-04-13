@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Account remarks
-                     * @return Remark Account remarks
+                     * 获取Specifies the account remark.
+                     * @return Remark Specifies the account remark.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Account remarks
-                     * @param _remark Account remarks
+                     * 设置Specifies the account remark.
+                     * @param _remark Specifies the account remark.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-                     * @return Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 获取Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+                     * @return Status Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-                     * @param _status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 设置Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+                     * @param _status Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Account creation time
-                     * @return CreateTime Account creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Account creation time
-                     * @param _createTime Account creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Account last modified time
-                     * @return UpdateTime Account last modified time
+                     * 获取Last update time of the account.
+                     * @return UpdateTime Last update time of the account.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Account last modified time
-                     * @param _updateTime Account last modified time
+                     * 设置Last update time of the account.
+                     * @param _updateTime Last update time of the account.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -171,6 +171,81 @@ namespace TencentCloud
                      * 
                      */
                     bool UpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+                     * @return PasswordUpdateTime Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+                     * 
+                     */
+                    std::string GetPasswordUpdateTime() const;
+
+                    /**
+                     * 设置Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+                     * @param _passwordUpdateTime Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+                     * 
+                     */
+                    void SetPasswordUpdateTime(const std::string& _passwordUpdateTime);
+
+                    /**
+                     * 判断参数 PasswordUpdateTime 是否已赋值
+                     * @return PasswordUpdateTime 是否已赋值
+                     * 
+                     */
+                    bool PasswordUpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+                     * @return UserType Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+                     * 
+                     */
+                    std::string GetUserType() const;
+
+                    /**
+                     * 设置Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+                     * @param _userType Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+                     * 
+                     */
+                    void SetUserType(const std::string& _userType);
+
+                    /**
+                     * 判断参数 UserType 是否已赋值
+                     * @return UserType 是否已赋值
+                     * 
+                     */
+                    bool UserTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether CAM verification is enabled for the user account.
+                     * @return OpenCam Specifies whether CAM verification is enabled for the user account.
+                     * 
+                     */
+                    bool GetOpenCam() const;
+
+                    /**
+                     * 设置Specifies whether CAM verification is enabled for the user account.
+                     * @param _openCam Specifies whether CAM verification is enabled for the user account.
+                     * 
+                     */
+                    void SetOpenCam(const bool& _openCam);
+
+                    /**
+                     * 判断参数 OpenCam 是否已赋值
+                     * @return OpenCam 是否已赋值
+                     * 
+                     */
+                    bool OpenCamHasBeenSet() const;
 
                 private:
 
@@ -187,28 +262,49 @@ namespace TencentCloud
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Account remarks
+                     * Specifies the account remark.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Account creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Account last modified time
+                     * Last update time of the account.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+                     */
+                    std::string m_passwordUpdateTime;
+                    bool m_passwordUpdateTimeHasBeenSet;
+
+                    /**
+                     * Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+                     */
+                    std::string m_userType;
+                    bool m_userTypeHasBeenSet;
+
+                    /**
+                     * Specifies whether CAM verification is enabled for the user account.
+                     */
+                    bool m_openCam;
+                    bool m_openCamHasBeenSet;
 
                 };
             }

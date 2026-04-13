@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-6fego161
-                     * @return DBInstanceId Instance ID in the format of postgres-6fego161
+                     * 获取Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * @return DBInstanceId Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-6fego161
-                     * @param _dBInstanceId Instance ID in the format of postgres-6fego161
+                     * 设置Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * @param _dBInstanceId Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per page. Default value: 10. Value range: 1–100.
-                     * @return Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * 获取Pagination return. maximum return per page. default 20. value range 1-100.
+                     * @return Limit Pagination return. maximum return per page. default 20. value range 1-100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per page. Default value: 10. Value range: 1–100.
-                     * @param _limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * 设置Pagination return. maximum return per page. default 20. value range 1-100.
+                     * @param _limit Pagination return. maximum return per page. default 20. value range 1-100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
-                     * @return OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * 获取Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+                     * @return OrderBy Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
-                     * @param _orderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * 设置Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+                     * @param _orderBy Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -127,15 +131,19 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
-                     * @return OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * 获取Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
+                     * @return OrderByType Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
-                     * @param _orderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * 设置Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
+                     * @param _orderByType Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -150,13 +158,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-6fego161
+                     * Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * Pagination return. maximum return per page. default 20. value range 1-100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -168,13 +176,15 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

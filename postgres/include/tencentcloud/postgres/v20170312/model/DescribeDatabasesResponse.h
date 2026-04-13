@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/postgres/v20170312/model/Database.h>
 
 
 namespace TencentCloud
@@ -71,6 +72,20 @@ namespace TencentCloud
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the database details list.
+                     * @return Databases Specifies the database details list.
+                     * 
+                     */
+                    std::vector<Database> GetDatabases() const;
+
+                    /**
+                     * 判断参数 Databases 是否已赋值
+                     * @return Databases 是否已赋值
+                     * 
+                     */
+                    bool DatabasesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -84,6 +99,12 @@ namespace TencentCloud
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Specifies the database details list.
+                     */
+                    std::vector<Database> m_databases;
+                    bool m_databasesHasBeenSet;
 
                 };
             }

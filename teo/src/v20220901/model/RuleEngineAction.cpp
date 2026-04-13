@@ -57,7 +57,9 @@ RuleEngineAction::RuleEngineAction() :
     m_modifyRequestHeaderParametersHasBeenSet(false),
     m_responseSpeedLimitParametersHasBeenSet(false),
     m_setContentIdentifierParametersHasBeenSet(false),
-    m_varyParametersHasBeenSet(false)
+    m_varyParametersHasBeenSet(false),
+    m_contentCompressionParametersHasBeenSet(false),
+    m_originAuthenticationParametersHasBeenSet(false)
 {
 }
 
@@ -688,6 +690,40 @@ CoreInternalOutcome RuleEngineAction::Deserialize(const rapidjson::Value &value)
         m_varyParametersHasBeenSet = true;
     }
 
+    if (value.HasMember("ContentCompressionParameters") && !value["ContentCompressionParameters"].IsNull())
+    {
+        if (!value["ContentCompressionParameters"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleEngineAction.ContentCompressionParameters` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_contentCompressionParameters.Deserialize(value["ContentCompressionParameters"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_contentCompressionParametersHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginAuthenticationParameters") && !value["OriginAuthenticationParameters"].IsNull())
+    {
+        if (!value["OriginAuthenticationParameters"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleEngineAction.OriginAuthenticationParameters` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_originAuthenticationParameters.Deserialize(value["OriginAuthenticationParameters"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_originAuthenticationParametersHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1025,6 +1061,24 @@ void RuleEngineAction::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_varyParameters.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_contentCompressionParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContentCompressionParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_contentCompressionParameters.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_originAuthenticationParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginAuthenticationParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_originAuthenticationParameters.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1620,5 +1674,37 @@ void RuleEngineAction::SetVaryParameters(const VaryParameters& _varyParameters)
 bool RuleEngineAction::VaryParametersHasBeenSet() const
 {
     return m_varyParametersHasBeenSet;
+}
+
+ContentCompressionParameters RuleEngineAction::GetContentCompressionParameters() const
+{
+    return m_contentCompressionParameters;
+}
+
+void RuleEngineAction::SetContentCompressionParameters(const ContentCompressionParameters& _contentCompressionParameters)
+{
+    m_contentCompressionParameters = _contentCompressionParameters;
+    m_contentCompressionParametersHasBeenSet = true;
+}
+
+bool RuleEngineAction::ContentCompressionParametersHasBeenSet() const
+{
+    return m_contentCompressionParametersHasBeenSet;
+}
+
+OriginAuthenticationParameters RuleEngineAction::GetOriginAuthenticationParameters() const
+{
+    return m_originAuthenticationParameters;
+}
+
+void RuleEngineAction::SetOriginAuthenticationParameters(const OriginAuthenticationParameters& _originAuthenticationParameters)
+{
+    m_originAuthenticationParameters = _originAuthenticationParameters;
+    m_originAuthenticationParametersHasBeenSet = true;
+}
+
+bool RuleEngineAction::OriginAuthenticationParametersHasBeenSet() const
+{
+    return m_originAuthenticationParametersHasBeenSet;
 }
 

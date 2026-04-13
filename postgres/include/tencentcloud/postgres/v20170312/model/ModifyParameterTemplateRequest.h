@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
-                     * @return TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * 获取Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
+                     * @return TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
-                     * @param _templateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * 设置Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
+                     * @param _templateId Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

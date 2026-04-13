@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
-                     * @return ZoneId Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
+                     * 获取Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+                     * @return ZoneId Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
-                     * @param _zoneId Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
+                     * 设置Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+                     * @param _zoneId Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -149,35 +149,35 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
-<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
-<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
-                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
-<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
-<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
+                     * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: specifies the task id for filtering. the task id is in the format like 1379afjk91u32h. multiple values and fuzzy queries are not supported.</li>.
+<Li>Target: specifies the target resource information for filtering in formats like http://www.qq.com/1.txt or tag1. multiple values are not supported yet. fuzzy query is supported.</li>.
+<li>domains: specifies the domain name for filtering in the format like www.qq.com. fuzzy queries are not supported.</li>.
+<li>statuses: specifies the task status for filtering. fuzzy queries are not supported. valid values:<br>   processing: processing<br>   success: successful<br>   failed: failed<br>   timeout: timed out<br>   canceled: canceled</li>.
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: specifies the task id for filtering. the task id is in the format like 1379afjk91u32h. multiple values and fuzzy queries are not supported.</li>.
+<Li>Target: specifies the target resource information for filtering in formats like http://www.qq.com/1.txt or tag1. multiple values are not supported yet. fuzzy query is supported.</li>.
+<li>domains: specifies the domain name for filtering in the format like www.qq.com. fuzzy queries are not supported.</li>.
+<li>statuses: specifies the task status for filtering. fuzzy queries are not supported. valid values:<br>   processing: processing<br>   success: successful<br>   failed: failed<br>   timeout: timed out<br>   canceled: canceled</li>.
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
-<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
-<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
-                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
-<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
-<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
+                     * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: specifies the task id for filtering. the task id is in the format like 1379afjk91u32h. multiple values and fuzzy queries are not supported.</li>.
+<Li>Target: specifies the target resource information for filtering in formats like http://www.qq.com/1.txt or tag1. multiple values are not supported yet. fuzzy query is supported.</li>.
+<li>domains: specifies the domain name for filtering in the format like www.qq.com. fuzzy queries are not supported.</li>.
+<li>statuses: specifies the task status for filtering. fuzzy queries are not supported. valid values:<br>   processing: processing<br>   success: successful<br>   failed: failed<br>   timeout: timed out<br>   canceled: canceled</li>.
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: specifies the task id for filtering. the task id is in the format like 1379afjk91u32h. multiple values and fuzzy queries are not supported.</li>.
+<Li>Target: specifies the target resource information for filtering in formats like http://www.qq.com/1.txt or tag1. multiple values are not supported yet. fuzzy query is supported.</li>.
+<li>domains: specifies the domain name for filtering in the format like www.qq.com. fuzzy queries are not supported.</li>.
+<li>statuses: specifies the task status for filtering. fuzzy queries are not supported. valid values:<br>   processing: processing<br>   success: successful<br>   failed: failed<br>   timeout: timed out<br>   canceled: canceled</li>.
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980)
+                     * Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne] tencentcloud API change notification (https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -222,12 +222,12 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
-<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
-<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
-<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>processing: processing<br>success: successful<br>failed: failed<br>timeout: timed out<br>canceled: Canceled</li>
-<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>purge_url: URL<br>purge_prefix: prefix<br>purge_all: all cached content<br>purge_host: Hostname<br>purge_cache_tag: CacheTag</li>
+                     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: specifies the task id for filtering. the task id is in the format like 1379afjk91u32h. multiple values and fuzzy queries are not supported.</li>.
+<Li>Target: specifies the target resource information for filtering in formats like http://www.qq.com/1.txt or tag1. multiple values are not supported yet. fuzzy query is supported.</li>.
+<li>domains: specifies the domain name for filtering in the format like www.qq.com. fuzzy queries are not supported.</li>.
+<li>statuses: specifies the task status for filtering. fuzzy queries are not supported. valid values:<br>   processing: processing<br>   success: successful<br>   failed: failed<br>   timeout: timed out<br>   canceled: canceled</li>.
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

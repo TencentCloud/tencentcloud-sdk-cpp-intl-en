@@ -4290,6 +4290,56 @@ LiveClient::DescribeProvinceIspPlayInfoListOutcomeCallable LiveClient::DescribeP
     return prom->get_future();
 }
 
+LiveClient::DescribePushBandwidthAndFluxListOutcome LiveClient::DescribePushBandwidthAndFluxList(const DescribePushBandwidthAndFluxListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePushBandwidthAndFluxList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePushBandwidthAndFluxListResponse rsp = DescribePushBandwidthAndFluxListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePushBandwidthAndFluxListOutcome(rsp);
+        else
+            return DescribePushBandwidthAndFluxListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePushBandwidthAndFluxListOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribePushBandwidthAndFluxListAsync(const DescribePushBandwidthAndFluxListRequest& request, const DescribePushBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePushBandwidthAndFluxListRequest&;
+    using Resp = DescribePushBandwidthAndFluxListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePushBandwidthAndFluxList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LiveClient::DescribePushBandwidthAndFluxListOutcomeCallable LiveClient::DescribePushBandwidthAndFluxListCallable(const DescribePushBandwidthAndFluxListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePushBandwidthAndFluxListOutcome>>();
+    DescribePushBandwidthAndFluxListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribePushBandwidthAndFluxListRequest&,
+        DescribePushBandwidthAndFluxListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LiveClient::DescribeRecordTaskOutcome LiveClient::DescribeRecordTask(const DescribeRecordTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRecordTask");

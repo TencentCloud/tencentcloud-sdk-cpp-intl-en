@@ -65,6 +65,27 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
+                     * 获取(Required) Origins in the origin group.
+                     * @return Records (Required) Origins in the origin group.
+                     * 
+                     */
+                    std::vector<OriginRecord> GetRecords() const;
+
+                    /**
+                     * 设置(Required) Origins in the origin group.
+                     * @param _records (Required) Origins in the origin group.
+                     * 
+                     */
+                    void SetRecords(const std::vector<OriginRecord>& _records);
+
+                    /**
+                     * 判断参数 Records 是否已赋值
+                     * @return Records 是否已赋值
+                     * 
+                     */
+                    bool RecordsHasBeenSet() const;
+
+                    /**
                      * 获取Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      * @return Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      * 
@@ -115,27 +136,6 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取(Required) Origins in the origin group.
-                     * @return Records (Required) Origins in the origin group.
-                     * 
-                     */
-                    std::vector<OriginRecord> GetRecords() const;
-
-                    /**
-                     * 设置(Required) Origins in the origin group.
-                     * @param _records (Required) Origins in the origin group.
-                     * 
-                     */
-                    void SetRecords(const std::vector<OriginRecord>& _records);
-
-                    /**
-                     * 判断参数 Records 是否已赋值
-                     * @return Records 是否已赋值
-                     * 
-                     */
-                    bool RecordsHasBeenSet() const;
-
-                    /**
                      * 获取Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
                      * @return HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
                      * 
@@ -165,6 +165,12 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
+                     * (Required) Origins in the origin group.
+                     */
+                    std::vector<OriginRecord> m_records;
+                    bool m_recordsHasBeenSet;
+
+                    /**
                      * Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      */
                     std::string m_name;
@@ -177,12 +183,6 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
-
-                    /**
-                     * (Required) Origins in the origin group.
-                     */
-                    std::vector<OriginRecord> m_records;
-                    bool m_recordsHasBeenSet;
 
                     /**
                      * Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.

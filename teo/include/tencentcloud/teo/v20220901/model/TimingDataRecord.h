@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/TimingTypeValue.h>
+#include <tencentcloud/teo/v20220901/model/FloatTimingTypeValue.h>
 
 
 namespace TencentCloud
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool TypeKeyHasBeenSet() const;
 
                     /**
-                     * 获取Detailed time series data
-                     * @return TypeValue Detailed time series data
+                     * 获取Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+                     * @return TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
                      * 
                      */
                     std::vector<TimingTypeValue> GetTypeValue() const;
 
                     /**
-                     * 设置Detailed time series data
-                     * @param _typeValue Detailed time series data
+                     * 设置Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+                     * @param _typeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
                      * 
                      */
                     void SetTypeValue(const std::vector<TimingTypeValue>& _typeValue);
@@ -89,6 +90,27 @@ namespace TencentCloud
                      */
                     bool TypeValueHasBeenSet() const;
 
+                    /**
+                     * 获取Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+                     * @return FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+                     * 
+                     */
+                    std::vector<FloatTimingTypeValue> GetFloatTypeValue() const;
+
+                    /**
+                     * 设置Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+                     * @param _floatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+                     * 
+                     */
+                    void SetFloatTypeValue(const std::vector<FloatTimingTypeValue>& _floatTypeValue);
+
+                    /**
+                     * 判断参数 FloatTypeValue 是否已赋值
+                     * @return FloatTypeValue 是否已赋值
+                     * 
+                     */
+                    bool FloatTypeValueHasBeenSet() const;
+
                 private:
 
                     /**
@@ -98,10 +120,16 @@ namespace TencentCloud
                     bool m_typeKeyHasBeenSet;
 
                     /**
-                     * Detailed time series data
+                     * Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
                      */
                     std::vector<TimingTypeValue> m_typeValue;
                     bool m_typeValueHasBeenSet;
+
+                    /**
+                     * Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+                     */
+                    std::vector<FloatTimingTypeValue> m_floatTypeValue;
+                    bool m_floatTypeValueHasBeenSet;
 
                 };
             }

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _paramName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return OldValue Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Original parameter value.
+                     * @return OldValue Original parameter value.
                      * 
                      */
                     std::string GetOldValue() const;
 
                     /**
-                     * 设置Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _oldValue Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Original parameter value.
+                     * @param _oldValue Original parameter value.
                      * 
                      */
                     void SetOldValue(const std::string& _oldValue);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool OldValueHasBeenSet() const;
 
                     /**
-                     * 获取New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return NewValue New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取This modification specifies the expected parameter value.
+                     * @return NewValue This modification specifies the expected parameter value.
                      * 
                      */
                     std::string GetNewValue() const;
 
                     /**
-                     * 设置New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _newValue New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置This modification specifies the expected parameter value.
+                     * @param _newValue This modification specifies the expected parameter value.
                      * 
                      */
                     void SetNewValue(const std::string& _newValue);
@@ -122,19 +110,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NewValueHasBeenSet() const;
 
                     /**
-                     * 获取Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ModifyTime Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the start time for backend parameter modification.
+                     * @return ModifyTime Specifies the start time for backend parameter modification.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
-                     * 设置Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _modifyTime Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the start time for backend parameter modification.
+                     * @param _modifyTime Specifies the start time for backend parameter modification.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -147,19 +131,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EffectiveTime Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the start of effective time for the backend parameter.
+                     * @return EffectiveTime Specifies the start of effective time for the backend parameter.
                      * 
                      */
                     std::string GetEffectiveTime() const;
 
                     /**
-                     * 设置Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _effectiveTime Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the start of effective time for the backend parameter.
+                     * @param _effectiveTime Specifies the start of effective time for the backend parameter.
                      * 
                      */
                     void SetEffectiveTime(const std::string& _effectiveTime);
@@ -172,19 +152,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool EffectiveTimeHasBeenSet() const;
 
                     /**
-                     * 获取Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return State Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Modification status. valid values: in progress, success, paused.
+                     * @return State Modification status. valid values: in progress, success, paused.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _state Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Modification status. valid values: in progress, success, paused.
+                     * @param _state Modification status. valid values: in progress, success, paused.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -197,19 +173,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Operator Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Operator (normal: user sub UIN).
+                     * @return Operator Operator (normal: user sub UIN).
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _operator Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Operator (normal: user sub UIN).
+                     * @param _operator Operator (normal: user sub UIN).
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -222,19 +194,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EventLog Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Time log.
+                     * @return EventLog Time log.
                      * 
                      */
                     std::string GetEventLog() const;
 
                     /**
-                     * 设置Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _eventLog Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Time log.
+                     * @param _eventLog Time log.
                      * 
                      */
                     void SetEventLog(const std::string& _eventLog);
@@ -249,57 +217,49 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Original parameter value.
                      */
                     std::string m_oldValue;
                     bool m_oldValueHasBeenSet;
 
                     /**
-                     * New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * This modification specifies the expected parameter value.
                      */
                     std::string m_newValue;
                     bool m_newValueHasBeenSet;
 
                     /**
-                     * Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the start time for backend parameter modification.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the start of effective time for the backend parameter.
                      */
                     std::string m_effectiveTime;
                     bool m_effectiveTimeHasBeenSet;
 
                     /**
-                     * Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Modification status. valid values: in progress, success, paused.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Operator (normal: user sub UIN).
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Time log.
                      */
                     std::string m_eventLog;
                     bool m_eventLogHasBeenSet;

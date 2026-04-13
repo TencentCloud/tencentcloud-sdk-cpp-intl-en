@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return KeyId Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the KeyId for KMS instance encryption.
+                     * @return KeyId Specifies the KeyId for KMS instance encryption.
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _keyId Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the KeyId for KMS instance encryption.
+                     * @param _keyId Specifies the KeyId for KMS instance encryption.
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return KeyAlias Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Alias name of the KMS instance encryption Key.
+                     * @return KeyAlias Alias name of the KMS instance encryption Key.
                      * 
                      */
                     std::string GetKeyAlias() const;
 
                     /**
-                     * 设置Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _keyAlias Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Alias name of the KMS instance encryption Key.
+                     * @param _keyAlias Alias name of the KMS instance encryption Key.
                      * 
                      */
                     void SetKeyAlias(const std::string& _keyAlias);
@@ -97,19 +89,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool KeyAliasHasBeenSet() const;
 
                     /**
-                     * 获取Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DEKCipherTextBlob Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the ciphertext of the instance encryption key DEK.
+                     * @return DEKCipherTextBlob Specifies the ciphertext of the instance encryption key DEK.
                      * 
                      */
                     std::string GetDEKCipherTextBlob() const;
 
                     /**
-                     * 设置Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _dEKCipherTextBlob Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the ciphertext of the instance encryption key DEK.
+                     * @param _dEKCipherTextBlob Specifies the ciphertext of the instance encryption key DEK.
                      * 
                      */
                     void SetDEKCipherTextBlob(const std::string& _dEKCipherTextBlob);
@@ -122,19 +110,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DEKCipherTextBlobHasBeenSet() const;
 
                     /**
-                     * 获取Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IsEnabled Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+                     * @return IsEnabled Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
                      * 
                      */
                     int64_t GetIsEnabled() const;
 
                     /**
-                     * 设置Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _isEnabled Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+                     * @param _isEnabled Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
                      * 
                      */
                     void SetIsEnabled(const int64_t& _isEnabled);
@@ -147,19 +131,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IsEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return KeyRegion Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the region of the KMS key.
+                     * @return KeyRegion Specifies the region of the KMS key.
                      * 
                      */
                     std::string GetKeyRegion() const;
 
                     /**
-                     * 设置Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _keyRegion Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the region of the KMS key.
+                     * @param _keyRegion Specifies the region of the KMS key.
                      * 
                      */
                     void SetKeyRegion(const std::string& _keyRegion);
@@ -172,19 +152,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool KeyRegionHasBeenSet() const;
 
                     /**
-                     * 获取DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return CreateTime DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Creation time of the DEK key.
+                     * @return CreateTime Creation time of the DEK key.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _createTime DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Creation time of the DEK key.
+                     * @param _createTime Creation time of the DEK key.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -196,49 +172,70 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+                     * @return KMSClusterId Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+                     * 
+                     */
+                    std::string GetKMSClusterId() const;
+
+                    /**
+                     * 设置Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+                     * @param _kMSClusterId Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+                     * 
+                     */
+                    void SetKMSClusterId(const std::string& _kMSClusterId);
+
+                    /**
+                     * 判断参数 KMSClusterId 是否已赋值
+                     * @return KMSClusterId 是否已赋值
+                     * 
+                     */
+                    bool KMSClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the KeyId for KMS instance encryption.
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Alias name of the KMS instance encryption Key.
                      */
                     std::string m_keyAlias;
                     bool m_keyAliasHasBeenSet;
 
                     /**
-                     * Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the ciphertext of the instance encryption key DEK.
                      */
                     std::string m_dEKCipherTextBlob;
                     bool m_dEKCipherTextBlobHasBeenSet;
 
                     /**
-                     * Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
                      */
                     int64_t m_isEnabled;
                     bool m_isEnabledHasBeenSet;
 
                     /**
-                     * Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the region of the KMS key.
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
 
                     /**
-                     * DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Creation time of the DEK key.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+                     */
+                    std::string m_kMSClusterId;
+                    bool m_kMSClusterIdHasBeenSet;
 
                 };
             }

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
-                     * @return ClientType Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+                     * 获取Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+                     * @return ClientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
                      * 
                      */
                     std::string GetClientType() const;
 
                     /**
-                     * 设置Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
-                     * @param _clientType Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+                     * 设置Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+                     * @param _clientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
                      * 
                      */
                     void SetClientType(const std::string& _clientType);
@@ -155,7 +155,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+                     * Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
                      */
                     std::string m_clientType;
                     bool m_clientTypeHasBeenSet;

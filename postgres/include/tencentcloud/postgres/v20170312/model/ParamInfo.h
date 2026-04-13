@@ -50,18 +50,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ID Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _iD Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -74,19 +70,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Name Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter name.
+                     * @return Name Parameter name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _name Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter name.
+                     * @param _name Parameter name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -99,31 +91,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+                     * @return ParamValueType Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
                      * 
                      */
                     std::string GetParamValueType() const;
 
                     /**
-                     * 设置Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _paramValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+                     * @param _paramValueType Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
                      * 
                      */
                     void SetParamValueType(const std::string& _paramValueType);
@@ -136,19 +124,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter value unit. returns null if the parameter has no units.
+                     * @return Unit Parameter value unit. returns null if the parameter has no units.
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter value unit. returns null if the parameter has no units.
+                     * @param _unit Parameter value unit. returns null if the parameter has no units.
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -161,19 +145,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitHasBeenSet() const;
 
                     /**
-                     * 获取Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DefaultValue Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Default parameter value. returns in string form.
+                     * @return DefaultValue Default parameter value. returns in string form.
                      * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
-                     * 设置Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _defaultValue Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Default parameter value. returns in string form.
+                     * @param _defaultValue Default parameter value. returns in string form.
                      * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
@@ -186,19 +166,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CurrentValue Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the current value in string form.
+                     * @return CurrentValue Specifies the current value in string form.
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _currentValue Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the current value in string form.
+                     * @param _currentValue Specifies the current value in string form.
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -211,19 +187,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Max The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the numerical type (integer, real) parameter and its lower bound.
+                     * @return Max Specifies the numerical type (integer, real) parameter and its lower bound.
                      * 
                      */
                     double GetMax() const;
 
                     /**
-                     * 设置The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _max The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the numerical type (integer, real) parameter and its lower bound.
+                     * @param _max Specifies the numerical type (integer, real) parameter and its lower bound.
                      * 
                      */
                     void SetMax(const double& _max);
@@ -261,19 +233,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Min The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Numerical type (integer, real) parameter specifies the upper bound.
+                     * @return Min Numerical type (integer, real) parameter specifies the upper bound.
                      * 
                      */
                     double GetMin() const;
 
                     /**
-                     * 设置The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _min The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Numerical type (integer, real) parameter specifies the upper bound.
+                     * @param _min Numerical type (integer, real) parameter specifies the upper bound.
                      * 
                      */
                     void SetMin(const double& _min);
@@ -286,19 +254,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ParamDescriptionCH Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Chinese description.
+                     * @return ParamDescriptionCH Chinese description.
                      * 
                      */
                     std::string GetParamDescriptionCH() const;
 
                     /**
-                     * 设置Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _paramDescriptionCH Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Chinese description.
+                     * @param _paramDescriptionCH Chinese description.
                      * 
                      */
                     void SetParamDescriptionCH(const std::string& _paramDescriptionCH);
@@ -311,19 +275,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamDescriptionCHHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ParamDescriptionEN Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the english description of the parameter.
+                     * @return ParamDescriptionEN Specifies the english description of the parameter.
                      * 
                      */
                     std::string GetParamDescriptionEN() const;
 
                     /**
-                     * 设置Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _paramDescriptionEN Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the english description of the parameter.
+                     * @param _paramDescriptionEN Specifies the english description of the parameter.
                      * 
                      */
                     void SetParamDescriptionEN(const std::string& _paramDescriptionEN);
@@ -336,19 +296,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamDescriptionENHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+                     * @return NeedReboot Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
                      * 
                      */
                     bool GetNeedReboot() const;
 
                     /**
-                     * 设置Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _needReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+                     * @param _needReboot Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
                      * 
                      */
                     void SetNeedReboot(const bool& _needReboot);
@@ -361,19 +317,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NeedRebootHasBeenSet() const;
 
                     /**
-                     * 获取Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClassificationCN Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter chinese category.
+                     * @return ClassificationCN Parameter chinese category.
                      * 
                      */
                     std::string GetClassificationCN() const;
 
                     /**
-                     * 设置Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _classificationCN Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter chinese category.
+                     * @param _classificationCN Parameter chinese category.
                      * 
                      */
                     void SetClassificationCN(const std::string& _classificationCN);
@@ -386,19 +338,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ClassificationCNHasBeenSet() const;
 
                     /**
-                     * 获取Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClassificationEN Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Parameter english category.
+                     * @return ClassificationEN Parameter english category.
                      * 
                      */
                     std::string GetClassificationEN() const;
 
                     /**
-                     * 设置Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _classificationEN Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Parameter english category.
+                     * @param _classificationEN Parameter english category.
                      * 
                      */
                     void SetClassificationEN(const std::string& _classificationEN);
@@ -411,19 +359,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ClassificationENHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies whether it is related to the specification (true for related, false for unrelated).
+                     * @return SpecRelated Specifies whether it is related to the specification (true for related, false for unrelated).
                      * 
                      */
                     bool GetSpecRelated() const;
 
                     /**
-                     * 设置Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _specRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies whether it is related to the specification (true for related, false for unrelated).
+                     * @param _specRelated Specifies whether it is related to the specification (true for related, false for unrelated).
                      * 
                      */
                     void SetSpecRelated(const bool& _specRelated);
@@ -436,19 +380,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SpecRelatedHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+                     * @return Advanced Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
                      * 
                      */
                     bool GetAdvanced() const;
 
                     /**
-                     * 设置Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+                     * @param _advanced Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
                      * 
                      */
                     void SetAdvanced(const bool& _advanced);
@@ -461,19 +401,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AdvancedHasBeenSet() const;
 
                     /**
-                     * 获取The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LastModifyTime The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the last modified time.
+                     * @return LastModifyTime Specifies the last modified time.
                      * 
                      */
                     std::string GetLastModifyTime() const;
 
                     /**
-                     * 设置The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _lastModifyTime The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the last modified time.
+                     * @param _lastModifyTime Specifies the last modified time.
                      * 
                      */
                     void SetLastModifyTime(const std::string& _lastModifyTime);
@@ -486,19 +422,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LastModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
+                     * @return StandbyRelated Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
                      * 
                      */
                     int64_t GetStandbyRelated() const;
 
                     /**
-                     * 设置Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _standbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
+                     * @param _standbyRelated Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
                      * 
                      */
                     void SetStandbyRelated(const int64_t& _standbyRelated);
@@ -564,52 +496,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
                      */
                     std::string m_paramValueType;
                     bool m_paramValueTypeHasBeenSet;
 
                     /**
-                     * Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter value unit. returns null if the parameter has no units.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
 
                     /**
-                     * Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Default parameter value. returns in string form.
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the current value in string form.
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the numerical type (integer, real) parameter and its lower bound.
                      */
                     double m_max;
                     bool m_maxHasBeenSet;
@@ -622,71 +547,61 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Numerical type (integer, real) parameter specifies the upper bound.
                      */
                     double m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Chinese description.
                      */
                     std::string m_paramDescriptionCH;
                     bool m_paramDescriptionCHHasBeenSet;
 
                     /**
-                     * Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the english description of the parameter.
                      */
                     std::string m_paramDescriptionEN;
                     bool m_paramDescriptionENHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
                      */
                     bool m_needReboot;
                     bool m_needRebootHasBeenSet;
 
                     /**
-                     * Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter chinese category.
                      */
                     std::string m_classificationCN;
                     bool m_classificationCNHasBeenSet;
 
                     /**
-                     * Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Parameter english category.
                      */
                     std::string m_classificationEN;
                     bool m_classificationENHasBeenSet;
 
                     /**
-                     * Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies whether it is related to the specification (true for related, false for unrelated).
                      */
                     bool m_specRelated;
                     bool m_specRelatedHasBeenSet;
 
                     /**
-                     * Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
                      */
                     bool m_advanced;
                     bool m_advancedHasBeenSet;
 
                     /**
-                     * The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the last modified time.
                      */
                     std::string m_lastModifyTime;
                     bool m_lastModifyTimeHasBeenSet;
 
                     /**
-                     * Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
                      */
                     int64_t m_standbyRelated;
                     bool m_standbyRelatedHasBeenSet;

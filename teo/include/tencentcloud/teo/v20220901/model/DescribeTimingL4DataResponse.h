@@ -59,10 +59,12 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of L4 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of L4 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Layer 4 time series traffic Data list.<br>for different queried metrics, time series Data is returned from different parameters based on the value type.<br>currently, there are the following two value types:</p><ul><li><strong>Integer</strong>: metrics with <code>Integer</code> value type return corresponding time series Data from <code>Data.N.TypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_flux</code>: total access traffic;</li><li><code>l4Flow_inFlux</code>: access inbound traffic;</li><li><code>l4Flow_outFlux</code>: access outbound traffic;</li><li><code>l4Flow_inBandwidth</code>: inbound bandwidth peak;</li><li><code>l4Flow_outBandwidth</code>: outbound bandwidth peak;</li><li><code>l4Flow_connections</code>: number of concurrent connections.</li></ul></li><li><strong>Float</strong>: metrics with <code>Float</code> value type return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_newConnectionsRate</code>: rate of new connections.</li></ul></li>.
+</ul><p>This API does not support dimension query for now. it aggregates and returns Data by root account by default, which means <code>Data.N.TypeKey = AppId</code>. AppId is the unique id of the tencent cloud root account, and N always equals 1.</p>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Data <p>Layer 4 time series traffic Data list.<br>for different queried metrics, time series Data is returned from different parameters based on the value type.<br>currently, there are the following two value types:</p><ul><li><strong>Integer</strong>: metrics with <code>Integer</code> value type return corresponding time series Data from <code>Data.N.TypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_flux</code>: total access traffic;</li><li><code>l4Flow_inFlux</code>: access inbound traffic;</li><li><code>l4Flow_outFlux</code>: access outbound traffic;</li><li><code>l4Flow_inBandwidth</code>: inbound bandwidth peak;</li><li><code>l4Flow_outBandwidth</code>: outbound bandwidth peak;</li><li><code>l4Flow_connections</code>: number of concurrent connections.</li></ul></li><li><strong>Float</strong>: metrics with <code>Float</code> value type return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_newConnectionsRate</code>: rate of new connections.</li></ul></li>.
+</ul><p>This API does not support dimension query for now. it aggregates and returns Data by root account by default, which means <code>Data.N.TypeKey = AppId</code>. AppId is the unique id of the tencent cloud root account, and N always equals 1.</p>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<TimingDataRecord> GetData() const;
@@ -83,8 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of L4 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Layer 4 time series traffic Data list.<br>for different queried metrics, time series Data is returned from different parameters based on the value type.<br>currently, there are the following two value types:</p><ul><li><strong>Integer</strong>: metrics with <code>Integer</code> value type return corresponding time series Data from <code>Data.N.TypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_flux</code>: total access traffic;</li><li><code>l4Flow_inFlux</code>: access inbound traffic;</li><li><code>l4Flow_outFlux</code>: access outbound traffic;</li><li><code>l4Flow_inBandwidth</code>: inbound bandwidth peak;</li><li><code>l4Flow_outBandwidth</code>: outbound bandwidth peak;</li><li><code>l4Flow_connections</code>: number of concurrent connections.</li></ul></li><li><strong>Float</strong>: metrics with <code>Float</code> value type return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.<br>queried metrics <code>MetricName</code> include:<ul><li><code>l4Flow_newConnectionsRate</code>: rate of new connections.</li></ul></li>.
+</ul><p>This API does not support dimension query for now. it aggregates and returns Data by root account by default, which means <code>Data.N.TypeKey = AppId</code>. AppId is the unique id of the tencent cloud root account, and N always equals 1.</p>.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<TimingDataRecord> m_data;
                     bool m_dataHasBeenSet;

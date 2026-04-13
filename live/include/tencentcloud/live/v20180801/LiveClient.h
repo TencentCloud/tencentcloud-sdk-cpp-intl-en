@@ -193,6 +193,8 @@
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeSumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribePushBandwidthAndFluxListRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribePushBandwidthAndFluxListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeRecordTaskRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeRecordTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeScreenShotSheetNumListRequest.h>
@@ -532,6 +534,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoListOutcome;
                 typedef std::future<DescribeProvinceIspPlayInfoListOutcome> DescribeProvinceIspPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeProvinceIspPlayInfoListRequest&, DescribeProvinceIspPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProvinceIspPlayInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePushBandwidthAndFluxListResponse> DescribePushBandwidthAndFluxListOutcome;
+                typedef std::future<DescribePushBandwidthAndFluxListOutcome> DescribePushBandwidthAndFluxListOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribePushBandwidthAndFluxListRequest&, DescribePushBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePushBandwidthAndFluxListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRecordTaskResponse> DescribeRecordTaskOutcome;
                 typedef std::future<DescribeRecordTaskOutcome> DescribeRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeRecordTaskRequest&, DescribeRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordTaskAsyncHandler;
@@ -1488,6 +1493,15 @@ If the start time and end time are not on the same day or if the data of specifi
                 DescribeProvinceIspPlayInfoListOutcome DescribeProvinceIspPlayInfoList(const Model::DescribeProvinceIspPlayInfoListRequest &request);
                 void DescribeProvinceIspPlayInfoListAsync(const Model::DescribeProvinceIspPlayInfoListRequest& request, const DescribeProvinceIspPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProvinceIspPlayInfoListOutcomeCallable DescribeProvinceIspPlayInfoListCallable(const Model::DescribeProvinceIspPlayInfoListRequest& request);
+
+                /**
+                 *Live Streaming Push Bandwidth and Traffic Data Query. The push billing will first compare the global push usage with the global playback usage. If the billing conditions are met, billing will be issued based on the usage in each region. For details, refer to the Billing Documentation.(https://cloud.tencent.com/document/product/267/34175)
+                 * @param req DescribePushBandwidthAndFluxListRequest
+                 * @return DescribePushBandwidthAndFluxListOutcome
+                 */
+                DescribePushBandwidthAndFluxListOutcome DescribePushBandwidthAndFluxList(const Model::DescribePushBandwidthAndFluxListRequest &request);
+                void DescribePushBandwidthAndFluxListAsync(const Model::DescribePushBandwidthAndFluxListRequest& request, const DescribePushBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePushBandwidthAndFluxListOutcomeCallable DescribePushBandwidthAndFluxListCallable(const Model::DescribePushBandwidthAndFluxListRequest& request);
 
                 /**
                  *This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 

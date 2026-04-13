@@ -239,6 +239,27 @@ namespace TencentCloud
                      */
                     bool LinesHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * @return NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * 
+                     */
+                    std::string GetNeedConfirm() const;
+
+                    /**
+                     * 设置Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * @param _needConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * 
+                     */
+                    void SetNeedConfirm(const std::string& _needConfirm);
+
+                    /**
+                     * 判断参数 NeedConfirm 是否已赋值
+                     * @return NeedConfirm 是否已赋值
+                     * 
+                     */
+                    bool NeedConfirmHasBeenSet() const;
+
                 private:
 
                     /**
@@ -294,6 +315,12 @@ namespace TencentCloud
                      */
                     std::vector<MultiPathGatewayLine> m_lines;
                     bool m_linesHasBeenSet;
+
+                    /**
+                     * Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     */
+                    std::string m_needConfirm;
+                    bool m_needConfirmHasBeenSet;
 
                 };
             }

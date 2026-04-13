@@ -265,27 +265,27 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
-                     * @return Area Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+                     * 获取Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
+                     * @return Area Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
-                     * @param _area Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+                     * 设置Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
+                     * @param _area Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -448,10 +448,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+                     * Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

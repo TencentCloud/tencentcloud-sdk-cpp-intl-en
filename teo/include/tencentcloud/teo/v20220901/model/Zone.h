@@ -26,9 +26,13 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/Tag.h>
 #include <tencentcloud/teo/v20220901/model/Resource.h>
+#include <tencentcloud/teo/v20220901/model/NSDetail.h>
+#include <tencentcloud/teo/v20220901/model/CNAMEDetail.h>
+#include <tencentcloud/teo/v20220901/model/DNSPodDetail.h>
+#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
 #include <tencentcloud/teo/v20220901/model/VanityNameServers.h>
 #include <tencentcloud/teo/v20220901/model/VanityNameServersIps.h>
-#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
+#include <tencentcloud/teo/v20220901/model/ConfigGroupWorkModeInfo.h>
 
 
 namespace TencentCloud
@@ -40,7 +44,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Site information
+                * Site detail.
                 */
                 class Zone : public AbstractModel
                 {
@@ -94,110 +98,93 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取List of name servers used by the site
-                     * @return OriginalNameServers List of name servers used by the site
+                     * 获取Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+                     * @return AliasZoneName Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
                      * 
                      */
-                    std::vector<std::string> GetOriginalNameServers() const;
+                    std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置List of name servers used by the site
-                     * @param _originalNameServers List of name servers used by the site
+                     * 设置Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+                     * @param _aliasZoneName Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
                      * 
                      */
-                    void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
+                    void SetAliasZoneName(const std::string& _aliasZoneName);
 
                     /**
-                     * 判断参数 OriginalNameServers 是否已赋值
-                     * @return OriginalNameServers 是否已赋值
+                     * 判断参数 AliasZoneName 是否已赋值
+                     * @return AliasZoneName 是否已赋值
                      * 
                      */
-                    bool OriginalNameServersHasBeenSet() const;
+                    bool AliasZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The list of name servers assigned by Tencent Cloud.
-                     * @return NameServers The list of name servers assigned by Tencent Cloud.
+                     * 获取Site acceleration region. valid values:.
+<Li>Global: global availability zone.</li>.
+<Li>Mainland: chinese mainland availability zone.</li>.
+<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+                     * @return Area Site acceleration region. valid values:.
+<Li>Global: global availability zone.</li>.
+<Li>Mainland: chinese mainland availability zone.</li>.
+<li>overseas: global availability zone (excluding the chinese mainland).</li>.
                      * 
                      */
-                    std::vector<std::string> GetNameServers() const;
+                    std::string GetArea() const;
 
                     /**
-                     * 设置The list of name servers assigned by Tencent Cloud.
-                     * @param _nameServers The list of name servers assigned by Tencent Cloud.
+                     * 设置Site acceleration region. valid values:.
+<Li>Global: global availability zone.</li>.
+<Li>Mainland: chinese mainland availability zone.</li>.
+<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+                     * @param _area Site acceleration region. valid values:.
+<Li>Global: global availability zone.</li>.
+<Li>Mainland: chinese mainland availability zone.</li>.
+<li>overseas: global availability zone (excluding the chinese mainland).</li>.
                      * 
                      */
-                    void SetNameServers(const std::vector<std::string>& _nameServers);
+                    void SetArea(const std::string& _area);
 
                     /**
-                     * 判断参数 NameServers 是否已赋值
-                     * @return NameServers 是否已赋值
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
                      * 
                      */
-                    bool NameServersHasBeenSet() const;
+                    bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-                     * @return Status The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-                     * 
-                     */
-                    std::string GetStatus() const;
-
-                    /**
-                     * 设置The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-                     * @param _status The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-                     * 
-                     */
-                    void SetStatus(const std::string& _status);
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     * 
-                     */
-                    bool StatusHasBeenSet() const;
-
-                    /**
-                     * 获取Site access method. Valid values:
-<li>full: NS access;</li>
-<li>partial: CNAME access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-                     * @return Type Site access method. Valid values:
-<li>full: NS access;</li>
-<li>partial: CNAME access;</li>
-<li>noDomainAccess: access with no domain name.</li>
+                     * 获取Site access type. valid values:.
+<li>full: NS access type;</li>.
+<li>partial: CNAME access type;</li>.
+<li>noDomainAccess: domainless access type.</li>.
+<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+<li> pages: pages data type;</li>.
+<li>ai: edge reasoning access type.</li>.
+                     * @return Type Site access type. valid values:.
+<li>full: NS access type;</li>.
+<li>partial: CNAME access type;</li>.
+<li>noDomainAccess: domainless access type.</li>.
+<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+<li> pages: pages data type;</li>.
+<li>ai: edge reasoning access type.</li>.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Site access method. Valid values:
-<li>full: NS access;</li>
-<li>partial: CNAME access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-                     * @param _type Site access method. Valid values:
-<li>full: NS access;</li>
-<li>partial: CNAME access;</li>
-<li>noDomainAccess: access with no domain name.</li>
+                     * 设置Site access type. valid values:.
+<li>full: NS access type;</li>.
+<li>partial: CNAME access type;</li>.
+<li>noDomainAccess: domainless access type.</li>.
+<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+<li> pages: pages data type;</li>.
+<li>ai: edge reasoning access type.</li>.
+                     * @param _type Site access type. valid values:.
+<li>full: NS access type;</li>.
+<li>partial: CNAME access type;</li>.
+<li>noDomainAccess: domainless access type.</li>.
+<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+<li> pages: pages data type;</li>.
+<li>ai: edge reasoning access type.</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -210,94 +197,15 @@ u200c<li>`deactivated`: The site is blocked.</li>
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the site is disabled.
-                     * @return Paused Whether the site is disabled.
-                     * 
-                     */
-                    bool GetPaused() const;
-
-                    /**
-                     * 设置Whether the site is disabled.
-                     * @param _paused Whether the site is disabled.
-                     * 
-                     */
-                    void SetPaused(const bool& _paused);
-
-                    /**
-                     * 判断参数 Paused 是否已赋值
-                     * @return Paused 是否已赋值
-                     * 
-                     */
-                    bool PausedHasBeenSet() const;
-
-                    /**
-                     * 获取Whether CNAME acceleration is enabled. Values:
-<li>`enabled`: Enabled</li>
-<li>`disabled`: Disabled</li>
-                     * @return CnameSpeedUp Whether CNAME acceleration is enabled. Values:
-<li>`enabled`: Enabled</li>
-<li>`disabled`: Disabled</li>
-                     * 
-                     */
-                    std::string GetCnameSpeedUp() const;
-
-                    /**
-                     * 设置Whether CNAME acceleration is enabled. Values:
-<li>`enabled`: Enabled</li>
-<li>`disabled`: Disabled</li>
-                     * @param _cnameSpeedUp Whether CNAME acceleration is enabled. Values:
-<li>`enabled`: Enabled</li>
-<li>`disabled`: Disabled</li>
-                     * 
-                     */
-                    void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
-
-                    /**
-                     * 判断参数 CnameSpeedUp 是否已赋值
-                     * @return CnameSpeedUp 是否已赋值
-                     * 
-                     */
-                    bool CnameSpeedUpHasBeenSet() const;
-
-                    /**
-                     * 获取CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-                     * @return CnameStatus CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-                     * 
-                     */
-                    std::string GetCnameStatus() const;
-
-                    /**
-                     * 设置CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-                     * @param _cnameStatus CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-                     * 
-                     */
-                    void SetCnameStatus(const std::string& _cnameStatus);
-
-                    /**
-                     * 判断参数 CnameStatus 是否已赋值
-                     * @return CnameStatus 是否已赋值
-                     * 
-                     */
-                    bool CnameStatusHasBeenSet() const;
-
-                    /**
-                     * 获取The list of resource tags.
-                     * @return Tags The list of resource tags.
+                     * 获取Specifies the Tag associated with the site.
+                     * @return Tags Specifies the Tag associated with the site.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置The list of resource tags.
-                     * @param _tags The list of resource tags.
+                     * 设置Specifies the Tag associated with the site.
+                     * @param _tags Specifies the Tag associated with the site.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -329,6 +237,69 @@ u200c<li>`deactivated`: The site is blocked.</li>
                      * 
                      */
                     bool ResourcesHasBeenSet() const;
+
+                    /**
+                     * 获取NS site detail. returned only when Type = full.
+                     * @return NSDetail NS site detail. returned only when Type = full.
+                     * 
+                     */
+                    NSDetail GetNSDetail() const;
+
+                    /**
+                     * 设置NS site detail. returned only when Type = full.
+                     * @param _nSDetail NS site detail. returned only when Type = full.
+                     * 
+                     */
+                    void SetNSDetail(const NSDetail& _nSDetail);
+
+                    /**
+                     * 判断参数 NSDetail 是否已赋值
+                     * @return NSDetail 是否已赋值
+                     * 
+                     */
+                    bool NSDetailHasBeenSet() const;
+
+                    /**
+                     * 获取CNAME site detail. returned only when Type = partial.
+                     * @return CNAMEDetail CNAME site detail. returned only when Type = partial.
+                     * 
+                     */
+                    CNAMEDetail GetCNAMEDetail() const;
+
+                    /**
+                     * 设置CNAME site detail. returned only when Type = partial.
+                     * @param _cNAMEDetail CNAME site detail. returned only when Type = partial.
+                     * 
+                     */
+                    void SetCNAMEDetail(const CNAMEDetail& _cNAMEDetail);
+
+                    /**
+                     * 判断参数 CNAMEDetail 是否已赋值
+                     * @return CNAMEDetail 是否已赋值
+                     * 
+                     */
+                    bool CNAMEDetailHasBeenSet() const;
+
+                    /**
+                     * 获取DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+                     * @return DNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+                     * 
+                     */
+                    DNSPodDetail GetDNSPodDetail() const;
+
+                    /**
+                     * 设置DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+                     * @param _dNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+                     * 
+                     */
+                    void SetDNSPodDetail(const DNSPodDetail& _dNSPodDetail);
+
+                    /**
+                     * 判断参数 DNSPodDetail 是否已赋值
+                     * @return DNSPodDetail 是否已赋值
+                     * 
+                     */
+                    bool DNSPodDetailHasBeenSet() const;
 
                     /**
                      * 获取The creation time of the site.
@@ -373,87 +344,74 @@ u200c<li>`deactivated`: The site is blocked.</li>
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
-                     * 获取The site access region. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @return Area The site access region. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 获取The site status. Values:
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
+                     * @return Status The site status. Values:
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * 
                      */
-                    std::string GetArea() const;
+                    std::string GetStatus() const;
 
                     /**
-                     * 设置The site access region. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @param _area The site access region. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 设置The site status. Values:
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
+                     * @param _status The site status. Values:
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * 
                      */
-                    void SetArea(const std::string& _area);
+                    void SetStatus(const std::string& _status);
 
                     /**
-                     * 判断参数 Area 是否已赋值
-                     * @return Area 是否已赋值
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
                      * 
                      */
-                    bool AreaHasBeenSet() const;
+                    bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The custom name server information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VanityNameServers The custom name server information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CNAME record access status. Values:
+<li>`finished`: The site is verified.</li>
+<li>`pending`: The site is being verified.</li>
+                     * @return CnameStatus CNAME record access status. Values:
+<li>`finished`: The site is verified.</li>
+<li>`pending`: The site is being verified.</li>
                      * 
                      */
-                    VanityNameServers GetVanityNameServers() const;
+                    std::string GetCnameStatus() const;
 
                     /**
-                     * 设置The custom name server information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vanityNameServers The custom name server information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CNAME record access status. Values:
+<li>`finished`: The site is verified.</li>
+<li>`pending`: The site is being verified.</li>
+                     * @param _cnameStatus CNAME record access status. Values:
+<li>`finished`: The site is verified.</li>
+<li>`pending`: The site is being verified.</li>
                      * 
                      */
-                    void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
+                    void SetCnameStatus(const std::string& _cnameStatus);
 
                     /**
-                     * 判断参数 VanityNameServers 是否已赋值
-                     * @return VanityNameServers 是否已赋值
+                     * 判断参数 CnameStatus 是否已赋值
+                     * @return CnameStatus 是否已赋值
                      * 
                      */
-                    bool VanityNameServersHasBeenSet() const;
-
-                    /**
-                     * 获取The custom name server IP information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VanityNameServersIps The custom name server IP information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
-
-                    /**
-                     * 设置The custom name server IP information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vanityNameServersIps The custom name server IP information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetVanityNameServersIps(const std::vector<VanityNameServersIps>& _vanityNameServersIps);
-
-                    /**
-                     * 判断参数 VanityNameServersIps 是否已赋值
-                     * @return VanityNameServersIps 是否已赋值
-                     * 
-                     */
-                    bool VanityNameServersIpsHasBeenSet() const;
+                    bool CnameStatusHasBeenSet() const;
 
                     /**
                      * 获取Status of the proxy. Values:
@@ -489,56 +447,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActiveStatusHasBeenSet() const;
 
                     /**
-                     * 获取Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-                     * @return AliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-                     * 
-                     */
-                    std::string GetAliasZoneName() const;
-
-                    /**
-                     * 设置Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-                     * @param _aliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-                     * 
-                     */
-                    void SetAliasZoneName(const std::string& _aliasZoneName);
-
-                    /**
-                     * 判断参数 AliasZoneName 是否已赋值
-                     * @return AliasZoneName 是否已赋值
-                     * 
-                     */
-                    bool AliasZoneNameHasBeenSet() const;
-
-                    /**
-                     * 获取Whether it’s a fake site. Valid values: 
-<li>`0`: Non-fake site;</li>
-<li>`1`: Fake site.</li>
-                     * @return IsFake Whether it’s a fake site. Valid values: 
-<li>`0`: Non-fake site;</li>
-<li>`1`: Fake site.</li>
-                     * 
-                     */
-                    int64_t GetIsFake() const;
-
-                    /**
-                     * 设置Whether it’s a fake site. Valid values: 
-<li>`0`: Non-fake site;</li>
-<li>`1`: Fake site.</li>
-                     * @param _isFake Whether it’s a fake site. Valid values: 
-<li>`0`: Non-fake site;</li>
-<li>`1`: Fake site.</li>
-                     * 
-                     */
-                    void SetIsFake(const int64_t& _isFake);
-
-                    /**
-                     * 判断参数 IsFake 是否已赋值
-                     * @return IsFake 是否已赋值
-                     * 
-                     */
-                    bool IsFakeHasBeenSet() const;
-
-                    /**
                      * 获取Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      * @return LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      * 
@@ -560,19 +468,102 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LockStatusHasBeenSet() const;
 
                     /**
-                     * 获取Ownership verification information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OwnershipVerification Ownership verification information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Whether the site is disabled.
+                     * @return Paused Whether the site is disabled.
+                     * 
+                     */
+                    bool GetPaused() const;
+
+                    /**
+                     * 设置Whether the site is disabled.
+                     * @param _paused Whether the site is disabled.
+                     * 
+                     */
+                    void SetPaused(const bool& _paused);
+
+                    /**
+                     * 判断参数 Paused 是否已赋值
+                     * @return Paused 是否已赋值
+                     * 
+                     */
+                    bool PausedHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+<Li>0: non-fake site.</li>.
+<Li>1: fake site.</li>.
+
+                     * @return IsFake Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+<Li>0: non-fake site.</li>.
+<Li>1: fake site.</li>.
+
+                     * 
+                     */
+                    int64_t GetIsFake() const;
+
+                    /**
+                     * 设置Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+<Li>0: non-fake site.</li>.
+<Li>1: fake site.</li>.
+
+                     * @param _isFake Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+<Li>0: non-fake site.</li>.
+<Li>1: fake site.</li>.
+
+                     * 
+                     */
+                    void SetIsFake(const int64_t& _isFake);
+
+                    /**
+                     * 判断参数 IsFake 是否已赋值
+                     * @return IsFake 是否已赋值
+                     * 
+                     */
+                    bool IsFakeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+<Li>Enabled: specifies whether the feature is enabled.</li>.
+<li>disabled: specifies that the feature is turned off.</li>.
+                     * @return CnameSpeedUp Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+<Li>Enabled: specifies whether the feature is enabled.</li>.
+<li>disabled: specifies that the feature is turned off.</li>.
+                     * 
+                     */
+                    std::string GetCnameSpeedUp() const;
+
+                    /**
+                     * 设置Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+<Li>Enabled: specifies whether the feature is enabled.</li>.
+<li>disabled: specifies that the feature is turned off.</li>.
+                     * @param _cnameSpeedUp Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+<Li>Enabled: specifies whether the feature is enabled.</li>.
+<li>disabled: specifies that the feature is turned off.</li>.
+                     * 
+                     */
+                    void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
+
+                    /**
+                     * 判断参数 CnameSpeedUp 是否已赋值
+                     * @return CnameSpeedUp 是否已赋值
+                     * 
+                     */
+                    bool CnameSpeedUpHasBeenSet() const;
+
+                    /**
+                     * 获取Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return OwnershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     OwnershipVerification GetOwnershipVerification() const;
 
                     /**
-                     * 设置Ownership verification information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _ownershipVerification Ownership verification information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _ownershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
@@ -583,6 +574,119 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 
                      */
                     bool OwnershipVerificationHasBeenSet() const;
+
+                    /**
+                     * 获取Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+                     * @return OriginalNameServers Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+                     * 
+                     */
+                    std::vector<std::string> GetOriginalNameServers() const;
+
+                    /**
+                     * 设置Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+                     * @param _originalNameServers Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+                     * 
+                     */
+                    void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
+
+                    /**
+                     * 判断参数 OriginalNameServers 是否已赋值
+                     * @return OriginalNameServers 是否已赋值
+                     * 
+                     */
+                    bool OriginalNameServersHasBeenSet() const;
+
+                    /**
+                     * 获取Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+                     * @return NameServers Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+                     * 
+                     */
+                    std::vector<std::string> GetNameServers() const;
+
+                    /**
+                     * 设置Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+                     * @param _nameServers Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+                     * 
+                     */
+                    void SetNameServers(const std::vector<std::string>& _nameServers);
+
+                    /**
+                     * 判断参数 NameServers 是否已赋值
+                     * @return NameServers 是否已赋值
+                     * 
+                     */
+                    bool NameServersHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return VanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    VanityNameServers GetVanityNameServers() const;
+
+                    /**
+                     * 设置Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _vanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
+
+                    /**
+                     * 判断参数 VanityNameServers 是否已赋值
+                     * @return VanityNameServers 是否已赋值
+                     * 
+                     */
+                    bool VanityNameServersHasBeenSet() const;
+
+                    /**
+                     * 获取User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return VanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
+
+                    /**
+                     * 设置User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _vanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetVanityNameServersIps(const std::vector<VanityNameServersIps>& _vanityNameServersIps);
+
+                    /**
+                     * 判断参数 VanityNameServersIps 是否已赋值
+                     * @return VanityNameServersIps 是否已赋值
+                     * 
+                     */
+                    bool VanityNameServersIpsHasBeenSet() const;
+
+                    /**
+                     * 获取Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+                     * @return WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+                     * 
+                     */
+                    std::vector<ConfigGroupWorkModeInfo> GetWorkModeInfos() const;
+
+                    /**
+                     * 设置Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+                     * @param _workModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetWorkModeInfos(const std::vector<ConfigGroupWorkModeInfo>& _workModeInfos);
+
+                    /**
+                     * 判断参数 WorkModeInfos 是否已赋值
+                     * @return WorkModeInfos 是否已赋值
+                     * 
+                     */
+                    bool WorkModeInfosHasBeenSet() const;
 
                 private:
 
@@ -599,61 +703,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * List of name servers used by the site
+                     * Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
                      */
-                    std::vector<std::string> m_originalNameServers;
-                    bool m_originalNameServersHasBeenSet;
+                    std::string m_aliasZoneName;
+                    bool m_aliasZoneNameHasBeenSet;
 
                     /**
-                     * The list of name servers assigned by Tencent Cloud.
+                     * Site acceleration region. valid values:.
+<Li>Global: global availability zone.</li>.
+<Li>Mainland: chinese mainland availability zone.</li>.
+<li>overseas: global availability zone (excluding the chinese mainland).</li>.
                      */
-                    std::vector<std::string> m_nameServers;
-                    bool m_nameServersHasBeenSet;
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                     /**
-                     * The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-                     */
-                    std::string m_status;
-                    bool m_statusHasBeenSet;
-
-                    /**
-                     * Site access method. Valid values:
-<li>full: NS access;</li>
-<li>partial: CNAME access;</li>
-<li>noDomainAccess: access with no domain name.</li>
+                     * Site access type. valid values:.
+<li>full: NS access type;</li>.
+<li>partial: CNAME access type;</li>.
+<li>noDomainAccess: domainless access type.</li>.
+<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+<li> pages: pages data type;</li>.
+<li>ai: edge reasoning access type.</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether the site is disabled.
-                     */
-                    bool m_paused;
-                    bool m_pausedHasBeenSet;
-
-                    /**
-                     * Whether CNAME acceleration is enabled. Values:
-<li>`enabled`: Enabled</li>
-<li>`disabled`: Disabled</li>
-                     */
-                    std::string m_cnameSpeedUp;
-                    bool m_cnameSpeedUpHasBeenSet;
-
-                    /**
-                     * CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-                     */
-                    std::string m_cnameStatus;
-                    bool m_cnameStatusHasBeenSet;
-
-                    /**
-                     * The list of resource tags.
+                     * Specifies the Tag associated with the site.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -663,6 +740,24 @@ u200c<li>`deactivated`: The site is blocked.</li>
                      */
                     std::vector<Resource> m_resources;
                     bool m_resourcesHasBeenSet;
+
+                    /**
+                     * NS site detail. returned only when Type = full.
+                     */
+                    NSDetail m_nSDetail;
+                    bool m_nSDetailHasBeenSet;
+
+                    /**
+                     * CNAME site detail. returned only when Type = partial.
+                     */
+                    CNAMEDetail m_cNAMEDetail;
+                    bool m_cNAMEDetailHasBeenSet;
+
+                    /**
+                     * DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+                     */
+                    DNSPodDetail m_dNSPodDetail;
+                    bool m_dNSPodDetailHasBeenSet;
 
                     /**
                      * The creation time of the site.
@@ -677,27 +772,23 @@ u200c<li>`deactivated`: The site is blocked.</li>
                     bool m_modifiedOnHasBeenSet;
 
                     /**
-                     * The site access region. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * The site status. Values:
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      */
-                    std::string m_area;
-                    bool m_areaHasBeenSet;
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
 
                     /**
-                     * The custom name server information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CNAME record access status. Values:
+<li>`finished`: The site is verified.</li>
+<li>`pending`: The site is being verified.</li>
                      */
-                    VanityNameServers m_vanityNameServers;
-                    bool m_vanityNameServersHasBeenSet;
-
-                    /**
-                     * The custom name server IP information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::vector<VanityNameServersIps> m_vanityNameServersIps;
-                    bool m_vanityNameServersIpsHasBeenSet;
+                    std::string m_cnameStatus;
+                    bool m_cnameStatusHasBeenSet;
 
                     /**
                      * Status of the proxy. Values:
@@ -709,31 +800,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_activeStatusHasBeenSet;
 
                     /**
-                     * Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-                     */
-                    std::string m_aliasZoneName;
-                    bool m_aliasZoneNameHasBeenSet;
-
-                    /**
-                     * Whether it’s a fake site. Valid values: 
-<li>`0`: Non-fake site;</li>
-<li>`1`: Fake site.</li>
-                     */
-                    int64_t m_isFake;
-                    bool m_isFakeHasBeenSet;
-
-                    /**
                      * Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      */
                     std::string m_lockStatus;
                     bool m_lockStatusHasBeenSet;
 
                     /**
-                     * Ownership verification information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Whether the site is disabled.
+                     */
+                    bool m_paused;
+                    bool m_pausedHasBeenSet;
+
+                    /**
+                     * Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+<Li>0: non-fake site.</li>.
+<Li>1: fake site.</li>.
+
+                     */
+                    int64_t m_isFake;
+                    bool m_isFakeHasBeenSet;
+
+                    /**
+                     * Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+<Li>Enabled: specifies whether the feature is enabled.</li>.
+<li>disabled: specifies that the feature is turned off.</li>.
+                     */
+                    std::string m_cnameSpeedUp;
+                    bool m_cnameSpeedUpHasBeenSet;
+
+                    /**
+                     * Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     OwnershipVerification m_ownershipVerification;
                     bool m_ownershipVerificationHasBeenSet;
+
+                    /**
+                     * Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+                     */
+                    std::vector<std::string> m_originalNameServers;
+                    bool m_originalNameServersHasBeenSet;
+
+                    /**
+                     * Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+                     */
+                    std::vector<std::string> m_nameServers;
+                    bool m_nameServersHasBeenSet;
+
+                    /**
+                     * Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    VanityNameServers m_vanityNameServers;
+                    bool m_vanityNameServersHasBeenSet;
+
+                    /**
+                     * User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    std::vector<VanityNameServersIps> m_vanityNameServersIps;
+                    bool m_vanityNameServersIpsHasBeenSet;
+
+                    /**
+                     * Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+                     */
+                    std::vector<ConfigGroupWorkModeInfo> m_workModeInfos;
+                    bool m_workModeInfosHasBeenSet;
 
                 };
             }

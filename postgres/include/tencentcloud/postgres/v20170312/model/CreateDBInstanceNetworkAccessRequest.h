@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-6bwgamo3.
-                     * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 获取Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
+                     * @return DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-6bwgamo3.
-                     * @param _dBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 设置Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
+                     * @param _dBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsAssignVipHasBeenSet() const;
 
                     /**
-                     * 获取Target VIP.
-                     * @return Vip Target VIP.
+                     * 获取Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+                     * @return Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Target VIP.
-                     * @param _vip Target VIP.
+                     * 设置Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+                     * @param _vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-6bwgamo3.
+                     * Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_isAssignVipHasBeenSet;
 
                     /**
-                     * Target VIP.
+                     * Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -107,15 +107,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of items displayed at a time
-                     * @return Limit Number of items displayed at a time
+                     * 获取Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
+                     * @return Limit Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items displayed at a time
-                     * @param _limit Number of items displayed at a time
+                     * 设置Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
+                     * @param _limit Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -130,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -148,7 +152,8 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of items displayed at a time
+                     * Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

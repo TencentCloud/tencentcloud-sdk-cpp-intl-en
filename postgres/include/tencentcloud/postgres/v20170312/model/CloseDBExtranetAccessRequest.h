@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-6r233v55
-                     * @return DBInstanceId Instance ID in the format of postgres-6r233v55
+                     * 获取Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+                     * @return DBInstanceId Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-6r233v55
-                     * @param _dBInstanceId Instance ID in the format of postgres-6r233v55
+                     * 设置Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+                     * @param _dBInstanceId Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
-                     * @return IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * 获取Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
+                     * @return IsIpv6 Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
                      * 
                      */
                     int64_t GetIsIpv6() const;
 
                     /**
-                     * 设置Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
-                     * @param _isIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * 设置Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
+                     * @param _isIpv6 Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
                      * 
                      */
                     void SetIsIpv6(const int64_t& _isIpv6);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-6r233v55
+                     * Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
                      */
                     int64_t m_isIpv6;
                     bool m_isIpv6HasBeenSet;

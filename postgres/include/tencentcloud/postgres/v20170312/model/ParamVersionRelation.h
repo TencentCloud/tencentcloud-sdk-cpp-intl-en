@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter name.
+                     * @return Name Parameter name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter name.
+                     * @param _name Parameter name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBKernelVersion The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter information belonging to kernel version.
+                     * @return DBKernelVersion Parameter information belonging to kernel version.
                      * 
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
-                     * 设置The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dBKernelVersion The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter information belonging to kernel version.
+                     * @param _dBKernelVersion Parameter information belonging to kernel version.
                      * 
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBKernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Default value of the parameter for this version and specification.
+                     * @return Value Default value of the parameter for this version and specification.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Default value of the parameter for this version and specification.
+                     * @param _value Default value of the parameter for this version and specification.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter value unit. returns null if the parameter has no units.
+                     * @return Unit Parameter value unit. returns null if the parameter has no units.
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter value unit. returns null if the parameter has no units.
+                     * @param _unit Parameter value unit. returns null if the parameter has no units.
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitHasBeenSet() const;
 
                     /**
-                     * 获取The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Max The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Numerical type (integer, real) parameter specifies the upper bound.
+                     * @return Max Numerical type (integer, real) parameter specifies the upper bound.
                      * 
                      */
                     double GetMax() const;
 
                     /**
-                     * 设置The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _max The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Numerical type (integer, real) parameter specifies the upper bound.
+                     * @param _max Numerical type (integer, real) parameter specifies the upper bound.
                      * 
                      */
                     void SetMax(const double& _max);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Min The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the numerical type (integer, real) parameter and its lower bound.
+                     * @return Min Specifies the numerical type (integer, real) parameter and its lower bound.
                      * 
                      */
                     double GetMin() const;
 
                     /**
-                     * 设置The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _min The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the numerical type (integer, real) parameter and its lower bound.
+                     * @param _min Specifies the numerical type (integer, real) parameter and its lower bound.
                      * 
                      */
                     void SetMin(const double& _min);
@@ -224,43 +200,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter information belonging to kernel version.
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;
 
                     /**
-                     * Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Default value of the parameter for this version and specification.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter value unit. returns null if the parameter has no units.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
 
                     /**
-                     * The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Numerical type (integer, real) parameter specifies the upper bound.
                      */
                     double m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the numerical type (integer, real) parameter and its lower bound.
                      */
                     double m_min;
                     bool m_minHasBeenSet;

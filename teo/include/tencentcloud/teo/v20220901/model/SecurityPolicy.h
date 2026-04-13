@@ -31,6 +31,7 @@
 #include <tencentcloud/teo/v20220901/model/ExceptionRules.h>
 #include <tencentcloud/teo/v20220901/model/BotManagement.h>
 #include <tencentcloud/teo/v20220901/model/BotManagementLite.h>
+#include <tencentcloud/teo/v20220901/model/DefaultDenySecurityActionParameters.h>
 
 
 namespace TencentCloud
@@ -208,6 +209,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool BotManagementLiteHasBeenSet() const;
 
+                    /**
+                     * 获取Default intercept action configuration.
+                     * @return DefaultDenySecurityActionParameters Default intercept action configuration.
+                     * 
+                     */
+                    DefaultDenySecurityActionParameters GetDefaultDenySecurityActionParameters() const;
+
+                    /**
+                     * 设置Default intercept action configuration.
+                     * @param _defaultDenySecurityActionParameters Default intercept action configuration.
+                     * 
+                     */
+                    void SetDefaultDenySecurityActionParameters(const DefaultDenySecurityActionParameters& _defaultDenySecurityActionParameters);
+
+                    /**
+                     * 判断参数 DefaultDenySecurityActionParameters 是否已赋值
+                     * @return DefaultDenySecurityActionParameters 是否已赋值
+                     * 
+                     */
+                    bool DefaultDenySecurityActionParametersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -253,6 +275,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     BotManagementLite m_botManagementLite;
                     bool m_botManagementLiteHasBeenSet;
+
+                    /**
+                     * Default intercept action configuration.
+                     */
+                    DefaultDenySecurityActionParameters m_defaultDenySecurityActionParameters;
+                    bool m_defaultDenySecurityActionParametersHasBeenSet;
 
                 };
             }

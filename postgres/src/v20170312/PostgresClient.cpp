@@ -240,6 +240,106 @@ PostgresClient::CloseServerlessDBExtranetAccessOutcomeCallable PostgresClient::C
     return prom->get_future();
 }
 
+PostgresClient::CreateAccountOutcome PostgresClient::CreateAccount(const CreateAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAccountResponse rsp = CreateAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAccountOutcome(rsp);
+        else
+            return CreateAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAccountOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::CreateAccountAsync(const CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAccountRequest&;
+    using Resp = CreateAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::CreateAccountOutcomeCallable PostgresClient::CreateAccountCallable(const CreateAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAccountOutcome>>();
+    CreateAccountAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const CreateAccountRequest&,
+        CreateAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::CreateBackupPlanOutcome PostgresClient::CreateBackupPlan(const CreateBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateBackupPlanResponse rsp = CreateBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateBackupPlanOutcome(rsp);
+        else
+            return CreateBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::CreateBackupPlanAsync(const CreateBackupPlanRequest& request, const CreateBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateBackupPlanRequest&;
+    using Resp = CreateBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::CreateBackupPlanOutcomeCallable PostgresClient::CreateBackupPlanCallable(const CreateBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateBackupPlanOutcome>>();
+    CreateBackupPlanAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const CreateBackupPlanRequest&,
+        CreateBackupPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::CreateBaseBackupOutcome PostgresClient::CreateBaseBackup(const CreateBaseBackupRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateBaseBackup");
@@ -382,6 +482,56 @@ PostgresClient::CreateDBInstancesOutcomeCallable PostgresClient::CreateDBInstanc
         const PostgresClient*,
         const CreateDBInstancesRequest&,
         CreateDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::CreateDatabaseOutcome PostgresClient::CreateDatabase(const CreateDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDatabaseResponse rsp = CreateDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDatabaseOutcome(rsp);
+        else
+            return CreateDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::CreateDatabaseAsync(const CreateDatabaseRequest& request, const CreateDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDatabaseRequest&;
+    using Resp = CreateDatabaseResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::CreateDatabaseOutcomeCallable PostgresClient::CreateDatabaseCallable(const CreateDatabaseRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDatabaseOutcome>>();
+    CreateDatabaseAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const CreateDatabaseRequest&,
+        CreateDatabaseOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -682,6 +832,106 @@ PostgresClient::CreateServerlessDBInstanceOutcomeCallable PostgresClient::Create
         const PostgresClient*,
         const CreateServerlessDBInstanceRequest&,
         CreateServerlessDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::DeleteAccountOutcome PostgresClient::DeleteAccount(const DeleteAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAccountResponse rsp = DeleteAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAccountOutcome(rsp);
+        else
+            return DeleteAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAccountOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DeleteAccountAsync(const DeleteAccountRequest& request, const DeleteAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAccountRequest&;
+    using Resp = DeleteAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DeleteAccountOutcomeCallable PostgresClient::DeleteAccountCallable(const DeleteAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAccountOutcome>>();
+    DeleteAccountAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DeleteAccountRequest&,
+        DeleteAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::DeleteBackupPlanOutcome PostgresClient::DeleteBackupPlan(const DeleteBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBackupPlanResponse rsp = DeleteBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBackupPlanOutcome(rsp);
+        else
+            return DeleteBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DeleteBackupPlanAsync(const DeleteBackupPlanRequest& request, const DeleteBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBackupPlanRequest&;
+    using Resp = DeleteBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DeleteBackupPlanOutcomeCallable PostgresClient::DeleteBackupPlanCallable(const DeleteBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBackupPlanOutcome>>();
+    DeleteBackupPlanAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DeleteBackupPlanRequest&,
+        DeleteBackupPlanOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1032,6 +1282,56 @@ PostgresClient::DeleteServerlessDBInstanceOutcomeCallable PostgresClient::Delete
         const PostgresClient*,
         const DeleteServerlessDBInstanceRequest&,
         DeleteServerlessDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::DescribeAccountPrivilegesOutcome PostgresClient::DescribeAccountPrivileges(const DescribeAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountPrivilegesResponse rsp = DescribeAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountPrivilegesOutcome(rsp);
+        else
+            return DescribeAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeAccountPrivilegesAsync(const DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAccountPrivilegesRequest&;
+    using Resp = DescribeAccountPrivilegesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeAccountPrivilegesOutcomeCallable PostgresClient::DescribeAccountPrivilegesCallable(const DescribeAccountPrivilegesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAccountPrivilegesOutcome>>();
+    DescribeAccountPrivilegesAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeAccountPrivilegesRequest&,
+        DescribeAccountPrivilegesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1790,6 +2090,56 @@ PostgresClient::DescribeDBInstanceParametersOutcomeCallable PostgresClient::Desc
     return prom->get_future();
 }
 
+PostgresClient::DescribeDBInstanceSSLConfigOutcome PostgresClient::DescribeDBInstanceSSLConfig(const DescribeDBInstanceSSLConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBInstanceSSLConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBInstanceSSLConfigResponse rsp = DescribeDBInstanceSSLConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBInstanceSSLConfigOutcome(rsp);
+        else
+            return DescribeDBInstanceSSLConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBInstanceSSLConfigOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeDBInstanceSSLConfigAsync(const DescribeDBInstanceSSLConfigRequest& request, const DescribeDBInstanceSSLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDBInstanceSSLConfigRequest&;
+    using Resp = DescribeDBInstanceSSLConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBInstanceSSLConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeDBInstanceSSLConfigOutcomeCallable PostgresClient::DescribeDBInstanceSSLConfigCallable(const DescribeDBInstanceSSLConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDBInstanceSSLConfigOutcome>>();
+    DescribeDBInstanceSSLConfigAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeDBInstanceSSLConfigRequest&,
+        DescribeDBInstanceSSLConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::DescribeDBInstanceSecurityGroupsOutcome PostgresClient::DescribeDBInstanceSecurityGroups(const DescribeDBInstanceSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBInstanceSecurityGroups");
@@ -2040,6 +2390,56 @@ PostgresClient::DescribeDBXlogsOutcomeCallable PostgresClient::DescribeDBXlogsCa
     return prom->get_future();
 }
 
+PostgresClient::DescribeDatabaseObjectsOutcome PostgresClient::DescribeDatabaseObjects(const DescribeDatabaseObjectsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabaseObjects");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabaseObjectsResponse rsp = DescribeDatabaseObjectsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabaseObjectsOutcome(rsp);
+        else
+            return DescribeDatabaseObjectsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabaseObjectsOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeDatabaseObjectsAsync(const DescribeDatabaseObjectsRequest& request, const DescribeDatabaseObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDatabaseObjectsRequest&;
+    using Resp = DescribeDatabaseObjectsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDatabaseObjects", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeDatabaseObjectsOutcomeCallable PostgresClient::DescribeDatabaseObjectsCallable(const DescribeDatabaseObjectsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDatabaseObjectsOutcome>>();
+    DescribeDatabaseObjectsAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeDatabaseObjectsRequest&,
+        DescribeDatabaseObjectsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::DescribeDatabasesOutcome PostgresClient::DescribeDatabases(const DescribeDatabasesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDatabases");
@@ -2082,6 +2482,56 @@ PostgresClient::DescribeDatabasesOutcomeCallable PostgresClient::DescribeDatabas
         const PostgresClient*,
         const DescribeDatabasesRequest&,
         DescribeDatabasesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::DescribeDedicatedClustersOutcome PostgresClient::DescribeDedicatedClusters(const DescribeDedicatedClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDedicatedClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDedicatedClustersResponse rsp = DescribeDedicatedClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDedicatedClustersOutcome(rsp);
+        else
+            return DescribeDedicatedClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDedicatedClustersOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeDedicatedClustersAsync(const DescribeDedicatedClustersRequest& request, const DescribeDedicatedClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDedicatedClustersRequest&;
+    using Resp = DescribeDedicatedClustersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDedicatedClusters", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeDedicatedClustersOutcomeCallable PostgresClient::DescribeDedicatedClustersCallable(const DescribeDedicatedClustersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDedicatedClustersOutcome>>();
+    DescribeDedicatedClustersAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeDedicatedClustersRequest&,
+        DescribeDedicatedClustersOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2232,6 +2682,56 @@ PostgresClient::DescribeLogBackupsOutcomeCallable PostgresClient::DescribeLogBac
         const PostgresClient*,
         const DescribeLogBackupsRequest&,
         DescribeLogBackupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::DescribeMaintainTimeWindowOutcome PostgresClient::DescribeMaintainTimeWindow(const DescribeMaintainTimeWindowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMaintainTimeWindow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMaintainTimeWindowResponse rsp = DescribeMaintainTimeWindowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMaintainTimeWindowOutcome(rsp);
+        else
+            return DescribeMaintainTimeWindowOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMaintainTimeWindowOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeMaintainTimeWindowAsync(const DescribeMaintainTimeWindowRequest& request, const DescribeMaintainTimeWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMaintainTimeWindowRequest&;
+    using Resp = DescribeMaintainTimeWindowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMaintainTimeWindow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeMaintainTimeWindowOutcomeCallable PostgresClient::DescribeMaintainTimeWindowCallable(const DescribeMaintainTimeWindowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMaintainTimeWindowOutcome>>();
+    DescribeMaintainTimeWindowAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeMaintainTimeWindowRequest&,
+        DescribeMaintainTimeWindowOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2740,6 +3240,56 @@ PostgresClient::DescribeSlowQueryListOutcomeCallable PostgresClient::DescribeSlo
     return prom->get_future();
 }
 
+PostgresClient::DescribeTasksOutcome PostgresClient::DescribeTasks(const DescribeTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTasksResponse rsp = DescribeTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTasksOutcome(rsp);
+        else
+            return DescribeTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTasksOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::DescribeTasksAsync(const DescribeTasksRequest& request, const DescribeTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTasksRequest&;
+    using Resp = DescribeTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::DescribeTasksOutcomeCallable PostgresClient::DescribeTasksCallable(const DescribeTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTasksOutcome>>();
+    DescribeTasksAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const DescribeTasksRequest&,
+        DescribeTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::DescribeZonesOutcome PostgresClient::DescribeZones(const DescribeZonesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeZones");
@@ -3132,6 +3682,106 @@ PostgresClient::IsolateDBInstancesOutcomeCallable PostgresClient::IsolateDBInsta
         const PostgresClient*,
         const IsolateDBInstancesRequest&,
         IsolateDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::LockAccountOutcome PostgresClient::LockAccount(const LockAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "LockAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        LockAccountResponse rsp = LockAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return LockAccountOutcome(rsp);
+        else
+            return LockAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return LockAccountOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::LockAccountAsync(const LockAccountRequest& request, const LockAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const LockAccountRequest&;
+    using Resp = LockAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "LockAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::LockAccountOutcomeCallable PostgresClient::LockAccountCallable(const LockAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<LockAccountOutcome>>();
+    LockAccountAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const LockAccountRequest&,
+        LockAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::ModifyAccountPrivilegesOutcome PostgresClient::ModifyAccountPrivileges(const ModifyAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountPrivilegesResponse rsp = ModifyAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountPrivilegesOutcome(rsp);
+        else
+            return ModifyAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyAccountPrivilegesAsync(const ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyAccountPrivilegesRequest&;
+    using Resp = ModifyAccountPrivilegesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyAccountPrivilegesOutcomeCallable PostgresClient::ModifyAccountPrivilegesCallable(const ModifyAccountPrivilegesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyAccountPrivilegesOutcome>>();
+    ModifyAccountPrivilegesAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyAccountPrivilegesRequest&,
+        ModifyAccountPrivilegesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3640,6 +4290,56 @@ PostgresClient::ModifyDBInstanceReadOnlyGroupOutcomeCallable PostgresClient::Mod
     return prom->get_future();
 }
 
+PostgresClient::ModifyDBInstanceSSLConfigOutcome PostgresClient::ModifyDBInstanceSSLConfig(const ModifyDBInstanceSSLConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceSSLConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceSSLConfigResponse rsp = ModifyDBInstanceSSLConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceSSLConfigOutcome(rsp);
+        else
+            return ModifyDBInstanceSSLConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceSSLConfigOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyDBInstanceSSLConfigAsync(const ModifyDBInstanceSSLConfigRequest& request, const ModifyDBInstanceSSLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDBInstanceSSLConfigRequest&;
+    using Resp = ModifyDBInstanceSSLConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceSSLConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyDBInstanceSSLConfigOutcomeCallable PostgresClient::ModifyDBInstanceSSLConfigCallable(const ModifyDBInstanceSSLConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceSSLConfigOutcome>>();
+    ModifyDBInstanceSSLConfigAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyDBInstanceSSLConfigRequest&,
+        ModifyDBInstanceSSLConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::ModifyDBInstanceSecurityGroupsOutcome PostgresClient::ModifyDBInstanceSecurityGroups(const ModifyDBInstanceSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDBInstanceSecurityGroups");
@@ -3790,6 +4490,106 @@ PostgresClient::ModifyDBInstancesProjectOutcomeCallable PostgresClient::ModifyDB
     return prom->get_future();
 }
 
+PostgresClient::ModifyDatabaseOwnerOutcome PostgresClient::ModifyDatabaseOwner(const ModifyDatabaseOwnerRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDatabaseOwner");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDatabaseOwnerResponse rsp = ModifyDatabaseOwnerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDatabaseOwnerOutcome(rsp);
+        else
+            return ModifyDatabaseOwnerOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDatabaseOwnerOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyDatabaseOwnerAsync(const ModifyDatabaseOwnerRequest& request, const ModifyDatabaseOwnerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDatabaseOwnerRequest&;
+    using Resp = ModifyDatabaseOwnerResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDatabaseOwner", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyDatabaseOwnerOutcomeCallable PostgresClient::ModifyDatabaseOwnerCallable(const ModifyDatabaseOwnerRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDatabaseOwnerOutcome>>();
+    ModifyDatabaseOwnerAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyDatabaseOwnerRequest&,
+        ModifyDatabaseOwnerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::ModifyMaintainTimeWindowOutcome PostgresClient::ModifyMaintainTimeWindow(const ModifyMaintainTimeWindowRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMaintainTimeWindow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMaintainTimeWindowResponse rsp = ModifyMaintainTimeWindowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMaintainTimeWindowOutcome(rsp);
+        else
+            return ModifyMaintainTimeWindowOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMaintainTimeWindowOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyMaintainTimeWindowAsync(const ModifyMaintainTimeWindowRequest& request, const ModifyMaintainTimeWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMaintainTimeWindowRequest&;
+    using Resp = ModifyMaintainTimeWindowResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMaintainTimeWindow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyMaintainTimeWindowOutcomeCallable PostgresClient::ModifyMaintainTimeWindowCallable(const ModifyMaintainTimeWindowRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMaintainTimeWindowOutcome>>();
+    ModifyMaintainTimeWindowAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyMaintainTimeWindowRequest&,
+        ModifyMaintainTimeWindowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::ModifyParameterTemplateOutcome PostgresClient::ModifyParameterTemplate(const ModifyParameterTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyParameterTemplate");
@@ -3832,6 +4632,56 @@ PostgresClient::ModifyParameterTemplateOutcomeCallable PostgresClient::ModifyPar
         const PostgresClient*,
         const ModifyParameterTemplateRequest&,
         ModifyParameterTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::ModifyReadOnlyDBInstanceWeightOutcome PostgresClient::ModifyReadOnlyDBInstanceWeight(const ModifyReadOnlyDBInstanceWeightRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyReadOnlyDBInstanceWeight");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyReadOnlyDBInstanceWeightResponse rsp = ModifyReadOnlyDBInstanceWeightResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyReadOnlyDBInstanceWeightOutcome(rsp);
+        else
+            return ModifyReadOnlyDBInstanceWeightOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyReadOnlyDBInstanceWeightOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyReadOnlyDBInstanceWeightAsync(const ModifyReadOnlyDBInstanceWeightRequest& request, const ModifyReadOnlyDBInstanceWeightAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyReadOnlyDBInstanceWeightRequest&;
+    using Resp = ModifyReadOnlyDBInstanceWeightResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyReadOnlyDBInstanceWeight", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyReadOnlyDBInstanceWeightOutcomeCallable PostgresClient::ModifyReadOnlyDBInstanceWeightCallable(const ModifyReadOnlyDBInstanceWeightRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyReadOnlyDBInstanceWeightOutcome>>();
+    ModifyReadOnlyDBInstanceWeightAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyReadOnlyDBInstanceWeightRequest&,
+        ModifyReadOnlyDBInstanceWeightOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4432,6 +5282,56 @@ PostgresClient::SwitchDBInstancePrimaryOutcomeCallable PostgresClient::SwitchDBI
         const PostgresClient*,
         const SwitchDBInstancePrimaryRequest&,
         SwitchDBInstancePrimaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PostgresClient::UnlockAccountOutcome PostgresClient::UnlockAccount(const UnlockAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnlockAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnlockAccountResponse rsp = UnlockAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnlockAccountOutcome(rsp);
+        else
+            return UnlockAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return UnlockAccountOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::UnlockAccountAsync(const UnlockAccountRequest& request, const UnlockAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UnlockAccountRequest&;
+    using Resp = UnlockAccountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UnlockAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::UnlockAccountOutcomeCallable PostgresClient::UnlockAccountCallable(const UnlockAccountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UnlockAccountOutcome>>();
+    UnlockAccountAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const UnlockAccountRequest&,
+        UnlockAccountOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
