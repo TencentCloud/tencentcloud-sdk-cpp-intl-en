@@ -19,20 +19,24 @@ set(vclm_public_header
   )
 
 set(vclm_public_header_model
+  include/tencentcloud/vclm/v20240523/model/SubmitImageToVideoViduJobRequest.h
   include/tencentcloud/vclm/v20240523/model/LogoParam.h
   include/tencentcloud/vclm/v20240523/model/DescribeImageAnimateJobResponse.h
   include/tencentcloud/vclm/v20240523/model/LogoRect.h
   include/tencentcloud/vclm/v20240523/model/SubmitImageAnimateJobResponse.h
+  include/tencentcloud/vclm/v20240523/model/SubmitImageToVideoViduJobResponse.h
   include/tencentcloud/vclm/v20240523/model/SubmitImageAnimateJobRequest.h
   include/tencentcloud/vclm/v20240523/model/DescribeImageAnimateJobRequest.h
   )
 
 set(vclm_src
   src/v20240523/VclmClient.cpp
+  src/v20240523/model/SubmitImageToVideoViduJobRequest.cpp
   src/v20240523/model/LogoParam.cpp
   src/v20240523/model/DescribeImageAnimateJobResponse.cpp
   src/v20240523/model/LogoRect.cpp
   src/v20240523/model/SubmitImageAnimateJobResponse.cpp
+  src/v20240523/model/SubmitImageToVideoViduJobResponse.cpp
   src/v20240523/model/SubmitImageAnimateJobRequest.cpp
   src/v20240523/model/DescribeImageAnimateJobRequest.cpp
   )

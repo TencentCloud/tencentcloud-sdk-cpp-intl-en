@@ -27,6 +27,8 @@
 #include <tencentcloud/vclm/v20240523/model/DescribeImageAnimateJobResponse.h>
 #include <tencentcloud/vclm/v20240523/model/SubmitImageAnimateJobRequest.h>
 #include <tencentcloud/vclm/v20240523/model/SubmitImageAnimateJobResponse.h>
+#include <tencentcloud/vclm/v20240523/model/SubmitImageToVideoViduJobRequest.h>
+#include <tencentcloud/vclm/v20240523/model/SubmitImageToVideoViduJobResponse.h>
 
 
 namespace TencentCloud
@@ -47,6 +49,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SubmitImageAnimateJobResponse> SubmitImageAnimateJobOutcome;
                 typedef std::future<SubmitImageAnimateJobOutcome> SubmitImageAnimateJobOutcomeCallable;
                 typedef std::function<void(const VclmClient*, const Model::SubmitImageAnimateJobRequest&, SubmitImageAnimateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitImageAnimateJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitImageToVideoViduJobResponse> SubmitImageToVideoViduJobOutcome;
+                typedef std::future<SubmitImageToVideoViduJobOutcome> SubmitImageToVideoViduJobOutcomeCallable;
+                typedef std::function<void(const VclmClient*, const Model::SubmitImageToVideoViduJobRequest&, SubmitImageToVideoViduJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitImageToVideoViduJobAsyncHandler;
 
 
 
@@ -67,6 +72,15 @@ namespace TencentCloud
                 SubmitImageAnimateJobOutcome SubmitImageAnimateJob(const Model::SubmitImageAnimateJobRequest &request);
                 void SubmitImageAnimateJobAsync(const Model::SubmitImageAnimateJobRequest& request, const SubmitImageAnimateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SubmitImageAnimateJobOutcomeCallable SubmitImageAnimateJobCallable(const Model::SubmitImageAnimateJobRequest& request);
+
+                /**
+                 *Submit a Vidu image-to-video task API
+                 * @param req SubmitImageToVideoViduJobRequest
+                 * @return SubmitImageToVideoViduJobOutcome
+                 */
+                SubmitImageToVideoViduJobOutcome SubmitImageToVideoViduJob(const Model::SubmitImageToVideoViduJobRequest &request);
+                void SubmitImageToVideoViduJobAsync(const Model::SubmitImageToVideoViduJobRequest& request, const SubmitImageToVideoViduJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitImageToVideoViduJobOutcomeCallable SubmitImageToVideoViduJobCallable(const Model::SubmitImageToVideoViduJobRequest& request);
 
             };
         }

@@ -36,7 +36,8 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_livenessRetryLimitHasBeenSet(false),
     m_livenessTimeoutHasBeenSet(false),
     m_selectedWarningCodesHasBeenSet(false),
-    m_allowExpiredDocumentHasBeenSet(false)
+    m_allowExpiredDocumentHasBeenSet(false),
+    m_versionHasBeenSet(false)
 {
 }
 
@@ -205,6 +206,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_allowExpiredDocumentHasBeenSet = true;
     }
 
+    if (value.HasMember("Version") && !value["Version"].IsNull())
+    {
+        if (!value["Version"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.Version` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_version = string(value["Version"].GetString());
+        m_versionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -338,6 +349,14 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "AllowExpiredDocument";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_allowExpiredDocument, allocator);
+    }
+
+    if (m_versionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Version";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -597,5 +616,21 @@ void WebVerificationConfigIntl::SetAllowExpiredDocument(const bool& _allowExpire
 bool WebVerificationConfigIntl::AllowExpiredDocumentHasBeenSet() const
 {
     return m_allowExpiredDocumentHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetVersion() const
+{
+    return m_version;
+}
+
+void WebVerificationConfigIntl::SetVersion(const string& _version)
+{
+    m_version = _version;
+    m_versionHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::VersionHasBeenSet() const
+{
+    return m_versionHasBeenSet;
 }
 

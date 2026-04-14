@@ -245,14 +245,16 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
                      * @return SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
 1:Silent mode;
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
                      * 
                      */
@@ -264,14 +266,16 @@ Example: 4
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
                      * @param _securityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
 1:Silent mode;
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
                      * 
                      */
@@ -610,6 +614,39 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool AllowExpiredDocumentHasBeenSet() const;
 
+                    /**
+                     * 获取Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+                     * @return Version Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+                     * 
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+                     * @param _version Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+                     * 
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     * 
+                     */
+                    bool VersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -670,7 +707,8 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
                      */
                     int64_t m_securityLevel;
@@ -764,6 +802,15 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool m_allowExpiredDocument;
                     bool m_allowExpiredDocumentHasBeenSet;
+
+                    /**
+                     * Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
 
                 };
             }

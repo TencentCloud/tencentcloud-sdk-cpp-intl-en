@@ -1,0 +1,120 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/faceid/v20180301/model/BankCard2EVerificationRequest.h>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+
+using namespace TencentCloud::Faceid::V20180301::Model;
+using namespace std;
+
+BankCard2EVerificationRequest::BankCard2EVerificationRequest() :
+    m_nameHasBeenSet(false),
+    m_bankCardHasBeenSet(false),
+    m_encryptionHasBeenSet(false)
+{
+}
+
+string BankCard2EVerificationRequest::ToJsonString() const
+{
+    rapidjson::Document d;
+    d.SetObject();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
+
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bankCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BankCard";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_bankCard.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Encryption";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_encryption.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    d.Accept(writer);
+    return buffer.GetString();
+}
+
+
+string BankCard2EVerificationRequest::GetName() const
+{
+    return m_name;
+}
+
+void BankCard2EVerificationRequest::SetName(const string& _name)
+{
+    m_name = _name;
+    m_nameHasBeenSet = true;
+}
+
+bool BankCard2EVerificationRequest::NameHasBeenSet() const
+{
+    return m_nameHasBeenSet;
+}
+
+string BankCard2EVerificationRequest::GetBankCard() const
+{
+    return m_bankCard;
+}
+
+void BankCard2EVerificationRequest::SetBankCard(const string& _bankCard)
+{
+    m_bankCard = _bankCard;
+    m_bankCardHasBeenSet = true;
+}
+
+bool BankCard2EVerificationRequest::BankCardHasBeenSet() const
+{
+    return m_bankCardHasBeenSet;
+}
+
+Encryption BankCard2EVerificationRequest::GetEncryption() const
+{
+    return m_encryption;
+}
+
+void BankCard2EVerificationRequest::SetEncryption(const Encryption& _encryption)
+{
+    m_encryption = _encryption;
+    m_encryptionHasBeenSet = true;
+}
+
+bool BankCard2EVerificationRequest::EncryptionHasBeenSet() const
+{
+    return m_encryptionHasBeenSet;
+}
+
+

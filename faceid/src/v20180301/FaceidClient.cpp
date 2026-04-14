@@ -190,6 +190,156 @@ FaceidClient::ApplyWebVerificationBizTokenIntlOutcomeCallable FaceidClient::Appl
     return prom->get_future();
 }
 
+FaceidClient::BankCard2EVerificationOutcome FaceidClient::BankCard2EVerification(const BankCard2EVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "BankCard2EVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BankCard2EVerificationResponse rsp = BankCard2EVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BankCard2EVerificationOutcome(rsp);
+        else
+            return BankCard2EVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return BankCard2EVerificationOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::BankCard2EVerificationAsync(const BankCard2EVerificationRequest& request, const BankCard2EVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BankCard2EVerificationRequest&;
+    using Resp = BankCard2EVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BankCard2EVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::BankCard2EVerificationOutcomeCallable FaceidClient::BankCard2EVerificationCallable(const BankCard2EVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BankCard2EVerificationOutcome>>();
+    BankCard2EVerificationAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const BankCard2EVerificationRequest&,
+        BankCard2EVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::BankCard4EVerificationOutcome FaceidClient::BankCard4EVerification(const BankCard4EVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "BankCard4EVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BankCard4EVerificationResponse rsp = BankCard4EVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BankCard4EVerificationOutcome(rsp);
+        else
+            return BankCard4EVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return BankCard4EVerificationOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::BankCard4EVerificationAsync(const BankCard4EVerificationRequest& request, const BankCard4EVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BankCard4EVerificationRequest&;
+    using Resp = BankCard4EVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BankCard4EVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::BankCard4EVerificationOutcomeCallable FaceidClient::BankCard4EVerificationCallable(const BankCard4EVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BankCard4EVerificationOutcome>>();
+    BankCard4EVerificationAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const BankCard4EVerificationRequest&,
+        BankCard4EVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::BankCardVerificationOutcome FaceidClient::BankCardVerification(const BankCardVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "BankCardVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BankCardVerificationResponse rsp = BankCardVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BankCardVerificationOutcome(rsp);
+        else
+            return BankCardVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return BankCardVerificationOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::BankCardVerificationAsync(const BankCardVerificationRequest& request, const BankCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BankCardVerificationRequest&;
+    using Resp = BankCardVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BankCardVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::BankCardVerificationOutcomeCallable FaceidClient::BankCardVerificationCallable(const BankCardVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BankCardVerificationOutcome>>();
+    BankCardVerificationAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const BankCardVerificationRequest&,
+        BankCardVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 FaceidClient::CompareFaceLivenessOutcome FaceidClient::CompareFaceLiveness(const CompareFaceLivenessRequest &request)
 {
     auto outcome = MakeRequest(request, "CompareFaceLiveness");
@@ -732,6 +882,56 @@ FaceidClient::LivenessCompareOutcomeCallable FaceidClient::LivenessCompareCallab
         const FaceidClient*,
         const LivenessCompareRequest&,
         LivenessCompareOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::VideoLivenessCompareOutcome FaceidClient::VideoLivenessCompare(const VideoLivenessCompareRequest &request)
+{
+    auto outcome = MakeRequest(request, "VideoLivenessCompare");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        VideoLivenessCompareResponse rsp = VideoLivenessCompareResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return VideoLivenessCompareOutcome(rsp);
+        else
+            return VideoLivenessCompareOutcome(o.GetError());
+    }
+    else
+    {
+        return VideoLivenessCompareOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::VideoLivenessCompareAsync(const VideoLivenessCompareRequest& request, const VideoLivenessCompareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const VideoLivenessCompareRequest&;
+    using Resp = VideoLivenessCompareResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "VideoLivenessCompare", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::VideoLivenessCompareOutcomeCallable FaceidClient::VideoLivenessCompareCallable(const VideoLivenessCompareRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<VideoLivenessCompareOutcome>>();
+    VideoLivenessCompareAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const VideoLivenessCompareRequest&,
+        VideoLivenessCompareOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

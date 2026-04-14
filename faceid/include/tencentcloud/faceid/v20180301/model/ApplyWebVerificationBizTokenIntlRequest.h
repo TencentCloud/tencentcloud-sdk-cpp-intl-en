@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+                     * 获取Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
-                     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+                     * @return RedirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
                      * 
@@ -55,10 +55,10 @@ Example: https://www.tencentcloud.com/products/faceid.
                     std::string GetRedirectURL() const;
 
                     /**
-                     * 设置The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+                     * 设置Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
-                     * @param _redirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+                     * @param _redirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
                      * 
@@ -167,7 +167,7 @@ Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                 private:
 
                     /**
-                     * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+                     * Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
                      */
