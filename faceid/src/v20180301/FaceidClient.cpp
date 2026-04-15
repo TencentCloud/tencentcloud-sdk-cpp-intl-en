@@ -340,6 +340,56 @@ FaceidClient::BankCardVerificationOutcomeCallable FaceidClient::BankCardVerifica
     return prom->get_future();
 }
 
+FaceidClient::CheckBankCardInformationOutcome FaceidClient::CheckBankCardInformation(const CheckBankCardInformationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckBankCardInformation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckBankCardInformationResponse rsp = CheckBankCardInformationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckBankCardInformationOutcome(rsp);
+        else
+            return CheckBankCardInformationOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckBankCardInformationOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::CheckBankCardInformationAsync(const CheckBankCardInformationRequest& request, const CheckBankCardInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckBankCardInformationRequest&;
+    using Resp = CheckBankCardInformationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckBankCardInformation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::CheckBankCardInformationOutcomeCallable FaceidClient::CheckBankCardInformationCallable(const CheckBankCardInformationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckBankCardInformationOutcome>>();
+    CheckBankCardInformationAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const CheckBankCardInformationRequest&,
+        CheckBankCardInformationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 FaceidClient::CompareFaceLivenessOutcome FaceidClient::CompareFaceLiveness(const CompareFaceLivenessRequest &request)
 {
     auto outcome = MakeRequest(request, "CompareFaceLiveness");

@@ -35,6 +35,8 @@
 #include <tencentcloud/faceid/v20180301/model/BankCard4EVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/BankCardVerificationRequest.h>
 #include <tencentcloud/faceid/v20180301/model/BankCardVerificationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/CheckBankCardInformationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/CheckBankCardInformationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h>
@@ -91,6 +93,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BankCardVerificationResponse> BankCardVerificationOutcome;
                 typedef std::future<BankCardVerificationOutcome> BankCardVerificationOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::BankCardVerificationRequest&, BankCardVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BankCardVerificationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckBankCardInformationResponse> CheckBankCardInformationOutcome;
+                typedef std::future<CheckBankCardInformationOutcome> CheckBankCardInformationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::CheckBankCardInformationRequest&, CheckBankCardInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckBankCardInformationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CompareFaceLivenessResponse> CompareFaceLivenessOutcome;
                 typedef std::future<CompareFaceLivenessOutcome> CompareFaceLivenessOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CompareFaceLivenessRequest&, CompareFaceLivenessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareFaceLivenessAsyncHandler;
@@ -183,6 +188,15 @@ namespace TencentCloud
                 BankCardVerificationOutcome BankCardVerification(const Model::BankCardVerificationRequest &request);
                 void BankCardVerificationAsync(const Model::BankCardVerificationRequest& request, const BankCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BankCardVerificationOutcomeCallable BankCardVerificationCallable(const Model::BankCardVerificationRequest& request);
+
+                /**
+                 *Bank card basic information query
+                 * @param req CheckBankCardInformationRequest
+                 * @return CheckBankCardInformationOutcome
+                 */
+                CheckBankCardInformationOutcome CheckBankCardInformation(const Model::CheckBankCardInformationRequest &request);
+                void CheckBankCardInformationAsync(const Model::CheckBankCardInformationRequest& request, const CheckBankCardInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckBankCardInformationOutcomeCallable CheckBankCardInformationCallable(const Model::CheckBankCardInformationRequest& request);
 
                 /**
                  *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
