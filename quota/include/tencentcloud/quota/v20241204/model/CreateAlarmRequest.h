@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm rule name. specifies the name of the Alarm rule.
-                     * @return Name Alarm rule name. specifies the name of the Alarm rule.
+                     * 获取Alarm rule name. specifies the name of the Alarm rule
+                     * @return Name Alarm rule name. specifies the name of the Alarm rule
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Alarm rule name. specifies the name of the Alarm rule.
-                     * @param _name Alarm rule name. specifies the name of the Alarm rule.
+                     * 设置Alarm rule name. specifies the name of the Alarm rule
+                     * @param _name Alarm rule name. specifies the name of the Alarm rule
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm rule name. specifies the name of the Alarm rule.
+                     * Alarm rule name. specifies the name of the Alarm rule
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

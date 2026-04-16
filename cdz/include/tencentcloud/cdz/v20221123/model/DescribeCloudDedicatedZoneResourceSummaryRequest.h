@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique id of the cloud dedicated zone.
-                     * @return CdzId Unique id of the cloud dedicated zone.
+                     * 获取Unique id of the cloud dedicated zone
+                     * @return CdzId Unique id of the cloud dedicated zone
                      * 
                      */
                     std::string GetCdzId() const;
 
                     /**
-                     * 设置Unique id of the cloud dedicated zone.
-                     * @param _cdzId Unique id of the cloud dedicated zone.
+                     * 设置Unique id of the cloud dedicated zone
+                     * @param _cdzId Unique id of the cloud dedicated zone
                      * 
                      */
                     void SetCdzId(const std::string& _cdzId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique id of the cloud dedicated zone.
+                     * Unique id of the cloud dedicated zone
                      */
                     std::string m_cdzId;
                     bool m_cdzIdHasBeenSet;

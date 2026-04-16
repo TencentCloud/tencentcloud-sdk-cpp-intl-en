@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Message sending channel.
-                     * @return SendTypes Message sending channel.
+                     * 获取Message sending channel
+                     * @return SendTypes Message sending channel
                      * 
                      */
                     std::vector<SendType> GetSendTypes() const;
 
                     /**
-                     * 设置Message sending channel.
-                     * @param _sendTypes Message sending channel.
+                     * 设置Message sending channel
+                     * @param _sendTypes Message sending channel
                      * 
                      */
                     void SetSendTypes(const std::vector<SendType>& _sendTypes);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Message sending channel.
+                     * Message sending channel
                      */
                     std::vector<SendType> m_sendTypes;
                     bool m_sendTypesHasBeenSet;

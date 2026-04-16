@@ -46,7 +46,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to query risk assessment results.
+                 *This API is used to query risk assessment results
                  * @param req DescribeRiskAssessmentRequest
                  * @return DescribeRiskAssessmentOutcome
                  */

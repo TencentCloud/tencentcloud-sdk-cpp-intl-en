@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ProductsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of products.
-                     * @return TotalCount Total number of products.
+                     * 获取Total number of products
+                     * @return TotalCount Total number of products
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_productsHasBeenSet;
 
                     /**
-                     * Total number of products.
+                     * Total number of products
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
