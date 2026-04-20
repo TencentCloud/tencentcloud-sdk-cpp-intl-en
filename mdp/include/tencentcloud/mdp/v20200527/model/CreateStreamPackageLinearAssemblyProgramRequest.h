@@ -195,6 +195,27 @@ Optional values: Live, VOD.
                      */
                     bool AdBreaksHasBeenSet() const;
 
+                    /**
+                     * 获取VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+                     * @return VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+                     * 
+                     */
+                    std::string GetVodAcquisitionMethod() const;
+
+                    /**
+                     * 设置VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+                     * @param _vodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+                     * 
+                     */
+                    void SetVodAcquisitionMethod(const std::string& _vodAcquisitionMethod);
+
+                    /**
+                     * 判断参数 VodAcquisitionMethod 是否已赋值
+                     * @return VodAcquisitionMethod 是否已赋值
+                     * 
+                     */
+                    bool VodAcquisitionMethodHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +260,12 @@ Optional values: Live, VOD.
                      */
                     std::vector<AdBreakInfo> m_adBreaks;
                     bool m_adBreaksHasBeenSet;
+
+                    /**
+                     * VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+                     */
+                    std::string m_vodAcquisitionMethod;
+                    bool m_vodAcquisitionMethodHasBeenSet;
 
                 };
             }
