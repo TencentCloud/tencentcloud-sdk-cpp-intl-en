@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
-                     * @return StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+                     * 获取Bucket for uploading the API URL bucket_name.
+                     * @return StorageBucket Bucket for uploading the API URL bucket_name.
                      * 
                      */
                     std::string GetStorageBucket() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool StorageBucketHasBeenSet() const;
 
                     /**
-                     * 获取Storage region, which is used as the `Region` in the `Host` of the upload API.
-                     * @return StorageRegion Storage region, which is used as the `Region` in the `Host` of the upload API.
+                     * 获取Storage campus for uploading the Host Region of the port.
+                     * @return StorageRegion Storage campus for uploading the Host Region of the port.
                      * 
                      */
                     std::string GetStorageRegion() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
-                     * @return VodSessionKey VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+                     * 获取VOD session for confirmation of API parameters VodSessionKey.
+                     * @return VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
                      * 
                      */
                     std::string GetVodSessionKey() const;
@@ -87,10 +87,8 @@ namespace TencentCloud
                     bool VodSessionKeyHasBeenSet() const;
 
                     /**
-                     * 获取Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MediaStoragePath Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Media storage path for the object key (Key) used by the upload API to store media.
+                     * @return MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
                      * 
                      */
                     std::string GetMediaStoragePath() const;
@@ -103,10 +101,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CoverStoragePath Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Cover storage path for uploading the object Key of the cover via API.
+                     * @return CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
                      * 
                      */
                     std::string GetCoverStoragePath() const;
@@ -119,8 +115,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CoverStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credential, which is used for authentication of the upload API.
-                     * @return TempCertificate Temporary credential, which is used for authentication of the upload API.
+                     * 获取Temporary credentials for uploading API permission verification.
+                     * @return TempCertificate Temporary credentials for uploading API permission verification.
                      * 
                      */
                     TempCertificate GetTempCertificate() const;
@@ -135,39 +131,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+                     * Bucket for uploading the API URL bucket_name.
                      */
                     std::string m_storageBucket;
                     bool m_storageBucketHasBeenSet;
 
                     /**
-                     * Storage region, which is used as the `Region` in the `Host` of the upload API.
+                     * Storage campus for uploading the Host Region of the port.
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+                     * VOD session for confirmation of API parameters VodSessionKey.
                      */
                     std::string m_vodSessionKey;
                     bool m_vodSessionKeyHasBeenSet;
 
                     /**
-                     * Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Media storage path for the object key (Key) used by the upload API to store media.
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;
 
                     /**
-                     * Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Cover storage path for uploading the object Key of the cover via API.
                      */
                     std::string m_coverStoragePath;
                     bool m_coverStoragePathHasBeenSet;
 
                     /**
-                     * Temporary credential, which is used for authentication of the upload API.
+                     * Temporary credentials for uploading API permission verification.
                      */
                     TempCertificate m_tempCertificate;
                     bool m_tempCertificateHasBeenSet;

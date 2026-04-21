@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
-                     * @return ID3 Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+                     * 获取Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+                     * @return ID3 Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
                      * 
                      */
                     std::string GetID3() const;
 
                     /**
-                     * 设置Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
-                     * @param _iD3 Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+                     * 设置Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+                     * @param _iD3 Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
                      * 
                      */
                     void SetID3(const std::string& _iD3);
@@ -67,13 +67,40 @@ namespace TencentCloud
                      */
                     bool ID3HasBeenSet() const;
 
+                    /**
+                     * 获取Label, the maximum supported length is 1024 characters for the label, 
+                     * @return Tag Label, the maximum supported length is 1024 characters for the label, 
+                     * 
+                     */
+                    std::string GetTag() const;
+
+                    /**
+                     * 设置Label, the maximum supported length is 1024 characters for the label, 
+                     * @param _tag Label, the maximum supported length is 1024 characters for the label, 
+                     * 
+                     */
+                    void SetTag(const std::string& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     * 
+                     */
+                    bool TagHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+                     * Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
                      */
                     std::string m_iD3;
                     bool m_iD3HasBeenSet;
+
+                    /**
+                     * Label, the maximum supported length is 1024 characters for the label, 
+                     */
+                    std::string m_tag;
+                    bool m_tagHasBeenSet;
 
                 };
             }

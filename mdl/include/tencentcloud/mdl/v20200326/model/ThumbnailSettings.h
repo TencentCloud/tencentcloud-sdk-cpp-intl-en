@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Thumbnail configuration
+                * 
                 */
                 class ThumbnailSettings : public AbstractModel
                 {

@@ -195,6 +195,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackRangeTimeResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackTaskDetailRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackTaskDetailResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeSSLStatusRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeSSLStatusResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeSlowLogDataRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeSlowLogDataResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeSlowLogsRequest.h>
@@ -591,6 +593,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRollbackTaskDetailResponse> DescribeRollbackTaskDetailOutcome;
                 typedef std::future<DescribeRollbackTaskDetailOutcome> DescribeRollbackTaskDetailOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeRollbackTaskDetailRequest&, DescribeRollbackTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTaskDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSSLStatusResponse> DescribeSSLStatusOutcome;
+                typedef std::future<DescribeSSLStatusOutcome> DescribeSSLStatusOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeSSLStatusRequest&, DescribeSSLStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSSLStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSlowLogDataResponse> DescribeSlowLogDataOutcome;
                 typedef std::future<DescribeSlowLogDataOutcome> DescribeSlowLogDataOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeSlowLogDataRequest&, DescribeSlowLogDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlowLogDataAsyncHandler;
@@ -1575,6 +1580,15 @@ Note: the HTTP response packet will be very large if it contain a single large e
                 DescribeRollbackTaskDetailOutcome DescribeRollbackTaskDetail(const Model::DescribeRollbackTaskDetailRequest &request);
                 void DescribeRollbackTaskDetailAsync(const Model::DescribeRollbackTaskDetailRequest& request, const DescribeRollbackTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRollbackTaskDetailOutcomeCallable DescribeRollbackTaskDetailCallable(const Model::DescribeRollbackTaskDetailRequest& request);
+
+                /**
+                 *This API is used to query the SSL enabling status. If the SSL is enabled, the certificate download link will be returned synchronously.
+                 * @param req DescribeSSLStatusRequest
+                 * @return DescribeSSLStatusOutcome
+                 */
+                DescribeSSLStatusOutcome DescribeSSLStatus(const Model::DescribeSSLStatusRequest &request);
+                void DescribeSSLStatusAsync(const Model::DescribeSSLStatusRequest& request, const DescribeSSLStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSSLStatusOutcomeCallable DescribeSSLStatusCallable(const Model::DescribeSSLStatusRequest& request);
 
                 /**
                  *This API is used to query the slow logs of an instance over the past month by search criteria.

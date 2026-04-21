@@ -301,6 +301,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/AdjustCdbProxyAddressResponse.h
   include/tencentcloud/cdb/v20170320/model/CreateAuditLogFileRequest.h
+  include/tencentcloud/cdb/v20170320/model/DescribeSSLStatusResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateDBImportJobResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeTagsOfInstanceIdsRequest.h
@@ -405,6 +406,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/RollbackTables.h
   include/tencentcloud/cdb/v20170320/model/AuditRuleTemplateInfo.h
   include/tencentcloud/cdb/v20170320/model/LocalBinlogConfigDefault.h
+  include/tencentcloud/cdb/v20170320/model/DescribeSSLStatusRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeSlowLogDataRequest.h
   include/tencentcloud/cdb/v20170320/model/ReleaseIsolatedDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/DeleteAuditLogFileRequest.h
@@ -705,6 +707,7 @@ set(cdb_src
   src/v20170320/model/DescribeRemoteBackupConfigResponse.cpp
   src/v20170320/model/AdjustCdbProxyAddressResponse.cpp
   src/v20170320/model/CreateAuditLogFileRequest.cpp
+  src/v20170320/model/DescribeSSLStatusResponse.cpp
   src/v20170320/model/DescribeDBImportRecordsRequest.cpp
   src/v20170320/model/CreateDBImportJobResponse.cpp
   src/v20170320/model/DescribeTagsOfInstanceIdsRequest.cpp
@@ -809,6 +812,7 @@ set(cdb_src
   src/v20170320/model/RollbackTables.cpp
   src/v20170320/model/AuditRuleTemplateInfo.cpp
   src/v20170320/model/LocalBinlogConfigDefault.cpp
+  src/v20170320/model/DescribeSSLStatusRequest.cpp
   src/v20170320/model/DescribeSlowLogDataRequest.cpp
   src/v20170320/model/ReleaseIsolatedDBInstancesResponse.cpp
   src/v20170320/model/DeleteAuditLogFileRequest.cpp
