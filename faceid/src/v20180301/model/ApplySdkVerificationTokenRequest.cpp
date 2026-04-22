@@ -34,7 +34,9 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_extraHasBeenSet(false),
     m_sdkVersionHasBeenSet(false),
     m_actionListHasBeenSet(false),
-    m_allowExpiredDocumentHasBeenSet(false)
+    m_allowExpiredDocumentHasBeenSet(false),
+    m_skipResultPageHasBeenSet(false),
+    m_cardOcrDisplayFieldsHasBeenSet(false)
 {
 }
 
@@ -144,6 +146,27 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "AllowExpiredDocument";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_allowExpiredDocument, allocator);
+    }
+
+    if (m_skipResultPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipResultPage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_skipResultPage, allocator);
+    }
+
+    if (m_cardOcrDisplayFieldsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardOcrDisplayFields";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_cardOcrDisplayFields.begin(); itr != m_cardOcrDisplayFields.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -344,6 +367,38 @@ void ApplySdkVerificationTokenRequest::SetAllowExpiredDocument(const bool& _allo
 bool ApplySdkVerificationTokenRequest::AllowExpiredDocumentHasBeenSet() const
 {
     return m_allowExpiredDocumentHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetSkipResultPage() const
+{
+    return m_skipResultPage;
+}
+
+void ApplySdkVerificationTokenRequest::SetSkipResultPage(const bool& _skipResultPage)
+{
+    m_skipResultPage = _skipResultPage;
+    m_skipResultPageHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SkipResultPageHasBeenSet() const
+{
+    return m_skipResultPageHasBeenSet;
+}
+
+vector<string> ApplySdkVerificationTokenRequest::GetCardOcrDisplayFields() const
+{
+    return m_cardOcrDisplayFields;
+}
+
+void ApplySdkVerificationTokenRequest::SetCardOcrDisplayFields(const vector<string>& _cardOcrDisplayFields)
+{
+    m_cardOcrDisplayFields = _cardOcrDisplayFields;
+    m_cardOcrDisplayFieldsHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::CardOcrDisplayFieldsHasBeenSet() const
+{
+    return m_cardOcrDisplayFieldsHasBeenSet;
 }
 
 

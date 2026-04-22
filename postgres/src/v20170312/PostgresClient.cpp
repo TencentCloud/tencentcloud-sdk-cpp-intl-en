@@ -4040,6 +4040,56 @@ PostgresClient::ModifyDBInstanceChargeTypeOutcomeCallable PostgresClient::Modify
     return prom->get_future();
 }
 
+PostgresClient::ModifyDBInstanceDeletionProtectionOutcome PostgresClient::ModifyDBInstanceDeletionProtection(const ModifyDBInstanceDeletionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceDeletionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceDeletionProtectionResponse rsp = ModifyDBInstanceDeletionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceDeletionProtectionOutcome(rsp);
+        else
+            return ModifyDBInstanceDeletionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceDeletionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void PostgresClient::ModifyDBInstanceDeletionProtectionAsync(const ModifyDBInstanceDeletionProtectionRequest& request, const ModifyDBInstanceDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDBInstanceDeletionProtectionRequest&;
+    using Resp = ModifyDBInstanceDeletionProtectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceDeletionProtection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PostgresClient::ModifyDBInstanceDeletionProtectionOutcomeCallable PostgresClient::ModifyDBInstanceDeletionProtectionCallable(const ModifyDBInstanceDeletionProtectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceDeletionProtectionOutcome>>();
+    ModifyDBInstanceDeletionProtectionAsync(
+    request,
+    [prom](
+        const PostgresClient*,
+        const ModifyDBInstanceDeletionProtectionRequest&,
+        ModifyDBInstanceDeletionProtectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PostgresClient::ModifyDBInstanceDeploymentOutcome PostgresClient::ModifyDBInstanceDeployment(const ModifyDBInstanceDeploymentRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDBInstanceDeployment");

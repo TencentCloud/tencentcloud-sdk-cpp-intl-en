@@ -1,0 +1,161 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TCSAS_V20250106_MODEL_DESCRIBEGLOBALOVERVIEWREPORTDETAILREQUEST_H_
+#define TENCENTCLOUD_TCSAS_V20250106_MODEL_DESCRIBEGLOBALOVERVIEWREPORTDETAILREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Tcsas
+    {
+        namespace V20250106
+        {
+            namespace Model
+            {
+                /**
+                * DescribeGlobalOverviewReportDetail request structure.
+                */
+                class DescribeGlobalOverviewReportDetailRequest : public AbstractModel
+                {
+                public:
+                    DescribeGlobalOverviewReportDetailRequest();
+                    ~DescribeGlobalOverviewReportDetailRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Tenant ID
+                     * @return PlatformId Tenant ID
+                     * 
+                     */
+                    std::string GetPlatformId() const;
+
+                    /**
+                     * 设置Tenant ID
+                     * @param _platformId Tenant ID
+                     * 
+                     */
+                    void SetPlatformId(const std::string& _platformId);
+
+                    /**
+                     * 判断参数 PlatformId 是否已赋值
+                     * @return PlatformId 是否已赋值
+                     * 
+                     */
+                    bool PlatformIdHasBeenSet() const;
+
+                    /**
+                     * 获取Parameter value: mnp_data_analysis
+                     * @return ReportId Parameter value: mnp_data_analysis
+                     * 
+                     */
+                    std::string GetReportId() const;
+
+                    /**
+                     * 设置Parameter value: mnp_data_analysis
+                     * @param _reportId Parameter value: mnp_data_analysis
+                     * 
+                     */
+                    void SetReportId(const std::string& _reportId);
+
+                    /**
+                     * 判断参数 ReportId 是否已赋值
+                     * @return ReportId 是否已赋值
+                     * 
+                     */
+                    bool ReportIdHasBeenSet() const;
+
+                    /**
+                     * 获取Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * @return IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * 
+                     */
+                    std::string GetIndexId() const;
+
+                    /**
+                     * 设置Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * @param _indexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * 
+                     */
+                    void SetIndexId(const std::string& _indexId);
+
+                    /**
+                     * 判断参数 IndexId 是否已赋值
+                     * @return IndexId 是否已赋值
+                     * 
+                     */
+                    bool IndexIdHasBeenSet() const;
+
+                    /**
+                     * 获取Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * @return QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * 
+                     */
+                    std::string GetQueryData() const;
+
+                    /**
+                     * 设置Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * @param _queryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * 
+                     */
+                    void SetQueryData(const std::string& _queryData);
+
+                    /**
+                     * 判断参数 QueryData 是否已赋值
+                     * @return QueryData 是否已赋值
+                     * 
+                     */
+                    bool QueryDataHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Tenant ID
+                     */
+                    std::string m_platformId;
+                    bool m_platformIdHasBeenSet;
+
+                    /**
+                     * Parameter value: mnp_data_analysis
+                     */
+                    std::string m_reportId;
+                    bool m_reportIdHasBeenSet;
+
+                    /**
+                     * Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     */
+                    std::string m_indexId;
+                    bool m_indexIdHasBeenSet;
+
+                    /**
+                     * Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     */
+                    std::string m_queryData;
+                    bool m_queryDataHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TCSAS_V20250106_MODEL_DESCRIBEGLOBALOVERVIEWREPORTDETAILREQUEST_H_

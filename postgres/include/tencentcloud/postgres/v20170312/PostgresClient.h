@@ -183,6 +183,8 @@
 #include <tencentcloud/postgres/v20170312/model/ModifyBaseBackupExpireTimeResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeResponse.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeletionProtectionRequest.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeletionProtectionResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceHAConfigRequest.h>
@@ -495,6 +497,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceChargeTypeResponse> ModifyDBInstanceChargeTypeOutcome;
                 typedef std::future<ModifyDBInstanceChargeTypeOutcome> ModifyDBInstanceChargeTypeOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceChargeTypeRequest&, ModifyDBInstanceChargeTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceChargeTypeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceDeletionProtectionResponse> ModifyDBInstanceDeletionProtectionOutcome;
+                typedef std::future<ModifyDBInstanceDeletionProtectionOutcome> ModifyDBInstanceDeletionProtectionOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceDeletionProtectionRequest&, ModifyDBInstanceDeletionProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceDeletionProtectionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceDeploymentResponse> ModifyDBInstanceDeploymentOutcome;
                 typedef std::future<ModifyDBInstanceDeploymentOutcome> ModifyDBInstanceDeploymentOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceDeploymentRequest&, ModifyDBInstanceDeploymentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceDeploymentAsyncHandler;
@@ -1309,6 +1314,15 @@ This API is used to show summarized steps, which may be adjusted during version 
                 ModifyDBInstanceChargeTypeOutcome ModifyDBInstanceChargeType(const Model::ModifyDBInstanceChargeTypeRequest &request);
                 void ModifyDBInstanceChargeTypeAsync(const Model::ModifyDBInstanceChargeTypeRequest& request, const ModifyDBInstanceChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBInstanceChargeTypeOutcomeCallable ModifyDBInstanceChargeTypeCallable(const Model::ModifyDBInstanceChargeTypeRequest& request);
+
+                /**
+                 *This interface (DeletionProtection) is used to enable or disable instance destruction protection.
+                 * @param req ModifyDBInstanceDeletionProtectionRequest
+                 * @return ModifyDBInstanceDeletionProtectionOutcome
+                 */
+                ModifyDBInstanceDeletionProtectionOutcome ModifyDBInstanceDeletionProtection(const Model::ModifyDBInstanceDeletionProtectionRequest &request);
+                void ModifyDBInstanceDeletionProtectionAsync(const Model::ModifyDBInstanceDeletionProtectionRequest& request, const ModifyDBInstanceDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceDeletionProtectionOutcomeCallable ModifyDBInstanceDeletionProtectionCallable(const Model::ModifyDBInstanceDeletionProtectionRequest& request);
 
                 /**
                  *This API is used to modify the AZs where the nodes of a source instance reside.

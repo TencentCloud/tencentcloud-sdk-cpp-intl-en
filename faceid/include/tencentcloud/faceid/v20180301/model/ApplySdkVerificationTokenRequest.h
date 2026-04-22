@@ -454,6 +454,48 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool AllowExpiredDocumentHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SkipResultPage 
+                     * 
+                     */
+                    bool GetSkipResultPage() const;
+
+                    /**
+                     * 设置
+                     * @param _skipResultPage 
+                     * 
+                     */
+                    void SetSkipResultPage(const bool& _skipResultPage);
+
+                    /**
+                     * 判断参数 SkipResultPage 是否已赋值
+                     * @return SkipResultPage 是否已赋值
+                     * 
+                     */
+                    bool SkipResultPageHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CardOcrDisplayFields 
+                     * 
+                     */
+                    std::vector<std::string> GetCardOcrDisplayFields() const;
+
+                    /**
+                     * 设置
+                     * @param _cardOcrDisplayFields 
+                     * 
+                     */
+                    void SetCardOcrDisplayFields(const std::vector<std::string>& _cardOcrDisplayFields);
+
+                    /**
+                     * 判断参数 CardOcrDisplayFields 是否已赋值
+                     * @return CardOcrDisplayFields 是否已赋值
+                     * 
+                     */
+                    bool CardOcrDisplayFieldsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -567,6 +609,18 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool m_allowExpiredDocument;
                     bool m_allowExpiredDocumentHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_skipResultPage;
+                    bool m_skipResultPageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_cardOcrDisplayFields;
+                    bool m_cardOcrDisplayFieldsHasBeenSet;
 
                 };
             }

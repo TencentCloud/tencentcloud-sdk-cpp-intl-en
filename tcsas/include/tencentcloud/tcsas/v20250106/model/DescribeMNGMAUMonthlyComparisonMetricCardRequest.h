@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program appid, required. When provided, the query is performed based on the mini program.
-                     * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * 获取Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
+                     * @return MNPId Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid, required. When provided, the query is performed based on the mini program.
-                     * @param _mNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * 设置Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
+                     * @param _mNPId Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
