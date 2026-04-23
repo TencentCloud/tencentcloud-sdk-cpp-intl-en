@@ -89,67 +89,71 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle language. Common values:
-<li>`zh`: Chinese</li>
-<li>`en`: English</li>
-<li>`ja`: Japanese</li>
-<li>`ko`: Korean</li>
-<li>`vi`: Vietnamese</li>
-<li>`ms`: Malay</li>
-<li>`th`: Thai</li>
-<li>`pt`: Portuguese</li>
-<li>`tr`: Turkish</li>
-<li>`ar`: Arabic</li>
-<li>`es`: Spanish</li>
-<li>`hi`: Hindi</li>
-<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
-                     * @return Language Subtitle language. Common values:
-<li>`zh`: Chinese</li>
-<li>`en`: English</li>
-<li>`ja`: Japanese</li>
-<li>`ko`: Korean</li>
-<li>`vi`: Vietnamese</li>
-<li>`ms`: Malay</li>
-<li>`th`: Thai</li>
-<li>`pt`: Portuguese</li>
-<li>`tr`: Turkish</li>
-<li>`ar`: Arabic</li>
-<li>`es`: Spanish</li>
-<li>`hi`: Hindi</li>
-<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+                     * 获取Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese.</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+                     * @return Language Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese.</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置Subtitle language. Common values:
-<li>`zh`: Chinese</li>
-<li>`en`: English</li>
-<li>`ja`: Japanese</li>
-<li>`ko`: Korean</li>
-<li>`vi`: Vietnamese</li>
-<li>`ms`: Malay</li>
-<li>`th`: Thai</li>
-<li>`pt`: Portuguese</li>
-<li>`tr`: Turkish</li>
-<li>`ar`: Arabic</li>
-<li>`es`: Spanish</li>
-<li>`hi`: Hindi</li>
-<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
-                     * @param _language Subtitle language. Common values:
-<li>`zh`: Chinese</li>
-<li>`en`: English</li>
-<li>`ja`: Japanese</li>
-<li>`ko`: Korean</li>
-<li>`vi`: Vietnamese</li>
-<li>`ms`: Malay</li>
-<li>`th`: Thai</li>
-<li>`pt`: Portuguese</li>
-<li>`tr`: Turkish</li>
-<li>`ar`: Arabic</li>
-<li>`es`: Spanish</li>
-<li>`hi`: Hindi</li>
-<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+                     * 设置Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese.</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+                     * @param _language Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese.</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -208,23 +212,23 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle source, values:
-<li>UserUploaded: user uploaded;</li>
-<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
-                     * @return Source Subtitle source, values:
-<li>UserUploaded: user uploaded;</li>
-<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * 获取Subtitle source. Value ranges from...to...
+<li>UserUploaded: User upload.</li>
+<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+                     * @return Source Subtitle source. Value ranges from...to...
+<li>UserUploaded: User upload.</li>
+<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Subtitle source, values:
-<li>UserUploaded: user uploaded;</li>
-<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
-                     * @param _source Subtitle source, values:
-<li>UserUploaded: user uploaded;</li>
-<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * 设置Subtitle source. Value ranges from...to...
+<li>UserUploaded: User upload.</li>
+<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+                     * @param _source Subtitle source. Value ranges from...to...
+<li>UserUploaded: User upload.</li>
+<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -251,20 +255,21 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Subtitle language. Common values:
-<li>`zh`: Chinese</li>
-<li>`en`: English</li>
-<li>`ja`: Japanese</li>
-<li>`ko`: Korean</li>
-<li>`vi`: Vietnamese</li>
-<li>`ms`: Malay</li>
-<li>`th`: Thai</li>
-<li>`pt`: Portuguese</li>
-<li>`tr`: Turkish</li>
-<li>`ar`: Arabic</li>
-<li>`es`: Spanish</li>
-<li>`hi`: Hindi</li>
-<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+                     * Subtitle language. Common values are as follows:
+<li>zh: Chinese;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese.</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
@@ -283,9 +288,9 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Subtitle source, values:
-<li>UserUploaded: user uploaded;</li>
-<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * Subtitle source. Value ranges from...to...
+<li>UserUploaded: User upload.</li>
+<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;

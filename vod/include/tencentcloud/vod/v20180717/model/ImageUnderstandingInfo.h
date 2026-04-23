@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEUNDERSTANDINGINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEUNDERSTANDINGINFO_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfoItem.h>
+#include <tencentcloud/vod/v20180717/model/ImageUnderstandingItem.h>
 
 
 namespace TencentCloud
@@ -36,45 +36,45 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * Image understanding information.
                 */
-                class MediaMiniProgramReviewInfo : public AbstractModel
+                class ImageUnderstandingInfo : public AbstractModel
                 {
                 public:
-                    MediaMiniProgramReviewInfo();
-                    ~MediaMiniProgramReviewInfo() = default;
+                    ImageUnderstandingInfo();
+                    ~ImageUnderstandingInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Audit information list.
-                     * @return MiniProgramReviewList Audit information list.
+                     * 获取Image understanding collection.
+                     * @return ImageUnderstandingSet Image understanding collection.
                      * 
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
+                    std::vector<ImageUnderstandingItem> GetImageUnderstandingSet() const;
 
                     /**
-                     * 设置Audit information list.
-                     * @param _miniProgramReviewList Audit information list.
+                     * 设置Image understanding collection.
+                     * @param _imageUnderstandingSet Image understanding collection.
                      * 
                      */
-                    void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
+                    void SetImageUnderstandingSet(const std::vector<ImageUnderstandingItem>& _imageUnderstandingSet);
 
                     /**
-                     * 判断参数 MiniProgramReviewList 是否已赋值
-                     * @return MiniProgramReviewList 是否已赋值
+                     * 判断参数 ImageUnderstandingSet 是否已赋值
+                     * @return ImageUnderstandingSet 是否已赋值
                      * 
                      */
-                    bool MiniProgramReviewListHasBeenSet() const;
+                    bool ImageUnderstandingSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Audit information list.
+                     * Image understanding collection.
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> m_miniProgramReviewList;
-                    bool m_miniProgramReviewListHasBeenSet;
+                    std::vector<ImageUnderstandingItem> m_imageUnderstandingSet;
+                    bool m_imageUnderstandingSetHasBeenSet;
 
                 };
             }
@@ -82,4 +82,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_IMAGEUNDERSTANDINGINFO_H_

@@ -27,8 +27,12 @@
 #include <tencentcloud/quota/v20241204/model/CreateAlarmResponse.h>
 #include <tencentcloud/quota/v20241204/model/DeleteAlarmRequest.h>
 #include <tencentcloud/quota/v20241204/model/DeleteAlarmResponse.h>
+#include <tencentcloud/quota/v20241204/model/DescribeAggregateUserQuotasRequest.h>
+#include <tencentcloud/quota/v20241204/model/DescribeAggregateUserQuotasResponse.h>
 #include <tencentcloud/quota/v20241204/model/DescribeAlarmsRequest.h>
 #include <tencentcloud/quota/v20241204/model/DescribeAlarmsResponse.h>
+#include <tencentcloud/quota/v20241204/model/DescribeUserQuotaRequest.h>
+#include <tencentcloud/quota/v20241204/model/DescribeUserQuotaResponse.h>
 #include <tencentcloud/quota/v20241204/model/EnableAlarmRequest.h>
 #include <tencentcloud/quota/v20241204/model/EnableAlarmResponse.h>
 #include <tencentcloud/quota/v20241204/model/UpdateAlarmRequest.h>
@@ -53,9 +57,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAlarmResponse> DeleteAlarmOutcome;
                 typedef std::future<DeleteAlarmOutcome> DeleteAlarmOutcomeCallable;
                 typedef std::function<void(const QuotaClient*, const Model::DeleteAlarmRequest&, DeleteAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAlarmAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAggregateUserQuotasResponse> DescribeAggregateUserQuotasOutcome;
+                typedef std::future<DescribeAggregateUserQuotasOutcome> DescribeAggregateUserQuotasOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::DescribeAggregateUserQuotasRequest&, DescribeAggregateUserQuotasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAggregateUserQuotasAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAlarmsResponse> DescribeAlarmsOutcome;
                 typedef std::future<DescribeAlarmsOutcome> DescribeAlarmsOutcomeCallable;
                 typedef std::function<void(const QuotaClient*, const Model::DescribeAlarmsRequest&, DescribeAlarmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserQuotaResponse> DescribeUserQuotaOutcome;
+                typedef std::future<DescribeUserQuotaOutcome> DescribeUserQuotaOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::DescribeUserQuotaRequest&, DescribeUserQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableAlarmResponse> EnableAlarmOutcome;
                 typedef std::future<EnableAlarmOutcome> EnableAlarmOutcomeCallable;
                 typedef std::function<void(const QuotaClient*, const Model::EnableAlarmRequest&, EnableAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableAlarmAsyncHandler;
@@ -84,6 +94,15 @@ namespace TencentCloud
                 DeleteAlarmOutcomeCallable DeleteAlarmCallable(const Model::DeleteAlarmRequest& request);
 
                 /**
+                 *user quota list
+                 * @param req DescribeAggregateUserQuotasRequest
+                 * @return DescribeAggregateUserQuotasOutcome
+                 */
+                DescribeAggregateUserQuotasOutcome DescribeAggregateUserQuotas(const Model::DescribeAggregateUserQuotasRequest &request);
+                void DescribeAggregateUserQuotasAsync(const Model::DescribeAggregateUserQuotasRequest& request, const DescribeAggregateUserQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAggregateUserQuotasOutcomeCallable DescribeAggregateUserQuotasCallable(const Model::DescribeAggregateUserQuotasRequest& request);
+
+                /**
                  *This API is used to query the alarm rule list.
                  * @param req DescribeAlarmsRequest
                  * @return DescribeAlarmsOutcome
@@ -91,6 +110,15 @@ namespace TencentCloud
                 DescribeAlarmsOutcome DescribeAlarms(const Model::DescribeAlarmsRequest &request);
                 void DescribeAlarmsAsync(const Model::DescribeAlarmsRequest& request, const DescribeAlarmsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAlarmsOutcomeCallable DescribeAlarmsCallable(const Model::DescribeAlarmsRequest& request);
+
+                /**
+                 *Query a user quota
+                 * @param req DescribeUserQuotaRequest
+                 * @return DescribeUserQuotaOutcome
+                 */
+                DescribeUserQuotaOutcome DescribeUserQuota(const Model::DescribeUserQuotaRequest &request);
+                void DescribeUserQuotaAsync(const Model::DescribeUserQuotaRequest& request, const DescribeUserQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserQuotaOutcomeCallable DescribeUserQuotaCallable(const Model::DescribeUserQuotaRequest& request);
 
                 /**
                  *This API is used to enable alarm rules.

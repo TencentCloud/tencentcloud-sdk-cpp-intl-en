@@ -140,6 +140,56 @@ QuotaClient::DeleteAlarmOutcomeCallable QuotaClient::DeleteAlarmCallable(const D
     return prom->get_future();
 }
 
+QuotaClient::DescribeAggregateUserQuotasOutcome QuotaClient::DescribeAggregateUserQuotas(const DescribeAggregateUserQuotasRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAggregateUserQuotas");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAggregateUserQuotasResponse rsp = DescribeAggregateUserQuotasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAggregateUserQuotasOutcome(rsp);
+        else
+            return DescribeAggregateUserQuotasOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAggregateUserQuotasOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::DescribeAggregateUserQuotasAsync(const DescribeAggregateUserQuotasRequest& request, const DescribeAggregateUserQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAggregateUserQuotasRequest&;
+    using Resp = DescribeAggregateUserQuotasResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAggregateUserQuotas", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+QuotaClient::DescribeAggregateUserQuotasOutcomeCallable QuotaClient::DescribeAggregateUserQuotasCallable(const DescribeAggregateUserQuotasRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAggregateUserQuotasOutcome>>();
+    DescribeAggregateUserQuotasAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const DescribeAggregateUserQuotasRequest&,
+        DescribeAggregateUserQuotasOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 QuotaClient::DescribeAlarmsOutcome QuotaClient::DescribeAlarms(const DescribeAlarmsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAlarms");
@@ -182,6 +232,56 @@ QuotaClient::DescribeAlarmsOutcomeCallable QuotaClient::DescribeAlarmsCallable(c
         const QuotaClient*,
         const DescribeAlarmsRequest&,
         DescribeAlarmsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+QuotaClient::DescribeUserQuotaOutcome QuotaClient::DescribeUserQuota(const DescribeUserQuotaRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUserQuota");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUserQuotaResponse rsp = DescribeUserQuotaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUserQuotaOutcome(rsp);
+        else
+            return DescribeUserQuotaOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUserQuotaOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::DescribeUserQuotaAsync(const DescribeUserQuotaRequest& request, const DescribeUserQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUserQuotaRequest&;
+    using Resp = DescribeUserQuotaResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserQuota", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+QuotaClient::DescribeUserQuotaOutcomeCallable QuotaClient::DescribeUserQuotaCallable(const DescribeUserQuotaRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUserQuotaOutcome>>();
+    DescribeUserQuotaAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const DescribeUserQuotaRequest&,
+        DescribeUserQuotaOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

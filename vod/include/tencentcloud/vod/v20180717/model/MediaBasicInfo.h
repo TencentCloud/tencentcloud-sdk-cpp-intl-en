@@ -369,6 +369,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StorageRegionHasBeenSet() const;
 
                     /**
+                     * 获取Media storage path.
+                     * @return StoragePath Media storage path.
+                     * 
+                     */
+                    std::string GetStoragePath() const;
+
+                    /**
+                     * 设置Media storage path.
+                     * @param _storagePath Media storage path.
+                     * 
+                     */
+                    void SetStoragePath(const std::string& _storagePath);
+
+                    /**
+                     * 判断参数 StoragePath 是否已赋值
+                     * @return StoragePath 是否已赋值
+                     * 
+                     */
+                    bool StoragePathHasBeenSet() const;
+
+                    /**
                      * 获取Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Tag information of media file.
@@ -596,6 +617,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
+
+                    /**
+                     * Media storage path.
+                     */
+                    std::string m_storagePath;
+                    bool m_storagePathHasBeenSet;
 
                     /**
                      * Tag information of media file.

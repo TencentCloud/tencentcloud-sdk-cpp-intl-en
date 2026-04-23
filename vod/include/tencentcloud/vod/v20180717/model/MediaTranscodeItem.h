@@ -353,15 +353,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
                     /**
-                     * 获取Copyright information.
-                     * @return CopyRightWatermarkText Copyright information.
+                     * 获取
+                     * @return CopyRightWatermarkText 
                      * 
                      */
                     std::string GetCopyRightWatermarkText() const;
 
                     /**
-                     * 设置Copyright information.
-                     * @param _copyRightWatermarkText Copyright information.
+                     * 设置
+                     * @param _copyRightWatermarkText 
                      * 
                      */
                     void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
@@ -372,6 +372,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool CopyRightWatermarkTextHasBeenSet() const;
+
+                    /**
+                     * 获取Digital watermark template id.
+                     * @return BlindWatermarkDefinition Digital watermark template id.
+                     * 
+                     */
+                    int64_t GetBlindWatermarkDefinition() const;
+
+                    /**
+                     * 设置Digital watermark template id.
+                     * @param _blindWatermarkDefinition Digital watermark template id.
+                     * 
+                     */
+                    void SetBlindWatermarkDefinition(const int64_t& _blindWatermarkDefinition);
+
+                    /**
+                     * 判断参数 BlindWatermarkDefinition 是否已赋值
+                     * @return BlindWatermarkDefinition 是否已赋值
+                     * 
+                     */
+                    bool BlindWatermarkDefinitionHasBeenSet() const;
 
                 private:
 
@@ -461,10 +482,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_digitalWatermarkTypeHasBeenSet;
 
                     /**
-                     * Copyright information.
+                     * 
                      */
                     std::string m_copyRightWatermarkText;
                     bool m_copyRightWatermarkTextHasBeenSet;
+
+                    /**
+                     * Digital watermark template id.
+                     */
+                    int64_t m_blindWatermarkDefinition;
+                    bool m_blindWatermarkDefinitionHasBeenSet;
 
                 };
             }

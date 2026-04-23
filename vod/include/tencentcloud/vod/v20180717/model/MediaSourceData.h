@@ -50,15 +50,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
-                     * @return SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+                     * 获取Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
+                     * @return SourceType Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
                      * 
                      */
                     std::string GetSourceType() const;
 
                     /**
-                     * 设置Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
-                     * @param _sourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+                     * 设置Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
+                     * @param _sourceType Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
                      * 
                      */
                     void SetSourceType(const std::string& _sourceType);
@@ -71,15 +95,15 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取User-transparent transmission field when creating a file.
-                     * @return SourceContext User-transparent transmission field when creating a file.
+                     * 获取Field passed through when the user creates a file.
+                     * @return SourceContext Field passed through when the user creates a file.
                      * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
-                     * 设置User-transparent transmission field when creating a file.
-                     * @param _sourceContext User-transparent transmission field when creating a file.
+                     * 设置Field passed through when the user creates a file.
+                     * @param _sourceContext Field passed through when the user creates a file.
                      * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
@@ -92,15 +116,19 @@ namespace TencentCloud
                     bool SourceContextHasBeenSet() const;
 
                     /**
-                     * 获取Live streaming recording information, valid when the file source is Record.
-                     * @return LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+                     * 获取Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LiveRecordInfo Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LiveRecordInfo GetLiveRecordInfo() const;
 
                     /**
-                     * 设置Live streaming recording information, valid when the file source is Record.
-                     * @param _liveRecordInfo Live streaming recording information, valid when the file source is Record.
+                     * 设置Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _liveRecordInfo Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLiveRecordInfo(const LiveRecordInfo& _liveRecordInfo);
@@ -113,15 +141,19 @@ namespace TencentCloud
                     bool LiveRecordInfoHasBeenSet() const;
 
                     /**
-                     * 获取TRTC recording information, valid when the file source is TrtcRecord.
-                     * @return TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
+                     * 获取TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TrtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TrtcRecordInfo GetTrtcRecordInfo() const;
 
                     /**
-                     * 设置TRTC recording information, valid when the file source is TrtcRecord.
-                     * @param _trtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
+                     * 设置TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _trtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrtcRecordInfo(const TrtcRecordInfo& _trtcRecordInfo);
@@ -134,15 +166,19 @@ namespace TencentCloud
                     bool TrtcRecordInfoHasBeenSet() const;
 
                     /**
-                     * 获取Panoramic recording information, valid when the file source is WebPageRecord.
-                     * @return WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+                     * 获取Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WebPageRecordInfo GetWebPageRecordInfo() const;
 
                     /**
-                     * 设置Panoramic recording information, valid when the file source is WebPageRecord.
-                     * @param _webPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+                     * 设置Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _webPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWebPageRecordInfo(const WebPageRecordInfo& _webPageRecordInfo);
@@ -157,31 +193,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+                     * Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * User-transparent transmission field when creating a file.
+                     * Field passed through when the user creates a file.
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;
 
                     /**
-                     * Live streaming recording information, valid when the file source is Record.
+                     * Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LiveRecordInfo m_liveRecordInfo;
                     bool m_liveRecordInfoHasBeenSet;
 
                     /**
-                     * TRTC recording information, valid when the file source is TrtcRecord.
+                     * TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TrtcRecordInfo m_trtcRecordInfo;
                     bool m_trtcRecordInfoHasBeenSet;
 
                     /**
-                     * Panoramic recording information, valid when the file source is WebPageRecord.
+                     * Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WebPageRecordInfo m_webPageRecordInfo;
                     bool m_webPageRecordInfoHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+                     * @return Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+                     * @param _definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Height Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Height of the sprite sheet.</p>
+                     * @return Height <p>Height of the sprite sheet.</p>
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _height Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Height of the sprite sheet.</p>
+                     * @param _height <p>Height of the sprite sheet.</p>
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Width Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Width of the sprite sheet.</p>
+                     * @return Width <p>Width of the sprite sheet.</p>
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _width Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Width of the sprite sheet.</p>
+                     * @param _width <p>Width of the sprite sheet.</p>
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The number of small images in each sprite sheet.</p>
+                     * @return TotalCount <p>The number of small images in each sprite sheet.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The number of small images in each sprite sheet.</p>
+                     * @param _totalCount <p>The number of small images in each sprite sheet.</p>
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -147,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageUrlSet Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The domain names or IP addresses of each sprite sheet.</p>
+                     * @return ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
                      * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
-                     * 设置Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _imageUrlSet Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The domain names or IP addresses of each sprite sheet.</p>
+                     * @param _imageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
                      * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
@@ -199,36 +179,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Height of the sprite sheet.</p>
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Width of the sprite sheet.</p>
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>The number of small images in each sprite sheet.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>The domain names or IP addresses of each sprite sheet.</p>
                      */
                     std::vector<std::string> m_imageUrlSet;
                     bool m_imageUrlSetHasBeenSet;

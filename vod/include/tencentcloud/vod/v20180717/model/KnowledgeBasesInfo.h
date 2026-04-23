@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_KNOWLEDGEBASESINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_KNOWLEDGEBASESINFO_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,6 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfoItem.h>
 
 
 namespace TencentCloud
@@ -36,45 +35,45 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * Intelligent knowledge base info for media assets
                 */
-                class MediaMiniProgramReviewInfo : public AbstractModel
+                class KnowledgeBasesInfo : public AbstractModel
                 {
                 public:
-                    MediaMiniProgramReviewInfo();
-                    ~MediaMiniProgramReviewInfo() = default;
+                    KnowledgeBasesInfo();
+                    ~KnowledgeBasesInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Audit information list.
-                     * @return MiniProgramReviewList Audit information list.
+                     * 获取<p>Current library list of media assets to import</p>
+                     * @return Bases <p>Current library list of media assets to import</p>
                      * 
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
+                    std::vector<std::string> GetBases() const;
 
                     /**
-                     * 设置Audit information list.
-                     * @param _miniProgramReviewList Audit information list.
+                     * 设置<p>Current library list of media assets to import</p>
+                     * @param _bases <p>Current library list of media assets to import</p>
                      * 
                      */
-                    void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
+                    void SetBases(const std::vector<std::string>& _bases);
 
                     /**
-                     * 判断参数 MiniProgramReviewList 是否已赋值
-                     * @return MiniProgramReviewList 是否已赋值
+                     * 判断参数 Bases 是否已赋值
+                     * @return Bases 是否已赋值
                      * 
                      */
-                    bool MiniProgramReviewListHasBeenSet() const;
+                    bool BasesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Audit information list.
+                     * <p>Current library list of media assets to import</p>
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> m_miniProgramReviewList;
-                    bool m_miniProgramReviewListHasBeenSet;
+                    std::vector<std::string> m_bases;
+                    bool m_basesHasBeenSet;
 
                 };
             }
@@ -82,4 +81,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_KNOWLEDGEBASESINFO_H_

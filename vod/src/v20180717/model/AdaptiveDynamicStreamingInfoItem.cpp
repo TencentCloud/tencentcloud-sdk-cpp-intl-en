@@ -28,7 +28,11 @@ AdaptiveDynamicStreamingInfoItem::AdaptiveDynamicStreamingInfoItem() :
     m_sizeHasBeenSet(false),
     m_digitalWatermarkTypeHasBeenSet(false),
     m_subStreamSetHasBeenSet(false),
-    m_copyRightWatermarkTextHasBeenSet(false)
+    m_copyRightWatermarkTextHasBeenSet(false),
+    m_blindWatermarkDefinitionHasBeenSet(false),
+    m_subtitleSetHasBeenSet(false),
+    m_defaultSubtitleIdHasBeenSet(false),
+    m_drmEncryptTypeHasBeenSet(false)
 {
 }
 
@@ -127,6 +131,56 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const rapidjso
         m_copyRightWatermarkTextHasBeenSet = true;
     }
 
+    if (value.HasMember("BlindWatermarkDefinition") && !value["BlindWatermarkDefinition"].IsNull())
+    {
+        if (!value["BlindWatermarkDefinition"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.BlindWatermarkDefinition` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_blindWatermarkDefinition = value["BlindWatermarkDefinition"].GetInt64();
+        m_blindWatermarkDefinitionHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubtitleSet") && !value["SubtitleSet"].IsNull())
+    {
+        if (!value["SubtitleSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.SubtitleSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SubtitleSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            MediaSubtitleItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_subtitleSet.push_back(item);
+        }
+        m_subtitleSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("DefaultSubtitleId") && !value["DefaultSubtitleId"].IsNull())
+    {
+        if (!value["DefaultSubtitleId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.DefaultSubtitleId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_defaultSubtitleId = string(value["DefaultSubtitleId"].GetString());
+        m_defaultSubtitleIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("DrmEncryptType") && !value["DrmEncryptType"].IsNull())
+    {
+        if (!value["DrmEncryptType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.DrmEncryptType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_drmEncryptType = string(value["DrmEncryptType"].GetString());
+        m_drmEncryptTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -203,6 +257,45 @@ void AdaptiveDynamicStreamingInfoItem::ToJsonObject(rapidjson::Value &value, rap
         string key = "CopyRightWatermarkText";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_copyRightWatermarkText.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_blindWatermarkDefinitionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BlindWatermarkDefinition";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_blindWatermarkDefinition, allocator);
+    }
+
+    if (m_subtitleSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubtitleSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_subtitleSet.begin(); itr != m_subtitleSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_defaultSubtitleIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultSubtitleId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultSubtitleId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_drmEncryptTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DrmEncryptType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_drmEncryptType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -334,5 +427,69 @@ void AdaptiveDynamicStreamingInfoItem::SetCopyRightWatermarkText(const string& _
 bool AdaptiveDynamicStreamingInfoItem::CopyRightWatermarkTextHasBeenSet() const
 {
     return m_copyRightWatermarkTextHasBeenSet;
+}
+
+int64_t AdaptiveDynamicStreamingInfoItem::GetBlindWatermarkDefinition() const
+{
+    return m_blindWatermarkDefinition;
+}
+
+void AdaptiveDynamicStreamingInfoItem::SetBlindWatermarkDefinition(const int64_t& _blindWatermarkDefinition)
+{
+    m_blindWatermarkDefinition = _blindWatermarkDefinition;
+    m_blindWatermarkDefinitionHasBeenSet = true;
+}
+
+bool AdaptiveDynamicStreamingInfoItem::BlindWatermarkDefinitionHasBeenSet() const
+{
+    return m_blindWatermarkDefinitionHasBeenSet;
+}
+
+vector<MediaSubtitleItem> AdaptiveDynamicStreamingInfoItem::GetSubtitleSet() const
+{
+    return m_subtitleSet;
+}
+
+void AdaptiveDynamicStreamingInfoItem::SetSubtitleSet(const vector<MediaSubtitleItem>& _subtitleSet)
+{
+    m_subtitleSet = _subtitleSet;
+    m_subtitleSetHasBeenSet = true;
+}
+
+bool AdaptiveDynamicStreamingInfoItem::SubtitleSetHasBeenSet() const
+{
+    return m_subtitleSetHasBeenSet;
+}
+
+string AdaptiveDynamicStreamingInfoItem::GetDefaultSubtitleId() const
+{
+    return m_defaultSubtitleId;
+}
+
+void AdaptiveDynamicStreamingInfoItem::SetDefaultSubtitleId(const string& _defaultSubtitleId)
+{
+    m_defaultSubtitleId = _defaultSubtitleId;
+    m_defaultSubtitleIdHasBeenSet = true;
+}
+
+bool AdaptiveDynamicStreamingInfoItem::DefaultSubtitleIdHasBeenSet() const
+{
+    return m_defaultSubtitleIdHasBeenSet;
+}
+
+string AdaptiveDynamicStreamingInfoItem::GetDrmEncryptType() const
+{
+    return m_drmEncryptType;
+}
+
+void AdaptiveDynamicStreamingInfoItem::SetDrmEncryptType(const string& _drmEncryptType)
+{
+    m_drmEncryptType = _drmEncryptType;
+    m_drmEncryptTypeHasBeenSet = true;
+}
+
+bool AdaptiveDynamicStreamingInfoItem::DrmEncryptTypeHasBeenSet() const
+{
+    return m_drmEncryptTypeHasBeenSet;
 }
 

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MPSAIMEDIAINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_MPSAIMEDIAINFO_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfoItem.h>
+#include <tencentcloud/vod/v20180717/model/MPSAiMediaItem.h>
 
 
 namespace TencentCloud
@@ -36,45 +36,45 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * Intelligent media information processed with MPS
                 */
-                class MediaMiniProgramReviewInfo : public AbstractModel
+                class MPSAiMediaInfo : public AbstractModel
                 {
                 public:
-                    MediaMiniProgramReviewInfo();
-                    ~MediaMiniProgramReviewInfo() = default;
+                    MPSAiMediaInfo();
+                    ~MPSAiMediaInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Audit information list.
-                     * @return MiniProgramReviewList Audit information list.
+                     * 获取List of intelligent media information processed by MPS
+                     * @return AiMediaList List of intelligent media information processed by MPS
                      * 
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
+                    std::vector<MPSAiMediaItem> GetAiMediaList() const;
 
                     /**
-                     * 设置Audit information list.
-                     * @param _miniProgramReviewList Audit information list.
+                     * 设置List of intelligent media information processed by MPS
+                     * @param _aiMediaList List of intelligent media information processed by MPS
                      * 
                      */
-                    void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
+                    void SetAiMediaList(const std::vector<MPSAiMediaItem>& _aiMediaList);
 
                     /**
-                     * 判断参数 MiniProgramReviewList 是否已赋值
-                     * @return MiniProgramReviewList 是否已赋值
+                     * 判断参数 AiMediaList 是否已赋值
+                     * @return AiMediaList 是否已赋值
                      * 
                      */
-                    bool MiniProgramReviewListHasBeenSet() const;
+                    bool AiMediaListHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Audit information list.
+                     * List of intelligent media information processed by MPS
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> m_miniProgramReviewList;
-                    bool m_miniProgramReviewListHasBeenSet;
+                    std::vector<MPSAiMediaItem> m_aiMediaList;
+                    bool m_aiMediaListHasBeenSet;
 
                 };
             }
@@ -82,4 +82,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MPSAIMEDIAINFO_H_

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Bitrate of the audio stream. Measurement unit: bps.</p>
+                     * @return Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Bitrate of the audio stream. Measurement unit: bps.</p>
+                     * @param _bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SamplingRate Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sampling rate of the audio stream, unit: hz.</p>
+                     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
                      * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
-                     * 设置Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _samplingRate Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sampling rate of the audio stream, unit: hz.</p>
+                     * @param _samplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
                      * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SamplingRateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Codec Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Audio stream encoding format, such as aac.</p>
+                     * @return Codec <p>Audio stream encoding format, such as aac.</p>
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _codec Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Audio stream encoding format, such as aac.</p>
+                     * @param _codec <p>Audio stream encoding format, such as aac.</p>
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -124,22 +112,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Bitrate of the audio stream. Measurement unit: bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Sampling rate of the audio stream, unit: hz.</p>
                      */
                     int64_t m_samplingRate;
                     bool m_samplingRateHasBeenSet;
 
                     /**
-                     * Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Audio stream encoding format, such as aac.</p>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;

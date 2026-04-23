@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
-                     * @return TotalCount Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
+                     * 获取<p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
+                     * @return TotalCount <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -61,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Media file information list
-                     * @return MediaInfoSet Media file information list
+                     * 获取<p>Media file information list.</p>
+                     * @return MediaInfoSet <p>Media file information list.</p>
                      * 
                      */
                     std::vector<MediaInfo> GetMediaInfoSet() const;
@@ -77,14 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
+                     * <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Media file information list
+                     * <p>Media file information list.</p>
                      */
                     std::vector<MediaInfo> m_mediaInfoSet;
                     bool m_mediaInfoSetHasBeenSet;

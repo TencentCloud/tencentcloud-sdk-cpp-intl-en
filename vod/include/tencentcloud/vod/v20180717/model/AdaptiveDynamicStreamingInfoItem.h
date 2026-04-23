@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/MediaSubStreamInfoItem.h>
+#include <tencentcloud/vod/v20180717/model/MediaSubtitleItem.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming specification.
-                     * @return Definition Adaptive bitrate streaming specification.
+                     * 获取<p>Convert to adaptive bitrate streaming specification.</p>
+                     * @return Definition <p>Convert to adaptive bitrate streaming specification.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming specification.
-                     * @param _definition Adaptive bitrate streaming specification.
+                     * 设置<p>Convert to adaptive bitrate streaming specification.</p>
+                     * @param _definition <p>Convert to adaptive bitrate streaming specification.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,23 +70,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取The packaging format. Valid values:
-<li>`HLS`</li>
-<li>`DASH`</li>
-                     * @return Package The packaging format. Valid values:
-<li>`HLS`</li>
-<li>`DASH`</li>
+                     * 获取<p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
+                     * @return Package <p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
                      * 
                      */
                     std::string GetPackage() const;
 
                     /**
-                     * 设置The packaging format. Valid values:
-<li>`HLS`</li>
-<li>`DASH`</li>
-                     * @param _package The packaging format. Valid values:
-<li>`HLS`</li>
-<li>`DASH`</li>
+                     * 设置<p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
+                     * @param _package <p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
                      * 
                      */
                     void SetPackage(const std::string& _package);
@@ -98,15 +91,15 @@ namespace TencentCloud
                     bool PackageHasBeenSet() const;
 
                     /**
-                     * 获取Encryption type.
-                     * @return DrmType Encryption type.
+                     * 获取<p>Encryption type.</p>
+                     * @return DrmType <p>Encryption type.</p>
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置Encryption type.
-                     * @param _drmType Encryption type.
+                     * 设置<p>Encryption type.</p>
+                     * @param _drmType <p>Encryption type.</p>
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -119,15 +112,15 @@ namespace TencentCloud
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取Playback address.
-                     * @return Url Playback address.
+                     * 获取<p>Playback address.</p>
+                     * @return Url <p>Playback address.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Playback address.
-                     * @param _url Playback address.
+                     * 设置<p>Playback address.</p>
+                     * @param _url <p>Playback address.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -140,27 +133,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取File size (bytes)
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
-                     * @return Size File size (bytes)
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     * 获取<p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
+                     * @return Size <p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置File size (bytes)
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
-                     * @param _size File size (bytes)
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     * 设置<p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
+                     * @param _size <p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -173,27 +154,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Digital watermark type. Optional values:
-<li>Trace means traceability watermark processing; </li>
-<li>CopyRight means copyright watermark processing; </li>
-<li>None means no digital watermark processing. </li>
-                     * @return DigitalWatermarkType Digital watermark type. Optional values:
-<li>Trace means traceability watermark processing; </li>
-<li>CopyRight means copyright watermark processing; </li>
-<li>None means no digital watermark processing. </li>
+                     * 获取<p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
+                     * @return DigitalWatermarkType <p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置Digital watermark type. Optional values:
-<li>Trace means traceability watermark processing; </li>
-<li>CopyRight means copyright watermark processing; </li>
-<li>None means no digital watermark processing. </li>
-                     * @param _digitalWatermarkType Digital watermark type. Optional values:
-<li>Trace means traceability watermark processing; </li>
-<li>CopyRight means copyright watermark processing; </li>
-<li>None means no digital watermark processing. </li>
+                     * 设置<p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
+                     * @param _digitalWatermarkType <p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -206,15 +175,15 @@ namespace TencentCloud
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
                     /**
-                     * 获取The information of the streams.
-                     * @return SubStreamSet The information of the streams.
+                     * 获取<p>Substream info list.</p>
+                     * @return SubStreamSet <p>Substream info list.</p>
                      * 
                      */
                     std::vector<MediaSubStreamInfoItem> GetSubStreamSet() const;
 
                     /**
-                     * 设置The information of the streams.
-                     * @param _subStreamSet The information of the streams.
+                     * 设置<p>Substream info list.</p>
+                     * @param _subStreamSet <p>Substream info list.</p>
                      * 
                      */
                     void SetSubStreamSet(const std::vector<MediaSubStreamInfoItem>& _subStreamSet);
@@ -227,15 +196,15 @@ namespace TencentCloud
                     bool SubStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Copyright Information.
-                     * @return CopyRightWatermarkText Copyright Information.
+                     * 获取<p>Copyright information.</p>
+                     * @return CopyRightWatermarkText <p>Copyright information.</p>
                      * 
                      */
                     std::string GetCopyRightWatermarkText() const;
 
                     /**
-                     * 设置Copyright Information.
-                     * @param _copyRightWatermarkText Copyright Information.
+                     * 设置<p>Copyright information.</p>
+                     * @param _copyRightWatermarkText <p>Copyright information.</p>
                      * 
                      */
                     void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
@@ -247,63 +216,163 @@ namespace TencentCloud
                      */
                     bool CopyRightWatermarkTextHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Digital watermark template id.</p>
+                     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
+                     * 
+                     */
+                    int64_t GetBlindWatermarkDefinition() const;
+
+                    /**
+                     * 设置<p>Digital watermark template id.</p>
+                     * @param _blindWatermarkDefinition <p>Digital watermark template id.</p>
+                     * 
+                     */
+                    void SetBlindWatermarkDefinition(const int64_t& _blindWatermarkDefinition);
+
+                    /**
+                     * 判断参数 BlindWatermarkDefinition 是否已赋值
+                     * @return BlindWatermarkDefinition 是否已赋值
+                     * 
+                     */
+                    bool BlindWatermarkDefinitionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Subtitle information list.</p>
+                     * @return SubtitleSet <p>Subtitle information list.</p>
+                     * 
+                     */
+                    std::vector<MediaSubtitleItem> GetSubtitleSet() const;
+
+                    /**
+                     * 设置<p>Subtitle information list.</p>
+                     * @param _subtitleSet <p>Subtitle information list.</p>
+                     * 
+                     */
+                    void SetSubtitleSet(const std::vector<MediaSubtitleItem>& _subtitleSet);
+
+                    /**
+                     * 判断参数 SubtitleSet 是否已赋值
+                     * @return SubtitleSet 是否已赋值
+                     * 
+                     */
+                    bool SubtitleSetHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Unique identifier for default subtitle.</p>
+                     * @return DefaultSubtitleId <p>Unique identifier for default subtitle.</p>
+                     * 
+                     */
+                    std::string GetDefaultSubtitleId() const;
+
+                    /**
+                     * 设置<p>Unique identifier for default subtitle.</p>
+                     * @param _defaultSubtitleId <p>Unique identifier for default subtitle.</p>
+                     * 
+                     */
+                    void SetDefaultSubtitleId(const std::string& _defaultSubtitleId);
+
+                    /**
+                     * 判断参数 DefaultSubtitleId 是否已赋值
+                     * @return DefaultSubtitleId 是否已赋值
+                     * 
+                     */
+                    bool DefaultSubtitleIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>DRM encryption method.</p>
+                     * @return DrmEncryptType <p>DRM encryption method.</p>
+                     * 
+                     */
+                    std::string GetDrmEncryptType() const;
+
+                    /**
+                     * 设置<p>DRM encryption method.</p>
+                     * @param _drmEncryptType <p>DRM encryption method.</p>
+                     * 
+                     */
+                    void SetDrmEncryptType(const std::string& _drmEncryptType);
+
+                    /**
+                     * 判断参数 DrmEncryptType 是否已赋值
+                     * @return DrmEncryptType 是否已赋值
+                     * 
+                     */
+                    bool DrmEncryptTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Adaptive bitrate streaming specification.
+                     * <p>Convert to adaptive bitrate streaming specification.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * The packaging format. Valid values:
-<li>`HLS`</li>
-<li>`DASH`</li>
+                     * <p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
                      */
                     std::string m_package;
                     bool m_packageHasBeenSet;
 
                     /**
-                     * Encryption type.
+                     * <p>Encryption type.</p>
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * Playback address.
+                     * <p>Playback address.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * File size (bytes)
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     * <p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Digital watermark type. Optional values:
-<li>Trace means traceability watermark processing; </li>
-<li>CopyRight means copyright watermark processing; </li>
-<li>None means no digital watermark processing. </li>
+                     * <p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
 
                     /**
-                     * The information of the streams.
+                     * <p>Substream info list.</p>
                      */
                     std::vector<MediaSubStreamInfoItem> m_subStreamSet;
                     bool m_subStreamSetHasBeenSet;
 
                     /**
-                     * Copyright Information.
+                     * <p>Copyright information.</p>
                      */
                     std::string m_copyRightWatermarkText;
                     bool m_copyRightWatermarkTextHasBeenSet;
+
+                    /**
+                     * <p>Digital watermark template id.</p>
+                     */
+                    int64_t m_blindWatermarkDefinition;
+                    bool m_blindWatermarkDefinitionHasBeenSet;
+
+                    /**
+                     * <p>Subtitle information list.</p>
+                     */
+                    std::vector<MediaSubtitleItem> m_subtitleSet;
+                    bool m_subtitleSetHasBeenSet;
+
+                    /**
+                     * <p>Unique identifier for default subtitle.</p>
+                     */
+                    std::string m_defaultSubtitleId;
+                    bool m_defaultSubtitleIdHasBeenSet;
+
+                    /**
+                     * <p>DRM encryption method.</p>
+                     */
+                    std::string m_drmEncryptType;
+                    bool m_drmEncryptTypeHasBeenSet;
 
                 };
             }

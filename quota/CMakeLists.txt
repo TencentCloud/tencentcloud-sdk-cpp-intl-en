@@ -19,32 +19,48 @@ set(quota_public_header
   )
 
 set(quota_public_header_model
+  include/tencentcloud/quota/v20241204/model/Sort.h
+  include/tencentcloud/quota/v20241204/model/DescribeUserQuotaResponse.h
   include/tencentcloud/quota/v20241204/model/EnableAlarmResponse.h
   include/tencentcloud/quota/v20241204/model/CreateAlarmResponse.h
   include/tencentcloud/quota/v20241204/model/CreateAlarmRequest.h
   include/tencentcloud/quota/v20241204/model/Alarm.h
+  include/tencentcloud/quota/v20241204/model/DescribeAlarmsRequest.h
+  include/tencentcloud/quota/v20241204/model/DescribeAggregateUserQuotasResponse.h
   include/tencentcloud/quota/v20241204/model/EnableAlarmRequest.h
   include/tencentcloud/quota/v20241204/model/DeleteAlarmResponse.h
+  include/tencentcloud/quota/v20241204/model/Filter.h
   include/tencentcloud/quota/v20241204/model/DeleteAlarmRequest.h
   include/tencentcloud/quota/v20241204/model/DescribeAlarmsResponse.h
   include/tencentcloud/quota/v20241204/model/UpdateAlarmRequest.h
   include/tencentcloud/quota/v20241204/model/UpdateAlarmResponse.h
-  include/tencentcloud/quota/v20241204/model/DescribeAlarmsRequest.h
+  include/tencentcloud/quota/v20241204/model/QuotaDimension.h
+  include/tencentcloud/quota/v20241204/model/DescribeUserQuotaRequest.h
+  include/tencentcloud/quota/v20241204/model/UserQuota.h
+  include/tencentcloud/quota/v20241204/model/DescribeAggregateUserQuotasRequest.h
   )
 
 set(quota_src
   src/v20241204/QuotaClient.cpp
+  src/v20241204/model/Sort.cpp
+  src/v20241204/model/DescribeUserQuotaResponse.cpp
   src/v20241204/model/EnableAlarmResponse.cpp
   src/v20241204/model/CreateAlarmResponse.cpp
   src/v20241204/model/CreateAlarmRequest.cpp
   src/v20241204/model/Alarm.cpp
+  src/v20241204/model/DescribeAlarmsRequest.cpp
+  src/v20241204/model/DescribeAggregateUserQuotasResponse.cpp
   src/v20241204/model/EnableAlarmRequest.cpp
   src/v20241204/model/DeleteAlarmResponse.cpp
+  src/v20241204/model/Filter.cpp
   src/v20241204/model/DeleteAlarmRequest.cpp
   src/v20241204/model/DescribeAlarmsResponse.cpp
   src/v20241204/model/UpdateAlarmRequest.cpp
   src/v20241204/model/UpdateAlarmResponse.cpp
-  src/v20241204/model/DescribeAlarmsRequest.cpp
+  src/v20241204/model/QuotaDimension.cpp
+  src/v20241204/model/DescribeUserQuotaRequest.cpp
+  src/v20241204/model/UserQuota.cpp
+  src/v20241204/model/DescribeAggregateUserQuotasRequest.cpp
   )
 
 set(quota_include

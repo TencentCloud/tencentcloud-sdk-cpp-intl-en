@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_FACERECOGNITIONINFO_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_FACERECOGNITIONINFO_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfoItem.h>
+#include <tencentcloud/vod/v20180717/model/FaceRecognitionTask.h>
 
 
 namespace TencentCloud
@@ -36,45 +36,45 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * Face recognition media information
                 */
-                class MediaMiniProgramReviewInfo : public AbstractModel
+                class FaceRecognitionInfo : public AbstractModel
                 {
                 public:
-                    MediaMiniProgramReviewInfo();
-                    ~MediaMiniProgramReviewInfo() = default;
+                    FaceRecognitionInfo();
+                    ~FaceRecognitionInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Audit information list.
-                     * @return MiniProgramReviewList Audit information list.
+                     * 获取<p>Face recognition task list</p>
+                     * @return FaceRecognitionTasks <p>Face recognition task list</p>
                      * 
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
+                    std::vector<FaceRecognitionTask> GetFaceRecognitionTasks() const;
 
                     /**
-                     * 设置Audit information list.
-                     * @param _miniProgramReviewList Audit information list.
+                     * 设置<p>Face recognition task list</p>
+                     * @param _faceRecognitionTasks <p>Face recognition task list</p>
                      * 
                      */
-                    void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
+                    void SetFaceRecognitionTasks(const std::vector<FaceRecognitionTask>& _faceRecognitionTasks);
 
                     /**
-                     * 判断参数 MiniProgramReviewList 是否已赋值
-                     * @return MiniProgramReviewList 是否已赋值
+                     * 判断参数 FaceRecognitionTasks 是否已赋值
+                     * @return FaceRecognitionTasks 是否已赋值
                      * 
                      */
-                    bool MiniProgramReviewListHasBeenSet() const;
+                    bool FaceRecognitionTasksHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Audit information list.
+                     * <p>Face recognition task list</p>
                      */
-                    std::vector<MediaMiniProgramReviewInfoItem> m_miniProgramReviewList;
-                    bool m_miniProgramReviewListHasBeenSet;
+                    std::vector<FaceRecognitionTask> m_faceRecognitionTasks;
+                    bool m_faceRecognitionTasksHasBeenSet;
 
                 };
             }
@@ -82,4 +82,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MEDIAMINIPROGRAMREVIEWINFO_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_FACERECOGNITIONINFO_H_
