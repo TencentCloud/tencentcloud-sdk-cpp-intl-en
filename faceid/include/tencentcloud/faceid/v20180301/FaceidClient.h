@@ -37,6 +37,10 @@
 #include <tencentcloud/faceid/v20180301/model/BankCardVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CheckBankCardInformationRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CheckBankCardInformationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/CheckIdCardInformationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/CheckIdCardInformationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/CheckIdNameDateRequest.h>
+#include <tencentcloud/faceid/v20180301/model/CheckIdNameDateResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h>
@@ -57,8 +61,22 @@
 #include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlResponse.h>
+#include <tencentcloud/faceid/v20180301/model/IdCardOCRVerificationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/IdCardOCRVerificationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/IdCardVerificationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/IdCardVerificationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/ImageRecognitionRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ImageRecognitionResponse.h>
+#include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Request.h>
+#include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Response.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h>
+#include <tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/MobileStatusRequest.h>
+#include <tencentcloud/faceid/v20180301/model/MobileStatusResponse.h>
+#include <tencentcloud/faceid/v20180301/model/PhoneVerificationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/PhoneVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h>
 
@@ -96,6 +114,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckBankCardInformationResponse> CheckBankCardInformationOutcome;
                 typedef std::future<CheckBankCardInformationOutcome> CheckBankCardInformationOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CheckBankCardInformationRequest&, CheckBankCardInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckBankCardInformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckIdCardInformationResponse> CheckIdCardInformationOutcome;
+                typedef std::future<CheckIdCardInformationOutcome> CheckIdCardInformationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::CheckIdCardInformationRequest&, CheckIdCardInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckIdCardInformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckIdNameDateResponse> CheckIdNameDateOutcome;
+                typedef std::future<CheckIdNameDateOutcome> CheckIdNameDateOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::CheckIdNameDateRequest&, CheckIdNameDateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckIdNameDateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CompareFaceLivenessResponse> CompareFaceLivenessOutcome;
                 typedef std::future<CompareFaceLivenessOutcome> CompareFaceLivenessOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CompareFaceLivenessRequest&, CompareFaceLivenessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareFaceLivenessAsyncHandler;
@@ -126,9 +150,30 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetWebVerificationResultIntlResponse> GetWebVerificationResultIntlOutcome;
                 typedef std::future<GetWebVerificationResultIntlOutcome> GetWebVerificationResultIntlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetWebVerificationResultIntlRequest&, GetWebVerificationResultIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWebVerificationResultIntlAsyncHandler;
+                typedef Outcome<Core::Error, Model::IdCardOCRVerificationResponse> IdCardOCRVerificationOutcome;
+                typedef std::future<IdCardOCRVerificationOutcome> IdCardOCRVerificationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::IdCardOCRVerificationRequest&, IdCardOCRVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdCardOCRVerificationAsyncHandler;
+                typedef Outcome<Core::Error, Model::IdCardVerificationResponse> IdCardVerificationOutcome;
+                typedef std::future<IdCardVerificationOutcome> IdCardVerificationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::IdCardVerificationRequest&, IdCardVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdCardVerificationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImageRecognitionResponse> ImageRecognitionOutcome;
+                typedef std::future<ImageRecognitionOutcome> ImageRecognitionOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ImageRecognitionRequest&, ImageRecognitionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageRecognitionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImageRecognitionV2Response> ImageRecognitionV2Outcome;
+                typedef std::future<ImageRecognitionV2Outcome> ImageRecognitionV2OutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ImageRecognitionV2Request&, ImageRecognitionV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageRecognitionV2AsyncHandler;
                 typedef Outcome<Core::Error, Model::LivenessCompareResponse> LivenessCompareOutcome;
                 typedef std::future<LivenessCompareOutcome> LivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::LivenessCompareRequest&, LivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LivenessCompareAsyncHandler;
+                typedef Outcome<Core::Error, Model::MobileNetworkTimeVerificationResponse> MobileNetworkTimeVerificationOutcome;
+                typedef std::future<MobileNetworkTimeVerificationOutcome> MobileNetworkTimeVerificationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::MobileNetworkTimeVerificationRequest&, MobileNetworkTimeVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MobileNetworkTimeVerificationAsyncHandler;
+                typedef Outcome<Core::Error, Model::MobileStatusResponse> MobileStatusOutcome;
+                typedef std::future<MobileStatusOutcome> MobileStatusOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::MobileStatusRequest&, MobileStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MobileStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::PhoneVerificationResponse> PhoneVerificationOutcome;
+                typedef std::future<PhoneVerificationOutcome> PhoneVerificationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::PhoneVerificationRequest&, PhoneVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PhoneVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::VideoLivenessCompareResponse> VideoLivenessCompareOutcome;
                 typedef std::future<VideoLivenessCompareOutcome> VideoLivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::VideoLivenessCompareRequest&, VideoLivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VideoLivenessCompareAsyncHandler;
@@ -197,6 +242,24 @@ namespace TencentCloud
                 CheckBankCardInformationOutcome CheckBankCardInformation(const Model::CheckBankCardInformationRequest &request);
                 void CheckBankCardInformationAsync(const Model::CheckBankCardInformationRequest& request, const CheckBankCardInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckBankCardInformationOutcomeCallable CheckBankCardInformationCallable(const Model::CheckBankCardInformationRequest& request);
+
+                /**
+                 *This API is used to import the ID card portrait side photo, recognize the information on the ID card photo, and compare the name, identity card number, and ID card portrait photo with the ID photo in the authoritative database to verify if they belong to the same person, thereby verifying the authenticity of the identity card information.
+                 * @param req CheckIdCardInformationRequest
+                 * @return CheckIdCardInformationOutcome
+                 */
+                CheckIdCardInformationOutcome CheckIdCardInformation(const Model::CheckIdCardInformationRequest &request);
+                void CheckIdCardInformationAsync(const Model::CheckIdCardInformationRequest& request, const CheckIdCardInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckIdCardInformationOutcomeCallable CheckIdCardInformationCallable(const Model::CheckIdCardInformationRequest& request);
+
+                /**
+                 *This API is used to validate the authenticity and consistency of the name, identity card number, and valid period.
+                 * @param req CheckIdNameDateRequest
+                 * @return CheckIdNameDateOutcome
+                 */
+                CheckIdNameDateOutcome CheckIdNameDate(const Model::CheckIdNameDateRequest &request);
+                void CheckIdNameDateAsync(const Model::CheckIdNameDateRequest& request, const CheckIdNameDateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckIdNameDateOutcomeCallable CheckIdNameDateCallable(const Model::CheckIdNameDateRequest& request);
 
                 /**
                  *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
@@ -292,6 +355,42 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GetWebVerificationResultIntlOutcomeCallable GetWebVerificationResultIntlCallable(const Model::GetWebVerificationResultIntlRequest& request);
 
                 /**
+                 *This API is used to validate the authenticity and consistency of the name and identity card number. You can provide the required verification information by manually inputting the name and identity card number or importing the ID card portrait side image.
+                 * @param req IdCardOCRVerificationRequest
+                 * @return IdCardOCRVerificationOutcome
+                 */
+                IdCardOCRVerificationOutcome IdCardOCRVerification(const Model::IdCardOCRVerificationRequest &request);
+                void IdCardOCRVerificationAsync(const Model::IdCardOCRVerificationRequest& request, const IdCardOCRVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IdCardOCRVerificationOutcomeCallable IdCardOCRVerificationCallable(const Model::IdCardOCRVerificationRequest& request);
+
+                /**
+                 *This API is used to validate the authenticity and consistency of the name and identity card number.
+                 * @param req IdCardVerificationRequest
+                 * @return IdCardVerificationOutcome
+                 */
+                IdCardVerificationOutcome IdCardVerification(const Model::IdCardVerificationRequest &request);
+                void IdCardVerificationAsync(const Model::IdCardVerificationRequest& request, const IdCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IdCardVerificationOutcomeCallable IdCardVerificationCallable(const Model::IdCardVerificationRequest& request);
+
+                /**
+                 *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information (this interface has stopped integration, new customers please use the <a href="https://www.tencentcloud.com/document/product/1007/102203?from_cn_redirect=1">photo face verification (V2.0)</a> API).
+                 * @param req ImageRecognitionRequest
+                 * @return ImageRecognitionOutcome
+                 */
+                ImageRecognitionOutcome ImageRecognition(const Model::ImageRecognitionRequest &request);
+                void ImageRecognitionAsync(const Model::ImageRecognitionRequest& request, const ImageRecognitionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImageRecognitionOutcomeCallable ImageRecognitionCallable(const Model::ImageRecognitionRequest& request);
+
+                /**
+                 *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information.
+                 * @param req ImageRecognitionV2Request
+                 * @return ImageRecognitionV2Outcome
+                 */
+                ImageRecognitionV2Outcome ImageRecognitionV2(const Model::ImageRecognitionV2Request &request);
+                void ImageRecognitionV2Async(const Model::ImageRecognitionV2Request& request, const ImageRecognitionV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImageRecognitionV2OutcomeCallable ImageRecognitionV2Callable(const Model::ImageRecognitionV2Request& request);
+
+                /**
                  *This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
 This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
                  * @param req LivenessCompareRequest
@@ -300,6 +399,33 @@ This API on the legacy version will continue to serve existing users but will be
                 LivenessCompareOutcome LivenessCompare(const Model::LivenessCompareRequest &request);
                 void LivenessCompareAsync(const Model::LivenessCompareRequest& request, const LivenessCompareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 LivenessCompareOutcomeCallable LivenessCompareCallable(const Model::LivenessCompareRequest& request);
+
+                /**
+                 *This API is used to query the duration of a mobile number. Enter mobile number to query.
+                 * @param req MobileNetworkTimeVerificationRequest
+                 * @return MobileNetworkTimeVerificationOutcome
+                 */
+                MobileNetworkTimeVerificationOutcome MobileNetworkTimeVerification(const Model::MobileNetworkTimeVerificationRequest &request);
+                void MobileNetworkTimeVerificationAsync(const Model::MobileNetworkTimeVerificationRequest& request, const MobileNetworkTimeVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                MobileNetworkTimeVerificationOutcomeCallable MobileNetworkTimeVerificationCallable(const Model::MobileNetworkTimeVerificationRequest& request);
+
+                /**
+                 *This API is used to verify phone number status. You can enter mobile number to query.
+                 * @param req MobileStatusRequest
+                 * @return MobileStatusOutcome
+                 */
+                MobileStatusOutcome MobileStatus(const Model::MobileStatusRequest &request);
+                void MobileStatusAsync(const Model::MobileStatusRequest& request, const MobileStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                MobileStatusOutcomeCallable MobileStatusCallable(const Model::MobileStatusRequest& request);
+
+                /**
+                 *This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+                 * @param req PhoneVerificationRequest
+                 * @return PhoneVerificationOutcome
+                 */
+                PhoneVerificationOutcome PhoneVerification(const Model::PhoneVerificationRequest &request);
+                void PhoneVerificationAsync(const Model::PhoneVerificationRequest& request, const PhoneVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PhoneVerificationOutcomeCallable PhoneVerificationCallable(const Model::PhoneVerificationRequest& request);
 
                 /**
                  *This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.

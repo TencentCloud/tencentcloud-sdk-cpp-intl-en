@@ -40,56 +40,6 @@ CloudauditClient::CloudauditClient(const Credential &credential, const string &r
 }
 
 
-CloudauditClient::CreateAuditOutcome CloudauditClient::CreateAudit(const CreateAuditRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateAudit");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateAuditResponse rsp = CreateAuditResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateAuditOutcome(rsp);
-        else
-            return CreateAuditOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateAuditOutcome(outcome.GetError());
-    }
-}
-
-void CloudauditClient::CreateAuditAsync(const CreateAuditRequest& request, const CreateAuditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const CreateAuditRequest&;
-    using Resp = CreateAuditResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "CreateAudit", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CloudauditClient::CreateAuditOutcomeCallable CloudauditClient::CreateAuditCallable(const CreateAuditRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<CreateAuditOutcome>>();
-    CreateAuditAsync(
-    request,
-    [prom](
-        const CloudauditClient*,
-        const CreateAuditRequest&,
-        CreateAuditOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CloudauditClient::CreateAuditTrackOutcome CloudauditClient::CreateAuditTrack(const CreateAuditTrackRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAuditTrack");
@@ -132,56 +82,6 @@ CloudauditClient::CreateAuditTrackOutcomeCallable CloudauditClient::CreateAuditT
         const CloudauditClient*,
         const CreateAuditTrackRequest&,
         CreateAuditTrackOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CloudauditClient::DeleteAuditOutcome CloudauditClient::DeleteAudit(const DeleteAuditRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteAudit");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteAuditResponse rsp = DeleteAuditResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteAuditOutcome(rsp);
-        else
-            return DeleteAuditOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteAuditOutcome(outcome.GetError());
-    }
-}
-
-void CloudauditClient::DeleteAuditAsync(const DeleteAuditRequest& request, const DeleteAuditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DeleteAuditRequest&;
-    using Resp = DeleteAuditResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DeleteAudit", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CloudauditClient::DeleteAuditOutcomeCallable CloudauditClient::DeleteAuditCallable(const DeleteAuditRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DeleteAuditOutcome>>();
-    DeleteAuditAsync(
-    request,
-    [prom](
-        const CloudauditClient*,
-        const DeleteAuditRequest&,
-        DeleteAuditOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

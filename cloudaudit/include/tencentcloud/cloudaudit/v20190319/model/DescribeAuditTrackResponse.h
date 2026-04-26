@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cloudaudit/v20190319/model/Storage.h>
+#include <tencentcloud/cloudaudit/v20190319/model/Filter.h>
 
 
 namespace TencentCloud
@@ -143,9 +144,9 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account
+                     * 获取Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account
+                     * @return TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -157,6 +158,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TrackForAllMembersHasBeenSet() const;
+
+                    /**
+                     * 获取Data delivery filter conditions
+                     * @return Filters Data delivery filter conditions
+                     * 
+                     */
+                    Filter GetFilters() const;
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
 
                 private:
 
@@ -203,11 +218,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account
+                     * Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_trackForAllMembers;
                     bool m_trackForAllMembersHasBeenSet;
+
+                    /**
+                     * Data delivery filter conditions
+                     */
+                    Filter m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

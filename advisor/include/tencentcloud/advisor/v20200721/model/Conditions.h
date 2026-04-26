@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConditionId Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Warning condition ID.
+                     * @return ConditionId Warning condition ID.
                      * 
                      */
                     uint64_t GetConditionId() const;
 
                     /**
-                     * 设置Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditionId Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Warning condition ID.
+                     * @param _conditionId Warning condition ID.
                      * 
                      */
                     void SetConditionId(const uint64_t& _conditionId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LevelDesc Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the warning level.
+                     * @return LevelDesc Describes the warning level.
                      * 
                      */
                     std::string GetLevelDesc() const;
 
                     /**
-                     * 设置Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _levelDesc Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes the warning level.
+                     * @param _levelDesc Describes the warning level.
                      * 
                      */
                     void SetLevelDesc(const std::string& _levelDesc);
@@ -145,22 +133,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Warning condition ID.
                      */
                     uint64_t m_conditionId;
                     bool m_conditionIdHasBeenSet;
 
                     /**
                      * Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Describes the warning level.
                      */
                     std::string m_levelDesc;
                     bool m_levelDescHasBeenSet;

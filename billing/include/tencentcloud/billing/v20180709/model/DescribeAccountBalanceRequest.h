@@ -42,7 +42,34 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Query the temporary limit
+                     * @return TempCredit Query the temporary limit
+                     * 
+                     */
+                    bool GetTempCredit() const;
+
+                    /**
+                     * 设置Query the temporary limit
+                     * @param _tempCredit Query the temporary limit
+                     * 
+                     */
+                    void SetTempCredit(const bool& _tempCredit);
+
+                    /**
+                     * 判断参数 TempCredit 是否已赋值
+                     * @return TempCredit 是否已赋值
+                     * 
+                     */
+                    bool TempCreditHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Query the temporary limit
+                     */
+                    bool m_tempCredit;
+                    bool m_tempCreditHasBeenSet;
 
                 };
             }

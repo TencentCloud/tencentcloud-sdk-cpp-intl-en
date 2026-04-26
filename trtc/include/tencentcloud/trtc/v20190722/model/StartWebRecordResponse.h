@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of the recording task
-                     * @return TaskId The unique ID of the recording task
+                     * 获取Unique Id of the recording task.
+                     * @return TaskId Unique Id of the recording task.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of the recording task
+                     * Unique Id of the recording task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom text watermark data structure
+                * 
                 */
                 class WaterMarkChar : public AbstractModel
                 {

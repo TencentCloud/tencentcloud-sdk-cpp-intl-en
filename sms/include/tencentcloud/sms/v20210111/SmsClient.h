@@ -53,6 +53,8 @@
 #include <tencentcloud/sms/v20210111/model/PullSmsSendStatusByPhoneNumberResponse.h>
 #include <tencentcloud/sms/v20210111/model/ReportConversionRequest.h>
 #include <tencentcloud/sms/v20210111/model/ReportConversionResponse.h>
+#include <tencentcloud/sms/v20210111/model/SendMultiGlobalSmsRequest.h>
+#include <tencentcloud/sms/v20210111/model/SendMultiGlobalSmsResponse.h>
 #include <tencentcloud/sms/v20210111/model/SendSmsRequest.h>
 #include <tencentcloud/sms/v20210111/model/SendSmsResponse.h>
 #include <tencentcloud/sms/v20210111/model/SendStatusStatisticsRequest.h>
@@ -116,6 +118,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReportConversionResponse> ReportConversionOutcome;
                 typedef std::future<ReportConversionOutcome> ReportConversionOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::ReportConversionRequest&, ReportConversionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReportConversionAsyncHandler;
+                typedef Outcome<Core::Error, Model::SendMultiGlobalSmsResponse> SendMultiGlobalSmsOutcome;
+                typedef std::future<SendMultiGlobalSmsOutcome> SendMultiGlobalSmsOutcomeCallable;
+                typedef std::function<void(const SmsClient*, const Model::SendMultiGlobalSmsRequest&, SendMultiGlobalSmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendMultiGlobalSmsAsyncHandler;
                 typedef Outcome<Core::Error, Model::SendSmsResponse> SendSmsOutcome;
                 typedef std::future<SendSmsOutcome> SendSmsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::SendSmsRequest&, SendSmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendSmsAsyncHandler;
@@ -307,9 +312,16 @@ Currently, you can also [configure the callback](https://intl.cloud.tencent.com/
                 ReportConversionOutcomeCallable ReportConversionCallable(const Model::ReportConversionRequest& request);
 
                 /**
+                 *This API is used to send Global SMS messages in batches. Compared with the SendSms API, it supports sending SMS messages with different content to multiple phone numbers in a single request and allows specifying different SenderIds.
+                 * @param req SendMultiGlobalSmsRequest
+                 * @return SendMultiGlobalSmsOutcome
+                 */
+                SendMultiGlobalSmsOutcome SendMultiGlobalSms(const Model::SendMultiGlobalSmsRequest &request);
+                void SendMultiGlobalSmsAsync(const Model::SendMultiGlobalSmsRequest& request, const SendMultiGlobalSmsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SendMultiGlobalSmsOutcomeCallable SendMultiGlobalSmsCallable(const Model::SendMultiGlobalSmsRequest& request);
+
+                /**
                  *This API is used to send SMS verification codes, notification, or marketing messages to users.
->- Note: Because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the [SDK](https://intl.cloud.tencent.com/document/product/382/43193?from_cn_redirect=1).
->- Note: You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
                  * @param req SendSmsRequest
                  * @return SendSmsOutcome
                  */

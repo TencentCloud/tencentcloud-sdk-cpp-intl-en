@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trend value. The value of this field is null when Type is none.
+                     * @return Value Trend value. The value of this field is null when Type is none.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Trend value. The value of this field is null when Type is none.
+                     * @param _value Trend value. The value of this field is null when Type is none.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trend value. The value of this field is null when Type is none.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

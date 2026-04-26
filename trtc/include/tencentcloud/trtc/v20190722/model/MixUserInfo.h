@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取The type of the `RoomId` parameter. 0: integer; 1: string.
-                     * @return RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * 获取Room id type. 0 indicates integer room number. 1 indicates string room number.
+                     * @return RoomIdType Room id type. 0 indicates integer room number. 1 indicates string room number.
                      * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
-                     * 设置The type of the `RoomId` parameter. 0: integer; 1: string.
-                     * @param _roomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * 设置Room id type. 0 indicates integer room number. 1 indicates string room number.
+                     * @param _roomIdType Room id type. 0 indicates integer room number. 1 indicates string room number.
                      * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * Room id type. 0 indicates integer room number. 1 indicates string room number.
                      */
                     uint64_t m_roomIdType;
                     bool m_roomIdTypeHasBeenSet;

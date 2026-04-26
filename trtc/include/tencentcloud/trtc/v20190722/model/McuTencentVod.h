@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mcu Relay Recording and Tencent VOD Parameters
+                * Mcu relay recording. tencent cloud video on demand (vod) related parameters.
                 */
                 class McuTencentVod : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
-                     * @return Procedure Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+                     * 获取Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+                     * @return Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      * 
                      */
                     std::string GetProcedure() const;
 
                     /**
-                     * 设置Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
-                     * @param _procedure Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+                     * 设置Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+                     * @param _procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      * 
                      */
                     void SetProcedure(const std::string& _procedure);
@@ -80,31 +68,15 @@ Example: template_name
                     bool ProcedureHasBeenSet() const;
 
                     /**
-                     * 获取Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
-                     * @return ExpireTime Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+                     * 获取Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+                     * @return ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
-                     * @param _expireTime Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+                     * 设置Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+                     * @param _expireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -117,23 +89,15 @@ Example: 86400
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
-                     * @return StorageRegion Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+                     * 获取Specify the upload park, applicable only to the user with special requirement for upload region.
+                     * @return StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
                      * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
-                     * @param _storageRegion Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+                     * 设置Specify the upload park, applicable only to the user with special requirement for upload region.
+                     * @param _storageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
                      * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
@@ -146,27 +110,19 @@ Example: ap-shanghai
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
-                     * @return ClassId Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+                     * 获取Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+                     * @return ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      * 
                      */
                     uint64_t GetClassId() const;
 
                     /**
-                     * 设置Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
-                     * @param _classId Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+                     * 设置Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+                     * @param _classId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      * 
                      */
                     void SetClassId(const uint64_t& _classId);
@@ -179,23 +135,15 @@ Example: 0
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
-                     * @return SubAppId VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+                     * 获取Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+                     * @return SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
-                     * @param _subAppId VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+                     * 设置Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+                     * @param _subAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -208,23 +156,15 @@ Example: 0
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
-                     * @return SessionContext Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+                     * 获取Task flow context, passed through when task complete.
+                     * @return SessionContext Task flow context, passed through when task complete.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
-                     * @param _sessionContext Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+                     * 设置Task flow context, passed through when task complete.
+                     * @param _sessionContext Task flow context, passed through when task complete.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -237,23 +177,15 @@ Example: user_custom
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
-                     * @return SourceContext Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+                     * 获取Upload context, passed through on upload completion callback.
+                     * @return SourceContext Upload context, passed through on upload completion callback.
                      * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
-                     * 设置Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
-                     * @param _sourceContext Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+                     * 设置Upload context, passed through on upload completion callback.
+                     * @param _sourceContext Upload context, passed through on upload completion callback.
                      * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
@@ -268,61 +200,44 @@ Example: user_custom
                 private:
 
                     /**
-                     * Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+                     * Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
                      */
                     std::string m_procedure;
                     bool m_procedureHasBeenSet;
 
                     /**
-                     * Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+                     * Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+                     * Specify the upload park, applicable only to the user with special requirement for upload region.
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+                     * Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
                      */
                     uint64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+                     * Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+                     * Task flow context, passed through when task complete.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+                     * Upload context, passed through on upload completion callback.
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;

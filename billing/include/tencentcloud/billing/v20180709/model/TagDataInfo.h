@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Set the allocation tag time. Ordinary tags do not return.
+                     * @return UpdateTime Set the allocation tag time. Ordinary tags do not return.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Set the allocation tag time. Ordinary tags do not return.
+                     * @param _updateTime Set the allocation tag time. Ordinary tags do not return.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -128,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Set the allocation tag time. Ordinary tags do not return.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

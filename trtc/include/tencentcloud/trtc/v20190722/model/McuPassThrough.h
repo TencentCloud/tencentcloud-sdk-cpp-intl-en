@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool PayloadContentHasBeenSet() const;
 
                     /**
-                     * 获取The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
-                     * @return PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * 获取PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
+                     * @return PayloadType PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
                      * 
                      */
                     uint64_t GetPayloadType() const;
 
                     /**
-                     * 设置The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
-                     * @param _payloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * 设置PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
+                     * @param _payloadType PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
                      * 
                      */
                     void SetPayloadType(const uint64_t& _payloadType);
@@ -160,7 +164,8 @@ namespace TencentCloud
                     bool m_payloadContentHasBeenSet;
 
                     /**
-                     * The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
                      */
                     uint64_t m_payloadType;
                     bool m_payloadTypeHasBeenSet;

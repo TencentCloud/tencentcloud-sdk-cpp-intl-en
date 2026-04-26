@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product code
+                     * @return BusinessCode Product code
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product code
+                     * @param _businessCode Product code
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCodeName Product nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product name
+                     * @return BusinessCodeName Product name
                      * 
                      */
                     std::string GetBusinessCodeName() const;
 
                     /**
-                     * 设置Product nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCodeName Product nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product name
+                     * @param _businessCodeName Product name
                      * 
                      */
                     void SetBusinessCodeName(const std::string& _businessCodeName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Product code
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Product nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Product name
                      */
                     std::string m_businessCodeName;
                     bool m_businessCodeNameHasBeenSet;

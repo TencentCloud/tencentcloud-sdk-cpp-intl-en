@@ -408,18 +408,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BillTagInfo> GetTags() const;
 
                     /**
                      * 设置Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<BillTagInfo>& _tags);
@@ -432,19 +428,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCode Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product code
+                     * @return BusinessCode Product code
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCode Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product code
+                     * @param _businessCode Product code
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -457,19 +449,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductCode Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subproduct code
+                     * @return ProductCode Subproduct code
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productCode Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subproduct code
+                     * @param _productCode Subproduct code
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -482,19 +470,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionType Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type code
+                     * @return ActionType Transaction type code
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionType Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type code
+                     * @param _actionType Transaction type code
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -507,19 +491,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionId Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region ID
+                     * @return RegionId Region ID
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionId Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region ID
+                     * @param _regionId Region ID
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -553,19 +533,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+                     * @return PriceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
                      * 
                      */
                     std::vector<std::string> GetPriceInfo() const;
 
                     /**
-                     * 设置Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _priceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+                     * @param _priceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
                      * 
                      */
                     void SetPriceInfo(const std::vector<std::string>& _priceInfo);
@@ -578,19 +554,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PriceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+                     * @return AssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
                      * 
                      */
                     BillDetailAssociatedOrder GetAssociatedOrder() const;
 
                     /**
-                     * 设置Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _associatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+                     * @param _associatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
                      * 
                      */
                     void SetAssociatedOrder(const BillDetailAssociatedOrder& _associatedOrder);
@@ -603,19 +575,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AssociatedOrderHasBeenSet() const;
 
                     /**
-                     * 获取Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+                     * @return Formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
                      * 
                      */
                     std::string GetFormula() const;
 
                     /**
-                     * 设置Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+                     * @param _formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
                      * 
                      */
                     void SetFormula(const std::string& _formula);
@@ -628,19 +596,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FormulaHasBeenSet() const;
 
                     /**
-                     * 获取Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+                     * @return FormulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
                      * 
                      */
                     std::string GetFormulaUrl() const;
 
                     /**
-                     * 设置Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+                     * @param _formulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
                      * 
                      */
                     void SetFormulaUrl(const std::string& _formulaUrl);
@@ -653,15 +617,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FormulaUrlHasBeenSet() const;
 
                     /**
-                     * 获取Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing month
+                     * @return BillMonth Billing month
                      * 
                      */
                     std::string GetBillMonth() const;
 
                     /**
-                     * 设置Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _billMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing month
+                     * @param _billMonth Billing month
                      * 
                      */
                     void SetBillMonth(const std::string& _billMonth);
@@ -674,15 +638,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BillMonthHasBeenSet() const;
 
                     /**
-                     * 获取Billing dayNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing day
+                     * @return BillDay Billing day
                      * 
                      */
                     std::string GetBillDay() const;
 
                     /**
-                     * 设置Billing dayNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _billDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing day
+                     * @param _billDay Billing day
                      * 
                      */
                     void SetBillDay(const std::string& _billDay);
@@ -800,35 +764,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BillTagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product code
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subproduct code
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type code
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region ID
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -840,41 +799,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
                      */
                     std::vector<std::string> m_priceInfo;
                     bool m_priceInfoHasBeenSet;
 
                     /**
-                     * Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
                      */
                     BillDetailAssociatedOrder m_associatedOrder;
                     bool m_associatedOrderHasBeenSet;
 
                     /**
-                     * Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
                      */
                     std::string m_formula;
                     bool m_formulaHasBeenSet;
 
                     /**
-                     * Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Billing Rules: The detailed billing rules for each product shown in the portal explanation link
                      */
                     std::string m_formulaUrl;
                     bool m_formulaUrlHasBeenSet;
 
                     /**
-                     * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing month
                      */
                     std::string m_billMonth;
                     bool m_billMonthHasBeenSet;
 
                     /**
-                     * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing day
                      */
                     std::string m_billDay;
                     bool m_billDayHasBeenSet;

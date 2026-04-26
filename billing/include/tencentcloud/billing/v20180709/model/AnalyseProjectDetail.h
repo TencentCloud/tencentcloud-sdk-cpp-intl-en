@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
                      * 设置Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _projectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Default projectNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectName Default projectNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取default project
+                     * @return ProjectName default project
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Default projectNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectName Default projectNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置default project
+                     * @param _projectName default project
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -96,13 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Default projectNote: This field may return null, indicating that no valid values can be obtained.
+                     * default project
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;

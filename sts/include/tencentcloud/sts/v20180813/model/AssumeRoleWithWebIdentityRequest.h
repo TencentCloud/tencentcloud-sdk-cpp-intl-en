@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool RoleSessionNameHasBeenSet() const;
 
                     /**
-                     * 获取The validity period of the temporary credential in seconds. Default value: 7,200s. Maximum value: 43,200s.
-                     * @return DurationSeconds The validity period of the temporary credential in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * 获取Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @return DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      * 
                      */
                     int64_t GetDurationSeconds() const;
 
                     /**
-                     * 设置The validity period of the temporary credential in seconds. Default value: 7,200s. Maximum value: 43,200s.
-                     * @param _durationSeconds The validity period of the temporary credential in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * 设置Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @param _durationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      * 
                      */
                     void SetDurationSeconds(const int64_t& _durationSeconds);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_roleSessionNameHasBeenSet;
 
                     /**
-                     * The validity period of the temporary credential in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      */
                     int64_t m_durationSeconds;
                     bool m_durationSecondsHasBeenSet;

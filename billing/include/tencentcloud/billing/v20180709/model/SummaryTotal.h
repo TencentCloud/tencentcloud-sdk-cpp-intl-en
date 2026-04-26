@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取discounted total price
+                     * @return RealTotalCost discounted total price
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置discounted total price
+                     * @param _realTotalCost discounted total price
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+                     * @return TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _totalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+                     * @param _totalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -95,14 +91,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * discounted total price
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;

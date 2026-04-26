@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
-                     * @return Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * 获取Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
+                     * @return Height Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
-                     * @param _height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * 设置Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
+                     * @param _height Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;

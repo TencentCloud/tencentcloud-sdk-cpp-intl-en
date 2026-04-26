@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total amount of data.
-Example value: 10.
-                     * @return Total Total amount of data.
-Example value: 10.
+                     * 获取<p>Total data</p>
+                     * @return Total <p>Total data</p>
                      * 
                      */
                     int64_t GetTotal() const;
@@ -61,10 +59,8 @@ Example value: 10.
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Detailed data.
-Example value: [].
-                     * @return Data Detailed data.
-Example value: [].
+                     * 获取<p>Detailed data</p>
+                     * @return Data <p>Detailed data</p>
                      * 
                      */
                     std::vector<AdjustInfoDetail> GetData() const;
@@ -79,15 +75,13 @@ Example value: [].
                 private:
 
                     /**
-                     * Total amount of data.
-Example value: 10.
+                     * <p>Total data</p>
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Detailed data.
-Example value: [].
+                     * <p>Detailed data</p>
                      */
                     std::vector<AdjustInfoDetail> m_data;
                     bool m_dataHasBeenSet;

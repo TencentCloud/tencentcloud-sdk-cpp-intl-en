@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The video encoding parameters.
-                     * @return VideoEncode The video encoding parameters.
+                     * 获取Video encoding parameter for the output stream.
+                     * @return VideoEncode Video encoding parameter for the output stream.
                      * 
                      */
                     VideoEncode GetVideoEncode() const;
 
                     /**
-                     * 设置The video encoding parameters.
-                     * @param _videoEncode The video encoding parameters.
+                     * 设置Video encoding parameter for the output stream.
+                     * @param _videoEncode Video encoding parameter for the output stream.
                      * 
                      */
                     void SetVideoEncode(const VideoEncode& _videoEncode);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool VideoEncodeHasBeenSet() const;
 
                     /**
-                     * 获取The layout parameters.
-                     * @return LayoutParams The layout parameters.
+                     * 获取Stream mixing layout parameter.
+                     * @return LayoutParams Stream mixing layout parameter.
                      * 
                      */
                     McuLayoutParams GetLayoutParams() const;
 
                     /**
-                     * 设置The layout parameters.
-                     * @param _layoutParams The layout parameters.
+                     * 设置Stream mixing layout parameter.
+                     * @param _layoutParams Stream mixing layout parameter.
                      * 
                      */
                     void SetLayoutParams(const McuLayoutParams& _layoutParams);
@@ -92,43 +92,43 @@ namespace TencentCloud
                     bool LayoutParamsHasBeenSet() const;
 
                     /**
-                     * 获取The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
-                     * @return BackGroundColor The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+                     * 获取The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+                     * @return BackGroundColor The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
                      * 
                      */
                     std::string GetBackGroundColor() const;
 
                     /**
-                     * 设置The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
-                     * @param _backGroundColor The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+                     * 设置The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+                     * @param _backGroundColor The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
                      * 
                      */
                     void SetBackGroundColor(const std::string& _backGroundColor);
@@ -141,15 +141,27 @@ Grey: 0x999999
                     bool BackGroundColorHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
-                     * @return BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * 获取The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+                     * @return BackgroundImageUrl The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
                      * 
                      */
                     std::string GetBackgroundImageUrl() const;
 
                     /**
-                     * 设置The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
-                     * @param _backgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * 设置The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+                     * @param _backgroundImageUrl The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
                      * 
                      */
                     void SetBackgroundImageUrl(const std::string& _backgroundImageUrl);
@@ -162,15 +174,15 @@ Grey: 0x999999
                     bool BackgroundImageUrlHasBeenSet() const;
 
                     /**
-                     * 获取The watermark information for the mixed stream.
-                     * @return WaterMarkList The watermark information for the mixed stream.
+                     * 获取Watermark parameters for the stream mixing layout.
+                     * @return WaterMarkList Watermark parameters for the stream mixing layout.
                      * 
                      */
                     std::vector<McuWaterMarkParams> GetWaterMarkList() const;
 
                     /**
-                     * 设置The watermark information for the mixed stream.
-                     * @param _waterMarkList The watermark information for the mixed stream.
+                     * 设置Watermark parameters for the stream mixing layout.
+                     * @param _waterMarkList Watermark parameters for the stream mixing layout.
                      * 
                      */
                     void SetWaterMarkList(const std::vector<McuWaterMarkParams>& _waterMarkList);
@@ -183,15 +195,15 @@ Grey: 0x999999
                     bool WaterMarkListHasBeenSet() const;
 
                     /**
-                     * 获取Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
-                     * @return BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * 获取The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
+                     * @return BackgroundRenderMode The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
                      * 
                      */
                     uint64_t GetBackgroundRenderMode() const;
 
                     /**
-                     * 设置Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
-                     * @param _backgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * 设置The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
+                     * @param _backgroundRenderMode The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
                      * 
                      */
                     void SetBackgroundRenderMode(const uint64_t& _backgroundRenderMode);
@@ -206,44 +218,47 @@ Grey: 0x999999
                 private:
 
                     /**
-                     * The video encoding parameters.
+                     * Video encoding parameter for the output stream.
                      */
                     VideoEncode m_videoEncode;
                     bool m_videoEncodeHasBeenSet;
 
                     /**
-                     * The layout parameters.
+                     * Stream mixing layout parameter.
                      */
                     McuLayoutParams m_layoutParams;
                     bool m_layoutParamsHasBeenSet;
 
                     /**
-                     * The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+                     * The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
                      */
                     std::string m_backGroundColor;
                     bool m_backGroundColorHasBeenSet;
 
                     /**
-                     * The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
                      */
                     std::string m_backgroundImageUrl;
                     bool m_backgroundImageUrlHasBeenSet;
 
                     /**
-                     * The watermark information for the mixed stream.
+                     * Watermark parameters for the stream mixing layout.
                      */
                     std::vector<McuWaterMarkParams> m_waterMarkList;
                     bool m_waterMarkListHasBeenSet;
 
                     /**
-                     * Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
                      */
                     uint64_t m_backgroundRenderMode;
                     bool m_backgroundRenderModeHasBeenSet;

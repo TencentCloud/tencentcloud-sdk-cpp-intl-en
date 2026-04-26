@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Render mobile mode parameters. Do not set this parameter when not rendering the mobile mode.
+                * Render the mobile mode parameter. do not set this parameter when not rendering mobile mode.
                 */
                 class EmulateMobileParams : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mobile device types,
-0: Phone
-1: Tablet
-                     * @return MobileDeviceType Mobile device types,
-0: Phone
-1: Tablet
+                     * 获取Mobile device type.
+Mobile phone.
+Tablet.
+                     * @return MobileDeviceType Mobile device type.
+Mobile phone.
+Tablet.
                      * 
                      */
                     uint64_t GetMobileDeviceType() const;
 
                     /**
-                     * 设置Mobile device types,
-0: Phone
-1: Tablet
-                     * @param _mobileDeviceType Mobile device types,
-0: Phone
-1: Tablet
+                     * 设置Mobile device type.
+Mobile phone.
+Tablet.
+                     * @param _mobileDeviceType Mobile device type.
+Mobile phone.
+Tablet.
                      * 
                      */
                     void SetMobileDeviceType(const uint64_t& _mobileDeviceType);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool MobileDeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Screen orientation,
-0: Portrait,
-1: Landscape
-                     * @return ScreenOrientation Screen orientation,
-0: Portrait,
-1: Landscape
+                     * 获取Screen orientation.
+Portrait mode.
+Landscape mode.
+                     * @return ScreenOrientation Screen orientation.
+Portrait mode.
+Landscape mode.
                      * 
                      */
                     uint64_t GetScreenOrientation() const;
 
                     /**
-                     * 设置Screen orientation,
-0: Portrait,
-1: Landscape
-                     * @param _screenOrientation Screen orientation,
-0: Portrait,
-1: Landscape
+                     * 设置Screen orientation.
+Portrait mode.
+Landscape mode.
+                     * @param _screenOrientation Screen orientation.
+Portrait mode.
+Landscape mode.
                      * 
                      */
                     void SetScreenOrientation(const uint64_t& _screenOrientation);
@@ -107,17 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mobile device types,
-0: Phone
-1: Tablet
+                     * Mobile device type.
+Mobile phone.
+Tablet.
                      */
                     uint64_t m_mobileDeviceType;
                     bool m_mobileDeviceTypeHasBeenSet;
 
                     /**
-                     * Screen orientation,
-0: Portrait,
-1: Landscape
+                     * Screen orientation.
+Portrait mode.
+Landscape mode.
                      */
                     uint64_t m_screenOrientation;
                     bool m_screenOrientationHasBeenSet;

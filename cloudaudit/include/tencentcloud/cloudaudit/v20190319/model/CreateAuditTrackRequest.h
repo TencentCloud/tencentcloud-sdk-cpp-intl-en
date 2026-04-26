@@ -65,6 +65,48 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
+                     * 获取Tracking set status (0: Not enabled; 1: Enabled).
+                     * @return Status Tracking set status (0: Not enabled; 1: Enabled).
+                     * 
+                     */
+                    uint64_t GetStatus() const;
+
+                    /**
+                     * 设置Tracking set status (0: Not enabled; 1: Enabled).
+                     * @param _status Tracking set status (0: Not enabled; 1: Enabled).
+                     * 
+                     */
+                    void SetStatus(const uint64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * 
+                     */
+                    Storage GetStorage() const;
+
+                    /**
+                     * 设置Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * @param _storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * 
+                     */
+                    void SetStorage(const Storage& _storage);
+
+                    /**
+                     * 判断参数 Storage 是否已赋值
+                     * @return Storage 是否已赋值
+                     * 
+                     */
+                    bool StorageHasBeenSet() const;
+
+                    /**
                      * 获取Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
                      * @return ActionType Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
                      * 
@@ -107,27 +149,6 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tracking set status (0: Not enabled; 1: Enabled)
-                     * @return Status Tracking set status (0: Not enabled; 1: Enabled)
-                     * 
-                     */
-                    uint64_t GetStatus() const;
-
-                    /**
-                     * 设置Tracking set status (0: Not enabled; 1: Enabled)
-                     * @param _status Tracking set status (0: Not enabled; 1: Enabled)
-                     * 
-                     */
-                    void SetStatus(const uint64_t& _status);
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     * 
-                     */
-                    bool StatusHasBeenSet() const;
-
-                    /**
                      * 获取The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
                      * @return EventNames The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
                      * 
@@ -149,36 +170,15 @@ namespace TencentCloud
                     bool EventNamesHasBeenSet() const;
 
                     /**
-                     * 获取Storage type of shipped data. Valid values: `cos`, `cls`.
-                     * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
-                     * 
-                     */
-                    Storage GetStorage() const;
-
-                    /**
-                     * 设置Storage type of shipped data. Valid values: `cos`, `cls`.
-                     * @param _storage Storage type of shipped data. Valid values: `cos`, `cls`.
-                     * 
-                     */
-                    void SetStorage(const Storage& _storage);
-
-                    /**
-                     * 判断参数 Storage 是否已赋值
-                     * @return Storage 是否已赋值
-                     * 
-                     */
-                    bool StorageHasBeenSet() const;
-
-                    /**
-                     * 获取Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
-                     * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+                     * 获取Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+                     * @return TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
                      * 
                      */
                     uint64_t GetTrackForAllMembers() const;
 
                     /**
-                     * 设置Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
-                     * @param _trackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+                     * 设置Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+                     * @param _trackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
                      * 
                      */
                     void SetTrackForAllMembers(const uint64_t& _trackForAllMembers);
@@ -190,6 +190,27 @@ namespace TencentCloud
                      */
                     bool TrackForAllMembersHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ExportId 
+                     * 
+                     */
+                    std::string GetExportId() const;
+
+                    /**
+                     * 设置
+                     * @param _exportId 
+                     * 
+                     */
+                    void SetExportId(const std::string& _exportId);
+
+                    /**
+                     * 判断参数 ExportId 是否已赋值
+                     * @return ExportId 是否已赋值
+                     * 
+                     */
+                    bool ExportIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -197,6 +218,18 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Tracking set status (0: Not enabled; 1: Enabled).
+                     */
+                    uint64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Storage type of shipped data. Valid values: `cos`, `cls`.
+                     */
+                    Storage m_storage;
+                    bool m_storageHasBeenSet;
 
                     /**
                      * Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
@@ -211,28 +244,22 @@ namespace TencentCloud
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Tracking set status (0: Not enabled; 1: Enabled)
-                     */
-                    uint64_t m_status;
-                    bool m_statusHasBeenSet;
-
-                    /**
                      * The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
                      */
                     std::vector<std::string> m_eventNames;
                     bool m_eventNamesHasBeenSet;
 
                     /**
-                     * Storage type of shipped data. Valid values: `cos`, `cls`.
-                     */
-                    Storage m_storage;
-                    bool m_storageHasBeenSet;
-
-                    /**
-                     * Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+                     * Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
                      */
                     uint64_t m_trackForAllMembers;
                     bool m_trackForAllMembersHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_exportId;
+                    bool m_exportIdHasBeenSet;
 
                 };
             }

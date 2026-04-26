@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start date of the usage query, such as `2020-09-01`.
-                     * @return StartDate The start date of the usage query, such as `2020-09-01`.
+                     * 获取The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
+                     * @return StartDate The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
                      * 
                      */
                     std::string GetStartDate() const;
 
                     /**
-                     * 设置The start date of the usage query, such as `2020-09-01`.
-                     * @param _startDate The start date of the usage query, such as `2020-09-01`.
+                     * 设置The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
+                     * @param _startDate The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
                      * 
                      */
                     void SetStartDate(const std::string& _startDate);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartDateHasBeenSet() const;
 
                     /**
-                     * 获取The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
-                     * @return EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * 获取The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
+                     * @return EndDate The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
                      * 
                      */
                     std::string GetEndDate() const;
 
                     /**
-                     * 设置The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
-                     * @param _endDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * 设置The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
+                     * @param _endDate The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
                      * 
                      */
                     void SetEndDate(const std::string& _endDate);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start date of the usage query, such as `2020-09-01`.
+                     * The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
                      */
                     std::string m_startDate;
                     bool m_startDateHasBeenSet;
 
                     /**
-                     * The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
                      */
                     std::string m_endDate;
                     bool m_endDateHasBeenSet;

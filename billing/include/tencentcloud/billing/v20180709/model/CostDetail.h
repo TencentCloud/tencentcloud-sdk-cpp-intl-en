@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/billing/v20180709/model/CostComponentSet.h>
+#include <tencentcloud/billing/v20180709/model/BillTagInfo.h>
 
 
 namespace TencentCloud
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取Type nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionTypeName Type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Type name
+                     * @return ActionTypeName Type name
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Type nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionTypeName Type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Type name
+                     * @param _actionTypeName Type name
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -383,6 +384,27 @@ namespace TencentCloud
                      */
                     bool ProductCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag information.	
+                     * @return Tags Tag information.	
+                     * 
+                     */
+                    std::vector<BillTagInfo> GetTags() const;
+
+                    /**
+                     * 设置Tag information.	
+                     * @param _tags Tag information.	
+                     * 
+                     */
+                    void SetTags(const std::vector<BillTagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -440,7 +462,7 @@ namespace TencentCloud
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * Type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Type name
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
@@ -480,6 +502,12 @@ namespace TencentCloud
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
+
+                    /**
+                     * Tag information.	
+                     */
+                    std::vector<BillTagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

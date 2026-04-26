@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool TotalUsedAmountHasBeenSet() const;
 
                     /**
-                     * 获取The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UsageRecords The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Voucher usage record details
+                     * @return UsageRecords Voucher usage record details
                      * 
                      */
                     std::vector<UsageRecords> GetUsageRecords() const;
@@ -103,8 +101,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_totalUsedAmountHasBeenSet;
 
                     /**
-                     * The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Voucher usage record details
                      */
                     std::vector<UsageRecords> m_usageRecords;
                     bool m_usageRecordsHasBeenSet;

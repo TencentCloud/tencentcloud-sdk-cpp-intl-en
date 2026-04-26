@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
-                     * @return Ready Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+                     * 获取Whether the bill file is ready. 0: file generating, 1: file generated
+                     * @return Ready Whether the bill file is ready. 0: file generating, 1: file generated
                      * 
                      */
                     int64_t GetReady() const;
@@ -58,8 +58,10 @@ namespace TencentCloud
                     bool ReadyHasBeenSet() const;
 
                     /**
-                     * 获取Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DownloadUrl Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DownloadUrl Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -74,13 +76,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+                     * Whether the bill file is ready. 0: file generating, 1: file generated
                      */
                     int64_t m_ready;
                     bool m_readyHasBeenSet;
 
                     /**
-                     * Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;

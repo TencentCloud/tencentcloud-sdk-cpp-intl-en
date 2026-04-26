@@ -161,15 +161,15 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
                     bool DimensionsHasBeenSet() const;
 
                     /**
-                     * 获取Fee type: cost-total cost, totalCost-original price cost
-                     * @return FeeType Fee type: cost-total cost, totalCost-original price cost
+                     * 获取Fee type: cost-discounted total cost, totalCost-original price cost
+                     * @return FeeType Fee type: cost-discounted total cost, totalCost-original price cost
                      * 
                      */
                     std::string GetFeeType() const;
 
                     /**
-                     * 设置Fee type: cost-total cost, totalCost-original price cost
-                     * @param _feeType Fee type: cost-total cost, totalCost-original price cost
+                     * 设置Fee type: cost-discounted total cost, totalCost-original price cost
+                     * @param _feeType Fee type: cost-discounted total cost, totalCost-original price cost
                      * 
                      */
                     void SetFeeType(const std::string& _feeType);
@@ -322,7 +322,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
                     bool m_dimensionsHasBeenSet;
 
                     /**
-                     * Fee type: cost-total cost, totalCost-original price cost
+                     * Fee type: cost-discounted total cost, totalCost-original price cost
                      */
                     std::string m_feeType;
                     bool m_feeTypeHasBeenSet;

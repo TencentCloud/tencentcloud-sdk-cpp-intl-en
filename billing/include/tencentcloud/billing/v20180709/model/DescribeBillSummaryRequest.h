@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill month in the format of "yyyy-mm"
-                     * @return Month Bill month in the format of "yyyy-mm"
+                     * 获取<p>Bill month, formatted as 2023-04</p>
+                     * @return Month <p>Bill month, formatted as 2023-04</p>
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month in the format of "yyyy-mm"
-                     * @param _month Bill month in the format of "yyyy-mm"
+                     * 设置<p>Bill month, formatted as 2023-04</p>
+                     * @param _month <p>Bill month, formatted as 2023-04</p>
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
-                     * @return GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+                     * 获取<p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
+                     * @return GroupType <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
                      * 
                      */
                     std::string GetGroupType() const;
 
                     /**
-                     * 设置Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
-                     * @param _groupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+                     * 设置<p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
+                     * @param _groupType <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
                      * 
                      */
                     void SetGroupType(const std::string& _groupType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag key, which is used when `GroupType` is `tag`.
-                     * @return TagKey Tag key, which is used when `GroupType` is `tag`.
+                     * 获取<p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
+                     * @return TagKey <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
                      * 
                      */
                     std::vector<std::string> GetTagKey() const;
 
                     /**
-                     * 设置Tag key, which is used when `GroupType` is `tag`.
-                     * @param _tagKey Tag key, which is used when `GroupType` is `tag`.
+                     * 设置<p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
+                     * @param _tagKey <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
                      * 
                      */
                     void SetTagKey(const std::vector<std::string>& _tagKey);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperateUin 
+                     * 获取<p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
+                     * @return OperateUin <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
                      * 
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置
-                     * @param _operateUin 
+                     * 设置<p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
+                     * @param _operateUin <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
                      * 
                      */
                     void SetOperateUin(const std::string& _operateUin);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OperateUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PayerUin 
+                     * 获取<p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
+                     * @return PayerUin <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
                      * 
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置
-                     * @param _payerUin 
+                     * 设置<p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
+                     * @param _payerUin <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
                      * 
                      */
                     void SetPayerUin(const std::string& _payerUin);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bill month in the format of "yyyy-mm"
+                     * <p>Bill month, formatted as 2023-04</p>
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+                     * <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
                      */
                     std::string m_groupType;
                     bool m_groupTypeHasBeenSet;
 
                     /**
-                     * Tag key, which is used when `GroupType` is `tag`.
+                     * <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
                      */
                     std::vector<std::string> m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;

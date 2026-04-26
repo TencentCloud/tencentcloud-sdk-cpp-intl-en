@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool UsedTimeHasBeenSet() const;
 
                     /**
-                     * 获取The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UsageDetails The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Usage record details
+                     * @return UsageDetails Usage record details
                      * 
                      */
                     std::vector<UsageDetails> GetUsageDetails() const;
 
                     /**
-                     * 设置The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _usageDetails The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Usage record details
+                     * @param _usageDetails Usage record details
                      * 
                      */
                     void SetUsageDetails(const std::vector<UsageDetails>& _usageDetails);
@@ -113,6 +109,90 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool UsageDetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Payment mode
+                     * @return PayMode Payment mode
+                     * 
+                     */
+                    std::string GetPayMode() const;
+
+                    /**
+                     * 设置Payment mode
+                     * @param _payMode Payment mode
+                     * 
+                     */
+                    void SetPayMode(const std::string& _payMode);
+
+                    /**
+                     * 判断参数 PayMode 是否已赋值
+                     * @return PayMode 是否已赋值
+                     * 
+                     */
+                    bool PayModeHasBeenSet() const;
+
+                    /**
+                     * 获取Queried coupon id
+                     * @return VoucherId Queried coupon id
+                     * 
+                     */
+                    std::string GetVoucherId() const;
+
+                    /**
+                     * 设置Queried coupon id
+                     * @param _voucherId Queried coupon id
+                     * 
+                     */
+                    void SetVoucherId(const std::string& _voucherId);
+
+                    /**
+                     * 判断参数 VoucherId 是否已赋值
+                     * @return VoucherId 是否已赋值
+                     * 
+                     */
+                    bool VoucherIdHasBeenSet() const;
+
+                    /**
+                     * 获取Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+                     * @return PayScene Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+                     * 
+                     */
+                    std::string GetPayScene() const;
+
+                    /**
+                     * 设置Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+                     * @param _payScene Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+                     * 
+                     */
+                    void SetPayScene(const std::string& _payScene);
+
+                    /**
+                     * 判断参数 PayScene 是否已赋值
+                     * @return PayScene 是否已赋值
+                     * 
+                     */
+                    bool PaySceneHasBeenSet() const;
+
+                    /**
+                     * 获取Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+                     * @return SeqId Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+                     * 
+                     */
+                    std::string GetSeqId() const;
+
+                    /**
+                     * 设置Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+                     * @param _seqId Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+                     * 
+                     */
+                    void SetSeqId(const std::string& _seqId);
+
+                    /**
+                     * 判断参数 SeqId 是否已赋值
+                     * @return SeqId 是否已赋值
+                     * 
+                     */
+                    bool SeqIdHasBeenSet() const;
 
                 private:
 
@@ -129,11 +209,34 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_usedTimeHasBeenSet;
 
                     /**
-                     * The details of the product purchased.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Usage record details
                      */
                     std::vector<UsageDetails> m_usageDetails;
                     bool m_usageDetailsHasBeenSet;
+
+                    /**
+                     * Payment mode
+                     */
+                    std::string m_payMode;
+                    bool m_payModeHasBeenSet;
+
+                    /**
+                     * Queried coupon id
+                     */
+                    std::string m_voucherId;
+                    bool m_voucherIdHasBeenSet;
+
+                    /**
+                     * Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+                     */
+                    std::string m_payScene;
+                    bool m_paySceneHasBeenSet;
+
+                    /**
+                     * Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+                     */
+                    std::string m_seqId;
+                    bool m_seqIdHasBeenSet;
 
                 };
             }

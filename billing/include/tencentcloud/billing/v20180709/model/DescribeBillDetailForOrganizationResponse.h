@@ -75,10 +75,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Context Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Context information of this request can be used in the request parameter of the next request to accelerate query speed.
+                     * @return Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
                      * 
                      */
                     std::string GetContext() const;
@@ -106,8 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Context information of this request can be used in the request parameter of the next request to accelerate query speed.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;

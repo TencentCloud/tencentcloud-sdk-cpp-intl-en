@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Time DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date
+                     * @return Time Date
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置DateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _time DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date
+                     * @param _time Date
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取AmountNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Money AmountNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Amount
+                     * @return Money Amount
                      * 
                      */
                     std::string GetMoney() const;
 
                     /**
-                     * 设置AmountNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _money AmountNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Amount
+                     * @param _money Amount
                      * 
                      */
                     void SetMoney(const std::string& _money);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * Date
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * AmountNote: This field may return null, indicating that no valid values can be obtained.
+                     * Amount
                      */
                     std::string m_money;
                     bool m_moneyHasBeenSet;

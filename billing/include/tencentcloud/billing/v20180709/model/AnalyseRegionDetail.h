@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region ID.
+                     * @return RegionId Region ID.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region ID.
+                     * @param _regionId Region ID.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Region nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionName Region nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region name
+                     * @return RegionName Region name
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionName Region nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region name
+                     * @param _regionName Region name
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region ID.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Region nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Region name
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;

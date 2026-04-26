@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-                     * @return BeginTime Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * 获取Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+                     * @return BeginTime Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-                     * @param _beginTime Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * 设置Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+                     * @param _beginTime Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-                     * @return EndTime Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * 获取Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+                     * @return EndTime Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-                     * @param _endTime Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * 设置Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+                     * @param _endTime Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool NeedRecordNumHasBeenSet() const;
 
                     /**
-                     * 获取Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
-                     * @return Month Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+                     * 获取The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
+                     * @return Month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
-                     * @param _month Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+                     * 设置The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
+                     * @param _month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Used to query information of a specified product (currently not available)
-                     * @return ProductCode Used to query information of a specified product (currently not available)
+                     * 获取Query information of a specified product
+                     * @return ProductCode Query information of a specified product
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Used to query information of a specified product (currently not available)
-                     * @param _productCode Used to query information of a specified product (currently not available)
+                     * 设置Query information of a specified product
+                     * @param _productCode Query information of a specified product
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -246,13 +246,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+                     * Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -264,13 +264,13 @@ namespace TencentCloud
                     bool m_needRecordNumHasBeenSet;
 
                     /**
-                     * Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+                     * The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Used to query information of a specified product (currently not available)
+                     * Query information of a specified product
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;

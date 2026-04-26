@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Expiration time of the temporary credential (timestamp)
-                     * @return ExpiredTime Expiration time of the temporary credential (timestamp)
+                     * 获取Expiration time of the temporary access credentials (timestamp).
+                     * @return ExpiredTime Expiration time of the temporary access credentials (timestamp).
                      * 
                      */
                     uint64_t GetExpiredTime() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the temporary credential
-                     * @return Expiration Expiration time of the temporary credential
+                     * 获取Expiration time of the temporary access credentials.
+                     * @return Expiration Expiration time of the temporary access credentials.
                      * 
                      */
                     std::string GetExpiration() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ExpirationHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credential
-                     * @return Credentials Temporary credential
+                     * 获取Temporary access credentials
+                     * @return Credentials Temporary access credentials
                      * 
                      */
                     Credentials GetCredentials() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Expiration time of the temporary credential (timestamp)
+                     * Expiration time of the temporary access credentials (timestamp).
                      */
                     uint64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Expiration time of the temporary credential
+                     * Expiration time of the temporary access credentials.
                      */
                     std::string m_expiration;
                     bool m_expirationHasBeenSet;
 
                     /**
-                     * Temporary credential
+                     * Temporary access credentials
                      */
                     Credentials m_credentials;
                     bool m_credentialsHasBeenSet;

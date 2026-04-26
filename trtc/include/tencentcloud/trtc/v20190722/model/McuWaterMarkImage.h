@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
-                     * @return WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * 获取Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
+                     * @return WaterMarkUrl Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
                      * 
                      */
                     std::string GetWaterMarkUrl() const;
 
                     /**
-                     * 设置The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
-                     * @param _waterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * 设置Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
+                     * @param _waterMarkUrl Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
                      * 
                      */
                     void SetWaterMarkUrl(const std::string& _waterMarkUrl);
@@ -172,10 +184,34 @@ namespace TencentCloud
                      */
                     bool ZOrderHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DynamicPosType 
+                     * 
+                     */
+                    uint64_t GetDynamicPosType() const;
+
+                    /**
+                     * 设置
+                     * @param _dynamicPosType 
+                     * 
+                     */
+                    void SetDynamicPosType(const uint64_t& _dynamicPosType);
+
+                    /**
+                     * 判断参数 DynamicPosType 是否已赋值
+                     * @return DynamicPosType 是否已赋值
+                     * 
+                     */
+                    bool DynamicPosTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
                      */
                     std::string m_waterMarkUrl;
                     bool m_waterMarkUrlHasBeenSet;
@@ -209,6 +245,12 @@ namespace TencentCloud
                      */
                     uint64_t m_zOrder;
                     bool m_zOrderHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_dynamicPosType;
+                    bool m_dynamicPosTypeHasBeenSet;
 
                 };
             }

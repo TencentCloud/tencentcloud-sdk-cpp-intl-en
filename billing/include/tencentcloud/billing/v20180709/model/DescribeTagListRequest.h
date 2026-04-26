@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of entries returned at a time. The maximum value is `1000`.
-                     * @return Limit The number of entries returned at a time. The maximum value is `1000`.
+                     * 获取Quantity, with the maximum value of 1,000
+                     * @return Limit Quantity, with the maximum value of 1,000
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of entries returned at a time. The maximum value is `1000`.
-                     * @param _limit The number of entries returned at a time. The maximum value is `1000`.
+                     * 设置Quantity, with the maximum value of 1,000
+                     * @param _limit Quantity, with the maximum value of 1,000
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-                     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * 获取Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+                     * @return Offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-                     * @param _offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * 设置Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+                     * @param _offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Cost allocation tag key, used for fuzzy search.
-                     * @return TagKey Cost allocation tag key, used for fuzzy search.
+                     * 获取Cost allocation tag key, used as fuzzy search
+                     * @return TagKey Cost allocation tag key, used as fuzzy search
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Cost allocation tag key, used for fuzzy search.
-                     * @param _tagKey Cost allocation tag key, used for fuzzy search.
+                     * 设置Cost allocation tag key, used as fuzzy search
+                     * @param _tagKey Cost allocation tag key, used as fuzzy search
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
-                     * @return Status Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+                     * 获取Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+                     * @return Status Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
-                     * @param _status Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+                     * 设置Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+                     * @param _status Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
-                     * @return OrderType Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * 获取Sorting method, enumeration value: asc for ascending order, desc for descending order.
+                     * @return OrderType Sorting method, enumeration value: asc for ascending order, desc for descending order.
                      * 
                      */
                     std::string GetOrderType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
-                     * @param _orderType Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * 设置Sorting method, enumeration value: asc for ascending order, desc for descending order.
+                     * @param _orderType Sorting method, enumeration value: asc for ascending order, desc for descending order.
                      * 
                      */
                     void SetOrderType(const std::string& _orderType);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of entries returned at a time. The maximum value is `1000`.
+                     * Quantity, with the maximum value of 1,000
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Cost allocation tag key, used for fuzzy search.
+                     * Cost allocation tag key, used as fuzzy search
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+                     * Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * Sorting method, enumeration value: asc for ascending order, desc for descending order.
                      */
                     std::string m_orderType;
                     bool m_orderTypeHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mcu relay recording; third-party storage parameters.
+                * Mcu relay recording. third-party object storage parameters.
                 */
                 class McuStorageParams : public AbstractModel
                 {
@@ -49,23 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
-                     * @return CloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+                     * 获取Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+                     * @return CloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
                      * 
                      */
                     CloudStorage GetCloudStorage() const;
 
                     /**
-                     * 设置Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
-                     * @param _cloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+                     * 设置Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+                     * @param _cloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
                      * 
                      */
                     void SetCloudStorage(const CloudStorage& _cloudStorage);
@@ -78,19 +70,15 @@ Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretK
                     bool CloudStorageHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
-                     * @return McuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+                     * 获取Account information of tencent cloud vod.
+                     * @return McuCloudVod Account information of tencent cloud vod.
                      * 
                      */
                     McuCloudVod GetMcuCloudVod() const;
 
                     /**
-                     * 设置Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
-                     * @param _mcuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+                     * 设置Account information of tencent cloud vod.
+                     * @param _mcuCloudVod Account information of tencent cloud vod.
                      * 
                      */
                     void SetMcuCloudVod(const McuCloudVod& _mcuCloudVod);
@@ -105,16 +93,13 @@ Example:{"McuTencentVod":{"ExpireTime":86400}}
                 private:
 
                     /**
-                     * Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+                     * Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
                      */
                     CloudStorage m_cloudStorage;
                     bool m_cloudStorageHasBeenSet;
 
                     /**
-                     * Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+                     * Account information of tencent cloud vod.
                      */
                     McuCloudVod m_mcuCloudVod;
                     bool m_mcuCloudVodHasBeenSet;

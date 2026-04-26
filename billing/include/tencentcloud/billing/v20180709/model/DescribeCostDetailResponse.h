@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetailSet Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CostDetail> GetDetailSet() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CostDetail> m_detailSet;
                     bool m_detailSetHasBeenSet;

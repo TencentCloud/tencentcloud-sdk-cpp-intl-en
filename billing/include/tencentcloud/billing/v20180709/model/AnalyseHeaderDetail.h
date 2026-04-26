@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Header dateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeadDetail Header dateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Header date
+                     * @return HeadDetail Header date
                      * 
                      */
                     std::vector<AnalyseHeaderTimeDetail> GetHeadDetail() const;
 
                     /**
-                     * 设置Header dateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headDetail Header dateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Header date
+                     * @param _headDetail Header date
                      * 
                      */
                     void SetHeadDetail(const std::vector<AnalyseHeaderTimeDetail>& _headDetail);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool HeadDetailHasBeenSet() const;
 
                     /**
-                     * 获取TimeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name TimeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time
+                     * @return Name Time
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置TimeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name TimeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time
+                     * @param _name Time
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取TotalNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total TotalNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取total
+                     * @return Total total
                      * 
                      */
                     std::string GetTotal() const;
 
                     /**
-                     * 设置TotalNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _total TotalNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置total
+                     * @param _total total
                      * 
                      */
                     void SetTotal(const std::string& _total);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Header dateNote: This field may return null, indicating that no valid values can be obtained.
+                     * Header date
                      */
                     std::vector<AnalyseHeaderTimeDetail> m_headDetail;
                     bool m_headDetailHasBeenSet;
 
                     /**
-                     * TimeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Time
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * TotalNote: This field may return null, indicating that no valid values can be obtained.
+                     * total
                      */
                     std::string m_total;
                     bool m_totalHasBeenSet;

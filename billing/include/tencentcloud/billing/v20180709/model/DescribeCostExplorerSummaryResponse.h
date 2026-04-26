@@ -47,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of data records
+                     * @return Total Number of data records
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -63,8 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Header informationNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Header Header informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Header information.
+                     * @return Header Header information.
                      * 
                      */
                     AnalyseHeaderDetail GetHeader() const;
@@ -77,8 +75,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeaderHasBeenSet() const;
 
                     /**
-                     * 获取Data detailsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Detail Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data details
+                     * @return Detail Data details
                      * 
                      */
                     std::vector<AnalyseDetail> GetDetail() const;
@@ -91,8 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetailHasBeenSet() const;
 
                     /**
-                     * 获取Data amountNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalDetail Data amountNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取data total
+                     * @return TotalDetail data total
                      * 
                      */
                     AnalyseDetail GetTotalDetail() const;
@@ -105,8 +103,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalDetailHasBeenSet() const;
 
                     /**
-                     * 获取Filter boxNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConditionValue Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取filtering box
+                     * @return ConditionValue filtering box
                      * 
                      */
                     AnalyseConditionDetail GetConditionValue() const;
@@ -121,32 +119,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of data records
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Header informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * Header information.
                      */
                     AnalyseHeaderDetail m_header;
                     bool m_headerHasBeenSet;
 
                     /**
-                     * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Data details
                      */
                     std::vector<AnalyseDetail> m_detail;
                     bool m_detailHasBeenSet;
 
                     /**
-                     * Data amountNote: This field may return null, indicating that no valid values can be obtained.
+                     * data total
                      */
                     AnalyseDetail m_totalDetail;
                     bool m_totalDetailHasBeenSet;
 
                     /**
-                     * Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+                     * filtering box
                      */
                     AnalyseConditionDetail m_conditionValue;
                     bool m_conditionValueHasBeenSet;

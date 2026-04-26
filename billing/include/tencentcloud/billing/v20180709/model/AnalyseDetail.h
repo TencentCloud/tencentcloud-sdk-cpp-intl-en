@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeDetail Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date Detail Amount
+                     * @return TimeDetail Date Detail Amount
                      * 
                      */
                     std::vector<AnalyseTimeDetail> GetTimeDetail() const;
 
                     /**
-                     * 设置Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeDetail Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date Detail Amount
+                     * @param _timeDetail Date Detail Amount
                      * 
                      */
                     void SetTimeDetail(const std::vector<AnalyseTimeDetail>& _timeDetail);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+                     * Date Detail Amount
                      */
                     std::vector<AnalyseTimeDetail> m_timeDetail;
                     bool m_timeDetailHasBeenSet;

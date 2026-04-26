@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
-                     * @return MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * 获取Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
+                     * @return MixLayoutMode Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
                      * 
                      */
                     uint64_t GetMixLayoutMode() const;
 
                     /**
-                     * 设置The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
-                     * @param _mixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * 设置Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
+                     * @param _mixLayoutMode Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
                      * 
                      */
                     void SetMixLayoutMode(const uint64_t& _mixLayoutMode);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool PureAudioHoldPlaceModeHasBeenSet() const;
 
                     /**
-                     * 获取The details of a custom layout.
-                     * @return MixLayoutList The details of a custom layout.
+                     * 获取Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
+                     * @return MixLayoutList Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
                      * 
                      */
                     std::vector<McuLayout> GetMixLayoutList() const;
 
                     /**
-                     * 设置The details of a custom layout.
-                     * @param _mixLayoutList The details of a custom layout.
+                     * 设置Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
+                     * @param _mixLayoutList Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
                      * 
                      */
                     void SetMixLayoutList(const std::vector<McuLayout>& _mixLayoutList);
@@ -156,7 +156,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
                      */
                     uint64_t m_mixLayoutMode;
                     bool m_mixLayoutModeHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_pureAudioHoldPlaceModeHasBeenSet;
 
                     /**
-                     * The details of a custom layout.
+                     * Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
                      */
                     std::vector<McuLayout> m_mixLayoutList;
                     bool m_mixLayoutListHasBeenSet;

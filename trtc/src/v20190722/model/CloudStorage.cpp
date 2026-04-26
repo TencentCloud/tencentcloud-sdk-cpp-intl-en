@@ -26,7 +26,8 @@ CloudStorage::CloudStorage() :
     m_bucketHasBeenSet(false),
     m_accessKeyHasBeenSet(false),
     m_secretKeyHasBeenSet(false),
-    m_fileNamePrefixHasBeenSet(false)
+    m_fileNamePrefixHasBeenSet(false),
+    m_endpointUrlHasBeenSet(false)
 {
 }
 
@@ -98,6 +99,16 @@ CoreInternalOutcome CloudStorage::Deserialize(const rapidjson::Value &value)
         m_fileNamePrefixHasBeenSet = true;
     }
 
+    if (value.HasMember("EndpointUrl") && !value["EndpointUrl"].IsNull())
+    {
+        if (!value["EndpointUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudStorage.EndpointUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endpointUrl = string(value["EndpointUrl"].GetString());
+        m_endpointUrlHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -156,6 +167,14 @@ void CloudStorage::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_endpointUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndpointUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endpointUrl.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -255,5 +274,21 @@ void CloudStorage::SetFileNamePrefix(const vector<string>& _fileNamePrefix)
 bool CloudStorage::FileNamePrefixHasBeenSet() const
 {
     return m_fileNamePrefixHasBeenSet;
+}
+
+string CloudStorage::GetEndpointUrl() const
+{
+    return m_endpointUrl;
+}
+
+void CloudStorage::SetEndpointUrl(const string& _endpointUrl)
+{
+    m_endpointUrl = _endpointUrl;
+    m_endpointUrlHasBeenSet = true;
+}
+
+bool CloudStorage::EndpointUrlHasBeenSet() const
+{
+    return m_endpointUrlHasBeenSet;
 }
 

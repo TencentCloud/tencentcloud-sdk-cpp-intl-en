@@ -286,6 +286,27 @@ Example:ins-a2bb34
                      */
                     bool ResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Order status
+                     * @return StatusSet Order status
+                     * 
+                     */
+                    std::vector<int64_t> GetStatusSet() const;
+
+                    /**
+                     * 设置Order status
+                     * @param _statusSet Order status
+                     * 
+                     */
+                    void SetStatusSet(const std::vector<int64_t>& _statusSet);
+
+                    /**
+                     * 判断参数 StatusSet 是否已赋值
+                     * @return StatusSet 是否已赋值
+                     * 
+                     */
+                    bool StatusSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -354,6 +375,12 @@ Example:ins-a2bb34
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Order status
+                     */
+                    std::vector<int64_t> m_statusSet;
+                    bool m_statusSetHasBeenSet;
 
                 };
             }

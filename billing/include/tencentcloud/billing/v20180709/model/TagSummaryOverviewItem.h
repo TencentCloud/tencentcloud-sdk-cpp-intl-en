@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Percentage of the fee, with 2 decimal places.
+                     * @return RealTotalCostRatio Percentage of the fee, with 2 decimal places.
                      * 
                      */
                     std::string GetRealTotalCostRatio() const;
 
                     /**
-                     * 设置Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Percentage of the fee, with 2 decimal places.
+                     * @param _realTotalCostRatio Percentage of the fee, with 2 decimal places.
                      * 
                      */
                     void SetRealTotalCostRatio(const std::string& _realTotalCostRatio);
@@ -97,15 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealTotalCostRatioHasBeenSet() const;
 
                     /**
-                     * 获取Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取discounted total price
+                     * @return RealTotalCost discounted total price
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置discounted total price
+                     * @param _realTotalCost discounted total price
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -118,15 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cash account expenditure: The amount paid through the cash account
+                     * @return CashPayAmount Cash account expenditure: The amount paid through the cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cash account expenditure: The amount paid through the cash account
+                     * @param _cashPayAmount Cash account expenditure: The amount paid through the cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -139,15 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Gift account expenditure: The amount paid using free credits
+                     * @return IncentivePayAmount Gift account expenditure: The amount paid using free credits
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Gift account expenditure: The amount paid using free credits
+                     * @param _incentivePayAmount Gift account expenditure: The amount paid using free credits
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -160,15 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+                     * @return VoucherPayAmount Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+                     * @param _voucherPayAmount Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -181,15 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Royalty account expenditure: The amount paid through the royalty account
+                     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Royalty account expenditure: The amount paid through the royalty account
+                     * @param _transferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -202,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+                     * @return TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _totalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+                     * @param _totalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -230,51 +218,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Percentage of the fee, with 2 decimal places.
                      */
                     std::string m_realTotalCostRatio;
                     bool m_realTotalCostRatioHasBeenSet;
 
                     /**
-                     * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * discounted total price
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cash account expenditure: The amount paid through the cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Gift account expenditure: The amount paid using free credits
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Royalty account expenditure: The amount paid through the royalty account
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
 
                     /**
-                     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;

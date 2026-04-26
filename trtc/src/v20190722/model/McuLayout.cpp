@@ -31,7 +31,10 @@ McuLayout::McuLayout() :
     m_backGroundColorHasBeenSet(false),
     m_backgroundImageUrlHasBeenSet(false),
     m_customCropHasBeenSet(false),
-    m_backgroundRenderModeHasBeenSet(false)
+    m_backgroundRenderModeHasBeenSet(false),
+    m_transparentUrlHasBeenSet(false),
+    m_backgroundCustomRenderHasBeenSet(false),
+    m_backGroundColorModeHasBeenSet(false)
 {
 }
 
@@ -164,6 +167,43 @@ CoreInternalOutcome McuLayout::Deserialize(const rapidjson::Value &value)
         m_backgroundRenderModeHasBeenSet = true;
     }
 
+    if (value.HasMember("TransparentUrl") && !value["TransparentUrl"].IsNull())
+    {
+        if (!value["TransparentUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuLayout.TransparentUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_transparentUrl = string(value["TransparentUrl"].GetString());
+        m_transparentUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("BackgroundCustomRender") && !value["BackgroundCustomRender"].IsNull())
+    {
+        if (!value["BackgroundCustomRender"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuLayout.BackgroundCustomRender` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_backgroundCustomRender.Deserialize(value["BackgroundCustomRender"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_backgroundCustomRenderHasBeenSet = true;
+    }
+
+    if (value.HasMember("BackGroundColorMode") && !value["BackGroundColorMode"].IsNull())
+    {
+        if (!value["BackGroundColorMode"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuLayout.BackGroundColorMode` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_backGroundColorMode = value["BackGroundColorMode"].GetUint64();
+        m_backGroundColorModeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -259,6 +299,31 @@ void McuLayout::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "BackgroundRenderMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backgroundRenderMode, allocator);
+    }
+
+    if (m_transparentUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TransparentUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_transparentUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_backgroundCustomRenderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackgroundCustomRender";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_backgroundCustomRender.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_backGroundColorModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackGroundColorMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_backGroundColorMode, allocator);
     }
 
 }
@@ -438,5 +503,53 @@ void McuLayout::SetBackgroundRenderMode(const uint64_t& _backgroundRenderMode)
 bool McuLayout::BackgroundRenderModeHasBeenSet() const
 {
     return m_backgroundRenderModeHasBeenSet;
+}
+
+string McuLayout::GetTransparentUrl() const
+{
+    return m_transparentUrl;
+}
+
+void McuLayout::SetTransparentUrl(const string& _transparentUrl)
+{
+    m_transparentUrl = _transparentUrl;
+    m_transparentUrlHasBeenSet = true;
+}
+
+bool McuLayout::TransparentUrlHasBeenSet() const
+{
+    return m_transparentUrlHasBeenSet;
+}
+
+McuBackgroundCustomRender McuLayout::GetBackgroundCustomRender() const
+{
+    return m_backgroundCustomRender;
+}
+
+void McuLayout::SetBackgroundCustomRender(const McuBackgroundCustomRender& _backgroundCustomRender)
+{
+    m_backgroundCustomRender = _backgroundCustomRender;
+    m_backgroundCustomRenderHasBeenSet = true;
+}
+
+bool McuLayout::BackgroundCustomRenderHasBeenSet() const
+{
+    return m_backgroundCustomRenderHasBeenSet;
+}
+
+uint64_t McuLayout::GetBackGroundColorMode() const
+{
+    return m_backGroundColorMode;
+}
+
+void McuLayout::SetBackGroundColorMode(const uint64_t& _backGroundColorMode)
+{
+    m_backGroundColorMode = _backGroundColorMode;
+    m_backGroundColorModeHasBeenSet = true;
+}
+
+bool McuLayout::BackGroundColorModeHasBeenSet() const
+{
+    return m_backGroundColorModeHasBeenSet;
 }
 

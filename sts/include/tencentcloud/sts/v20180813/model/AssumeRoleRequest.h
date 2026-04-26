@@ -106,15 +106,15 @@ It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
                     bool RoleSessionNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
-                     * @return DurationSeconds Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+                     * 获取Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @return DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      * 
                      */
                     uint64_t GetDurationSeconds() const;
 
                     /**
-                     * 设置Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
-                     * @param _durationSeconds Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+                     * 设置Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @param _durationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      * 
                      */
                     void SetDurationSeconds(const uint64_t& _durationSeconds);
@@ -128,14 +128,18 @@ It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
 
                     /**
                      * 获取Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
                      * @return Policy Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
                      * 
                      */
@@ -143,14 +147,18 @@ Note:
 
                     /**
                      * 设置Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
                      * @param _policy Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
                      * 
                      */
@@ -230,6 +238,48 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     bool SourceIdentityHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SerialNumber 
+                     * 
+                     */
+                    std::string GetSerialNumber() const;
+
+                    /**
+                     * 设置
+                     * @param _serialNumber 
+                     * 
+                     */
+                    void SetSerialNumber(const std::string& _serialNumber);
+
+                    /**
+                     * 判断参数 SerialNumber 是否已赋值
+                     * @return SerialNumber 是否已赋值
+                     * 
+                     */
+                    bool SerialNumberHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TokenCode 
+                     * 
+                     */
+                    std::string GetTokenCode() const;
+
+                    /**
+                     * 设置
+                     * @param _tokenCode 
+                     * 
+                     */
+                    void SetTokenCode(const std::string& _tokenCode);
+
+                    /**
+                     * 判断参数 TokenCode 是否已赋值
+                     * @return TokenCode 是否已赋值
+                     * 
+                     */
+                    bool TokenCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -250,16 +300,18 @@ It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
                     bool m_roleSessionNameHasBeenSet;
 
                     /**
-                     * Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 43200
+                     * Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      */
                     uint64_t m_durationSeconds;
                     bool m_durationSecondsHasBeenSet;
 
                     /**
                      * Policy description
+
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+
+This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification. (If you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
                      */
                     std::string m_policy;
@@ -283,6 +335,18 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     std::string m_sourceIdentity;
                     bool m_sourceIdentityHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_serialNumber;
+                    bool m_serialNumberHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_tokenCode;
+                    bool m_tokenCodeHasBeenSet;
 
                 };
             }

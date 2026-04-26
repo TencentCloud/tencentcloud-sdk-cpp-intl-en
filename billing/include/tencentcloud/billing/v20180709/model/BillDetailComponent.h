@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool UsedAmountUnitHasBeenSet() const;
 
                     /**
-                     * 获取Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Original usage/duration: The original usage of the component before deduction by resource packages.
+                     * @return RealTotalMeasure Original usage/duration: The original usage of the component before deduction by resource packages.
                      * 
                      */
                     std::string GetRealTotalMeasure() const;
 
                     /**
-                     * 设置Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Original usage/duration: The original usage of the component before deduction by resource packages.
+                     * @param _realTotalMeasure Original usage/duration: The original usage of the component before deduction by resource packages.
                      * 
                      */
                     void SetRealTotalMeasure(const std::string& _realTotalMeasure);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool RealTotalMeasureHasBeenSet() const;
 
                     /**
-                     * 获取Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
+                     * @return DeductedMeasure Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
                      * 
                      */
                     std::string GetDeductedMeasure() const;
 
                     /**
-                     * 设置Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
+                     * @param _deductedMeasure Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
                      * 
                      */
                     void SetDeductedMeasure(const std::string& _deductedMeasure);
@@ -434,15 +434,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Royalty account expenditure: The amount paid through the royalty account
+                     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Royalty account expenditure: The amount paid through the royalty account
+                     * @param _transferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -455,15 +455,15 @@ namespace TencentCloud
                     bool TransferPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Component type code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ItemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component type code
+                     * @return ItemCode Component type code
                      * 
                      */
                     std::string GetItemCode() const;
 
                     /**
-                     * 设置Component type code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _itemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component type code
+                     * @param _itemCode Component type code
                      * 
                      */
                     void SetItemCode(const std::string& _itemCode);
@@ -476,15 +476,15 @@ namespace TencentCloud
                     bool ItemCodeHasBeenSet() const;
 
                     /**
-                     * 获取Component name code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component name code
+                     * @return ComponentCode Component name code
                      * 
                      */
                     std::string GetComponentCode() const;
 
                     /**
-                     * 设置Component name code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component name code
+                     * @param _componentCode Component name code
                      * 
                      */
                     void SetComponentCode(const std::string& _componentCode);
@@ -497,15 +497,15 @@ namespace TencentCloud
                     bool ComponentCodeHasBeenSet() const;
 
                     /**
-                     * 获取Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
+                     * @return ContractPrice Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
                      * 
                      */
                     std::string GetContractPrice() const;
 
                     /**
-                     * 设置Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _contractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
+                     * @param _contractPrice Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
                      * 
                      */
                     void SetContractPrice(const std::string& _contractPrice);
@@ -518,15 +518,15 @@ namespace TencentCloud
                     bool ContractPriceHasBeenSet() const;
 
                     /**
-                     * 获取Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
+                     * @return InstanceType Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
+                     * @param _instanceType Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -539,15 +539,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiTimeSpan RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取RI deduction duration: The duration of use deducted by reserved instances for this product or service.
+                     * @return RiTimeSpan RI deduction duration: The duration of use deducted by reserved instances for this product or service.
                      * 
                      */
                     std::string GetRiTimeSpan() const;
 
                     /**
-                     * 设置RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riTimeSpan RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置RI deduction duration: The duration of use deducted by reserved instances for this product or service.
+                     * @param _riTimeSpan RI deduction duration: The duration of use deducted by reserved instances for this product or service.
                      * 
                      */
                     void SetRiTimeSpan(const std::string& _riTimeSpan);
@@ -560,15 +560,15 @@ namespace TencentCloud
                     bool RiTimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
+                     * @return OriginalCostWithRI Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
                      * 
                      */
                     std::string GetOriginalCostWithRI() const;
 
                     /**
-                     * 设置RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
+                     * @param _originalCostWithRI Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
                      * 
                      */
                     void SetOriginalCostWithRI(const std::string& _originalCostWithRI);
@@ -581,15 +581,15 @@ namespace TencentCloud
                     bool OriginalCostWithRIHasBeenSet() const;
 
                     /**
-                     * 获取Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SPDeductionRate Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
+                     * @return SPDeductionRate Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
                      * 
                      */
                     std::string GetSPDeductionRate() const;
 
                     /**
-                     * 设置Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sPDeductionRate Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
+                     * @param _sPDeductionRate Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
                      * 
                      */
                     void SetSPDeductionRate(const std::string& _sPDeductionRate);
@@ -623,15 +623,15 @@ namespace TencentCloud
                     bool SPDeductionHasBeenSet() const;
 
                     /**
-                     * 获取SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
+                     * @return OriginalCostWithSP Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
                      * 
                      */
                     std::string GetOriginalCostWithSP() const;
 
                     /**
-                     * 设置SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
+                     * @param _originalCostWithSP Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
                      * 
                      */
                     void SetOriginalCostWithSP(const std::string& _originalCostWithSP);
@@ -644,15 +644,15 @@ namespace TencentCloud
                     bool OriginalCostWithSPHasBeenSet() const;
 
                     /**
-                     * 获取Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
+                     * @return BlendedDiscount Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
                      * 
                      */
                     std::string GetBlendedDiscount() const;
 
                     /**
-                     * 设置Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _blendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
+                     * @param _blendedDiscount Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
                      * 
                      */
                     void SetBlendedDiscount(const std::string& _blendedDiscount);
@@ -665,19 +665,15 @@ namespace TencentCloud
                     bool BlendedDiscountHasBeenSet() const;
 
                     /**
-                     * 获取Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentConfig Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration description: Information on specification of resource configuration
+                     * @return ComponentConfig Configuration description: Information on specification of resource configuration
                      * 
                      */
                     std::vector<BillDetailComponentConfig> GetComponentConfig() const;
 
                     /**
-                     * 设置Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentConfig Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration description: Information on specification of resource configuration
+                     * @param _componentConfig Configuration description: Information on specification of resource configuration
                      * 
                      */
                     void SetComponentConfig(const std::vector<BillDetailComponentConfig>& _componentConfig);
@@ -690,15 +686,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentConfigHasBeenSet() const;
 
                     /**
-                     * 获取The tax rate.
-                     * @return TaxRate The tax rate.
+                     * 获取tax rate
+                     * @return TaxRate tax rate
                      * 
                      */
                     std::string GetTaxRate() const;
 
                     /**
-                     * 设置The tax rate.
-                     * @param _taxRate The tax rate.
+                     * 设置tax rate
+                     * @param _taxRate tax rate
                      * 
                      */
                     void SetTaxRate(const std::string& _taxRate);
@@ -711,15 +707,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaxRateHasBeenSet() const;
 
                     /**
-                     * 获取The tax amount.
-                     * @return TaxAmount The tax amount.
+                     * 获取Tax.
+                     * @return TaxAmount Tax.
                      * 
                      */
                     std::string GetTaxAmount() const;
 
                     /**
-                     * 设置The tax amount.
-                     * @param _taxAmount The tax amount.
+                     * 设置Tax.
+                     * @param _taxAmount Tax.
                      * 
                      */
                     void SetTaxAmount(const std::string& _taxAmount);
@@ -732,15 +728,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaxAmountHasBeenSet() const;
 
                     /**
-                     * 获取The currency used for the settlement of a component.
-                     * @return Currency The currency used for the settlement of a component.
+                     * 获取Currency.
+                     * @return Currency Currency.
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置The currency used for the settlement of a component.
-                     * @param _currency The currency used for the settlement of a component.
+                     * 设置Currency.
+                     * @param _currency Currency.
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -797,13 +793,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_usedAmountUnitHasBeenSet;
 
                     /**
-                     * Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Original usage/duration: The original usage of the component before deduction by resource packages.
                      */
                     std::string m_realTotalMeasure;
                     bool m_realTotalMeasureHasBeenSet;
 
                     /**
-                     * Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
                      */
                     std::string m_deductedMeasure;
                     bool m_deductedMeasureHasBeenSet;
@@ -865,49 +861,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Royalty account expenditure: The amount paid through the royalty account
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
 
                     /**
-                     * Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component type code
                      */
                     std::string m_itemCode;
                     bool m_itemCodeHasBeenSet;
 
                     /**
-                     * Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component name code
                      */
                     std::string m_componentCode;
                     bool m_componentCodeHasBeenSet;
 
                     /**
-                     * Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
                      */
                     std::string m_contractPrice;
                     bool m_contractPriceHasBeenSet;
 
                     /**
-                     * Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * RI deduction duration: The duration of use deducted by reserved instances for this product or service.
                      */
                     std::string m_riTimeSpan;
                     bool m_riTimeSpanHasBeenSet;
 
                     /**
-                     * RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
                      */
                     std::string m_originalCostWithRI;
                     bool m_originalCostWithRIHasBeenSet;
 
                     /**
-                     * Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
                      */
                     std::string m_sPDeductionRate;
                     bool m_sPDeductionRateHasBeenSet;
@@ -919,38 +915,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sPDeductionHasBeenSet;
 
                     /**
-                     * SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
                      */
                     std::string m_originalCostWithSP;
                     bool m_originalCostWithSPHasBeenSet;
 
                     /**
-                     * Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
                      */
                     std::string m_blendedDiscount;
                     bool m_blendedDiscountHasBeenSet;
 
                     /**
-                     * Configuration description: The specification configuration of an instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration description: Information on specification of resource configuration
                      */
                     std::vector<BillDetailComponentConfig> m_componentConfig;
                     bool m_componentConfigHasBeenSet;
 
                     /**
-                     * The tax rate.
+                     * tax rate
                      */
                     std::string m_taxRate;
                     bool m_taxRateHasBeenSet;
 
                     /**
-                     * The tax amount.
+                     * Tax.
                      */
                     std::string m_taxAmount;
                     bool m_taxAmountHasBeenSet;
 
                     /**
-                     * The currency used for the settlement of a component.
+                     * Currency.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

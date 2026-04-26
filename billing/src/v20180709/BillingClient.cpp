@@ -540,6 +540,256 @@ BillingClient::DescribeAccountBalanceOutcomeCallable BillingClient::DescribeAcco
     return prom->get_future();
 }
 
+BillingClient::DescribeAllocateConditionsOutcome BillingClient::DescribeAllocateConditions(const DescribeAllocateConditionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocateConditions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocateConditionsResponse rsp = DescribeAllocateConditionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocateConditionsOutcome(rsp);
+        else
+            return DescribeAllocateConditionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocateConditionsOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocateConditionsAsync(const DescribeAllocateConditionsRequest& request, const DescribeAllocateConditionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocateConditionsRequest&;
+    using Resp = DescribeAllocateConditionsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocateConditions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocateConditionsOutcomeCallable BillingClient::DescribeAllocateConditionsCallable(const DescribeAllocateConditionsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocateConditionsOutcome>>();
+    DescribeAllocateConditionsAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocateConditionsRequest&,
+        DescribeAllocateConditionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationBillConditionsOutcome BillingClient::DescribeAllocationBillConditions(const DescribeAllocationBillConditionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationBillConditions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationBillConditionsResponse rsp = DescribeAllocationBillConditionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationBillConditionsOutcome(rsp);
+        else
+            return DescribeAllocationBillConditionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationBillConditionsOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationBillConditionsAsync(const DescribeAllocationBillConditionsRequest& request, const DescribeAllocationBillConditionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationBillConditionsRequest&;
+    using Resp = DescribeAllocationBillConditionsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationBillConditions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationBillConditionsOutcomeCallable BillingClient::DescribeAllocationBillConditionsCallable(const DescribeAllocationBillConditionsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationBillConditionsOutcome>>();
+    DescribeAllocationBillConditionsAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationBillConditionsRequest&,
+        DescribeAllocationBillConditionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationBillDetailOutcome BillingClient::DescribeAllocationBillDetail(const DescribeAllocationBillDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationBillDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationBillDetailResponse rsp = DescribeAllocationBillDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationBillDetailOutcome(rsp);
+        else
+            return DescribeAllocationBillDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationBillDetailOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationBillDetailAsync(const DescribeAllocationBillDetailRequest& request, const DescribeAllocationBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationBillDetailRequest&;
+    using Resp = DescribeAllocationBillDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationBillDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationBillDetailOutcomeCallable BillingClient::DescribeAllocationBillDetailCallable(const DescribeAllocationBillDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationBillDetailOutcome>>();
+    DescribeAllocationBillDetailAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationBillDetailRequest&,
+        DescribeAllocationBillDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationMonthOverviewOutcome BillingClient::DescribeAllocationMonthOverview(const DescribeAllocationMonthOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationMonthOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationMonthOverviewResponse rsp = DescribeAllocationMonthOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationMonthOverviewOutcome(rsp);
+        else
+            return DescribeAllocationMonthOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationMonthOverviewOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationMonthOverviewAsync(const DescribeAllocationMonthOverviewRequest& request, const DescribeAllocationMonthOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationMonthOverviewRequest&;
+    using Resp = DescribeAllocationMonthOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationMonthOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationMonthOverviewOutcomeCallable BillingClient::DescribeAllocationMonthOverviewCallable(const DescribeAllocationMonthOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationMonthOverviewOutcome>>();
+    DescribeAllocationMonthOverviewAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationMonthOverviewRequest&,
+        DescribeAllocationMonthOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationOverviewOutcome BillingClient::DescribeAllocationOverview(const DescribeAllocationOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationOverviewResponse rsp = DescribeAllocationOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationOverviewOutcome(rsp);
+        else
+            return DescribeAllocationOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationOverviewOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationOverviewAsync(const DescribeAllocationOverviewRequest& request, const DescribeAllocationOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationOverviewRequest&;
+    using Resp = DescribeAllocationOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationOverviewOutcomeCallable BillingClient::DescribeAllocationOverviewCallable(const DescribeAllocationOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationOverviewOutcome>>();
+    DescribeAllocationOverviewAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationOverviewRequest&,
+        DescribeAllocationOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DescribeAllocationRuleDetailOutcome BillingClient::DescribeAllocationRuleDetail(const DescribeAllocationRuleDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAllocationRuleDetail");
@@ -640,6 +890,156 @@ BillingClient::DescribeAllocationRuleSummaryOutcomeCallable BillingClient::Descr
     return prom->get_future();
 }
 
+BillingClient::DescribeAllocationSummaryByBusinessOutcome BillingClient::DescribeAllocationSummaryByBusiness(const DescribeAllocationSummaryByBusinessRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationSummaryByBusiness");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationSummaryByBusinessResponse rsp = DescribeAllocationSummaryByBusinessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationSummaryByBusinessOutcome(rsp);
+        else
+            return DescribeAllocationSummaryByBusinessOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationSummaryByBusinessOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationSummaryByBusinessAsync(const DescribeAllocationSummaryByBusinessRequest& request, const DescribeAllocationSummaryByBusinessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationSummaryByBusinessRequest&;
+    using Resp = DescribeAllocationSummaryByBusinessResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationSummaryByBusiness", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationSummaryByBusinessOutcomeCallable BillingClient::DescribeAllocationSummaryByBusinessCallable(const DescribeAllocationSummaryByBusinessRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationSummaryByBusinessOutcome>>();
+    DescribeAllocationSummaryByBusinessAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationSummaryByBusinessRequest&,
+        DescribeAllocationSummaryByBusinessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationSummaryByItemOutcome BillingClient::DescribeAllocationSummaryByItem(const DescribeAllocationSummaryByItemRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationSummaryByItem");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationSummaryByItemResponse rsp = DescribeAllocationSummaryByItemResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationSummaryByItemOutcome(rsp);
+        else
+            return DescribeAllocationSummaryByItemOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationSummaryByItemOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationSummaryByItemAsync(const DescribeAllocationSummaryByItemRequest& request, const DescribeAllocationSummaryByItemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationSummaryByItemRequest&;
+    using Resp = DescribeAllocationSummaryByItemResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationSummaryByItem", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationSummaryByItemOutcomeCallable BillingClient::DescribeAllocationSummaryByItemCallable(const DescribeAllocationSummaryByItemRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationSummaryByItemOutcome>>();
+    DescribeAllocationSummaryByItemAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationSummaryByItemRequest&,
+        DescribeAllocationSummaryByItemOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationSummaryByResourceOutcome BillingClient::DescribeAllocationSummaryByResource(const DescribeAllocationSummaryByResourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationSummaryByResource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationSummaryByResourceResponse rsp = DescribeAllocationSummaryByResourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationSummaryByResourceOutcome(rsp);
+        else
+            return DescribeAllocationSummaryByResourceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationSummaryByResourceOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationSummaryByResourceAsync(const DescribeAllocationSummaryByResourceRequest& request, const DescribeAllocationSummaryByResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationSummaryByResourceRequest&;
+    using Resp = DescribeAllocationSummaryByResourceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationSummaryByResource", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationSummaryByResourceOutcomeCallable BillingClient::DescribeAllocationSummaryByResourceCallable(const DescribeAllocationSummaryByResourceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationSummaryByResourceOutcome>>();
+    DescribeAllocationSummaryByResourceAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationSummaryByResourceRequest&,
+        DescribeAllocationSummaryByResourceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DescribeAllocationTreeOutcome BillingClient::DescribeAllocationTree(const DescribeAllocationTreeRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAllocationTree");
@@ -682,6 +1082,56 @@ BillingClient::DescribeAllocationTreeOutcomeCallable BillingClient::DescribeAllo
         const BillingClient*,
         const DescribeAllocationTreeRequest&,
         DescribeAllocationTreeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeAllocationTrendByMonthOutcome BillingClient::DescribeAllocationTrendByMonth(const DescribeAllocationTrendByMonthRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationTrendByMonth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationTrendByMonthResponse rsp = DescribeAllocationTrendByMonthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationTrendByMonthOutcome(rsp);
+        else
+            return DescribeAllocationTrendByMonthOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationTrendByMonthOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationTrendByMonthAsync(const DescribeAllocationTrendByMonthRequest& request, const DescribeAllocationTrendByMonthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAllocationTrendByMonthRequest&;
+    using Resp = DescribeAllocationTrendByMonthResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllocationTrendByMonth", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeAllocationTrendByMonthOutcomeCallable BillingClient::DescribeAllocationTrendByMonthCallable(const DescribeAllocationTrendByMonthRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAllocationTrendByMonthOutcome>>();
+    DescribeAllocationTrendByMonthAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeAllocationTrendByMonthRequest&,
+        DescribeAllocationTrendByMonthOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1390,6 +1840,56 @@ BillingClient::DescribeBillSummaryForOrganizationOutcomeCallable BillingClient::
     return prom->get_future();
 }
 
+BillingClient::DescribeCPQBillingMappingOutcome BillingClient::DescribeCPQBillingMapping(const DescribeCPQBillingMappingRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCPQBillingMapping");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCPQBillingMappingResponse rsp = DescribeCPQBillingMappingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCPQBillingMappingOutcome(rsp);
+        else
+            return DescribeCPQBillingMappingOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCPQBillingMappingOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeCPQBillingMappingAsync(const DescribeCPQBillingMappingRequest& request, const DescribeCPQBillingMappingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCPQBillingMappingRequest&;
+    using Resp = DescribeCPQBillingMappingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCPQBillingMapping", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeCPQBillingMappingOutcomeCallable BillingClient::DescribeCPQBillingMappingCallable(const DescribeCPQBillingMappingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCPQBillingMappingOutcome>>();
+    DescribeCPQBillingMappingAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeCPQBillingMappingRequest&,
+        DescribeCPQBillingMappingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DescribeCostDetailOutcome BillingClient::DescribeCostDetail(const DescribeCostDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCostDetail");
@@ -1782,6 +2282,56 @@ BillingClient::DescribeDosageCosDetailByDateOutcomeCallable BillingClient::Descr
         const BillingClient*,
         const DescribeDosageCosDetailByDateRequest&,
         DescribeDosageCosDetailByDateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeGatherResourceOutcome BillingClient::DescribeGatherResource(const DescribeGatherResourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGatherResource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGatherResourceResponse rsp = DescribeGatherResourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGatherResourceOutcome(rsp);
+        else
+            return DescribeGatherResourceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGatherResourceOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeGatherResourceAsync(const DescribeGatherResourceRequest& request, const DescribeGatherResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeGatherResourceRequest&;
+    using Resp = DescribeGatherResourceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeGatherResource", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeGatherResourceOutcomeCallable BillingClient::DescribeGatherResourceCallable(const DescribeGatherResourceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeGatherResourceOutcome>>();
+    DescribeGatherResourceAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeGatherResourceRequest&,
+        DescribeGatherResourceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

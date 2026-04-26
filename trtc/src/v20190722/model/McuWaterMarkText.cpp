@@ -28,7 +28,10 @@ McuWaterMarkText::McuWaterMarkText() :
     m_locationYHasBeenSet(false),
     m_fontSizeHasBeenSet(false),
     m_fontColorHasBeenSet(false),
-    m_backGroundColorHasBeenSet(false)
+    m_backGroundColorHasBeenSet(false),
+    m_dynamicPosTypeHasBeenSet(false),
+    m_zOrderHasBeenSet(false),
+    m_fontHasBeenSet(false)
 {
 }
 
@@ -117,6 +120,36 @@ CoreInternalOutcome McuWaterMarkText::Deserialize(const rapidjson::Value &value)
         m_backGroundColorHasBeenSet = true;
     }
 
+    if (value.HasMember("DynamicPosType") && !value["DynamicPosType"].IsNull())
+    {
+        if (!value["DynamicPosType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuWaterMarkText.DynamicPosType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dynamicPosType = value["DynamicPosType"].GetUint64();
+        m_dynamicPosTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ZOrder") && !value["ZOrder"].IsNull())
+    {
+        if (!value["ZOrder"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuWaterMarkText.ZOrder` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_zOrder = value["ZOrder"].GetUint64();
+        m_zOrderHasBeenSet = true;
+    }
+
+    if (value.HasMember("Font") && !value["Font"].IsNull())
+    {
+        if (!value["Font"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuWaterMarkText.Font` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_font = string(value["Font"].GetString());
+        m_fontHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -186,6 +219,30 @@ void McuWaterMarkText::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "BackGroundColor";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_backGroundColor.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dynamicPosTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DynamicPosType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dynamicPosType, allocator);
+    }
+
+    if (m_zOrderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZOrder";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_zOrder, allocator);
+    }
+
+    if (m_fontHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Font";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_font.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -317,5 +374,53 @@ void McuWaterMarkText::SetBackGroundColor(const string& _backGroundColor)
 bool McuWaterMarkText::BackGroundColorHasBeenSet() const
 {
     return m_backGroundColorHasBeenSet;
+}
+
+uint64_t McuWaterMarkText::GetDynamicPosType() const
+{
+    return m_dynamicPosType;
+}
+
+void McuWaterMarkText::SetDynamicPosType(const uint64_t& _dynamicPosType)
+{
+    m_dynamicPosType = _dynamicPosType;
+    m_dynamicPosTypeHasBeenSet = true;
+}
+
+bool McuWaterMarkText::DynamicPosTypeHasBeenSet() const
+{
+    return m_dynamicPosTypeHasBeenSet;
+}
+
+uint64_t McuWaterMarkText::GetZOrder() const
+{
+    return m_zOrder;
+}
+
+void McuWaterMarkText::SetZOrder(const uint64_t& _zOrder)
+{
+    m_zOrder = _zOrder;
+    m_zOrderHasBeenSet = true;
+}
+
+bool McuWaterMarkText::ZOrderHasBeenSet() const
+{
+    return m_zOrderHasBeenSet;
+}
+
+string McuWaterMarkText::GetFont() const
+{
+    return m_font;
+}
+
+void McuWaterMarkText::SetFont(const string& _font)
+{
+    m_font = _font;
+    m_fontHasBeenSet = true;
+}
+
+bool McuWaterMarkText::FontHasBeenSet() const
+{
+    return m_fontHasBeenSet;
 }
 

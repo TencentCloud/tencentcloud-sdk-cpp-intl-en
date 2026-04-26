@@ -1,0 +1,116 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEALLOCATIONBILLDETAILRESPONSE_H_
+#define TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEALLOCATIONBILLDETAILRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/billing/v20180709/model/AllocationOverviewTotal.h>
+#include <tencentcloud/billing/v20180709/model/AllocationDetail.h>
+
+
+namespace TencentCloud
+{
+    namespace Billing
+    {
+        namespace V20180709
+        {
+            namespace Model
+            {
+                /**
+                * DescribeAllocationBillDetail response structure.
+                */
+                class DescribeAllocationBillDetailResponse : public AbstractModel
+                {
+                public:
+                    DescribeAllocationBillDetailResponse();
+                    ~DescribeAllocationBillDetailResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Total quantity.
+                     * @return RecordNum Total quantity.
+                     * 
+                     */
+                    uint64_t GetRecordNum() const;
+
+                    /**
+                     * 判断参数 RecordNum 是否已赋值
+                     * @return RecordNum 是否已赋值
+                     * 
+                     */
+                    bool RecordNumHasBeenSet() const;
+
+                    /**
+                     * 获取Total amount of a cost allocation bill
+                     * @return Total Total amount of a cost allocation bill
+                     * 
+                     */
+                    AllocationOverviewTotal GetTotal() const;
+
+                    /**
+                     * 判断参数 Total 是否已赋值
+                     * @return Total 是否已赋值
+                     * 
+                     */
+                    bool TotalHasBeenSet() const;
+
+                    /**
+                     * 获取Details of a cost allocation bill
+                     * @return Detail Details of a cost allocation bill
+                     * 
+                     */
+                    std::vector<AllocationDetail> GetDetail() const;
+
+                    /**
+                     * 判断参数 Detail 是否已赋值
+                     * @return Detail 是否已赋值
+                     * 
+                     */
+                    bool DetailHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Total quantity.
+                     */
+                    uint64_t m_recordNum;
+                    bool m_recordNumHasBeenSet;
+
+                    /**
+                     * Total amount of a cost allocation bill
+                     */
+                    AllocationOverviewTotal m_total;
+                    bool m_totalHasBeenSet;
+
+                    /**
+                     * Details of a cost allocation bill
+                     */
+                    std::vector<AllocationDetail> m_detail;
+                    bool m_detailHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEALLOCATIONBILLDETAILRESPONSE_H_

@@ -224,10 +224,10 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
                     /**
                      * 获取Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
                      * @return SourceType Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
                      * 
                      */
                     uint64_t GetSourceType() const;
@@ -235,10 +235,10 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
                     /**
                      * 设置Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
                      * @param _sourceType Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
                      * 
                      */
                     void SetSourceType(const uint64_t& _sourceType);
@@ -284,15 +284,15 @@ Note: The audio data size cannot exceed 5 MB.
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Data length (before Base64 encoding).
-                     * @return DataLen Data length (before Base64 encoding).
+                     * 获取Data length (before Base64 encoding)
+                     * @return DataLen Data length (before Base64 encoding)
                      * 
                      */
                     uint64_t GetDataLen() const;
 
                     /**
-                     * 设置Data length (before Base64 encoding).
-                     * @param _dataLen Data length (before Base64 encoding).
+                     * 设置Data length (before Base64 encoding)
+                     * @param _dataLen Data length (before Base64 encoding)
                      * 
                      */
                     void SetDataLen(const uint64_t& _dataLen);
@@ -929,6 +929,27 @@ Notes:
                      */
                     bool KeyWordLibIdListHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ReplaceTextId 
+                     * 
+                     */
+                    std::string GetReplaceTextId() const;
+
+                    /**
+                     * 设置
+                     * @param _replaceTextId 
+                     * 
+                     */
+                    void SetReplaceTextId(const std::string& _replaceTextId);
+
+                    /**
+                     * 判断参数 ReplaceTextId 是否已赋值
+                     * @return ReplaceTextId 是否已赋值
+                     * 
+                     */
+                    bool ReplaceTextIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -981,7 +1002,7 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
                     /**
                      * Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
                      */
                     uint64_t m_sourceType;
                     bool m_sourceTypeHasBeenSet;
@@ -996,7 +1017,7 @@ Note: The audio data size cannot exceed 5 MB.
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Data length (before Base64 encoding).
+                     * Data length (before Base64 encoding)
                      */
                     uint64_t m_dataLen;
                     bool m_dataLenHasBeenSet;
@@ -1169,6 +1190,12 @@ Notes:
                      */
                     std::vector<std::string> m_keyWordLibIdList;
                     bool m_keyWordLibIdListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_replaceTextId;
+                    bool m_replaceTextIdHasBeenSet;
 
                 };
             }

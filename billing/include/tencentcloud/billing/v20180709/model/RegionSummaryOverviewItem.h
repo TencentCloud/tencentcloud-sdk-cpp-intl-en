@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Region ID
-Note: This field may return null, indicating that no valid value was found.
                      * @return RegionId Region ID
-Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Region ID
-Note: This field may return null, indicating that no valid value was found.
                      * @param _regionId Region ID
-Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -264,7 +260,6 @@ Note: This field may return null, indicating that no valid value was found.
 
                     /**
                      * Region ID
-Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;

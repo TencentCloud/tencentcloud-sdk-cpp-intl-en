@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fee type
+                     * @return Key Fee type
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fee type
+                     * @param _key Fee type
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Display Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates whether to display
+                     * @return Display Indicates whether to display
                      * 
                      */
                     int64_t GetDisplay() const;
 
                     /**
-                     * 设置Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _display Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates whether to display
+                     * @param _display Indicates whether to display
                      * 
                      */
                     void SetDisplay(const int64_t& _display);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Fee type
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+                     * Indicates whether to display
                      */
                     int64_t m_display;
                     bool m_displayHasBeenSet;

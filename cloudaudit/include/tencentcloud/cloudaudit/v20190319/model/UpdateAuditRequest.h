@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool IsEnableKmsEncryHasBeenSet() const;
 
                     /**
-                     * 获取User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
-                     * @return CosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+                     * 获取User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+                     * @return CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
                      * 
                      */
                     std::string GetCosBucketName() const;
 
                     /**
-                     * 设置User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
-                     * @param _cosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+                     * 设置User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+                     * @param _cosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
                      * 
                      */
                     void SetCosBucketName(const std::string& _cosBucketName);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool CmqRegionHasBeenSet() const;
 
                     /**
-                     * 获取Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
-                     * @return LogFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+                     * 获取Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
+                     * @return LogFilePrefix Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
                      * 
                      */
                     std::string GetLogFilePrefix() const;
 
                     /**
-                     * 设置Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
-                     * @param _logFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+                     * 设置Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
+                     * @param _logFilePrefix Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
                      * 
                      */
                     void SetLogFilePrefix(const std::string& _logFilePrefix);
@@ -372,7 +372,7 @@ namespace TencentCloud
                     bool m_isEnableKmsEncryHasBeenSet;
 
                     /**
-                     * User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+                     * User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
                      */
                     std::string m_cosBucketName;
                     bool m_cosBucketNameHasBeenSet;
@@ -384,7 +384,7 @@ namespace TencentCloud
                     bool m_cmqRegionHasBeenSet;
 
                     /**
-                     * Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+                     * Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
                      */
                     std::string m_logFilePrefix;
                     bool m_logFilePrefixHasBeenSet;

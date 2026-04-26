@@ -15,11 +15,15 @@
 #
 
 set(ciam_public_header
-  include/tencentcloud/ciam/v20220331/CiamClient.h
   include/tencentcloud/ciam/v20210420/CiamClient.h
+  include/tencentcloud/ciam/v20220331/CiamClient.h
   )
 
 set(ciam_public_header_model
+  include/tencentcloud/ciam/v20210420/model/ListUserGroupsRequest.h
+  include/tencentcloud/ciam/v20210420/model/Pageable.h
+  include/tencentcloud/ciam/v20210420/model/ListUserGroupsResponse.h
+  include/tencentcloud/ciam/v20210420/model/UserGroup.h
   include/tencentcloud/ciam/v20220331/model/UpdateUserRequest.h
   include/tencentcloud/ciam/v20220331/model/DescribeUserByIdRequest.h
   include/tencentcloud/ciam/v20220331/model/ListUserRequest.h
@@ -65,15 +69,15 @@ set(ciam_public_header_model
   include/tencentcloud/ciam/v20220331/model/ListUserResponse.h
   include/tencentcloud/ciam/v20220331/model/LogMessage.h
   include/tencentcloud/ciam/v20220331/model/ListLogMessageByConditionResponse.h
-  include/tencentcloud/ciam/v20210420/model/ListUserGroupsRequest.h
-  include/tencentcloud/ciam/v20210420/model/Pageable.h
-  include/tencentcloud/ciam/v20210420/model/ListUserGroupsResponse.h
-  include/tencentcloud/ciam/v20210420/model/UserGroup.h
   )
 
 set(ciam_src
-  src/v20220331/CiamClient.cpp
   src/v20210420/CiamClient.cpp
+  src/v20220331/CiamClient.cpp
+  src/v20210420/model/ListUserGroupsRequest.cpp
+  src/v20210420/model/Pageable.cpp
+  src/v20210420/model/ListUserGroupsResponse.cpp
+  src/v20210420/model/UserGroup.cpp
   src/v20220331/model/UpdateUserRequest.cpp
   src/v20220331/model/DescribeUserByIdRequest.cpp
   src/v20220331/model/ListUserRequest.cpp
@@ -119,10 +123,6 @@ set(ciam_src
   src/v20220331/model/ListUserResponse.cpp
   src/v20220331/model/LogMessage.cpp
   src/v20220331/model/ListLogMessageByConditionResponse.cpp
-  src/v20210420/model/ListUserGroupsRequest.cpp
-  src/v20210420/model/Pageable.cpp
-  src/v20210420/model/ListUserGroupsResponse.cpp
-  src/v20210420/model/UserGroup.cpp
   )
 
 set(ciam_include
@@ -151,9 +151,9 @@ target_link_libraries(ciam
   core)
 
 #install(FILES ${ciam_public_header}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/ciam/v20210420)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/ciam/v20220331)
 #install(FILES ${ciam_public_header_model}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/ciam/v20210420/model)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/ciam/v20220331/model)
 install(DIRECTORY ${ciam_include}
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
 

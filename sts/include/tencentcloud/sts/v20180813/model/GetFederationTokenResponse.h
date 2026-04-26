@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Temporary credentials
-                     * @return Credentials Temporary credentials
+                     * 获取Temporary access credentials
+                     * @return Credentials Temporary access credentials
                      * 
                      */
                     Credentials GetCredentials() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool CredentialsHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credentials expiration time. A Unix timestamp will be returned which is accurate to the second
-                     * @return ExpiredTime Temporary credentials expiration time. A Unix timestamp will be returned which is accurate to the second
+                     * 获取Temporary access credentials expiration time. A Unix timestamp will be returned which is accurate to the second.
+                     * @return ExpiredTime Temporary access credentials expiration time. A Unix timestamp will be returned which is accurate to the second.
                      * 
                      */
                     uint64_t GetExpiredTime() const;
@@ -73,9 +73,9 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Credentials expiration time in UTC time in ISO 8601 format.
+                     * 获取Temporary access credentials expiration time in UTC time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Expiration Credentials expiration time in UTC time in ISO 8601 format.
+                     * @return Expiration Temporary access credentials expiration time in UTC time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -91,19 +91,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Temporary credentials
+                     * Temporary access credentials
                      */
                     Credentials m_credentials;
                     bool m_credentialsHasBeenSet;
 
                     /**
-                     * Temporary credentials expiration time. A Unix timestamp will be returned which is accurate to the second
+                     * Temporary access credentials expiration time. A Unix timestamp will be returned which is accurate to the second.
                      */
                     uint64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Credentials expiration time in UTC time in ISO 8601 format.
+                     * Temporary access credentials expiration time in UTC time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expiration;

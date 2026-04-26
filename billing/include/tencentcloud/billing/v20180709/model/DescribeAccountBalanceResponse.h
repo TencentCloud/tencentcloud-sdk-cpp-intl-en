@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/billing/v20180709/model/UinTempAmountModel.h>
 
 
 namespace TencentCloud
@@ -58,8 +59,8 @@ namespace TencentCloud
                     bool BalanceHasBeenSet() const;
 
                     /**
-                     * 获取The UIN to query.
-                     * @return Uin The UIN to query.
+                     * 获取The user Uin for the query
+                     * @return Uin The user Uin for the query
                      * 
                      */
                     uint64_t GetUin() const;
@@ -158,28 +159,28 @@ namespace TencentCloud
                     /**
                      * 获取Whether overdue payments are allowed. Currently, this field is not applied.
                      * @return IsAllowArrears Whether overdue payments are allowed. Currently, this field is not applied.
-                     * 
+                     * @deprecated
                      */
                     bool GetIsAllowArrears() const;
 
                     /**
                      * 判断参数 IsAllowArrears 是否已赋值
                      * @return IsAllowArrears 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IsAllowArrearsHasBeenSet() const;
 
                     /**
                      * 获取Whether you have a credit limit. Currently, this field is not applied.
                      * @return IsCreditLimited Whether you have a credit limit. Currently, this field is not applied.
-                     * 
+                     * @deprecated
                      */
                     bool GetIsCreditLimited() const;
 
                     /**
                      * 判断参数 IsCreditLimited 是否已赋值
                      * @return IsCreditLimited 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IsCreditLimitedHasBeenSet() const;
 
@@ -225,6 +226,34 @@ namespace TencentCloud
                      */
                     bool RealCreditBalanceHasBeenSet() const;
 
+                    /**
+                     * 获取Temporary limit, unit cent
+                     * @return TempCredit Temporary limit, unit cent
+                     * 
+                     */
+                    double GetTempCredit() const;
+
+                    /**
+                     * 判断参数 TempCredit 是否已赋值
+                     * @return TempCredit 是否已赋值
+                     * 
+                     */
+                    bool TempCreditHasBeenSet() const;
+
+                    /**
+                     * 获取Temporary limit details
+                     * @return TempAmountInfoList Temporary limit details
+                     * 
+                     */
+                    std::vector<UinTempAmountModel> GetTempAmountInfoList() const;
+
+                    /**
+                     * 判断参数 TempAmountInfoList 是否已赋值
+                     * @return TempAmountInfoList 是否已赋值
+                     * 
+                     */
+                    bool TempAmountInfoListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,7 +263,7 @@ namespace TencentCloud
                     bool m_balanceHasBeenSet;
 
                     /**
-                     * The UIN to query.
+                     * The user Uin for the query
                      */
                     uint64_t m_uin;
                     bool m_uinHasBeenSet;
@@ -304,6 +333,18 @@ namespace TencentCloud
                      */
                     double m_realCreditBalance;
                     bool m_realCreditBalanceHasBeenSet;
+
+                    /**
+                     * Temporary limit, unit cent
+                     */
+                    double m_tempCredit;
+                    bool m_tempCreditHasBeenSet;
+
+                    /**
+                     * Temporary limit details
+                     */
+                    std::vector<UinTempAmountModel> m_tempAmountInfoList;
+                    bool m_tempAmountInfoListHasBeenSet;
 
                 };
             }

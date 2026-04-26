@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordNum Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Record count. If NeedRecordNum is 0, null is returned.
+                     * @return RecordNum Record count. If NeedRecordNum is 0, null is returned.
                      * 
                      */
                     uint64_t GetRecordNum() const;
@@ -122,7 +122,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Record count. If NeedRecordNum is 0, null is returned.
                      */
                     uint64_t m_recordNum;
                     bool m_recordNumHasBeenSet;

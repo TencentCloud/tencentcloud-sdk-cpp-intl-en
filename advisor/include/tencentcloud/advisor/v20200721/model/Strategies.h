@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyId Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetStrategyId() const;
 
                     /**
                      * 设置Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _strategyId Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStrategyId(const uint64_t& _strategyId);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StrategyIdHasBeenSet() const;
 
                     /**
-                     * 获取Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Assessment item name.
+                     * @return Name Assessment item name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Assessment item name.
+                     * @param _name Assessment item name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Desc Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Assessment item description.
+                     * @return Desc Assessment item description.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _desc Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Assessment item description.
+                     * @param _desc Assessment item description.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Product Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product ID corresponding to the assessment item.
+                     * @return Product Product ID corresponding to the assessment item.
                      * 
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _product Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product ID corresponding to the assessment item.
+                     * @param _product Product ID corresponding to the assessment item.
                      * 
                      */
                     void SetProduct(const std::string& _product);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductDesc Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Assessment item corresponding product name.
+                     * @return ProductDesc Assessment item corresponding product name.
                      * 
                      */
                     std::string GetProductDesc() const;
 
                     /**
-                     * 设置Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productDesc Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Assessment item corresponding product name.
+                     * @param _productDesc Assessment item corresponding product name.
                      * 
                      */
                     void SetProductDesc(const std::string& _productDesc);
@@ -173,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductDescHasBeenSet() const;
 
                     /**
-                     * 获取Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Repair Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies optimization suggestions for the assessment item.
+                     * @return Repair Specifies optimization suggestions for the assessment item.
                      * 
                      */
                     std::string GetRepair() const;
 
                     /**
-                     * 设置Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _repair Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies optimization suggestions for the assessment item.
+                     * @param _repair Specifies optimization suggestions for the assessment item.
                      * 
                      */
                     void SetRepair(const std::string& _repair);
@@ -198,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RepairHasBeenSet() const;
 
                     /**
-                     * 获取Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupId Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Assessment item category ID.
+                     * @return GroupId Assessment item category ID.
                      * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
-                     * 设置Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupId Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Assessment item category ID.
+                     * @param _groupId Assessment item category ID.
                      * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
@@ -223,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupName Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the category name of the assessment item.
+                     * @return GroupName Specifies the category name of the assessment item.
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupName Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the category name of the assessment item.
+                     * @param _groupName Specifies the category name of the assessment item.
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -248,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Conditions Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the evaluation item risk list.
+                     * @return Conditions Specifies the evaluation item risk list.
                      * 
                      */
                     std::vector<Conditions> GetConditions() const;
 
                     /**
-                     * 设置Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditions Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the evaluation item risk list.
+                     * @param _conditions Specifies the evaluation item risk list.
                      * 
                      */
                     void SetConditions(const std::vector<Conditions>& _conditions);
@@ -276,63 +240,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_strategyId;
                     bool m_strategyIdHasBeenSet;
 
                     /**
-                     * Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Assessment item name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Assessment item description.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product ID corresponding to the assessment item.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
 
                     /**
-                     * Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Assessment item corresponding product name.
                      */
                     std::string m_productDesc;
                     bool m_productDescHasBeenSet;
 
                     /**
-                     * Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies optimization suggestions for the assessment item.
                      */
                     std::string m_repair;
                     bool m_repairHasBeenSet;
 
                     /**
-                     * Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Assessment item category ID.
                      */
                     uint64_t m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the category name of the assessment item.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the evaluation item risk list.
                      */
                     std::vector<Conditions> m_conditions;
                     bool m_conditionsHasBeenSet;

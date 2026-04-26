@@ -23,12 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/cloudaudit/v20190319/model/CreateAuditRequest.h>
-#include <tencentcloud/cloudaudit/v20190319/model/CreateAuditResponse.h>
 #include <tencentcloud/cloudaudit/v20190319/model/CreateAuditTrackRequest.h>
 #include <tencentcloud/cloudaudit/v20190319/model/CreateAuditTrackResponse.h>
-#include <tencentcloud/cloudaudit/v20190319/model/DeleteAuditRequest.h>
-#include <tencentcloud/cloudaudit/v20190319/model/DeleteAuditResponse.h>
 #include <tencentcloud/cloudaudit/v20190319/model/DeleteAuditTrackRequest.h>
 #include <tencentcloud/cloudaudit/v20190319/model/DeleteAuditTrackResponse.h>
 #include <tencentcloud/cloudaudit/v20190319/model/DescribeAuditRequest.h>
@@ -73,15 +69,9 @@ namespace TencentCloud
                 CloudauditClient(const Credential &credential, const std::string &region);
                 CloudauditClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::CreateAuditResponse> CreateAuditOutcome;
-                typedef std::future<CreateAuditOutcome> CreateAuditOutcomeCallable;
-                typedef std::function<void(const CloudauditClient*, const Model::CreateAuditRequest&, CreateAuditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAuditTrackResponse> CreateAuditTrackOutcome;
                 typedef std::future<CreateAuditTrackOutcome> CreateAuditTrackOutcomeCallable;
                 typedef std::function<void(const CloudauditClient*, const Model::CreateAuditTrackRequest&, CreateAuditTrackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditTrackAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteAuditResponse> DeleteAuditOutcome;
-                typedef std::future<DeleteAuditOutcome> DeleteAuditOutcomeCallable;
-                typedef std::function<void(const CloudauditClient*, const Model::DeleteAuditRequest&, DeleteAuditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAuditTrackResponse> DeleteAuditTrackOutcome;
                 typedef std::future<DeleteAuditTrackOutcome> DeleteAuditTrackOutcomeCallable;
                 typedef std::function<void(const CloudauditClient*, const Model::DeleteAuditTrackRequest&, DeleteAuditTrackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditTrackAsyncHandler;
@@ -131,19 +121,6 @@ namespace TencentCloud
 
 
                 /**
-                 *Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-                 * @param req CreateAuditRequest
-                 * @return CreateAuditOutcome
-                 */
-                CreateAuditOutcome CreateAudit(const Model::CreateAuditRequest &request);
-                void CreateAuditAsync(const Model::CreateAuditRequest& request, const CreateAuditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateAuditOutcomeCallable CreateAuditCallable(const Model::CreateAuditRequest& request);
-
-                /**
                  *This API is used to create a tracking set.
                  * @param req CreateAuditTrackRequest
                  * @return CreateAuditTrackOutcome
@@ -151,15 +128,6 @@ namespace TencentCloud
                 CreateAuditTrackOutcome CreateAuditTrack(const Model::CreateAuditTrackRequest &request);
                 void CreateAuditTrackAsync(const Model::CreateAuditTrackRequest& request, const CreateAuditTrackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAuditTrackOutcomeCallable CreateAuditTrackCallable(const Model::CreateAuditTrackRequest& request);
-
-                /**
-                 *This API is used to delete a tracking set.
-                 * @param req DeleteAuditRequest
-                 * @return DeleteAuditOutcome
-                 */
-                DeleteAuditOutcome DeleteAudit(const Model::DeleteAuditRequest &request);
-                void DeleteAuditAsync(const Model::DeleteAuditRequest& request, const DeleteAuditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteAuditOutcomeCallable DeleteAuditCallable(const Model::DeleteAuditRequest& request);
 
                 /**
                  *This API is used to delete a CloudAudit tracking set.

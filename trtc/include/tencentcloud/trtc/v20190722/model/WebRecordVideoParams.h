@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Page recording control parameters
+                * Recording control parameters.
                 */
                 class WebRecordVideoParams : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recording screen width, defaults to 1280, value range [0, 1920]
-                     * @return Width Recording screen width, defaults to 1280, value range [0, 1920]
+                     * 获取Recording image width defaults to 1280, with a value range of [0, 1920].
+                     * @return Width Recording image width defaults to 1280, with a value range of [0, 1920].
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置Recording screen width, defaults to 1280, value range [0, 1920]
-                     * @param _width Recording screen width, defaults to 1280, value range [0, 1920]
+                     * 设置Recording image width defaults to 1280, with a value range of [0, 1920].
+                     * @param _width Recording image width defaults to 1280, with a value range of [0, 1920].
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Recording screen height, defaults to 720, value range [0, 1080]
-                     * @return Height Recording screen height, defaults to 720, value range [0, 1080]
+                     * 获取Recording image height, defaults to 720, in the range of [0, 1080].
+                     * @return Height Recording image height, defaults to 720, in the range of [0, 1080].
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Recording screen height, defaults to 720, value range [0, 1080]
-                     * @param _height Recording screen height, defaults to 720, value range [0, 1080]
+                     * 设置Recording image height, defaults to 720, in the range of [0, 1080].
+                     * @param _height Recording image height, defaults to 720, in the range of [0, 1080].
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -89,19 +89,19 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
-                     * @return Format Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+                     * 获取Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+                     * @return Format Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
-                     * @param _format Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+                     * 设置Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+                     * @param _format Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -114,23 +114,23 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
-                     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+                     * 获取If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
+                     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
                      * 
                      */
                     int64_t GetMaxMediaFileDuration() const;
 
                     /**
-                     * 设置If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
-                     * @param _maxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+                     * 设置If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
+                     * @param _maxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
                      * 
                      */
                     void SetMaxMediaFileDuration(const int64_t& _maxMediaFileDuration);
@@ -145,28 +145,28 @@ Sample value: 1440
                 private:
 
                     /**
-                     * Recording screen width, defaults to 1280, value range [0, 1920]
+                     * Recording image width defaults to 1280, with a value range of [0, 1920].
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Recording screen height, defaults to 720, value range [0, 1080]
+                     * Recording image height, defaults to 720, in the range of [0, 1080].
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+                     * Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+                     * If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
                      */
                     int64_t m_maxMediaFileDuration;
                     bool m_maxMediaFileDurationHasBeenSet;

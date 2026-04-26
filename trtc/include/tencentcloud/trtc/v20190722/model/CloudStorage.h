@@ -72,11 +72,11 @@ namespace TencentCloud
                     bool VendorHasBeenSet() const;
 
                     /**
-                     * 获取[Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+                     * 获取[Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
-                     * @return Region [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+                     * @return Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -85,11 +85,11 @@ Example value: cn-shanghai-1.
                     std::string GetRegion() const;
 
                     /**
-                     * 设置[Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+                     * 设置[Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
-                     * @param _region [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+                     * @param _region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -196,6 +196,27 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
                      */
                     bool FileNamePrefixHasBeenSet() const;
 
+                    /**
+                     * 获取If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+                     * @return EndpointUrl If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+                     * 
+                     */
+                    std::string GetEndpointUrl() const;
+
+                    /**
+                     * 设置If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+                     * @param _endpointUrl If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+                     * 
+                     */
+                    void SetEndpointUrl(const std::string& _endpointUrl);
+
+                    /**
+                     * 判断参数 EndpointUrl 是否已赋值
+                     * @return EndpointUrl 是否已赋值
+                     * 
+                     */
+                    bool EndpointUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,7 +227,7 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
                     bool m_vendorHasBeenSet;
 
                     /**
-                     * [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+                     * [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -239,6 +260,12 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
                      */
                     std::vector<std::string> m_fileNamePrefix;
                     bool m_fileNamePrefixHasBeenSet;
+
+                    /**
+                     * If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+                     */
+                    std::string m_endpointUrl;
+                    bool m_endpointUrlHasBeenSet;
 
                 };
             }

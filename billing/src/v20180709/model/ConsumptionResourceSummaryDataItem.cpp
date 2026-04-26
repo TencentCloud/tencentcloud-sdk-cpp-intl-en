@@ -43,6 +43,9 @@ ConsumptionResourceSummaryDataItem::ConsumptionResourceSummaryDataItem() :
     m_voucherPayAmountHasBeenSet(false),
     m_incentivePayAmountHasBeenSet(false),
     m_transferPayAmountHasBeenSet(false),
+    m_taxHasBeenSet(false),
+    m_taxRateHasBeenSet(false),
+    m_amountBeforeTaxHasBeenSet(false),
     m_payerUinHasBeenSet(false),
     m_ownerUinHasBeenSet(false),
     m_operateUinHasBeenSet(false),
@@ -287,6 +290,36 @@ CoreInternalOutcome ConsumptionResourceSummaryDataItem::Deserialize(const rapidj
         }
         m_transferPayAmount = string(value["TransferPayAmount"].GetString());
         m_transferPayAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tax") && !value["Tax"].IsNull())
+    {
+        if (!value["Tax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumptionResourceSummaryDataItem.Tax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tax = string(value["Tax"].GetString());
+        m_taxHasBeenSet = true;
+    }
+
+    if (value.HasMember("TaxRate") && !value["TaxRate"].IsNull())
+    {
+        if (!value["TaxRate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumptionResourceSummaryDataItem.TaxRate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_taxRate = string(value["TaxRate"].GetString());
+        m_taxRateHasBeenSet = true;
+    }
+
+    if (value.HasMember("AmountBeforeTax") && !value["AmountBeforeTax"].IsNull())
+    {
+        if (!value["AmountBeforeTax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumptionResourceSummaryDataItem.AmountBeforeTax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_amountBeforeTax = string(value["AmountBeforeTax"].GetString());
+        m_amountBeforeTaxHasBeenSet = true;
     }
 
     if (value.HasMember("PayerUin") && !value["PayerUin"].IsNull())
@@ -650,6 +683,30 @@ void ConsumptionResourceSummaryDataItem::ToJsonObject(rapidjson::Value &value, r
         string key = "TransferPayAmount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_transferPayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tax.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaxRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taxRate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_amountBeforeTaxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AmountBeforeTax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_amountBeforeTax.c_str(), allocator).Move(), allocator);
     }
 
     if (m_payerUinHasBeenSet)
@@ -1149,6 +1206,54 @@ void ConsumptionResourceSummaryDataItem::SetTransferPayAmount(const string& _tra
 bool ConsumptionResourceSummaryDataItem::TransferPayAmountHasBeenSet() const
 {
     return m_transferPayAmountHasBeenSet;
+}
+
+string ConsumptionResourceSummaryDataItem::GetTax() const
+{
+    return m_tax;
+}
+
+void ConsumptionResourceSummaryDataItem::SetTax(const string& _tax)
+{
+    m_tax = _tax;
+    m_taxHasBeenSet = true;
+}
+
+bool ConsumptionResourceSummaryDataItem::TaxHasBeenSet() const
+{
+    return m_taxHasBeenSet;
+}
+
+string ConsumptionResourceSummaryDataItem::GetTaxRate() const
+{
+    return m_taxRate;
+}
+
+void ConsumptionResourceSummaryDataItem::SetTaxRate(const string& _taxRate)
+{
+    m_taxRate = _taxRate;
+    m_taxRateHasBeenSet = true;
+}
+
+bool ConsumptionResourceSummaryDataItem::TaxRateHasBeenSet() const
+{
+    return m_taxRateHasBeenSet;
+}
+
+string ConsumptionResourceSummaryDataItem::GetAmountBeforeTax() const
+{
+    return m_amountBeforeTax;
+}
+
+void ConsumptionResourceSummaryDataItem::SetAmountBeforeTax(const string& _amountBeforeTax)
+{
+    m_amountBeforeTax = _amountBeforeTax;
+    m_amountBeforeTaxHasBeenSet = true;
+}
+
+bool ConsumptionResourceSummaryDataItem::AmountBeforeTaxHasBeenSet() const
+{
+    return m_amountBeforeTaxHasBeenSet;
 }
 
 string ConsumptionResourceSummaryDataItem::GetPayerUin() const

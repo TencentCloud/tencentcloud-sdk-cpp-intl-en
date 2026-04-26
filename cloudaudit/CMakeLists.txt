@@ -26,7 +26,6 @@ set(cloudaudit_public_header_model
   include/tencentcloud/cloudaudit/v20190319/model/Storage.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/StartLoggingRequest.h
-  include/tencentcloud/cloudaudit/v20190319/model/DeleteAuditResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/ModifyAuditTrackResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/InquireAuditCreditRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeEventsResponse.h
@@ -36,7 +35,6 @@ set(cloudaudit_public_header_model
   include/tencentcloud/cloudaudit/v20190319/model/UpdateAuditRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/Tracks.h
-  include/tencentcloud/cloudaudit/v20190319/model/CreateAuditResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/DeleteAuditTrackRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/StartLoggingResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/AttributeKeyDetail.h
@@ -46,14 +44,14 @@ set(cloudaudit_public_header_model
   include/tencentcloud/cloudaudit/v20190319/model/ListAuditsRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/ModifyAuditTrackRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/StopLoggingResponse.h
+  include/tencentcloud/cloudaudit/v20190319/model/Filter.h
+  include/tencentcloud/cloudaudit/v20190319/model/ResourceField.h
   include/tencentcloud/cloudaudit/v20190319/model/CreateAuditTrackRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/LookupAttribute.h
   include/tencentcloud/cloudaudit/v20190319/model/ListAuditsResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeEventsRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/UpdateAuditResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeAuditRequest.h
-  include/tencentcloud/cloudaudit/v20190319/model/CreateAuditRequest.h
-  include/tencentcloud/cloudaudit/v20190319/model/DeleteAuditRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/ListCmqEnableRegionRequest.h
   include/tencentcloud/cloudaudit/v20190319/model/GetAttributeKeyResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/ListCmqEnableRegionResponse.h
@@ -75,7 +73,6 @@ set(cloudaudit_src
   src/v20190319/model/Storage.cpp
   src/v20190319/model/DescribeAuditTracksResponse.cpp
   src/v20190319/model/StartLoggingRequest.cpp
-  src/v20190319/model/DeleteAuditResponse.cpp
   src/v20190319/model/ModifyAuditTrackResponse.cpp
   src/v20190319/model/InquireAuditCreditRequest.cpp
   src/v20190319/model/DescribeEventsResponse.cpp
@@ -85,7 +82,6 @@ set(cloudaudit_src
   src/v20190319/model/UpdateAuditRequest.cpp
   src/v20190319/model/DescribeAuditTracksRequest.cpp
   src/v20190319/model/Tracks.cpp
-  src/v20190319/model/CreateAuditResponse.cpp
   src/v20190319/model/DeleteAuditTrackRequest.cpp
   src/v20190319/model/StartLoggingResponse.cpp
   src/v20190319/model/AttributeKeyDetail.cpp
@@ -95,14 +91,14 @@ set(cloudaudit_src
   src/v20190319/model/ListAuditsRequest.cpp
   src/v20190319/model/ModifyAuditTrackRequest.cpp
   src/v20190319/model/StopLoggingResponse.cpp
+  src/v20190319/model/Filter.cpp
+  src/v20190319/model/ResourceField.cpp
   src/v20190319/model/CreateAuditTrackRequest.cpp
   src/v20190319/model/LookupAttribute.cpp
   src/v20190319/model/ListAuditsResponse.cpp
   src/v20190319/model/DescribeEventsRequest.cpp
   src/v20190319/model/UpdateAuditResponse.cpp
   src/v20190319/model/DescribeAuditRequest.cpp
-  src/v20190319/model/CreateAuditRequest.cpp
-  src/v20190319/model/DeleteAuditRequest.cpp
   src/v20190319/model/ListCmqEnableRegionRequest.cpp
   src/v20190319/model/GetAttributeKeyResponse.cpp
   src/v20190319/model/ListCmqEnableRegionResponse.cpp

@@ -43,35 +43,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
-                     * @return FileType Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+                     * 获取Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+                     * @return FileType Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
-                     * @param _fileType Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+                     * 设置Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+                     * @param _fileType Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -84,23 +84,23 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
-                     * @return Month Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+                     * 获取Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+                     * @return Month Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
-                     * @param _month Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+                     * 设置Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+                     * @param _month Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -113,15 +113,15 @@ L0 bills and bill packs cannot be downloaded for the current month. Please downl
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
-                     * @return ChildUin List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+                     * 获取Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
+                     * @return ChildUin Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
                      * 
                      */
                     std::vector<std::string> GetChildUin() const;
 
                     /**
-                     * 设置List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
-                     * @param _childUin List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+                     * 设置Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
+                     * @param _childUin Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
                      * 
                      */
                     void SetChildUin(const std::vector<std::string>& _childUin);
@@ -136,26 +136,26 @@ L0 bills and bill packs cannot be downloaded for the current month. Please downl
                 private:
 
                     /**
-                     * Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+                     * Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+                     * Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+                     * Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
                      */
                     std::vector<std::string> m_childUin;
                     bool m_childUinHasBeenSet;

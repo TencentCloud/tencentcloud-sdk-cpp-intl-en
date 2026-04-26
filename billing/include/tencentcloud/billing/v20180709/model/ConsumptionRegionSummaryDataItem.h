@@ -155,18 +155,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Cash
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
                      * 设置Cash
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -179,15 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取VoucherNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Voucher
+                     * @return VoucherPayAmount Voucher
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置VoucherNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Voucher
+                     * @param _voucherPayAmount Voucher
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -201,18 +197,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
                      * 设置Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _incentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -225,15 +217,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Share revenueNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Royalty amount
+                     * @return TransferPayAmount Royalty amount
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Share revenueNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Royalty amount
+                     * @param _transferPayAmount Royalty amount
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -244,6 +236,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TransferPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Tax
+                     * @return Tax Tax
+                     * 
+                     */
+                    std::string GetTax() const;
+
+                    /**
+                     * 设置Tax
+                     * @param _tax Tax
+                     * 
+                     */
+                    void SetTax(const std::string& _tax);
+
+                    /**
+                     * 判断参数 Tax 是否已赋值
+                     * @return Tax 是否已赋值
+                     * 
+                     */
+                    bool TaxHasBeenSet() const;
+
+                    /**
+                     * 获取Cash payment (pre-tax)
+                     * @return AmountBeforeTax Cash payment (pre-tax)
+                     * 
+                     */
+                    std::string GetAmountBeforeTax() const;
+
+                    /**
+                     * 设置Cash payment (pre-tax)
+                     * @param _amountBeforeTax Cash payment (pre-tax)
+                     * 
+                     */
+                    void SetAmountBeforeTax(const std::string& _amountBeforeTax);
+
+                    /**
+                     * 判断参数 AmountBeforeTax 是否已赋值
+                     * @return AmountBeforeTax 是否已赋值
+                     * 
+                     */
+                    bool AmountBeforeTaxHasBeenSet() const;
 
                 private:
 
@@ -279,29 +313,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cash
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * VoucherNote: This field may return null, indicating that no valid values can be obtained.
+                     * Voucher
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
                      * Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+                     * Royalty amount
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
+
+                    /**
+                     * Tax
+                     */
+                    std::string m_tax;
+                    bool m_taxHasBeenSet;
+
+                    /**
+                     * Cash payment (pre-tax)
+                     */
+                    std::string m_amountBeforeTax;
+                    bool m_amountBeforeTaxHasBeenSet;
 
                 };
             }

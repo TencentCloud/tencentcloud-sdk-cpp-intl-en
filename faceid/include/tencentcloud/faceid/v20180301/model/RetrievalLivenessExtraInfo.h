@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Template search details
+                * 
                 */
                 class RetrievalLivenessExtraInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
-                     * @return HitGroup Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+                     * 获取
+                     * @return HitGroup 
                      * 
                      */
                     std::string GetHitGroup() const;
 
                     /**
-                     * 设置Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
-                     * @param _hitGroup Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+                     * 设置
+                     * @param _hitGroup 
                      * 
                      */
                     void SetHitGroup(const std::string& _hitGroup);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HitGroupHasBeenSet() const;
 
                     /**
-                     * 获取Matched Similarity
-                     * @return SimilarityScore Matched Similarity
+                     * 获取
+                     * @return SimilarityScore 
                      * 
                      */
                     double GetSimilarityScore() const;
 
                     /**
-                     * 设置Matched Similarity
-                     * @param _similarityScore Matched Similarity
+                     * 设置
+                     * @param _similarityScore 
                      * 
                      */
                     void SetSimilarityScore(const double& _similarityScore);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SimilarityScoreHasBeenSet() const;
 
                     /**
-                     * 获取Matched Template id
-                     * @return HitTemplate Matched Template id
+                     * 获取
+                     * @return HitTemplate 
                      * 
                      */
                     std::string GetHitTemplate() const;
 
                     /**
-                     * 设置Matched Template id
-                     * @param _hitTemplate Matched Template id
+                     * 设置
+                     * @param _hitTemplate 
                      * 
                      */
                     void SetHitTemplate(const std::string& _hitTemplate);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+                     * 
                      */
                     std::string m_hitGroup;
                     bool m_hitGroupHasBeenSet;
 
                     /**
-                     * Matched Similarity
+                     * 
                      */
                     double m_similarityScore;
                     bool m_similarityScoreHasBeenSet;
 
                     /**
-                     * Matched Template id
+                     * 
                      */
                     std::string m_hitTemplate;
                     bool m_hitTemplateHasBeenSet;

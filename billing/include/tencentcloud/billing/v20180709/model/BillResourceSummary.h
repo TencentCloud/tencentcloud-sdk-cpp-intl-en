@@ -539,15 +539,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Royalty account expenditure: The amount paid through the royalty account
+                     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Royalty account expenditure: The amount paid through the royalty account
+                     * @param _transferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -623,15 +623,15 @@ namespace TencentCloud
                     bool ExtendField5HasBeenSet() const;
 
                     /**
-                     * 获取Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag information.
+                     * @return Tags Tag information.
                      * 
                      */
                     std::vector<BillTagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag information.
+                     * @param _tags Tag information.
                      * 
                      */
                     void SetTags(const std::vector<BillTagInfo>& _tags);
@@ -854,15 +854,15 @@ namespace TencentCloud
                     bool OriginalCostWithSPHasBeenSet() const;
 
                     /**
-                     * 获取Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing month
+                     * @return BillMonth Billing month
                      * 
                      */
                     std::string GetBillMonth() const;
 
                     /**
-                     * 设置Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _billMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing month
+                     * @param _billMonth Billing month
                      * 
                      */
                     void SetBillMonth(const std::string& _billMonth);
@@ -1017,7 +1017,7 @@ namespace TencentCloud
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Royalty account expenditure: The amount paid through the royalty account
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
@@ -1041,7 +1041,7 @@ namespace TencentCloud
                     bool m_extendField5HasBeenSet;
 
                     /**
-                     * Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag information.
                      */
                     std::vector<BillTagInfo> m_tags;
                     bool m_tagsHasBeenSet;
@@ -1107,7 +1107,7 @@ namespace TencentCloud
                     bool m_originalCostWithSPHasBeenSet;
 
                     /**
-                     * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing month
                      */
                     std::string m_billMonth;
                     bool m_billMonthHasBeenSet;

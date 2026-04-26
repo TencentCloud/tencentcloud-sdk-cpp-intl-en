@@ -1,0 +1,286 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/billing/v20180709/model/AllocationOverviewTotal.h>
+
+using TencentCloud::CoreInternalOutcome;
+using namespace TencentCloud::Billing::V20180709::Model;
+using namespace std;
+
+AllocationOverviewTotal::AllocationOverviewTotal() :
+    m_realTotalCostHasBeenSet(false),
+    m_cashPayAmountHasBeenSet(false),
+    m_incentivePayAmountHasBeenSet(false),
+    m_voucherPayAmountHasBeenSet(false),
+    m_transferPayAmountHasBeenSet(false),
+    m_costBeforeTaxHasBeenSet(false),
+    m_taxHasBeenSet(false)
+{
+}
+
+CoreInternalOutcome AllocationOverviewTotal::Deserialize(const rapidjson::Value &value)
+{
+    string requestId = "";
+
+
+    if (value.HasMember("RealTotalCost") && !value["RealTotalCost"].IsNull())
+    {
+        if (!value["RealTotalCost"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_realTotalCost = string(value["RealTotalCost"].GetString());
+        m_realTotalCostHasBeenSet = true;
+    }
+
+    if (value.HasMember("CashPayAmount") && !value["CashPayAmount"].IsNull())
+    {
+        if (!value["CashPayAmount"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.CashPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cashPayAmount = string(value["CashPayAmount"].GetString());
+        m_cashPayAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("IncentivePayAmount") && !value["IncentivePayAmount"].IsNull())
+    {
+        if (!value["IncentivePayAmount"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.IncentivePayAmount` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_incentivePayAmount = string(value["IncentivePayAmount"].GetString());
+        m_incentivePayAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("VoucherPayAmount") && !value["VoucherPayAmount"].IsNull())
+    {
+        if (!value["VoucherPayAmount"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.VoucherPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_voucherPayAmount = string(value["VoucherPayAmount"].GetString());
+        m_voucherPayAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("TransferPayAmount") && !value["TransferPayAmount"].IsNull())
+    {
+        if (!value["TransferPayAmount"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.TransferPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_transferPayAmount = string(value["TransferPayAmount"].GetString());
+        m_transferPayAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("CostBeforeTax") && !value["CostBeforeTax"].IsNull())
+    {
+        if (!value["CostBeforeTax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.CostBeforeTax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_costBeforeTax = string(value["CostBeforeTax"].GetString());
+        m_costBeforeTaxHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tax") && !value["Tax"].IsNull())
+    {
+        if (!value["Tax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllocationOverviewTotal.Tax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tax = string(value["Tax"].GetString());
+        m_taxHasBeenSet = true;
+    }
+
+
+    return CoreInternalOutcome(true);
+}
+
+void AllocationOverviewTotal::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+{
+
+    if (m_realTotalCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RealTotalCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realTotalCost.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cashPayAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CashPayAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cashPayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_incentivePayAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IncentivePayAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_incentivePayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_voucherPayAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VoucherPayAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_voucherPayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_transferPayAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TransferPayAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_transferPayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_costBeforeTaxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CostBeforeTax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_costBeforeTax.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tax.c_str(), allocator).Move(), allocator);
+    }
+
+}
+
+
+string AllocationOverviewTotal::GetRealTotalCost() const
+{
+    return m_realTotalCost;
+}
+
+void AllocationOverviewTotal::SetRealTotalCost(const string& _realTotalCost)
+{
+    m_realTotalCost = _realTotalCost;
+    m_realTotalCostHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::RealTotalCostHasBeenSet() const
+{
+    return m_realTotalCostHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetCashPayAmount() const
+{
+    return m_cashPayAmount;
+}
+
+void AllocationOverviewTotal::SetCashPayAmount(const string& _cashPayAmount)
+{
+    m_cashPayAmount = _cashPayAmount;
+    m_cashPayAmountHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::CashPayAmountHasBeenSet() const
+{
+    return m_cashPayAmountHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetIncentivePayAmount() const
+{
+    return m_incentivePayAmount;
+}
+
+void AllocationOverviewTotal::SetIncentivePayAmount(const string& _incentivePayAmount)
+{
+    m_incentivePayAmount = _incentivePayAmount;
+    m_incentivePayAmountHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::IncentivePayAmountHasBeenSet() const
+{
+    return m_incentivePayAmountHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetVoucherPayAmount() const
+{
+    return m_voucherPayAmount;
+}
+
+void AllocationOverviewTotal::SetVoucherPayAmount(const string& _voucherPayAmount)
+{
+    m_voucherPayAmount = _voucherPayAmount;
+    m_voucherPayAmountHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::VoucherPayAmountHasBeenSet() const
+{
+    return m_voucherPayAmountHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetTransferPayAmount() const
+{
+    return m_transferPayAmount;
+}
+
+void AllocationOverviewTotal::SetTransferPayAmount(const string& _transferPayAmount)
+{
+    m_transferPayAmount = _transferPayAmount;
+    m_transferPayAmountHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::TransferPayAmountHasBeenSet() const
+{
+    return m_transferPayAmountHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetCostBeforeTax() const
+{
+    return m_costBeforeTax;
+}
+
+void AllocationOverviewTotal::SetCostBeforeTax(const string& _costBeforeTax)
+{
+    m_costBeforeTax = _costBeforeTax;
+    m_costBeforeTaxHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::CostBeforeTaxHasBeenSet() const
+{
+    return m_costBeforeTaxHasBeenSet;
+}
+
+string AllocationOverviewTotal::GetTax() const
+{
+    return m_tax;
+}
+
+void AllocationOverviewTotal::SetTax(const string& _tax)
+{
+    m_tax = _tax;
+    m_taxHasBeenSet = true;
+}
+
+bool AllocationOverviewTotal::TaxHasBeenSet() const
+{
+    return m_taxHasBeenSet;
+}
+

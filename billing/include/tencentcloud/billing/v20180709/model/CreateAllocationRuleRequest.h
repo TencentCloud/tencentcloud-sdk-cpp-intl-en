@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of sharing rules.
-                     * @return RuleList List of sharing rules.
+                     * 获取List of sharing rules
+                     * @return RuleList List of sharing rules
                      * 
                      */
                     AllocationRulesSummary GetRuleList() const;
 
                     /**
-                     * 设置List of sharing rules.
-                     * @param _ruleList List of sharing rules.
+                     * 设置List of sharing rules
+                     * @param _ruleList List of sharing rules
                      * 
                      */
                     void SetRuleList(const AllocationRulesSummary& _ruleList);
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of sharing rules.
+                     * List of sharing rules
                      */
                     AllocationRulesSummary m_ruleList;
                     bool m_ruleListHasBeenSet;

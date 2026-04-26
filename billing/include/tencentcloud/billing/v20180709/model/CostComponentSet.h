@@ -298,6 +298,48 @@ namespace TencentCloud
                      */
                     bool IncentivePayAmountHasBeenSet() const;
 
+                    /**
+                     * 获取Tax
+                     * @return Tax Tax
+                     * 
+                     */
+                    std::string GetTax() const;
+
+                    /**
+                     * 设置Tax
+                     * @param _tax Tax
+                     * 
+                     */
+                    void SetTax(const std::string& _tax);
+
+                    /**
+                     * 判断参数 Tax 是否已赋值
+                     * @return Tax 是否已赋值
+                     * 
+                     */
+                    bool TaxHasBeenSet() const;
+
+                    /**
+                     * 获取tax rate
+                     * @return TaxRate tax rate
+                     * 
+                     */
+                    std::string GetTaxRate() const;
+
+                    /**
+                     * 设置tax rate
+                     * @param _taxRate tax rate
+                     * 
+                     */
+                    void SetTaxRate(const std::string& _taxRate);
+
+                    /**
+                     * 判断参数 TaxRate 是否已赋值
+                     * @return TaxRate 是否已赋值
+                     * 
+                     */
+                    bool TaxRateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -371,6 +413,18 @@ namespace TencentCloud
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
+
+                    /**
+                     * Tax
+                     */
+                    std::string m_tax;
+                    bool m_taxHasBeenSet;
+
+                    /**
+                     * tax rate
+                     */
+                    std::string m_taxRate;
+                    bool m_taxRateHasBeenSet;
 
                 };
             }

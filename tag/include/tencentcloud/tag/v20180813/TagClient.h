@@ -191,7 +191,7 @@ namespace TencentCloud
 
 
                 /**
-                 *Creates a project
+                 *Creates a project.
                  * @param req AddProjectRequest
                  * @return AddProjectOutcome
                  */

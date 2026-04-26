@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrepayPurchase Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Newly purchased order
+                     * @return PrepayPurchase Newly purchased order
                      * 
                      */
                     std::string GetPrepayPurchase() const;
 
                     /**
-                     * 设置Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prepayPurchase Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Newly purchased order
+                     * @param _prepayPurchase Newly purchased order
                      * 
                      */
                     void SetPrepayPurchase(const std::string& _prepayPurchase);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrepayPurchaseHasBeenSet() const;
 
                     /**
-                     * 获取Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrepayRenew Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Renewal order
+                     * @return PrepayRenew Renewal order
                      * 
                      */
                     std::string GetPrepayRenew() const;
 
                     /**
-                     * 设置Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prepayRenew Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Renewal order
+                     * @param _prepayRenew Renewal order
                      * 
                      */
                     void SetPrepayRenew(const std::string& _prepayRenew);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrepayRenewHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrepayModifyUp Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration upgrade order
+                     * @return PrepayModifyUp Configuration upgrade order
                      * 
                      */
                     std::string GetPrepayModifyUp() const;
 
                     /**
-                     * 设置Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prepayModifyUp Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration upgrade order
+                     * @param _prepayModifyUp Configuration upgrade order
                      * 
                      */
                     void SetPrepayModifyUp(const std::string& _prepayModifyUp);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrepayModifyUpHasBeenSet() const;
 
                     /**
-                     * 获取Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReverseOrder Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Write-off order
+                     * @return ReverseOrder Write-off order
                      * 
                      */
                     std::string GetReverseOrder() const;
 
                     /**
-                     * 设置Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reverseOrder Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Write-off order
+                     * @param _reverseOrder Write-off order
                      * 
                      */
                     void SetReverseOrder(const std::string& _reverseOrder);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReverseOrderHasBeenSet() const;
 
                     /**
-                     * 获取The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewOrder The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Order after discount adjustment
+                     * @return NewOrder Order after discount adjustment
                      * 
                      */
                     std::string GetNewOrder() const;
 
                     /**
-                     * 设置The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newOrder The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Order after discount adjustment
+                     * @param _newOrder Order after discount adjustment
                      * 
                      */
                     void SetNewOrder(const std::string& _newOrder);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewOrderHasBeenSet() const;
 
                     /**
-                     * 获取The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Original The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Order before discount adjustment
+                     * @return Original Order before discount adjustment
                      * 
                      */
                     std::string GetOriginal() const;
 
                     /**
-                     * 设置The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _original The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Order before discount adjustment
+                     * @param _original Order before discount adjustment
                      * 
                      */
                     void SetOriginal(const std::string& _original);
@@ -199,43 +175,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Newly purchased order
                      */
                     std::string m_prepayPurchase;
                     bool m_prepayPurchaseHasBeenSet;
 
                     /**
-                     * Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Renewal order
                      */
                     std::string m_prepayRenew;
                     bool m_prepayRenewHasBeenSet;
 
                     /**
-                     * Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration upgrade order
                      */
                     std::string m_prepayModifyUp;
                     bool m_prepayModifyUpHasBeenSet;
 
                     /**
-                     * Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Write-off order
                      */
                     std::string m_reverseOrder;
                     bool m_reverseOrderHasBeenSet;
 
                     /**
-                     * The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Order after discount adjustment
                      */
                     std::string m_newOrder;
                     bool m_newOrderHasBeenSet;
 
                     /**
-                     * The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Order before discount adjustment
                      */
                     std::string m_original;
                     bool m_originalHasBeenSet;

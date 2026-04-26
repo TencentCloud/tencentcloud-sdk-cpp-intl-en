@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
-                     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+                     * 获取<p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
+                     * @return Ready <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
                      * 
                      */
                     uint64_t GetReady() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ReadyHasBeenSet() const;
 
                     /**
-                     * 获取Detailed summary of costs by multiple dimensions
-                     * @return SummaryDetail Detailed summary of costs by multiple dimensions
+                     * 获取<p>Multidimensional bill summary of consumption detail</p>
+                     * @return SummaryDetail <p>Multidimensional bill summary of consumption detail</p>
                      * 
                      */
                     std::vector<SummaryDetail> GetSummaryDetail() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+                     * <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
                      */
                     uint64_t m_ready;
                     bool m_readyHasBeenSet;
 
                     /**
-                     * Detailed summary of costs by multiple dimensions
+                     * <p>Multidimensional bill summary of consumption detail</p>
                      */
                     std::vector<SummaryDetail> m_summaryDetail;
                     bool m_summaryDetailHasBeenSet;

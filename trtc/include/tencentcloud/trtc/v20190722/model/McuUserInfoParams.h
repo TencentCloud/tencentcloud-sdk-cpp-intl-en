@@ -68,6 +68,31 @@ namespace TencentCloud
                      */
                     bool UserInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+                     * @return SoundLevel Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+                     * 
+                     */
+                    uint64_t GetSoundLevel() const;
+
+                    /**
+                     * 设置Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+                     * @param _soundLevel Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+                     * 
+                     */
+                    void SetSoundLevel(const uint64_t& _soundLevel);
+
+                    /**
+                     * 判断参数 SoundLevel 是否已赋值
+                     * @return SoundLevel 是否已赋值
+                     * 
+                     */
+                    bool SoundLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -75,6 +100,13 @@ namespace TencentCloud
                      */
                     MixUserInfo m_userInfo;
                     bool m_userInfoHasBeenSet;
+
+                    /**
+                     * Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+                     */
+                    uint64_t m_soundLevel;
+                    bool m_soundLevelHasBeenSet;
 
                 };
             }

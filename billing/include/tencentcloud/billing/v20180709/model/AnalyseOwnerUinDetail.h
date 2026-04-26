@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User uin
+                     * @return OwnerUin User uin
                      * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ownerUin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User uin
+                     * @param _ownerUin User uin
                      * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * User uin
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;

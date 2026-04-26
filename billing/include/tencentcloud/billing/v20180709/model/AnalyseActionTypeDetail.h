@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionType Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type code
+                     * @return ActionType Transaction type code
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionType Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type code
+                     * @param _actionType Transaction type code
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionTypeName Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type Name
+                     * @return ActionTypeName Transaction type Name
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionTypeName Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type Name
+                     * @param _actionTypeName Transaction type Name
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type code
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type Name
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;

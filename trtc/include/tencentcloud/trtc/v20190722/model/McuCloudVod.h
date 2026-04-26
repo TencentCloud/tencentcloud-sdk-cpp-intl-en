@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mcu relay recording; video on demand (VOD) related parameters.
+                * Mcu relay recording. on-demand video related parameters.
                 */
                 class McuCloudVod : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tencent VOD Parameters
-Example :{"ExpireTime":86400}
-                     * @return McuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+                     * 获取Parameters of tencent cloud video on demand (vod).	
+                     * @return McuTencentVod Parameters of tencent cloud video on demand (vod).	
                      * 
                      */
                     McuTencentVod GetMcuTencentVod() const;
 
                     /**
-                     * 设置Tencent VOD Parameters
-Example :{"ExpireTime":86400}
-                     * @param _mcuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+                     * 设置Parameters of tencent cloud video on demand (vod).	
+                     * @param _mcuTencentVod Parameters of tencent cloud video on demand (vod).	
                      * 
                      */
                     void SetMcuTencentVod(const McuTencentVod& _mcuTencentVod);
@@ -75,8 +71,7 @@ Example :{"ExpireTime":86400}
                 private:
 
                     /**
-                     * Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+                     * Parameters of tencent cloud video on demand (vod).	
                      */
                     McuTencentVod m_mcuTencentVod;
                     bool m_mcuTencentVodHasBeenSet;

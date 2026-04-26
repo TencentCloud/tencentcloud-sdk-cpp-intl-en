@@ -43,12 +43,30 @@
 #include <tencentcloud/billing/v20180709/model/DeleteGatherRuleResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocateConditionsRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocateConditionsResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationBillConditionsRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationBillConditionsResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationBillDetailRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationBillDetailResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationMonthOverviewRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationMonthOverviewResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationOverviewRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationOverviewResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationRuleDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationRuleDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationRuleSummaryRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationRuleSummaryResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByBusinessRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByBusinessResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByItemRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByItemResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByResourceRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationSummaryByResourceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationTreeRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationTreeResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationTrendByMonthRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAllocationTrendByMonthResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationUnitDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAllocationUnitDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillAdjustInfoRequest.h>
@@ -77,6 +95,8 @@
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCPQBillingMappingRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCPQBillingMappingResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeCostDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeCostDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeCostExplorerSummaryRequest.h>
@@ -93,6 +113,8 @@
 #include <tencentcloud/billing/v20180709/model/DescribeDealsByCondResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeGatherResourceRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeGatherResourceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeRenewInstancesRequest.h>
@@ -161,15 +183,42 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccountBalanceResponse> DescribeAccountBalanceOutcome;
                 typedef std::future<DescribeAccountBalanceOutcome> DescribeAccountBalanceOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAccountBalanceRequest&, DescribeAccountBalanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountBalanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocateConditionsResponse> DescribeAllocateConditionsOutcome;
+                typedef std::future<DescribeAllocateConditionsOutcome> DescribeAllocateConditionsOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocateConditionsRequest&, DescribeAllocateConditionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocateConditionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationBillConditionsResponse> DescribeAllocationBillConditionsOutcome;
+                typedef std::future<DescribeAllocationBillConditionsOutcome> DescribeAllocationBillConditionsOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationBillConditionsRequest&, DescribeAllocationBillConditionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationBillConditionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationBillDetailResponse> DescribeAllocationBillDetailOutcome;
+                typedef std::future<DescribeAllocationBillDetailOutcome> DescribeAllocationBillDetailOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationBillDetailRequest&, DescribeAllocationBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationBillDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationMonthOverviewResponse> DescribeAllocationMonthOverviewOutcome;
+                typedef std::future<DescribeAllocationMonthOverviewOutcome> DescribeAllocationMonthOverviewOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationMonthOverviewRequest&, DescribeAllocationMonthOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationMonthOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationOverviewResponse> DescribeAllocationOverviewOutcome;
+                typedef std::future<DescribeAllocationOverviewOutcome> DescribeAllocationOverviewOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationOverviewRequest&, DescribeAllocationOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationOverviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAllocationRuleDetailResponse> DescribeAllocationRuleDetailOutcome;
                 typedef std::future<DescribeAllocationRuleDetailOutcome> DescribeAllocationRuleDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAllocationRuleDetailRequest&, DescribeAllocationRuleDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationRuleDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAllocationRuleSummaryResponse> DescribeAllocationRuleSummaryOutcome;
                 typedef std::future<DescribeAllocationRuleSummaryOutcome> DescribeAllocationRuleSummaryOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAllocationRuleSummaryRequest&, DescribeAllocationRuleSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationRuleSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationSummaryByBusinessResponse> DescribeAllocationSummaryByBusinessOutcome;
+                typedef std::future<DescribeAllocationSummaryByBusinessOutcome> DescribeAllocationSummaryByBusinessOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationSummaryByBusinessRequest&, DescribeAllocationSummaryByBusinessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationSummaryByBusinessAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationSummaryByItemResponse> DescribeAllocationSummaryByItemOutcome;
+                typedef std::future<DescribeAllocationSummaryByItemOutcome> DescribeAllocationSummaryByItemOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationSummaryByItemRequest&, DescribeAllocationSummaryByItemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationSummaryByItemAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationSummaryByResourceResponse> DescribeAllocationSummaryByResourceOutcome;
+                typedef std::future<DescribeAllocationSummaryByResourceOutcome> DescribeAllocationSummaryByResourceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationSummaryByResourceRequest&, DescribeAllocationSummaryByResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationSummaryByResourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAllocationTreeResponse> DescribeAllocationTreeOutcome;
                 typedef std::future<DescribeAllocationTreeOutcome> DescribeAllocationTreeOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAllocationTreeRequest&, DescribeAllocationTreeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationTreeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllocationTrendByMonthResponse> DescribeAllocationTrendByMonthOutcome;
+                typedef std::future<DescribeAllocationTrendByMonthOutcome> DescribeAllocationTrendByMonthOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAllocationTrendByMonthRequest&, DescribeAllocationTrendByMonthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationTrendByMonthAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAllocationUnitDetailResponse> DescribeAllocationUnitDetailOutcome;
                 typedef std::future<DescribeAllocationUnitDetailOutcome> DescribeAllocationUnitDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAllocationUnitDetailRequest&, DescribeAllocationUnitDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllocationUnitDetailAsyncHandler;
@@ -212,6 +261,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryForOrganizationResponse> DescribeBillSummaryForOrganizationOutcome;
                 typedef std::future<DescribeBillSummaryForOrganizationOutcome> DescribeBillSummaryForOrganizationOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryForOrganizationRequest&, DescribeBillSummaryForOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryForOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCPQBillingMappingResponse> DescribeCPQBillingMappingOutcome;
+                typedef std::future<DescribeCPQBillingMappingOutcome> DescribeCPQBillingMappingOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCPQBillingMappingRequest&, DescribeCPQBillingMappingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCPQBillingMappingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCostDetailResponse> DescribeCostDetailOutcome;
                 typedef std::future<DescribeCostDetailOutcome> DescribeCostDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeCostDetailRequest&, DescribeCostDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostDetailAsyncHandler;
@@ -236,6 +288,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDosageCosDetailByDateResponse> DescribeDosageCosDetailByDateOutcome;
                 typedef std::future<DescribeDosageCosDetailByDateOutcome> DescribeDosageCosDetailByDateOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeDosageCosDetailByDateRequest&, DescribeDosageCosDetailByDateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDosageCosDetailByDateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGatherResourceResponse> DescribeGatherResourceOutcome;
+                typedef std::future<DescribeGatherResourceOutcome> DescribeGatherResourceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeGatherResourceRequest&, DescribeGatherResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatherResourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGatherRuleDetailResponse> DescribeGatherRuleDetailOutcome;
                 typedef std::future<DescribeGatherRuleDetailOutcome> DescribeGatherRuleDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeGatherRuleDetailRequest&, DescribeGatherRuleDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatherRuleDetailAsyncHandler;
@@ -367,6 +422,51 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
                 DescribeAccountBalanceOutcomeCallable DescribeAccountBalanceCallable(const Model::DescribeAccountBalanceRequest& request);
 
                 /**
+                 *This API is used to query the filter conditions of a resource directory.
+                 * @param req DescribeAllocateConditionsRequest
+                 * @return DescribeAllocateConditionsOutcome
+                 */
+                DescribeAllocateConditionsOutcome DescribeAllocateConditions(const Model::DescribeAllocateConditionsRequest &request);
+                void DescribeAllocateConditionsAsync(const Model::DescribeAllocateConditionsRequest& request, const DescribeAllocateConditionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocateConditionsOutcomeCallable DescribeAllocateConditionsCallable(const Model::DescribeAllocateConditionsRequest& request);
+
+                /**
+                 *This API is used to query the filter conditions of a cost allocation bill.
+                 * @param req DescribeAllocationBillConditionsRequest
+                 * @return DescribeAllocationBillConditionsOutcome
+                 */
+                DescribeAllocationBillConditionsOutcome DescribeAllocationBillConditions(const Model::DescribeAllocationBillConditionsRequest &request);
+                void DescribeAllocationBillConditionsAsync(const Model::DescribeAllocationBillConditionsRequest& request, const DescribeAllocationBillConditionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationBillConditionsOutcomeCallable DescribeAllocationBillConditionsCallable(const Model::DescribeAllocationBillConditionsRequest& request);
+
+                /**
+                 *This API is used to query the details of a cost allocation bill.
+                 * @param req DescribeAllocationBillDetailRequest
+                 * @return DescribeAllocationBillDetailOutcome
+                 */
+                DescribeAllocationBillDetailOutcome DescribeAllocationBillDetail(const Model::DescribeAllocationBillDetailRequest &request);
+                void DescribeAllocationBillDetailAsync(const Model::DescribeAllocationBillDetailRequest& request, const DescribeAllocationBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationBillDetailOutcomeCallable DescribeAllocationBillDetailCallable(const Model::DescribeAllocationBillDetailRequest& request);
+
+                /**
+                 *This API is used to query the monthly overview of a cost allocation bill.
+                 * @param req DescribeAllocationMonthOverviewRequest
+                 * @return DescribeAllocationMonthOverviewOutcome
+                 */
+                DescribeAllocationMonthOverviewOutcome DescribeAllocationMonthOverview(const Model::DescribeAllocationMonthOverviewRequest &request);
+                void DescribeAllocationMonthOverviewAsync(const Model::DescribeAllocationMonthOverviewRequest& request, const DescribeAllocationMonthOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationMonthOverviewOutcomeCallable DescribeAllocationMonthOverviewCallable(const Model::DescribeAllocationMonthOverviewRequest& request);
+
+                /**
+                 *This API is used to query the daily overview of a cost allocation bill.
+                 * @param req DescribeAllocationOverviewRequest
+                 * @return DescribeAllocationOverviewOutcome
+                 */
+                DescribeAllocationOverviewOutcome DescribeAllocationOverview(const Model::DescribeAllocationOverviewRequest &request);
+                void DescribeAllocationOverviewAsync(const Model::DescribeAllocationOverviewRequest& request, const DescribeAllocationOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationOverviewOutcomeCallable DescribeAllocationOverviewCallable(const Model::DescribeAllocationOverviewRequest& request);
+
+                /**
                  *This API is used to query sharing rule details.
                  * @param req DescribeAllocationRuleDetailRequest
                  * @return DescribeAllocationRuleDetailOutcome
@@ -385,6 +485,33 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
                 DescribeAllocationRuleSummaryOutcomeCallable DescribeAllocationRuleSummaryCallable(const Model::DescribeAllocationRuleSummaryRequest& request);
 
                 /**
+                 *This API is used to query the details of a cost allocation bill by product.
+                 * @param req DescribeAllocationSummaryByBusinessRequest
+                 * @return DescribeAllocationSummaryByBusinessOutcome
+                 */
+                DescribeAllocationSummaryByBusinessOutcome DescribeAllocationSummaryByBusiness(const Model::DescribeAllocationSummaryByBusinessRequest &request);
+                void DescribeAllocationSummaryByBusinessAsync(const Model::DescribeAllocationSummaryByBusinessRequest& request, const DescribeAllocationSummaryByBusinessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationSummaryByBusinessOutcomeCallable DescribeAllocationSummaryByBusinessCallable(const Model::DescribeAllocationSummaryByBusinessRequest& request);
+
+                /**
+                 *This API is used to query the details of a cost allocation bill by item.
+                 * @param req DescribeAllocationSummaryByItemRequest
+                 * @return DescribeAllocationSummaryByItemOutcome
+                 */
+                DescribeAllocationSummaryByItemOutcome DescribeAllocationSummaryByItem(const Model::DescribeAllocationSummaryByItemRequest &request);
+                void DescribeAllocationSummaryByItemAsync(const Model::DescribeAllocationSummaryByItemRequest& request, const DescribeAllocationSummaryByItemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationSummaryByItemOutcomeCallable DescribeAllocationSummaryByItemCallable(const Model::DescribeAllocationSummaryByItemRequest& request);
+
+                /**
+                 *This API is used to query the details of a cost allocation bill by resource.
+                 * @param req DescribeAllocationSummaryByResourceRequest
+                 * @return DescribeAllocationSummaryByResourceOutcome
+                 */
+                DescribeAllocationSummaryByResourceOutcome DescribeAllocationSummaryByResource(const Model::DescribeAllocationSummaryByResourceRequest &request);
+                void DescribeAllocationSummaryByResourceAsync(const Model::DescribeAllocationSummaryByResourceRequest& request, const DescribeAllocationSummaryByResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationSummaryByResourceOutcomeCallable DescribeAllocationSummaryByResourceCallable(const Model::DescribeAllocationSummaryByResourceRequest& request);
+
+                /**
                  *This API is used to query the cost tree.
                  * @param req DescribeAllocationTreeRequest
                  * @return DescribeAllocationTreeOutcome
@@ -392,6 +519,15 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
                 DescribeAllocationTreeOutcome DescribeAllocationTree(const Model::DescribeAllocationTreeRequest &request);
                 void DescribeAllocationTreeAsync(const Model::DescribeAllocationTreeRequest& request, const DescribeAllocationTreeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAllocationTreeOutcomeCallable DescribeAllocationTreeCallable(const Model::DescribeAllocationTreeRequest& request);
+
+                /**
+                 *This API is used to query the cost trend of a cost allocation bill.
+                 * @param req DescribeAllocationTrendByMonthRequest
+                 * @return DescribeAllocationTrendByMonthOutcome
+                 */
+                DescribeAllocationTrendByMonthOutcome DescribeAllocationTrendByMonth(const Model::DescribeAllocationTrendByMonthRequest &request);
+                void DescribeAllocationTrendByMonthAsync(const Model::DescribeAllocationTrendByMonthRequest& request, const DescribeAllocationTrendByMonthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllocationTrendByMonthOutcomeCallable DescribeAllocationTrendByMonthCallable(const Model::DescribeAllocationTrendByMonthRequest& request);
 
                 /**
                  *Query the details of a cost allocation unit.
@@ -403,7 +539,7 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
                 DescribeAllocationUnitDetailOutcomeCallable DescribeAllocationUnitDetailCallable(const Model::DescribeAllocationUnitDetailRequest& request);
 
                 /**
-                 *This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+                 *This API is used to query whether there is a bill adjustment for the current UIN through API. Customers can obtain bill adjustment status faster and proactively.
                  * @param req DescribeBillAdjustInfoRequest
                  * @return DescribeBillAdjustInfoOutcome
                  */
@@ -524,7 +660,19 @@ Note: The API request may fail due to network instability or other exceptions. I
                 DescribeBillSummaryForOrganizationOutcomeCallable DescribeBillSummaryForOrganizationCallable(const Model::DescribeBillSummaryForOrganizationRequest& request);
 
                 /**
+                 *Query the four-layer matching relationship between the quoted product name and billing products
+                 * @param req DescribeCPQBillingMappingRequest
+                 * @return DescribeCPQBillingMappingOutcome
+                 */
+                DescribeCPQBillingMappingOutcome DescribeCPQBillingMapping(const Model::DescribeCPQBillingMappingRequest &request);
+                void DescribeCPQBillingMappingAsync(const Model::DescribeCPQBillingMappingRequest& request, const DescribeCPQBillingMappingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCPQBillingMappingOutcomeCallable DescribeCPQBillingMappingCallable(const Model::DescribeCPQBillingMappingRequest& request);
+
+                /**
                  *This API is used to query consumption details.
+
+Notes:
+For customers with large-scale consumption detail (for example, monthly consumption detail exceeding 1M), there will be a timeout risk when retrieving detailed data via API call. It is recommended to enable the billing data storage function and analyze bill files obtained in a bucket. [Store bills to COS](https://www.tencentcloud.com/document/product/555/61275?from_cn_redirect=1)
                  * @param req DescribeCostDetailRequest
                  * @return DescribeCostDetailOutcome
                  */
@@ -594,6 +742,15 @@ Note: The API request may fail due to network instability or other exceptions. I
                 DescribeDosageCosDetailByDateOutcome DescribeDosageCosDetailByDate(const Model::DescribeDosageCosDetailByDateRequest &request);
                 void DescribeDosageCosDetailByDateAsync(const Model::DescribeDosageCosDetailByDateRequest& request, const DescribeDosageCosDetailByDateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDosageCosDetailByDateOutcomeCallable DescribeDosageCosDetailByDateCallable(const Model::DescribeDosageCosDetailByDateRequest& request);
+
+                /**
+                 *This API is used to query the details of a cost allocation bill by resource.
+                 * @param req DescribeGatherResourceRequest
+                 * @return DescribeGatherResourceOutcome
+                 */
+                DescribeGatherResourceOutcome DescribeGatherResource(const Model::DescribeGatherResourceRequest &request);
+                void DescribeGatherResourceAsync(const Model::DescribeGatherResourceRequest& request, const DescribeGatherResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGatherResourceOutcomeCallable DescribeGatherResourceCallable(const Model::DescribeGatherResourceRequest& request);
 
                 /**
                  *This API is used to query the collection rule details.

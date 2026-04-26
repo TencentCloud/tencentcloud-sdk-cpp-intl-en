@@ -55,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ProductNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Business ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取product
+                     * @return Business product
                      * 
                      */
                     std::vector<AnalyseBusinessDetail> GetBusiness() const;
 
                     /**
-                     * 设置ProductNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _business ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置product
+                     * @param _business product
                      * 
                      */
                     void SetBusiness(const std::vector<AnalyseBusinessDetail>& _business);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool BusinessHasBeenSet() const;
 
                     /**
-                     * 获取ItemNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Project ItemNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Project
+                     * @return Project Project
                      * 
                      */
                     std::vector<AnalyseProjectDetail> GetProject() const;
 
                     /**
-                     * 设置ItemNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _project ItemNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Project
+                     * @param _project Project
                      * 
                      */
                     void SetProject(const std::vector<AnalyseProjectDetail>& _project);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool ProjectHasBeenSet() const;
 
                     /**
-                     * 获取RegionNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region RegionNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::vector<AnalyseRegionDetail> GetRegion() const;
 
                     /**
-                     * 设置RegionNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region RegionNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::vector<AnalyseRegionDetail>& _region);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Billing modeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayMode Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing mode.
+                     * @return PayMode Billing mode.
                      * 
                      */
                     std::vector<AnalysePayModeDetail> GetPayMode() const;
 
                     /**
-                     * 设置Billing modeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payMode Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing mode.
+                     * @param _payMode Billing mode.
                      * 
                      */
                     void SetPayMode(const std::vector<AnalysePayModeDetail>& _payMode);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionType Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type
+                     * @return ActionType Transaction type
                      * 
                      */
                     std::vector<AnalyseActionTypeDetail> GetActionType() const;
 
                     /**
-                     * 设置Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionType Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type
+                     * @param _actionType Transaction type
                      * 
                      */
                     void SetActionType(const std::vector<AnalyseActionTypeDetail>& _actionType);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Availability zone
+                     * @return Zone Availability zone
                      * 
                      */
                     std::vector<AnalyseZoneDetail> GetZone() const;
 
                     /**
-                     * 设置Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Availability zone
+                     * @param _zone Availability zone
                      * 
                      */
                     void SetZone(const std::vector<AnalyseZoneDetail>& _zone);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource owner Uin
+                     * @return OwnerUin Resource owner Uin
                      * 
                      */
                     std::vector<AnalyseOwnerUinDetail> GetOwnerUin() const;
 
                     /**
-                     * 设置Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ownerUin Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource owner Uin
+                     * @param _ownerUin Resource owner Uin
                      * 
                      */
                     void SetOwnerUin(const std::vector<AnalyseOwnerUinDetail>& _ownerUin);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Amount Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fee type
+                     * @return Amount Fee type
                      * 
                      */
                     std::vector<AnalyseAmountDetail> GetAmount() const;
 
                     /**
-                     * 设置Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _amount Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fee type
+                     * @param _amount Fee type
                      * 
                      */
                     void SetAmount(const std::vector<AnalyseAmountDetail>& _amount);
@@ -225,49 +225,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * product
                      */
                     std::vector<AnalyseBusinessDetail> m_business;
                     bool m_businessHasBeenSet;
 
                     /**
-                     * ItemNote: This field may return null, indicating that no valid values can be obtained.
+                     * Project
                      */
                     std::vector<AnalyseProjectDetail> m_project;
                     bool m_projectHasBeenSet;
 
                     /**
-                     * RegionNote: This field may return null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::vector<AnalyseRegionDetail> m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing mode.
                      */
                     std::vector<AnalysePayModeDetail> m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type
                      */
                     std::vector<AnalyseActionTypeDetail> m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+                     * Availability zone
                      */
                     std::vector<AnalyseZoneDetail> m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+                     * Resource owner Uin
                      */
                     std::vector<AnalyseOwnerUinDetail> m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Fee type
                      */
                     std::vector<AnalyseAmountDetail> m_amount;
                     bool m_amountHasBeenSet;

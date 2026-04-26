@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayMode Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing mode code
+                     * @return PayMode Billing mode code
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payMode Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing mode code
+                     * @param _payMode Billing mode code
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayModeName Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing mode Name
+                     * @return PayModeName Billing mode Name
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payModeName Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing mode Name
+                     * @param _payModeName Billing mode Name
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing mode code
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Billing mode Name
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date
+                     * @return Name Date
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置DateNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date
+                     * @param _name Date
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * DateNote: This field may return null, indicating that no valid values can be obtained.
+                     * Date
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

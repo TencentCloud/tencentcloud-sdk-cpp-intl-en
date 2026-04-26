@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+                     * @return Offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+                     * @param _offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Quantity, maximum is 300
-                     * @return Limit Quantity, maximum is 300
+                     * 获取The number of entries returned at a time. The maximum value is `300`.
+                     * @return Limit The number of entries returned at a time. The maximum value is `300`.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Quantity, maximum is 300
-                     * @param _limit Quantity, maximum is 300
+                     * 设置The number of entries returned at a time. The maximum value is `300`.
+                     * @param _limit The number of entries returned at a time. The maximum value is `300`.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
-                     * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+                     * 获取Period type, byUsedTime by billing period/byPayTime by fee deduction cycle. It should be consistent with the billing cycle for the month in the expense center. You can go to the top of the [bill overview](https://console.cloud.tencent.com/expense/bill/overview) page to view and confirm your billing cycle type.
+                     * @return PeriodType Period type, byUsedTime by billing period/byPayTime by fee deduction cycle. It should be consistent with the billing cycle for the month in the expense center. You can go to the top of the [bill overview](https://console.cloud.tencent.com/expense/bill/overview) page to view and confirm your billing cycle type.
                      * @deprecated
                      */
                     std::string GetPeriodType() const;
 
                     /**
-                     * 设置The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
-                     * @param _periodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+                     * 设置Period type, byUsedTime by billing period/byPayTime by fee deduction cycle. It should be consistent with the billing cycle for the month in the expense center. You can go to the top of the [bill overview](https://console.cloud.tencent.com/expense/bill/overview) page to view and confirm your billing cycle type.
+                     * @param _periodType Period type, byUsedTime by billing period/byPayTime by fee deduction cycle. It should be consistent with the billing cycle for the month in the expense center. You can go to the top of the [bill overview](https://console.cloud.tencent.com/expense/bill/overview) page to view and confirm your billing cycle type.
                      * @deprecated
                      */
                     void SetPeriodType(const std::string& _periodType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PeriodTypeHasBeenSet() const;
 
                     /**
-                     * 获取Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
-                     * @return Month Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+                     * 获取The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. Data within the last 18 months can be pulled at most.
+                     * @return Month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
-                     * @param _month Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+                     * 设置The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. Data within the last 18 months can be pulled at most.
+                     * @param _month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -127,39 +127,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use Month to query the billing details of a month.
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
-                     * @return BeginTime The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use Month to query the billing details of a month.
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * 获取The start time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
+                     * @return BeginTime The start time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use Month to query the billing details of a month.
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
-                     * @param _beginTime The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use Month to query the billing details of a month.
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * 设置The start time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
+                     * @param _beginTime The start time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -172,39 +148,15 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time of the query range, which should be in the format `Y-m-d H:i:s `. The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use `Month` to query the billing details of a month. 
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
-                     * @return EndTime The end time of the query range, which should be in the format `Y-m-d H:i:s `. The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use `Month` to query the billing details of a month. 
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * 获取The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
+                     * @return EndTime The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time of the query range, which should be in the format `Y-m-d H:i:s `. The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use `Month` to query the billing details of a month. 
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
-                     * @param _endTime The end time of the query range, which should be in the format `Y-m-d H:i:s `. The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use `Month` to query the billing details of a month. 
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * 设置The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
+                     * @param _endTime The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -217,19 +169,19 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
-1 = yes, 0 = no
-                     * @return NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
-1 = yes, 0 = no
+                     * 获取Total number of records for access list needed for frontend pagination
+1: needed, 0: not needed
+                     * @return NeedRecordNum Total number of records for access list needed for frontend pagination
+1: needed, 0: not needed
                      * 
                      */
                     int64_t GetNeedRecordNum() const;
 
                     /**
-                     * 设置Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
-1 = yes, 0 = no
-                     * @param _needRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
-1 = yes, 0 = no
+                     * 设置Total number of records for access list needed for frontend pagination
+1: needed, 0: not needed
+                     * @param _needRecordNum Total number of records for access list needed for frontend pagination
+1: needed, 0: not needed
                      * 
                      */
                     void SetNeedRecordNum(const int64_t& _needRecordNum);
@@ -382,15 +334,15 @@ Offline product deduction
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID: ID of the project to which the resource belongs
-                     * @return ProjectId Project ID: ID of the project to which the resource belongs
+                     * 获取Project ID: Project ID of the resource
+                     * @return ProjectId Project ID: Project ID of the resource
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID: ID of the project to which the resource belongs
-                     * @param _projectId Project ID: ID of the project to which the resource belongs
+                     * 设置Project ID: Project ID of the resource
+                     * @param _projectId Project ID: Project ID of the resource
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -403,19 +355,19 @@ Offline product deduction
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Product code
-Note: To query the product codes used in the current month, call <a href="https://www.tencentcloud.com/document/product/555/32374">DescribeBillSummaryByProduct</a>.
-                     * @return BusinessCode Product code
-Note: To query the product codes used in the current month, call <a href="https://www.tencentcloud.com/document/product/555/32374">DescribeBillSummaryByProduct</a>.
+                     * 获取Product name code
+Remark: If needed to obtain BusinessCode used in current month, invoke API: <a href="https://www.tencentcloud.com/document/product/555/35761?from_cn_redirect=1">Get fee distribution by product</a>
+                     * @return BusinessCode Product name code
+Remark: If needed to obtain BusinessCode used in current month, invoke API: <a href="https://www.tencentcloud.com/document/product/555/35761?from_cn_redirect=1">Get fee distribution by product</a>
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product code
-Note: To query the product codes used in the current month, call <a href="https://www.tencentcloud.com/document/product/555/32374">DescribeBillSummaryByProduct</a>.
-                     * @param _businessCode Product code
-Note: To query the product codes used in the current month, call <a href="https://www.tencentcloud.com/document/product/555/32374">DescribeBillSummaryByProduct</a>.
+                     * 设置Product name code
+Remark: If needed to obtain BusinessCode used in current month, invoke API: <a href="https://www.tencentcloud.com/document/product/555/35761?from_cn_redirect=1">Get fee distribution by product</a>
+                     * @param _businessCode Product name code
+Remark: If needed to obtain BusinessCode used in current month, invoke API: <a href="https://www.tencentcloud.com/document/product/555/35761?from_cn_redirect=1">Get fee distribution by product</a>
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -428,15 +380,15 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
-                     * @return Context Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * 获取Context information returned from the last request. Paginated query of data for months with Month>=2023-05 can speed up query speed. Recommended for users with data volume at tens of thousands level. Query speed can be improved by 2-10x.
+                     * @return Context Context information returned from the last request. Paginated query of data for months with Month>=2023-05 can speed up query speed. Recommended for users with data volume at tens of thousands level. Query speed can be improved by 2-10x.
                      * 
                      */
                     std::string GetContext() const;
 
                     /**
-                     * 设置Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
-                     * @param _context Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * 设置Context information returned from the last request. Paginated query of data for months with Month>=2023-05 can speed up query speed. Recommended for users with data volume at tens of thousands level. Query speed can be improved by 2-10x.
+                     * @param _context Context information returned from the last request. Paginated query of data for months with Month>=2023-05 can speed up query speed. Recommended for users with data volume at tens of thousands level. Query speed can be improved by 2-10x.
                      * 
                      */
                     void SetContext(const std::string& _context);
@@ -449,15 +401,15 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
-                     * @return PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+                     * 获取Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.
+                     * @return PayerUin Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.
                      * 
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
-                     * @param _payerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+                     * 设置Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.
+                     * @param _payerUin Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.
                      * 
                      */
                     void SetPayerUin(const std::string& _payerUin);
@@ -472,56 +424,44 @@ Note: To query the product codes used in the current month, call <a href="https:
                 private:
 
                     /**
-                     * Offset
+                     * Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Quantity, maximum is 300
+                     * The number of entries returned at a time. The maximum value is `300`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+                     * Period type, byUsedTime by billing period/byPayTime by fee deduction cycle. It should be consistent with the billing cycle for the month in the expense center. You can go to the top of the [bill overview](https://console.cloud.tencent.com/expense/bill/overview) page to view and confirm your billing cycle type.
                      */
                     std::string m_periodType;
                     bool m_periodTypeHasBeenSet;
 
                     /**
-                     * Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+                     * The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. Data within the last 18 months can be pulled at most.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use Month to query the billing details of a month.
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * The start time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * The end time of the query range, which should be in the format `Y-m-d H:i:s `. The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
-
-Example: tccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --BeginTime '2023-04-01 12:05:15' --EndTime '2023-04-18 12:00:10' --ProjectId 1000000731  --version "2018-07-09"
-
-Alternatively, you can use `Month` to query the billing details of a month. 
-Example:
-ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --Month 2023-04  --version "2018-07-09" --ResourceId "disk-oj9okstm"
+                     * The end time of the period in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month. Data within the last 18 months can be pulled at most.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
-1 = yes, 0 = no
+                     * Total number of records for access list needed for frontend pagination
+1: needed, 0: not needed
                      */
                     int64_t m_needRecordNum;
                     bool m_needRecordNumHasBeenSet;
@@ -565,26 +505,26 @@ Offline product deduction
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Project ID: ID of the project to which the resource belongs
+                     * Project ID: Project ID of the resource
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Product code
-Note: To query the product codes used in the current month, call <a href="https://www.tencentcloud.com/document/product/555/32374">DescribeBillSummaryByProduct</a>.
+                     * Product name code
+Remark: If needed to obtain BusinessCode used in current month, invoke API: <a href="https://www.tencentcloud.com/document/product/555/35761?from_cn_redirect=1">Get fee distribution by product</a>
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * Context information returned from the last request. Paginated query of data for months with Month>=2023-05 can speed up query speed. Recommended for users with data volume at tens of thousands level. Query speed can be improved by 2-10x.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;
 
                     /**
-                     * The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+                     * Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;

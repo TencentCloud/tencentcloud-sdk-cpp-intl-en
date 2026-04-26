@@ -214,6 +214,69 @@ namespace TencentCloud
                      */
                     bool BackGroundColorHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DynamicPosType 
+                     * 
+                     */
+                    uint64_t GetDynamicPosType() const;
+
+                    /**
+                     * 设置
+                     * @param _dynamicPosType 
+                     * 
+                     */
+                    void SetDynamicPosType(const uint64_t& _dynamicPosType);
+
+                    /**
+                     * 判断参数 DynamicPosType 是否已赋值
+                     * @return DynamicPosType 是否已赋值
+                     * 
+                     */
+                    bool DynamicPosTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ZOrder 
+                     * 
+                     */
+                    uint64_t GetZOrder() const;
+
+                    /**
+                     * 设置
+                     * @param _zOrder 
+                     * 
+                     */
+                    void SetZOrder(const uint64_t& _zOrder);
+
+                    /**
+                     * 判断参数 ZOrder 是否已赋值
+                     * @return ZOrder 是否已赋值
+                     * 
+                     */
+                    bool ZOrderHasBeenSet() const;
+
+                    /**
+                     * 获取Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+                     * @return Font Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+                     * 
+                     */
+                    std::string GetFont() const;
+
+                    /**
+                     * 设置Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+                     * @param _font Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+                     * 
+                     */
+                    void SetFont(const std::string& _font);
+
+                    /**
+                     * 判断参数 Font 是否已赋值
+                     * @return Font 是否已赋值
+                     * 
+                     */
+                    bool FontHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +326,24 @@ namespace TencentCloud
                      */
                     std::string m_backGroundColor;
                     bool m_backGroundColorHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_dynamicPosType;
+                    bool m_dynamicPosTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_zOrder;
+                    bool m_zOrderHasBeenSet;
+
+                    /**
+                     * Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+                     */
+                    std::string m_font;
+                    bool m_fontHasBeenSet;
 
                 };
             }

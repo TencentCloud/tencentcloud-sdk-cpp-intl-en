@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bill dimension code
+                     * @return GroupKey Bill dimension code
                      * 
                      */
                     std::string GetGroupKey() const;
 
                     /**
-                     * 设置Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bill dimension code
+                     * @param _groupKey Bill dimension code
                      * 
                      */
                     void SetGroupKey(const std::string& _groupKey);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool GroupKeyHasBeenSet() const;
 
                     /**
-                     * 获取Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing dimension value
+                     * @return GroupValue Billing dimension value
                      * 
                      */
                     std::string GetGroupValue() const;
 
                     /**
-                     * 设置Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing dimension value
+                     * @param _groupValue Billing dimension value
                      * 
                      */
                     void SetGroupValue(const std::string& _groupValue);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Royalty account expenditure: The amount paid through the royalty account
+                     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Royalty account expenditure: The amount paid through the royalty account
+                     * @param _transferPayAmount Royalty account expenditure: The amount paid through the royalty account
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool TransferPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product summary information
+                     * @return Business Product summary information
                      * 
                      */
                     std::vector<BusinessSummaryInfo> GetBusiness() const;
 
                     /**
-                     * 设置Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product summary information
+                     * @param _business Product summary information
                      * 
                      */
                     void SetBusiness(const std::vector<BusinessSummaryInfo>& _business);
@@ -239,13 +239,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bill dimension code
                      */
                     std::string m_groupKey;
                     bool m_groupKeyHasBeenSet;
 
                     /**
-                     * Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Billing dimension value
                      */
                     std::string m_groupValue;
                     bool m_groupValueHasBeenSet;
@@ -281,13 +281,13 @@ namespace TencentCloud
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Royalty account expenditure: The amount paid through the royalty account
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
 
                     /**
-                     * Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product summary information
                      */
                     std::vector<BusinessSummaryInfo> m_business;
                     bool m_businessHasBeenSet;

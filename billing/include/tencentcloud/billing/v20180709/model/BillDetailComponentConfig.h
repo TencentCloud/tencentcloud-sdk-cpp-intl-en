@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _value Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

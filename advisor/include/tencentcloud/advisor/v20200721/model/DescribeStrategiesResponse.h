@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Strategies Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Assessment item list.
+                     * @return Strategies Assessment item list.
                      * 
                      */
                     std::vector<Strategies> GetStrategies() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Assessment item list.
                      */
                     std::vector<Strategies> m_strategies;
                     bool m_strategiesHasBeenSet;

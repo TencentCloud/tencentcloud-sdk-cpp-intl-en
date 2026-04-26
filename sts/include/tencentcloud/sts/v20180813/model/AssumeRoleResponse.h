@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Temporary security credentials
-                     * @return Credentials Temporary security credentials
+                     * 获取Temporary access credentials
+                     * @return Credentials Temporary access credentials
                      * 
                      */
                     Credentials GetCredentials() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool CredentialsHasBeenSet() const;
 
                     /**
-                     * 获取Credentials expiration time. A Unix timestamp will be returned which is accurate to the second
-                     * @return ExpiredTime Credentials expiration time. A Unix timestamp will be returned which is accurate to the second
+                     * 获取Expiration time of the temporary access credentials. A Unix timestamp will be returned which is accurate to the second.
+                     * @return ExpiredTime Expiration time of the temporary access credentials. A Unix timestamp will be returned which is accurate to the second.
                      * 
                      */
                     int64_t GetExpiredTime() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Credentials expiration time in UTC time in ISO 8601 format.
-                     * @return Expiration Credentials expiration time in UTC time in ISO 8601 format.
+                     * 获取Expiration time of the temporary access credentials in UTC time in ISO 8601 format.
+                     * @return Expiration Expiration time of the temporary access credentials in UTC time in ISO 8601 format.
                      * 
                      */
                     std::string GetExpiration() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Temporary security credentials
+                     * Temporary access credentials
                      */
                     Credentials m_credentials;
                     bool m_credentialsHasBeenSet;
 
                     /**
-                     * Credentials expiration time. A Unix timestamp will be returned which is accurate to the second
+                     * Expiration time of the temporary access credentials. A Unix timestamp will be returned which is accurate to the second.
                      */
                     int64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Credentials expiration time in UTC time in ISO 8601 format.
+                     * Expiration time of the temporary access credentials in UTC time in ISO 8601 format.
                      */
                     std::string m_expiration;
                     bool m_expirationHasBeenSet;

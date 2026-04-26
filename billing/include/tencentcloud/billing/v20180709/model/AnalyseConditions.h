@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product name codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCodes Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product name code
+                     * @return BusinessCodes Product name code
                      * 
                      */
                     std::string GetBusinessCodes() const;
 
                     /**
-                     * 设置Product name codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCodes Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product name code
+                     * @param _businessCodes Product name code
                      * 
                      */
                     void SetBusinessCodes(const std::string& _businessCodes);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BusinessCodesHasBeenSet() const;
 
                     /**
-                     * 获取Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductCodes Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subproduct name code
+                     * @return ProductCodes Subproduct name code
                      * 
                      */
                     std::string GetProductCodes() const;
 
                     /**
-                     * 设置Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productCodes Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subproduct name code
+                     * @param _productCodes Subproduct name code
                      * 
                      */
                     void SetProductCodes(const std::string& _productCodes);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProductCodesHasBeenSet() const;
 
                     /**
-                     * 获取Component type codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentCode Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component type code
+                     * @return ComponentCode Component type code
                      * 
                      */
                     std::string GetComponentCode() const;
 
                     /**
-                     * 设置Component type codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentCode Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component type code
+                     * @param _componentCode Component type code
                      * 
                      */
                     void SetComponentCode(const std::string& _componentCode);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ComponentCodeHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneIds Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Availability zone ID: The availability zone ID where the resource is located.
+                     * @return ZoneIds Availability zone ID: The availability zone ID where the resource is located.
                      * 
                      */
                     std::string GetZoneIds() const;
 
                     /**
-                     * 设置Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneIds Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Availability zone ID: The availability zone ID where the resource is located.
+                     * @param _zoneIds Availability zone ID: The availability zone ID where the resource is located.
                      * 
                      */
                     void SetZoneIds(const std::string& _zoneIds);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionIds Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region ID: Resource region ID
+                     * @return RegionIds Region ID: Resource region ID
                      * 
                      */
                     std::string GetRegionIds() const;
 
                     /**
-                     * 设置Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionIds Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region ID: Resource region ID
+                     * @param _regionIds Region ID: Resource region ID
                      * 
                      */
                     void SetRegionIds(const std::string& _regionIds);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RegionIdsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectIds Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Project ID: Project ID of the resource
+                     * @return ProjectIds Project ID: Project ID of the resource
                      * 
                      */
                     std::string GetProjectIds() const;
 
                     /**
-                     * 设置Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectIds Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Project ID: Project ID of the resource
+                     * @param _projectIds Project ID: Project ID of the resource
                      * 
                      */
                     void SetProjectIds(const std::string& _projectIds);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayModes Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+                     * @return PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
                      * 
                      */
                     std::string GetPayModes() const;
 
                     /**
-                     * 设置Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payModes Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+                     * @param _payModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
                      * 
                      */
                     void SetPayModes(const std::string& _payModes);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PayModesHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionTypes Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type. Query transaction type (please use transaction type code as input parameter).
+                     * @return ActionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
                      * 
                      */
                     std::string GetActionTypes() const;
 
                     /**
-                     * 设置Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionTypes Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type. Query transaction type (please use transaction type code as input parameter).
+                     * @param _actionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
                      * 
                      */
                     void SetActionTypes(const std::string& _actionTypes);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ActionTypesHasBeenSet() const;
 
                     /**
-                     * 获取Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cost allocation tag key
+                     * @return Tags Cost allocation tag key
                      * 
                      */
                     std::string GetTags() const;
 
                     /**
-                     * 设置Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cost allocation tag key
+                     * @param _tags Cost allocation tag key
                      * 
                      */
                     void SetTags(const std::string& _tags);
@@ -236,15 +236,35 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return FeeType Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+                     * @return FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
                      * 
                      */
                     std::string GetFeeType() const;
 
                     /**
-                     * 设置Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _feeType Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+                     * @param _feeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
                      * 
                      */
                     void SetFeeType(const std::string& _feeType);
@@ -257,15 +277,15 @@ namespace TencentCloud
                     bool FeeTypeHasBeenSet() const;
 
                     /**
-                     * 获取User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayerUins User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User UIN for querying cost analysis data
+                     * @return PayerUins User UIN for querying cost analysis data
                      * 
                      */
                     std::string GetPayerUins() const;
 
                     /**
-                     * 设置User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payerUins User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User UIN for querying cost analysis data
+                     * @param _payerUins User UIN for querying cost analysis data
                      * 
                      */
                     void SetPayerUins(const std::string& _payerUins);
@@ -278,15 +298,15 @@ namespace TencentCloud
                     bool PayerUinsHasBeenSet() const;
 
                     /**
-                     * 获取User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUins User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User UIN for using resources
+                     * @return OwnerUins User UIN for using resources
                      * 
                      */
                     std::string GetOwnerUins() const;
 
                     /**
-                     * 设置User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ownerUins User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User UIN for using resources
+                     * @param _ownerUins User UIN for using resources
                      * 
                      */
                     void SetOwnerUins(const std::string& _ownerUins);
@@ -299,15 +319,15 @@ namespace TencentCloud
                     bool OwnerUinsHasBeenSet() const;
 
                     /**
-                     * 获取Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConsumptionTypes Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Consumption type. Query consumption type (please use consumption type code input parameter).
+                     * @return ConsumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
                      * 
                      */
                     std::string GetConsumptionTypes() const;
 
                     /**
-                     * 设置Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _consumptionTypes Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Consumption type. Query consumption type (please use consumption type code input parameter).
+                     * @param _consumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
                      * 
                      */
                     void SetConsumptionTypes(const std::string& _consumptionTypes);
@@ -322,79 +342,84 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Product name code
                      */
                     std::string m_businessCodes;
                     bool m_businessCodesHasBeenSet;
 
                     /**
-                     * Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Subproduct name code
                      */
                     std::string m_productCodes;
                     bool m_productCodesHasBeenSet;
 
                     /**
-                     * Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Component type code
                      */
                     std::string m_componentCode;
                     bool m_componentCodeHasBeenSet;
 
                     /**
-                     * Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Availability zone ID: The availability zone ID where the resource is located.
                      */
                     std::string m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Region ID: Resource region ID
                      */
                     std::string m_regionIds;
                     bool m_regionIdsHasBeenSet;
 
                     /**
-                     * Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Project ID: Project ID of the resource
                      */
                     std::string m_projectIds;
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+                     * Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
                      */
                     std::string m_payModes;
                     bool m_payModesHasBeenSet;
 
                     /**
-                     * Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type. Query transaction type (please use transaction type code as input parameter).
                      */
                     std::string m_actionTypes;
                     bool m_actionTypesHasBeenSet;
 
                     /**
-                     * Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+                     * Cost allocation tag key
                      */
                     std::string m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+                     * Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
                      */
                     std::string m_feeType;
                     bool m_feeTypeHasBeenSet;
 
                     /**
-                     * User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+                     * User UIN for querying cost analysis data
                      */
                     std::string m_payerUins;
                     bool m_payerUinsHasBeenSet;
 
                     /**
-                     * User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+                     * User UIN for using resources
                      */
                     std::string m_ownerUins;
                     bool m_ownerUinsHasBeenSet;
 
                     /**
-                     * Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * Consumption type. Query consumption type (please use consumption type code input parameter).
                      */
                     std::string m_consumptionTypes;
                     bool m_consumptionTypesHasBeenSet;

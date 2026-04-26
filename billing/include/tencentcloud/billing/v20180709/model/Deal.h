@@ -649,6 +649,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Availability zone Id corresponding to the order
+                     * @return ZoneCode Availability zone Id corresponding to the order
+                     * 
+                     */
+                    std::string GetZoneCode() const;
+
+                    /**
+                     * 设置Availability zone Id corresponding to the order
+                     * @param _zoneCode Availability zone Id corresponding to the order
+                     * 
+                     */
+                    void SetZoneCode(const std::string& _zoneCode);
+
+                    /**
+                     * 判断参数 ZoneCode 是否已赋值
+                     * @return ZoneCode 是否已赋值
+                     * 
+                     */
+                    bool ZoneCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -820,6 +841,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Availability zone Id corresponding to the order
+                     */
+                    std::string m_zoneCode;
+                    bool m_zoneCodeHasBeenSet;
 
                 };
             }

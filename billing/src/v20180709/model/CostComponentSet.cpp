@@ -32,7 +32,9 @@ CostComponentSet::CostComponentSet() :
     m_realCostHasBeenSet(false),
     m_voucherPayAmountHasBeenSet(false),
     m_cashPayAmountHasBeenSet(false),
-    m_incentivePayAmountHasBeenSet(false)
+    m_incentivePayAmountHasBeenSet(false),
+    m_taxHasBeenSet(false),
+    m_taxRateHasBeenSet(false)
 {
 }
 
@@ -161,6 +163,26 @@ CoreInternalOutcome CostComponentSet::Deserialize(const rapidjson::Value &value)
         m_incentivePayAmountHasBeenSet = true;
     }
 
+    if (value.HasMember("Tax") && !value["Tax"].IsNull())
+    {
+        if (!value["Tax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CostComponentSet.Tax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tax = string(value["Tax"].GetString());
+        m_taxHasBeenSet = true;
+    }
+
+    if (value.HasMember("TaxRate") && !value["TaxRate"].IsNull())
+    {
+        if (!value["TaxRate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CostComponentSet.TaxRate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_taxRate = string(value["TaxRate"].GetString());
+        m_taxRateHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -262,6 +284,22 @@ void CostComponentSet::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "IncentivePayAmount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_incentivePayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tax.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaxRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taxRate.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -457,5 +495,37 @@ void CostComponentSet::SetIncentivePayAmount(const string& _incentivePayAmount)
 bool CostComponentSet::IncentivePayAmountHasBeenSet() const
 {
     return m_incentivePayAmountHasBeenSet;
+}
+
+string CostComponentSet::GetTax() const
+{
+    return m_tax;
+}
+
+void CostComponentSet::SetTax(const string& _tax)
+{
+    m_tax = _tax;
+    m_taxHasBeenSet = true;
+}
+
+bool CostComponentSet::TaxHasBeenSet() const
+{
+    return m_taxHasBeenSet;
+}
+
+string CostComponentSet::GetTaxRate() const
+{
+    return m_taxRate;
+}
+
+void CostComponentSet::SetTaxRate(const string& _taxRate)
+{
+    m_taxRate = _taxRate;
+    m_taxRateHasBeenSet = true;
+}
+
+bool CostComponentSet::TaxRateHasBeenSet() const
+{
+    return m_taxRateHasBeenSet;
 }
 

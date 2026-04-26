@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This API is used to view UIN exception adjustment details.
+                * Abnormal adjustment details of UIN
                 */
                 class AdjustInfoDetail : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
-                     * @return PayerUin Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+                     * 获取Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+                     * @return PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
                      * 
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
-                     * @param _payerUin Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+                     * 设置Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+                     * @param _payerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
                      * 
                      */
                     void SetPayerUin(const std::string& _payerUin);
@@ -76,23 +68,15 @@ Example value: 909619400.
                     bool PayerUinHasBeenSet() const;
 
                     /**
-                     * 获取Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
-                     * @return Month Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+                     * 获取Bill month, formatted as yyyy-MM.
+                     * @return Month Bill month, formatted as yyyy-MM.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
-                     * @param _month Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+                     * 设置Bill month, formatted as yyyy-MM.
+                     * @param _month Bill month, formatted as yyyy-MM.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -105,35 +89,27 @@ Example value: 2024-10.
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
-                     * @return AdjustType Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+                     * 获取Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+                     * @return AdjustType Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
                      * 
                      */
                     std::string GetAdjustType() const;
 
                     /**
-                     * 设置Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
-                     * @param _adjustType Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+                     * 设置Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+                     * @param _adjustType Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
                      * 
                      */
                     void SetAdjustType(const std::string& _adjustType);
@@ -146,23 +122,15 @@ Example value: manualAdjustment.
                     bool AdjustTypeHasBeenSet() const;
 
                     /**
-                     * 获取Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
-                     * @return AdjustNum Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+                     * 获取Adjustment Number
+                     * @return AdjustNum Adjustment Number
                      * 
                      */
                     std::string GetAdjustNum() const;
 
                     /**
-                     * 设置Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
-                     * @param _adjustNum Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+                     * 设置Adjustment Number
+                     * @param _adjustNum Adjustment Number
                      * 
                      */
                     void SetAdjustNum(const std::string& _adjustNum);
@@ -175,23 +143,15 @@ Example value: 2220726096135.
                     bool AdjustNumHasBeenSet() const;
 
                     /**
-                     * 获取Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
-                     * @return AdjustCompletionTime Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+                     * 获取Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+                     * @return AdjustCompletionTime Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetAdjustCompletionTime() const;
 
                     /**
-                     * 设置Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
-                     * @param _adjustCompletionTime Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+                     * 设置Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+                     * @param _adjustCompletionTime Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetAdjustCompletionTime(const std::string& _adjustCompletionTime);
@@ -204,23 +164,15 @@ Example value: 2022-12-02 12:39:04.
                     bool AdjustCompletionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
-                     * @return AdjustAmount Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+                     * 获取Adjustment Amount
+                     * @return AdjustAmount Adjustment Amount
                      * 
                      */
                     double GetAdjustAmount() const;
 
                     /**
-                     * 设置Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
-                     * @param _adjustAmount Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+                     * 设置Adjustment Amount
+                     * @param _adjustAmount Adjustment Amount
                      * 
                      */
                     void SetAdjustAmount(const double& _adjustAmount);
@@ -235,52 +187,40 @@ Example value: 333.00000000.
                 private:
 
                     /**
-                     * Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+                     * Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;
 
                     /**
-                     * Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+                     * Bill month, formatted as yyyy-MM.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+                     * Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
                      */
                     std::string m_adjustType;
                     bool m_adjustTypeHasBeenSet;
 
                     /**
-                     * Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+                     * Adjustment Number
                      */
                     std::string m_adjustNum;
                     bool m_adjustNumHasBeenSet;
 
                     /**
-                     * Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+                     * Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_adjustCompletionTime;
                     bool m_adjustCompletionTimeHasBeenSet;
 
                     /**
-                     * Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+                     * Adjustment Amount
                      */
                     double m_adjustAmount;
                     bool m_adjustAmountHasBeenSet;

@@ -61,8 +61,8 @@ namespace TencentCloud
                     bool ReadyHasBeenSet() const;
 
                     /**
-                     * 获取Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Consumption details
+                     * @return Total Consumption details
                      * 
                      */
                     ConsumptionSummaryTotal GetTotal() const;
@@ -105,8 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecordNumHasBeenSet() const;
 
                     /**
-                     * 获取Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource consumption details
+                     * @return Data Resource consumption details
                      * 
                      */
                     std::vector<ConsumptionResourceSummaryDataItem> GetData() const;
@@ -127,7 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_readyHasBeenSet;
 
                     /**
-                     * Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Consumption details
                      */
                     ConsumptionSummaryTotal m_total;
                     bool m_totalHasBeenSet;
@@ -146,7 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_recordNumHasBeenSet;
 
                     /**
-                     * Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Resource consumption details
                      */
                     std::vector<ConsumptionResourceSummaryDataItem> m_data;
                     bool m_dataHasBeenSet;

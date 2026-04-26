@@ -29,7 +29,9 @@ ConsumptionProjectSummaryDataItem::ConsumptionProjectSummaryDataItem() :
     m_cashPayAmountHasBeenSet(false),
     m_incentivePayAmountHasBeenSet(false),
     m_voucherPayAmountHasBeenSet(false),
-    m_transferPayAmountHasBeenSet(false)
+    m_transferPayAmountHasBeenSet(false),
+    m_taxHasBeenSet(false),
+    m_amountBeforeTaxHasBeenSet(false)
 {
 }
 
@@ -145,6 +147,26 @@ CoreInternalOutcome ConsumptionProjectSummaryDataItem::Deserialize(const rapidjs
         m_transferPayAmountHasBeenSet = true;
     }
 
+    if (value.HasMember("Tax") && !value["Tax"].IsNull())
+    {
+        if (!value["Tax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumptionProjectSummaryDataItem.Tax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tax = string(value["Tax"].GetString());
+        m_taxHasBeenSet = true;
+    }
+
+    if (value.HasMember("AmountBeforeTax") && !value["AmountBeforeTax"].IsNull())
+    {
+        if (!value["AmountBeforeTax"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumptionProjectSummaryDataItem.AmountBeforeTax` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_amountBeforeTax = string(value["AmountBeforeTax"].GetString());
+        m_amountBeforeTaxHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -230,6 +252,22 @@ void ConsumptionProjectSummaryDataItem::ToJsonObject(rapidjson::Value &value, ra
         string key = "TransferPayAmount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_transferPayAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tax.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_amountBeforeTaxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AmountBeforeTax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_amountBeforeTax.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -377,5 +415,37 @@ void ConsumptionProjectSummaryDataItem::SetTransferPayAmount(const string& _tran
 bool ConsumptionProjectSummaryDataItem::TransferPayAmountHasBeenSet() const
 {
     return m_transferPayAmountHasBeenSet;
+}
+
+string ConsumptionProjectSummaryDataItem::GetTax() const
+{
+    return m_tax;
+}
+
+void ConsumptionProjectSummaryDataItem::SetTax(const string& _tax)
+{
+    m_tax = _tax;
+    m_taxHasBeenSet = true;
+}
+
+bool ConsumptionProjectSummaryDataItem::TaxHasBeenSet() const
+{
+    return m_taxHasBeenSet;
+}
+
+string ConsumptionProjectSummaryDataItem::GetAmountBeforeTax() const
+{
+    return m_amountBeforeTax;
+}
+
+void ConsumptionProjectSummaryDataItem::SetAmountBeforeTax(const string& _amountBeforeTax)
+{
+    m_amountBeforeTax = _amountBeforeTax;
+    m_amountBeforeTaxHasBeenSet = true;
+}
+
+bool ConsumptionProjectSummaryDataItem::AmountBeforeTaxHasBeenSet() const
+{
+    return m_amountBeforeTaxHasBeenSet;
 }
 

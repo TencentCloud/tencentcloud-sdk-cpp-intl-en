@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details list
-                     * @return DetailSet Details list
+                     * 获取Detail list
+                     * @return DetailSet Detail list
                      * 
                      */
                     std::vector<BillDetail> GetDetailSet() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool DetailSetHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total record count, cached once every 24 hours, may be less than the actual total record count
+                     * @return Total Total record count, cached once every 24 hours, may be less than the actual total record count
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -75,8 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Context Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Context information of this request can be used in the request parameter of the next request to accelerate query speed.
+                     * @return Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
                      * 
                      */
                     std::string GetContext() const;
@@ -91,20 +89,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Details list
+                     * Detail list
                      */
                     std::vector<BillDetail> m_detailSet;
                     bool m_detailSetHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total record count, cached once every 24 hours, may be less than the actual total record count
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Context information of this request can be used in the request parameter of the next request to accelerate query speed.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;
