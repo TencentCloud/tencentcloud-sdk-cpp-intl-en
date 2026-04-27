@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the channel for which you want to configure an event
-                     * @return ChannelId ID of the channel for which you want to configure an event
+                     * 获取ID of the channel for which you want to configure an event.
+                     * @return ChannelId ID of the channel for which you want to configure an event.
                      * 
                      */
                     std::string GetChannelId() const;
 
                     /**
-                     * 设置ID of the channel for which you want to configure an event
-                     * @param _channelId ID of the channel for which you want to configure an event
+                     * 设置ID of the channel for which you want to configure an event.
+                     * @param _channelId ID of the channel for which you want to configure an event.
                      * 
                      */
                     void SetChannelId(const std::string& _channelId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ChannelIdHasBeenSet() const;
 
                     /**
-                     * 获取Event configuration
-                     * @return Plan Event configuration
+                     * 获取Event configuration.
+                     * @return Plan Event configuration.
                      * 
                      */
                     PlanReq GetPlan() const;
 
                     /**
-                     * 设置Event configuration
-                     * @param _plan Event configuration
+                     * 设置Event configuration.
+                     * @param _plan Event configuration.
                      * 
                      */
                     void SetPlan(const PlanReq& _plan);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the channel for which you want to configure an event
+                     * ID of the channel for which you want to configure an event.
                      */
                     std::string m_channelId;
                     bool m_channelIdHasBeenSet;
 
                     /**
-                     * Event configuration
+                     * Event configuration.
                      */
                     PlanReq m_plan;
                     bool m_planHasBeenSet;

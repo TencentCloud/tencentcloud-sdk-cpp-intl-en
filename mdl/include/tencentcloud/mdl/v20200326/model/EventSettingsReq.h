@@ -75,15 +75,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
-                     * @return InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+                     * 获取ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
+                     * @return InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
                      * 
                      */
                     std::string GetInputAttachment() const;
 
                     /**
-                     * 设置ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
-                     * @param _inputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+                     * 设置ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
+                     * @param _inputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
                      * 
                      */
                     void SetInputAttachment(const std::string& _inputAttachment);
@@ -356,7 +356,7 @@ namespace TencentCloud
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+                     * ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
                      */
                     std::string m_inputAttachment;
                     bool m_inputAttachmentHasBeenSet;

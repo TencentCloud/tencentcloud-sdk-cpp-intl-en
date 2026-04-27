@@ -790,6 +790,56 @@ TcsasClient::CreateMNPDomainACLOutcomeCallable TcsasClient::CreateMNPDomainACLCa
     return prom->get_future();
 }
 
+TcsasClient::CreateMNPSecretKeyOutcome TcsasClient::CreateMNPSecretKey(const CreateMNPSecretKeyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPSecretKey");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPSecretKeyResponse rsp = CreateMNPSecretKeyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPSecretKeyOutcome(rsp);
+        else
+            return CreateMNPSecretKeyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPSecretKeyOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateMNPSecretKeyAsync(const CreateMNPSecretKeyRequest& request, const CreateMNPSecretKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMNPSecretKeyRequest&;
+    using Resp = CreateMNPSecretKeyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPSecretKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateMNPSecretKeyOutcomeCallable TcsasClient::CreateMNPSecretKeyCallable(const CreateMNPSecretKeyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMNPSecretKeyOutcome>>();
+    CreateMNPSecretKeyAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPSecretKeyRequest&,
+        CreateMNPSecretKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::CreateMNPSensitiveAPIPermissionApproval(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMNPSensitiveAPIPermissionApproval");

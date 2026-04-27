@@ -53,6 +53,8 @@
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPSecretKeyRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPSecretKeyResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPVersionRequest.h>
@@ -322,6 +324,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMNPDomainACLResponse> CreateMNPDomainACLOutcome;
                 typedef std::future<CreateMNPDomainACLOutcome> CreateMNPDomainACLOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPDomainACLRequest&, CreateMNPDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPDomainACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPSecretKeyResponse> CreateMNPSecretKeyOutcome;
+                typedef std::future<CreateMNPSecretKeyOutcome> CreateMNPSecretKeyOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateMNPSecretKeyRequest&, CreateMNPSecretKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPSecretKeyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNPSensitiveAPIPermissionApprovalResponse> CreateMNPSensitiveAPIPermissionApprovalOutcome;
                 typedef std::future<CreateMNPSensitiveAPIPermissionApprovalOutcome> CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPSensitiveAPIPermissionApprovalRequest&, CreateMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPSensitiveAPIPermissionApprovalAsyncHandler;
@@ -774,6 +779,15 @@ namespace TencentCloud
                 CreateMNPDomainACLOutcome CreateMNPDomainACL(const Model::CreateMNPDomainACLRequest &request);
                 void CreateMNPDomainACLAsync(const Model::CreateMNPDomainACLRequest& request, const CreateMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMNPDomainACLOutcomeCallable CreateMNPDomainACLCallable(const Model::CreateMNPDomainACLRequest& request);
+
+                /**
+                 *This API is used to create a secret key for a mini program or mini game.
+                 * @param req CreateMNPSecretKeyRequest
+                 * @return CreateMNPSecretKeyOutcome
+                 */
+                CreateMNPSecretKeyOutcome CreateMNPSecretKey(const Model::CreateMNPSecretKeyRequest &request);
+                void CreateMNPSecretKeyAsync(const Model::CreateMNPSecretKeyRequest& request, const CreateMNPSecretKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPSecretKeyOutcomeCallable CreateMNPSecretKeyCallable(const Model::CreateMNPSecretKeyRequest& request);
 
                 /**
                  *This API is used to create a permission request to allow a mini program to call sensitive APIs.
