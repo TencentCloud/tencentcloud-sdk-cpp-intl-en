@@ -75,10 +75,10 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
                     /**
                      * 获取List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
                      * @return Targets List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetTargets() const;
@@ -86,10 +86,10 @@ Note: the number of submitted tasks is limited by the quota of a billing package
                     /**
                      * 设置List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
                      * @param _targets List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
                      * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
@@ -262,7 +262,7 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
                     /**
                      * List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

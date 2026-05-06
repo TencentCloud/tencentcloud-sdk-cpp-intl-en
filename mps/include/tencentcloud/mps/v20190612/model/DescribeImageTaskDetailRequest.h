@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image processing task ID.
-                     * @return TaskId Image processing task ID.
+                     * 获取<p>ID of the image processing task.</p>
+                     * @return TaskId <p>ID of the image processing task.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Image processing task ID.
-                     * @param _taskId Image processing task ID.
+                     * 设置<p>ID of the image processing task.</p>
+                     * @param _taskId <p>ID of the image processing task.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image processing task ID.
+                     * <p>ID of the image processing task.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

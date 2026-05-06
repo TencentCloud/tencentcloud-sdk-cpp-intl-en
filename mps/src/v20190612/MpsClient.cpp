@@ -740,6 +740,56 @@ MpsClient::CreateProcessImageTemplateOutcomeCallable MpsClient::CreateProcessIma
     return prom->get_future();
 }
 
+MpsClient::CreateProjectOutcome MpsClient::CreateProject(const CreateProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateProjectResponse rsp = CreateProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateProjectOutcome(rsp);
+        else
+            return CreateProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateProjectOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::CreateProjectAsync(const CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateProjectRequest&;
+    using Resp = CreateProjectResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::CreateProjectOutcomeCallable MpsClient::CreateProjectCallable(const CreateProjectRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateProjectOutcome>>();
+    CreateProjectAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const CreateProjectRequest&,
+        CreateProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MpsClient::CreateQualityControlTemplateOutcome MpsClient::CreateQualityControlTemplate(const CreateQualityControlTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateQualityControlTemplate");
@@ -1840,6 +1890,56 @@ MpsClient::DeleteProcessImageTemplateOutcomeCallable MpsClient::DeleteProcessIma
     return prom->get_future();
 }
 
+MpsClient::DeleteProjectOutcome MpsClient::DeleteProject(const DeleteProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteProjectResponse rsp = DeleteProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteProjectOutcome(rsp);
+        else
+            return DeleteProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteProjectOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DeleteProjectAsync(const DeleteProjectRequest& request, const DeleteProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteProjectRequest&;
+    using Resp = DeleteProjectResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DeleteProjectOutcomeCallable MpsClient::DeleteProjectCallable(const DeleteProjectRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteProjectOutcome>>();
+    DeleteProjectAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DeleteProjectRequest&,
+        DeleteProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MpsClient::DeleteQualityControlTemplateOutcome MpsClient::DeleteQualityControlTemplate(const DeleteQualityControlTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteQualityControlTemplate");
@@ -2932,6 +3032,56 @@ MpsClient::DescribeContentReviewTemplatesOutcomeCallable MpsClient::DescribeCont
         const MpsClient*,
         const DescribeContentReviewTemplatesRequest&,
         DescribeContentReviewTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::DescribeDesignTaskOutcome MpsClient::DescribeDesignTask(const DescribeDesignTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDesignTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDesignTaskResponse rsp = DescribeDesignTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDesignTaskOutcome(rsp);
+        else
+            return DescribeDesignTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDesignTaskOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DescribeDesignTaskAsync(const DescribeDesignTaskRequest& request, const DescribeDesignTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDesignTaskRequest&;
+    using Resp = DescribeDesignTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDesignTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DescribeDesignTaskOutcomeCallable MpsClient::DescribeDesignTaskCallable(const DescribeDesignTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDesignTaskOutcome>>();
+    DescribeDesignTaskAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DescribeDesignTaskRequest&,
+        DescribeDesignTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

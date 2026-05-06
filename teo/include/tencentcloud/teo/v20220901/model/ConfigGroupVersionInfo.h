@@ -110,23 +110,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
-                     * @return GroupType Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+                     * 获取Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+                     * @return GroupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
                      * 
                      */
                     std::string GetGroupType() const;
 
                     /**
-                     * 设置Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
-                     * @param _groupType Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+                     * 设置Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+                     * @param _groupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
                      * 
                      */
                     void SetGroupType(const std::string& _groupType);
@@ -234,9 +226,7 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+                     * Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
                      */
                     std::string m_groupType;
                     bool m_groupTypeHasBeenSet;

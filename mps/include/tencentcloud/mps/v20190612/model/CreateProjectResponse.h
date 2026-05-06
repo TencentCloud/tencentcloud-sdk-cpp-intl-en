@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_DESCRIBEUSAGEDATARESPONSE_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_DESCRIBEUSAGEDATARESPONSE_H_
+#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_CREATEPROJECTRESPONSE_H_
+#define TENCENTCLOUD_MPS_V20190612_MODEL_CREATEPROJECTRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/mps/v20190612/model/TaskStatData.h>
 
 
 namespace TencentCloud
@@ -33,38 +32,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeUsageData response structure.
+                * CreateProject response structure.
                 */
-                class DescribeUsageDataResponse : public AbstractModel
+                class CreateProjectResponse : public AbstractModel
                 {
                 public:
-                    DescribeUsageDataResponse();
-                    ~DescribeUsageDataResponse() = default;
+                    CreateProjectResponse();
+                    ~CreateProjectResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取<p>MPS statistical data overview, which displays an overview and detailed data of the queried task.</p>
-                     * @return Data <p>MPS statistical data overview, which displays an overview and detailed data of the queried task.</p>
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectId <p>Project ID.</p>
                      * 
                      */
-                    std::vector<TaskStatData> GetData() const;
+                    std::string GetProjectId() const;
 
                     /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
                      * 
                      */
-                    bool DataHasBeenSet() const;
+                    bool ProjectIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * <p>MPS statistical data overview, which displays an overview and detailed data of the queried task.</p>
+                     * <p>Project ID.</p>
                      */
-                    std::vector<TaskStatData> m_data;
-                    bool m_dataHasBeenSet;
+                    std::string m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                 };
             }
@@ -72,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_DESCRIBEUSAGEDATARESPONSE_H_
+#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_CREATEPROJECTRESPONSE_H_

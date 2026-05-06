@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/ImageProcessTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ImageTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/MediaInputInfo.h>
 
 
 namespace TencentCloud
@@ -45,11 +47,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+                     * 获取<p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskType Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+                     * @return TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,16 +63,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Status Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatus() const;
@@ -85,8 +79,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code when the task fails.
-                     * @return ErrCode Error code when the task fails.
+                     * 获取<p>Error code for task failures.</p>
+                     * @return ErrCode <p>Error code for task failures.</p>
                      * 
                      */
                     int64_t GetErrCode() const;
@@ -99,8 +93,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取<p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+                     * @return ErrMsg <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      * 
                      */
                     std::string GetErrMsg() const;
@@ -113,8 +107,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ErrMsgHasBeenSet() const;
 
                     /**
-                     * 获取Task exception message.
-                     * @return Message Task exception message.
+                     * 获取<p>Task exception message.</p>
+                     * @return Message <p>Task exception message.</p>
                      * 
                      */
                     std::string GetMessage() const;
@@ -127,10 +121,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ImageProcessTaskResultSet Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ImageProcessTaskResult> GetImageProcessTaskResultSet() const;
@@ -143,10 +137,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ImageProcessTaskResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CreateTime Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -159,10 +153,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFinishTime() const;
@@ -174,64 +168,120 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool FinishTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Unique template identifier.</p>
+                     * @return Definition <p>Unique template identifier.</p>
+                     * 
+                     */
+                    int64_t GetDefinition() const;
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     * 
+                     */
+                    bool DefinitionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task initiation parameter.</p>
+                     * @return ImageTask <p>Task initiation parameter.</p>
+                     * 
+                     */
+                    ImageTaskInput GetImageTask() const;
+
+                    /**
+                     * 判断参数 ImageTask 是否已赋值
+                     * @return ImageTask 是否已赋值
+                     * 
+                     */
+                    bool ImageTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image task input information.</p>
+                     * @return InputInfo <p>Image task input information.</p>
+                     * 
+                     */
+                    MediaInputInfo GetInputInfo() const;
+
+                    /**
+                     * 判断参数 InputInfo 是否已赋值
+                     * @return InputInfo 是否已赋值
+                     * 
+                     */
+                    bool InputInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Currently, the valid values include:
-<li>WorkflowTask: workflow processing task.</li>
+                     * <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task status. Valid values:
-<Li>WAITING: waiting.</li>
-<Li>PROCESSING: processing.</li>
-<li>FINISH: completed.</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code when the task fails.
+                     * <p>Error code for task failures.</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      */
                     std::string m_errMsg;
                     bool m_errMsgHasBeenSet;
 
                     /**
-                     * Task exception message.
+                     * <p>Task exception message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Execution status and results of the image processing task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Execution status and result of the image processing task.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ImageProcessTaskResult> m_imageProcessTaskResultSet;
                     bool m_imageProcessTaskResultSetHasBeenSet;
 
                     /**
-                     * Task creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
+
+                    /**
+                     * <p>Unique template identifier.</p>
+                     */
+                    int64_t m_definition;
+                    bool m_definitionHasBeenSet;
+
+                    /**
+                     * <p>Task initiation parameter.</p>
+                     */
+                    ImageTaskInput m_imageTask;
+                    bool m_imageTaskHasBeenSet;
+
+                    /**
+                     * <p>Image task input information.</p>
+                     */
+                    MediaInputInfo m_inputInfo;
+                    bool m_inputInfoHasBeenSet;
 
                 };
             }

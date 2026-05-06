@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_ORGANIZATION_V20181225_MODEL_DELETEORGANIZATIONNODESREQUEST_H_
-#define TENCENTCLOUD_ORGANIZATION_V20181225_MODEL_DELETEORGANIZATIONNODESREQUEST_H_
+#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTREQUEST_H_
+#define TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,51 +25,51 @@
 
 namespace TencentCloud
 {
-    namespace Organization
+    namespace Mps
     {
-        namespace V20181225
+        namespace V20190612
         {
             namespace Model
             {
                 /**
-                * DeleteOrganizationNodes request structure.
+                * DeleteProject request structure.
                 */
-                class DeleteOrganizationNodesRequest : public AbstractModel
+                class DeleteProjectRequest : public AbstractModel
                 {
                 public:
-                    DeleteOrganizationNodesRequest();
-                    ~DeleteOrganizationNodesRequest() = default;
+                    DeleteProjectRequest();
+                    ~DeleteProjectRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Organizational unit ID list.
-                     * @return NodeIds Organizational unit ID list.
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectId <p>Project ID.</p>
                      * 
                      */
-                    std::vector<uint64_t> GetNodeIds() const;
+                    std::string GetProjectId() const;
 
                     /**
-                     * 设置Organizational unit ID list.
-                     * @param _nodeIds Organizational unit ID list.
+                     * 设置<p>Project ID.</p>
+                     * @param _projectId <p>Project ID.</p>
                      * 
                      */
-                    void SetNodeIds(const std::vector<uint64_t>& _nodeIds);
+                    void SetProjectId(const std::string& _projectId);
 
                     /**
-                     * 判断参数 NodeIds 是否已赋值
-                     * @return NodeIds 是否已赋值
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
                      * 
                      */
-                    bool NodeIdsHasBeenSet() const;
+                    bool ProjectIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Organizational unit ID list.
+                     * <p>Project ID.</p>
                      */
-                    std::vector<uint64_t> m_nodeIds;
-                    bool m_nodeIdsHasBeenSet;
+                    std::string m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                 };
             }
@@ -77,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_ORGANIZATION_V20181225_MODEL_DELETEORGANIZATIONNODESREQUEST_H_
+#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTREQUEST_H_

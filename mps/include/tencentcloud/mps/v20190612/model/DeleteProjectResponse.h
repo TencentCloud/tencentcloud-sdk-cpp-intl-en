@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_BATCHPROCESSMEDIARESPONSE_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_BATCHPROCESSMEDIARESPONSE_H_
+#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTRESPONSE_H_
+#define TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,18 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * BatchProcessMedia response structure.
+                * DeleteProject response structure.
                 */
-                class BatchProcessMediaResponse : public AbstractModel
+                class DeleteProjectResponse : public AbstractModel
                 {
                 public:
-                    BatchProcessMediaResponse();
-                    ~BatchProcessMediaResponse() = default;
+                    DeleteProjectResponse();
+                    ~DeleteProjectResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取<p>Task ID.</p>
-                     * @return TaskId <p>Task ID.</p>
-                     * 
-                     */
-                    std::string GetTaskId() const;
-
-                    /**
-                     * 判断参数 TaskId 是否已赋值
-                     * @return TaskId 是否已赋值
-                     * 
-                     */
-                    bool TaskIdHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * <p>Task ID.</p>
-                     */
-                    std::string m_taskId;
-                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -71,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_BATCHPROCESSMEDIARESPONSE_H_
+#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_DELETEPROJECTRESPONSE_H_

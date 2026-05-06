@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取Zone ID
+                     * @return ZoneId Zone ID
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置Zone ID
+                     * @param _zoneId Zone ID
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -211,7 +211,7 @@ Specifies the default value as direct when left blank.
                 private:
 
                     /**
-                     * Zone ID.
+                     * Zone ID
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;

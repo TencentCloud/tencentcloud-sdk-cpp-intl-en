@@ -51,6 +51,8 @@
 #include <tencentcloud/mps/v20190612/model/CreatePersonSampleResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateProcessImageTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateProcessImageTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/CreateProjectRequest.h>
+#include <tencentcloud/mps/v20190612/model/CreateProjectResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateQualityControlTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateQualityControlTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateSampleSnapshotTemplateRequest.h>
@@ -95,6 +97,8 @@
 #include <tencentcloud/mps/v20190612/model/DeletePersonSampleResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteProcessImageTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteProcessImageTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/DeleteProjectRequest.h>
+#include <tencentcloud/mps/v20190612/model/DeleteProjectResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteQualityControlTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteQualityControlTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteSampleSnapshotTemplateRequest.h>
@@ -139,6 +143,8 @@
 #include <tencentcloud/mps/v20190612/model/DescribeBlindWatermarkTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeContentReviewTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeContentReviewTemplatesResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeDesignTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeDesignTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeImageSpriteTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeImageSpriteTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeImageTaskDetailRequest.h>
@@ -313,6 +319,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateProcessImageTemplateResponse> CreateProcessImageTemplateOutcome;
                 typedef std::future<CreateProcessImageTemplateOutcome> CreateProcessImageTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateProcessImageTemplateRequest&, CreateProcessImageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProcessImageTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProjectResponse> CreateProjectOutcome;
+                typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::CreateProjectRequest&, CreateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateQualityControlTemplateResponse> CreateQualityControlTemplateOutcome;
                 typedef std::future<CreateQualityControlTemplateOutcome> CreateQualityControlTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateQualityControlTemplateRequest&, CreateQualityControlTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateQualityControlTemplateAsyncHandler;
@@ -379,6 +388,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteProcessImageTemplateResponse> DeleteProcessImageTemplateOutcome;
                 typedef std::future<DeleteProcessImageTemplateOutcome> DeleteProcessImageTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteProcessImageTemplateRequest&, DeleteProcessImageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProcessImageTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteProjectResponse> DeleteProjectOutcome;
+                typedef std::future<DeleteProjectOutcome> DeleteProjectOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DeleteProjectRequest&, DeleteProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteQualityControlTemplateResponse> DeleteQualityControlTemplateOutcome;
                 typedef std::future<DeleteQualityControlTemplateOutcome> DeleteQualityControlTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteQualityControlTemplateRequest&, DeleteQualityControlTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteQualityControlTemplateAsyncHandler;
@@ -445,6 +457,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplatesOutcome;
                 typedef std::future<DescribeContentReviewTemplatesOutcome> DescribeContentReviewTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeContentReviewTemplatesRequest&, DescribeContentReviewTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentReviewTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDesignTaskResponse> DescribeDesignTaskOutcome;
+                typedef std::future<DescribeDesignTaskOutcome> DescribeDesignTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeDesignTaskRequest&, DescribeDesignTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDesignTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImageSpriteTemplatesResponse> DescribeImageSpriteTemplatesOutcome;
                 typedef std::future<DescribeImageSpriteTemplatesOutcome> DescribeImageSpriteTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeImageSpriteTemplatesRequest&, DescribeImageSpriteTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageSpriteTemplatesAsyncHandler;
@@ -753,6 +768,15 @@ Smart subtitle (full speech, speech hotword, and speech translation)
                 CreateProcessImageTemplateOutcomeCallable CreateProcessImageTemplateCallable(const Model::CreateProcessImageTemplateRequest& request);
 
                 /**
+                 *This API is used to create an episode project.
+                 * @param req CreateProjectRequest
+                 * @return CreateProjectOutcome
+                 */
+                CreateProjectOutcome CreateProject(const Model::CreateProjectRequest &request);
+                void CreateProjectAsync(const Model::CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProjectOutcomeCallable CreateProjectCallable(const Model::CreateProjectRequest& request);
+
+                /**
                  *This API is used to create a media quality inspection template. Up to 50 templates can be created.
                  * @param req CreateQualityControlTemplateRequest
                  * @return CreateQualityControlTemplateOutcome
@@ -980,6 +1004,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteProcessImageTemplateOutcomeCallable DeleteProcessImageTemplateCallable(const Model::DeleteProcessImageTemplateRequest& request);
 
                 /**
+                 *This API is used to delete an episode project.
+                 * @param req DeleteProjectRequest
+                 * @return DeleteProjectOutcome
+                 */
+                DeleteProjectOutcome DeleteProject(const Model::DeleteProjectRequest &request);
+                void DeleteProjectAsync(const Model::DeleteProjectRequest& request, const DeleteProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProjectOutcomeCallable DeleteProjectCallable(const Model::DeleteProjectRequest& request);
+
+                /**
                  *This API is used to delete a media quality inspection template.
                  * @param req DeleteQualityControlTemplateRequest
                  * @return DeleteQualityControlTemplateOutcome
@@ -1176,6 +1209,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeContentReviewTemplatesOutcome DescribeContentReviewTemplates(const Model::DescribeContentReviewTemplatesRequest &request);
                 void DescribeContentReviewTemplatesAsync(const Model::DescribeContentReviewTemplatesRequest& request, const DescribeContentReviewTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeContentReviewTemplatesOutcomeCallable DescribeContentReviewTemplatesCallable(const Model::DescribeContentReviewTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the result of an asynchronous voice design task.
+                 * @param req DescribeDesignTaskRequest
+                 * @return DescribeDesignTaskOutcome
+                 */
+                DescribeDesignTaskOutcome DescribeDesignTask(const Model::DescribeDesignTaskRequest &request);
+                void DescribeDesignTaskAsync(const Model::DescribeDesignTaskRequest& request, const DescribeDesignTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDesignTaskOutcomeCallable DescribeDesignTaskCallable(const Model::DescribeDesignTaskRequest& request);
 
                 /**
                  *This API is used to query the list of image sprite generating templates and supports paged queries by filters.

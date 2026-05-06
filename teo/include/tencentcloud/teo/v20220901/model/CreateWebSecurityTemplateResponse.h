@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy template ID.
-                     * @return TemplateId Policy template ID.
+                     * 获取Policy template ID
+                     * @return TemplateId Policy template ID
                      * 
                      */
                     std::string GetTemplateId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy template ID.
+                     * Policy template ID
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

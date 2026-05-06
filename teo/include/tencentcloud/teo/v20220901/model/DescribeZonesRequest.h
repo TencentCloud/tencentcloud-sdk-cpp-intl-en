@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The page offset. Default value: 0
-                     * @return Offset The page offset. Default value: 0
+                     * 获取The page offset. Default value: 0.
+                     * @return Offset The page offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page offset. Default value: 0
-                     * @param _offset The page offset. Default value: 0
+                     * 设置The page offset. Default value: 0.
+                     * @param _offset The page offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -183,7 +183,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The page offset. Default value: 0
+                     * The page offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
