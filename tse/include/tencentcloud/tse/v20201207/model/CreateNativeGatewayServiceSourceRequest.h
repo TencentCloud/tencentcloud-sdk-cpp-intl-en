@@ -1,0 +1,244 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TSE_V20201207_MODEL_CREATENATIVEGATEWAYSERVICESOURCEREQUEST_H_
+#define TENCENTCLOUD_TSE_V20201207_MODEL_CREATENATIVEGATEWAYSERVICESOURCEREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tse/v20201207/model/SourceInfo.h>
+
+
+namespace TencentCloud
+{
+    namespace Tse
+    {
+        namespace V20201207
+        {
+            namespace Model
+            {
+                /**
+                * CreateNativeGatewayServiceSource request structure.
+                */
+                class CreateNativeGatewayServiceSourceRequest : public AbstractModel
+                {
+                public:
+                    CreateNativeGatewayServiceSourceRequest();
+                    ~CreateNativeGatewayServiceSourceRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Gateway instance ID
+                     * @return GatewayID Gateway instance ID
+                     * 
+                     */
+                    std::string GetGatewayID() const;
+
+                    /**
+                     * 设置Gateway instance ID
+                     * @param _gatewayID Gateway instance ID
+                     * 
+                     */
+                    void SetGatewayID(const std::string& _gatewayID);
+
+                    /**
+                     * 判断参数 GatewayID 是否已赋值
+                     * @return GatewayID 是否已赋值
+                     * 
+                     */
+                    bool GatewayIDHasBeenSet() const;
+
+                    /**
+                     * 获取Service source type. Reference value:
+- TSE-Nacos 
+- TSE-Consul 
+- TSE-PolarisMesh
+- Customer-Nacos
+- Customer-Consul
+- Customer-PolarisMesh
+- TSF
+- TKE
+- EKS
+- PrivateDNS
+- Customer-DNS
+                     * @return SourceType Service source type. Reference value:
+- TSE-Nacos 
+- TSE-Consul 
+- TSE-PolarisMesh
+- Customer-Nacos
+- Customer-Consul
+- Customer-PolarisMesh
+- TSF
+- TKE
+- EKS
+- PrivateDNS
+- Customer-DNS
+                     * 
+                     */
+                    std::string GetSourceType() const;
+
+                    /**
+                     * 设置Service source type. Reference value:
+- TSE-Nacos 
+- TSE-Consul 
+- TSE-PolarisMesh
+- Customer-Nacos
+- Customer-Consul
+- Customer-PolarisMesh
+- TSF
+- TKE
+- EKS
+- PrivateDNS
+- Customer-DNS
+                     * @param _sourceType Service source type. Reference value:
+- TSE-Nacos 
+- TSE-Consul 
+- TSE-PolarisMesh
+- Customer-Nacos
+- Customer-Consul
+- Customer-PolarisMesh
+- TSF
+- TKE
+- EKS
+- PrivateDNS
+- Customer-DNS
+                     * 
+                     */
+                    void SetSourceType(const std::string& _sourceType);
+
+                    /**
+                     * 判断参数 SourceType 是否已赋值
+                     * @return SourceType 是否已赋值
+                     * 
+                     */
+                    bool SourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID of the service source. Required when SourceType is not PrivateDNS or Customer-DNS.
+                     * @return SourceID Instance ID of the service source. Required when SourceType is not PrivateDNS or Customer-DNS.
+                     * 
+                     */
+                    std::string GetSourceID() const;
+
+                    /**
+                     * 设置Instance ID of the service source. Required when SourceType is not PrivateDNS or Customer-DNS.
+                     * @param _sourceID Instance ID of the service source. Required when SourceType is not PrivateDNS or Customer-DNS.
+                     * 
+                     */
+                    void SetSourceID(const std::string& _sourceID);
+
+                    /**
+                     * 判断参数 SourceID 是否已赋值
+                     * @return SourceID 是否已赋值
+                     * 
+                     */
+                    bool SourceIDHasBeenSet() const;
+
+                    /**
+                     * 获取Source instance name of the service. Required when SourceType is not PrivateDNS.
+                     * @return SourceName Source instance name of the service. Required when SourceType is not PrivateDNS.
+                     * 
+                     */
+                    std::string GetSourceName() const;
+
+                    /**
+                     * 设置Source instance name of the service. Required when SourceType is not PrivateDNS.
+                     * @param _sourceName Source instance name of the service. Required when SourceType is not PrivateDNS.
+                     * 
+                     */
+                    void SetSourceName(const std::string& _sourceName);
+
+                    /**
+                     * 判断参数 SourceName 是否已赋值
+                     * @return SourceName 是否已赋值
+                     * 
+                     */
+                    bool SourceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Service source instance additional information
+                     * @return SourceInfo Service source instance additional information
+                     * 
+                     */
+                    SourceInfo GetSourceInfo() const;
+
+                    /**
+                     * 设置Service source instance additional information
+                     * @param _sourceInfo Service source instance additional information
+                     * 
+                     */
+                    void SetSourceInfo(const SourceInfo& _sourceInfo);
+
+                    /**
+                     * 判断参数 SourceInfo 是否已赋值
+                     * @return SourceInfo 是否已赋值
+                     * 
+                     */
+                    bool SourceInfoHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Gateway instance ID
+                     */
+                    std::string m_gatewayID;
+                    bool m_gatewayIDHasBeenSet;
+
+                    /**
+                     * Service source type. Reference value:
+- TSE-Nacos 
+- TSE-Consul 
+- TSE-PolarisMesh
+- Customer-Nacos
+- Customer-Consul
+- Customer-PolarisMesh
+- TSF
+- TKE
+- EKS
+- PrivateDNS
+- Customer-DNS
+                     */
+                    std::string m_sourceType;
+                    bool m_sourceTypeHasBeenSet;
+
+                    /**
+                     * Instance ID of the service source. Required when SourceType is not PrivateDNS or Customer-DNS.
+                     */
+                    std::string m_sourceID;
+                    bool m_sourceIDHasBeenSet;
+
+                    /**
+                     * Source instance name of the service. Required when SourceType is not PrivateDNS.
+                     */
+                    std::string m_sourceName;
+                    bool m_sourceNameHasBeenSet;
+
+                    /**
+                     * Service source instance additional information
+                     */
+                    SourceInfo m_sourceInfo;
+                    bool m_sourceInfoHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TSE_V20201207_MODEL_CREATENATIVEGATEWAYSERVICESOURCEREQUEST_H_

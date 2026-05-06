@@ -1,0 +1,1140 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TSE_V20201207_TSECLIENT_H_
+#define TENCENTCLOUD_TSE_V20201207_TSECLIENT_H_
+
+#include <functional>
+#include <future>
+#include <tencentcloud/core/AbstractClient.h>
+#include <tencentcloud/core/Credential.h>
+#include <tencentcloud/core/profile/ClientProfile.h>
+#include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/tse/v20201207/model/BindAutoScalerResourceStrategyToGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/BindAutoScalerResourceStrategyToGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/CloseWafProtectionRequest.h>
+#include <tencentcloud/tse/v20201207/model/CloseWafProtectionResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateAutoScalerResourceStrategyRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateAutoScalerResourceStrategyResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayCanaryRuleRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayCanaryRuleResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayCertificateRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayCertificateResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayPublicNetworkRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayPublicNetworkResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayRouteRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayRouteResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayRouteRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayRouteRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayServiceRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayServiceResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayServiceRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateCloudNativeAPIGatewayServiceRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateGovernanceLaneGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateGovernanceLaneGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateNativeGatewayServerGroupRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateNativeGatewayServerGroupResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateNativeGatewayServiceSourceRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateNativeGatewayServiceSourceResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateOrModifyCloudNativeAPIGatewayCORSRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateOrModifyCloudNativeAPIGatewayCORSResponse.h>
+#include <tencentcloud/tse/v20201207/model/CreateWafDomainsRequest.h>
+#include <tencentcloud/tse/v20201207/model/CreateWafDomainsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteAutoScalerResourceStrategyRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteAutoScalerResourceStrategyResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCORSRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCORSResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCanaryRuleRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCanaryRuleResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCertificateRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayCertificateResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayPublicNetworkRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayPublicNetworkResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayRouteRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayRouteResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayRouteRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayRouteRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayServiceRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayServiceResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayServiceRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteCloudNativeAPIGatewayServiceRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteGovernanceLaneGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteGovernanceLaneGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteNativeGatewayServerGroupRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteNativeGatewayServerGroupResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteNativeGatewayServiceSourceRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteNativeGatewayServiceSourceResponse.h>
+#include <tencentcloud/tse/v20201207/model/DeleteWafDomainsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DeleteWafDomainsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeAutoScalerResourceStrategiesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeAutoScalerResourceStrategiesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeAutoScalerResourceStrategyBindingGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeAutoScalerResourceStrategyBindingGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCORSRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCORSResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCanaryRulesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCanaryRulesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCertificateDetailsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCertificateDetailsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCertificatesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayCertificatesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayConfigRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayConfigResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayInfoByIpRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayInfoByIpResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayNodesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayNodesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayPortsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayPortsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayRouteRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayRouteRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayRoutesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayRoutesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServiceRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServiceRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServicesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServicesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServicesLightRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayServicesLightResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayUpstreamRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewayUpstreamResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewaysRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeCloudNativeAPIGatewaysResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeGovernanceLaneGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeGovernanceLaneGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeNativeGatewayServerGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeNativeGatewayServerGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeNativeGatewayServiceSourcesRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeNativeGatewayServiceSourcesResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeOneCloudNativeAPIGatewayServiceRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeOneCloudNativeAPIGatewayServiceResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribePublicAddressConfigRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribePublicAddressConfigResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribePublicNetworkRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribePublicNetworkResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeUpstreamHealthCheckConfigRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeUpstreamHealthCheckConfigResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeWafDomainsRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeWafDomainsResponse.h>
+#include <tencentcloud/tse/v20201207/model/DescribeWafProtectionRequest.h>
+#include <tencentcloud/tse/v20201207/model/DescribeWafProtectionResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyAutoScalerResourceStrategyRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyAutoScalerResourceStrategyResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayCanaryRuleRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayCanaryRuleResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayCertificateRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayCertificateResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayRouteRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayRouteResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayRouteRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayRouteRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayServiceRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayServiceResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayServiceRateLimitRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyCloudNativeAPIGatewayServiceRateLimitResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyConsoleNetworkRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyConsoleNetworkResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyGovernanceLaneGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyGovernanceLaneGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNativeGatewayServerGroupRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNativeGatewayServerGroupResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNativeGatewayServiceSourceRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNativeGatewayServiceSourceResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNetworkAccessStrategyRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNetworkAccessStrategyResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNetworkBasicInfoRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyNetworkBasicInfoResponse.h>
+#include <tencentcloud/tse/v20201207/model/ModifyUpstreamNodeStatusRequest.h>
+#include <tencentcloud/tse/v20201207/model/ModifyUpstreamNodeStatusResponse.h>
+#include <tencentcloud/tse/v20201207/model/OpenWafProtectionRequest.h>
+#include <tencentcloud/tse/v20201207/model/OpenWafProtectionResponse.h>
+#include <tencentcloud/tse/v20201207/model/UnbindAutoScalerResourceStrategyFromGroupsRequest.h>
+#include <tencentcloud/tse/v20201207/model/UnbindAutoScalerResourceStrategyFromGroupsResponse.h>
+#include <tencentcloud/tse/v20201207/model/UpdateCloudNativeAPIGatewayCertificateInfoRequest.h>
+#include <tencentcloud/tse/v20201207/model/UpdateCloudNativeAPIGatewayCertificateInfoResponse.h>
+#include <tencentcloud/tse/v20201207/model/UpdateCloudNativeAPIGatewaySpecRequest.h>
+#include <tencentcloud/tse/v20201207/model/UpdateCloudNativeAPIGatewaySpecResponse.h>
+#include <tencentcloud/tse/v20201207/model/UpdateUpstreamHealthCheckConfigRequest.h>
+#include <tencentcloud/tse/v20201207/model/UpdateUpstreamHealthCheckConfigResponse.h>
+#include <tencentcloud/tse/v20201207/model/UpdateUpstreamTargetsRequest.h>
+#include <tencentcloud/tse/v20201207/model/UpdateUpstreamTargetsResponse.h>
+
+
+namespace TencentCloud
+{
+    namespace Tse
+    {
+        namespace V20201207
+        {
+            class TseClient : public AbstractClient
+            {
+            public:
+                TseClient(const Credential &credential, const std::string &region);
+                TseClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
+
+                typedef Outcome<Core::Error, Model::BindAutoScalerResourceStrategyToGroupsResponse> BindAutoScalerResourceStrategyToGroupsOutcome;
+                typedef std::future<BindAutoScalerResourceStrategyToGroupsOutcome> BindAutoScalerResourceStrategyToGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::BindAutoScalerResourceStrategyToGroupsRequest&, BindAutoScalerResourceStrategyToGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindAutoScalerResourceStrategyToGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseWafProtectionResponse> CloseWafProtectionOutcome;
+                typedef std::future<CloseWafProtectionOutcome> CloseWafProtectionOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CloseWafProtectionRequest&, CloseWafProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseWafProtectionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAutoScalerResourceStrategyResponse> CreateAutoScalerResourceStrategyOutcome;
+                typedef std::future<CreateAutoScalerResourceStrategyOutcome> CreateAutoScalerResourceStrategyOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateAutoScalerResourceStrategyRequest&, CreateAutoScalerResourceStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoScalerResourceStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayResponse> CreateCloudNativeAPIGatewayOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayOutcome> CreateCloudNativeAPIGatewayOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayRequest&, CreateCloudNativeAPIGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayCanaryRuleResponse> CreateCloudNativeAPIGatewayCanaryRuleOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayCanaryRuleOutcome> CreateCloudNativeAPIGatewayCanaryRuleOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayCanaryRuleRequest&, CreateCloudNativeAPIGatewayCanaryRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayCanaryRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayCertificateResponse> CreateCloudNativeAPIGatewayCertificateOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayCertificateOutcome> CreateCloudNativeAPIGatewayCertificateOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayCertificateRequest&, CreateCloudNativeAPIGatewayCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayPublicNetworkResponse> CreateCloudNativeAPIGatewayPublicNetworkOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayPublicNetworkOutcome> CreateCloudNativeAPIGatewayPublicNetworkOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayPublicNetworkRequest&, CreateCloudNativeAPIGatewayPublicNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayPublicNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayRouteResponse> CreateCloudNativeAPIGatewayRouteOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayRouteOutcome> CreateCloudNativeAPIGatewayRouteOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayRouteRequest&, CreateCloudNativeAPIGatewayRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayRouteAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayRouteRateLimitResponse> CreateCloudNativeAPIGatewayRouteRateLimitOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayRouteRateLimitOutcome> CreateCloudNativeAPIGatewayRouteRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayRouteRateLimitRequest&, CreateCloudNativeAPIGatewayRouteRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayRouteRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayServiceResponse> CreateCloudNativeAPIGatewayServiceOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayServiceOutcome> CreateCloudNativeAPIGatewayServiceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayServiceRequest&, CreateCloudNativeAPIGatewayServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudNativeAPIGatewayServiceRateLimitResponse> CreateCloudNativeAPIGatewayServiceRateLimitOutcome;
+                typedef std::future<CreateCloudNativeAPIGatewayServiceRateLimitOutcome> CreateCloudNativeAPIGatewayServiceRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateCloudNativeAPIGatewayServiceRateLimitRequest&, CreateCloudNativeAPIGatewayServiceRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudNativeAPIGatewayServiceRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateGovernanceLaneGroupsResponse> CreateGovernanceLaneGroupsOutcome;
+                typedef std::future<CreateGovernanceLaneGroupsOutcome> CreateGovernanceLaneGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateGovernanceLaneGroupsRequest&, CreateGovernanceLaneGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGovernanceLaneGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateNativeGatewayServerGroupResponse> CreateNativeGatewayServerGroupOutcome;
+                typedef std::future<CreateNativeGatewayServerGroupOutcome> CreateNativeGatewayServerGroupOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateNativeGatewayServerGroupRequest&, CreateNativeGatewayServerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNativeGatewayServerGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateNativeGatewayServiceSourceResponse> CreateNativeGatewayServiceSourceOutcome;
+                typedef std::future<CreateNativeGatewayServiceSourceOutcome> CreateNativeGatewayServiceSourceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateNativeGatewayServiceSourceRequest&, CreateNativeGatewayServiceSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNativeGatewayServiceSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateOrModifyCloudNativeAPIGatewayCORSResponse> CreateOrModifyCloudNativeAPIGatewayCORSOutcome;
+                typedef std::future<CreateOrModifyCloudNativeAPIGatewayCORSOutcome> CreateOrModifyCloudNativeAPIGatewayCORSOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateOrModifyCloudNativeAPIGatewayCORSRequest&, CreateOrModifyCloudNativeAPIGatewayCORSOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOrModifyCloudNativeAPIGatewayCORSAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateWafDomainsResponse> CreateWafDomainsOutcome;
+                typedef std::future<CreateWafDomainsOutcome> CreateWafDomainsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::CreateWafDomainsRequest&, CreateWafDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWafDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAutoScalerResourceStrategyResponse> DeleteAutoScalerResourceStrategyOutcome;
+                typedef std::future<DeleteAutoScalerResourceStrategyOutcome> DeleteAutoScalerResourceStrategyOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteAutoScalerResourceStrategyRequest&, DeleteAutoScalerResourceStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoScalerResourceStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayResponse> DeleteCloudNativeAPIGatewayOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayOutcome> DeleteCloudNativeAPIGatewayOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayRequest&, DeleteCloudNativeAPIGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayCORSResponse> DeleteCloudNativeAPIGatewayCORSOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayCORSOutcome> DeleteCloudNativeAPIGatewayCORSOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayCORSRequest&, DeleteCloudNativeAPIGatewayCORSOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayCORSAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayCanaryRuleResponse> DeleteCloudNativeAPIGatewayCanaryRuleOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayCanaryRuleOutcome> DeleteCloudNativeAPIGatewayCanaryRuleOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayCanaryRuleRequest&, DeleteCloudNativeAPIGatewayCanaryRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayCanaryRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayCertificateResponse> DeleteCloudNativeAPIGatewayCertificateOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayCertificateOutcome> DeleteCloudNativeAPIGatewayCertificateOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayCertificateRequest&, DeleteCloudNativeAPIGatewayCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayPublicNetworkResponse> DeleteCloudNativeAPIGatewayPublicNetworkOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayPublicNetworkOutcome> DeleteCloudNativeAPIGatewayPublicNetworkOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayPublicNetworkRequest&, DeleteCloudNativeAPIGatewayPublicNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayPublicNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayRouteResponse> DeleteCloudNativeAPIGatewayRouteOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayRouteOutcome> DeleteCloudNativeAPIGatewayRouteOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayRouteRequest&, DeleteCloudNativeAPIGatewayRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayRouteAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayRouteRateLimitResponse> DeleteCloudNativeAPIGatewayRouteRateLimitOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayRouteRateLimitOutcome> DeleteCloudNativeAPIGatewayRouteRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayRouteRateLimitRequest&, DeleteCloudNativeAPIGatewayRouteRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayRouteRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayServiceResponse> DeleteCloudNativeAPIGatewayServiceOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayServiceOutcome> DeleteCloudNativeAPIGatewayServiceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayServiceRequest&, DeleteCloudNativeAPIGatewayServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudNativeAPIGatewayServiceRateLimitResponse> DeleteCloudNativeAPIGatewayServiceRateLimitOutcome;
+                typedef std::future<DeleteCloudNativeAPIGatewayServiceRateLimitOutcome> DeleteCloudNativeAPIGatewayServiceRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteCloudNativeAPIGatewayServiceRateLimitRequest&, DeleteCloudNativeAPIGatewayServiceRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudNativeAPIGatewayServiceRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteGovernanceLaneGroupsResponse> DeleteGovernanceLaneGroupsOutcome;
+                typedef std::future<DeleteGovernanceLaneGroupsOutcome> DeleteGovernanceLaneGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteGovernanceLaneGroupsRequest&, DeleteGovernanceLaneGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGovernanceLaneGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteNativeGatewayServerGroupResponse> DeleteNativeGatewayServerGroupOutcome;
+                typedef std::future<DeleteNativeGatewayServerGroupOutcome> DeleteNativeGatewayServerGroupOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteNativeGatewayServerGroupRequest&, DeleteNativeGatewayServerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNativeGatewayServerGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteNativeGatewayServiceSourceResponse> DeleteNativeGatewayServiceSourceOutcome;
+                typedef std::future<DeleteNativeGatewayServiceSourceOutcome> DeleteNativeGatewayServiceSourceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteNativeGatewayServiceSourceRequest&, DeleteNativeGatewayServiceSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNativeGatewayServiceSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteWafDomainsResponse> DeleteWafDomainsOutcome;
+                typedef std::future<DeleteWafDomainsOutcome> DeleteWafDomainsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DeleteWafDomainsRequest&, DeleteWafDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWafDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalerResourceStrategiesResponse> DescribeAutoScalerResourceStrategiesOutcome;
+                typedef std::future<DescribeAutoScalerResourceStrategiesOutcome> DescribeAutoScalerResourceStrategiesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeAutoScalerResourceStrategiesRequest&, DescribeAutoScalerResourceStrategiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalerResourceStrategiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalerResourceStrategyBindingGroupsResponse> DescribeAutoScalerResourceStrategyBindingGroupsOutcome;
+                typedef std::future<DescribeAutoScalerResourceStrategyBindingGroupsOutcome> DescribeAutoScalerResourceStrategyBindingGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeAutoScalerResourceStrategyBindingGroupsRequest&, DescribeAutoScalerResourceStrategyBindingGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalerResourceStrategyBindingGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayResponse> DescribeCloudNativeAPIGatewayOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayOutcome> DescribeCloudNativeAPIGatewayOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayRequest&, DescribeCloudNativeAPIGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayCORSResponse> DescribeCloudNativeAPIGatewayCORSOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayCORSOutcome> DescribeCloudNativeAPIGatewayCORSOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayCORSRequest&, DescribeCloudNativeAPIGatewayCORSOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayCORSAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayCanaryRulesResponse> DescribeCloudNativeAPIGatewayCanaryRulesOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayCanaryRulesOutcome> DescribeCloudNativeAPIGatewayCanaryRulesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayCanaryRulesRequest&, DescribeCloudNativeAPIGatewayCanaryRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayCanaryRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayCertificateDetailsResponse> DescribeCloudNativeAPIGatewayCertificateDetailsOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayCertificateDetailsOutcome> DescribeCloudNativeAPIGatewayCertificateDetailsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayCertificateDetailsRequest&, DescribeCloudNativeAPIGatewayCertificateDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayCertificateDetailsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayCertificatesResponse> DescribeCloudNativeAPIGatewayCertificatesOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayCertificatesOutcome> DescribeCloudNativeAPIGatewayCertificatesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayCertificatesRequest&, DescribeCloudNativeAPIGatewayCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayConfigResponse> DescribeCloudNativeAPIGatewayConfigOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayConfigOutcome> DescribeCloudNativeAPIGatewayConfigOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayConfigRequest&, DescribeCloudNativeAPIGatewayConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayInfoByIpResponse> DescribeCloudNativeAPIGatewayInfoByIpOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayInfoByIpOutcome> DescribeCloudNativeAPIGatewayInfoByIpOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayInfoByIpRequest&, DescribeCloudNativeAPIGatewayInfoByIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayInfoByIpAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayNodesResponse> DescribeCloudNativeAPIGatewayNodesOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayNodesOutcome> DescribeCloudNativeAPIGatewayNodesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayNodesRequest&, DescribeCloudNativeAPIGatewayNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayPortsResponse> DescribeCloudNativeAPIGatewayPortsOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayPortsOutcome> DescribeCloudNativeAPIGatewayPortsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayPortsRequest&, DescribeCloudNativeAPIGatewayPortsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayPortsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayRouteRateLimitResponse> DescribeCloudNativeAPIGatewayRouteRateLimitOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayRouteRateLimitOutcome> DescribeCloudNativeAPIGatewayRouteRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayRouteRateLimitRequest&, DescribeCloudNativeAPIGatewayRouteRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayRouteRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayRoutesResponse> DescribeCloudNativeAPIGatewayRoutesOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayRoutesOutcome> DescribeCloudNativeAPIGatewayRoutesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayRoutesRequest&, DescribeCloudNativeAPIGatewayRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayRoutesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayServiceRateLimitResponse> DescribeCloudNativeAPIGatewayServiceRateLimitOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayServiceRateLimitOutcome> DescribeCloudNativeAPIGatewayServiceRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayServiceRateLimitRequest&, DescribeCloudNativeAPIGatewayServiceRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayServiceRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayServicesResponse> DescribeCloudNativeAPIGatewayServicesOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayServicesOutcome> DescribeCloudNativeAPIGatewayServicesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayServicesRequest&, DescribeCloudNativeAPIGatewayServicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayServicesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayServicesLightResponse> DescribeCloudNativeAPIGatewayServicesLightOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayServicesLightOutcome> DescribeCloudNativeAPIGatewayServicesLightOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayServicesLightRequest&, DescribeCloudNativeAPIGatewayServicesLightOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayServicesLightAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewayUpstreamResponse> DescribeCloudNativeAPIGatewayUpstreamOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewayUpstreamOutcome> DescribeCloudNativeAPIGatewayUpstreamOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewayUpstreamRequest&, DescribeCloudNativeAPIGatewayUpstreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewayUpstreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudNativeAPIGatewaysResponse> DescribeCloudNativeAPIGatewaysOutcome;
+                typedef std::future<DescribeCloudNativeAPIGatewaysOutcome> DescribeCloudNativeAPIGatewaysOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeCloudNativeAPIGatewaysRequest&, DescribeCloudNativeAPIGatewaysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudNativeAPIGatewaysAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGovernanceLaneGroupsResponse> DescribeGovernanceLaneGroupsOutcome;
+                typedef std::future<DescribeGovernanceLaneGroupsOutcome> DescribeGovernanceLaneGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeGovernanceLaneGroupsRequest&, DescribeGovernanceLaneGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGovernanceLaneGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNativeGatewayServerGroupsResponse> DescribeNativeGatewayServerGroupsOutcome;
+                typedef std::future<DescribeNativeGatewayServerGroupsOutcome> DescribeNativeGatewayServerGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeNativeGatewayServerGroupsRequest&, DescribeNativeGatewayServerGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNativeGatewayServerGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNativeGatewayServiceSourcesResponse> DescribeNativeGatewayServiceSourcesOutcome;
+                typedef std::future<DescribeNativeGatewayServiceSourcesOutcome> DescribeNativeGatewayServiceSourcesOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeNativeGatewayServiceSourcesRequest&, DescribeNativeGatewayServiceSourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNativeGatewayServiceSourcesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOneCloudNativeAPIGatewayServiceResponse> DescribeOneCloudNativeAPIGatewayServiceOutcome;
+                typedef std::future<DescribeOneCloudNativeAPIGatewayServiceOutcome> DescribeOneCloudNativeAPIGatewayServiceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeOneCloudNativeAPIGatewayServiceRequest&, DescribeOneCloudNativeAPIGatewayServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOneCloudNativeAPIGatewayServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePublicAddressConfigResponse> DescribePublicAddressConfigOutcome;
+                typedef std::future<DescribePublicAddressConfigOutcome> DescribePublicAddressConfigOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribePublicAddressConfigRequest&, DescribePublicAddressConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublicAddressConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePublicNetworkResponse> DescribePublicNetworkOutcome;
+                typedef std::future<DescribePublicNetworkOutcome> DescribePublicNetworkOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribePublicNetworkRequest&, DescribePublicNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublicNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUpstreamHealthCheckConfigResponse> DescribeUpstreamHealthCheckConfigOutcome;
+                typedef std::future<DescribeUpstreamHealthCheckConfigOutcome> DescribeUpstreamHealthCheckConfigOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeUpstreamHealthCheckConfigRequest&, DescribeUpstreamHealthCheckConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUpstreamHealthCheckConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWafDomainsResponse> DescribeWafDomainsOutcome;
+                typedef std::future<DescribeWafDomainsOutcome> DescribeWafDomainsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeWafDomainsRequest&, DescribeWafDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWafDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWafProtectionResponse> DescribeWafProtectionOutcome;
+                typedef std::future<DescribeWafProtectionOutcome> DescribeWafProtectionOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::DescribeWafProtectionRequest&, DescribeWafProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWafProtectionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAutoScalerResourceStrategyResponse> ModifyAutoScalerResourceStrategyOutcome;
+                typedef std::future<ModifyAutoScalerResourceStrategyOutcome> ModifyAutoScalerResourceStrategyOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyAutoScalerResourceStrategyRequest&, ModifyAutoScalerResourceStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoScalerResourceStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayResponse> ModifyCloudNativeAPIGatewayOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayOutcome> ModifyCloudNativeAPIGatewayOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayRequest&, ModifyCloudNativeAPIGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayCanaryRuleResponse> ModifyCloudNativeAPIGatewayCanaryRuleOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayCanaryRuleOutcome> ModifyCloudNativeAPIGatewayCanaryRuleOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayCanaryRuleRequest&, ModifyCloudNativeAPIGatewayCanaryRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayCanaryRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayCertificateResponse> ModifyCloudNativeAPIGatewayCertificateOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayCertificateOutcome> ModifyCloudNativeAPIGatewayCertificateOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayCertificateRequest&, ModifyCloudNativeAPIGatewayCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayRouteResponse> ModifyCloudNativeAPIGatewayRouteOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayRouteOutcome> ModifyCloudNativeAPIGatewayRouteOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayRouteRequest&, ModifyCloudNativeAPIGatewayRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayRouteAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayRouteRateLimitResponse> ModifyCloudNativeAPIGatewayRouteRateLimitOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayRouteRateLimitOutcome> ModifyCloudNativeAPIGatewayRouteRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayRouteRateLimitRequest&, ModifyCloudNativeAPIGatewayRouteRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayRouteRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayServiceResponse> ModifyCloudNativeAPIGatewayServiceOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayServiceOutcome> ModifyCloudNativeAPIGatewayServiceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayServiceRequest&, ModifyCloudNativeAPIGatewayServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudNativeAPIGatewayServiceRateLimitResponse> ModifyCloudNativeAPIGatewayServiceRateLimitOutcome;
+                typedef std::future<ModifyCloudNativeAPIGatewayServiceRateLimitOutcome> ModifyCloudNativeAPIGatewayServiceRateLimitOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyCloudNativeAPIGatewayServiceRateLimitRequest&, ModifyCloudNativeAPIGatewayServiceRateLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudNativeAPIGatewayServiceRateLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyConsoleNetworkResponse> ModifyConsoleNetworkOutcome;
+                typedef std::future<ModifyConsoleNetworkOutcome> ModifyConsoleNetworkOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyConsoleNetworkRequest&, ModifyConsoleNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyConsoleNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyGovernanceLaneGroupsResponse> ModifyGovernanceLaneGroupsOutcome;
+                typedef std::future<ModifyGovernanceLaneGroupsOutcome> ModifyGovernanceLaneGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyGovernanceLaneGroupsRequest&, ModifyGovernanceLaneGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGovernanceLaneGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNativeGatewayServerGroupResponse> ModifyNativeGatewayServerGroupOutcome;
+                typedef std::future<ModifyNativeGatewayServerGroupOutcome> ModifyNativeGatewayServerGroupOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyNativeGatewayServerGroupRequest&, ModifyNativeGatewayServerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNativeGatewayServerGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNativeGatewayServiceSourceResponse> ModifyNativeGatewayServiceSourceOutcome;
+                typedef std::future<ModifyNativeGatewayServiceSourceOutcome> ModifyNativeGatewayServiceSourceOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyNativeGatewayServiceSourceRequest&, ModifyNativeGatewayServiceSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNativeGatewayServiceSourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNetworkAccessStrategyResponse> ModifyNetworkAccessStrategyOutcome;
+                typedef std::future<ModifyNetworkAccessStrategyOutcome> ModifyNetworkAccessStrategyOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyNetworkAccessStrategyRequest&, ModifyNetworkAccessStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkAccessStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNetworkBasicInfoResponse> ModifyNetworkBasicInfoOutcome;
+                typedef std::future<ModifyNetworkBasicInfoOutcome> ModifyNetworkBasicInfoOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyNetworkBasicInfoRequest&, ModifyNetworkBasicInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkBasicInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyUpstreamNodeStatusResponse> ModifyUpstreamNodeStatusOutcome;
+                typedef std::future<ModifyUpstreamNodeStatusOutcome> ModifyUpstreamNodeStatusOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::ModifyUpstreamNodeStatusRequest&, ModifyUpstreamNodeStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUpstreamNodeStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenWafProtectionResponse> OpenWafProtectionOutcome;
+                typedef std::future<OpenWafProtectionOutcome> OpenWafProtectionOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::OpenWafProtectionRequest&, OpenWafProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenWafProtectionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindAutoScalerResourceStrategyFromGroupsResponse> UnbindAutoScalerResourceStrategyFromGroupsOutcome;
+                typedef std::future<UnbindAutoScalerResourceStrategyFromGroupsOutcome> UnbindAutoScalerResourceStrategyFromGroupsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::UnbindAutoScalerResourceStrategyFromGroupsRequest&, UnbindAutoScalerResourceStrategyFromGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindAutoScalerResourceStrategyFromGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCloudNativeAPIGatewayCertificateInfoResponse> UpdateCloudNativeAPIGatewayCertificateInfoOutcome;
+                typedef std::future<UpdateCloudNativeAPIGatewayCertificateInfoOutcome> UpdateCloudNativeAPIGatewayCertificateInfoOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::UpdateCloudNativeAPIGatewayCertificateInfoRequest&, UpdateCloudNativeAPIGatewayCertificateInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCloudNativeAPIGatewayCertificateInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCloudNativeAPIGatewaySpecResponse> UpdateCloudNativeAPIGatewaySpecOutcome;
+                typedef std::future<UpdateCloudNativeAPIGatewaySpecOutcome> UpdateCloudNativeAPIGatewaySpecOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::UpdateCloudNativeAPIGatewaySpecRequest&, UpdateCloudNativeAPIGatewaySpecOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCloudNativeAPIGatewaySpecAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateUpstreamHealthCheckConfigResponse> UpdateUpstreamHealthCheckConfigOutcome;
+                typedef std::future<UpdateUpstreamHealthCheckConfigOutcome> UpdateUpstreamHealthCheckConfigOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::UpdateUpstreamHealthCheckConfigRequest&, UpdateUpstreamHealthCheckConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateUpstreamHealthCheckConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateUpstreamTargetsResponse> UpdateUpstreamTargetsOutcome;
+                typedef std::future<UpdateUpstreamTargetsOutcome> UpdateUpstreamTargetsOutcomeCallable;
+                typedef std::function<void(const TseClient*, const Model::UpdateUpstreamTargetsRequest&, UpdateUpstreamTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateUpstreamTargetsAsyncHandler;
+
+
+
+                /**
+                 *Bind auto scaling policies to gateway groupings in batch
+                 * @param req BindAutoScalerResourceStrategyToGroupsRequest
+                 * @return BindAutoScalerResourceStrategyToGroupsOutcome
+                 */
+                BindAutoScalerResourceStrategyToGroupsOutcome BindAutoScalerResourceStrategyToGroups(const Model::BindAutoScalerResourceStrategyToGroupsRequest &request);
+                void BindAutoScalerResourceStrategyToGroupsAsync(const Model::BindAutoScalerResourceStrategyToGroupsRequest& request, const BindAutoScalerResourceStrategyToGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindAutoScalerResourceStrategyToGroupsOutcomeCallable BindAutoScalerResourceStrategyToGroupsCallable(const Model::BindAutoScalerResourceStrategyToGroupsRequest& request);
+
+                /**
+                 *Disables WAF protection
+                 * @param req CloseWafProtectionRequest
+                 * @return CloseWafProtectionOutcome
+                 */
+                CloseWafProtectionOutcome CloseWafProtection(const Model::CloseWafProtectionRequest &request);
+                void CloseWafProtectionAsync(const Model::CloseWafProtectionRequest& request, const CloseWafProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseWafProtectionOutcomeCallable CloseWafProtectionCallable(const Model::CloseWafProtectionRequest& request);
+
+                /**
+                 *Create AS policy
+                 * @param req CreateAutoScalerResourceStrategyRequest
+                 * @return CreateAutoScalerResourceStrategyOutcome
+                 */
+                CreateAutoScalerResourceStrategyOutcome CreateAutoScalerResourceStrategy(const Model::CreateAutoScalerResourceStrategyRequest &request);
+                void CreateAutoScalerResourceStrategyAsync(const Model::CreateAutoScalerResourceStrategyRequest& request, const CreateAutoScalerResourceStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAutoScalerResourceStrategyOutcomeCallable CreateAutoScalerResourceStrategyCallable(const Model::CreateAutoScalerResourceStrategyRequest& request);
+
+                /**
+                 *Create a cloud native API gateway instance
+                 * @param req CreateCloudNativeAPIGatewayRequest
+                 * @return CreateCloudNativeAPIGatewayOutcome
+                 */
+                CreateCloudNativeAPIGatewayOutcome CreateCloudNativeAPIGateway(const Model::CreateCloudNativeAPIGatewayRequest &request);
+                void CreateCloudNativeAPIGatewayAsync(const Model::CreateCloudNativeAPIGatewayRequest& request, const CreateCloudNativeAPIGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayOutcomeCallable CreateCloudNativeAPIGatewayCallable(const Model::CreateCloudNativeAPIGatewayRequest& request);
+
+                /**
+                 *Create a grayscale rule for the cloud-native gateway
+                 * @param req CreateCloudNativeAPIGatewayCanaryRuleRequest
+                 * @return CreateCloudNativeAPIGatewayCanaryRuleOutcome
+                 */
+                CreateCloudNativeAPIGatewayCanaryRuleOutcome CreateCloudNativeAPIGatewayCanaryRule(const Model::CreateCloudNativeAPIGatewayCanaryRuleRequest &request);
+                void CreateCloudNativeAPIGatewayCanaryRuleAsync(const Model::CreateCloudNativeAPIGatewayCanaryRuleRequest& request, const CreateCloudNativeAPIGatewayCanaryRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayCanaryRuleOutcomeCallable CreateCloudNativeAPIGatewayCanaryRuleCallable(const Model::CreateCloudNativeAPIGatewayCanaryRuleRequest& request);
+
+                /**
+                 *This API is used to create a cloud-native gateway certificate
+                 * @param req CreateCloudNativeAPIGatewayCertificateRequest
+                 * @return CreateCloudNativeAPIGatewayCertificateOutcome
+                 */
+                CreateCloudNativeAPIGatewayCertificateOutcome CreateCloudNativeAPIGatewayCertificate(const Model::CreateCloudNativeAPIGatewayCertificateRequest &request);
+                void CreateCloudNativeAPIGatewayCertificateAsync(const Model::CreateCloudNativeAPIGatewayCertificateRequest& request, const CreateCloudNativeAPIGatewayCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayCertificateOutcomeCallable CreateCloudNativeAPIGatewayCertificateCallable(const Model::CreateCloudNativeAPIGatewayCertificateRequest& request);
+
+                /**
+                 *Create a public network configuration
+                 * @param req CreateCloudNativeAPIGatewayPublicNetworkRequest
+                 * @return CreateCloudNativeAPIGatewayPublicNetworkOutcome
+                 */
+                CreateCloudNativeAPIGatewayPublicNetworkOutcome CreateCloudNativeAPIGatewayPublicNetwork(const Model::CreateCloudNativeAPIGatewayPublicNetworkRequest &request);
+                void CreateCloudNativeAPIGatewayPublicNetworkAsync(const Model::CreateCloudNativeAPIGatewayPublicNetworkRequest& request, const CreateCloudNativeAPIGatewayPublicNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayPublicNetworkOutcomeCallable CreateCloudNativeAPIGatewayPublicNetworkCallable(const Model::CreateCloudNativeAPIGatewayPublicNetworkRequest& request);
+
+                /**
+                 *This API is used to create a cloud-native gateway route.
+                 * @param req CreateCloudNativeAPIGatewayRouteRequest
+                 * @return CreateCloudNativeAPIGatewayRouteOutcome
+                 */
+                CreateCloudNativeAPIGatewayRouteOutcome CreateCloudNativeAPIGatewayRoute(const Model::CreateCloudNativeAPIGatewayRouteRequest &request);
+                void CreateCloudNativeAPIGatewayRouteAsync(const Model::CreateCloudNativeAPIGatewayRouteRequest& request, const CreateCloudNativeAPIGatewayRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayRouteOutcomeCallable CreateCloudNativeAPIGatewayRouteCallable(const Model::CreateCloudNativeAPIGatewayRouteRequest& request);
+
+                /**
+                 *This API is used to create a cloud-native gateway traffic throttling plugin.
+                 * @param req CreateCloudNativeAPIGatewayRouteRateLimitRequest
+                 * @return CreateCloudNativeAPIGatewayRouteRateLimitOutcome
+                 */
+                CreateCloudNativeAPIGatewayRouteRateLimitOutcome CreateCloudNativeAPIGatewayRouteRateLimit(const Model::CreateCloudNativeAPIGatewayRouteRateLimitRequest &request);
+                void CreateCloudNativeAPIGatewayRouteRateLimitAsync(const Model::CreateCloudNativeAPIGatewayRouteRateLimitRequest& request, const CreateCloudNativeAPIGatewayRouteRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayRouteRateLimitOutcomeCallable CreateCloudNativeAPIGatewayRouteRateLimitCallable(const Model::CreateCloudNativeAPIGatewayRouteRateLimitRequest& request);
+
+                /**
+                 *Create a cloud-native gateway service
+                 * @param req CreateCloudNativeAPIGatewayServiceRequest
+                 * @return CreateCloudNativeAPIGatewayServiceOutcome
+                 */
+                CreateCloudNativeAPIGatewayServiceOutcome CreateCloudNativeAPIGatewayService(const Model::CreateCloudNativeAPIGatewayServiceRequest &request);
+                void CreateCloudNativeAPIGatewayServiceAsync(const Model::CreateCloudNativeAPIGatewayServiceRequest& request, const CreateCloudNativeAPIGatewayServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayServiceOutcomeCallable CreateCloudNativeAPIGatewayServiceCallable(const Model::CreateCloudNativeAPIGatewayServiceRequest& request);
+
+                /**
+                 *This API is used to create a traffic throttling plugin for a cloud-native gateway
+                 * @param req CreateCloudNativeAPIGatewayServiceRateLimitRequest
+                 * @return CreateCloudNativeAPIGatewayServiceRateLimitOutcome
+                 */
+                CreateCloudNativeAPIGatewayServiceRateLimitOutcome CreateCloudNativeAPIGatewayServiceRateLimit(const Model::CreateCloudNativeAPIGatewayServiceRateLimitRequest &request);
+                void CreateCloudNativeAPIGatewayServiceRateLimitAsync(const Model::CreateCloudNativeAPIGatewayServiceRateLimitRequest& request, const CreateCloudNativeAPIGatewayServiceRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudNativeAPIGatewayServiceRateLimitOutcomeCallable CreateCloudNativeAPIGatewayServiceRateLimitCallable(const Model::CreateCloudNativeAPIGatewayServiceRateLimitRequest& request);
+
+                /**
+                 *Create a lane group
+                 * @param req CreateGovernanceLaneGroupsRequest
+                 * @return CreateGovernanceLaneGroupsOutcome
+                 */
+                CreateGovernanceLaneGroupsOutcome CreateGovernanceLaneGroups(const Model::CreateGovernanceLaneGroupsRequest &request);
+                void CreateGovernanceLaneGroupsAsync(const Model::CreateGovernanceLaneGroupsRequest& request, const CreateGovernanceLaneGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateGovernanceLaneGroupsOutcomeCallable CreateGovernanceLaneGroupsCallable(const Model::CreateGovernanceLaneGroupsRequest& request);
+
+                /**
+                 *Create a Cloud Native Gateway Engine group
+                 * @param req CreateNativeGatewayServerGroupRequest
+                 * @return CreateNativeGatewayServerGroupOutcome
+                 */
+                CreateNativeGatewayServerGroupOutcome CreateNativeGatewayServerGroup(const Model::CreateNativeGatewayServerGroupRequest &request);
+                void CreateNativeGatewayServerGroupAsync(const Model::CreateNativeGatewayServerGroupRequest& request, const CreateNativeGatewayServerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateNativeGatewayServerGroupOutcomeCallable CreateNativeGatewayServerGroupCallable(const Model::CreateNativeGatewayServerGroupRequest& request);
+
+                /**
+                 *Create a gateway service source
+                 * @param req CreateNativeGatewayServiceSourceRequest
+                 * @return CreateNativeGatewayServiceSourceOutcome
+                 */
+                CreateNativeGatewayServiceSourceOutcome CreateNativeGatewayServiceSource(const Model::CreateNativeGatewayServiceSourceRequest &request);
+                void CreateNativeGatewayServiceSourceAsync(const Model::CreateNativeGatewayServiceSourceRequest& request, const CreateNativeGatewayServiceSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateNativeGatewayServiceSourceOutcomeCallable CreateNativeGatewayServiceSourceCallable(const Model::CreateNativeGatewayServiceSourceRequest& request);
+
+                /**
+                 *Create or edit a cloud-native gateway cross-domain configuration
+                 * @param req CreateOrModifyCloudNativeAPIGatewayCORSRequest
+                 * @return CreateOrModifyCloudNativeAPIGatewayCORSOutcome
+                 */
+                CreateOrModifyCloudNativeAPIGatewayCORSOutcome CreateOrModifyCloudNativeAPIGatewayCORS(const Model::CreateOrModifyCloudNativeAPIGatewayCORSRequest &request);
+                void CreateOrModifyCloudNativeAPIGatewayCORSAsync(const Model::CreateOrModifyCloudNativeAPIGatewayCORSRequest& request, const CreateOrModifyCloudNativeAPIGatewayCORSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateOrModifyCloudNativeAPIGatewayCORSOutcomeCallable CreateOrModifyCloudNativeAPIGatewayCORSCallable(const Model::CreateOrModifyCloudNativeAPIGatewayCORSRequest& request);
+
+                /**
+                 *Create a WAF-protected domain name
+                 * @param req CreateWafDomainsRequest
+                 * @return CreateWafDomainsOutcome
+                 */
+                CreateWafDomainsOutcome CreateWafDomains(const Model::CreateWafDomainsRequest &request);
+                void CreateWafDomainsAsync(const Model::CreateWafDomainsRequest& request, const CreateWafDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateWafDomainsOutcomeCallable CreateWafDomainsCallable(const Model::CreateWafDomainsRequest& request);
+
+                /**
+                 *Delete AS policy
+                 * @param req DeleteAutoScalerResourceStrategyRequest
+                 * @return DeleteAutoScalerResourceStrategyOutcome
+                 */
+                DeleteAutoScalerResourceStrategyOutcome DeleteAutoScalerResourceStrategy(const Model::DeleteAutoScalerResourceStrategyRequest &request);
+                void DeleteAutoScalerResourceStrategyAsync(const Model::DeleteAutoScalerResourceStrategyRequest& request, const DeleteAutoScalerResourceStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAutoScalerResourceStrategyOutcomeCallable DeleteAutoScalerResourceStrategyCallable(const Model::DeleteAutoScalerResourceStrategyRequest& request);
+
+                /**
+                 *Delete a cloud native API gateway instance
+                 * @param req DeleteCloudNativeAPIGatewayRequest
+                 * @return DeleteCloudNativeAPIGatewayOutcome
+                 */
+                DeleteCloudNativeAPIGatewayOutcome DeleteCloudNativeAPIGateway(const Model::DeleteCloudNativeAPIGatewayRequest &request);
+                void DeleteCloudNativeAPIGatewayAsync(const Model::DeleteCloudNativeAPIGatewayRequest& request, const DeleteCloudNativeAPIGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayOutcomeCallable DeleteCloudNativeAPIGatewayCallable(const Model::DeleteCloudNativeAPIGatewayRequest& request);
+
+                /**
+                 *This API is used to delete a cloud-native gateway cross-domain plug-in.
+                 * @param req DeleteCloudNativeAPIGatewayCORSRequest
+                 * @return DeleteCloudNativeAPIGatewayCORSOutcome
+                 */
+                DeleteCloudNativeAPIGatewayCORSOutcome DeleteCloudNativeAPIGatewayCORS(const Model::DeleteCloudNativeAPIGatewayCORSRequest &request);
+                void DeleteCloudNativeAPIGatewayCORSAsync(const Model::DeleteCloudNativeAPIGatewayCORSRequest& request, const DeleteCloudNativeAPIGatewayCORSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayCORSOutcomeCallable DeleteCloudNativeAPIGatewayCORSCallable(const Model::DeleteCloudNativeAPIGatewayCORSRequest& request);
+
+                /**
+                 *This API is used to delete the grayscale rule of the cloud-native gateway.
+                 * @param req DeleteCloudNativeAPIGatewayCanaryRuleRequest
+                 * @return DeleteCloudNativeAPIGatewayCanaryRuleOutcome
+                 */
+                DeleteCloudNativeAPIGatewayCanaryRuleOutcome DeleteCloudNativeAPIGatewayCanaryRule(const Model::DeleteCloudNativeAPIGatewayCanaryRuleRequest &request);
+                void DeleteCloudNativeAPIGatewayCanaryRuleAsync(const Model::DeleteCloudNativeAPIGatewayCanaryRuleRequest& request, const DeleteCloudNativeAPIGatewayCanaryRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayCanaryRuleOutcomeCallable DeleteCloudNativeAPIGatewayCanaryRuleCallable(const Model::DeleteCloudNativeAPIGatewayCanaryRuleRequest& request);
+
+                /**
+                 *This API is used to delete a cloud-native gateway cert.
+                 * @param req DeleteCloudNativeAPIGatewayCertificateRequest
+                 * @return DeleteCloudNativeAPIGatewayCertificateOutcome
+                 */
+                DeleteCloudNativeAPIGatewayCertificateOutcome DeleteCloudNativeAPIGatewayCertificate(const Model::DeleteCloudNativeAPIGatewayCertificateRequest &request);
+                void DeleteCloudNativeAPIGatewayCertificateAsync(const Model::DeleteCloudNativeAPIGatewayCertificateRequest& request, const DeleteCloudNativeAPIGatewayCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayCertificateOutcomeCallable DeleteCloudNativeAPIGatewayCertificateCallable(const Model::DeleteCloudNativeAPIGatewayCertificateRequest& request);
+
+                /**
+                 *Delete public network configuration
+                 * @param req DeleteCloudNativeAPIGatewayPublicNetworkRequest
+                 * @return DeleteCloudNativeAPIGatewayPublicNetworkOutcome
+                 */
+                DeleteCloudNativeAPIGatewayPublicNetworkOutcome DeleteCloudNativeAPIGatewayPublicNetwork(const Model::DeleteCloudNativeAPIGatewayPublicNetworkRequest &request);
+                void DeleteCloudNativeAPIGatewayPublicNetworkAsync(const Model::DeleteCloudNativeAPIGatewayPublicNetworkRequest& request, const DeleteCloudNativeAPIGatewayPublicNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayPublicNetworkOutcomeCallable DeleteCloudNativeAPIGatewayPublicNetworkCallable(const Model::DeleteCloudNativeAPIGatewayPublicNetworkRequest& request);
+
+                /**
+                 *Delete a cloud-native gateway route
+                 * @param req DeleteCloudNativeAPIGatewayRouteRequest
+                 * @return DeleteCloudNativeAPIGatewayRouteOutcome
+                 */
+                DeleteCloudNativeAPIGatewayRouteOutcome DeleteCloudNativeAPIGatewayRoute(const Model::DeleteCloudNativeAPIGatewayRouteRequest &request);
+                void DeleteCloudNativeAPIGatewayRouteAsync(const Model::DeleteCloudNativeAPIGatewayRouteRequest& request, const DeleteCloudNativeAPIGatewayRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayRouteOutcomeCallable DeleteCloudNativeAPIGatewayRouteCallable(const Model::DeleteCloudNativeAPIGatewayRouteRequest& request);
+
+                /**
+                 *This API is used to delete a traffic throttling plugin of a cloud-native gateway (Route).
+                 * @param req DeleteCloudNativeAPIGatewayRouteRateLimitRequest
+                 * @return DeleteCloudNativeAPIGatewayRouteRateLimitOutcome
+                 */
+                DeleteCloudNativeAPIGatewayRouteRateLimitOutcome DeleteCloudNativeAPIGatewayRouteRateLimit(const Model::DeleteCloudNativeAPIGatewayRouteRateLimitRequest &request);
+                void DeleteCloudNativeAPIGatewayRouteRateLimitAsync(const Model::DeleteCloudNativeAPIGatewayRouteRateLimitRequest& request, const DeleteCloudNativeAPIGatewayRouteRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayRouteRateLimitOutcomeCallable DeleteCloudNativeAPIGatewayRouteRateLimitCallable(const Model::DeleteCloudNativeAPIGatewayRouteRateLimitRequest& request);
+
+                /**
+                 *This API is used to delete a cloud-native gateway service.
+                 * @param req DeleteCloudNativeAPIGatewayServiceRequest
+                 * @return DeleteCloudNativeAPIGatewayServiceOutcome
+                 */
+                DeleteCloudNativeAPIGatewayServiceOutcome DeleteCloudNativeAPIGatewayService(const Model::DeleteCloudNativeAPIGatewayServiceRequest &request);
+                void DeleteCloudNativeAPIGatewayServiceAsync(const Model::DeleteCloudNativeAPIGatewayServiceRequest& request, const DeleteCloudNativeAPIGatewayServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayServiceOutcomeCallable DeleteCloudNativeAPIGatewayServiceCallable(const Model::DeleteCloudNativeAPIGatewayServiceRequest& request);
+
+                /**
+                 *This API is used to delete the traffic throttling plugin of a cloud-native gateway (Service).
+                 * @param req DeleteCloudNativeAPIGatewayServiceRateLimitRequest
+                 * @return DeleteCloudNativeAPIGatewayServiceRateLimitOutcome
+                 */
+                DeleteCloudNativeAPIGatewayServiceRateLimitOutcome DeleteCloudNativeAPIGatewayServiceRateLimit(const Model::DeleteCloudNativeAPIGatewayServiceRateLimitRequest &request);
+                void DeleteCloudNativeAPIGatewayServiceRateLimitAsync(const Model::DeleteCloudNativeAPIGatewayServiceRateLimitRequest& request, const DeleteCloudNativeAPIGatewayServiceRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudNativeAPIGatewayServiceRateLimitOutcomeCallable DeleteCloudNativeAPIGatewayServiceRateLimitCallable(const Model::DeleteCloudNativeAPIGatewayServiceRateLimitRequest& request);
+
+                /**
+                 *Delete a lane group
+                 * @param req DeleteGovernanceLaneGroupsRequest
+                 * @return DeleteGovernanceLaneGroupsOutcome
+                 */
+                DeleteGovernanceLaneGroupsOutcome DeleteGovernanceLaneGroups(const Model::DeleteGovernanceLaneGroupsRequest &request);
+                void DeleteGovernanceLaneGroupsAsync(const Model::DeleteGovernanceLaneGroupsRequest& request, const DeleteGovernanceLaneGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteGovernanceLaneGroupsOutcomeCallable DeleteGovernanceLaneGroupsCallable(const Model::DeleteGovernanceLaneGroupsRequest& request);
+
+                /**
+                 *Delete a Gateway Instance Group
+                 * @param req DeleteNativeGatewayServerGroupRequest
+                 * @return DeleteNativeGatewayServerGroupOutcome
+                 */
+                DeleteNativeGatewayServerGroupOutcome DeleteNativeGatewayServerGroup(const Model::DeleteNativeGatewayServerGroupRequest &request);
+                void DeleteNativeGatewayServerGroupAsync(const Model::DeleteNativeGatewayServerGroupRequest& request, const DeleteNativeGatewayServerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteNativeGatewayServerGroupOutcomeCallable DeleteNativeGatewayServerGroupCallable(const Model::DeleteNativeGatewayServerGroupRequest& request);
+
+                /**
+                 *Delete a gateway service source instance
+                 * @param req DeleteNativeGatewayServiceSourceRequest
+                 * @return DeleteNativeGatewayServiceSourceOutcome
+                 */
+                DeleteNativeGatewayServiceSourceOutcome DeleteNativeGatewayServiceSource(const Model::DeleteNativeGatewayServiceSourceRequest &request);
+                void DeleteNativeGatewayServiceSourceAsync(const Model::DeleteNativeGatewayServiceSourceRequest& request, const DeleteNativeGatewayServiceSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteNativeGatewayServiceSourceOutcomeCallable DeleteNativeGatewayServiceSourceCallable(const Model::DeleteNativeGatewayServiceSourceRequest& request);
+
+                /**
+                 *Delete a WAF-protected domain name
+                 * @param req DeleteWafDomainsRequest
+                 * @return DeleteWafDomainsOutcome
+                 */
+                DeleteWafDomainsOutcome DeleteWafDomains(const Model::DeleteWafDomainsRequest &request);
+                void DeleteWafDomainsAsync(const Model::DeleteWafDomainsRequest& request, const DeleteWafDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteWafDomainsOutcomeCallable DeleteWafDomainsCallable(const Model::DeleteWafDomainsRequest& request);
+
+                /**
+                 *View AS policy list
+                 * @param req DescribeAutoScalerResourceStrategiesRequest
+                 * @return DescribeAutoScalerResourceStrategiesOutcome
+                 */
+                DescribeAutoScalerResourceStrategiesOutcome DescribeAutoScalerResourceStrategies(const Model::DescribeAutoScalerResourceStrategiesRequest &request);
+                void DescribeAutoScalerResourceStrategiesAsync(const Model::DescribeAutoScalerResourceStrategiesRequest& request, const DescribeAutoScalerResourceStrategiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoScalerResourceStrategiesOutcomeCallable DescribeAutoScalerResourceStrategiesCallable(const Model::DescribeAutoScalerResourceStrategiesRequest& request);
+
+                /**
+                 *View gateway groupings bound to an auto scaling policy
+                 * @param req DescribeAutoScalerResourceStrategyBindingGroupsRequest
+                 * @return DescribeAutoScalerResourceStrategyBindingGroupsOutcome
+                 */
+                DescribeAutoScalerResourceStrategyBindingGroupsOutcome DescribeAutoScalerResourceStrategyBindingGroups(const Model::DescribeAutoScalerResourceStrategyBindingGroupsRequest &request);
+                void DescribeAutoScalerResourceStrategyBindingGroupsAsync(const Model::DescribeAutoScalerResourceStrategyBindingGroupsRequest& request, const DescribeAutoScalerResourceStrategyBindingGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoScalerResourceStrategyBindingGroupsOutcomeCallable DescribeAutoScalerResourceStrategyBindingGroupsCallable(const Model::DescribeAutoScalerResourceStrategyBindingGroupsRequest& request);
+
+                /**
+                 *This API is used to obtain cloud native API gateway instance information.
+                 * @param req DescribeCloudNativeAPIGatewayRequest
+                 * @return DescribeCloudNativeAPIGatewayOutcome
+                 */
+                DescribeCloudNativeAPIGatewayOutcome DescribeCloudNativeAPIGateway(const Model::DescribeCloudNativeAPIGatewayRequest &request);
+                void DescribeCloudNativeAPIGatewayAsync(const Model::DescribeCloudNativeAPIGatewayRequest& request, const DescribeCloudNativeAPIGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayOutcomeCallable DescribeCloudNativeAPIGatewayCallable(const Model::DescribeCloudNativeAPIGatewayRequest& request);
+
+                /**
+                 *Query cloud-native gateway cross-domain configuration
+                 * @param req DescribeCloudNativeAPIGatewayCORSRequest
+                 * @return DescribeCloudNativeAPIGatewayCORSOutcome
+                 */
+                DescribeCloudNativeAPIGatewayCORSOutcome DescribeCloudNativeAPIGatewayCORS(const Model::DescribeCloudNativeAPIGatewayCORSRequest &request);
+                void DescribeCloudNativeAPIGatewayCORSAsync(const Model::DescribeCloudNativeAPIGatewayCORSRequest& request, const DescribeCloudNativeAPIGatewayCORSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayCORSOutcomeCallable DescribeCloudNativeAPIGatewayCORSCallable(const Model::DescribeCloudNativeAPIGatewayCORSRequest& request);
+
+                /**
+                 *Query the grayscale rule list of the cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayCanaryRulesRequest
+                 * @return DescribeCloudNativeAPIGatewayCanaryRulesOutcome
+                 */
+                DescribeCloudNativeAPIGatewayCanaryRulesOutcome DescribeCloudNativeAPIGatewayCanaryRules(const Model::DescribeCloudNativeAPIGatewayCanaryRulesRequest &request);
+                void DescribeCloudNativeAPIGatewayCanaryRulesAsync(const Model::DescribeCloudNativeAPIGatewayCanaryRulesRequest& request, const DescribeCloudNativeAPIGatewayCanaryRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayCanaryRulesOutcomeCallable DescribeCloudNativeAPIGatewayCanaryRulesCallable(const Model::DescribeCloudNativeAPIGatewayCanaryRulesRequest& request);
+
+                /**
+                 *Query the certificate detail of one cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayCertificateDetailsRequest
+                 * @return DescribeCloudNativeAPIGatewayCertificateDetailsOutcome
+                 */
+                DescribeCloudNativeAPIGatewayCertificateDetailsOutcome DescribeCloudNativeAPIGatewayCertificateDetails(const Model::DescribeCloudNativeAPIGatewayCertificateDetailsRequest &request);
+                void DescribeCloudNativeAPIGatewayCertificateDetailsAsync(const Model::DescribeCloudNativeAPIGatewayCertificateDetailsRequest& request, const DescribeCloudNativeAPIGatewayCertificateDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayCertificateDetailsOutcomeCallable DescribeCloudNativeAPIGatewayCertificateDetailsCallable(const Model::DescribeCloudNativeAPIGatewayCertificateDetailsRequest& request);
+
+                /**
+                 *Query the certificate list of the cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayCertificatesRequest
+                 * @return DescribeCloudNativeAPIGatewayCertificatesOutcome
+                 */
+                DescribeCloudNativeAPIGatewayCertificatesOutcome DescribeCloudNativeAPIGatewayCertificates(const Model::DescribeCloudNativeAPIGatewayCertificatesRequest &request);
+                void DescribeCloudNativeAPIGatewayCertificatesAsync(const Model::DescribeCloudNativeAPIGatewayCertificatesRequest& request, const DescribeCloudNativeAPIGatewayCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayCertificatesOutcomeCallable DescribeCloudNativeAPIGatewayCertificatesCallable(const Model::DescribeCloudNativeAPIGatewayCertificatesRequest& request);
+
+                /**
+                 *This API is used to obtain cloud native API gateway instance network configuration information
+                 * @param req DescribeCloudNativeAPIGatewayConfigRequest
+                 * @return DescribeCloudNativeAPIGatewayConfigOutcome
+                 */
+                DescribeCloudNativeAPIGatewayConfigOutcome DescribeCloudNativeAPIGatewayConfig(const Model::DescribeCloudNativeAPIGatewayConfigRequest &request);
+                void DescribeCloudNativeAPIGatewayConfigAsync(const Model::DescribeCloudNativeAPIGatewayConfigRequest& request, const DescribeCloudNativeAPIGatewayConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayConfigOutcomeCallable DescribeCloudNativeAPIGatewayConfigCallable(const Model::DescribeCloudNativeAPIGatewayConfigRequest& request);
+
+                /**
+                 *Query cloud native gateway instance information based on public IP address
+                 * @param req DescribeCloudNativeAPIGatewayInfoByIpRequest
+                 * @return DescribeCloudNativeAPIGatewayInfoByIpOutcome
+                 */
+                DescribeCloudNativeAPIGatewayInfoByIpOutcome DescribeCloudNativeAPIGatewayInfoByIp(const Model::DescribeCloudNativeAPIGatewayInfoByIpRequest &request);
+                void DescribeCloudNativeAPIGatewayInfoByIpAsync(const Model::DescribeCloudNativeAPIGatewayInfoByIpRequest& request, const DescribeCloudNativeAPIGatewayInfoByIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayInfoByIpOutcomeCallable DescribeCloudNativeAPIGatewayInfoByIpCallable(const Model::DescribeCloudNativeAPIGatewayInfoByIpRequest& request);
+
+                /**
+                 *This API is used to get a cloud-native gateway node list
+                 * @param req DescribeCloudNativeAPIGatewayNodesRequest
+                 * @return DescribeCloudNativeAPIGatewayNodesOutcome
+                 */
+                DescribeCloudNativeAPIGatewayNodesOutcome DescribeCloudNativeAPIGatewayNodes(const Model::DescribeCloudNativeAPIGatewayNodesRequest &request);
+                void DescribeCloudNativeAPIGatewayNodesAsync(const Model::DescribeCloudNativeAPIGatewayNodesRequest& request, const DescribeCloudNativeAPIGatewayNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayNodesOutcomeCallable DescribeCloudNativeAPIGatewayNodesCallable(const Model::DescribeCloudNativeAPIGatewayNodesRequest& request);
+
+                /**
+                 *Retrieve port information of a cloud native API gateway instance
+                 * @param req DescribeCloudNativeAPIGatewayPortsRequest
+                 * @return DescribeCloudNativeAPIGatewayPortsOutcome
+                 */
+                DescribeCloudNativeAPIGatewayPortsOutcome DescribeCloudNativeAPIGatewayPorts(const Model::DescribeCloudNativeAPIGatewayPortsRequest &request);
+                void DescribeCloudNativeAPIGatewayPortsAsync(const Model::DescribeCloudNativeAPIGatewayPortsRequest& request, const DescribeCloudNativeAPIGatewayPortsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayPortsOutcomeCallable DescribeCloudNativeAPIGatewayPortsCallable(const Model::DescribeCloudNativeAPIGatewayPortsRequest& request);
+
+                /**
+                 *Query the traffic throttling plugin of a cloud-native gateway (Route).
+                 * @param req DescribeCloudNativeAPIGatewayRouteRateLimitRequest
+                 * @return DescribeCloudNativeAPIGatewayRouteRateLimitOutcome
+                 */
+                DescribeCloudNativeAPIGatewayRouteRateLimitOutcome DescribeCloudNativeAPIGatewayRouteRateLimit(const Model::DescribeCloudNativeAPIGatewayRouteRateLimitRequest &request);
+                void DescribeCloudNativeAPIGatewayRouteRateLimitAsync(const Model::DescribeCloudNativeAPIGatewayRouteRateLimitRequest& request, const DescribeCloudNativeAPIGatewayRouteRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayRouteRateLimitOutcomeCallable DescribeCloudNativeAPIGatewayRouteRateLimitCallable(const Model::DescribeCloudNativeAPIGatewayRouteRateLimitRequest& request);
+
+                /**
+                 *Query the routing list of the cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayRoutesRequest
+                 * @return DescribeCloudNativeAPIGatewayRoutesOutcome
+                 */
+                DescribeCloudNativeAPIGatewayRoutesOutcome DescribeCloudNativeAPIGatewayRoutes(const Model::DescribeCloudNativeAPIGatewayRoutesRequest &request);
+                void DescribeCloudNativeAPIGatewayRoutesAsync(const Model::DescribeCloudNativeAPIGatewayRoutesRequest& request, const DescribeCloudNativeAPIGatewayRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayRoutesOutcomeCallable DescribeCloudNativeAPIGatewayRoutesCallable(const Model::DescribeCloudNativeAPIGatewayRoutesRequest& request);
+
+                /**
+                 *This API is used to query the traffic throttling plugin of a cloud-native gateway (Service).
+                 * @param req DescribeCloudNativeAPIGatewayServiceRateLimitRequest
+                 * @return DescribeCloudNativeAPIGatewayServiceRateLimitOutcome
+                 */
+                DescribeCloudNativeAPIGatewayServiceRateLimitOutcome DescribeCloudNativeAPIGatewayServiceRateLimit(const Model::DescribeCloudNativeAPIGatewayServiceRateLimitRequest &request);
+                void DescribeCloudNativeAPIGatewayServiceRateLimitAsync(const Model::DescribeCloudNativeAPIGatewayServiceRateLimitRequest& request, const DescribeCloudNativeAPIGatewayServiceRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayServiceRateLimitOutcomeCallable DescribeCloudNativeAPIGatewayServiceRateLimitCallable(const Model::DescribeCloudNativeAPIGatewayServiceRateLimitRequest& request);
+
+                /**
+                 *Query the service list of the cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayServicesRequest
+                 * @return DescribeCloudNativeAPIGatewayServicesOutcome
+                 */
+                DescribeCloudNativeAPIGatewayServicesOutcome DescribeCloudNativeAPIGatewayServices(const Model::DescribeCloudNativeAPIGatewayServicesRequest &request);
+                void DescribeCloudNativeAPIGatewayServicesAsync(const Model::DescribeCloudNativeAPIGatewayServicesRequest& request, const DescribeCloudNativeAPIGatewayServicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayServicesOutcomeCallable DescribeCloudNativeAPIGatewayServicesCallable(const Model::DescribeCloudNativeAPIGatewayServicesRequest& request);
+
+                /**
+                 *Lightweight query the service list of the cloud-native gateway
+                 * @param req DescribeCloudNativeAPIGatewayServicesLightRequest
+                 * @return DescribeCloudNativeAPIGatewayServicesLightOutcome
+                 */
+                DescribeCloudNativeAPIGatewayServicesLightOutcome DescribeCloudNativeAPIGatewayServicesLight(const Model::DescribeCloudNativeAPIGatewayServicesLightRequest &request);
+                void DescribeCloudNativeAPIGatewayServicesLightAsync(const Model::DescribeCloudNativeAPIGatewayServicesLightRequest& request, const DescribeCloudNativeAPIGatewayServicesLightAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayServicesLightOutcomeCallable DescribeCloudNativeAPIGatewayServicesLightCallable(const Model::DescribeCloudNativeAPIGatewayServicesLightRequest& request);
+
+                /**
+                 *This API is used to query the Upstream list in the service detail of a cloud-native gateway.
+                 * @param req DescribeCloudNativeAPIGatewayUpstreamRequest
+                 * @return DescribeCloudNativeAPIGatewayUpstreamOutcome
+                 */
+                DescribeCloudNativeAPIGatewayUpstreamOutcome DescribeCloudNativeAPIGatewayUpstream(const Model::DescribeCloudNativeAPIGatewayUpstreamRequest &request);
+                void DescribeCloudNativeAPIGatewayUpstreamAsync(const Model::DescribeCloudNativeAPIGatewayUpstreamRequest& request, const DescribeCloudNativeAPIGatewayUpstreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewayUpstreamOutcomeCallable DescribeCloudNativeAPIGatewayUpstreamCallable(const Model::DescribeCloudNativeAPIGatewayUpstreamRequest& request);
+
+                /**
+                 *This API is used to obtain the cloud native API gateway instance list.
+                 * @param req DescribeCloudNativeAPIGatewaysRequest
+                 * @return DescribeCloudNativeAPIGatewaysOutcome
+                 */
+                DescribeCloudNativeAPIGatewaysOutcome DescribeCloudNativeAPIGateways(const Model::DescribeCloudNativeAPIGatewaysRequest &request);
+                void DescribeCloudNativeAPIGatewaysAsync(const Model::DescribeCloudNativeAPIGatewaysRequest& request, const DescribeCloudNativeAPIGatewaysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudNativeAPIGatewaysOutcomeCallable DescribeCloudNativeAPIGatewaysCallable(const Model::DescribeCloudNativeAPIGatewaysRequest& request);
+
+                /**
+                 *Query lane group list
+                 * @param req DescribeGovernanceLaneGroupsRequest
+                 * @return DescribeGovernanceLaneGroupsOutcome
+                 */
+                DescribeGovernanceLaneGroupsOutcome DescribeGovernanceLaneGroups(const Model::DescribeGovernanceLaneGroupsRequest &request);
+                void DescribeGovernanceLaneGroupsAsync(const Model::DescribeGovernanceLaneGroupsRequest& request, const DescribeGovernanceLaneGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGovernanceLaneGroupsOutcomeCallable DescribeGovernanceLaneGroupsCallable(const Model::DescribeGovernanceLaneGroupsRequest& request);
+
+                /**
+                 *Query cloud native gateway group information
+                 * @param req DescribeNativeGatewayServerGroupsRequest
+                 * @return DescribeNativeGatewayServerGroupsOutcome
+                 */
+                DescribeNativeGatewayServerGroupsOutcome DescribeNativeGatewayServerGroups(const Model::DescribeNativeGatewayServerGroupsRequest &request);
+                void DescribeNativeGatewayServerGroupsAsync(const Model::DescribeNativeGatewayServerGroupsRequest& request, const DescribeNativeGatewayServerGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNativeGatewayServerGroupsOutcomeCallable DescribeNativeGatewayServerGroupsCallable(const Model::DescribeNativeGatewayServerGroupsRequest& request);
+
+                /**
+                 *Query the instance list of the gateway service source
+                 * @param req DescribeNativeGatewayServiceSourcesRequest
+                 * @return DescribeNativeGatewayServiceSourcesOutcome
+                 */
+                DescribeNativeGatewayServiceSourcesOutcome DescribeNativeGatewayServiceSources(const Model::DescribeNativeGatewayServiceSourcesRequest &request);
+                void DescribeNativeGatewayServiceSourcesAsync(const Model::DescribeNativeGatewayServiceSourcesRequest& request, const DescribeNativeGatewayServiceSourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNativeGatewayServiceSourcesOutcomeCallable DescribeNativeGatewayServiceSourcesCallable(const Model::DescribeNativeGatewayServiceSourcesRequest& request);
+
+                /**
+                 *This API is used to obtain the service detail of the cloud-native gateway.
+                 * @param req DescribeOneCloudNativeAPIGatewayServiceRequest
+                 * @return DescribeOneCloudNativeAPIGatewayServiceOutcome
+                 */
+                DescribeOneCloudNativeAPIGatewayServiceOutcome DescribeOneCloudNativeAPIGatewayService(const Model::DescribeOneCloudNativeAPIGatewayServiceRequest &request);
+                void DescribeOneCloudNativeAPIGatewayServiceAsync(const Model::DescribeOneCloudNativeAPIGatewayServiceRequest& request, const DescribeOneCloudNativeAPIGatewayServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOneCloudNativeAPIGatewayServiceOutcomeCallable DescribeOneCloudNativeAPIGatewayServiceCallable(const Model::DescribeOneCloudNativeAPIGatewayServiceRequest& request);
+
+                /**
+                 *Query public IP address info
+                 * @param req DescribePublicAddressConfigRequest
+                 * @return DescribePublicAddressConfigOutcome
+                 */
+                DescribePublicAddressConfigOutcome DescribePublicAddressConfig(const Model::DescribePublicAddressConfigRequest &request);
+                void DescribePublicAddressConfigAsync(const Model::DescribePublicAddressConfigRequest& request, const DescribePublicAddressConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePublicAddressConfigOutcomeCallable DescribePublicAddressConfigCallable(const Model::DescribePublicAddressConfigRequest& request);
+
+                /**
+                 *Query the public network details of a cloud native API gateway instance
+                 * @param req DescribePublicNetworkRequest
+                 * @return DescribePublicNetworkOutcome
+                 */
+                DescribePublicNetworkOutcome DescribePublicNetwork(const Model::DescribePublicNetworkRequest &request);
+                void DescribePublicNetworkAsync(const Model::DescribePublicNetworkRequest& request, const DescribePublicNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePublicNetworkOutcomeCallable DescribePublicNetworkCallable(const Model::DescribePublicNetworkRequest& request);
+
+                /**
+                 *This API is used to obtain the health check configuration of the cloud-native gateway service.
+                 * @param req DescribeUpstreamHealthCheckConfigRequest
+                 * @return DescribeUpstreamHealthCheckConfigOutcome
+                 */
+                DescribeUpstreamHealthCheckConfigOutcome DescribeUpstreamHealthCheckConfig(const Model::DescribeUpstreamHealthCheckConfigRequest &request);
+                void DescribeUpstreamHealthCheckConfigAsync(const Model::DescribeUpstreamHealthCheckConfigRequest& request, const DescribeUpstreamHealthCheckConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUpstreamHealthCheckConfigOutcomeCallable DescribeUpstreamHealthCheckConfigCallable(const Model::DescribeUpstreamHealthCheckConfigRequest& request);
+
+                /**
+                 *Query a WAF-protected domain name
+                 * @param req DescribeWafDomainsRequest
+                 * @return DescribeWafDomainsOutcome
+                 */
+                DescribeWafDomainsOutcome DescribeWafDomains(const Model::DescribeWafDomainsRequest &request);
+                void DescribeWafDomainsAsync(const Model::DescribeWafDomainsRequest& request, const DescribeWafDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWafDomainsOutcomeCallable DescribeWafDomainsCallable(const Model::DescribeWafDomainsRequest& request);
+
+                /**
+                 *Query WAF protection status
+                 * @param req DescribeWafProtectionRequest
+                 * @return DescribeWafProtectionOutcome
+                 */
+                DescribeWafProtectionOutcome DescribeWafProtection(const Model::DescribeWafProtectionRequest &request);
+                void DescribeWafProtectionAsync(const Model::DescribeWafProtectionRequest& request, const DescribeWafProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWafProtectionOutcomeCallable DescribeWafProtectionCallable(const Model::DescribeWafProtectionRequest& request);
+
+                /**
+                 *Update AS policy
+                 * @param req ModifyAutoScalerResourceStrategyRequest
+                 * @return ModifyAutoScalerResourceStrategyOutcome
+                 */
+                ModifyAutoScalerResourceStrategyOutcome ModifyAutoScalerResourceStrategy(const Model::ModifyAutoScalerResourceStrategyRequest &request);
+                void ModifyAutoScalerResourceStrategyAsync(const Model::ModifyAutoScalerResourceStrategyRequest& request, const ModifyAutoScalerResourceStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAutoScalerResourceStrategyOutcomeCallable ModifyAutoScalerResourceStrategyCallable(const Model::ModifyAutoScalerResourceStrategyRequest& request);
+
+                /**
+                 *This API is used to modify the basic information of a cloud native API gateway instance.
+                 * @param req ModifyCloudNativeAPIGatewayRequest
+                 * @return ModifyCloudNativeAPIGatewayOutcome
+                 */
+                ModifyCloudNativeAPIGatewayOutcome ModifyCloudNativeAPIGateway(const Model::ModifyCloudNativeAPIGatewayRequest &request);
+                void ModifyCloudNativeAPIGatewayAsync(const Model::ModifyCloudNativeAPIGatewayRequest& request, const ModifyCloudNativeAPIGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayOutcomeCallable ModifyCloudNativeAPIGatewayCallable(const Model::ModifyCloudNativeAPIGatewayRequest& request);
+
+                /**
+                 *Modify the grayscale rule of the cloud-native gateway
+                 * @param req ModifyCloudNativeAPIGatewayCanaryRuleRequest
+                 * @return ModifyCloudNativeAPIGatewayCanaryRuleOutcome
+                 */
+                ModifyCloudNativeAPIGatewayCanaryRuleOutcome ModifyCloudNativeAPIGatewayCanaryRule(const Model::ModifyCloudNativeAPIGatewayCanaryRuleRequest &request);
+                void ModifyCloudNativeAPIGatewayCanaryRuleAsync(const Model::ModifyCloudNativeAPIGatewayCanaryRuleRequest& request, const ModifyCloudNativeAPIGatewayCanaryRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayCanaryRuleOutcomeCallable ModifyCloudNativeAPIGatewayCanaryRuleCallable(const Model::ModifyCloudNativeAPIGatewayCanaryRuleRequest& request);
+
+                /**
+                 *Update the cloud-native gateway certificate
+                 * @param req ModifyCloudNativeAPIGatewayCertificateRequest
+                 * @return ModifyCloudNativeAPIGatewayCertificateOutcome
+                 */
+                ModifyCloudNativeAPIGatewayCertificateOutcome ModifyCloudNativeAPIGatewayCertificate(const Model::ModifyCloudNativeAPIGatewayCertificateRequest &request);
+                void ModifyCloudNativeAPIGatewayCertificateAsync(const Model::ModifyCloudNativeAPIGatewayCertificateRequest& request, const ModifyCloudNativeAPIGatewayCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayCertificateOutcomeCallable ModifyCloudNativeAPIGatewayCertificateCallable(const Model::ModifyCloudNativeAPIGatewayCertificateRequest& request);
+
+                /**
+                 *This API is used to modify a cloud-native gateway route.
+                 * @param req ModifyCloudNativeAPIGatewayRouteRequest
+                 * @return ModifyCloudNativeAPIGatewayRouteOutcome
+                 */
+                ModifyCloudNativeAPIGatewayRouteOutcome ModifyCloudNativeAPIGatewayRoute(const Model::ModifyCloudNativeAPIGatewayRouteRequest &request);
+                void ModifyCloudNativeAPIGatewayRouteAsync(const Model::ModifyCloudNativeAPIGatewayRouteRequest& request, const ModifyCloudNativeAPIGatewayRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayRouteOutcomeCallable ModifyCloudNativeAPIGatewayRouteCallable(const Model::ModifyCloudNativeAPIGatewayRouteRequest& request);
+
+                /**
+                 *This API is used to modify the traffic throttling plugin of a cloud-native gateway (Route).
+                 * @param req ModifyCloudNativeAPIGatewayRouteRateLimitRequest
+                 * @return ModifyCloudNativeAPIGatewayRouteRateLimitOutcome
+                 */
+                ModifyCloudNativeAPIGatewayRouteRateLimitOutcome ModifyCloudNativeAPIGatewayRouteRateLimit(const Model::ModifyCloudNativeAPIGatewayRouteRateLimitRequest &request);
+                void ModifyCloudNativeAPIGatewayRouteRateLimitAsync(const Model::ModifyCloudNativeAPIGatewayRouteRateLimitRequest& request, const ModifyCloudNativeAPIGatewayRouteRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayRouteRateLimitOutcomeCallable ModifyCloudNativeAPIGatewayRouteRateLimitCallable(const Model::ModifyCloudNativeAPIGatewayRouteRateLimitRequest& request);
+
+                /**
+                 *Modify a cloud-native gateway service
+                 * @param req ModifyCloudNativeAPIGatewayServiceRequest
+                 * @return ModifyCloudNativeAPIGatewayServiceOutcome
+                 */
+                ModifyCloudNativeAPIGatewayServiceOutcome ModifyCloudNativeAPIGatewayService(const Model::ModifyCloudNativeAPIGatewayServiceRequest &request);
+                void ModifyCloudNativeAPIGatewayServiceAsync(const Model::ModifyCloudNativeAPIGatewayServiceRequest& request, const ModifyCloudNativeAPIGatewayServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayServiceOutcomeCallable ModifyCloudNativeAPIGatewayServiceCallable(const Model::ModifyCloudNativeAPIGatewayServiceRequest& request);
+
+                /**
+                 *This API is used to modify the traffic throttling plugin of a cloud-native gateway (Service).
+                 * @param req ModifyCloudNativeAPIGatewayServiceRateLimitRequest
+                 * @return ModifyCloudNativeAPIGatewayServiceRateLimitOutcome
+                 */
+                ModifyCloudNativeAPIGatewayServiceRateLimitOutcome ModifyCloudNativeAPIGatewayServiceRateLimit(const Model::ModifyCloudNativeAPIGatewayServiceRateLimitRequest &request);
+                void ModifyCloudNativeAPIGatewayServiceRateLimitAsync(const Model::ModifyCloudNativeAPIGatewayServiceRateLimitRequest& request, const ModifyCloudNativeAPIGatewayServiceRateLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudNativeAPIGatewayServiceRateLimitOutcomeCallable ModifyCloudNativeAPIGatewayServiceRateLimitCallable(const Model::ModifyCloudNativeAPIGatewayServiceRateLimitRequest& request);
+
+                /**
+                 *Modify the network configuration of the Konga gateway instance
+                 * @param req ModifyConsoleNetworkRequest
+                 * @return ModifyConsoleNetworkOutcome
+                 */
+                ModifyConsoleNetworkOutcome ModifyConsoleNetwork(const Model::ModifyConsoleNetworkRequest &request);
+                void ModifyConsoleNetworkAsync(const Model::ModifyConsoleNetworkRequest& request, const ModifyConsoleNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyConsoleNetworkOutcomeCallable ModifyConsoleNetworkCallable(const Model::ModifyConsoleNetworkRequest& request);
+
+                /**
+                 *Create a lane group
+                 * @param req ModifyGovernanceLaneGroupsRequest
+                 * @return ModifyGovernanceLaneGroupsOutcome
+                 */
+                ModifyGovernanceLaneGroupsOutcome ModifyGovernanceLaneGroups(const Model::ModifyGovernanceLaneGroupsRequest &request);
+                void ModifyGovernanceLaneGroupsAsync(const Model::ModifyGovernanceLaneGroupsRequest& request, const ModifyGovernanceLaneGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyGovernanceLaneGroupsOutcomeCallable ModifyGovernanceLaneGroupsCallable(const Model::ModifyGovernanceLaneGroupsRequest& request);
+
+                /**
+                 *Modify the basic information of a cloud native API gateway instance group
+                 * @param req ModifyNativeGatewayServerGroupRequest
+                 * @return ModifyNativeGatewayServerGroupOutcome
+                 */
+                ModifyNativeGatewayServerGroupOutcome ModifyNativeGatewayServerGroup(const Model::ModifyNativeGatewayServerGroupRequest &request);
+                void ModifyNativeGatewayServerGroupAsync(const Model::ModifyNativeGatewayServerGroupRequest& request, const ModifyNativeGatewayServerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNativeGatewayServerGroupOutcomeCallable ModifyNativeGatewayServerGroupCallable(const Model::ModifyNativeGatewayServerGroupRequest& request);
+
+                /**
+                 *Modify the gateway service source
+                 * @param req ModifyNativeGatewayServiceSourceRequest
+                 * @return ModifyNativeGatewayServiceSourceOutcome
+                 */
+                ModifyNativeGatewayServiceSourceOutcome ModifyNativeGatewayServiceSource(const Model::ModifyNativeGatewayServiceSourceRequest &request);
+                void ModifyNativeGatewayServiceSourceAsync(const Model::ModifyNativeGatewayServiceSourceRequest& request, const ModifyNativeGatewayServiceSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNativeGatewayServiceSourceOutcomeCallable ModifyNativeGatewayServiceSourceCallable(const Model::ModifyNativeGatewayServiceSourceRequest& request);
+
+                /**
+                 *Modify the access policy of the Kong cloud native API gateway instance to support allowlist or blocklist.
+                 * @param req ModifyNetworkAccessStrategyRequest
+                 * @return ModifyNetworkAccessStrategyOutcome
+                 */
+                ModifyNetworkAccessStrategyOutcome ModifyNetworkAccessStrategy(const Model::ModifyNetworkAccessStrategyRequest &request);
+                void ModifyNetworkAccessStrategyAsync(const Model::ModifyNetworkAccessStrategyRequest& request, const ModifyNetworkAccessStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNetworkAccessStrategyOutcomeCallable ModifyNetworkAccessStrategyCallable(const Model::ModifyNetworkAccessStrategyRequest& request);
+
+                /**
+                 *This API is used to modify the basic information of a cloud native API gateway instance network, such as bandwidth and description, as well as specification upgrade. Only modification of client public network or private network information is supported.
+                 * @param req ModifyNetworkBasicInfoRequest
+                 * @return ModifyNetworkBasicInfoOutcome
+                 */
+                ModifyNetworkBasicInfoOutcome ModifyNetworkBasicInfo(const Model::ModifyNetworkBasicInfoRequest &request);
+                void ModifyNetworkBasicInfoAsync(const Model::ModifyNetworkBasicInfoRequest& request, const ModifyNetworkBasicInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNetworkBasicInfoOutcomeCallable ModifyNetworkBasicInfoCallable(const Model::ModifyNetworkBasicInfoRequest& request);
+
+                /**
+                 *Modify the node health status of the upstream instance for the cloud-native gateway
+                 * @param req ModifyUpstreamNodeStatusRequest
+                 * @return ModifyUpstreamNodeStatusOutcome
+                 */
+                ModifyUpstreamNodeStatusOutcome ModifyUpstreamNodeStatus(const Model::ModifyUpstreamNodeStatusRequest &request);
+                void ModifyUpstreamNodeStatusAsync(const Model::ModifyUpstreamNodeStatusRequest& request, const ModifyUpstreamNodeStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyUpstreamNodeStatusOutcomeCallable ModifyUpstreamNodeStatusCallable(const Model::ModifyUpstreamNodeStatusRequest& request);
+
+                /**
+                 *Enable WAF protection
+                 * @param req OpenWafProtectionRequest
+                 * @return OpenWafProtectionOutcome
+                 */
+                OpenWafProtectionOutcome OpenWafProtection(const Model::OpenWafProtectionRequest &request);
+                void OpenWafProtectionAsync(const Model::OpenWafProtectionRequest& request, const OpenWafProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenWafProtectionOutcomeCallable OpenWafProtectionCallable(const Model::OpenWafProtectionRequest& request);
+
+                /**
+                 *Unbind gateway groupings in batch with auto scaling policy
+                 * @param req UnbindAutoScalerResourceStrategyFromGroupsRequest
+                 * @return UnbindAutoScalerResourceStrategyFromGroupsOutcome
+                 */
+                UnbindAutoScalerResourceStrategyFromGroupsOutcome UnbindAutoScalerResourceStrategyFromGroups(const Model::UnbindAutoScalerResourceStrategyFromGroupsRequest &request);
+                void UnbindAutoScalerResourceStrategyFromGroupsAsync(const Model::UnbindAutoScalerResourceStrategyFromGroupsRequest& request, const UnbindAutoScalerResourceStrategyFromGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindAutoScalerResourceStrategyFromGroupsOutcomeCallable UnbindAutoScalerResourceStrategyFromGroupsCallable(const Model::UnbindAutoScalerResourceStrategyFromGroupsRequest& request);
+
+                /**
+                 *Modify the certificate information of a cloud-native gateway
+                 * @param req UpdateCloudNativeAPIGatewayCertificateInfoRequest
+                 * @return UpdateCloudNativeAPIGatewayCertificateInfoOutcome
+                 */
+                UpdateCloudNativeAPIGatewayCertificateInfoOutcome UpdateCloudNativeAPIGatewayCertificateInfo(const Model::UpdateCloudNativeAPIGatewayCertificateInfoRequest &request);
+                void UpdateCloudNativeAPIGatewayCertificateInfoAsync(const Model::UpdateCloudNativeAPIGatewayCertificateInfoRequest& request, const UpdateCloudNativeAPIGatewayCertificateInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCloudNativeAPIGatewayCertificateInfoOutcomeCallable UpdateCloudNativeAPIGatewayCertificateInfoCallable(const Model::UpdateCloudNativeAPIGatewayCertificateInfoRequest& request);
+
+                /**
+                 *Modify the node specification information of a cloud native API gateway instance, such as node scaling or specification adjustment
+                 * @param req UpdateCloudNativeAPIGatewaySpecRequest
+                 * @return UpdateCloudNativeAPIGatewaySpecOutcome
+                 */
+                UpdateCloudNativeAPIGatewaySpecOutcome UpdateCloudNativeAPIGatewaySpec(const Model::UpdateCloudNativeAPIGatewaySpecRequest &request);
+                void UpdateCloudNativeAPIGatewaySpecAsync(const Model::UpdateCloudNativeAPIGatewaySpecRequest& request, const UpdateCloudNativeAPIGatewaySpecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCloudNativeAPIGatewaySpecOutcomeCallable UpdateCloudNativeAPIGatewaySpecCallable(const Model::UpdateCloudNativeAPIGatewaySpecRequest& request);
+
+                /**
+                 *This API is used to update the health check configuration of the cloud-native gateway.
+                 * @param req UpdateUpstreamHealthCheckConfigRequest
+                 * @return UpdateUpstreamHealthCheckConfigOutcome
+                 */
+                UpdateUpstreamHealthCheckConfigOutcome UpdateUpstreamHealthCheckConfig(const Model::UpdateUpstreamHealthCheckConfigRequest &request);
+                void UpdateUpstreamHealthCheckConfigAsync(const Model::UpdateUpstreamHealthCheckConfigRequest& request, const UpdateUpstreamHealthCheckConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateUpstreamHealthCheckConfigOutcomeCallable UpdateUpstreamHealthCheckConfigCallable(const Model::UpdateUpstreamHealthCheckConfigRequest& request);
+
+                /**
+                 *Refresh the upstream instance list of the gateway, only supported for the IPList service type
+                 * @param req UpdateUpstreamTargetsRequest
+                 * @return UpdateUpstreamTargetsOutcome
+                 */
+                UpdateUpstreamTargetsOutcome UpdateUpstreamTargets(const Model::UpdateUpstreamTargetsRequest &request);
+                void UpdateUpstreamTargetsAsync(const Model::UpdateUpstreamTargetsRequest& request, const UpdateUpstreamTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateUpstreamTargetsOutcomeCallable UpdateUpstreamTargetsCallable(const Model::UpdateUpstreamTargetsRequest& request);
+
+            };
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TSE_V20201207_TSECLIENT_H_
