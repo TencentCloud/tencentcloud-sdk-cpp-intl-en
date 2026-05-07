@@ -278,6 +278,27 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
                      */
                     bool ReferencesHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return GlossaryIDs 
+                     * 
+                     */
+                    std::vector<std::string> GetGlossaryIDs() const;
+
+                    /**
+                     * 设置
+                     * @param _glossaryIDs 
+                     * 
+                     */
+                    void SetGlossaryIDs(const std::vector<std::string>& _glossaryIDs);
+
+                    /**
+                     * 判断参数 GlossaryIDs 是否已赋值
+                     * @return GlossaryIDs 是否已赋值
+                     * 
+                     */
+                    bool GlossaryIDsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -343,6 +364,12 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
                      */
                     std::vector<Reference> m_references;
                     bool m_referencesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_glossaryIDs;
+                    bool m_glossaryIDsHasBeenSet;
 
                 };
             }

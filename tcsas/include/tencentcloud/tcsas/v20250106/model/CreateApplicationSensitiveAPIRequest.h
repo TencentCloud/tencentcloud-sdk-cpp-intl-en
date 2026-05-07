@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取List of newly-added APIs
-                     * @return APIList List of newly-added APIs
+                     * 获取List of newly-added APIs.
+                     * @return APIList List of newly-added APIs.
                      * 
                      */
                     std::vector<CreateApplicationSensitiveAPIReq> GetAPIList() const;
 
                     /**
-                     * 设置List of newly-added APIs
-                     * @param _aPIList List of newly-added APIs
+                     * 设置List of newly-added APIs.
+                     * @param _aPIList List of newly-added APIs.
                      * 
                      */
                     void SetAPIList(const std::vector<CreateApplicationSensitiveAPIReq>& _aPIList);
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * List of newly-added APIs
+                     * List of newly-added APIs.
                      */
                     std::vector<CreateApplicationSensitiveAPIReq> m_aPIList;
                     bool m_aPIListHasBeenSet;

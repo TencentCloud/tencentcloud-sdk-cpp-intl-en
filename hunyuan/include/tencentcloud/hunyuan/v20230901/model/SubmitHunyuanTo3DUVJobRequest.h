@@ -46,10 +46,10 @@ namespace TencentCloud
                     /**
                      * 获取File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
                      * @return File File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
                      * 
                      */
                     InputFile3D GetFile() const;
@@ -57,10 +57,10 @@ Supported formats: FBX, OBJ, GLB
                     /**
                      * 设置File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
                      * @param _file File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
                      * 
                      */
                     void SetFile(const InputFile3D& _file);
@@ -77,7 +77,7 @@ Supported formats: FBX, OBJ, GLB
                     /**
                      * File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
                      */
                     InputFile3D m_file;
                     bool m_fileHasBeenSet;

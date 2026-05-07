@@ -64,27 +64,6 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取List of the members to remove
-                     * @return Uids List of the members to remove
-                     * 
-                     */
-                    std::vector<std::string> GetUids() const;
-
-                    /**
-                     * 设置List of the members to remove
-                     * @param _uids List of the members to remove
-                     * 
-                     */
-                    void SetUids(const std::vector<std::string>& _uids);
-
-                    /**
-                     * 判断参数 Uids 是否已赋值
-                     * @return Uids 是否已赋值
-                     * 
-                     */
-                    bool UidsHasBeenSet() const;
-
-                    /**
                      * 获取Operation type. `1`: Delete a room; `2`: Remove members
                      * @return DeleteType Operation type. `1`: Delete a room; `2`: Remove members
                      * 
@@ -126,6 +105,27 @@ namespace TencentCloud
                      */
                     bool BizIdHasBeenSet() const;
 
+                    /**
+                     * 获取List of the members to remove
+                     * @return Uids List of the members to remove
+                     * 
+                     */
+                    std::vector<std::string> GetUids() const;
+
+                    /**
+                     * 设置List of the members to remove
+                     * @param _uids List of the members to remove
+                     * 
+                     */
+                    void SetUids(const std::vector<std::string>& _uids);
+
+                    /**
+                     * 判断参数 Uids 是否已赋值
+                     * @return Uids 是否已赋值
+                     * 
+                     */
+                    bool UidsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -133,12 +133,6 @@ namespace TencentCloud
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
-
-                    /**
-                     * List of the members to remove
-                     */
-                    std::vector<std::string> m_uids;
-                    bool m_uidsHasBeenSet;
 
                     /**
                      * Operation type. `1`: Delete a room; `2`: Remove members
@@ -151,6 +145,12 @@ namespace TencentCloud
                      */
                     uint64_t m_bizId;
                     bool m_bizIdHasBeenSet;
+
+                    /**
+                     * List of the members to remove
+                     */
+                    std::vector<std::string> m_uids;
+                    bool m_uidsHasBeenSet;
 
                 };
             }
