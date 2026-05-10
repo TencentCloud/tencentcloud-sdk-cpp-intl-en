@@ -43,31 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Signature ID array.
-Note: the maximum length of the array is 100 by default.
-                     * @return SignIdSet Signature ID array.
-Note: the maximum length of the array is 100 by default.
-                     * 
-                     */
-                    std::vector<uint64_t> GetSignIdSet() const;
-
-                    /**
-                     * 设置Signature ID array.
-Note: the maximum length of the array is 100 by default.
-                     * @param _signIdSet Signature ID array.
-Note: the maximum length of the array is 100 by default.
-                     * 
-                     */
-                    void SetSignIdSet(const std::vector<uint64_t>& _signIdSet);
-
-                    /**
-                     * 判断参数 SignIdSet 是否已赋值
-                     * @return SignIdSet 是否已赋值
-                     * 
-                     */
-                    bool SignIdSetHasBeenSet() const;
-
-                    /**
                      * 获取Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -96,7 +71,90 @@ Note: the maximum length of the array is 100 by default.
                      */
                     bool InternationalHasBeenSet() const;
 
+                    /**
+                     * 获取Signature ID array.
+Note: the maximum length of the array is 100 by default.
+                     * @return SignIdSet Signature ID array.
+Note: the maximum length of the array is 100 by default.
+                     * 
+                     */
+                    std::vector<uint64_t> GetSignIdSet() const;
+
+                    /**
+                     * 设置Signature ID array.
+Note: the maximum length of the array is 100 by default.
+                     * @param _signIdSet Signature ID array.
+Note: the maximum length of the array is 100 by default.
+                     * 
+                     */
+                    void SetSignIdSet(const std::vector<uint64_t>& _signIdSet);
+
+                    /**
+                     * 判断参数 SignIdSet 是否已赋值
+                     * @return SignIdSet 是否已赋值
+                     * 
+                     */
+                    bool SignIdSetHasBeenSet() const;
+
+                    /**
+                     * 获取Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+                     * @return Limit Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+                     * 
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+                     * @param _limit Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+                     * 
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+                     * @return Offset Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+                     * 
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+                     * @param _offset Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+                     * 
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Whether it is Global SMS:
+0: Mainland China SMS.
+1: Global SMS.
+                     */
+                    uint64_t m_international;
+                    bool m_internationalHasBeenSet;
 
                     /**
                      * Signature ID array.
@@ -106,12 +164,18 @@ Note: the maximum length of the array is 100 by default.
                     bool m_signIdSetHasBeenSet;
 
                     /**
-                     * Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+                     * Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
                      */
-                    uint64_t m_international;
-                    bool m_internationalHasBeenSet;
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                 };
             }

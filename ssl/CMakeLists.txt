@@ -72,6 +72,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/ResourceTypeRegions.h
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordResponse.h
+  include/tencentcloud/ssl/v20191205/model/CertificateOrderSubmitRequest.h
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskDetailResponse.h
   include/tencentcloud/ssl/v20191205/model/DvAuthDetail.h
@@ -129,6 +130,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/DeleteCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateOperateLogsResponse.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateProjectRequest.h
+  include/tencentcloud/ssl/v20191205/model/CertificateInfoSubmitResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListResponse.h
   include/tencentcloud/ssl/v20191205/model/UploadUpdateRecordInfo.h
   include/tencentcloud/ssl/v20191205/model/CancelAuditCertificateRequest.h
@@ -152,8 +154,10 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/UploadConfirmLetterRequest.h
   include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeCSRResponse.h
+  include/tencentcloud/ssl/v20191205/model/CertificateInfoSubmitRequest.h
   include/tencentcloud/ssl/v20191205/model/ClbInstanceList.h
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRetryResponse.h
+  include/tencentcloud/ssl/v20191205/model/CertificateOrderSubmitResponse.h
   include/tencentcloud/ssl/v20191205/model/TCBHostService.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordDetailRequest.h
   include/tencentcloud/ssl/v20191205/model/TkeIngressDetail.h
@@ -218,6 +222,7 @@ set(ssl_src
   src/v20191205/model/ResourceTypeRegions.cpp
   src/v20191205/model/UpdateCertificateRecordRollbackRequest.cpp
   src/v20191205/model/DescribeHostUpdateRecordResponse.cpp
+  src/v20191205/model/CertificateOrderSubmitRequest.cpp
   src/v20191205/model/UpdateCertificateRecordRollbackResponse.cpp
   src/v20191205/model/DescribeCertificateBindResourceTaskDetailResponse.cpp
   src/v20191205/model/DvAuthDetail.cpp
@@ -275,6 +280,7 @@ set(ssl_src
   src/v20191205/model/DeleteCertificateRequest.cpp
   src/v20191205/model/DescribeCertificateOperateLogsResponse.cpp
   src/v20191205/model/ModifyCertificateProjectRequest.cpp
+  src/v20191205/model/CertificateInfoSubmitResponse.cpp
   src/v20191205/model/DescribeHostTeoInstanceListResponse.cpp
   src/v20191205/model/UploadUpdateRecordInfo.cpp
   src/v20191205/model/CancelAuditCertificateRequest.cpp
@@ -298,8 +304,10 @@ set(ssl_src
   src/v20191205/model/UploadConfirmLetterRequest.cpp
   src/v20191205/model/SubmitCertificateInformationResponse.cpp
   src/v20191205/model/DescribeCSRResponse.cpp
+  src/v20191205/model/CertificateInfoSubmitRequest.cpp
   src/v20191205/model/ClbInstanceList.cpp
   src/v20191205/model/UpdateCertificateRecordRetryResponse.cpp
+  src/v20191205/model/CertificateOrderSubmitResponse.cpp
   src/v20191205/model/TCBHostService.cpp
   src/v20191205/model/DescribeHostUploadUpdateRecordDetailRequest.cpp
   src/v20191205/model/TkeIngressDetail.cpp

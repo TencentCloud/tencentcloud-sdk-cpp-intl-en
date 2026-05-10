@@ -29,6 +29,8 @@
 #include <tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeAutoRiggingJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/DescribeAutoRiggingJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobRequest.h>
@@ -43,6 +45,8 @@
 #include <tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/Submit3DSmartTopologyJobResponse.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitAutoRiggingJobRequest.h>
+#include <tencentcloud/hunyuan/v20230901/model/SubmitAutoRiggingJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitConvert3DFormatJobRequest.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitConvert3DFormatJobResponse.h>
 #include <tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h>
@@ -78,6 +82,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Describe3DSmartTopologyJobResponse> Describe3DSmartTopologyJobOutcome;
                 typedef std::future<Describe3DSmartTopologyJobOutcome> Describe3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Describe3DSmartTopologyJobRequest&, Describe3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Describe3DSmartTopologyJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoRiggingJobResponse> DescribeAutoRiggingJobOutcome;
+                typedef std::future<DescribeAutoRiggingJobOutcome> DescribeAutoRiggingJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::DescribeAutoRiggingJobRequest&, DescribeAutoRiggingJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoRiggingJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConvert3DFormatJobResponse> DescribeConvert3DFormatJobOutcome;
                 typedef std::future<DescribeConvert3DFormatJobOutcome> DescribeConvert3DFormatJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::DescribeConvert3DFormatJobRequest&, DescribeConvert3DFormatJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConvert3DFormatJobAsyncHandler;
@@ -99,6 +106,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::Submit3DSmartTopologyJobResponse> Submit3DSmartTopologyJobOutcome;
                 typedef std::future<Submit3DSmartTopologyJobOutcome> Submit3DSmartTopologyJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::Submit3DSmartTopologyJobRequest&, Submit3DSmartTopologyJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> Submit3DSmartTopologyJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitAutoRiggingJobResponse> SubmitAutoRiggingJobOutcome;
+                typedef std::future<SubmitAutoRiggingJobOutcome> SubmitAutoRiggingJobOutcomeCallable;
+                typedef std::function<void(const HunyuanClient*, const Model::SubmitAutoRiggingJobRequest&, SubmitAutoRiggingJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitAutoRiggingJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::SubmitConvert3DFormatJobResponse> SubmitConvert3DFormatJobOutcome;
                 typedef std::future<SubmitConvert3DFormatJobOutcome> SubmitConvert3DFormatJobOutcomeCallable;
                 typedef std::function<void(const HunyuanClient*, const Model::SubmitConvert3DFormatJobRequest&, SubmitConvert3DFormatJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitConvert3DFormatJobAsyncHandler;
@@ -152,6 +162,15 @@ namespace TencentCloud
                 Describe3DSmartTopologyJobOutcome Describe3DSmartTopologyJob(const Model::Describe3DSmartTopologyJobRequest &request);
                 void Describe3DSmartTopologyJobAsync(const Model::Describe3DSmartTopologyJobRequest& request, const Describe3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 Describe3DSmartTopologyJobOutcomeCallable Describe3DSmartTopologyJobCallable(const Model::Describe3DSmartTopologyJobRequest& request);
+
+                /**
+                 *3D Model Auto Rigging API, powered by the Hunyuan Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+                 * @param req DescribeAutoRiggingJobRequest
+                 * @return DescribeAutoRiggingJobOutcome
+                 */
+                DescribeAutoRiggingJobOutcome DescribeAutoRiggingJob(const Model::DescribeAutoRiggingJobRequest &request);
+                void DescribeAutoRiggingJobAsync(const Model::DescribeAutoRiggingJobRequest& request, const DescribeAutoRiggingJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoRiggingJobOutcomeCallable DescribeAutoRiggingJobCallable(const Model::DescribeAutoRiggingJobRequest& request);
 
                 /**
                  *According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
@@ -218,6 +237,15 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
                 Submit3DSmartTopologyJobOutcome Submit3DSmartTopologyJob(const Model::Submit3DSmartTopologyJobRequest &request);
                 void Submit3DSmartTopologyJobAsync(const Model::Submit3DSmartTopologyJobRequest& request, const Submit3DSmartTopologyJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 Submit3DSmartTopologyJobOutcomeCallable Submit3DSmartTopologyJobCallable(const Model::Submit3DSmartTopologyJobRequest& request);
+
+                /**
+                 *3D Model Auto Rigging API, powered by the HY Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+                 * @param req SubmitAutoRiggingJobRequest
+                 * @return SubmitAutoRiggingJobOutcome
+                 */
+                SubmitAutoRiggingJobOutcome SubmitAutoRiggingJob(const Model::SubmitAutoRiggingJobRequest &request);
+                void SubmitAutoRiggingJobAsync(const Model::SubmitAutoRiggingJobRequest& request, const SubmitAutoRiggingJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitAutoRiggingJobOutcomeCallable SubmitAutoRiggingJobCallable(const Model::SubmitAutoRiggingJobRequest& request);
 
                 /**
                  *After inputting the 3D model file, the system will automatically convert it to the required format. The maximum supported file size is 200MB.

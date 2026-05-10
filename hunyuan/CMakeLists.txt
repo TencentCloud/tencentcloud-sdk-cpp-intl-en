@@ -30,6 +30,8 @@ set(hunyuan_public_header_model
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DTextureEditJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Usage.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitAutoRiggingJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/DescribeAutoRiggingJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/ChatTranslationsRequest.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobRequest.h
@@ -40,16 +42,18 @@ set(hunyuan_public_header_model
   include/tencentcloud/hunyuan/v20230901/model/SubmitConvert3DFormatJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/InputFile3D.h
   include/tencentcloud/hunyuan/v20230901/model/TranslationDelta.h
+  include/tencentcloud/hunyuan/v20230901/model/TranslationMessage.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/SubmitAutoRiggingJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DUVJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.h
+  include/tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/Convert3DFormatResponse.h
   include/tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuan3DPartJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobResponse.h
-  include/tencentcloud/hunyuan/v20230901/model/DescribeHunyuanTo3DUVJobResponse.h
+  include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/Reference.h
   include/tencentcloud/hunyuan/v20230901/model/ImageInfo.h
   include/tencentcloud/hunyuan/v20230901/model/SubmitHunyuanTo3DProJobResponse.h
@@ -58,7 +62,7 @@ set(hunyuan_public_header_model
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DProJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuan3DPartJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobRequest.h
-  include/tencentcloud/hunyuan/v20230901/model/TranslationMessage.h
+  include/tencentcloud/hunyuan/v20230901/model/DescribeAutoRiggingJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/QueryHunyuanTo3DRapidJobRequest.h
   include/tencentcloud/hunyuan/v20230901/model/DescribeConvert3DFormatJobResponse.h
   include/tencentcloud/hunyuan/v20230901/model/Describe3DSmartTopologyJobRequest.h
@@ -77,6 +81,8 @@ set(hunyuan_src
   src/v20230901/model/SubmitHunyuanTo3DTextureEditJobRequest.cpp
   src/v20230901/model/Usage.cpp
   src/v20230901/model/SubmitHunyuanTo3DRapidJobResponse.cpp
+  src/v20230901/model/SubmitAutoRiggingJobResponse.cpp
+  src/v20230901/model/DescribeAutoRiggingJobResponse.cpp
   src/v20230901/model/ChatTranslationsRequest.cpp
   src/v20230901/model/QueryHunyuanTo3DTextureEditJobResponse.cpp
   src/v20230901/model/SubmitHunyuanTo3DUVJobRequest.cpp
@@ -87,16 +93,18 @@ set(hunyuan_src
   src/v20230901/model/SubmitConvert3DFormatJobRequest.cpp
   src/v20230901/model/InputFile3D.cpp
   src/v20230901/model/TranslationDelta.cpp
+  src/v20230901/model/TranslationMessage.cpp
   src/v20230901/model/SubmitHunyuanTo3DRapidJobRequest.cpp
+  src/v20230901/model/SubmitAutoRiggingJobRequest.cpp
   src/v20230901/model/SubmitHunyuanTo3DUVJobResponse.cpp
   src/v20230901/model/SubmitHunyuan3DPartJobResponse.cpp
   src/v20230901/model/SubmitHunyuanTo3DProJobRequest.cpp
-  src/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.cpp
+  src/v20230901/model/DescribeHunyuanTo3DUVJobResponse.cpp
   src/v20230901/model/Convert3DFormatResponse.cpp
   src/v20230901/model/DescribeHunyuanTo3DUVJobRequest.cpp
   src/v20230901/model/SubmitHunyuan3DPartJobRequest.cpp
   src/v20230901/model/Describe3DSmartTopologyJobResponse.cpp
-  src/v20230901/model/DescribeHunyuanTo3DUVJobResponse.cpp
+  src/v20230901/model/QueryHunyuanTo3DTextureEditJobRequest.cpp
   src/v20230901/model/Reference.cpp
   src/v20230901/model/ImageInfo.cpp
   src/v20230901/model/SubmitHunyuanTo3DProJobResponse.cpp
@@ -105,7 +113,7 @@ set(hunyuan_src
   src/v20230901/model/QueryHunyuanTo3DProJobResponse.cpp
   src/v20230901/model/QueryHunyuan3DPartJobRequest.cpp
   src/v20230901/model/DescribeConvert3DFormatJobRequest.cpp
-  src/v20230901/model/TranslationMessage.cpp
+  src/v20230901/model/DescribeAutoRiggingJobRequest.cpp
   src/v20230901/model/QueryHunyuanTo3DRapidJobRequest.cpp
   src/v20230901/model/DescribeConvert3DFormatJobResponse.cpp
   src/v20230901/model/Describe3DSmartTopologyJobRequest.cpp

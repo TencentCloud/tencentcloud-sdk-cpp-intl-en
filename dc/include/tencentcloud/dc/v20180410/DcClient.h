@@ -140,7 +140,7 @@ namespace TencentCloud
                 AcceptDirectConnectTunnelOutcomeCallable AcceptDirectConnectTunnelCallable(const Model::AcceptDirectConnectTunnelRequest& request);
 
                 /**
-                 *This API is used to apply for an internet tunnel’s CIDR block.
+                 *This API is used to apply for an internet tunnel's CIDR block.
                  * @param req ApplyInternetAddressRequest
                  * @return ApplyInternetAddressOutcome
                  */
@@ -190,7 +190,6 @@ Only connected connections can be deleted.
 
                 /**
                  *This API is used to query connection access points.
-
                  * @param req DescribeAccessPointsRequest
                  * @return DescribeAccessPointsOutcome
                  */

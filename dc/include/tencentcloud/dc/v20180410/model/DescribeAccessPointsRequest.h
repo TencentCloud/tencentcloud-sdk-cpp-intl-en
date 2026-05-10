@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dc/v20180410/model/Filter.h>
 
 
 namespace TencentCloud
@@ -113,6 +114,27 @@ You can call `DescribeRegions` to get the region ID.
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Filters 
+                     * 
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置
+                     * @param _filters 
+                     * 
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +156,12 @@ You can call `DescribeRegions` to get the region ID.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

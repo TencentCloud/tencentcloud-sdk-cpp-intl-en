@@ -39,7 +39,10 @@ CreateDirectConnectRequest::CreateDirectConnectRequest() :
     m_customerContactNumberHasBeenSet(false),
     m_faultReportContactPersonHasBeenSet(false),
     m_faultReportContactNumberHasBeenSet(false),
-    m_signLawHasBeenSet(false)
+    m_faultReportContactEmailHasBeenSet(false),
+    m_signLawHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_isMacSecHasBeenSet(false)
 {
 }
 
@@ -178,12 +181,43 @@ string CreateDirectConnectRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_faultReportContactNumber.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_faultReportContactEmailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaultReportContactEmail";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_faultReportContactEmail.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_signLawHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignLaw";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_signLaw, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_isMacSecHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsMacSec";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isMacSec, allocator);
     }
 
 
@@ -450,6 +484,22 @@ bool CreateDirectConnectRequest::FaultReportContactNumberHasBeenSet() const
     return m_faultReportContactNumberHasBeenSet;
 }
 
+string CreateDirectConnectRequest::GetFaultReportContactEmail() const
+{
+    return m_faultReportContactEmail;
+}
+
+void CreateDirectConnectRequest::SetFaultReportContactEmail(const string& _faultReportContactEmail)
+{
+    m_faultReportContactEmail = _faultReportContactEmail;
+    m_faultReportContactEmailHasBeenSet = true;
+}
+
+bool CreateDirectConnectRequest::FaultReportContactEmailHasBeenSet() const
+{
+    return m_faultReportContactEmailHasBeenSet;
+}
+
 bool CreateDirectConnectRequest::GetSignLaw() const
 {
     return m_signLaw;
@@ -464,6 +514,38 @@ void CreateDirectConnectRequest::SetSignLaw(const bool& _signLaw)
 bool CreateDirectConnectRequest::SignLawHasBeenSet() const
 {
     return m_signLawHasBeenSet;
+}
+
+vector<Tag> CreateDirectConnectRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateDirectConnectRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateDirectConnectRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+bool CreateDirectConnectRequest::GetIsMacSec() const
+{
+    return m_isMacSec;
+}
+
+void CreateDirectConnectRequest::SetIsMacSec(const bool& _isMacSec)
+{
+    m_isMacSec = _isMacSec;
+    m_isMacSecHasBeenSet = true;
+}
+
+bool CreateDirectConnectRequest::IsMacSecHasBeenSet() const
+{
+    return m_isMacSecHasBeenSet;
 }
 
 

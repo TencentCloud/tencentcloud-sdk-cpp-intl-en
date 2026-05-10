@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dc/v20180410/model/Tag.h>
 
 
 namespace TencentCloud
@@ -383,6 +384,27 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                     bool FaultReportContactNumberHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return FaultReportContactEmail 
+                     * 
+                     */
+                    std::string GetFaultReportContactEmail() const;
+
+                    /**
+                     * 设置
+                     * @param _faultReportContactEmail 
+                     * 
+                     */
+                    void SetFaultReportContactEmail(const std::string& _faultReportContactEmail);
+
+                    /**
+                     * 判断参数 FaultReportContactEmail 是否已赋值
+                     * @return FaultReportContactEmail 是否已赋值
+                     * 
+                     */
+                    bool FaultReportContactEmailHasBeenSet() const;
+
+                    /**
                      * 获取Whether the connection applicant has signed the service agreement. Default value: true.
                      * @return SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
                      * 
@@ -402,6 +424,48 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                      * 
                      */
                     bool SignLawHasBeenSet() const;
+
+                    /**
+                     * 获取Tag key-value pair
+                     * @return Tags Tag key-value pair
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag key-value pair
+                     * @param _tags Tag key-value pair
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Is MACsec required
+                     * @return IsMacSec Is MACsec required
+                     * 
+                     */
+                    bool GetIsMacSec() const;
+
+                    /**
+                     * 设置Is MACsec required
+                     * @param _isMacSec Is MACsec required
+                     * 
+                     */
+                    void SetIsMacSec(const bool& _isMacSec);
+
+                    /**
+                     * 判断参数 IsMacSec 是否已赋值
+                     * @return IsMacSec 是否已赋值
+                     * 
+                     */
+                    bool IsMacSecHasBeenSet() const;
 
                 private:
 
@@ -503,10 +567,28 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                     bool m_faultReportContactNumberHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_faultReportContactEmail;
+                    bool m_faultReportContactEmailHasBeenSet;
+
+                    /**
                      * Whether the connection applicant has signed the service agreement. Default value: true.
                      */
                     bool m_signLaw;
                     bool m_signLawHasBeenSet;
+
+                    /**
+                     * Tag key-value pair
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Is MACsec required
+                     */
+                    bool m_isMacSec;
+                    bool m_isMacSecHasBeenSet;
 
                 };
             }

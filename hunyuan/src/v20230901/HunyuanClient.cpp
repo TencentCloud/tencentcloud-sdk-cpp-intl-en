@@ -190,6 +190,56 @@ HunyuanClient::Describe3DSmartTopologyJobOutcomeCallable HunyuanClient::Describe
     return prom->get_future();
 }
 
+HunyuanClient::DescribeAutoRiggingJobOutcome HunyuanClient::DescribeAutoRiggingJob(const DescribeAutoRiggingJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAutoRiggingJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAutoRiggingJobResponse rsp = DescribeAutoRiggingJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAutoRiggingJobOutcome(rsp);
+        else
+            return DescribeAutoRiggingJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAutoRiggingJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::DescribeAutoRiggingJobAsync(const DescribeAutoRiggingJobRequest& request, const DescribeAutoRiggingJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAutoRiggingJobRequest&;
+    using Resp = DescribeAutoRiggingJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAutoRiggingJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::DescribeAutoRiggingJobOutcomeCallable HunyuanClient::DescribeAutoRiggingJobCallable(const DescribeAutoRiggingJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAutoRiggingJobOutcome>>();
+    DescribeAutoRiggingJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const DescribeAutoRiggingJobRequest&,
+        DescribeAutoRiggingJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 HunyuanClient::DescribeConvert3DFormatJobOutcome HunyuanClient::DescribeConvert3DFormatJob(const DescribeConvert3DFormatJobRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConvert3DFormatJob");
@@ -532,6 +582,56 @@ HunyuanClient::Submit3DSmartTopologyJobOutcomeCallable HunyuanClient::Submit3DSm
         const HunyuanClient*,
         const Submit3DSmartTopologyJobRequest&,
         Submit3DSmartTopologyJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+HunyuanClient::SubmitAutoRiggingJobOutcome HunyuanClient::SubmitAutoRiggingJob(const SubmitAutoRiggingJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "SubmitAutoRiggingJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SubmitAutoRiggingJobResponse rsp = SubmitAutoRiggingJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SubmitAutoRiggingJobOutcome(rsp);
+        else
+            return SubmitAutoRiggingJobOutcome(o.GetError());
+    }
+    else
+    {
+        return SubmitAutoRiggingJobOutcome(outcome.GetError());
+    }
+}
+
+void HunyuanClient::SubmitAutoRiggingJobAsync(const SubmitAutoRiggingJobRequest& request, const SubmitAutoRiggingJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SubmitAutoRiggingJobRequest&;
+    using Resp = SubmitAutoRiggingJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SubmitAutoRiggingJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+HunyuanClient::SubmitAutoRiggingJobOutcomeCallable HunyuanClient::SubmitAutoRiggingJobCallable(const SubmitAutoRiggingJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SubmitAutoRiggingJobOutcome>>();
+    SubmitAutoRiggingJobAsync(
+    request,
+    [prom](
+        const HunyuanClient*,
+        const SubmitAutoRiggingJobRequest&,
+        SubmitAutoRiggingJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

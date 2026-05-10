@@ -127,6 +127,90 @@ namespace TencentCloud
                      */
                     bool AllDeadToAliveHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return RescheduleUnbindRs 
+                     * 
+                     */
+                    bool GetRescheduleUnbindRs() const;
+
+                    /**
+                     * 设置
+                     * @param _rescheduleUnbindRs 
+                     * 
+                     */
+                    void SetRescheduleUnbindRs(const bool& _rescheduleUnbindRs);
+
+                    /**
+                     * 判断参数 RescheduleUnbindRs 是否已赋值
+                     * @return RescheduleUnbindRs 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnbindRsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RescheduleUnbindRsStartTime 
+                     * 
+                     */
+                    int64_t GetRescheduleUnbindRsStartTime() const;
+
+                    /**
+                     * 设置
+                     * @param _rescheduleUnbindRsStartTime 
+                     * 
+                     */
+                    void SetRescheduleUnbindRsStartTime(const int64_t& _rescheduleUnbindRsStartTime);
+
+                    /**
+                     * 判断参数 RescheduleUnbindRsStartTime 是否已赋值
+                     * @return RescheduleUnbindRsStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnbindRsStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RescheduleUnhealthy 
+                     * 
+                     */
+                    bool GetRescheduleUnhealthy() const;
+
+                    /**
+                     * 设置
+                     * @param _rescheduleUnhealthy 
+                     * 
+                     */
+                    void SetRescheduleUnhealthy(const bool& _rescheduleUnhealthy);
+
+                    /**
+                     * 判断参数 RescheduleUnhealthy 是否已赋值
+                     * @return RescheduleUnhealthy 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnhealthyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RescheduleUnhealthyStartTime 
+                     * 
+                     */
+                    int64_t GetRescheduleUnhealthyStartTime() const;
+
+                    /**
+                     * 设置
+                     * @param _rescheduleUnhealthyStartTime 
+                     * 
+                     */
+                    void SetRescheduleUnhealthyStartTime(const int64_t& _rescheduleUnhealthyStartTime);
+
+                    /**
+                     * 判断参数 RescheduleUnhealthyStartTime 是否已赋值
+                     * @return RescheduleUnhealthyStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnhealthyStartTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +236,30 @@ namespace TencentCloud
                      */
                     bool m_allDeadToAlive;
                     bool m_allDeadToAliveHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_rescheduleUnbindRs;
+                    bool m_rescheduleUnbindRsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_rescheduleUnbindRsStartTime;
+                    bool m_rescheduleUnbindRsStartTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_rescheduleUnhealthy;
+                    bool m_rescheduleUnhealthyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_rescheduleUnhealthyStartTime;
+                    bool m_rescheduleUnhealthyStartTimeHasBeenSet;
 
                 };
             }

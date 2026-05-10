@@ -940,6 +940,56 @@ IntlpartnersmgtClient::DescribeCustomerOwnVoucherListOutcomeCallable Intlpartner
     return prom->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerOwnVoucherUsageDetailsOutcome IntlpartnersmgtClient::DescribeCustomerOwnVoucherUsageDetails(const DescribeCustomerOwnVoucherUsageDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerOwnVoucherUsageDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerOwnVoucherUsageDetailsResponse rsp = DescribeCustomerOwnVoucherUsageDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerOwnVoucherUsageDetailsOutcome(rsp);
+        else
+            return DescribeCustomerOwnVoucherUsageDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerOwnVoucherUsageDetailsOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerOwnVoucherUsageDetailsAsync(const DescribeCustomerOwnVoucherUsageDetailsRequest& request, const DescribeCustomerOwnVoucherUsageDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCustomerOwnVoucherUsageDetailsRequest&;
+    using Resp = DescribeCustomerOwnVoucherUsageDetailsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCustomerOwnVoucherUsageDetails", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IntlpartnersmgtClient::DescribeCustomerOwnVoucherUsageDetailsOutcomeCallable IntlpartnersmgtClient::DescribeCustomerOwnVoucherUsageDetailsCallable(const DescribeCustomerOwnVoucherUsageDetailsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCustomerOwnVoucherUsageDetailsOutcome>>();
+    DescribeCustomerOwnVoucherUsageDetailsAsync(
+    request,
+    [prom](
+        const IntlpartnersmgtClient*,
+        const DescribeCustomerOwnVoucherUsageDetailsRequest&,
+        DescribeCustomerOwnVoucherUsageDetailsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerUinOutcome IntlpartnersmgtClient::DescribeCustomerUin(const DescribeCustomerUinRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerUin");

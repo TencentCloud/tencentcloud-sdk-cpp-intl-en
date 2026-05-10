@@ -240,6 +240,106 @@ SslClient::CancelCertificateOrderOutcomeCallable SslClient::CancelCertificateOrd
     return prom->get_future();
 }
 
+SslClient::CertificateInfoSubmitOutcome SslClient::CertificateInfoSubmit(const CertificateInfoSubmitRequest &request)
+{
+    auto outcome = MakeRequest(request, "CertificateInfoSubmit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CertificateInfoSubmitResponse rsp = CertificateInfoSubmitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CertificateInfoSubmitOutcome(rsp);
+        else
+            return CertificateInfoSubmitOutcome(o.GetError());
+    }
+    else
+    {
+        return CertificateInfoSubmitOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CertificateInfoSubmitAsync(const CertificateInfoSubmitRequest& request, const CertificateInfoSubmitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CertificateInfoSubmitRequest&;
+    using Resp = CertificateInfoSubmitResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CertificateInfoSubmit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::CertificateInfoSubmitOutcomeCallable SslClient::CertificateInfoSubmitCallable(const CertificateInfoSubmitRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CertificateInfoSubmitOutcome>>();
+    CertificateInfoSubmitAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const CertificateInfoSubmitRequest&,
+        CertificateInfoSubmitOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SslClient::CertificateOrderSubmitOutcome SslClient::CertificateOrderSubmit(const CertificateOrderSubmitRequest &request)
+{
+    auto outcome = MakeRequest(request, "CertificateOrderSubmit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CertificateOrderSubmitResponse rsp = CertificateOrderSubmitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CertificateOrderSubmitOutcome(rsp);
+        else
+            return CertificateOrderSubmitOutcome(o.GetError());
+    }
+    else
+    {
+        return CertificateOrderSubmitOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CertificateOrderSubmitAsync(const CertificateOrderSubmitRequest& request, const CertificateOrderSubmitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CertificateOrderSubmitRequest&;
+    using Resp = CertificateOrderSubmitResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CertificateOrderSubmit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::CertificateOrderSubmitOutcomeCallable SslClient::CertificateOrderSubmitCallable(const CertificateOrderSubmitRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CertificateOrderSubmitOutcome>>();
+    CertificateOrderSubmitAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const CertificateOrderSubmitRequest&,
+        CertificateOrderSubmitOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SslClient::CommitCertificateInformationOutcome SslClient::CommitCertificateInformation(const CommitCertificateInformationRequest &request)
 {
     auto outcome = MakeRequest(request, "CommitCertificateInformation");

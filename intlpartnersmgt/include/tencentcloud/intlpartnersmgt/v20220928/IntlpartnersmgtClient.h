@@ -59,6 +59,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherUsageDetailsRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherUsageDetailsResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherListRequest.h>
@@ -177,6 +179,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerOwnVoucherListResponse> DescribeCustomerOwnVoucherListOutcome;
                 typedef std::future<DescribeCustomerOwnVoucherListOutcome> DescribeCustomerOwnVoucherListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnVoucherListRequest&, DescribeCustomerOwnVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnVoucherListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerOwnVoucherUsageDetailsResponse> DescribeCustomerOwnVoucherUsageDetailsOutcome;
+                typedef std::future<DescribeCustomerOwnVoucherUsageDetailsOutcome> DescribeCustomerOwnVoucherUsageDetailsOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnVoucherUsageDetailsRequest&, DescribeCustomerOwnVoucherUsageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnVoucherUsageDetailsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerUinResponse> DescribeCustomerUinOutcome;
                 typedef std::future<DescribeCustomerUinOutcome> DescribeCustomerUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerUinRequest&, DescribeCustomerUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerUinAsyncHandler;
@@ -450,6 +455,16 @@ Callable roles: Customer.
                 DescribeCustomerOwnVoucherListOutcome DescribeCustomerOwnVoucherList(const Model::DescribeCustomerOwnVoucherListRequest &request);
                 void DescribeCustomerOwnVoucherListAsync(const Model::DescribeCustomerOwnVoucherListRequest& request, const DescribeCustomerOwnVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerOwnVoucherListOutcomeCallable DescribeCustomerOwnVoucherListCallable(const Model::DescribeCustomerOwnVoucherListRequest& request);
+
+                /**
+                 *Description: The current API is used to query usage details of customer's own voucher by the customer self.
+Call role: End customer.
+                 * @param req DescribeCustomerOwnVoucherUsageDetailsRequest
+                 * @return DescribeCustomerOwnVoucherUsageDetailsOutcome
+                 */
+                DescribeCustomerOwnVoucherUsageDetailsOutcome DescribeCustomerOwnVoucherUsageDetails(const Model::DescribeCustomerOwnVoucherUsageDetailsRequest &request);
+                void DescribeCustomerOwnVoucherUsageDetailsAsync(const Model::DescribeCustomerOwnVoucherUsageDetailsRequest& request, const DescribeCustomerOwnVoucherUsageDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerOwnVoucherUsageDetailsOutcomeCallable DescribeCustomerOwnVoucherUsageDetailsCallable(const Model::DescribeCustomerOwnVoucherUsageDetailsRequest& request);
 
                 /**
                  *This API is used to query the list of customer UINs.

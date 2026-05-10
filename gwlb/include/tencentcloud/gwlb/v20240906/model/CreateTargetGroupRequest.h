@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/gwlb/v20240906/model/TargetGroupInstance.h>
 #include <tencentcloud/gwlb/v20240906/model/TargetGroupHealthCheck.h>
+#include <tencentcloud/gwlb/v20240906/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -228,6 +229,148 @@ namespace TencentCloud
                      */
                     bool AllDeadToAliveHasBeenSet() const;
 
+                    /**
+                     * 获取Tags
+                     * @return Tags Tags
+                     * 
+                     */
+                    std::vector<TagInfo> GetTags() const;
+
+                    /**
+                     * 设置Tags
+                     * @param _tags Tags
+                     * 
+                     */
+                    void SetTags(const std::vector<TagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+                     * @return ForwardingMode Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+                     * 
+                     */
+                    std::string GetForwardingMode() const;
+
+                    /**
+                     * 设置Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+                     * @param _forwardingMode Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+                     * 
+                     */
+                    void SetForwardingMode(const std::string& _forwardingMode);
+
+                    /**
+                     * 判断参数 ForwardingMode 是否已赋值
+                     * @return ForwardingMode 是否已赋值
+                     * 
+                     */
+                    bool ForwardingModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+                     * @return RescheduleUnbindRs <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+                     * 
+                     */
+                    bool GetRescheduleUnbindRs() const;
+
+                    /**
+                     * 设置<p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+                     * @param _rescheduleUnbindRs <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+                     * 
+                     */
+                    void SetRescheduleUnbindRs(const bool& _rescheduleUnbindRs);
+
+                    /**
+                     * 判断参数 RescheduleUnbindRs 是否已赋值
+                     * @return RescheduleUnbindRs 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnbindRsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+                     * @return RescheduleUnbindRsStartTime <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+                     * 
+                     */
+                    int64_t GetRescheduleUnbindRsStartTime() const;
+
+                    /**
+                     * 设置<p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+                     * @param _rescheduleUnbindRsStartTime <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+                     * 
+                     */
+                    void SetRescheduleUnbindRsStartTime(const int64_t& _rescheduleUnbindRsStartTime);
+
+                    /**
+                     * 判断参数 RescheduleUnbindRsStartTime 是否已赋值
+                     * @return RescheduleUnbindRsStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnbindRsStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+                     * @return RescheduleUnhealthy <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+                     * 
+                     */
+                    bool GetRescheduleUnhealthy() const;
+
+                    /**
+                     * 设置<p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+                     * @param _rescheduleUnhealthy <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+                     * 
+                     */
+                    void SetRescheduleUnhealthy(const bool& _rescheduleUnhealthy);
+
+                    /**
+                     * 判断参数 RescheduleUnhealthy 是否已赋值
+                     * @return RescheduleUnhealthy 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnhealthyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+                     * @return RescheduleUnhealthyStartTime <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+                     * 
+                     */
+                    int64_t GetRescheduleUnhealthyStartTime() const;
+
+                    /**
+                     * 设置<p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+                     * @param _rescheduleUnhealthyStartTime <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+                     * 
+                     */
+                    void SetRescheduleUnhealthyStartTime(const int64_t& _rescheduleUnhealthyStartTime);
+
+                    /**
+                     * 判断参数 RescheduleUnhealthyStartTime 是否已赋值
+                     * @return RescheduleUnhealthyStartTime 是否已赋值
+                     * 
+                     */
+                    bool RescheduleUnhealthyStartTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -281,6 +424,46 @@ namespace TencentCloud
                      */
                     bool m_allDeadToAlive;
                     bool m_allDeadToAliveHasBeenSet;
+
+                    /**
+                     * Tags
+                     */
+                    std::vector<TagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+                     */
+                    std::string m_forwardingMode;
+                    bool m_forwardingModeHasBeenSet;
+
+                    /**
+                     * <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+                     */
+                    bool m_rescheduleUnbindRs;
+                    bool m_rescheduleUnbindRsHasBeenSet;
+
+                    /**
+                     * <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+                     */
+                    int64_t m_rescheduleUnbindRsStartTime;
+                    bool m_rescheduleUnbindRsStartTimeHasBeenSet;
+
+                    /**
+                     * <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+                     */
+                    bool m_rescheduleUnhealthy;
+                    bool m_rescheduleUnhealthyHasBeenSet;
+
+                    /**
+                     * <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+                     */
+                    int64_t m_rescheduleUnhealthyStartTime;
+                    bool m_rescheduleUnhealthyStartTimeHasBeenSet;
 
                 };
             }

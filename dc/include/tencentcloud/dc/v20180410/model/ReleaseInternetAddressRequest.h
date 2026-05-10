@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the internet tunnel’s public IP address
-                     * @return InstanceId ID of the internet tunnel’s public IP address
+                     * 获取ID of the internet tunnel's public IP address
+                     * @return InstanceId ID of the internet tunnel's public IP address
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the internet tunnel’s public IP address
-                     * @param _instanceId ID of the internet tunnel’s public IP address
+                     * 设置ID of the internet tunnel's public IP address
+                     * @param _instanceId ID of the internet tunnel's public IP address
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the internet tunnel’s public IP address
+                     * ID of the internet tunnel's public IP address
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -274,6 +274,27 @@ namespace TencentCloud
                     bool FaultReportContactNumberHasBeenSet() const;
 
                     /**
+                     * 获取Fault reporting contact email
+                     * @return FaultReportContactEmail Fault reporting contact email
+                     * 
+                     */
+                    std::string GetFaultReportContactEmail() const;
+
+                    /**
+                     * 设置Fault reporting contact email
+                     * @param _faultReportContactEmail Fault reporting contact email
+                     * 
+                     */
+                    void SetFaultReportContactEmail(const std::string& _faultReportContactEmail);
+
+                    /**
+                     * 判断参数 FaultReportContactEmail 是否已赋值
+                     * @return FaultReportContactEmail 是否已赋值
+                     * 
+                     */
+                    bool FaultReportContactEmailHasBeenSet() const;
+
+                    /**
                      * 获取Whether the connection applicant has signed the service agreement.
                      * @return SignLaw Whether the connection applicant has signed the service agreement.
                      * 
@@ -295,15 +316,15 @@ namespace TencentCloud
                     bool SignLawHasBeenSet() const;
 
                     /**
-                     * 获取Connection’s bandwidth
-                     * @return Bandwidth Connection’s bandwidth
+                     * 获取Connection's bandwidth
+                     * @return Bandwidth Connection's bandwidth
                      * 
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
-                     * 设置Connection’s bandwidth
-                     * @param _bandwidth Connection’s bandwidth
+                     * 设置Connection's bandwidth
+                     * @param _bandwidth Connection's bandwidth
                      * 
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
@@ -384,13 +405,19 @@ namespace TencentCloud
                     bool m_faultReportContactNumberHasBeenSet;
 
                     /**
+                     * Fault reporting contact email
+                     */
+                    std::string m_faultReportContactEmail;
+                    bool m_faultReportContactEmailHasBeenSet;
+
+                    /**
                      * Whether the connection applicant has signed the service agreement.
                      */
                     bool m_signLaw;
                     bool m_signLawHasBeenSet;
 
                     /**
-                     * Connection’s bandwidth
+                     * Connection's bandwidth
                      */
                     uint64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;

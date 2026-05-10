@@ -44,9 +44,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the internet tunnel’s public IP address
+                     * 获取ID of the internet tunnel's public IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return InstanceId ID of the internet tunnel’s public IP address
+                     * @return InstanceId ID of the internet tunnel's public IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -62,7 +62,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * ID of the internet tunnel’s public IP address
+                     * ID of the internet tunnel's public IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;

@@ -30,7 +30,13 @@ CreateTargetGroupRequest::CreateTargetGroupRequest() :
     m_protocolHasBeenSet(false),
     m_healthCheckHasBeenSet(false),
     m_scheduleAlgorithmHasBeenSet(false),
-    m_allDeadToAliveHasBeenSet(false)
+    m_allDeadToAliveHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_forwardingModeHasBeenSet(false),
+    m_rescheduleUnbindRsHasBeenSet(false),
+    m_rescheduleUnbindRsStartTimeHasBeenSet(false),
+    m_rescheduleUnhealthyHasBeenSet(false),
+    m_rescheduleUnhealthyStartTimeHasBeenSet(false)
 {
 }
 
@@ -111,6 +117,61 @@ string CreateTargetGroupRequest::ToJsonString() const
         string key = "AllDeadToAlive";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_allDeadToAlive, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_forwardingModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForwardingMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_forwardingMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rescheduleUnbindRsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RescheduleUnbindRs";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_rescheduleUnbindRs, allocator);
+    }
+
+    if (m_rescheduleUnbindRsStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RescheduleUnbindRsStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_rescheduleUnbindRsStartTime, allocator);
+    }
+
+    if (m_rescheduleUnhealthyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RescheduleUnhealthy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_rescheduleUnhealthy, allocator);
+    }
+
+    if (m_rescheduleUnhealthyStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RescheduleUnhealthyStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_rescheduleUnhealthyStartTime, allocator);
     }
 
 
@@ -247,6 +308,102 @@ void CreateTargetGroupRequest::SetAllDeadToAlive(const bool& _allDeadToAlive)
 bool CreateTargetGroupRequest::AllDeadToAliveHasBeenSet() const
 {
     return m_allDeadToAliveHasBeenSet;
+}
+
+vector<TagInfo> CreateTargetGroupRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateTargetGroupRequest::SetTags(const vector<TagInfo>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string CreateTargetGroupRequest::GetForwardingMode() const
+{
+    return m_forwardingMode;
+}
+
+void CreateTargetGroupRequest::SetForwardingMode(const string& _forwardingMode)
+{
+    m_forwardingMode = _forwardingMode;
+    m_forwardingModeHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::ForwardingModeHasBeenSet() const
+{
+    return m_forwardingModeHasBeenSet;
+}
+
+bool CreateTargetGroupRequest::GetRescheduleUnbindRs() const
+{
+    return m_rescheduleUnbindRs;
+}
+
+void CreateTargetGroupRequest::SetRescheduleUnbindRs(const bool& _rescheduleUnbindRs)
+{
+    m_rescheduleUnbindRs = _rescheduleUnbindRs;
+    m_rescheduleUnbindRsHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::RescheduleUnbindRsHasBeenSet() const
+{
+    return m_rescheduleUnbindRsHasBeenSet;
+}
+
+int64_t CreateTargetGroupRequest::GetRescheduleUnbindRsStartTime() const
+{
+    return m_rescheduleUnbindRsStartTime;
+}
+
+void CreateTargetGroupRequest::SetRescheduleUnbindRsStartTime(const int64_t& _rescheduleUnbindRsStartTime)
+{
+    m_rescheduleUnbindRsStartTime = _rescheduleUnbindRsStartTime;
+    m_rescheduleUnbindRsStartTimeHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::RescheduleUnbindRsStartTimeHasBeenSet() const
+{
+    return m_rescheduleUnbindRsStartTimeHasBeenSet;
+}
+
+bool CreateTargetGroupRequest::GetRescheduleUnhealthy() const
+{
+    return m_rescheduleUnhealthy;
+}
+
+void CreateTargetGroupRequest::SetRescheduleUnhealthy(const bool& _rescheduleUnhealthy)
+{
+    m_rescheduleUnhealthy = _rescheduleUnhealthy;
+    m_rescheduleUnhealthyHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::RescheduleUnhealthyHasBeenSet() const
+{
+    return m_rescheduleUnhealthyHasBeenSet;
+}
+
+int64_t CreateTargetGroupRequest::GetRescheduleUnhealthyStartTime() const
+{
+    return m_rescheduleUnhealthyStartTime;
+}
+
+void CreateTargetGroupRequest::SetRescheduleUnhealthyStartTime(const int64_t& _rescheduleUnhealthyStartTime)
+{
+    m_rescheduleUnhealthyStartTime = _rescheduleUnhealthyStartTime;
+    m_rescheduleUnhealthyStartTimeHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::RescheduleUnhealthyStartTimeHasBeenSet() const
+{
+    return m_rescheduleUnhealthyStartTimeHasBeenSet;
 }
 
 

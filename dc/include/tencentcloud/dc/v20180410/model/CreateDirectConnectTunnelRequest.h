@@ -25,6 +25,7 @@
 #include <tencentcloud/dc/v20180410/model/RouteFilterPrefix.h>
 #include <tencentcloud/dc/v20180410/model/BFDInfo.h>
 #include <tencentcloud/dc/v20180410/model/NQAInfo.h>
+#include <tencentcloud/dc/v20180410/model/Tag.h>
 
 
 namespace TencentCloud
@@ -502,6 +503,31 @@ Default value: Non-zero.
                      */
                     bool NqaInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Tag key-value pair
+
+                     * @return Tags Tag key-value pair
+
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag key-value pair
+
+                     * @param _tags Tag key-value pair
+
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -632,6 +658,13 @@ Default value: Non-zero.
                      */
                     NQAInfo m_nqaInfo;
                     bool m_nqaInfoHasBeenSet;
+
+                    /**
+                     * Tag key-value pair
+
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }
