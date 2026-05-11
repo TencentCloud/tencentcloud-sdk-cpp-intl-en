@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC video generation task.
+                * AIGC video generation task info
                 */
                 class AigcVideoTask : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task ID.
-                     * @return TaskId The task ID.
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The task ID.
-                     * @param _taskId The task ID.
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
-                     * @return Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+                     * 获取<p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
+                     * @return Status <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
-                     * @param _status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+                     * 设置<p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
+                     * @param _status <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
-                     * @return ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+                     * 获取<p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
+                     * @return ErrCode <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
-                     * @param _errCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+                     * 设置<p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
+                     * @param _errCode <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,36 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
-                     * @return Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+                     * 获取<p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+                     * @return ErrCodeExt <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+                     * 
+                     */
+                    std::string GetErrCodeExt() const;
+
+                    /**
+                     * 设置<p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+                     * @param _errCodeExt <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+                     * 
+                     */
+                    void SetErrCodeExt(const std::string& _errCodeExt);
+
+                    /**
+                     * 判断参数 ErrCodeExt 是否已赋值
+                     * @return ErrCodeExt 是否已赋值
+                     * 
+                     */
+                    bool ErrCodeExtHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Error message.</p>
+                     * @return Message <p>Error message.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
-                     * @param _message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+                     * 设置<p>Error message.</p>
+                     * @param _message <p>Error message.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +154,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The execution progress of a single adaptive bitrate stream. Value range: 0-100.
-                     * @return Progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+                     * 获取<p>Task progress, with a value range of [0-100].</p>
+                     * @return Progress <p>Task progress, with a value range of [0-100].</p>
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置The execution progress of a single adaptive bitrate stream. Value range: 0-100.
-                     * @param _progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+                     * 设置<p>Task progress, with a value range of [0-100].</p>
+                     * @param _progress <p>Task progress, with a value range of [0-100].</p>
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -154,15 +175,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of AIGC video task.
-                     * @return Input Input of AIGC video task.
+                     * 获取<p>Input of the AIGC video generation task.</p>
+                     * @return Input <p>Input of the AIGC video generation task.</p>
                      * 
                      */
                     AigcVideoTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of AIGC video task.
-                     * @param _input Input of AIGC video task.
+                     * 设置<p>Input of the AIGC video generation task.</p>
+                     * @param _input <p>Input of the AIGC video generation task.</p>
                      * 
                      */
                     void SetInput(const AigcVideoTaskInput& _input);
@@ -175,15 +196,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of AIGC video task.
-                     * @return Output Output of AIGC video task.
+                     * 获取<p>Output information of the AIGC video task.</p>
+                     * @return Output <p>Output information of the AIGC video task.</p>
                      * 
                      */
                     AigcVideoTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of AIGC video task.
-                     * @param _output Output of AIGC video task.
+                     * 设置<p>Output information of the AIGC video task.</p>
+                     * @param _output <p>Output information of the AIGC video task.</p>
                      * 
                      */
                     void SetOutput(const AigcVideoTaskOutput& _output);
@@ -196,15 +217,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-                     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-                     * @param _sessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -217,15 +238,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * 获取<p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-                     * @param _sessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * 设置<p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -240,55 +261,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The task ID.
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+                     * <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+                     * <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+                     * <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+                     */
+                    std::string m_errCodeExt;
+                    bool m_errCodeExtHasBeenSet;
+
+                    /**
+                     * <p>Error message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+                     * <p>Task progress, with a value range of [0-100].</p>
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of AIGC video task.
+                     * <p>Input of the AIGC video generation task.</p>
                      */
                     AigcVideoTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of AIGC video task.
+                     * <p>Output information of the AIGC video task.</p>
                      */
                     AigcVideoTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

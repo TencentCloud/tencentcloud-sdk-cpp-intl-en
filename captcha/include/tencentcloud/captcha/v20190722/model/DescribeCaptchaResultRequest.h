@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CaptchaTypeHasBeenSet() const;
 
                     /**
-                     * 获取The user verification ticket returned by the frontend callback function
-                     * @return Ticket The user verification ticket returned by the frontend callback function
+                     * 获取The user verification ticket returned by the frontend callback function.
+                     * @return Ticket The user verification ticket returned by the frontend callback function.
                      * 
                      */
                     std::string GetTicket() const;
 
                     /**
-                     * 设置The user verification ticket returned by the frontend callback function
-                     * @param _ticket The user verification ticket returned by the frontend callback function
+                     * 设置The user verification ticket returned by the frontend callback function.
+                     * @param _ticket The user verification ticket returned by the frontend callback function.
                      * 
                      */
                     void SetTicket(const std::string& _ticket);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TicketHasBeenSet() const;
 
                     /**
-                     * 获取The user public IP obtained from the customer backend server
-                     * @return UserIp The user public IP obtained from the customer backend server
+                     * 获取The user public IP obtained from the customer backend server.
+                     * @return UserIp The user public IP obtained from the customer backend server.
                      * 
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置The user public IP obtained from the customer backend server
-                     * @param _userIp The user public IP obtained from the customer backend server
+                     * 设置The user public IP obtained from the customer backend server.
+                     * @param _userIp The user public IP obtained from the customer backend server.
                      * 
                      */
                     void SetUserIp(const std::string& _userIp);
@@ -282,13 +282,13 @@ namespace TencentCloud
                     bool m_captchaTypeHasBeenSet;
 
                     /**
-                     * The user verification ticket returned by the frontend callback function
+                     * The user verification ticket returned by the frontend callback function.
                      */
                     std::string m_ticket;
                     bool m_ticketHasBeenSet;
 
                     /**
-                     * The user public IP obtained from the customer backend server
+                     * The user public IP obtained from the customer backend server.
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;

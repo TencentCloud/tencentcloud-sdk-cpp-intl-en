@@ -29,6 +29,7 @@
 #include <tencentcloud/as/v20180419/model/ServiceSettings.h>
 #include <tencentcloud/as/v20180419/model/SpotMixedAllocationPolicy.h>
 #include <tencentcloud/as/v20180419/model/InstanceNameIndexSettings.h>
+#include <tencentcloud/as/v20180419/model/HostNameIndexSettings.h>
 
 
 namespace TencentCloud
@@ -616,15 +617,15 @@ namespace TencentCloud
                     bool ServiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
-                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * 获取The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
+                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
                      * 
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
-                     * 设置The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
-                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * 设置The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
+                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
                      * 
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
@@ -803,15 +804,15 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool CapacityRebalanceHasBeenSet() const;
 
                     /**
-                     * 获取Instance name sequencing settings.
-                     * @return InstanceNameIndexSettings Instance name sequencing settings.
+                     * 获取Instance name index settings.
+                     * @return InstanceNameIndexSettings Instance name index settings.
                      * 
                      */
                     InstanceNameIndexSettings GetInstanceNameIndexSettings() const;
 
                     /**
-                     * 设置Instance name sequencing settings.
-                     * @param _instanceNameIndexSettings Instance name sequencing settings.
+                     * 设置Instance name index settings.
+                     * @param _instanceNameIndexSettings Instance name index settings.
                      * 
                      */
                     void SetInstanceNameIndexSettings(const InstanceNameIndexSettings& _instanceNameIndexSettings);
@@ -822,6 +823,68 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                      * 
                      */
                     bool InstanceNameIndexSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Instance host name index settings.
+                     * @return HostNameIndexSettings Instance host name index settings.
+                     * 
+                     */
+                    HostNameIndexSettings GetHostNameIndexSettings() const;
+
+                    /**
+                     * 设置Instance host name index settings.
+                     * @param _hostNameIndexSettings Instance host name index settings.
+                     * 
+                     */
+                    void SetHostNameIndexSettings(const HostNameIndexSettings& _hostNameIndexSettings);
+
+                    /**
+                     * 判断参数 HostNameIndexSettings 是否已赋值
+                     * @return HostNameIndexSettings 是否已赋值
+                     * 
+                     */
+                    bool HostNameIndexSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+                     * @return ConcurrentScaleOutForDesiredCapacity This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+                     * 
+                     */
+                    bool GetConcurrentScaleOutForDesiredCapacity() const;
+
+                    /**
+                     * 设置This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+                     * @param _concurrentScaleOutForDesiredCapacity This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+                     * 
+                     */
+                    void SetConcurrentScaleOutForDesiredCapacity(const bool& _concurrentScaleOutForDesiredCapacity);
+
+                    /**
+                     * 判断参数 ConcurrentScaleOutForDesiredCapacity 是否已赋值
+                     * @return ConcurrentScaleOutForDesiredCapacity 是否已赋值
+                     * 
+                     */
+                    bool ConcurrentScaleOutForDesiredCapacityHasBeenSet() const;
 
                 private:
 
@@ -985,7 +1048,7 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool m_serviceSettingsHasBeenSet;
 
                     /**
-                     * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;
@@ -1037,10 +1100,27 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool m_capacityRebalanceHasBeenSet;
 
                     /**
-                     * Instance name sequencing settings.
+                     * Instance name index settings.
                      */
                     InstanceNameIndexSettings m_instanceNameIndexSettings;
                     bool m_instanceNameIndexSettingsHasBeenSet;
+
+                    /**
+                     * Instance host name index settings.
+                     */
+                    HostNameIndexSettings m_hostNameIndexSettings;
+                    bool m_hostNameIndexSettingsHasBeenSet;
+
+                    /**
+                     * This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+                     */
+                    bool m_concurrentScaleOutForDesiredCapacity;
+                    bool m_concurrentScaleOutForDesiredCapacityHasBeenSet;
 
                 };
             }

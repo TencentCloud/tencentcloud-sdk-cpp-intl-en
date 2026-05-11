@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output information on the speech full-text recognition task.
+                     * @return Output Output information on the speech full-text recognition task.
                      * 
                      */
                     AiRecognitionTaskAsrFullTextResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output information on the speech full-text recognition task.
+                     * @param _output Output information on the speech full-text recognition task.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskAsrFullTextResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output information on the speech full-text recognition task.
                      */
                     AiRecognitionTaskAsrFullTextResultOutput m_output;
                     bool m_outputHasBeenSet;

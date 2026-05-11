@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Input Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video splitting task input.
+                     * @return Input Video splitting task input.
                      * 
                      */
                     AiRecognitionTaskSegmentResultInput GetInput() const;
 
                     /**
-                     * 设置Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _input Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video splitting task input.
+                     * @param _input Video splitting task input.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskSegmentResultInput& _input);
@@ -158,19 +154,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video splitting task output information.
+                     * @return Output Video splitting task output information.
                      * 
                      */
                     AiRecognitionTaskSegmentResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video splitting task output information.
+                     * @param _output Video splitting task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskSegmentResultOutput& _output);
@@ -272,15 +264,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video splitting task input.
                      */
                     AiRecognitionTaskSegmentResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video splitting task output information.
                      */
                     AiRecognitionTaskSegmentResultOutput m_output;
                     bool m_outputHasBeenSet;

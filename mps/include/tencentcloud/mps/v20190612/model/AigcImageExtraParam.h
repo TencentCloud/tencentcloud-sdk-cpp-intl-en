@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
-                     * @return AspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+                     * 获取<p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+                     * @return AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
-                     * @param _aspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+                     * 设置<p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+                     * @param _aspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
-                     * @return Resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+                     * 获取<p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
+                     * @return Resolution <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
-                     * @param _resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+                     * 设置<p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
+                     * @param _resolution <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -88,19 +88,73 @@ namespace TencentCloud
                      */
                     bool ResolutionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
+                     * @return LogoAdd <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
+                     * 
+                     */
+                    int64_t GetLogoAdd() const;
+
+                    /**
+                     * 设置<p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
+                     * @param _logoAdd <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
+                     * 
+                     */
+                    void SetLogoAdd(const int64_t& _logoAdd);
+
+                    /**
+                     * 判断参数 LogoAdd 是否已赋值
+                     * @return LogoAdd 是否已赋值
+                     * 
+                     */
+                    bool LogoAddHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OutputFormat 
+                     * 
+                     */
+                    std::string GetOutputFormat() const;
+
+                    /**
+                     * 设置
+                     * @param _outputFormat 
+                     * 
+                     */
+                    void SetOutputFormat(const std::string& _outputFormat);
+
+                    /**
+                     * 判断参数 OutputFormat 是否已赋值
+                     * @return OutputFormat 是否已赋值
+                     * 
+                     */
+                    bool OutputFormatHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+                     * <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+                     * <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
+
+                    /**
+                     * <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
+                     */
+                    int64_t m_logoAdd;
+                    bool m_logoAddHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_outputFormat;
+                    bool m_outputFormatHasBeenSet;
 
                 };
             }

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
-                     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+                     * 获取<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+                     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
-                     * @param _subAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+                     * 设置<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+                     * @param _subAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -128,6 +128,27 @@ namespace TencentCloud
                     bool ItemIdHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return SegmentIndex 
+                     * 
+                     */
+                    int64_t GetSegmentIndex() const;
+
+                    /**
+                     * 设置
+                     * @param _segmentIndex 
+                     * 
+                     */
+                    void SetSegmentIndex(const int64_t& _segmentIndex);
+
+                    /**
+                     * 判断参数 SegmentIndex 是否已赋值
+                     * @return SegmentIndex 是否已赋值
+                     * 
+                     */
+                    bool SegmentIndexHasBeenSet() const;
+
+                    /**
                      * 获取Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
                      * @return RoundPlaylist Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
                      * 
@@ -151,7 +172,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+                     * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -173,6 +194,12 @@ namespace TencentCloud
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_segmentIndex;
+                    bool m_segmentIndexHasBeenSet;
 
                     /**
                      * Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.

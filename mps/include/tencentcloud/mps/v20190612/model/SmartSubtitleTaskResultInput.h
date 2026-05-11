@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Smart subtitle template ID.
-                     * @return Definition Smart subtitle template ID.
+                     * 获取<p>Smart subtitle template ID.</p>
+                     * @return Definition <p>Smart subtitle template ID.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Smart subtitle template ID.
-                     * @param _definition Smart subtitle template ID.
+                     * 设置<p>Smart subtitle template ID.</p>
+                     * @param _definition <p>Smart subtitle template ID.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,23 +69,19 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRawParameter(const RawSmartSubtitleParameter& _rawParameter);
@@ -97,21 +93,47 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool RawParameterHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return UserExtPara <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetUserExtPara() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _userExtPara <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetUserExtPara(const std::string& _userExtPara);
+
+                    /**
+                     * 判断参数 UserExtPara 是否已赋值
+                     * @return UserExtPara 是否已赋值
+                     * 
+                     */
+                    bool UserExtParaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Smart subtitle template ID.
+                     * <p>Smart subtitle template ID.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_userExtPara;
+                    bool m_userExtParaHasBeenSet;
 
                 };
             }

@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task progress.
-                     * @return Progress Task progress.
+                     * 获取<p>Task progress.</p>
+                     * @return Progress <p>Task progress.</p>
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress.
-                     * @param _progress Task progress.
+                     * 设置<p>Task progress.</p>
+                     * @param _progress <p>Task progress.</p>
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 获取<p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+                     * @return Status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 设置<p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+                     * @param _status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取<p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+                     * @return ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置<p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+                     * @param _errCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取<p>Error message.</p>
+                     * @return Message <p>Error message.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置<p>Error message.</p>
+                     * @param _message <p>Error message.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,19 +133,19 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TransTextTask Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransTextTask <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SmartSubtitleTaskTransTextResultOutput GetTransTextTask() const;
 
                     /**
-                     * 设置Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _transTextTask Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _transTextTask <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransTextTask(const SmartSubtitleTaskTransTextResultOutput& _transTextTask);
@@ -158,19 +158,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AsrFullTextTask Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput GetAsrFullTextTask() const;
 
                     /**
-                     * 设置Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _asrFullTextTask Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _asrFullTextTask <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAsrFullTextTask(const SmartSubtitleTaskAsrFullTextResultOutput& _asrFullTextTask);
@@ -185,39 +185,39 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Task progress.
+                     * <p>Task progress.</p>
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error message.
+                     * <p>Error message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SmartSubtitleTaskTransTextResultOutput m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;

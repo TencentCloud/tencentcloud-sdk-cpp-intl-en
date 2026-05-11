@@ -142,15 +142,15 @@ When making an SDK call, streaming and non-streaming calls require **different w
                     bool StreamHasBeenSet() const;
 
                     /**
-                     * 获取Text to be translated.
-                     * @return Text Text to be translated.
+                     * 获取Text to be translated
+                     * @return Text Text to be translated
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Text to be translated.
-                     * @param _text Text to be translated.
+                     * 设置Text to be translated
+                     * @param _text Text to be translated
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -328,7 +328,7 @@ When making an SDK call, streaming and non-streaming calls require **different w
                     bool m_streamHasBeenSet;
 
                     /**
-                     * Text to be translated.
+                     * Text to be translated
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

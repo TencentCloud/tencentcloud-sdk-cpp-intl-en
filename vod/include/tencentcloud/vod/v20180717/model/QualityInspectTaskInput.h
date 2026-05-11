@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspect template ID.
-                     * @return Definition Media quality inspect template ID.
+                     * 获取Audio and video quality inspection template ID.
+                     * @return Definition Audio and video quality inspection template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Media quality inspect template ID.
-                     * @param _definition Media quality inspect template ID.
+                     * 设置Audio and video quality inspection template ID.
+                     * @param _definition Audio and video quality inspection template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Media quality inspect template ID.
+                     * Audio and video quality inspection template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

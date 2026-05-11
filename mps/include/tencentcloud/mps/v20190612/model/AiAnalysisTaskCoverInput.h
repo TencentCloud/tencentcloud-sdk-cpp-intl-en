@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent video cover generating template ID.
-                     * @return Definition Intelligent video cover generating template ID.
+                     * 获取<p>ID of the intelligent video cover template.</p>
+                     * @return Definition <p>ID of the intelligent video cover template.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Intelligent video cover generating template ID.
-                     * @param _definition Intelligent video cover generating template ID.
+                     * 设置<p>ID of the intelligent video cover template.</p>
+                     * @param _definition <p>ID of the intelligent video cover template.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -67,13 +67,40 @@ namespace TencentCloud
                      */
                     bool DefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtendedParameter <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtendedParameter() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extendedParameter <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtendedParameter(const std::string& _extendedParameter);
+
+                    /**
+                     * 判断参数 ExtendedParameter 是否已赋值
+                     * @return ExtendedParameter 是否已赋值
+                     * 
+                     */
+                    bool ExtendedParameterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Intelligent video cover generating template ID.
+                     * <p>ID of the intelligent video cover template.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extendedParameter;
+                    bool m_extendedParameterHasBeenSet;
 
                 };
             }

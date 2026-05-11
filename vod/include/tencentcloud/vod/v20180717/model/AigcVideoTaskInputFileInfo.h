@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
-                     * @return Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
+                     * 获取Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+                     * @return Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
-                     * @param _type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
+                     * 设置Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+                     * @param _type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -66,6 +66,35 @@ namespace TencentCloud
                      * 
                      */
                     bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取File category. Valid values:
+<li>Image: image.</li>
+<li>Video: video.</li>
+                     * @return Category File category. Valid values:
+<li>Image: image.</li>
+<li>Video: video.</li>
+                     * 
+                     */
+                    std::string GetCategory() const;
+
+                    /**
+                     * 设置File category. Valid values:
+<li>Image: image.</li>
+<li>Video: video.</li>
+                     * @param _category File category. Valid values:
+<li>Image: image.</li>
+<li>Video: video.</li>
+                     * 
+                     */
+                    void SetCategory(const std::string& _category);
+
+                    /**
+                     * 判断参数 Category 是否已赋值
+                     * @return Category 是否已赋值
+                     * 
+                     */
+                    bool CategoryHasBeenSet() const;
 
                     /**
                      * 获取The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
@@ -130,23 +159,27 @@ Note:.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Reference type. Used for the GV model.
+                     * 获取Reference Type. The GV Model applies.
 Note:
-When using the GV model, can be used as a reference method, selectable asset (material), style.
-                     * @return ReferenceType Reference type. Used for the GV model.
+When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
+When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+                     * @return ReferenceType Reference Type. The GV Model applies.
 Note:
-When using the GV model, can be used as a reference method, selectable asset (material), style.
+When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
+When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置Reference type. Used for the GV model.
+                     * 设置Reference Type. The GV Model applies.
 Note:
-When using the GV model, can be used as a reference method, selectable asset (material), style.
-                     * @param _referenceType Reference type. Used for the GV model.
+When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
+When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+                     * @param _referenceType Reference Type. The GV Model applies.
 Note:
-When using the GV model, can be used as a reference method, selectable asset (material), style.
+When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
+When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -159,23 +192,23 @@ When using the GV model, can be used as a reference method, selectable asset (ma
                     bool ReferenceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Object id.
+                     * 获取Subject Id.
 Applicable model: Vidu-q2.
-When an image identifier is required, each image must have a subject id. the subject id can be used via @subject id in subsequent generation.
-                     * @return ObjectId Object id.
+When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+                     * @return ObjectId Subject Id.
 Applicable model: Vidu-q2.
-When an image identifier is required, each image must have a subject id. the subject id can be used via @subject id in subsequent generation.
+When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
                      * 
                      */
                     std::string GetObjectId() const;
 
                     /**
-                     * 设置Object id.
+                     * 设置Subject Id.
 Applicable model: Vidu-q2.
-When an image identifier is required, each image must have a subject id. the subject id can be used via @subject id in subsequent generation.
-                     * @param _objectId Object id.
+When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+                     * @param _objectId Subject Id.
 Applicable model: Vidu-q2.
-When an image identifier is required, each image must have a subject id. the subject id can be used via @subject id in subsequent generation.
+When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
                      * 
                      */
                     void SetObjectId(const std::string& _objectId);
@@ -189,18 +222,18 @@ When an image identifier is required, each image must have a subject id. the sub
 
                     /**
                      * 获取Suitable for the Vidu-q2 model.
-When all images carry object ids, you can set the timbre id for the object. timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg.
+When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
                      * @return VoiceId Suitable for the Vidu-q2 model.
-When all images carry object ids, you can set the timbre id for the object. timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg.
+When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
                      * 设置Suitable for the Vidu-q2 model.
-When all images carry object ids, you can set the timbre id for the object. timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg.
+When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
                      * @param _voiceId Suitable for the Vidu-q2 model.
-When all images carry object ids, you can set the timbre id for the object. timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg.
+When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -212,13 +245,50 @@ When all images carry object ids, you can set the timbre id for the object. timb
                      */
                     bool VoiceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to retain the original sound. Valid when Category is Video. Values as follows:
+<li>Enabled: Reserved</li>
+<li>Disabled: not retain</li>
+                     * @return KeepOriginalSound Whether to retain the original sound. Valid when Category is Video. Values as follows:
+<li>Enabled: Reserved</li>
+<li>Disabled: not retain</li>
+                     * 
+                     */
+                    std::string GetKeepOriginalSound() const;
+
+                    /**
+                     * 设置Whether to retain the original sound. Valid when Category is Video. Values as follows:
+<li>Enabled: Reserved</li>
+<li>Disabled: not retain</li>
+                     * @param _keepOriginalSound Whether to retain the original sound. Valid when Category is Video. Values as follows:
+<li>Enabled: Reserved</li>
+<li>Disabled: not retain</li>
+                     * 
+                     */
+                    void SetKeepOriginalSound(const std::string& _keepOriginalSound);
+
+                    /**
+                     * 判断参数 KeepOriginalSound 是否已赋值
+                     * @return KeepOriginalSound 是否已赋值
+                     * 
+                     */
+                    bool KeepOriginalSoundHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>
+                     * Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * File category. Valid values:
+<li>Image: image.</li>
+<li>Video: video.</li>
+                     */
+                    std::string m_category;
+                    bool m_categoryHasBeenSet;
 
                     /**
                      * The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
@@ -238,27 +308,36 @@ Note:.
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Reference type. Used for the GV model.
+                     * Reference Type. The GV Model applies.
 Note:
-When using the GV model, can be used as a reference method, selectable asset (material), style.
+When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
+When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;
 
                     /**
-                     * Object id.
+                     * Subject Id.
 Applicable model: Vidu-q2.
-When an image identifier is required, each image must have a subject id. the subject id can be used via @subject id in subsequent generation.
+When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
                      */
                     std::string m_objectId;
                     bool m_objectIdHasBeenSet;
 
                     /**
                      * Suitable for the Vidu-q2 model.
-When all images carry object ids, you can set the timbre id for the object. timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg.
+When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
+
+                    /**
+                     * Whether to retain the original sound. Valid when Category is Video. Values as follows:
+<li>Enabled: Reserved</li>
+<li>Disabled: not retain</li>
+                     */
+                    std::string m_keepOriginalSound;
+                    bool m_keepOriginalSoundHasBeenSet;
 
                 };
             }

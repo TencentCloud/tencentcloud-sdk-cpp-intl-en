@@ -24,6 +24,7 @@ using namespace std;
 
 ProcessMediaRequest::ProcessMediaRequest() :
     m_fileIdHasBeenSet(false),
+    m_mediaStoragePathHasBeenSet(false),
     m_subAppIdHasBeenSet(false),
     m_mediaProcessTaskHasBeenSet(false),
     m_aiContentReviewTaskHasBeenSet(false),
@@ -33,7 +34,8 @@ ProcessMediaRequest::ProcessMediaRequest() :
     m_tasksNotifyModeHasBeenSet(false),
     m_sessionContextHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
-    m_extInfoHasBeenSet(false)
+    m_extInfoHasBeenSet(false),
+    m_urlHasBeenSet(false)
 {
 }
 
@@ -50,6 +52,14 @@ string ProcessMediaRequest::ToJsonString() const
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mediaStoragePathHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MediaStoragePath";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_mediaStoragePath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subAppIdHasBeenSet)
@@ -136,6 +146,14 @@ string ProcessMediaRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_extInfo.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_urlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Url";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -158,6 +176,22 @@ void ProcessMediaRequest::SetFileId(const string& _fileId)
 bool ProcessMediaRequest::FileIdHasBeenSet() const
 {
     return m_fileIdHasBeenSet;
+}
+
+string ProcessMediaRequest::GetMediaStoragePath() const
+{
+    return m_mediaStoragePath;
+}
+
+void ProcessMediaRequest::SetMediaStoragePath(const string& _mediaStoragePath)
+{
+    m_mediaStoragePath = _mediaStoragePath;
+    m_mediaStoragePathHasBeenSet = true;
+}
+
+bool ProcessMediaRequest::MediaStoragePathHasBeenSet() const
+{
+    return m_mediaStoragePathHasBeenSet;
 }
 
 uint64_t ProcessMediaRequest::GetSubAppId() const
@@ -318,6 +352,22 @@ void ProcessMediaRequest::SetExtInfo(const string& _extInfo)
 bool ProcessMediaRequest::ExtInfoHasBeenSet() const
 {
     return m_extInfoHasBeenSet;
+}
+
+string ProcessMediaRequest::GetUrl() const
+{
+    return m_url;
+}
+
+void ProcessMediaRequest::SetUrl(const string& _url)
+{
+    m_url = _url;
+    m_urlHasBeenSet = true;
+}
+
+bool ProcessMediaRequest::UrlHasBeenSet() const
+{
+    return m_urlHasBeenSet;
 }
 
 

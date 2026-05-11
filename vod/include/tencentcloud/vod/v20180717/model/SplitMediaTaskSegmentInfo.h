@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Output Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Video splitting task output information.
+                     * @return Output Video splitting task output information.
                      * 
                      */
                     TaskOutputMediaInfo GetOutput() const;
 
                     /**
-                     * 设置Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _output Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Video splitting task output information.
+                     * @param _output Video splitting task output information.
                      * 
                      */
                     void SetOutput(const TaskOutputMediaInfo& _output);
@@ -145,8 +141,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Video splitting task output information.
                      */
                     TaskOutputMediaInfo m_output;
                     bool m_outputHasBeenSet;

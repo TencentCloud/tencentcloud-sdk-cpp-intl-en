@@ -80,23 +80,23 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @return Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 获取Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
+                     * @return Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-                     * @param _type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * 设置Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
+                     * @param _type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -120,9 +120,9 @@ Default value: `OFF`.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+                     * Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

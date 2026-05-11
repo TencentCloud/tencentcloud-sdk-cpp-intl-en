@@ -21,6 +21,9 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/MPSAiAnalysisTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/MPSSmartSubtitlesTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/MPSSmartEraseTaskInput.h>
 
 
 namespace TencentCloud
@@ -43,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
-                     * @return FileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+                     * 获取<p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * @return FileId <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
-                     * @param _fileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+                     * 设置<p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * @param _fileId <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -64,15 +67,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
+                     * 获取<p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+                     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
+                     * 设置<p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+                     * @param _subAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,35 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-Instructions: 
-1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
-
-                     * @return MPSProcessMediaParams This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-Instructions: 
-1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
-
+                     * 获取<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+                     * @return MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
                      * 
                      */
                     std::string GetMPSProcessMediaParams() const;
 
                     /**
-                     * 设置This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-Instructions: 
-1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
-
-                     * @param _mPSProcessMediaParams This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-Instructions: 
-1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
-
+                     * 设置<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+                     * @param _mPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
                      * 
                      */
                     void SetMPSProcessMediaParams(const std::string& _mPSProcessMediaParams);
@@ -125,30 +108,133 @@ Instructions:
                      */
                     bool MPSProcessMediaParamsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+                     * @return AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    MPSAiAnalysisTaskInput GetAiAnalysisTask() const;
+
+                    /**
+                     * 设置<p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+                     * @param _aiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    void SetAiAnalysisTask(const MPSAiAnalysisTaskInput& _aiAnalysisTask);
+
+                    /**
+                     * 判断参数 AiAnalysisTask 是否已赋值
+                     * @return AiAnalysisTask 是否已赋值
+                     * 
+                     */
+                    bool AiAnalysisTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * @return SmartSubtitlesTask <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    MPSSmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
+
+                    /**
+                     * 设置<p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * @param _smartSubtitlesTask <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    void SetSmartSubtitlesTask(const MPSSmartSubtitlesTaskInput& _smartSubtitlesTask);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTask 是否已赋值
+                     * @return SmartSubtitlesTask 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * @return SmartEraseTask <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    MPSSmartEraseTaskInput GetSmartEraseTask() const;
+
+                    /**
+                     * 设置<p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * @param _smartEraseTask <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     * 
+                     */
+                    void SetSmartEraseTask(const MPSSmartEraseTaskInput& _smartEraseTask);
+
+                    /**
+                     * 判断参数 SmartEraseTask 是否已赋值
+                     * @return SmartEraseTask 是否已赋值
+                     * 
+                     */
+                    bool SmartEraseTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Reserved field. Used for special purpose.</p>
+                     * @return ExtInfo <p>Reserved field. Used for special purpose.</p>
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置<p>Reserved field. Used for special purpose.</p>
+                     * @param _extInfo <p>Reserved field. Used for special purpose.</p>
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+                     * <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
+                     * <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-Instructions: 
-1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
-
+                     * <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
                      */
                     std::string m_mPSProcessMediaParams;
                     bool m_mPSProcessMediaParamsHasBeenSet;
+
+                    /**
+                     * <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+                     */
+                    MPSAiAnalysisTaskInput m_aiAnalysisTask;
+                    bool m_aiAnalysisTaskHasBeenSet;
+
+                    /**
+                     * <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     */
+                    MPSSmartSubtitlesTaskInput m_smartSubtitlesTask;
+                    bool m_smartSubtitlesTaskHasBeenSet;
+
+                    /**
+                     * <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+                     */
+                    MPSSmartEraseTaskInput m_smartEraseTask;
+                    bool m_smartEraseTaskHasBeenSet;
+
+                    /**
+                     * <p>Reserved field. Used for special purpose.</p>
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

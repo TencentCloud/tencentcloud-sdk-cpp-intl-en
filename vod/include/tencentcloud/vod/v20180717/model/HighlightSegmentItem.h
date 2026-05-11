@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Confidence.
-                     * @return Confidence Confidence.
+                     * 获取<p>Confidence degree.</p>
+                     * @return Confidence <p>Confidence degree.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence.
-                     * @param _confidence Confidence.
+                     * 设置<p>Confidence degree.</p>
+                     * @param _confidence <p>Confidence degree.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a segment.
-                     * @return StartTimeOffset Start time offset of a segment.
+                     * 获取<p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+                     * @return StartTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a segment.
-                     * @param _startTimeOffset Start time offset of a segment.
+                     * 设置<p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+                     * @param _startTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a segment.
-                     * @return EndTimeOffset End time offset of a segment.
+                     * 获取<p>Segment end time offset.</p><p>Unit: seconds</p>
+                     * @return EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a segment.
-                     * @param _endTimeOffset End time offset of a segment.
+                     * 设置<p>Segment end time offset.</p><p>Unit: seconds</p>
+                     * @param _endTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Confidence.
+                     * <p>Confidence degree.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Start time offset of a segment.
+                     * <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a segment.
+                     * <p>Segment end time offset.</p><p>Unit: seconds</p>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Face recognition task output information.
+                     * @return Output Face recognition task output information.
                      * 
                      */
                     AiRecognitionTaskFaceResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Face recognition task output information.
+                     * @param _output Face recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskFaceResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Face recognition task output information.
                      */
                     AiRecognitionTaskFaceResultOutput m_output;
                     bool m_outputHasBeenSet;

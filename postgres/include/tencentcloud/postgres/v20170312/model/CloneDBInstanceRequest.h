@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
-                     * @return DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * 获取The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
-                     * @param _dBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * 设置The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -294,18 +294,18 @@ Default value: PREPAID
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+                     * 获取Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
-                     * @return SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+                     * @return SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+                     * 设置Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
-                     * @param _securityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+                     * @param _securityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      * 
                      */
@@ -362,18 +362,18 @@ Default value: PREPAID
 
                     /**
                      * 获取Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * @return DBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * 
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
                      * 设置Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * @param _dBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      * 
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
@@ -571,7 +571,7 @@ Default value for the read-only instance: Async
                 private:
 
                     /**
-                     * The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+                     * The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -640,7 +640,7 @@ Default value: PREPAID
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+                     * Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
                      */
                     std::vector<std::string> m_securityGroupIds;
@@ -660,7 +660,7 @@ Default value: PREPAID
 
                     /**
                      * Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;

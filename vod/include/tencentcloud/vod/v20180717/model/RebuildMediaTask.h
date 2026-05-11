@@ -196,19 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Input The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Input of the audio and video quality regeneration task.
+                     * @return Input Input of the audio and video quality regeneration task.
                      * 
                      */
                     RebuildMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _input The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Input of the audio and video quality regeneration task.
+                     * @param _input Input of the audio and video quality regeneration task.
                      * 
                      */
                     void SetInput(const RebuildMediaTaskInput& _input);
@@ -221,19 +217,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output of the audio and video quality regeneration task.
+                     * @return Output Output of the audio and video quality regeneration task.
                      * 
                      */
                     RebuildMediaTaskOutput GetOutput() const;
 
                     /**
-                     * 设置The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output of the audio and video quality regeneration task.
+                     * @param _output Output of the audio and video quality regeneration task.
                      * 
                      */
                     void SetOutput(const RebuildMediaTaskOutput& _output);
@@ -246,19 +238,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Metadata of the output video after audio and video quality revival.
+                     * @return MetaData Metadata of the output video after audio and video quality revival.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _metaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Metadata of the output video after audio and video quality revival.
+                     * @param _metaData Metadata of the output video after audio and video quality revival.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -356,22 +344,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Input of the audio and video quality regeneration task.
                      */
                     RebuildMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output of the audio and video quality regeneration task.
                      */
                     RebuildMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Metadata of the output video after audio and video quality revival.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Output Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Audio/video moderation Asr text prohibited task output.
+                     * @return Output Audio/video moderation Asr text prohibited task output.
                      * 
                      */
                     AiReviewProhibitedAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _output Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Audio/video moderation Asr text prohibited task output.
+                     * @param _output Audio/video moderation Asr text prohibited task output.
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedAsrTaskOutput& _output);
@@ -232,8 +228,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Audio/video moderation Asr text prohibited task output.
                      */
                     AiReviewProhibitedAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

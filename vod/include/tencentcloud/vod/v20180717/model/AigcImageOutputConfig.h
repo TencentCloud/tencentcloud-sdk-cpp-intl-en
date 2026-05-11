@@ -139,15 +139,39 @@ Default value: Temporary.
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Image generation resolution. available values are 720P, 1080P, 2K, 4K, 1024x1024, 2048x2048, 2304x1728, 2496x1664, 2560x1440, 3024x1296, 4096x4096, 4694x3520, 4992x3328, 5404x3040, 6198x2656.
-                     * @return Resolution Image generation resolution. available values are 720P, 1080P, 2K, 4K, 1024x1024, 2048x2048, 2304x1728, 2496x1664, 2560x1440, 3024x1296, 4096x4096, 4694x3520, 4992x3328, 5404x3040, 6198x2656.
+                     * 获取Generated image resolution.
+
+* GEM 2.5: available values (1K, 2K, 4K), default 1K.
+* GEM 3.0: 1K, 2K, 4K (default: 1K).
+* Vidu q2 value range: 1080p, 2K, 4K; default 1080p.
+* Kling 2.1 value range: 1k, 2k, default 1k;
+* Hunyuan 3.0 available values: 720P, 1080P, 2K, 4K.
+                     * @return Resolution Generated image resolution.
+
+* GEM 2.5: available values (1K, 2K, 4K), default 1K.
+* GEM 3.0: 1K, 2K, 4K (default: 1K).
+* Vidu q2 value range: 1080p, 2K, 4K; default 1080p.
+* Kling 2.1 value range: 1k, 2k, default 1k;
+* Hunyuan 3.0 available values: 720P, 1080P, 2K, 4K.
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置Image generation resolution. available values are 720P, 1080P, 2K, 4K, 1024x1024, 2048x2048, 2304x1728, 2496x1664, 2560x1440, 3024x1296, 4096x4096, 4694x3520, 4992x3328, 5404x3040, 6198x2656.
-                     * @param _resolution Image generation resolution. available values are 720P, 1080P, 2K, 4K, 1024x1024, 2048x2048, 2304x1728, 2496x1664, 2560x1440, 3024x1296, 4096x4096, 4694x3520, 4992x3328, 5404x3040, 6198x2656.
+                     * 设置Generated image resolution.
+
+* GEM 2.5: available values (1K, 2K, 4K), default 1K.
+* GEM 3.0: 1K, 2K, 4K (default: 1K).
+* Vidu q2 value range: 1080p, 2K, 4K; default 1080p.
+* Kling 2.1 value range: 1k, 2k, default 1k;
+* Hunyuan 3.0 available values: 720P, 1080P, 2K, 4K.
+                     * @param _resolution Generated image resolution.
+
+* GEM 2.5: available values (1K, 2K, 4K), default 1K.
+* GEM 3.0: 1K, 2K, 4K (default: 1K).
+* Vidu q2 value range: 1080p, 2K, 4K; default 1080p.
+* Kling 2.1 value range: 1k, 2k, default 1k;
+* Hunyuan 3.0 available values: 720P, 1080P, 2K, 4K.
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -160,15 +184,35 @@ Default value: Temporary.
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Specify the aspect ratio of the generated image. <li>when ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li> <li>when ModelName is Qwen, it is not currently supported.</li>.
-                     * @return AspectRatio Specify the aspect ratio of the generated image. <li>when ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li> <li>when ModelName is Qwen, it is not currently supported.</li>.
+                     * 获取Specify the aspect ratio of the generated image.
+<li>When ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li>
+<li>When ModelName is Qwen, it is not currently supported.</li>
+<li>When ModelName is Hunyuan, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+<li>When ModelName is Vidu, the available values are 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2.</li>
+<li>When ModelName is Kling, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+                     * @return AspectRatio Specify the aspect ratio of the generated image.
+<li>When ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li>
+<li>When ModelName is Qwen, it is not currently supported.</li>
+<li>When ModelName is Hunyuan, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+<li>When ModelName is Vidu, the available values are 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2.</li>
+<li>When ModelName is Kling, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置Specify the aspect ratio of the generated image. <li>when ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li> <li>when ModelName is Qwen, it is not currently supported.</li>.
-                     * @param _aspectRatio Specify the aspect ratio of the generated image. <li>when ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li> <li>when ModelName is Qwen, it is not currently supported.</li>.
+                     * 设置Specify the aspect ratio of the generated image.
+<li>When ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li>
+<li>When ModelName is Qwen, it is not currently supported.</li>
+<li>When ModelName is Hunyuan, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+<li>When ModelName is Vidu, the available values are 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2.</li>
+<li>When ModelName is Kling, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+                     * @param _aspectRatio Specify the aspect ratio of the generated image.
+<li>When ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li>
+<li>When ModelName is Qwen, it is not currently supported.</li>
+<li>When ModelName is Hunyuan, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+<li>When ModelName is Vidu, the available values are 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2.</li>
+<li>When ModelName is Kling, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -272,13 +316,24 @@ Default value: Temporary.
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Image generation resolution. available values are 720P, 1080P, 2K, 4K, 1024x1024, 2048x2048, 2304x1728, 2496x1664, 2560x1440, 3024x1296, 4096x4096, 4694x3520, 4992x3328, 5404x3040, 6198x2656.
+                     * Generated image resolution.
+
+* GEM 2.5: available values (1K, 2K, 4K), default 1K.
+* GEM 3.0: 1K, 2K, 4K (default: 1K).
+* Vidu q2 value range: 1080p, 2K, 4K; default 1080p.
+* Kling 2.1 value range: 1k, 2k, default 1k;
+* Hunyuan 3.0 available values: 720P, 1080P, 2K, 4K.
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * Specify the aspect ratio of the generated image. <li>when ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li> <li>when ModelName is Qwen, it is not currently supported.</li>.
+                     * Specify the aspect ratio of the generated image.
+<li>When ModelName is GEM, the available values are 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li>
+<li>When ModelName is Qwen, it is not currently supported.</li>
+<li>When ModelName is Hunyuan, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
+<li>When ModelName is Vidu, the available values are 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2.</li>
+<li>When ModelName is Kling, the available values are 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9.</li>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;

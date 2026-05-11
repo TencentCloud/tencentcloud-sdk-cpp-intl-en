@@ -47,31 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
-                     * @return Switch Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+                     * 获取Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
+                     * @return Switch Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
-                     * @param _switch Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+                     * 设置Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
+                     * @param _switch Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -144,11 +136,9 @@ Default value: `2`.
                 private:
 
                     /**
-                     * Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+                     * Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

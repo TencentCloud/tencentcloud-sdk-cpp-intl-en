@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Text after translation.
-                     * @return TargetText Text after translation.
+                     * 获取<p>Translated text.</p>
+                     * @return TargetText <p>Translated text.</p>
                      * 
                      */
                     std::string GetTargetText() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TargetTextHasBeenSet() const;
 
                     /**
-                     * 获取Source language. See the input parameter Source.
-                     * @return Source Source language. See the input parameter Source.
+                     * 获取<p>Source language. See the input parameter Source.</p>
+                     * @return Source <p>Source language. See the input parameter Source.</p>
                      * 
                      */
                     std::string GetSource() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取Target language. See the input parameter Target.
-                     * @return Target Target language. See the input parameter Target.
+                     * 获取<p>Target language. See the input parameter Target.</p>
+                     * @return Target <p>Target language. See the input parameter Target.</p>
                      * 
                      */
                     std::string GetTarget() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Text after translation.
+                     * <p>Translated text.</p>
                      */
                     std::string m_targetText;
                     bool m_targetTextHasBeenSet;
 
                     /**
-                     * Source language. See the input parameter Source.
+                     * <p>Source language. See the input parameter Source.</p>
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * Target language. See the input parameter Target.
+                     * <p>Target language. See the input parameter Target.</p>
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;

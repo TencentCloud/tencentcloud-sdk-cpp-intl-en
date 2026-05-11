@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
-                     * @return NoAudio Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+                     * 获取Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+                     * @return NoAudio Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
                      * 
                      */
                     int64_t GetNoAudio() const;
 
                     /**
-                     * 设置Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
-                     * @param _noAudio Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+                     * 设置Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+                     * @param _noAudio Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
                      * 
                      */
                     void SetNoAudio(const int64_t& _noAudio);
@@ -69,15 +77,23 @@ namespace TencentCloud
                     bool NoAudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
-                     * @return NoVideo Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+                     * 获取Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+                     * @return NoVideo Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
                      * 
                      */
                     int64_t GetNoVideo() const;
 
                     /**
-                     * 设置Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
-                     * @param _noVideo Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+                     * 设置Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+                     * @param _noVideo Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
                      * 
                      */
                     void SetNoVideo(const int64_t& _noVideo);
@@ -90,15 +106,15 @@ namespace TencentCloud
                     bool NoVideoHasBeenSet() const;
 
                     /**
-                     * 获取Quality score, value range: [0, 100].
-                     * @return QualityEvaluationScore Quality score, value range: [0, 100].
+                     * 获取Video picture quality score, value ranges from 0 to 100.
+                     * @return QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
                      * 
                      */
                     uint64_t GetQualityEvaluationScore() const;
 
                     /**
-                     * 设置Quality score, value range: [0, 100].
-                     * @param _qualityEvaluationScore Quality score, value range: [0, 100].
+                     * 设置Video picture quality score, value ranges from 0 to 100.
+                     * @param _qualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
                      * 
                      */
                     void SetQualityEvaluationScore(const uint64_t& _qualityEvaluationScore);
@@ -111,15 +127,15 @@ namespace TencentCloud
                     bool QualityEvaluationScoreHasBeenSet() const;
 
                     /**
-                     * 获取Abnormal items list detected of media quality inspection task
-                     * @return QualityInspectResultSet Abnormal items list detected of media quality inspection task
+                     * 获取List of abnormalities detected in audio and video quality.
+                     * @return QualityInspectResultSet List of abnormalities detected in audio and video quality.
                      * 
                      */
                     std::vector<QualityInspectResultItem> GetQualityInspectResultSet() const;
 
                     /**
-                     * 设置Abnormal items list detected of media quality inspection task
-                     * @param _qualityInspectResultSet Abnormal items list detected of media quality inspection task
+                     * 设置List of abnormalities detected in audio and video quality.
+                     * @param _qualityInspectResultSet List of abnormalities detected in audio and video quality.
                      * 
                      */
                     void SetQualityInspectResultSet(const std::vector<QualityInspectResultItem>& _qualityInspectResultSet);
@@ -134,25 +150,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+                     * Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
                      */
                     int64_t m_noAudio;
                     bool m_noAudioHasBeenSet;
 
                     /**
-                     * Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+                     * Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
                      */
                     int64_t m_noVideo;
                     bool m_noVideoHasBeenSet;
 
                     /**
-                     * Quality score, value range: [0, 100].
+                     * Video picture quality score, value ranges from 0 to 100.
                      */
                     uint64_t m_qualityEvaluationScore;
                     bool m_qualityEvaluationScoreHasBeenSet;
 
                     /**
-                     * Abnormal items list detected of media quality inspection task
+                     * List of abnormalities detected in audio and video quality.
                      */
                     std::vector<QualityInspectResultItem> m_qualityInspectResultSet;
                     bool m_qualityInspectResultSetHasBeenSet;

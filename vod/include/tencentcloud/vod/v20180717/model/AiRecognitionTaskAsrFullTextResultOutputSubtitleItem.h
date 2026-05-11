@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-                     * @return Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 获取Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+                     * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-                     * @param _id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 设置Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+                     * @param _id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -72,19 +72,19 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-                     * @return Name Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 获取Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+                     * @return Name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-                     * @param _name Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 设置Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+                     * @param _name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle Language.
-                     * @return Language Subtitle Language.
+                     * 获取Subtitle language.
+                     * @return Language Subtitle language.
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置Subtitle Language.
-                     * @param _language Subtitle Language.
+                     * 设置Subtitle language.
+                     * @param _language Subtitle language.
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -170,21 +170,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Subtitle Language.
+                     * Subtitle language.
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;

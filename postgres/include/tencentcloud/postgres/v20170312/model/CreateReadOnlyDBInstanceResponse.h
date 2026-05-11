@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order number list. Each instance corresponds to an order number.
-                     * @return DealNames Order number list. Each instance corresponds to an order number.
+                     * 获取<p>Order number list. Each instance corresponds to an order number.</p>
+                     * @return DealNames <p>Order number list. Each instance corresponds to an order number.</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Bill ID of frozen fees
-                     * @return BillId Bill ID of frozen fees
+                     * 获取<p>Frozen bill ID.</p>
+                     * @return BillId <p>Frozen bill ID.</p>
                      * 
                      */
                     std::string GetBillId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BillIdHasBeenSet() const;
 
                     /**
-                     * 获取ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
-                     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+                     * 获取<p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
+                     * @return DBInstanceIdSet <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
-                     * @return BillingParameters BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+                     * 获取<p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
+                     * @return BillingParameters <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
                      * 
                      */
                     std::string GetBillingParameters() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order number list. Each instance corresponds to an order number.
+                     * <p>Order number list. Each instance corresponds to an order number.</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Bill ID of frozen fees
+                     * <p>Frozen bill ID.</p>
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
 
                     /**
-                     * ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+                     * <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
 
                     /**
-                     * BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+                     * <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
                      */
                     std::string m_billingParameters;
                     bool m_billingParametersHasBeenSet;

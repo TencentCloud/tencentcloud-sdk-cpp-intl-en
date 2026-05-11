@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scene AIGC image task input.
+                * Scenario-based AIGC image generation task info
                 */
                 class SceneAigcImageTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scenario-based Image Generation Parameter Configuration.
-                     * @return SceneInfo Scenario-based Image Generation Parameter Configuration.
+                     * 获取Scenario-based image generation parameter configuration.
+                     * @return SceneInfo Scenario-based image generation parameter configuration.
                      * 
                      */
                     AigcImageSceneInfo GetSceneInfo() const;
 
                     /**
-                     * 设置Scenario-based Image Generation Parameter Configuration.
-                     * @param _sceneInfo Scenario-based Image Generation Parameter Configuration.
+                     * 设置Scenario-based image generation parameter configuration.
+                     * @param _sceneInfo Scenario-based image generation parameter configuration.
                      * 
                      */
                     void SetSceneInfo(const AigcImageSceneInfo& _sceneInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool SceneInfoHasBeenSet() const;
 
                     /**
-                     * 获取File information of the input image.
-                     * @return FileInfos File information of the input image.
+                     * 获取Input image list.
+                     * @return FileInfos Input image list.
                      * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置File information of the input image.
-                     * @param _fileInfos File information of the input image.
+                     * 设置Input image list.
+                     * @param _fileInfos Input image list.
                      * 
                      */
                     void SetFileInfos(const std::vector<SceneAigcImageTaskInputFileInfo>& _fileInfos);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for the task.
-                     * @return OutputConfig Output media file configuration for the task.
+                     * 获取Output media file configuration for scenario-based image generation tasks.
+                     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
                      * 
                      */
                     SceneAigcImageOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for the task.
-                     * @param _outputConfig Output media file configuration for the task.
+                     * 设置Output media file configuration for scenario-based image generation tasks.
+                     * @param _outputConfig Output media file configuration for scenario-based image generation tasks.
                      * 
                      */
                     void SetOutputConfig(const SceneAigcImageOutputConfig& _outputConfig);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scenario-based Image Generation Parameter Configuration.
+                     * Scenario-based image generation parameter configuration.
                      */
                     AigcImageSceneInfo m_sceneInfo;
                     bool m_sceneInfoHasBeenSet;
 
                     /**
-                     * File information of the input image.
+                     * Input image list.
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * Output media file configuration for the task.
+                     * Output media file configuration for scenario-based image generation tasks.
                      */
                     SceneAigcImageOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

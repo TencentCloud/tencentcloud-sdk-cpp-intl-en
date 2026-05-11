@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -261,36 +261,36 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取This field is deprecated.
-                     * @return Precision This field is deprecated.
-                     * 
+                     * 获取
+                     * @return Precision 
+                     * @deprecated
                      */
                     std::string GetPrecision() const;
 
                     /**
-                     * 设置This field is deprecated.
-                     * @param _precision This field is deprecated.
-                     * 
+                     * 设置
+                     * @param _precision 
+                     * @deprecated
                      */
                     void SetPrecision(const std::string& _precision);
 
                     /**
                      * 判断参数 Precision 是否已赋值
                      * @return Precision 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PrecisionHasBeenSet() const;
 
                     /**
-                     * 获取Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
-                     * @return OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+                     * 获取
+                     * @return OutputMediaType 
                      * 
                      */
                     std::string GetOutputMediaType() const;
 
                     /**
-                     * 设置Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
-                     * @param _outputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+                     * 设置
+                     * @param _outputMediaType 
                      * 
                      */
                     void SetOutputMediaType(const std::string& _outputMediaType);
@@ -303,15 +303,15 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool OutputMediaTypeHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field, used for special purposes. Example value: ""
-                     * @return ExtInfo Reserved field, used for special purposes. Example value: ""
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used for special purposes. Example value: ""
-                     * @param _extInfo Reserved field, used for special purposes. Example value: ""
+                     * 设置
+                     * @param _extInfo 
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -332,7 +332,7 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -388,19 +388,19 @@ This parameter is valid only if `IsPersistence` is `1`.
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * This field is deprecated.
+                     * 
                      */
                     std::string m_precision;
                     bool m_precisionHasBeenSet;
 
                     /**
-                     * Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+                     * 
                      */
                     std::string m_outputMediaType;
                     bool m_outputMediaTypeHasBeenSet;
 
                     /**
-                     * Reserved field, used for special purposes. Example value: ""
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Basic information of the media files generated after transcoding and pulling.
-                     * @return MediaBasicInfo Basic information of the media files generated after transcoding and pulling.
+                     * 获取
+                     * @return MediaBasicInfo 
                      * 
                      */
                     MediaBasicInfo GetMediaBasicInfo() const;
 
                     /**
-                     * 设置Basic information of the media files generated after transcoding and pulling.
-                     * @param _mediaBasicInfo Basic information of the media files generated after transcoding and pulling.
+                     * 设置
+                     * @param _mediaBasicInfo 
                      * 
                      */
                     void SetMediaBasicInfo(const MediaBasicInfo& _mediaBasicInfo);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Basic information of the media files generated after transcoding and pulling.
+                     * 
                      */
                     MediaBasicInfo m_mediaBasicInfo;
                     bool m_mediaBasicInfoHasBeenSet;

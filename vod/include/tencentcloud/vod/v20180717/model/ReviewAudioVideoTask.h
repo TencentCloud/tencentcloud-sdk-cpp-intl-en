@@ -141,19 +141,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Input The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Audio/video moderation task input.
+                     * @return Input Audio/video moderation task input.
                      * 
                      */
                     ReviewAudioVideoTaskInput GetInput() const;
 
                     /**
-                     * 设置The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _input The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Audio/video moderation task input.
+                     * @param _input Audio/video moderation task input.
                      * 
                      */
                     void SetInput(const ReviewAudioVideoTaskInput& _input);
@@ -166,19 +162,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio/video moderation task output.
+                     * @return Output Audio/video moderation task output.
                      * 
                      */
                     ReviewAudioVideoTaskOutput GetOutput() const;
 
                     /**
-                     * 设置The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio/video moderation task output.
+                     * @param _output Audio/video moderation task output.
                      * 
                      */
                     void SetOutput(const ReviewAudioVideoTaskOutput& _output);
@@ -261,15 +253,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Audio/video moderation task input.
                      */
                     ReviewAudioVideoTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio/video moderation task output.
                      */
                     ReviewAudioVideoTaskOutput m_output;
                     bool m_outputHasBeenSet;

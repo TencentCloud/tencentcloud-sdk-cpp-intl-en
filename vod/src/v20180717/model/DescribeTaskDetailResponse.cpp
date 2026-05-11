@@ -55,7 +55,15 @@ DescribeTaskDetailResponse::DescribeTaskDetailResponse() :
     m_aigcImageTaskHasBeenSet(false),
     m_aigcVideoTaskHasBeenSet(false),
     m_importMediaKnowledgeHasBeenSet(false),
-    m_sceneAigcImageTaskHasBeenSet(false)
+    m_sceneAigcImageTaskHasBeenSet(false),
+    m_sceneAigcVideoTaskHasBeenSet(false),
+    m_processImageAsyncTaskHasBeenSet(false),
+    m_extractBlindWatermarkTaskHasBeenSet(false),
+    m_createAigcAdvancedCustomElementTaskHasBeenSet(false),
+    m_createAigcCustomVoiceTaskHasBeenSet(false),
+    m_createAigcSubjectTaskHasBeenSet(false),
+    m_aigcVideoRedrawTaskHasBeenSet(false),
+    m_aigcAudioTaskHasBeenSet(false)
 {
 }
 
@@ -602,6 +610,142 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
         m_sceneAigcImageTaskHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SceneAigcVideoTask") && !rsp["SceneAigcVideoTask"].IsNull())
+    {
+        if (!rsp["SceneAigcVideoTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SceneAigcVideoTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_sceneAigcVideoTask.Deserialize(rsp["SceneAigcVideoTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_sceneAigcVideoTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProcessImageAsyncTask") && !rsp["ProcessImageAsyncTask"].IsNull())
+    {
+        if (!rsp["ProcessImageAsyncTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProcessImageAsyncTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_processImageAsyncTask.Deserialize(rsp["ProcessImageAsyncTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_processImageAsyncTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ExtractBlindWatermarkTask") && !rsp["ExtractBlindWatermarkTask"].IsNull())
+    {
+        if (!rsp["ExtractBlindWatermarkTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ExtractBlindWatermarkTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_extractBlindWatermarkTask.Deserialize(rsp["ExtractBlindWatermarkTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_extractBlindWatermarkTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CreateAigcAdvancedCustomElementTask") && !rsp["CreateAigcAdvancedCustomElementTask"].IsNull())
+    {
+        if (!rsp["CreateAigcAdvancedCustomElementTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateAigcAdvancedCustomElementTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_createAigcAdvancedCustomElementTask.Deserialize(rsp["CreateAigcAdvancedCustomElementTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_createAigcAdvancedCustomElementTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CreateAigcCustomVoiceTask") && !rsp["CreateAigcCustomVoiceTask"].IsNull())
+    {
+        if (!rsp["CreateAigcCustomVoiceTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateAigcCustomVoiceTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_createAigcCustomVoiceTask.Deserialize(rsp["CreateAigcCustomVoiceTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_createAigcCustomVoiceTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CreateAigcSubjectTask") && !rsp["CreateAigcSubjectTask"].IsNull())
+    {
+        if (!rsp["CreateAigcSubjectTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateAigcSubjectTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_createAigcSubjectTask.Deserialize(rsp["CreateAigcSubjectTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_createAigcSubjectTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AigcVideoRedrawTask") && !rsp["AigcVideoRedrawTask"].IsNull())
+    {
+        if (!rsp["AigcVideoRedrawTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcVideoRedrawTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aigcVideoRedrawTask.Deserialize(rsp["AigcVideoRedrawTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aigcVideoRedrawTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AigcAudioTask") && !rsp["AigcAudioTask"].IsNull())
+    {
+        if (!rsp["AigcAudioTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcAudioTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aigcAudioTask.Deserialize(rsp["AigcAudioTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aigcAudioTaskHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -893,6 +1037,78 @@ string DescribeTaskDetailResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_sceneAigcImageTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sceneAigcVideoTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SceneAigcVideoTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sceneAigcVideoTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_processImageAsyncTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProcessImageAsyncTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_processImageAsyncTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_extractBlindWatermarkTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtractBlindWatermarkTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_extractBlindWatermarkTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createAigcAdvancedCustomElementTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateAigcAdvancedCustomElementTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_createAigcAdvancedCustomElementTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createAigcCustomVoiceTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateAigcCustomVoiceTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_createAigcCustomVoiceTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createAigcSubjectTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateAigcSubjectTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_createAigcSubjectTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aigcVideoRedrawTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AigcVideoRedrawTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aigcVideoRedrawTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aigcAudioTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AigcAudioTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aigcAudioTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -1225,6 +1441,86 @@ SceneAigcImageTask DescribeTaskDetailResponse::GetSceneAigcImageTask() const
 bool DescribeTaskDetailResponse::SceneAigcImageTaskHasBeenSet() const
 {
     return m_sceneAigcImageTaskHasBeenSet;
+}
+
+SceneAigcVideoTask DescribeTaskDetailResponse::GetSceneAigcVideoTask() const
+{
+    return m_sceneAigcVideoTask;
+}
+
+bool DescribeTaskDetailResponse::SceneAigcVideoTaskHasBeenSet() const
+{
+    return m_sceneAigcVideoTaskHasBeenSet;
+}
+
+ProcessImageAsync DescribeTaskDetailResponse::GetProcessImageAsyncTask() const
+{
+    return m_processImageAsyncTask;
+}
+
+bool DescribeTaskDetailResponse::ProcessImageAsyncTaskHasBeenSet() const
+{
+    return m_processImageAsyncTaskHasBeenSet;
+}
+
+ExtractBlindWatermarkTask DescribeTaskDetailResponse::GetExtractBlindWatermarkTask() const
+{
+    return m_extractBlindWatermarkTask;
+}
+
+bool DescribeTaskDetailResponse::ExtractBlindWatermarkTaskHasBeenSet() const
+{
+    return m_extractBlindWatermarkTaskHasBeenSet;
+}
+
+CreateAigcAdvancedCustomElementTask DescribeTaskDetailResponse::GetCreateAigcAdvancedCustomElementTask() const
+{
+    return m_createAigcAdvancedCustomElementTask;
+}
+
+bool DescribeTaskDetailResponse::CreateAigcAdvancedCustomElementTaskHasBeenSet() const
+{
+    return m_createAigcAdvancedCustomElementTaskHasBeenSet;
+}
+
+CreateAigcCustomVoiceTask DescribeTaskDetailResponse::GetCreateAigcCustomVoiceTask() const
+{
+    return m_createAigcCustomVoiceTask;
+}
+
+bool DescribeTaskDetailResponse::CreateAigcCustomVoiceTaskHasBeenSet() const
+{
+    return m_createAigcCustomVoiceTaskHasBeenSet;
+}
+
+CreateAigcSubjectTask DescribeTaskDetailResponse::GetCreateAigcSubjectTask() const
+{
+    return m_createAigcSubjectTask;
+}
+
+bool DescribeTaskDetailResponse::CreateAigcSubjectTaskHasBeenSet() const
+{
+    return m_createAigcSubjectTaskHasBeenSet;
+}
+
+AigcVideoRedrawTask DescribeTaskDetailResponse::GetAigcVideoRedrawTask() const
+{
+    return m_aigcVideoRedrawTask;
+}
+
+bool DescribeTaskDetailResponse::AigcVideoRedrawTaskHasBeenSet() const
+{
+    return m_aigcVideoRedrawTaskHasBeenSet;
+}
+
+AigcAudioTask DescribeTaskDetailResponse::GetAigcAudioTask() const
+{
+    return m_aigcAudioTask;
+}
+
+bool DescribeTaskDetailResponse::AigcAudioTaskHasBeenSet() const
+{
+    return m_aigcAudioTaskHasBeenSet;
 }
 
 

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Animated image generating template ID.
-                     * @return Definition Animated image generating template ID.
+                     * 获取<p>Video-to-GIF conversion template ID.</p>
+                     * @return Definition <p>Video-to-GIF conversion template ID.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Animated image generating template ID.
-                     * @param _definition Animated image generating template ID.
+                     * 设置<p>Video-to-GIF conversion template ID.</p>
+                     * @param _definition <p>Video-to-GIF conversion template ID.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Start time of an animated image in a video in seconds.
-                     * @return StartTimeOffset Start time of an animated image in a video in seconds.
+                     * 获取<p>Start time of the GIF in the video, in seconds.</p>
+                     * @return StartTimeOffset <p>Start time of the GIF in the video, in seconds.</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time of an animated image in a video in seconds.
-                     * @param _startTimeOffset Start time of an animated image in a video in seconds.
+                     * 设置<p>Start time of the GIF in the video, in seconds.</p>
+                     * @param _startTimeOffset <p>Start time of the GIF in the video, in seconds.</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time of an animated image in a video in seconds.
-                     * @return EndTimeOffset End time of an animated image in a video in seconds.
+                     * 获取<p>End time of the GIF in the video, in seconds.</p>
+                     * @return EndTimeOffset <p>End time of the GIF in the video, in seconds.</p>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time of an animated image in a video in seconds.
-                     * @param _endTimeOffset End time of an animated image in a video in seconds.
+                     * 设置<p>End time of the GIF in the video, in seconds.</p>
+                     * @param _endTimeOffset <p>End time of the GIF in the video, in seconds.</p>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -111,18 +111,18 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 获取<p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @return OutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 设置<p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -136,43 +136,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
-                     * @return OutputObjectPath Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * 获取<p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
+                     * @return OutputObjectPath <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
-                     * @param _outputObjectPath Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * 设置<p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
+                     * @param _outputObjectPath <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -184,45 +156,65 @@ If left empty, a relative path is used by default: `{inputName}_animatedGraphic_
                      */
                     bool OutputObjectPathHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Animated image generating template ID.
+                     * <p>Video-to-GIF conversion template ID.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Start time of an animated image in a video in seconds.
+                     * <p>Start time of the GIF in the video, in seconds.</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time of an animated image in a video in seconds.
+                     * <p>End time of the GIF in the video, in seconds.</p>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Output path of a file after animated image generating, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

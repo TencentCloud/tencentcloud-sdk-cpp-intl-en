@@ -48,6 +48,14 @@
 #include <tencentcloud/vod/v20180717/model/AigcVideoTask.h>
 #include <tencentcloud/vod/v20180717/model/ImportMediaKnowledgeTask.h>
 #include <tencentcloud/vod/v20180717/model/SceneAigcImageTask.h>
+#include <tencentcloud/vod/v20180717/model/SceneAigcVideoTask.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageAsync.h>
+#include <tencentcloud/vod/v20180717/model/ExtractBlindWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/CreateAigcAdvancedCustomElementTask.h>
+#include <tencentcloud/vod/v20180717/model/CreateAigcCustomVoiceTask.h>
+#include <tencentcloud/vod/v20180717/model/CreateAigcSubjectTask.h>
+#include <tencentcloud/vod/v20180717/model/AigcVideoRedrawTask.h>
+#include <tencentcloud/vod/v20180717/model/AigcAudioTask.h>
 
 
 namespace TencentCloud
@@ -71,36 +79,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
-                     * @return TaskType The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+                     * 获取<p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
+                     * @return TaskType <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -113,14 +93,8 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-                     * @return Status Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+                     * 获取<p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
+                     * @return Status <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -133,8 +107,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取<p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return CreateTime <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -147,8 +121,8 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取<p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+                     * @return BeginProcessTime <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
                      * 
                      */
                     std::string GetBeginProcessTime() const;
@@ -161,8 +135,8 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取<p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+                     * @return FinishTime <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
                      * 
                      */
                     std::string GetFinishTime() const;
@@ -175,10 +149,10 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ProcedureTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProcedureTask <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProcedureTask GetProcedureTask() const;
@@ -191,10 +165,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProcedureTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EditMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EditMediaTask <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     EditMediaTask GetEditMediaTask() const;
@@ -207,10 +181,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EditMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WechatPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WechatPublishTask <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WechatPublishTask GetWechatPublishTask() const;
@@ -223,10 +197,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WechatPublishTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ComposeMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComposeMediaTask <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ComposeMediaTask GetComposeMediaTask() const;
@@ -239,10 +213,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ComposeMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SplitMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SplitMediaTask <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SplitMediaTask GetSplitMediaTask() const;
@@ -255,10 +229,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SplitMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WechatMiniProgramPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WechatMiniProgramPublishTask <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishTask() const;
@@ -271,10 +245,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WechatMiniProgramPublishTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PullUploadTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PullUploadTask <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PullUploadTask GetPullUploadTask() const;
@@ -287,10 +261,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PullUploadTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TranscodeTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeTask <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TranscodeTask2017 GetTranscodeTask() const;
@@ -303,10 +277,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ConcatTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConcatTask <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ConcatTask2017 GetConcatTask() const;
@@ -319,10 +293,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ConcatTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ClipTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClipTask <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ClipTask2017 GetClipTask() const;
@@ -335,10 +309,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ClipTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CreateImageSpriteTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CreateImageSpriteTask <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteTask() const;
@@ -351,10 +325,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CreateImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SnapshotByTimeOffsetTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotByTimeOffsetTask <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetTask() const;
@@ -367,10 +341,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RemoveWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RemoveWatermarkTask <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkTask() const;
@@ -383,10 +357,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RemoveWatermarkTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RebuildMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RebuildMediaTask <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RebuildMediaTask GetRebuildMediaTask() const;
@@ -399,10 +373,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RebuildMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ExtractTraceWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractTraceWatermarkTask <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkTask() const;
@@ -415,10 +389,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExtractTraceWatermarkTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ExtractCopyRightWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractCopyRightWatermarkTask <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ExtractCopyRightWatermarkTask GetExtractCopyRightWatermarkTask() const;
@@ -431,10 +405,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExtractCopyRightWatermarkTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ReviewAudioVideoTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewAudioVideoTask <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoTask() const;
@@ -447,10 +421,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReviewAudioVideoTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ReduceMediaBitrateTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReduceMediaBitrateTask <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateTask() const;
@@ -463,10 +437,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReduceMediaBitrateTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DescribeFileAttributesTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DescribeFileAttributesTask <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesTask() const;
@@ -479,10 +453,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DescribeFileAttributesTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return QualityInspectTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityInspectTask <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     QualityInspectTask GetQualityInspectTask() const;
@@ -495,10 +469,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QualityInspectTaskHasBeenSet() const;
 
                     /**
-                     * 获取Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityEnhanceTask <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     QualityEnhanceTask GetQualityEnhanceTask() const;
@@ -511,10 +485,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QualityEnhanceTaskHasBeenSet() const;
 
                     /**
-                     * 获取Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ComplexAdaptiveDynamicStreamingTask Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComplexAdaptiveDynamicStreamingTask <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ComplexAdaptiveDynamicStreamingTask GetComplexAdaptiveDynamicStreamingTask() const;
@@ -527,8 +501,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ComplexAdaptiveDynamicStreamingTaskHasBeenSet() const;
 
                     /**
-                     * 获取Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
-                     * @return ProcessMediaByMPSTask Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+                     * 获取<p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
+                     * @return ProcessMediaByMPSTask <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
                      * 
                      */
                     ProcessMediaByMPS GetProcessMediaByMPSTask() const;
@@ -541,8 +515,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProcessMediaByMPSTaskHasBeenSet() const;
 
                     /**
-                     * 获取AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
-                     * @return AigcImageTask AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+                     * 获取<p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
+                     * @return AigcImageTask <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
                      * 
                      */
                     AigcImageTask GetAigcImageTask() const;
@@ -555,8 +529,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AigcImageTaskHasBeenSet() const;
 
                     /**
-                     * 获取AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
-                     * @return AigcVideoTask AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+                     * 获取<p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
+                     * @return AigcVideoTask <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
                      * 
                      */
                     AigcVideoTask GetAigcVideoTask() const;
@@ -569,8 +543,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AigcVideoTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImportMediaKnowledge 
+                     * 获取<p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
+                     * @return ImportMediaKnowledge <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
                      * 
                      */
                     ImportMediaKnowledgeTask GetImportMediaKnowledge() const;
@@ -583,8 +557,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ImportMediaKnowledgeHasBeenSet() const;
 
                     /**
-                     * 获取Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
-                     * @return SceneAigcImageTask Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+                     * 获取<p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
+                     * @return SceneAigcImageTask <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
                      * 
                      */
                     SceneAigcImageTask GetSceneAigcImageTask() const;
@@ -596,238 +570,381 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SceneAigcImageTaskHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+                     * @return SceneAigcVideoTask <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+                     * 
+                     */
+                    SceneAigcVideoTask GetSceneAigcVideoTask() const;
+
+                    /**
+                     * 判断参数 SceneAigcVideoTask 是否已赋值
+                     * @return SceneAigcVideoTask 是否已赋值
+                     * 
+                     */
+                    bool SceneAigcVideoTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+                     * @return ProcessImageAsyncTask <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+                     * 
+                     */
+                    ProcessImageAsync GetProcessImageAsyncTask() const;
+
+                    /**
+                     * 判断参数 ProcessImageAsyncTask 是否已赋值
+                     * @return ProcessImageAsyncTask 是否已赋值
+                     * 
+                     */
+                    bool ProcessImageAsyncTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+                     * @return ExtractBlindWatermarkTask <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+                     * 
+                     */
+                    ExtractBlindWatermarkTask GetExtractBlindWatermarkTask() const;
+
+                    /**
+                     * 判断参数 ExtractBlindWatermarkTask 是否已赋值
+                     * @return ExtractBlindWatermarkTask 是否已赋值
+                     * 
+                     */
+                    bool ExtractBlindWatermarkTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+                     * @return CreateAigcAdvancedCustomElementTask <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+                     * 
+                     */
+                    CreateAigcAdvancedCustomElementTask GetCreateAigcAdvancedCustomElementTask() const;
+
+                    /**
+                     * 判断参数 CreateAigcAdvancedCustomElementTask 是否已赋值
+                     * @return CreateAigcAdvancedCustomElementTask 是否已赋值
+                     * 
+                     */
+                    bool CreateAigcAdvancedCustomElementTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+                     * @return CreateAigcCustomVoiceTask <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+                     * 
+                     */
+                    CreateAigcCustomVoiceTask GetCreateAigcCustomVoiceTask() const;
+
+                    /**
+                     * 判断参数 CreateAigcCustomVoiceTask 是否已赋值
+                     * @return CreateAigcCustomVoiceTask 是否已赋值
+                     * 
+                     */
+                    bool CreateAigcCustomVoiceTaskHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+                     * @return CreateAigcSubjectTask <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+                     * 
+                     */
+                    CreateAigcSubjectTask GetCreateAigcSubjectTask() const;
+
+                    /**
+                     * 判断参数 CreateAigcSubjectTask 是否已赋值
+                     * @return CreateAigcSubjectTask 是否已赋值
+                     * 
+                     */
+                    bool CreateAigcSubjectTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AigcVideoRedrawTask 
+                     * 
+                     */
+                    AigcVideoRedrawTask GetAigcVideoRedrawTask() const;
+
+                    /**
+                     * 判断参数 AigcVideoRedrawTask 是否已赋值
+                     * @return AigcVideoRedrawTask 是否已赋值
+                     * 
+                     */
+                    bool AigcVideoRedrawTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AigcAudioTask 
+                     * 
+                     */
+                    AigcAudioTask GetAigcAudioTask() const;
+
+                    /**
+                     * 判断参数 AigcAudioTask 是否已赋值
+                     * @return AigcAudioTask 是否已赋值
+                     * 
+                     */
+                    bool AigcAudioTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+                     * <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+                     * <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProcedureTask m_procedureTask;
                     bool m_procedureTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     EditMediaTask m_editMediaTask;
                     bool m_editMediaTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WechatPublishTask m_wechatPublishTask;
                     bool m_wechatPublishTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ComposeMediaTask m_composeMediaTask;
                     bool m_composeMediaTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SplitMediaTask m_splitMediaTask;
                     bool m_splitMediaTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishTask;
                     bool m_wechatMiniProgramPublishTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PullUploadTask m_pullUploadTask;
                     bool m_pullUploadTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TranscodeTask2017 m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ConcatTask2017 m_concatTask;
                     bool m_concatTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ClipTask2017 m_clipTask;
                     bool m_clipTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CreateImageSpriteTask2017 m_createImageSpriteTask;
                     bool m_createImageSpriteTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RemoveWatermarkTask m_removeWatermarkTask;
                     bool m_removeWatermarkTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RebuildMediaTask m_rebuildMediaTask;
                     bool m_rebuildMediaTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ExtractTraceWatermarkTask m_extractTraceWatermarkTask;
                     bool m_extractTraceWatermarkTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ExtractCopyRightWatermarkTask m_extractCopyRightWatermarkTask;
                     bool m_extractCopyRightWatermarkTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoTask;
                     bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateTask;
                     bool m_reduceMediaBitrateTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesTask;
                     bool m_describeFileAttributesTaskHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     QualityInspectTask m_qualityInspectTask;
                     bool m_qualityInspectTaskHasBeenSet;
 
                     /**
-                     * Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     QualityEnhanceTask m_qualityEnhanceTask;
                     bool m_qualityEnhanceTaskHasBeenSet;
 
                     /**
-                     * Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ComplexAdaptiveDynamicStreamingTask m_complexAdaptiveDynamicStreamingTask;
                     bool m_complexAdaptiveDynamicStreamingTaskHasBeenSet;
 
                     /**
-                     * Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+                     * <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
                      */
                     ProcessMediaByMPS m_processMediaByMPSTask;
                     bool m_processMediaByMPSTaskHasBeenSet;
 
                     /**
-                     * AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+                     * <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
                      */
                     AigcImageTask m_aigcImageTask;
                     bool m_aigcImageTaskHasBeenSet;
 
                     /**
-                     * AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+                     * <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
                      */
                     AigcVideoTask m_aigcVideoTask;
                     bool m_aigcVideoTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
                      */
                     ImportMediaKnowledgeTask m_importMediaKnowledge;
                     bool m_importMediaKnowledgeHasBeenSet;
 
                     /**
-                     * Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+                     * <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
                      */
                     SceneAigcImageTask m_sceneAigcImageTask;
                     bool m_sceneAigcImageTaskHasBeenSet;
+
+                    /**
+                     * <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+                     */
+                    SceneAigcVideoTask m_sceneAigcVideoTask;
+                    bool m_sceneAigcVideoTaskHasBeenSet;
+
+                    /**
+                     * <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+                     */
+                    ProcessImageAsync m_processImageAsyncTask;
+                    bool m_processImageAsyncTaskHasBeenSet;
+
+                    /**
+                     * <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+                     */
+                    ExtractBlindWatermarkTask m_extractBlindWatermarkTask;
+                    bool m_extractBlindWatermarkTaskHasBeenSet;
+
+                    /**
+                     * <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+                     */
+                    CreateAigcAdvancedCustomElementTask m_createAigcAdvancedCustomElementTask;
+                    bool m_createAigcAdvancedCustomElementTaskHasBeenSet;
+
+                    /**
+                     * <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+                     */
+                    CreateAigcCustomVoiceTask m_createAigcCustomVoiceTask;
+                    bool m_createAigcCustomVoiceTaskHasBeenSet;
+
+                    /**
+                     * <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+                     */
+                    CreateAigcSubjectTask m_createAigcSubjectTask;
+                    bool m_createAigcSubjectTaskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AigcVideoRedrawTask m_aigcVideoRedrawTask;
+                    bool m_aigcVideoRedrawTaskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AigcAudioTask m_aigcAudioTask;
+                    bool m_aigcAudioTaskHasBeenSet;
 
                 };
             }

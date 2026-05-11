@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Full text recognition task output information.
+                     * @return Output Full text recognition task output information.
                      * 
                      */
                     AiRecognitionTaskOcrFullTextResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Full text recognition task output information.
+                     * @param _output Full text recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskOcrFullTextResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of full text recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Full text recognition task output information.
                      */
                     AiRecognitionTaskOcrFullTextResultOutput m_output;
                     bool m_outputHasBeenSet;

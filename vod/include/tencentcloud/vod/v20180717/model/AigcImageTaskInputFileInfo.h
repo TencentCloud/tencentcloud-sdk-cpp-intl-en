@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
-                     * @return Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+                     * 获取Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+                     * @return Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
-                     * @param _type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+                     * 设置Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+                     * @param _type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -157,7 +157,7 @@ Description:.
                 private:
 
                     /**
-                     * Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+                     * Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

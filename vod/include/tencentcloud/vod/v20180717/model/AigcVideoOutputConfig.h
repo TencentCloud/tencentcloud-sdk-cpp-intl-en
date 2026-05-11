@@ -363,6 +363,27 @@ Note:
                     bool EnhanceSwitchHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return OffPeak 
+                     * 
+                     */
+                    std::string GetOffPeak() const;
+
+                    /**
+                     * 设置
+                     * @param _offPeak 
+                     * 
+                     */
+                    void SetOffPeak(const std::string& _offPeak);
+
+                    /**
+                     * 判断参数 OffPeak 是否已赋值
+                     * @return OffPeak 是否已赋值
+                     * 
+                     */
+                    bool OffPeakHasBeenSet() const;
+
+                    /**
                      * 获取Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
                      * @return FrameInterpolate Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
                      * 
@@ -382,6 +403,31 @@ Note:
                      * 
                      */
                     bool FrameInterpolateHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+                     * @return LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+                     * 
+                     */
+                    std::string GetLogoAdd() const;
+
+                    /**
+                     * 设置Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+                     * @param _logoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+                     * 
+                     */
+                    void SetLogoAdd(const std::string& _logoAdd);
+
+                    /**
+                     * 判断参数 LogoAdd 是否已赋值
+                     * @return LogoAdd 是否已赋值
+                     * 
+                     */
+                    bool LogoAddHasBeenSet() const;
 
                 private:
 
@@ -474,10 +520,23 @@ Note:
                     bool m_enhanceSwitchHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_offPeak;
+                    bool m_offPeakHasBeenSet;
+
+                    /**
                      * Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
                      */
                     std::string m_frameInterpolate;
                     bool m_frameInterpolateHasBeenSet;
+
+                    /**
+                     * Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+                     */
+                    std::string m_logoAdd;
+                    bool m_logoAddHasBeenSet;
 
                 };
             }

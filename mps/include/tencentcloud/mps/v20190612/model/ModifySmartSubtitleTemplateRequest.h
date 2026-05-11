@@ -296,6 +296,48 @@ namespace TencentCloud
                      */
                     bool SubtitleEmbedIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+                     * @return SpeakerMode <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+                     * 
+                     */
+                    int64_t GetSpeakerMode() const;
+
+                    /**
+                     * 设置<p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+                     * @param _speakerMode <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+                     * 
+                     */
+                    void SetSpeakerMode(const int64_t& _speakerMode);
+
+                    /**
+                     * 判断参数 SpeakerMode 是否已赋值
+                     * @return SpeakerMode 是否已赋值
+                     * 
+                     */
+                    bool SpeakerModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+                     * @return SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+                     * 
+                     */
+                    int64_t GetSpeakerLabel() const;
+
+                    /**
+                     * 设置<p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+                     * @param _speakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+                     * 
+                     */
+                    void SetSpeakerLabel(const int64_t& _speakerLabel);
+
+                    /**
+                     * 判断参数 SpeakerLabel 是否已赋值
+                     * @return SpeakerLabel 是否已赋值
+                     * 
+                     */
+                    bool SpeakerLabelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -369,6 +411,18 @@ namespace TencentCloud
                      */
                     int64_t m_subtitleEmbedId;
                     bool m_subtitleEmbedIdHasBeenSet;
+
+                    /**
+                     * <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+                     */
+                    int64_t m_speakerMode;
+                    bool m_speakerModeHasBeenSet;
+
+                    /**
+                     * <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+                     */
+                    int64_t m_speakerLabel;
+                    bool m_speakerLabelHasBeenSet;
 
                 };
             }

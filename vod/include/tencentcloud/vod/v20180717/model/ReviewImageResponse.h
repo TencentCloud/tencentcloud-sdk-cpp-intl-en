@@ -48,14 +48,14 @@ namespace TencentCloud
                     /**
                      * 获取The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
                      * @return ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
-                     * 
+                     * @deprecated
                      */
                     std::vector<ContentReviewResult> GetReviewResultSet() const;
 
                     /**
                      * 判断参数 ReviewResultSet 是否已赋值
                      * @return ReviewResultSet 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ReviewResultSetHasBeenSet() const;
 

@@ -49,23 +49,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AI image generation scenario type. valid values:
+                     * 获取Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
-                     * @return Type AI image generation scenario type. valid values:
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
+                     * @return Type Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置AI image generation scenario type. valid values:
+                     * 设置Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
-                     * @param _type AI image generation scenario type. valid values:
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
+                     * @param _type Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -122,9 +126,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AI image generation scenario type. valid values:
+                     * Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

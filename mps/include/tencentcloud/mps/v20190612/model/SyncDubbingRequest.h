@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
-                     * @return Text Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+                     * 获取<p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+                     * @return Text <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
-                     * @param _text Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+                     * 设置<p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+                     * @param _text <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -65,183 +65,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
-                     * @return TextLang Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+                     * 获取<p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+                     * @return TextLang <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
                      * 
                      */
                     std::string GetTextLang() const;
 
                     /**
-                     * 设置Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
-                     * @param _textLang Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+                     * 设置<p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+                     * @param _textLang <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
                      * 
                      */
                     void SetTextLang(const std::string& _textLang);
@@ -254,15 +86,15 @@ sl: Slovenian.
                     bool TextLangHasBeenSet() const;
 
                     /**
-                     * 获取Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
-                     * @return VoiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+                     * 获取<p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+                     * @return VoiceId <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
-                     * @param _voiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+                     * 设置<p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+                     * @param _voiceId <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -275,15 +107,15 @@ sl: Slovenian.
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded audio for cloning.
-                     * @return AudioData Base64-encoded audio for cloning.
+                     * 获取<p>Base64-encoded audio for cloning.</p>
+                     * @return AudioData <p>Base64-encoded audio for cloning.</p>
                      * 
                      */
                     std::string GetAudioData() const;
 
                     /**
-                     * 设置Base64-encoded audio for cloning.
-                     * @param _audioData Base64-encoded audio for cloning.
+                     * 设置<p>Base64-encoded audio for cloning.</p>
+                     * @param _audioData <p>Base64-encoded audio for cloning.</p>
                      * 
                      */
                     void SetAudioData(const std::string& _audioData);
@@ -296,15 +128,15 @@ sl: Slovenian.
                     bool AudioDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @param _audioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -317,19 +149,15 @@ sl: Slovenian.
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
-                     * @return AudioLang Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+                     * 获取<p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+                     * @return AudioLang <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
                      * 
                      */
                     std::string GetAudioLang() const;
 
                     /**
-                     * 设置Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
-                     * @param _audioLang Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+                     * 设置<p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+                     * @param _audioLang <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
                      * 
                      */
                     void SetAudioLang(const std::string& _audioLang);
@@ -342,15 +170,15 @@ Supported languages are the same as those for TextLang.
                     bool AudioLangHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取<p>Output parameters.</p><p>Specifies the output format, etc.</p>
+                     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
                      * 
                      */
                     SyncDubbingOutputOption GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置<p>Output parameters.</p><p>Specifies the output format, etc.</p>
+                     * @param _output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
                      * 
                      */
                     void SetOutput(const SyncDubbingOutputOption& _output);
@@ -363,15 +191,15 @@ Supported languages are the same as those for TextLang.
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Extended parameters in the format of a JSON string.
-                     * @return ExtParam Extended parameters in the format of a JSON string.
+                     * 获取<p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置Extended parameters in the format of a JSON string.
-                     * @param _extParam Extended parameters in the format of a JSON string.
+                     * 设置<p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -386,92 +214,49 @@ Supported languages are the same as those for TextLang.
                 private:
 
                     /**
-                     * Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+                     * <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+                     * <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
                      */
                     std::string m_textLang;
                     bool m_textLangHasBeenSet;
 
                     /**
-                     * Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+                     * <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * Base64-encoded audio for cloning.
+                     * <p>Base64-encoded audio for cloning.</p>
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+                     * <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
                      */
                     std::string m_audioLang;
                     bool m_audioLangHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output parameters.</p><p>Specifies the output format, etc.</p>
                      */
                     SyncDubbingOutputOption m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Extended parameters in the format of a JSON string.
+                     * <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Media import knowledge base task
+                * Import knowledge base task for media
                 */
                 class ImportMediaKnowledgeTask : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-                     * @return Status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * 获取Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-                     * @param _status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * 设置Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * @param _status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code; 0 indicates success, other values indicate failure
-                     * @return ErrCode Error code; 0 indicates success, other values indicate failure
+                     * 获取Error code. 0 indicates success, other values indicate failure.
+                     * @return ErrCode Error code. 0 indicates success, other values indicate failure.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code; 0 indicates success, other values indicate failure
-                     * @param _errCode Error code; 0 indicates success, other values indicate failure
+                     * 设置Error code. 0 indicates success, other values indicate failure.
+                     * @param _errCode Error code. 0 indicates success, other values indicate failure.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -139,13 +139,13 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code; 0 indicates success, other values indicate failure
+                     * Error code. 0 indicates success, other values indicate failure.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

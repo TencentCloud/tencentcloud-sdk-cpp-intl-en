@@ -22,7 +22,9 @@ using namespace std;
 
 AigcImageExtraParam::AigcImageExtraParam() :
     m_aspectRatioHasBeenSet(false),
-    m_resolutionHasBeenSet(false)
+    m_resolutionHasBeenSet(false),
+    m_logoAddHasBeenSet(false),
+    m_outputFormatHasBeenSet(false)
 {
 }
 
@@ -51,6 +53,26 @@ CoreInternalOutcome AigcImageExtraParam::Deserialize(const rapidjson::Value &val
         m_resolutionHasBeenSet = true;
     }
 
+    if (value.HasMember("LogoAdd") && !value["LogoAdd"].IsNull())
+    {
+        if (!value["LogoAdd"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcImageExtraParam.LogoAdd` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_logoAdd = value["LogoAdd"].GetInt64();
+        m_logoAddHasBeenSet = true;
+    }
+
+    if (value.HasMember("OutputFormat") && !value["OutputFormat"].IsNull())
+    {
+        if (!value["OutputFormat"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcImageExtraParam.OutputFormat` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_outputFormat = string(value["OutputFormat"].GetString());
+        m_outputFormatHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -72,6 +94,22 @@ void AigcImageExtraParam::ToJsonObject(rapidjson::Value &value, rapidjson::Docum
         string key = "Resolution";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_resolution.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_logoAddHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LogoAdd";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_logoAdd, allocator);
+    }
+
+    if (m_outputFormatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputFormat";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputFormat.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -107,5 +145,37 @@ void AigcImageExtraParam::SetResolution(const string& _resolution)
 bool AigcImageExtraParam::ResolutionHasBeenSet() const
 {
     return m_resolutionHasBeenSet;
+}
+
+int64_t AigcImageExtraParam::GetLogoAdd() const
+{
+    return m_logoAdd;
+}
+
+void AigcImageExtraParam::SetLogoAdd(const int64_t& _logoAdd)
+{
+    m_logoAdd = _logoAdd;
+    m_logoAddHasBeenSet = true;
+}
+
+bool AigcImageExtraParam::LogoAddHasBeenSet() const
+{
+    return m_logoAddHasBeenSet;
+}
+
+string AigcImageExtraParam::GetOutputFormat() const
+{
+    return m_outputFormat;
+}
+
+void AigcImageExtraParam::SetOutputFormat(const string& _outputFormat)
+{
+    m_outputFormat = _outputFormat;
+    m_outputFormatHasBeenSet = true;
+}
+
+bool AigcImageExtraParam::OutputFormatHasBeenSet() const
+{
+    return m_outputFormatHasBeenSet;
 }
 

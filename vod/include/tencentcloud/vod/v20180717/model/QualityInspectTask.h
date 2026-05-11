@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media quality inspection task ID.
-                     * @return TaskId Media quality inspection task ID.
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Media quality inspection task ID.
-                     * @param _taskId Media quality inspection task ID.
+                     * 设置Task ID.
+                     * @param _taskId Task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -71,15 +71,23 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
-                     * @return Status Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
+                     * 获取Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @return Status Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
-                     * @param _status Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
+                     * 设置Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @param _status Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -92,15 +100,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
-                     * @return ErrCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+                     * 获取Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
-                     * @param _errCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+                     * 设置Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param _errCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -113,15 +121,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error information.
-                     * @return Message Error information.
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error information.
-                     * @param _message Error information.
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -134,15 +142,19 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection input metadata of audio and video.
-                     * @return MetaData Media quality inspection input metadata of audio and video.
+                     * 获取Metadata of audio and video for quality inspection input.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MetaData Metadata of audio and video for quality inspection input.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Media quality inspection input metadata of audio and video.
-                     * @param _metaData Media quality inspection input metadata of audio and video.
+                     * 设置Metadata of audio and video for quality inspection input.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _metaData Metadata of audio and video for quality inspection input.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -155,15 +167,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection task input.
-                     * @return Input Media quality inspection task input.
+                     * 获取Audio and video quality inspection task input.
+                     * @return Input Audio and video quality inspection task input.
                      * 
                      */
                     QualityInspectTaskInput GetInput() const;
 
                     /**
-                     * 设置Media quality inspection task input.
-                     * @param _input Media quality inspection task input.
+                     * 设置Audio and video quality inspection task input.
+                     * @param _input Audio and video quality inspection task input.
                      * 
                      */
                     void SetInput(const QualityInspectTaskInput& _input);
@@ -176,15 +188,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection task generates.
-                     * @return Output Media quality inspection task generates.
+                     * 获取Audio and video quality inspection task output.
+                     * @return Output Audio and video quality inspection task output.
                      * 
                      */
                     QualityInspectTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Media quality inspection task generates.
-                     * @param _output Media quality inspection task generates.
+                     * 设置Audio and video quality inspection task output.
+                     * @param _output Audio and video quality inspection task output.
                      * 
                      */
                     void SetOutput(const QualityInspectTaskOutput& _output);
@@ -197,15 +209,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
-                     * @return SessionId Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
-                     * @param _sessionId Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -218,15 +230,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
-                     * @return SessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * 获取Source context. This is used to pass through user request information. The audio and video quality detection completion callback returns the value of this field. The maximum length is 1000 characters.
+                     * @return SessionContext Source context. This is used to pass through user request information. The audio and video quality detection completion callback returns the value of this field. The maximum length is 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
-                     * @param _sessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * 设置Source context. This is used to pass through user request information. The audio and video quality detection completion callback returns the value of this field. The maximum length is 1000 characters.
+                     * @param _sessionContext Source context. This is used to pass through user request information. The audio and video quality detection completion callback returns the value of this field. The maximum length is 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -241,55 +253,58 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media quality inspection task ID.
+                     * Task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
+                     * Task status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+                     * Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error information.
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Media quality inspection input metadata of audio and video.
+                     * Metadata of audio and video for quality inspection input.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * Media quality inspection task input.
+                     * Audio and video quality inspection task input.
                      */
                     QualityInspectTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Media quality inspection task generates.
+                     * Audio and video quality inspection task output.
                      */
                     QualityInspectTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * Source context. This is used to pass through user request information. The audio and video quality detection completion callback returns the value of this field. The maximum length is 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

@@ -158,19 +158,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Output Output for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Video moderation Ocr text involves offensive content in task output.
+                     * @return Output Video moderation Ocr text involves offensive content in task output.
                      * 
                      */
                     AiReviewPornOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _output Output for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Video moderation Ocr text involves offensive content in task output.
+                     * @param _output Video moderation Ocr text involves offensive content in task output.
                      * 
                      */
                     void SetOutput(const AiReviewPornOcrTaskOutput& _output);
@@ -237,8 +233,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Video moderation Ocr text involves offensive content in task output.
                      */
                     AiReviewPornOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

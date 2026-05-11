@@ -106,7 +106,7 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-                     * 
+                     * @deprecated
                      */
                     std::string GetSubtitleFormat() const;
 
@@ -119,14 +119,14 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-                     * 
+                     * @deprecated
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
 
                     /**
                      * 判断参数 SubtitleFormat 是否已赋值
                      * @return SubtitleFormat 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SubtitleFormatHasBeenSet() const;
 

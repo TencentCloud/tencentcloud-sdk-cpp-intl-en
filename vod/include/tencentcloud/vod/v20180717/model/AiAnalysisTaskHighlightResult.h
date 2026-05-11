@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent Highlight Task output.
+                     * @return Output Intelligent Highlight Task output.
                      * 
                      */
                     AiAnalysisTaskHighlightOutput GetOutput() const;
 
                     /**
-                     * 设置Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent Highlight Task output.
+                     * @param _output Intelligent Highlight Task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHighlightOutput& _output);
@@ -274,8 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intelligent Highlight Task output.
                      */
                     AiAnalysisTaskHighlightOutput m_output;
                     bool m_outputHasBeenSet;

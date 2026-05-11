@@ -353,15 +353,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SnatIpsHasBeenSet() const;
 
                     /**
-                     * 获取Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
-                     * @return ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+                     * 获取Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
+                     * @return ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
-                     * @param _clusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+                     * 设置Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
+                     * @param _clusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -547,7 +547,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool m_snatIpsHasBeenSet;
 
                     /**
-                     * Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+                     * Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

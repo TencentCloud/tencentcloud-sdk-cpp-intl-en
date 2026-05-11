@@ -162,19 +162,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Metadata of the original video.
+                     * @return MetaData Metadata of the original video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _metaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Metadata of the original video.
+                     * @param _metaData Metadata of the original video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -334,8 +330,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Metadata of the original video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

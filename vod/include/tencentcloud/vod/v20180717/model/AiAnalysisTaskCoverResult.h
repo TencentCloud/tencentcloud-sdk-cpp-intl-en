@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent Cover Task output.
+                     * @return Output Intelligent Cover Task output.
                      * 
                      */
                     AiAnalysisTaskCoverOutput GetOutput() const;
 
                     /**
-                     * 设置Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent Cover Task output.
+                     * @param _output Intelligent Cover Task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskCoverOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent Cover Task output.
                      */
                     AiAnalysisTaskCoverOutput m_output;
                     bool m_outputHasBeenSet;

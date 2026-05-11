@@ -27,6 +27,7 @@
 #include <tencentcloud/vod/v20180717/model/WatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/TraceWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/CopyRightWatermarkInput.h>
+#include <tencentcloud/vod/v20180717/model/BlindWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/MosaicInput.h>
 #include <tencentcloud/vod/v20180717/model/HeadTailTaskInput.h>
 
@@ -138,6 +139,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool CopyRightWatermarkHasBeenSet() const;
+
+                    /**
+                     * 获取Digital watermark.
+                     * @return BlindWatermark Digital watermark.
+                     * 
+                     */
+                    BlindWatermarkInput GetBlindWatermark() const;
+
+                    /**
+                     * 设置Digital watermark.
+                     * @param _blindWatermark Digital watermark.
+                     * 
+                     */
+                    void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
+
+                    /**
+                     * 判断参数 BlindWatermark 是否已赋值
+                     * @return BlindWatermark 是否已赋值
+                     * 
+                     */
+                    bool BlindWatermarkHasBeenSet() const;
 
                     /**
                      * 获取List of blurs. Up to 10 ones can be supported.
@@ -273,6 +295,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     CopyRightWatermarkInput m_copyRightWatermark;
                     bool m_copyRightWatermarkHasBeenSet;
+
+                    /**
+                     * Digital watermark.
+                     */
+                    BlindWatermarkInput m_blindWatermark;
+                    bool m_blindWatermarkHasBeenSet;
 
                     /**
                      * List of blurs. Up to 10 ones can be supported.

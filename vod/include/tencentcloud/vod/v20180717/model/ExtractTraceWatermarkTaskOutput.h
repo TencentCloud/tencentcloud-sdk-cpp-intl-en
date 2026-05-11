@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
-                     * @return Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * 获取Player's ID, represented in hexadecimal, 6 digits in total.
+                     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     std::string GetUv() const;
 
                     /**
-                     * 设置The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
-                     * @param _uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * 设置Player's ID, represented in hexadecimal, 6 digits in total.
+                     * @param _uv Player's ID, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     void SetUv(const std::string& _uv);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * Player's ID, represented in hexadecimal, 6 digits in total.
                      */
                     std::string m_uv;
                     bool m_uvHasBeenSet;

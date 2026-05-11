@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent classification task output.
+                     * @return Output Intelligent classification task output.
                      * 
                      */
                     AiAnalysisTaskClassificationOutput GetOutput() const;
 
                     /**
-                     * 设置Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent classification task output.
+                     * @param _output Intelligent classification task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskClassificationOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent classification task output.
                      */
                     AiAnalysisTaskClassificationOutput m_output;
                     bool m_outputHasBeenSet;

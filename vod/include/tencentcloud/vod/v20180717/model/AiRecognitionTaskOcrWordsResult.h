@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Text keyword recognition task output information.
+                     * @return Output Text keyword recognition task output information.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Text keyword recognition task output information.
+                     * @param _output Text keyword recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskOcrWordsResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Text keyword recognition task output information.
                      */
                     AiRecognitionTaskOcrWordsResultOutput m_output;
                     bool m_outputHasBeenSet;

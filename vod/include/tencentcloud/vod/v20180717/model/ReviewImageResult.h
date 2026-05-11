@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
+                     * @return Suggestion Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
+                     * @param _suggestion Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -102,23 +102,23 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-                     * @return Form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+                     * 获取Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
+                     * @return Form Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
                      * 
                      */
                     std::string GetForm() const;
 
                     /**
-                     * 设置The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-                     * @param _form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+                     * 设置Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
+                     * @param _form Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
                      * 
                      */
                     void SetForm(const std::string& _form);
@@ -131,19 +131,19 @@ namespace TencentCloud
                     bool FormHasBeenSet() const;
 
                     /**
-                     * 获取A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
-                     * @return SegmentSet A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+                     * 获取Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * @return SegmentSet Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
                      * 
                      */
                     std::vector<ReviewImageSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
-                     * @param _segmentSet A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+                     * 设置Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * @param _segmentSet Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
                      * 
                      */
                     void SetSegmentSet(const std::vector<ReviewImageSegmentItem>& _segmentSet);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
-                     * @return SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * 获取URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * @return SegmentSetFileUrl URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
-                     * @param _segmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * 设置URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * @param _segmentSetFileUrl URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-                     * @return SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * 获取URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return SegmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-                     * @param _segmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * 设置URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _segmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -200,10 +200,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The suggestion. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * Image review result suggestion. Value ranges from...to...
+<li>pass: it is recommended to pass;</li>
+<li>review: suggest re-examination;</li>
+<li>block: Suggest banning.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
@@ -215,28 +215,28 @@ namespace TencentCloud
                     bool m_labelHasBeenSet;
 
                     /**
-                     * The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+                     * Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on the screen.</li>
                      */
                     std::string m_form;
                     bool m_formHasBeenSet;
 
                     /**
-                     * A list of the suspicious segments detected.
-<font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+                     * Video clips suspected of containing violation information.
+<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
                      */
                     std::vector<ReviewImageSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

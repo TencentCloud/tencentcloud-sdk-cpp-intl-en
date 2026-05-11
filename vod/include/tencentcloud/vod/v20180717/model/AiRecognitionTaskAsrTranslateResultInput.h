@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of voice translation.
+                * Input for voice translation.
                 */
                 class AiRecognitionTaskAsrTranslateResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice translation template ID.
-                     * @return Definition Voice translation template ID.
+                     * 获取Speech translation template ID.
+                     * @return Definition Speech translation template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Voice translation template ID.
-                     * @param _definition Voice translation template ID.
+                     * 设置Speech translation template ID.
+                     * @param _definition Speech translation template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Voice translation template ID.
+                     * Speech translation template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

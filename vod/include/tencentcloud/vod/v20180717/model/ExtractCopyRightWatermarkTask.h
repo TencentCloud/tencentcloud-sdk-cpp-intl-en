@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Input Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Input of the copyright watermark extraction task.
+                     * @return Input Input of the copyright watermark extraction task.
                      * 
                      */
                     ExtractCopyRightWatermarkTaskInput GetInput() const;
 
                     /**
-                     * 设置Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _input Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Input of the copyright watermark extraction task.
+                     * @param _input Input of the copyright watermark extraction task.
                      * 
                      */
                     void SetInput(const ExtractCopyRightWatermarkTaskInput& _input);
@@ -199,19 +195,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Output message of the Copyright Watermark Extraction Task.
+                     * @return Output Output message of the Copyright Watermark Extraction Task.
                      * 
                      */
                     ExtractCopyRightWatermarkTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Output message of the Copyright Watermark Extraction Task.
+                     * @param _output Output message of the Copyright Watermark Extraction Task.
                      * 
                      */
                     void SetOutput(const ExtractCopyRightWatermarkTaskOutput& _output);
@@ -303,15 +295,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Input of the copyright watermark extraction task.
                      */
                     ExtractCopyRightWatermarkTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Output message of the Copyright Watermark Extraction Task.
                      */
                     ExtractCopyRightWatermarkTaskOutput m_output;
                     bool m_outputHasBeenSet;

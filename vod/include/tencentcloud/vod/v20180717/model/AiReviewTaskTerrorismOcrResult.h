@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Output Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Video moderation Ocr text involves unsafe information in task output.
+                     * @return Output Video moderation Ocr text involves unsafe information in task output.
                      * 
                      */
                     AiReviewTerrorismOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _output Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Video moderation Ocr text involves unsafe information in task output.
+                     * @param _output Video moderation Ocr text involves unsafe information in task output.
                      * 
                      */
                     void SetOutput(const AiReviewTerrorismOcrTaskOutput& _output);
@@ -232,8 +228,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Video moderation Ocr text involves unsafe information in task output.
                      */
                     AiReviewTerrorismOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

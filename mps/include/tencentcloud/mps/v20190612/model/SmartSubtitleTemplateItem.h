@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the smart subtitle template.
-                     * @return Definition Unique identifier of the smart subtitle template.
+                     * 获取<p>Unique identifier of the smart subtitle template.</p>
+                     * @return Definition <p>Unique identifier of the smart subtitle template.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the smart subtitle template.
-                     * @param _definition Unique identifier of the smart subtitle template.
+                     * 设置<p>Unique identifier of the smart subtitle template.</p>
+                     * @param _definition <p>Unique identifier of the smart subtitle template.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,19 +70,19 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Name Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Name <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _name Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _name <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -95,19 +95,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Comment Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Comment <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _comment Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _comment <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -120,27 +120,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Type <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _type <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -153,19 +145,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AsrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AsrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AsrHotWordsConfigure GetAsrHotWordsConfigure() const;
 
                     /**
-                     * 设置ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _asrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _asrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAsrHotWordsConfigure(const AsrHotWordsConfigure& _asrHotWordsConfigure);
@@ -178,19 +170,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AsrHotWordsConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AsrHotWordsLibraryName Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AsrHotWordsLibraryName <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAsrHotWordsLibraryName() const;
 
                     /**
-                     * 设置Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _asrHotWordsLibraryName Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _asrHotWordsLibraryName <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAsrHotWordsLibraryName(const std::string& _asrHotWordsLibraryName);
@@ -203,119 +195,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AsrHotWordsLibraryNameHasBeenSet() const;
 
                     /**
-                     * 获取List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
-                     * @return VideoSrcLanguage List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * 获取<p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+                     * @return VideoSrcLanguage <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
                      * 
                      */
                     std::string GetVideoSrcLanguage() const;
 
                     /**
-                     * 设置List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
-                     * @param _videoSrcLanguage List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * 设置<p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+                     * @param _videoSrcLanguage <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
                      * 
                      */
                     void SetVideoSrcLanguage(const std::string& _videoSrcLanguage);
@@ -328,19 +216,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool VideoSrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleFormat Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubtitleFormat <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleFormat Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subtitleFormat <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -353,27 +241,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SubtitleFormatHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
-                     * @return SubtitleType Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+                     * 获取<p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+                     * @return SubtitleType <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
                      * 
                      */
                     int64_t GetSubtitleType() const;
 
                     /**
-                     * 设置Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
-                     * @param _subtitleType Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+                     * 设置<p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+                     * @param _subtitleType <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
                      * 
                      */
                     void SetSubtitleType(const int64_t& _subtitleType);
@@ -386,27 +262,19 @@ The value can only be 0 when TranslateSwitch is set to OFF.The value can only be
                     bool SubtitleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranslateSwitch <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTranslateSwitch() const;
 
                     /**
-                     * 设置Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _translateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _translateSwitch <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTranslateSwitch(const std::string& _translateSwitch);
@@ -419,106 +287,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TranslateSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * 获取<p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * @return TranslateDstLanguage <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTranslateDstLanguage() const;
 
                     /**
-                     * 设置Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * 设置<p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _translateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * @param _translateDstLanguage <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -532,15 +312,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranslateDstLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return CreateTime Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _createTime Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @param _createTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -553,15 +333,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return UpdateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _updateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @param _updateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -574,19 +354,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AliasName Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AliasName <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
-                     * 设置Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _aliasName Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _aliasName <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -599,15 +379,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AliasNameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
-                     * @return ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+                     * 获取<p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+                     * @return ProcessType <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
                      * 
                      */
                     uint64_t GetProcessType() const;
 
                     /**
-                     * 设置Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
-                     * @param _processType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+                     * 设置<p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+                     * @param _processType <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
                      * 
                      */
                     void SetProcessType(const uint64_t& _processType);
@@ -620,15 +400,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProcessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SelectingSubtitleAreasConfig GetSelectingSubtitleAreasConfig() const;
 
                     /**
-                     * 设置Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _selectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _selectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSelectingSubtitleAreasConfig(const SelectingSubtitleAreasConfig& _selectingSubtitleAreasConfig);
@@ -640,167 +424,194 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SelectingSubtitleAreasConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Subtitle burn-in template ID.</p>
+                     * @return SubtitleEmbedId <p>Subtitle burn-in template ID.</p>
+                     * 
+                     */
+                    int64_t GetSubtitleEmbedId() const;
+
+                    /**
+                     * 设置<p>Subtitle burn-in template ID.</p>
+                     * @param _subtitleEmbedId <p>Subtitle burn-in template ID.</p>
+                     * 
+                     */
+                    void SetSubtitleEmbedId(const int64_t& _subtitleEmbedId);
+
+                    /**
+                     * 判断参数 SubtitleEmbedId 是否已赋值
+                     * @return SubtitleEmbedId 是否已赋值
+                     * 
+                     */
+                    bool SubtitleEmbedIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+                     * @return SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+                     * 
+                     */
+                    int64_t GetSpeakerMode() const;
+
+                    /**
+                     * 设置<p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+                     * @param _speakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+                     * 
+                     */
+                    void SetSpeakerMode(const int64_t& _speakerMode);
+
+                    /**
+                     * 判断参数 SpeakerMode 是否已赋值
+                     * @return SpeakerMode 是否已赋值
+                     * 
+                     */
+                    bool SpeakerModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+                     * @return SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+                     * 
+                     */
+                    int64_t GetSpeakerLabel() const;
+
+                    /**
+                     * 设置<p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+                     * @param _speakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+                     * 
+                     */
+                    void SetSpeakerLabel(const int64_t& _speakerLabel);
+
+                    /**
+                     * 判断参数 SpeakerLabel 是否已赋值
+                     * @return SpeakerLabel 是否已赋值
+                     * 
+                     */
+                    bool SpeakerLabelHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Unique identifier of the smart subtitle template.
+                     * <p>Unique identifier of the smart subtitle template.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AsrHotWordsConfigure m_asrHotWordsConfigure;
                     bool m_asrHotWordsConfigureHasBeenSet;
 
                     /**
-                     * Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_asrHotWordsLibraryName;
                     bool m_asrHotWordsLibraryNameHasBeenSet;
 
                     /**
-                     * List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
                      */
                     std::string m_videoSrcLanguage;
                     bool m_videoSrcLanguageHasBeenSet;
 
                     /**
-                     * Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
 
                     /**
-                     * Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+                     * <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
                      */
                     int64_t m_subtitleType;
                     bool m_subtitleTypeHasBeenSet;
 
                     /**
-                     * Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_translateSwitch;
                     bool m_translateSwitchHasBeenSet;
 
                     /**
-                     * Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_translateDstLanguage;
                     bool m_translateDstLanguageHasBeenSet;
 
                     /**
-                     * Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
 
                     /**
-                     * Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+                     * <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
                      */
                     uint64_t m_processType;
                     bool m_processTypeHasBeenSet;
 
                     /**
-                     * Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SelectingSubtitleAreasConfig m_selectingSubtitleAreasConfig;
                     bool m_selectingSubtitleAreasConfigHasBeenSet;
+
+                    /**
+                     * <p>Subtitle burn-in template ID.</p>
+                     */
+                    int64_t m_subtitleEmbedId;
+                    bool m_subtitleEmbedIdHasBeenSet;
+
+                    /**
+                     * <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+                     */
+                    int64_t m_speakerMode;
+                    bool m_speakerModeHasBeenSet;
+
+                    /**
+                     * <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+                     */
+                    int64_t m_speakerLabel;
+                    bool m_speakerLabelHasBeenSet;
 
                 };
             }

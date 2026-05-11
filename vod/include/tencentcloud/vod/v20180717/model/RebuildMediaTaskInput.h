@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the remaster template.
-                     * @return Definition The ID of the remaster template.
+                     * 获取Audio and video quality rebirth template number.
+                     * @return Definition Audio and video quality rebirth template number.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The ID of the remaster template.
-                     * @param _definition The ID of the remaster template.
+                     * 设置Audio and video quality rebirth template number.
+                     * @param _definition Audio and video quality rebirth template number.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -437,7 +437,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The ID of the remaster template.
+                     * Audio and video quality rebirth template number.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of the adaptive bitrate streaming task.
+                * Output result of adaptive bitrate streaming.
                 */
                 class ComplexAdaptiveDynamicStreamingTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming template ID.
-                     * @return Definition Adaptive bitrate streaming template ID.
+                     * 获取Adaptive bitrate template ID.
+                     * @return Definition Adaptive bitrate template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming template ID.
-                     * @param _definition Adaptive bitrate streaming template ID.
+                     * 设置Adaptive bitrate template ID.
+                     * @param _definition Adaptive bitrate template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,27 +68,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取The adaptive bitrate streaming format. Valid values:
+                     * 获取Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
-                     * @return Format The adaptive bitrate streaming format. Valid values:
+                     * @return Format Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置The adaptive bitrate streaming format. Valid values:
+                     * 设置Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
-                     * @param _format The adaptive bitrate streaming format. Valid values:
+                     * @param _format Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -101,27 +97,31 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取DRM scheme type, value range:
+                     * 获取DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
-                     * @return DrmType DRM scheme type, value range:
+                     * @return DrmType DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置DRM scheme type, value range:
+                     * 设置DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
-                     * @param _drmType DRM scheme type, value range:
+                     * @param _drmType DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -134,15 +134,15 @@ The default value is an empty string, indicating that the video will not be DRM 
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取Playback address of the output manifest.
-                     * @return Url Playback address of the output manifest.
+                     * 获取Playback address of the adaptive bitrate stream.
+                     * @return Url Playback address of the adaptive bitrate stream.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Playback address of the output manifest.
-                     * @param _url Playback address of the output manifest.
+                     * 设置Playback address of the adaptive bitrate stream.
+                     * @param _url Playback address of the adaptive bitrate stream.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -157,31 +157,31 @@ The default value is an empty string, indicating that the video will not be DRM 
                 private:
 
                     /**
-                     * Adaptive bitrate streaming template ID.
+                     * Adaptive bitrate template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * The adaptive bitrate streaming format. Valid values:
+                     * Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * DRM scheme type, value range:
+                     * DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * Playback address of the output manifest.
+                     * Playback address of the adaptive bitrate stream.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

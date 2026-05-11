@@ -158,19 +158,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Output Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Video moderation involves unsafe information in task output.
+                     * @return Output Video moderation involves unsafe information in task output.
                      * 
                      */
                     AiReviewTerrorismTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _output Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Video moderation involves unsafe information in task output.
+                     * @param _output Video moderation involves unsafe information in task output.
                      * 
                      */
                     void SetOutput(const AiReviewTerrorismTaskOutput& _output);
@@ -237,8 +233,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output for intelligent recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Video moderation involves unsafe information in task output.
                      */
                     AiReviewTerrorismTaskOutput m_output;
                     bool m_outputHasBeenSet;

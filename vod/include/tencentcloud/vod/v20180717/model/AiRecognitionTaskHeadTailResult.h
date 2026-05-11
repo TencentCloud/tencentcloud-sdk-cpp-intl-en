@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video opening and closing credits recognition task output information.
+                     * @return Output Video opening and closing credits recognition task output information.
                      * 
                      */
                     AiRecognitionTaskHeadTailResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video opening and closing credits recognition task output information.
+                     * @param _output Video opening and closing credits recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskHeadTailResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video opening and closing credits recognition task output information.
                      */
                     AiRecognitionTaskHeadTailResultOutput m_output;
                     bool m_outputHasBeenSet;

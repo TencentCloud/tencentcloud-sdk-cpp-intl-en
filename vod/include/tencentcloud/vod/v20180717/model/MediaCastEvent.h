@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Media relay event notification message.
+                * 
                 */
                 class MediaCastEvent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media relay ID.
-                     * @return CastId Media relay ID.
+                     * 获取
+                     * @return CastId 
                      * 
                      */
                     std::string GetCastId() const;
 
                     /**
-                     * 设置Media relay ID.
-                     * @param _castId Media relay ID.
+                     * 设置
+                     * @param _castId 
                      * 
                      */
                     void SetCastId(const std::string& _castId);
@@ -68,31 +68,31 @@ namespace TencentCloud
                     bool CastIdHasBeenSet() const;
 
                     /**
-                     * 获取Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
-                     * @return Status Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+                     * 获取Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
+                     * @return Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
-                     * @param _status Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+                     * 设置Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
+                     * @param _status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -107,17 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media relay ID.
+                     * 
                      */
                     std::string m_castId;
                     bool m_castIdHasBeenSet;
 
                     /**
-                     * Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+                     * Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

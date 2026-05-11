@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-                     * @return StartTime Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * 获取Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return StartTime Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-                     * @param _startTime Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * 设置Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _startTime Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-                     * @return EndTime End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * 获取Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return EndTime Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-                     * @param _endTime End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * 设置Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _endTime Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

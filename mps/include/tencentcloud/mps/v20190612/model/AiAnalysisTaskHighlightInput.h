@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the intelligent highlight generation template.
-                     * @return Definition The ID of the intelligent highlight generation template.
+                     * 获取<p>ID of the intelligent video highlight template.</p>
+                     * @return Definition <p>ID of the intelligent video highlight template.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The ID of the intelligent highlight generation template.
-                     * @param _definition The ID of the intelligent highlight generation template.
+                     * 设置<p>ID of the intelligent video highlight template.</p>
+                     * @param _definition <p>ID of the intelligent video highlight template.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -67,13 +67,40 @@ namespace TencentCloud
                      */
                     bool DefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtendedParameter <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtendedParameter() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extendedParameter <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtendedParameter(const std::string& _extendedParameter);
+
+                    /**
+                     * 判断参数 ExtendedParameter 是否已赋值
+                     * @return ExtendedParameter 是否已赋值
+                     * 
+                     */
+                    bool ExtendedParameterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The ID of the intelligent highlight generation template.
+                     * <p>ID of the intelligent video highlight template.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extendedParameter;
+                    bool m_extendedParameterHasBeenSet;
 
                 };
             }

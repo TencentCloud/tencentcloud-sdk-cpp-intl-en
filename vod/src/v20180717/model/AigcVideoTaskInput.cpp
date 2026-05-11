@@ -24,12 +24,16 @@ AigcVideoTaskInput::AigcVideoTaskInput() :
     m_modelNameHasBeenSet(false),
     m_modelVersionHasBeenSet(false),
     m_fileInfosHasBeenSet(false),
+    m_subjectInfosHasBeenSet(false),
     m_lastFrameFileIdHasBeenSet(false),
+    m_lastFrameUrlHasBeenSet(false),
     m_promptHasBeenSet(false),
     m_negativePromptHasBeenSet(false),
     m_enhancePromptHasBeenSet(false),
     m_generationModeHasBeenSet(false),
-    m_outputConfigHasBeenSet(false)
+    m_outputConfigHasBeenSet(false),
+    m_inputRegionHasBeenSet(false),
+    m_sceneTypeHasBeenSet(false)
 {
 }
 
@@ -78,6 +82,26 @@ CoreInternalOutcome AigcVideoTaskInput::Deserialize(const rapidjson::Value &valu
         m_fileInfosHasBeenSet = true;
     }
 
+    if (value.HasMember("SubjectInfos") && !value["SubjectInfos"].IsNull())
+    {
+        if (!value["SubjectInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AigcVideoTaskInput.SubjectInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SubjectInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AigcVideoTaskInputSubjectInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_subjectInfos.push_back(item);
+        }
+        m_subjectInfosHasBeenSet = true;
+    }
+
     if (value.HasMember("LastFrameFileId") && !value["LastFrameFileId"].IsNull())
     {
         if (!value["LastFrameFileId"].IsString())
@@ -86,6 +110,16 @@ CoreInternalOutcome AigcVideoTaskInput::Deserialize(const rapidjson::Value &valu
         }
         m_lastFrameFileId = string(value["LastFrameFileId"].GetString());
         m_lastFrameFileIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("LastFrameUrl") && !value["LastFrameUrl"].IsNull())
+    {
+        if (!value["LastFrameUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcVideoTaskInput.LastFrameUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_lastFrameUrl = string(value["LastFrameUrl"].GetString());
+        m_lastFrameUrlHasBeenSet = true;
     }
 
     if (value.HasMember("Prompt") && !value["Prompt"].IsNull())
@@ -145,6 +179,26 @@ CoreInternalOutcome AigcVideoTaskInput::Deserialize(const rapidjson::Value &valu
         m_outputConfigHasBeenSet = true;
     }
 
+    if (value.HasMember("InputRegion") && !value["InputRegion"].IsNull())
+    {
+        if (!value["InputRegion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcVideoTaskInput.InputRegion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_inputRegion = string(value["InputRegion"].GetString());
+        m_inputRegionHasBeenSet = true;
+    }
+
+    if (value.HasMember("SceneType") && !value["SceneType"].IsNull())
+    {
+        if (!value["SceneType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcVideoTaskInput.SceneType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sceneType = string(value["SceneType"].GetString());
+        m_sceneTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -183,12 +237,35 @@ void AigcVideoTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         }
     }
 
+    if (m_subjectInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubjectInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_subjectInfos.begin(); itr != m_subjectInfos.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
     if (m_lastFrameFileIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastFrameFileId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_lastFrameFileId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_lastFrameUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LastFrameUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastFrameUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_promptHasBeenSet)
@@ -230,6 +307,22 @@ void AigcVideoTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_inputRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputRegion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inputRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sceneTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SceneType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sceneType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -283,6 +376,22 @@ bool AigcVideoTaskInput::FileInfosHasBeenSet() const
     return m_fileInfosHasBeenSet;
 }
 
+vector<AigcVideoTaskInputSubjectInfo> AigcVideoTaskInput::GetSubjectInfos() const
+{
+    return m_subjectInfos;
+}
+
+void AigcVideoTaskInput::SetSubjectInfos(const vector<AigcVideoTaskInputSubjectInfo>& _subjectInfos)
+{
+    m_subjectInfos = _subjectInfos;
+    m_subjectInfosHasBeenSet = true;
+}
+
+bool AigcVideoTaskInput::SubjectInfosHasBeenSet() const
+{
+    return m_subjectInfosHasBeenSet;
+}
+
 string AigcVideoTaskInput::GetLastFrameFileId() const
 {
     return m_lastFrameFileId;
@@ -297,6 +406,22 @@ void AigcVideoTaskInput::SetLastFrameFileId(const string& _lastFrameFileId)
 bool AigcVideoTaskInput::LastFrameFileIdHasBeenSet() const
 {
     return m_lastFrameFileIdHasBeenSet;
+}
+
+string AigcVideoTaskInput::GetLastFrameUrl() const
+{
+    return m_lastFrameUrl;
+}
+
+void AigcVideoTaskInput::SetLastFrameUrl(const string& _lastFrameUrl)
+{
+    m_lastFrameUrl = _lastFrameUrl;
+    m_lastFrameUrlHasBeenSet = true;
+}
+
+bool AigcVideoTaskInput::LastFrameUrlHasBeenSet() const
+{
+    return m_lastFrameUrlHasBeenSet;
 }
 
 string AigcVideoTaskInput::GetPrompt() const
@@ -377,5 +502,37 @@ void AigcVideoTaskInput::SetOutputConfig(const AigcVideoOutputConfig& _outputCon
 bool AigcVideoTaskInput::OutputConfigHasBeenSet() const
 {
     return m_outputConfigHasBeenSet;
+}
+
+string AigcVideoTaskInput::GetInputRegion() const
+{
+    return m_inputRegion;
+}
+
+void AigcVideoTaskInput::SetInputRegion(const string& _inputRegion)
+{
+    m_inputRegion = _inputRegion;
+    m_inputRegionHasBeenSet = true;
+}
+
+bool AigcVideoTaskInput::InputRegionHasBeenSet() const
+{
+    return m_inputRegionHasBeenSet;
+}
+
+string AigcVideoTaskInput::GetSceneType() const
+{
+    return m_sceneType;
+}
+
+void AigcVideoTaskInput::SetSceneType(const string& _sceneType)
+{
+    m_sceneType = _sceneType;
+    m_sceneTypeHasBeenSet = true;
+}
+
+bool AigcVideoTaskInput::SceneTypeHasBeenSet() const
+{
+    return m_sceneTypeHasBeenSet;
 }
 

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS specific subtask query result type.
+                * MPS specific task query result type.
                 */
                 class MPSSubTaskResult : public AbstractModel
                 {
@@ -48,15 +48,95 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
-                     * @return TaskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
+                     * 获取Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
+                     * @return TaskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
-                     * @param _taskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
+                     * 设置Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
+                     * @param _taskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -69,15 +149,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
+                     * 获取Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
+                     * 设置Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status, including PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -90,15 +170,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. Returns 0 for success, other values for failure.
-                     * @return ErrCode Error code. Returns 0 for success, other values for failure.
+                     * 获取Error code. 0 indicates success, others indicate failure.
+                     * @return ErrCode Error code. 0 indicates success, others indicate failure.
                      * 
                      */
                     std::string GetErrCode() const;
 
                     /**
-                     * 设置Error code. Returns 0 for success, other values for failure.
-                     * @param _errCode Error code. Returns 0 for success, other values for failure.
+                     * 设置Error code. 0 indicates success, others indicate failure.
+                     * @param _errCode Error code. 0 indicates success, others indicate failure.
                      * 
                      */
                     void SetErrCode(const std::string& _errCode);
@@ -132,15 +212,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
-                     * @return Input MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
+                     * 获取MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
+                     * @return Input MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
-                     * @param _input MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
+                     * 设置MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
+                     * @param _input MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -153,15 +233,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取MPS media processing task output.
-                     * @return Output MPS media processing task output.
+                     * 获取MPS video processing task output.
+                     * @return Output MPS video processing task output.
                      * 
                      */
                     MPSTaskOutput GetOutput() const;
 
                     /**
-                     * 设置MPS media processing task output.
-                     * @param _output MPS media processing task output.
+                     * 设置MPS video processing task output.
+                     * @param _output MPS video processing task output.
                      * 
                      */
                     void SetOutput(const MPSTaskOutput& _output);
@@ -176,19 +256,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
+                     * Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
+                     * Task status, including PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. Returns 0 for success, other values for failure.
+                     * Error code. 0 indicates success, others indicate failure.
                      */
                     std::string m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -200,13 +300,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
+                     * MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * MPS media processing task output.
+                     * MPS video processing task output.
                      */
                     MPSTaskOutput m_output;
                     bool m_outputHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -66,27 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
-                     * @return ModelName Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
+                     * 获取<p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+                     * @return ModelName <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
-                     * @param _modelName Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
+                     * 设置<p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+                     * @param _modelName <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -99,27 +87,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
-                     * @return ModelVersion Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
+                     * 获取<p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+                     * @return ModelVersion <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
-                     * @param _modelVersion Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
+                     * 设置<p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+                     * @param _modelVersion <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -132,15 +108,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
-                     * @return FileInfos File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
+                     * 获取<p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+                     * @return FileInfos <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
                      * 
                      */
                     std::vector<AigcImageTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
-                     * @param _fileInfos File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
+                     * 设置<p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+                     * @param _fileInfos <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcImageTaskInputFileInfo>& _fileInfos);
@@ -153,15 +129,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取The prompt content for image generation. this parameter is required when FileInfos is empty.
-                     * @return Prompt The prompt content for image generation. this parameter is required when FileInfos is empty.
+                     * 获取<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @return Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置The prompt content for image generation. this parameter is required when FileInfos is empty.
-                     * @param _prompt The prompt content for image generation. this parameter is required when FileInfos is empty.
+                     * 设置<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @param _prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -174,15 +150,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Prevent the model from generating image generation prompts.
-                     * @return NegativePrompt Prevent the model from generating image generation prompts.
+                     * 获取<p>To prevent the model from generating image prompts.</p>
+                     * @return NegativePrompt <p>To prevent the model from generating image prompts.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置Prevent the model from generating image generation prompts.
-                     * @param _negativePrompt Prevent the model from generating image generation prompts.
+                     * 设置<p>To prevent the model from generating image prompts.</p>
+                     * @param _negativePrompt <p>To prevent the model from generating image prompts.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -195,15 +171,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-                     * @return EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * 获取<p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+                     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
                      * 
                      */
                     std::string GetEnhancePrompt() const;
 
                     /**
-                     * 设置Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-                     * @param _enhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * 设置<p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+                     * @param _enhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
                      * 
                      */
                     void SetEnhancePrompt(const std::string& _enhancePrompt);
@@ -216,15 +192,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for the task.
-                     * @return OutputConfig Output media file configuration for the task.
+                     * 获取<p>Output media file configuration for the image generation task.</p>
+                     * @return OutputConfig <p>Output media file configuration for the image generation task.</p>
                      * 
                      */
                     AigcImageOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for the task.
-                     * @param _outputConfig Output media file configuration for the task.
+                     * 设置<p>Output media file configuration for the image generation task.</p>
+                     * @param _outputConfig <p>Output media file configuration for the image generation task.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcImageOutputConfig& _outputConfig);
@@ -237,15 +213,78 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
-                     * @return SessionId An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
+                     * 获取<p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * @return InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * 
+                     */
+                    std::string GetInputRegion() const;
+
+                    /**
+                     * 设置<p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * @param _inputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * 
+                     */
+                    void SetInputRegion(const std::string& _inputRegion);
+
+                    /**
+                     * 判断参数 InputRegion 是否已赋值
+                     * @return InputRegion 是否已赋值
+                     * 
+                     */
+                    bool InputRegionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SceneType 
+                     * 
+                     */
+                    std::string GetSceneType() const;
+
+                    /**
+                     * 设置
+                     * @param _sceneType 
+                     * 
+                     */
+                    void SetSceneType(const std::string& _sceneType);
+
+                    /**
+                     * 判断参数 SceneType 是否已赋值
+                     * @return SceneType 是否已赋值
+                     * 
+                     */
+                    bool SceneTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Seed 
+                     * 
+                     */
+                    int64_t GetSeed() const;
+
+                    /**
+                     * 设置
+                     * @param _seed 
+                     * 
+                     */
+                    void SetSeed(const int64_t& _seed);
+
+                    /**
+                     * 判断参数 Seed 是否已赋值
+                     * @return Seed 是否已赋值
+                     * 
+                     */
+                    bool SeedHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
-                     * @param _sessionId An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -258,15 +297,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
-                     * @return SessionContext Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
+                     * 获取<p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
-                     * @param _sessionContext Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
+                     * 设置<p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -279,15 +318,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
-                     * @return TasksPriority Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
-                     * @param _tasksPriority Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -300,15 +339,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field, used when special purpose.
-                     * @return ExtInfo Reserved field, used when special purpose.
+                     * 获取<p>Reserved field, used for special purpose.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used when special purpose.
-                     * @param _extInfo Reserved field, used when special purpose.
+                     * 设置<p>Reserved field, used for special purpose.</p>
+                     * @param _extInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -323,79 +362,91 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Model name. valid values:.
-<li>GEM:Gemini;</li>
-<Li>Qwen: qianwen.</li>
-<Li>Hunyuan: hunyuan.</li>
+                     * <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * Model version. valid values:.
-<li>When ModelName is GEM, optional values are 2.5, 3.0;</li>
-<li>When ModelName is Qwen, optional values are 0925.</li>
-<li>When ModelName is Hunyuan, the optional values are 3.0.</li>
+                     * <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * File information of the input image for the AIGC image generation task. By default only one image can be specified; when using the GEM model, version 2.5 supports up to 3 images and version 3.0 supports up to 14 images.
+                     * <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
                      */
                     std::vector<AigcImageTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * The prompt content for image generation. this parameter is required when FileInfos is empty.
+                     * <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Prevent the model from generating image generation prompts.
+                     * <p>To prevent the model from generating image prompts.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
                      */
                     std::string m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * Output media file configuration for the task.
+                     * <p>Output media file configuration for the image generation task.</p>
                      */
                     AigcImageOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. if there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. the maximum length is 50 characters. leaving it blank or using an empty string indicates no deduplication.
+                     * <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     */
+                    std::string m_inputRegion;
+                    bool m_inputRegionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_sceneType;
+                    bool m_sceneTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_seed;
+                    bool m_seedHasBeenSet;
+
+                    /**
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used to pass through user request information. the audio and video quality revival complete callback will return the value of this field. longest 1000 characters.
+                     * <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Task priority. the higher the value, the higher the priority. value range is from -10 to 10. if left blank, the default value is 0.
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * Reserved field, used when special purpose.
+                     * <p>Reserved field, used for special purpose.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

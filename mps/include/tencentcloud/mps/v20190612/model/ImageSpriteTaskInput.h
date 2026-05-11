@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of an image sprite generating template.
-                     * @return Definition ID of an image sprite generating template.
+                     * 获取<p>Sprite screenshot template ID.</p>
+                     * @return Definition <p>Sprite screenshot template ID.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置ID of an image sprite generating template.
-                     * @param _definition ID of an image sprite generating template.
+                     * 设置<p>Sprite screenshot template ID.</p>
+                     * @param _definition <p>Sprite screenshot template ID.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,18 +70,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 获取<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @return OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 设置<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -95,39 +95,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Output path of a captured sprite image file, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
-                     * @return OutputObjectPath Output path of a captured sprite image file, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
+                     * 获取<p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
+                     * @return OutputObjectPath <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Output path of a captured sprite image file, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
-                     * @param _outputObjectPath Output path of a captured sprite image file, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
+                     * 设置<p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
+                     * @param _outputObjectPath <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -140,15 +116,15 @@ If left empty, a relative path is used by default: `{inputName}_imageSprite_{def
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
-                     * @return WebVttObjectName Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
+                     * 获取<p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
+                     * @return WebVttObjectName <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
                      * 
                      */
                     std::string GetWebVttObjectName() const;
 
                     /**
-                     * 设置Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
-                     * @param _webVttObjectName Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
+                     * 设置<p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
+                     * @param _webVttObjectName <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
                      * 
                      */
                     void SetWebVttObjectName(const std::string& _webVttObjectName);
@@ -161,18 +137,18 @@ If left empty, a relative path is used by default: `{inputName}_imageSprite_{def
                     bool WebVttObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule of the `{number}` variable in the image sprite output path.
+                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectNumberFormat Rule of the `{number}` variable in the image sprite output path.
+                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置Rule of the `{number}` variable in the image sprite output path.
+                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _objectNumberFormat Rule of the `{number}` variable in the image sprite output path.
+                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -185,45 +161,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectNumberFormatHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of an image sprite generating template.
+                     * <p>Sprite screenshot template ID.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Output path of a captured sprite image file, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
+                     * <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
+                     * <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
                      */
                     std::string m_webVttObjectName;
                     bool m_webVttObjectNameHasBeenSet;
 
                     /**
-                     * Rule of the `{number}` variable in the image sprite output path.
+                     * <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

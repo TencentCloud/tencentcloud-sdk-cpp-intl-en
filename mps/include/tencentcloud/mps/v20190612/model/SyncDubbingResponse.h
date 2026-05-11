@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error code. 0 is returned if the request is successful.
-                     * @return ErrorCode Error code. 0 is returned if the request is successful.
+                     * 获取<p>Error code. 0 is returned if the request is successful.</p>
+                     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message. success is returned if the request is successful.
-                     * @return Msg Error message. success is returned if the request is successful.
+                     * 获取<p>Error message. success is returned if the request is successful.</p>
+                     * @return Msg <p>Error message. success is returned if the request is successful.</p>
                      * 
                      */
                     std::string GetMsg() const;
@@ -72,9 +72,9 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取Synthetic audio in Base64 encoding and WAV format.
+                     * 获取<p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioData Synthetic audio in Base64 encoding and WAV format.
+                     * @return AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -88,8 +88,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Synthetic audio URL. It is valid for 24 hours.</p>
+                     * @return AudioUrl <p>Synthetic audio URL. It is valid for 24 hours.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
@@ -102,9 +102,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取Cloned voice type ID.
+                     * 获取<p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoiceId Cloned voice type ID.
+                     * @return VoiceId <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -118,8 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
+                     * @return ExtInfo <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
@@ -134,39 +134,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Error code. 0 is returned if the request is successful.
+                     * <p>Error code. 0 is returned if the request is successful.</p>
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * Error message. success is returned if the request is successful.
+                     * <p>Error message. success is returned if the request is successful.</p>
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * Synthetic audio in Base64 encoding and WAV format.
+                     * <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Synthetic audio URL. It is valid for 24 hours.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * Cloned voice type ID.
+                     * <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

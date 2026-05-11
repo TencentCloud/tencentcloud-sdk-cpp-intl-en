@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Input The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Input of the intelligent watermark removal task.
+                     * @return Input Input of the intelligent watermark removal task.
                      * 
                      */
                     RemoveWaterMarkTaskInput GetInput() const;
 
                     /**
-                     * 设置The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _input The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Input of the intelligent watermark removal task.
+                     * @param _input Input of the intelligent watermark removal task.
                      * 
                      */
                     void SetInput(const RemoveWaterMarkTaskInput& _input);
@@ -303,8 +299,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Input of the intelligent watermark removal task.
                      */
                     RemoveWaterMarkTaskInput m_input;
                     bool m_inputHasBeenSet;

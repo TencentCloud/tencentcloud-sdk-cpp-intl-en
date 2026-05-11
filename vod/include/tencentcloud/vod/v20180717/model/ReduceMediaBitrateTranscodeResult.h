@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transcoding task output.
+                     * @return Output Transcoding task output.
                      * 
                      */
                     MediaTranscodeItem GetOutput() const;
 
                     /**
-                     * 设置The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transcoding task output.
+                     * @param _output Transcoding task output.
                      * 
                      */
                     void SetOutput(const MediaTranscodeItem& _output);
@@ -247,8 +243,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transcoding task output.
                      */
                     MediaTranscodeItem m_output;
                     bool m_outputHasBeenSet;

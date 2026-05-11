@@ -207,7 +207,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AiRecognitionTask Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
@@ -216,14 +216,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _aiRecognitionTask Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
 
                     /**
                      * 判断参数 AiRecognitionTask 是否已赋值
                      * @return AiRecognitionTask 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AiRecognitionTaskHasBeenSet() const;
 

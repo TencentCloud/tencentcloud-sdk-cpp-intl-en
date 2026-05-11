@@ -177,16 +177,22 @@
 #include <tencentcloud/mps/v20190612/model/DescribeTaskDetailResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTasksRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTasksResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeTextToSpeechAsyncTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeTextToSpeechAsyncTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTranscodeTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTranscodeTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeUsageDataRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeUsageDataResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeVoicesRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeVoicesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWatermarkTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWordSamplesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWordSamplesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWorkflowsRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeWorkflowsResponse.h>
+#include <tencentcloud/mps/v20190612/model/DesignVoiceAsyncRequest.h>
+#include <tencentcloud/mps/v20190612/model/DesignVoiceAsyncResponse.h>
 #include <tencentcloud/mps/v20190612/model/DisableScheduleRequest.h>
 #include <tencentcloud/mps/v20190612/model/DisableScheduleResponse.h>
 #include <tencentcloud/mps/v20190612/model/DisableWorkflowRequest.h>
@@ -255,14 +261,20 @@
 #include <tencentcloud/mps/v20190612/model/ProcessLiveStreamResponse.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaRequest.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaResponse.h>
+#include <tencentcloud/mps/v20190612/model/QueryProjectRequest.h>
+#include <tencentcloud/mps/v20190612/model/QueryProjectResponse.h>
 #include <tencentcloud/mps/v20190612/model/RecognizeAudioRequest.h>
 #include <tencentcloud/mps/v20190612/model/RecognizeAudioResponse.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowRequest.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingRequest.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingResponse.h>
+#include <tencentcloud/mps/v20190612/model/TextToSpeechAsyncRequest.h>
+#include <tencentcloud/mps/v20190612/model/TextToSpeechAsyncResponse.h>
 #include <tencentcloud/mps/v20190612/model/TextTranslationRequest.h>
 #include <tencentcloud/mps/v20190612/model/TextTranslationResponse.h>
+#include <tencentcloud/mps/v20190612/model/UpdateProjectRequest.h>
+#include <tencentcloud/mps/v20190612/model/UpdateProjectResponse.h>
 
 
 namespace TencentCloud
@@ -508,12 +520,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTextToSpeechAsyncTaskResponse> DescribeTextToSpeechAsyncTaskOutcome;
+                typedef std::future<DescribeTextToSpeechAsyncTaskOutcome> DescribeTextToSpeechAsyncTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeTextToSpeechAsyncTaskRequest&, DescribeTextToSpeechAsyncTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTextToSpeechAsyncTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTranscodeTemplatesResponse> DescribeTranscodeTemplatesOutcome;
                 typedef std::future<DescribeTranscodeTemplatesOutcome> DescribeTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeTranscodeTemplatesRequest&, DescribeTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTranscodeTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUsageDataResponse> DescribeUsageDataOutcome;
                 typedef std::future<DescribeUsageDataOutcome> DescribeUsageDataOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeUsageDataRequest&, DescribeUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsageDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVoicesResponse> DescribeVoicesOutcome;
+                typedef std::future<DescribeVoicesOutcome> DescribeVoicesOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeVoicesRequest&, DescribeVoicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoicesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeWatermarkTemplatesResponse> DescribeWatermarkTemplatesOutcome;
                 typedef std::future<DescribeWatermarkTemplatesOutcome> DescribeWatermarkTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeWatermarkTemplatesRequest&, DescribeWatermarkTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWatermarkTemplatesAsyncHandler;
@@ -523,6 +541,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWorkflowsResponse> DescribeWorkflowsOutcome;
                 typedef std::future<DescribeWorkflowsOutcome> DescribeWorkflowsOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeWorkflowsRequest&, DescribeWorkflowsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWorkflowsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DesignVoiceAsyncResponse> DesignVoiceAsyncOutcome;
+                typedef std::future<DesignVoiceAsyncOutcome> DesignVoiceAsyncOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DesignVoiceAsyncRequest&, DesignVoiceAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DesignVoiceAsyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisableScheduleResponse> DisableScheduleOutcome;
                 typedef std::future<DisableScheduleOutcome> DisableScheduleOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DisableScheduleRequest&, DisableScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableScheduleAsyncHandler;
@@ -625,6 +646,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryProjectResponse> QueryProjectOutcome;
+                typedef std::future<QueryProjectOutcome> QueryProjectOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::QueryProjectRequest&, QueryProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeAudioResponse> RecognizeAudioOutcome;
                 typedef std::future<RecognizeAudioOutcome> RecognizeAudioOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::RecognizeAudioRequest&, RecognizeAudioOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeAudioAsyncHandler;
@@ -634,15 +658,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SyncDubbingResponse> SyncDubbingOutcome;
                 typedef std::future<SyncDubbingOutcome> SyncDubbingOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::SyncDubbingRequest&, SyncDubbingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncDubbingAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechAsyncResponse> TextToSpeechAsyncOutcome;
+                typedef std::future<TextToSpeechAsyncOutcome> TextToSpeechAsyncOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::TextToSpeechAsyncRequest&, TextToSpeechAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechAsyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::TextTranslationResponse> TextTranslationOutcome;
                 typedef std::future<TextTranslationOutcome> TextTranslationOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::TextTranslationRequest&, TextTranslationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextTranslationAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateProjectResponse> UpdateProjectOutcome;
+                typedef std::future<UpdateProjectOutcome> UpdateProjectOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::UpdateProjectRequest&, UpdateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateProjectAsyncHandler;
 
 
 
                 /**
                  *This API is used to initiate batch processing tasks for URL video links, with features including:
-Smart subtitle (full speech, speech hotword, and speech translation)
+Smart subtitle (full speech, speech hotword, and speech translation).
                  * @param req BatchProcessMediaRequest
                  * @return BatchProcessMediaOutcome
                  */
@@ -1366,6 +1396,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeTasksOutcomeCallable DescribeTasksCallable(const Model::DescribeTasksRequest& request);
 
                 /**
+                 *This API is used to query the result of an asynchronous text to speech task.
+                 * @param req DescribeTextToSpeechAsyncTaskRequest
+                 * @return DescribeTextToSpeechAsyncTaskOutcome
+                 */
+                DescribeTextToSpeechAsyncTaskOutcome DescribeTextToSpeechAsyncTask(const Model::DescribeTextToSpeechAsyncTaskRequest &request);
+                void DescribeTextToSpeechAsyncTaskAsync(const Model::DescribeTextToSpeechAsyncTaskRequest& request, const DescribeTextToSpeechAsyncTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTextToSpeechAsyncTaskOutcomeCallable DescribeTextToSpeechAsyncTaskCallable(const Model::DescribeTextToSpeechAsyncTaskRequest& request);
+
+                /**
                  *This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
                  * @param req DescribeTranscodeTemplatesRequest
                  * @return DescribeTranscodeTemplatesOutcome
@@ -1384,6 +1423,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeUsageDataOutcome DescribeUsageData(const Model::DescribeUsageDataRequest &request);
                 void DescribeUsageDataAsync(const Model::DescribeUsageDataRequest& request, const DescribeUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUsageDataOutcomeCallable DescribeUsageDataCallable(const Model::DescribeUsageDataRequest& request);
+
+                /**
+                 *This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
+                 * @param req DescribeVoicesRequest
+                 * @return DescribeVoicesOutcome
+                 */
+                DescribeVoicesOutcome DescribeVoices(const Model::DescribeVoicesRequest &request);
+                void DescribeVoicesAsync(const Model::DescribeVoicesRequest& request, const DescribeVoicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVoicesOutcomeCallable DescribeVoicesCallable(const Model::DescribeVoicesRequest& request);
 
                 /**
                  *This API is used to query custom watermarking templates and supports paged queries by filters.
@@ -1411,6 +1459,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeWorkflowsOutcome DescribeWorkflows(const Model::DescribeWorkflowsRequest &request);
                 void DescribeWorkflowsAsync(const Model::DescribeWorkflowsRequest& request, const DescribeWorkflowsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeWorkflowsOutcomeCallable DescribeWorkflowsCallable(const Model::DescribeWorkflowsRequest& request);
+
+                /**
+                 *This API is used to design a voice. It generates a voice ID based on a prompt.
+                 * @param req DesignVoiceAsyncRequest
+                 * @return DesignVoiceAsyncOutcome
+                 */
+                DesignVoiceAsyncOutcome DesignVoiceAsync(const Model::DesignVoiceAsyncRequest &request);
+                void DesignVoiceAsyncAsync(const Model::DesignVoiceAsyncRequest& request, const DesignVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DesignVoiceAsyncOutcomeCallable DesignVoiceAsyncCallable(const Model::DesignVoiceAsyncRequest& request);
 
                 /**
                  *This API is used to disable a scheme.
@@ -1758,6 +1815,15 @@ Live stream processing event notification supports HTTP callback and also suppor
                 ProcessMediaOutcomeCallable ProcessMediaCallable(const Model::ProcessMediaRequest& request);
 
                 /**
+                 *This API is used to query an episode project.
+                 * @param req QueryProjectRequest
+                 * @return QueryProjectOutcome
+                 */
+                QueryProjectOutcome QueryProject(const Model::QueryProjectRequest &request);
+                void QueryProjectAsync(const Model::QueryProjectRequest& request, const QueryProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryProjectOutcomeCallable QueryProjectCallable(const Model::QueryProjectRequest& request);
+
+                /**
                  *This API is used to return the speech recognition results synchronously.
                  * @param req RecognizeAudioRequest
                  * @return RecognizeAudioOutcome
@@ -1785,13 +1851,31 @@ Live stream processing event notification supports HTTP callback and also suppor
                 SyncDubbingOutcomeCallable SyncDubbingCallable(const Model::SyncDubbingRequest& request);
 
                 /**
-                 *This API is used to translate text.
+                 *This API is used to convert text to speech asynchronously and supports long text to speech.
+                 * @param req TextToSpeechAsyncRequest
+                 * @return TextToSpeechAsyncOutcome
+                 */
+                TextToSpeechAsyncOutcome TextToSpeechAsync(const Model::TextToSpeechAsyncRequest &request);
+                void TextToSpeechAsyncAsync(const Model::TextToSpeechAsyncRequest& request, const TextToSpeechAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechAsyncOutcomeCallable TextToSpeechAsyncCallable(const Model::TextToSpeechAsyncRequest& request);
+
+                /**
+                 *
                  * @param req TextTranslationRequest
                  * @return TextTranslationOutcome
                  */
                 TextTranslationOutcome TextTranslation(const Model::TextTranslationRequest &request);
                 void TextTranslationAsync(const Model::TextTranslationRequest& request, const TextTranslationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TextTranslationOutcomeCallable TextTranslationCallable(const Model::TextTranslationRequest& request);
+
+                /**
+                 *This API is used to update an episode project.
+                 * @param req UpdateProjectRequest
+                 * @return UpdateProjectOutcome
+                 */
+                UpdateProjectOutcome UpdateProject(const Model::UpdateProjectRequest &request);
+                void UpdateProjectAsync(const Model::UpdateProjectRequest& request, const UpdateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateProjectOutcomeCallable UpdateProjectCallable(const Model::UpdateProjectRequest& request);
 
             };
         }

@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sampled screenshot template ID.
-                     * @return Definition Sampled screenshot template ID.
+                     * 获取<p>Sampled screenshot template ID.</p>
+                     * @return Definition <p>Sampled screenshot template ID.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Sampled screenshot template ID.
-                     * @param _definition Sampled screenshot template ID.
+                     * 设置<p>Sampled screenshot template ID.</p>
+                     * @param _definition <p>Sampled screenshot template ID.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -71,19 +71,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _watermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @param _watermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -96,18 +92,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 获取<p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @return OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 设置<p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -121,39 +117,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
-                     * @return OutputObjectPath Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+                     * 获取<p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
+                     * @return OutputObjectPath <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
-                     * @param _outputObjectPath Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+                     * 设置<p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
+                     * @param _outputObjectPath <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -166,18 +138,18 @@ If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取Rule of the `{number}` variable in the sampled screenshot output path.
+                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectNumberFormat Rule of the `{number}` variable in the sampled screenshot output path.
+                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置Rule of the `{number}` variable in the sampled screenshot output path.
+                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _objectNumberFormat Rule of the `{number}` variable in the sampled screenshot output path.
+                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -190,46 +162,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectNumberFormatHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Sampled screenshot template ID.
+                     * <p>Sampled screenshot template ID.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+                     * <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * Rule of the `{number}` variable in the sampled screenshot output path.
+                     * <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

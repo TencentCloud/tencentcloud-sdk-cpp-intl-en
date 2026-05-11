@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取When this field is set to true, it indicates that the video has no audio track.
-                     * @return NoAudio When this field is set to true, it indicates that the video has no audio track.
+                     * 获取<p>A value of true indicates that the video has no audio track.</p>
+                     * @return NoAudio <p>A value of true indicates that the video has no audio track.</p>
                      * 
                      */
                     bool GetNoAudio() const;
 
                     /**
-                     * 设置When this field is set to true, it indicates that the video has no audio track.
-                     * @param _noAudio When this field is set to true, it indicates that the video has no audio track.
+                     * 设置<p>A value of true indicates that the video has no audio track.</p>
+                     * @param _noAudio <p>A value of true indicates that the video has no audio track.</p>
                      * 
                      */
                     void SetNoAudio(const bool& _noAudio);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool NoAudioHasBeenSet() const;
 
                     /**
-                     * 获取When this field is set to true, it indicates that the video has no video track.
-                     * @return NoVideo When this field is set to true, it indicates that the video has no video track.
+                     * 获取<p>A value of true indicates that the video has no video track.</p>
+                     * @return NoVideo <p>A value of true indicates that the video has no video track.</p>
                      * 
                      */
                     bool GetNoVideo() const;
 
                     /**
-                     * 设置When this field is set to true, it indicates that the video has no video track.
-                     * @param _noVideo When this field is set to true, it indicates that the video has no video track.
+                     * 设置<p>A value of true indicates that the video has no video track.</p>
+                     * @param _noVideo <p>A value of true indicates that the video has no video track.</p>
                      * 
                      */
                     void SetNoVideo(const bool& _noVideo);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NoVideoHasBeenSet() const;
 
                     /**
-                     * 获取No-reference quality score of the video (100 points in total).
-                     * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
+                     * 获取<p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+                     * @return QualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
                      * 
                      */
                     int64_t GetQualityEvaluationScore() const;
 
                     /**
-                     * 设置No-reference quality score of the video (100 points in total).
-                     * @param _qualityEvaluationScore No-reference quality score of the video (100 points in total).
+                     * 设置<p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+                     * @param _qualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
                      * 
                      */
                     void SetQualityEvaluationScore(const int64_t& _qualityEvaluationScore);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool QualityEvaluationScoreHasBeenSet() const;
 
                     /**
-                     * 获取No-reference quality score of the video (MOS).
-                     * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+                     * 获取<p>No-reference quality score of the video (MOS).</p>
+                     * @return QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
                      * 
                      */
                     double GetQualityEvaluationMeanOpinionScore() const;
 
                     /**
-                     * 设置No-reference quality score of the video (MOS).
-                     * @param _qualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+                     * 设置<p>No-reference quality score of the video (MOS).</p>
+                     * @param _qualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
                      * 
                      */
                     void SetQualityEvaluationMeanOpinionScore(const double& _qualityEvaluationMeanOpinionScore);
@@ -133,15 +133,36 @@ namespace TencentCloud
                     bool QualityEvaluationMeanOpinionScoreHasBeenSet() const;
 
                     /**
-                     * 获取Exception items identified in content quality inspection.
-                     * @return QualityControlResultSet Exception items identified in content quality inspection.
+                     * 获取<p>Video aesthetic score. Value range: [0, 100].</p>
+                     * @return AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+                     * 
+                     */
+                    int64_t GetAestheticEvaluationScore() const;
+
+                    /**
+                     * 设置<p>Video aesthetic score. Value range: [0, 100].</p>
+                     * @param _aestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+                     * 
+                     */
+                    void SetAestheticEvaluationScore(const int64_t& _aestheticEvaluationScore);
+
+                    /**
+                     * 判断参数 AestheticEvaluationScore 是否已赋值
+                     * @return AestheticEvaluationScore 是否已赋值
+                     * 
+                     */
+                    bool AestheticEvaluationScoreHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Exception items detected in content quality inspection.</p>
+                     * @return QualityControlResultSet <p>Exception items detected in content quality inspection.</p>
                      * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
-                     * 设置Exception items identified in content quality inspection.
-                     * @param _qualityControlResultSet Exception items identified in content quality inspection.
+                     * 设置<p>Exception items detected in content quality inspection.</p>
+                     * @param _qualityControlResultSet <p>Exception items detected in content quality inspection.</p>
                      * 
                      */
                     void SetQualityControlResultSet(const std::vector<QualityControlResult>& _qualityControlResultSet);
@@ -154,15 +175,15 @@ namespace TencentCloud
                     bool QualityControlResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Exception items identified in format diagnosis.
-                     * @return ContainerDiagnoseResultSet Exception items identified in format diagnosis.
+                     * 获取<p>Exception items detected in format diagnosis.</p>
+                     * @return ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
                      * 
                      */
                     std::vector<ContainerDiagnoseResultItem> GetContainerDiagnoseResultSet() const;
 
                     /**
-                     * 设置Exception items identified in format diagnosis.
-                     * @param _containerDiagnoseResultSet Exception items identified in format diagnosis.
+                     * 设置<p>Exception items detected in format diagnosis.</p>
+                     * @param _containerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
                      * 
                      */
                     void SetContainerDiagnoseResultSet(const std::vector<ContainerDiagnoseResultItem>& _containerDiagnoseResultSet);
@@ -177,37 +198,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * When this field is set to true, it indicates that the video has no audio track.
+                     * <p>A value of true indicates that the video has no audio track.</p>
                      */
                     bool m_noAudio;
                     bool m_noAudioHasBeenSet;
 
                     /**
-                     * When this field is set to true, it indicates that the video has no video track.
+                     * <p>A value of true indicates that the video has no video track.</p>
                      */
                     bool m_noVideo;
                     bool m_noVideoHasBeenSet;
 
                     /**
-                     * No-reference quality score of the video (100 points in total).
+                     * <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
                      */
                     int64_t m_qualityEvaluationScore;
                     bool m_qualityEvaluationScoreHasBeenSet;
 
                     /**
-                     * No-reference quality score of the video (MOS).
+                     * <p>No-reference quality score of the video (MOS).</p>
                      */
                     double m_qualityEvaluationMeanOpinionScore;
                     bool m_qualityEvaluationMeanOpinionScoreHasBeenSet;
 
                     /**
-                     * Exception items identified in content quality inspection.
+                     * <p>Video aesthetic score. Value range: [0, 100].</p>
+                     */
+                    int64_t m_aestheticEvaluationScore;
+                    bool m_aestheticEvaluationScoreHasBeenSet;
+
+                    /**
+                     * <p>Exception items detected in content quality inspection.</p>
                      */
                     std::vector<QualityControlResult> m_qualityControlResultSet;
                     bool m_qualityControlResultSetHasBeenSet;
 
                     /**
-                     * Exception items identified in format diagnosis.
+                     * <p>Exception items detected in format diagnosis.</p>
                      */
                     std::vector<ContainerDiagnoseResultItem> m_containerDiagnoseResultSet;
                     bool m_containerDiagnoseResultSetHasBeenSet;

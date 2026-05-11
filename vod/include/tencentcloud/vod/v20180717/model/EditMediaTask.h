@@ -208,19 +208,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Input Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video editing task input.
+                     * @return Input Video editing task input.
                      * 
                      */
                     EditMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _input Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video editing task input.
+                     * @param _input Video editing task input.
                      * 
                      */
                     void SetInput(const EditMediaTaskInput& _input);
@@ -233,19 +229,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output of the video editing task.
+                     * @return Output Output of the video editing task.
                      * 
                      */
                     EditMediaTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output of the video editing task.
+                     * @param _output Output of the video editing task.
                      * 
                      */
                     void SetOutput(const EditMediaTaskOutput& _output);
@@ -417,15 +409,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video editing task input.
                      */
                     EditMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output of the video editing task.
                      */
                     EditMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;

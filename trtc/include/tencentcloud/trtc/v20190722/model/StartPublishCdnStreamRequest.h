@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取[SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
-                     * @return SdkAppId [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+                     * 获取[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+                     * @return SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置[SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
-                     * @param _sdkAppId [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+                     * 设置[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+                     * @param _sdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -286,15 +286,15 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
                     bool FeedBackRoomParamsHasBeenSet() const;
 
                     /**
-                     * 获取Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
-                     * @return RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+                     * 获取Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
+                     * @return RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
                      * 
                      */
                     McuRecordParams GetRecordParams() const;
 
                     /**
-                     * 设置Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
-                     * @param _recordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+                     * 设置Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
+                     * @param _recordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
                      * 
                      */
                     void SetRecordParams(const McuRecordParams& _recordParams);
@@ -309,7 +309,7 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
                 private:
 
                     /**
-                     * [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+                     * [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -376,7 +376,7 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
                     bool m_feedBackRoomParamsHasBeenSet;
 
                     /**
-                     * Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+                     * Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
                      */
                     McuRecordParams m_recordParams;
                     bool m_recordParamsHasBeenSet;

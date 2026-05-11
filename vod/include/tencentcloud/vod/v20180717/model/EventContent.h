@@ -54,6 +54,9 @@
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByMPS.h>
 #include <tencentcloud/vod/v20180717/model/AigcImageTask.h>
 #include <tencentcloud/vod/v20180717/model/AigcVideoTask.h>
+#include <tencentcloud/vod/v20180717/model/ExtractBlindWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/SceneAigcImageTask.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageAsyncTask.h>
 
 
 namespace TencentCloud
@@ -77,15 +80,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
-                     * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * 获取Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
+                     * @return EventHandle Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
                      * 
                      */
                     std::string GetEventHandle() const;
 
                     /**
-                     * 设置Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
-                     * @param _eventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * 设置Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
+                     * @param _eventHandle Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
                      * 
                      */
                     void SetEventHandle(const std::string& _eventHandle);
@@ -98,15 +101,127 @@ namespace TencentCloud
                     bool EventHandleHasBeenSet() const;
 
                     /**
-                     * 获取<b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
-                     * @return EventType <b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+                     * 获取<b>Supported event types:</b>
+<li>NewFileUpload: Video upload completed;</li>
+<li>ProcedureStateChanged: Task flow status change.</li>
+<li>FileDeleted: Video deletion completed;</li>
+<li>RestoreMediaComplete: Video retrieval completion;</li>
+<li>PullComplete: Video conversion pull completed.</li>
+<li>EditMediaComplete: Video editing completed;</li>
+<li>SplitMediaComplete: Video splitting completed;</li>
+<li>ComposeMediaComplete: Media file creation completion;</li>
+<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
+<li>RemoveWatermark: Intelligent watermark removal completion.</li>
+<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
+<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
+<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
+<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
+<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
+<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
+<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
+<li>PersistenceComplete: Edit completed.</li>
+<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
+<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
+<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
+<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
+<b>Event types compatible with the 2017 version:</b>
+<li>TranscodeComplete: video transcoding completion;</li>
+<li>ConcatComplete: Video splicing completion.</li>
+<li>ClipComplete: Video editing completed;</li>
+<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+                     * @return EventType <b>Supported event types:</b>
+<li>NewFileUpload: Video upload completed;</li>
+<li>ProcedureStateChanged: Task flow status change.</li>
+<li>FileDeleted: Video deletion completed;</li>
+<li>RestoreMediaComplete: Video retrieval completion;</li>
+<li>PullComplete: Video conversion pull completed.</li>
+<li>EditMediaComplete: Video editing completed;</li>
+<li>SplitMediaComplete: Video splitting completed;</li>
+<li>ComposeMediaComplete: Media file creation completion;</li>
+<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
+<li>RemoveWatermark: Intelligent watermark removal completion.</li>
+<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
+<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
+<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
+<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
+<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
+<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
+<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
+<li>PersistenceComplete: Edit completed.</li>
+<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
+<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
+<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
+<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
+<b>Event types compatible with the 2017 version:</b>
+<li>TranscodeComplete: video transcoding completion;</li>
+<li>ConcatComplete: Video splicing completion.</li>
+<li>ClipComplete: Video editing completed;</li>
+<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置<b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
-                     * @param _eventType <b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+                     * 设置<b>Supported event types:</b>
+<li>NewFileUpload: Video upload completed;</li>
+<li>ProcedureStateChanged: Task flow status change.</li>
+<li>FileDeleted: Video deletion completed;</li>
+<li>RestoreMediaComplete: Video retrieval completion;</li>
+<li>PullComplete: Video conversion pull completed.</li>
+<li>EditMediaComplete: Video editing completed;</li>
+<li>SplitMediaComplete: Video splitting completed;</li>
+<li>ComposeMediaComplete: Media file creation completion;</li>
+<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
+<li>RemoveWatermark: Intelligent watermark removal completion.</li>
+<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
+<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
+<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
+<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
+<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
+<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
+<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
+<li>PersistenceComplete: Edit completed.</li>
+<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
+<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
+<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
+<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
+<b>Event types compatible with the 2017 version:</b>
+<li>TranscodeComplete: video transcoding completion;</li>
+<li>ConcatComplete: Video splicing completion.</li>
+<li>ClipComplete: Video editing completed;</li>
+<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+                     * @param _eventType <b>Supported event types:</b>
+<li>NewFileUpload: Video upload completed;</li>
+<li>ProcedureStateChanged: Task flow status change.</li>
+<li>FileDeleted: Video deletion completed;</li>
+<li>RestoreMediaComplete: Video retrieval completion;</li>
+<li>PullComplete: Video conversion pull completed.</li>
+<li>EditMediaComplete: Video editing completed;</li>
+<li>SplitMediaComplete: Video splitting completed;</li>
+<li>ComposeMediaComplete: Media file creation completion;</li>
+<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
+<li>RemoveWatermark: Intelligent watermark removal completion.</li>
+<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
+<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
+<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
+<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
+<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
+<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
+<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
+<li>PersistenceComplete: Edit completed.</li>
+<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
+<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
+<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
+<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
+<b>Event types compatible with the 2017 version:</b>
+<li>TranscodeComplete: video transcoding completion;</li>
+<li>ConcatComplete: Video splicing completion.</li>
+<li>ClipComplete: Video editing completed;</li>
+<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -119,19 +234,19 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Media uploaded event, valid when the event type is NewFileUpload.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FileUploadEvent Media uploaded event, valid when the event type is NewFileUpload.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video upload completion event. Valid when the event type is NewFileUpload.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FileUploadEvent Video upload completion event. Valid when the event type is NewFileUpload.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FileUploadTask GetFileUploadEvent() const;
 
                     /**
-                     * 设置Media uploaded event, valid when the event type is NewFileUpload.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _fileUploadEvent Media uploaded event, valid when the event type is NewFileUpload.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Video upload completion event. Valid when the event type is NewFileUpload.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fileUploadEvent Video upload completion event. Valid when the event type is NewFileUpload.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileUploadEvent(const FileUploadTask& _fileUploadEvent);
@@ -144,19 +259,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FileUploadEventHasBeenSet() const;
 
                     /**
-                     * 获取Task flow status changed event, valid when the event type is ProcedureStateChanged.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ProcedureStateChangeEvent Task flow status changed event, valid when the event type is ProcedureStateChanged.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Task flow status change event. Valid when the event type is ProcedureStateChanged.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProcedureStateChangeEvent Task flow status change event. Valid when the event type is ProcedureStateChanged.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProcedureTask GetProcedureStateChangeEvent() const;
 
                     /**
-                     * 设置Task flow status changed event, valid when the event type is ProcedureStateChanged.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _procedureStateChangeEvent Task flow status changed event, valid when the event type is ProcedureStateChanged.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Task flow status change event. Valid when the event type is ProcedureStateChanged.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _procedureStateChangeEvent Task flow status change event. Valid when the event type is ProcedureStateChanged.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProcedureStateChangeEvent(const ProcedureTask& _procedureStateChangeEvent);
@@ -169,19 +284,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProcedureStateChangeEventHasBeenSet() const;
 
                     /**
-                     * 获取File deleted event, valid when the event type is FileDeleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FileDeleteEvent File deleted event, valid when the event type is FileDeleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取File deletion event. Valid when the event type is FileDeleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FileDeleteEvent File deletion event. Valid when the event type is FileDeleted.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FileDeleteTask GetFileDeleteEvent() const;
 
                     /**
-                     * 设置File deleted event, valid when the event type is FileDeleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _fileDeleteEvent File deleted event, valid when the event type is FileDeleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置File deletion event. Valid when the event type is FileDeleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fileDeleteEvent File deletion event. Valid when the event type is FileDeleted.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileDeleteEvent(const FileDeleteTask& _fileDeleteEvent);
@@ -194,19 +309,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FileDeleteEventHasBeenSet() const;
 
                     /**
-                     * 获取PullUpload completion event, valid when the event type is PullComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PullCompleteEvent PullUpload completion event, valid when the event type is PullComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video pull completion event. Valid when the event type is PullComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PullCompleteEvent Video pull completion event. Valid when the event type is PullComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PullUploadTask GetPullCompleteEvent() const;
 
                     /**
-                     * 设置PullUpload completion event, valid when the event type is PullComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _pullCompleteEvent PullUpload completion event, valid when the event type is PullComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Video pull completion event. Valid when the event type is PullComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pullCompleteEvent Video pull completion event. Valid when the event type is PullComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPullCompleteEvent(const PullUploadTask& _pullCompleteEvent);
@@ -219,19 +334,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PullCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取EditMedia completion event, valid when the event type is EditMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EditMediaCompleteEvent EditMedia completion event, valid when the event type is EditMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video editing completion event. Valid when the event type is EditMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EditMediaCompleteEvent Video editing completion event. Valid when the event type is EditMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     EditMediaTask GetEditMediaCompleteEvent() const;
 
                     /**
-                     * 设置EditMedia completion event, valid when the event type is EditMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _editMediaCompleteEvent EditMedia completion event, valid when the event type is EditMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Video editing completion event. Valid when the event type is EditMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _editMediaCompleteEvent Video editing completion event. Valid when the event type is EditMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEditMediaCompleteEvent(const EditMediaTask& _editMediaCompleteEvent);
@@ -244,19 +359,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EditMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取SplitMedia completion event, valid when the event type is SplitMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SplitMediaCompleteEvent SplitMedia completion event, valid when the event type is SplitMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video splitting completion event. Valid when the event type is SplitMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SplitMediaCompleteEvent Video splitting completion event. Valid when the event type is SplitMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SplitMediaTask GetSplitMediaCompleteEvent() const;
 
                     /**
-                     * 设置SplitMedia completion event, valid when the event type is SplitMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _splitMediaCompleteEvent SplitMedia completion event, valid when the event type is SplitMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Video splitting completion event. Valid when the event type is SplitMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _splitMediaCompleteEvent Video splitting completion event. Valid when the event type is SplitMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSplitMediaCompleteEvent(const SplitMediaTask& _splitMediaCompleteEvent);
@@ -269,19 +384,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SplitMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取ComposeMedia completion event, valid when the event type is ComposeMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ComposeMediaCompleteEvent ComposeMedia completion event, valid when the event type is ComposeMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComposeMediaCompleteEvent Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ComposeMediaTask GetComposeMediaCompleteEvent() const;
 
                     /**
-                     * 设置ComposeMedia completion event, valid when the event type is ComposeMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _composeMediaCompleteEvent ComposeMedia completion event, valid when the event type is ComposeMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _composeMediaCompleteEvent Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetComposeMediaCompleteEvent(const ComposeMediaTask& _composeMediaCompleteEvent);
@@ -294,15 +409,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ComposeMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return ClipCompleteEvent Expired.
+                     * 获取Video editing completion event. Valid when the event type is ClipComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClipCompleteEvent Video editing completion event. Valid when the event type is ClipComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ClipTask2017 GetClipCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _clipCompleteEvent Expired.
+                     * 设置Video editing completion event. Valid when the event type is ClipComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clipCompleteEvent Video editing completion event. Valid when the event type is ClipComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent);
@@ -315,15 +434,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ClipCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return TranscodeCompleteEvent Expired.
+                     * 获取Video transcoding completion event, valid when the event type is TranscodeComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeCompleteEvent Video transcoding completion event, valid when the event type is TranscodeComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TranscodeTask2017 GetTranscodeCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _transcodeCompleteEvent Expired.
+                     * 设置Video transcoding completion event, valid when the event type is TranscodeComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _transcodeCompleteEvent Video transcoding completion event, valid when the event type is TranscodeComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent);
@@ -336,15 +459,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TranscodeCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return CreateImageSpriteCompleteEvent Expired.
+                     * 获取Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CreateImageSpriteCompleteEvent Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _createImageSpriteCompleteEvent Expired.
+                     * 设置Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _createImageSpriteCompleteEvent Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent);
@@ -357,15 +484,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CreateImageSpriteCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return ConcatCompleteEvent Expired.
+                     * 获取Video splicing completion event. Valid when the event type is ConcatComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConcatCompleteEvent Video splicing completion event. Valid when the event type is ConcatComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ConcatTask2017 GetConcatCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _concatCompleteEvent Expired.
+                     * 设置Video splicing completion event. Valid when the event type is ConcatComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _concatCompleteEvent Video splicing completion event. Valid when the event type is ConcatComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent);
@@ -378,15 +509,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ConcatCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return SnapshotByTimeOffsetCompleteEvent Expired.
+                     * 获取Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotByTimeOffsetCompleteEvent Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _snapshotByTimeOffsetCompleteEvent Expired.
+                     * 设置Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _snapshotByTimeOffsetCompleteEvent Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent);
@@ -399,15 +534,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SnapshotByTimeOffsetCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return WechatPublishCompleteEvent Expired.
+                     * 获取WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WechatPublishCompleteEvent WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WechatPublishTask GetWechatPublishCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _wechatPublishCompleteEvent Expired.
+                     * 设置WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _wechatPublishCompleteEvent WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent);
@@ -420,19 +559,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WechatPublishCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取WechatMiniProgramPublish completion event, valid when the event type is WechatMiniProgramPublishComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WechatMiniProgramPublishCompleteEvent WechatMiniProgramPublish completion event, valid when the event type is WechatMiniProgramPublishComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WechatMiniProgramPublishCompleteEvent WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishCompleteEvent() const;
 
                     /**
-                     * 设置WechatMiniProgramPublish completion event, valid when the event type is WechatMiniProgramPublishComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _wechatMiniProgramPublishCompleteEvent WechatMiniProgramPublish completion event, valid when the event type is WechatMiniProgramPublishComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _wechatMiniProgramPublishCompleteEvent WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWechatMiniProgramPublishCompleteEvent(const WechatMiniProgramPublishTask& _wechatMiniProgramPublishCompleteEvent);
@@ -445,19 +584,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WechatMiniProgramPublishCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取RemoveWatermark completion event, valid when the event type is RemoveWatermark.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RemoveWatermarkCompleteEvent RemoveWatermark completion event, valid when the event type is RemoveWatermark.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RemoveWatermarkCompleteEvent Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkCompleteEvent() const;
 
                     /**
-                     * 设置RemoveWatermark completion event, valid when the event type is RemoveWatermark.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _removeWatermarkCompleteEvent RemoveWatermark completion event, valid when the event type is RemoveWatermark.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _removeWatermarkCompleteEvent Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemoveWatermarkCompleteEvent(const RemoveWatermarkTask& _removeWatermarkCompleteEvent);
@@ -470,19 +609,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RemoveWatermarkCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取RestoreMedia completion event, valid when the event type is RestoreMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RestoreMediaCompleteEvent RestoreMedia completion event, valid when the event type is RestoreMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RestoreMediaCompleteEvent Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RestoreMediaTask GetRestoreMediaCompleteEvent() const;
 
                     /**
-                     * 设置RestoreMedia completion event, valid when the event type is RestoreMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _restoreMediaCompleteEvent RestoreMedia completion event, valid when the event type is RestoreMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _restoreMediaCompleteEvent Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRestoreMediaCompleteEvent(const RestoreMediaTask& _restoreMediaCompleteEvent);
@@ -495,19 +634,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RestoreMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取RebuildMedia completion event, valid when the event type is RebuildMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RebuildMediaCompleteEvent RebuildMedia completion event, valid when the event type is RebuildMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RebuildMediaCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RebuildMediaTask GetRebuildMediaCompleteEvent() const;
 
                     /**
-                     * 设置RebuildMedia completion event, valid when the event type is RebuildMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rebuildMediaCompleteEvent RebuildMedia completion event, valid when the event type is RebuildMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rebuildMediaCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRebuildMediaCompleteEvent(const RebuildMediaTask& _rebuildMediaCompleteEvent);
@@ -520,15 +659,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RebuildMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return ExtractTraceWatermarkCompleteEvent Expired.
+                     * 获取Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractTraceWatermarkCompleteEvent Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _extractTraceWatermarkCompleteEvent Expired.
+                     * 设置Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _extractTraceWatermarkCompleteEvent Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExtractTraceWatermarkCompleteEvent(const ExtractTraceWatermarkTask& _extractTraceWatermarkCompleteEvent);
@@ -541,15 +684,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExtractTraceWatermarkCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return ExtractCopyRightWatermarkCompleteEvent Expired.
+                     * 获取Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractCopyRightWatermarkCompleteEvent Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ExtractCopyRightWatermarkTask GetExtractCopyRightWatermarkCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _extractCopyRightWatermarkCompleteEvent Expired.
+                     * 设置Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _extractCopyRightWatermarkCompleteEvent Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExtractCopyRightWatermarkCompleteEvent(const ExtractCopyRightWatermarkTask& _extractCopyRightWatermarkCompleteEvent);
@@ -562,19 +709,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExtractCopyRightWatermarkCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取ReviewAudioVideo completion event, valid when the event type is ReviewAudioVideoComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ReviewAudioVideoCompleteEvent ReviewAudioVideo completion event, valid when the event type is ReviewAudioVideoComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewAudioVideoCompleteEvent Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoCompleteEvent() const;
 
                     /**
-                     * 设置ReviewAudioVideo completion event, valid when the event type is ReviewAudioVideoComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _reviewAudioVideoCompleteEvent ReviewAudioVideo completion event, valid when the event type is ReviewAudioVideoComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reviewAudioVideoCompleteEvent Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReviewAudioVideoCompleteEvent(const ReviewAudioVideoTask& _reviewAudioVideoCompleteEvent);
@@ -587,15 +734,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReviewAudioVideoCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Expired.
-                     * @return ReduceMediaBitrateCompleteEvent Expired.
+                     * 获取This field is invalid.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReduceMediaBitrateCompleteEvent This field is invalid.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateCompleteEvent() const;
 
                     /**
-                     * 设置Expired.
-                     * @param _reduceMediaBitrateCompleteEvent Expired.
+                     * 设置This field is invalid.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reduceMediaBitrateCompleteEvent This field is invalid.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReduceMediaBitrateCompleteEvent(const ReduceMediaBitrateTask& _reduceMediaBitrateCompleteEvent);
@@ -608,19 +759,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReduceMediaBitrateCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取DescribeFileAttributes completion event, valid when the event type is DescribeFileAttributesComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DescribeFileAttributesCompleteEvent DescribeFileAttributes completion event, valid when the event type is DescribeFileAttributesComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DescribeFileAttributesCompleteEvent File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesCompleteEvent() const;
 
                     /**
-                     * 设置DescribeFileAttributes completion event, valid when the event type is DescribeFileAttributesComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _describeFileAttributesCompleteEvent DescribeFileAttributes completion event, valid when the event type is DescribeFileAttributesComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _describeFileAttributesCompleteEvent File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescribeFileAttributesCompleteEvent(const DescribeFileAttributesTask& _describeFileAttributesCompleteEvent);
@@ -633,19 +784,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DescribeFileAttributesCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取QualityInspect completion event, valid when the event type is QualityInspectComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return QualityInspectCompleteEvent QualityInspect completion event, valid when the event type is QualityInspectComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityInspectCompleteEvent Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     QualityInspectTask GetQualityInspectCompleteEvent() const;
 
                     /**
-                     * 设置QualityInspect completion event, valid when the event type is QualityInspectComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _qualityInspectCompleteEvent QualityInspect completion event, valid when the event type is QualityInspectComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _qualityInspectCompleteEvent Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQualityInspectCompleteEvent(const QualityInspectTask& _qualityInspectCompleteEvent);
@@ -658,19 +809,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QualityInspectCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Remaster completion event, valid when the event type is QualityEnhanceComplete.
-Pay attention to: this field may return null, indicating that no valid value can be obtained
-                     * @return QualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
-Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * 获取Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityEnhanceCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     QualityEnhanceTask GetQualityEnhanceCompleteEvent() const;
 
                     /**
-                     * 设置Remaster completion event, valid when the event type is QualityEnhanceComplete.
-Pay attention to: this field may return null, indicating that no valid value can be obtained
-                     * @param _qualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
-Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * 设置Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _qualityEnhanceCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQualityEnhanceCompleteEvent(const QualityEnhanceTask& _qualityEnhanceCompleteEvent);
@@ -708,19 +859,19 @@ Pay attention to: this field may return null, indicating that no valid value can
                     bool MediaCastStatusChangedEventHasBeenSet() const;
 
                     /**
-                     * 获取Persistence completion event, valid when the event type is PersistenceComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PersistenceCompleteEvent Persistence completion event, valid when the event type is PersistenceComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Editing solidification completion event. Valid when the event type is PersistenceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PersistenceCompleteEvent Editing solidification completion event. Valid when the event type is PersistenceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PersistenceCompleteTask GetPersistenceCompleteEvent() const;
 
                     /**
-                     * 设置Persistence completion event, valid when the event type is PersistenceComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _persistenceCompleteEvent Persistence completion event, valid when the event type is PersistenceComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Editing solidification completion event. Valid when the event type is PersistenceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _persistenceCompleteEvent Editing solidification completion event. Valid when the event type is PersistenceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPersistenceCompleteEvent(const PersistenceCompleteTask& _persistenceCompleteEvent);
@@ -733,19 +884,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PersistenceCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ComplexAdaptiveDynamicStreamingCompleteEvent Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComplexAdaptiveDynamicStreamingCompleteEvent Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ComplexAdaptiveDynamicStreamingTask GetComplexAdaptiveDynamicStreamingCompleteEvent() const;
 
                     /**
-                     * 设置Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _complexAdaptiveDynamicStreamingCompleteEvent Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _complexAdaptiveDynamicStreamingCompleteEvent Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetComplexAdaptiveDynamicStreamingCompleteEvent(const ComplexAdaptiveDynamicStreamingTask& _complexAdaptiveDynamicStreamingCompleteEvent);
@@ -758,15 +909,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ComplexAdaptiveDynamicStreamingCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
-                     * @return ProcessMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+                     * 获取MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
+                     * @return ProcessMediaByMPSCompleteEvent MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
                      * 
                      */
                     ProcessMediaByMPS GetProcessMediaByMPSCompleteEvent() const;
 
                     /**
-                     * 设置MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
-                     * @param _processMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+                     * 设置MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
+                     * @param _processMediaByMPSCompleteEvent MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
                      * 
                      */
                     void SetProcessMediaByMPSCompleteEvent(const ProcessMediaByMPS& _processMediaByMPSCompleteEvent);
@@ -779,19 +930,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProcessMediaByMPSCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
+                     * @return AigcImageCompleteEvent AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
                      * 
                      */
                     AigcImageTask GetAigcImageCompleteEvent() const;
 
                     /**
-                     * 设置AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _aigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
+                     * @param _aigcImageCompleteEvent AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
                      * 
                      */
                     void SetAigcImageCompleteEvent(const AigcImageTask& _aigcImageCompleteEvent);
@@ -804,19 +951,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AigcImageCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
+                     * @return AigcVideoCompleteEvent AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
                      * 
                      */
                     AigcVideoTask GetAigcVideoCompleteEvent() const;
 
                     /**
-                     * 设置AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _aigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
+                     * @param _aigcVideoCompleteEvent AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
                      * 
                      */
                     void SetAigcVideoCompleteEvent(const AigcVideoTask& _aigcVideoCompleteEvent);
@@ -828,175 +971,275 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool AigcVideoCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+                     * @return ExtractBlindWatermarkComplete Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+                     * 
+                     */
+                    ExtractBlindWatermarkTask GetExtractBlindWatermarkComplete() const;
+
+                    /**
+                     * 设置Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+                     * @param _extractBlindWatermarkComplete Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+                     * 
+                     */
+                    void SetExtractBlindWatermarkComplete(const ExtractBlindWatermarkTask& _extractBlindWatermarkComplete);
+
+                    /**
+                     * 判断参数 ExtractBlindWatermarkComplete 是否已赋值
+                     * @return ExtractBlindWatermarkComplete 是否已赋值
+                     * 
+                     */
+                    bool ExtractBlindWatermarkCompleteHasBeenSet() const;
+
+                    /**
+                     * 获取AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+                     * @return SceneAigcImageCompleteEvent AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+                     * 
+                     */
+                    SceneAigcImageTask GetSceneAigcImageCompleteEvent() const;
+
+                    /**
+                     * 设置AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+                     * @param _sceneAigcImageCompleteEvent AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+                     * 
+                     */
+                    void SetSceneAigcImageCompleteEvent(const SceneAigcImageTask& _sceneAigcImageCompleteEvent);
+
+                    /**
+                     * 判断参数 SceneAigcImageCompleteEvent 是否已赋值
+                     * @return SceneAigcImageCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool SceneAigcImageCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+                     * @return ProcessImageAsyncCompleteEvent Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+                     * 
+                     */
+                    ProcessImageAsyncTask GetProcessImageAsyncCompleteEvent() const;
+
+                    /**
+                     * 设置Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+                     * @param _processImageAsyncCompleteEvent Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+                     * 
+                     */
+                    void SetProcessImageAsyncCompleteEvent(const ProcessImageAsyncTask& _processImageAsyncCompleteEvent);
+
+                    /**
+                     * 判断参数 ProcessImageAsyncCompleteEvent 是否已赋值
+                     * @return ProcessImageAsyncCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool ProcessImageAsyncCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
                      */
                     std::string m_eventHandle;
                     bool m_eventHandleHasBeenSet;
 
                     /**
-                     * <b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><li>`PersistenceComplete`: Clipping persistented. </li><li>`ComplexAdaptiveDynamicStreamingComplete `: Finished complex adaptive bitrate streaming processing. </li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+                     * <b>Supported event types:</b>
+<li>NewFileUpload: Video upload completed;</li>
+<li>ProcedureStateChanged: Task flow status change.</li>
+<li>FileDeleted: Video deletion completed;</li>
+<li>RestoreMediaComplete: Video retrieval completion;</li>
+<li>PullComplete: Video conversion pull completed.</li>
+<li>EditMediaComplete: Video editing completed;</li>
+<li>SplitMediaComplete: Video splitting completed;</li>
+<li>ComposeMediaComplete: Media file creation completion;</li>
+<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
+<li>RemoveWatermark: Intelligent watermark removal completion.</li>
+<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
+<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
+<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
+<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
+<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
+<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
+<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
+<li>PersistenceComplete: Edit completed.</li>
+<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
+<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
+<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
+<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
+<b>Event types compatible with the 2017 version:</b>
+<li>TranscodeComplete: video transcoding completion;</li>
+<li>ConcatComplete: Video splicing completion.</li>
+<li>ClipComplete: Video editing completed;</li>
+<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Media uploaded event, valid when the event type is NewFileUpload.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video upload completion event. Valid when the event type is NewFileUpload.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FileUploadTask m_fileUploadEvent;
                     bool m_fileUploadEventHasBeenSet;
 
                     /**
-                     * Task flow status changed event, valid when the event type is ProcedureStateChanged.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Task flow status change event. Valid when the event type is ProcedureStateChanged.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProcedureTask m_procedureStateChangeEvent;
                     bool m_procedureStateChangeEventHasBeenSet;
 
                     /**
-                     * File deleted event, valid when the event type is FileDeleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * File deletion event. Valid when the event type is FileDeleted.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FileDeleteTask m_fileDeleteEvent;
                     bool m_fileDeleteEventHasBeenSet;
 
                     /**
-                     * PullUpload completion event, valid when the event type is PullComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video pull completion event. Valid when the event type is PullComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PullUploadTask m_pullCompleteEvent;
                     bool m_pullCompleteEventHasBeenSet;
 
                     /**
-                     * EditMedia completion event, valid when the event type is EditMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video editing completion event. Valid when the event type is EditMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     EditMediaTask m_editMediaCompleteEvent;
                     bool m_editMediaCompleteEventHasBeenSet;
 
                     /**
-                     * SplitMedia completion event, valid when the event type is SplitMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video splitting completion event. Valid when the event type is SplitMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SplitMediaTask m_splitMediaCompleteEvent;
                     bool m_splitMediaCompleteEventHasBeenSet;
 
                     /**
-                     * ComposeMedia completion event, valid when the event type is ComposeMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ComposeMediaTask m_composeMediaCompleteEvent;
                     bool m_composeMediaCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Video editing completion event. Valid when the event type is ClipComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ClipTask2017 m_clipCompleteEvent;
                     bool m_clipCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Video transcoding completion event, valid when the event type is TranscodeComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TranscodeTask2017 m_transcodeCompleteEvent;
                     bool m_transcodeCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CreateImageSpriteTask2017 m_createImageSpriteCompleteEvent;
                     bool m_createImageSpriteCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Video splicing completion event. Valid when the event type is ConcatComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ConcatTask2017 m_concatCompleteEvent;
                     bool m_concatCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetCompleteEvent;
                     bool m_snapshotByTimeOffsetCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WechatPublishTask m_wechatPublishCompleteEvent;
                     bool m_wechatPublishCompleteEventHasBeenSet;
 
                     /**
-                     * WechatMiniProgramPublish completion event, valid when the event type is WechatMiniProgramPublishComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishCompleteEvent;
                     bool m_wechatMiniProgramPublishCompleteEventHasBeenSet;
 
                     /**
-                     * RemoveWatermark completion event, valid when the event type is RemoveWatermark.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RemoveWatermarkTask m_removeWatermarkCompleteEvent;
                     bool m_removeWatermarkCompleteEventHasBeenSet;
 
                     /**
-                     * RestoreMedia completion event, valid when the event type is RestoreMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RestoreMediaTask m_restoreMediaCompleteEvent;
                     bool m_restoreMediaCompleteEventHasBeenSet;
 
                     /**
-                     * RebuildMedia completion event, valid when the event type is RebuildMediaComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RebuildMediaTask m_rebuildMediaCompleteEvent;
                     bool m_rebuildMediaCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ExtractTraceWatermarkTask m_extractTraceWatermarkCompleteEvent;
                     bool m_extractTraceWatermarkCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ExtractCopyRightWatermarkTask m_extractCopyRightWatermarkCompleteEvent;
                     bool m_extractCopyRightWatermarkCompleteEventHasBeenSet;
 
                     /**
-                     * ReviewAudioVideo completion event, valid when the event type is ReviewAudioVideoComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoCompleteEvent;
                     bool m_reviewAudioVideoCompleteEventHasBeenSet;
 
                     /**
-                     * Expired.
+                     * This field is invalid.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateCompleteEvent;
                     bool m_reduceMediaBitrateCompleteEventHasBeenSet;
 
                     /**
-                     * DescribeFileAttributes completion event, valid when the event type is DescribeFileAttributesComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesCompleteEvent;
                     bool m_describeFileAttributesCompleteEventHasBeenSet;
 
                     /**
-                     * QualityInspect completion event, valid when the event type is QualityInspectComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     QualityInspectTask m_qualityInspectCompleteEvent;
                     bool m_qualityInspectCompleteEventHasBeenSet;
 
                     /**
-                     * Remaster completion event, valid when the event type is QualityEnhanceComplete.
-Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     QualityEnhanceTask m_qualityEnhanceCompleteEvent;
                     bool m_qualityEnhanceCompleteEventHasBeenSet;
@@ -1009,38 +1252,54 @@ Pay attention to: this field may return null, indicating that no valid value can
                     bool m_mediaCastStatusChangedEventHasBeenSet;
 
                     /**
-                     * Persistence completion event, valid when the event type is PersistenceComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Editing solidification completion event. Valid when the event type is PersistenceComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PersistenceCompleteTask m_persistenceCompleteEvent;
                     bool m_persistenceCompleteEventHasBeenSet;
 
                     /**
-                     * Complex adaptive bitrate streaming processing completion event, valid when the event type is ComplexAdaptiveDynamicStreamingComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ComplexAdaptiveDynamicStreamingTask m_complexAdaptiveDynamicStreamingCompleteEvent;
                     bool m_complexAdaptiveDynamicStreamingCompleteEventHasBeenSet;
 
                     /**
-                     * MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+                     * MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
                      */
                     ProcessMediaByMPS m_processMediaByMPSCompleteEvent;
                     bool m_processMediaByMPSCompleteEventHasBeenSet;
 
                     /**
-                     * AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
                      */
                     AigcImageTask m_aigcImageCompleteEvent;
                     bool m_aigcImageCompleteEventHasBeenSet;
 
                     /**
-                     * AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
                      */
                     AigcVideoTask m_aigcVideoCompleteEvent;
                     bool m_aigcVideoCompleteEventHasBeenSet;
+
+                    /**
+                     * Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+                     */
+                    ExtractBlindWatermarkTask m_extractBlindWatermarkComplete;
+                    bool m_extractBlindWatermarkCompleteHasBeenSet;
+
+                    /**
+                     * AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+                     */
+                    SceneAigcImageTask m_sceneAigcImageCompleteEvent;
+                    bool m_sceneAigcImageCompleteEventHasBeenSet;
+
+                    /**
+                     * Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+                     */
+                    ProcessImageAsyncTask m_processImageAsyncCompleteEvent;
+                    bool m_processImageAsyncCompleteEventHasBeenSet;
 
                 };
             }

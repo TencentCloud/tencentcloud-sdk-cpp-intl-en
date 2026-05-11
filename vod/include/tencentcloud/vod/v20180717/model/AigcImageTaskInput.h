@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of AIGC image task.
+                * Input of the AIGC image generation task.
                 */
                 class AigcImageTaskInput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Model name. 
-                     * @return ModelName Model name. 
+                     * 获取Model name.
+                     * @return ModelName Model name.
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置Model name. 
-                     * @param _modelName Model name. 
+                     * 设置Model name.
+                     * @param _modelName Model name.
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取Model version. 
-                     * @return ModelVersion Model version. 
+                     * 获取Model version.
+                     * @return ModelVersion Model version.
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置Model version. 
-                     * @param _modelVersion Model version. 
+                     * 设置Model version.
+                     * @param _modelVersion Model version.
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取File information of the input image for the AIGC image generation task.
-                     * @return FileInfos File information of the input image for the AIGC image generation task.
+                     * 获取Input file of the AIGC image generation task.
+                     * @return FileInfos Input file of the AIGC image generation task.
                      * 
                      */
                     std::vector<AigcImageTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置File information of the input image for the AIGC image generation task.
-                     * @param _fileInfos File information of the input image for the AIGC image generation task.
+                     * 设置Input file of the AIGC image generation task.
+                     * @param _fileInfos Input file of the AIGC image generation task.
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcImageTaskInputFileInfo>& _fileInfos);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取The prompt content for image generation.
-                     * @return Prompt The prompt content for image generation.
+                     * 获取Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+                     * @return Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置The prompt content for image generation.
-                     * @param _prompt The prompt content for image generation.
+                     * 设置Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+                     * @param _prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Prevent the model from generating image generation prompts.
-                     * @return NegativePrompt Prevent the model from generating image generation prompts.
+                     * 获取To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+                     * @return NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置Prevent the model from generating image generation prompts.
-                     * @param _negativePrompt Prevent the model from generating image generation prompts.
+                     * 设置To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+                     * @param _negativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-                     * @return EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * 获取Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+                     * @return EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
                      * 
                      */
                     std::string GetEnhancePrompt() const;
 
                     /**
-                     * 设置Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-                     * @param _enhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * 设置Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+                     * @param _enhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
                      * 
                      */
                     void SetEnhancePrompt(const std::string& _enhancePrompt);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
-                     * @return GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+                     * 获取Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+                     * @return GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
                      * 
                      */
                     std::string GetGenerationMode() const;
 
                     /**
-                     * 设置Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
-                     * @param _generationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+                     * 设置Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+                     * @param _generationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
                      * 
                      */
                     void SetGenerationMode(const std::string& _generationMode);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool GenerationModeHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for the task.
-                     * @return OutputConfig Output media file configuration for the task.
+                     * 获取Output the result file of the AIGC image generation.
+                     * @return OutputConfig Output the result file of the AIGC image generation.
                      * 
                      */
                     AigcImageOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for the task.
-                     * @param _outputConfig Output media file configuration for the task.
+                     * 设置Output the result file of the AIGC image generation.
+                     * @param _outputConfig Output the result file of the AIGC image generation.
                      * 
                      */
                     void SetOutputConfig(const AigcImageOutputConfig& _outputConfig);
@@ -219,49 +219,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Model name. 
+                     * Model name.
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * Model version. 
+                     * Model version.
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * File information of the input image for the AIGC image generation task.
+                     * Input file of the AIGC image generation task.
                      */
                     std::vector<AigcImageTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * The prompt content for image generation.
+                     * Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Prevent the model from generating image generation prompts.
+                     * To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+                     * Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
                      */
                     std::string m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+                     * Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
                      */
                     std::string m_generationMode;
                     bool m_generationModeHasBeenSet;
 
                     /**
-                     * Output media file configuration for the task.
+                     * Output the result file of the AIGC image generation.
                      */
                     AigcImageOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

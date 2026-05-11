@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Object recognition task output information.
+                     * @return Output Object recognition task output information.
                      * 
                      */
                     AiRecognitionTaskObjectResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Object recognition task output information.
+                     * @param _output Object recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskObjectResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Object recognition task output information.
                      */
                     AiRecognitionTaskObjectResultOutput m_output;
                     bool m_outputHasBeenSet;

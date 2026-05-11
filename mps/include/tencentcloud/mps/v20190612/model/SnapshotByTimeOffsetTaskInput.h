@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of a time point screenshot template.
-                     * @return Definition ID of a time point screenshot template.
+                     * 获取<p>Time point screenshot template ID.</p>
+                     * @return Definition <p>Time point screenshot template ID.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置ID of a time point screenshot template.
-                     * @param _definition ID of a time point screenshot template.
+                     * 设置<p>Time point screenshot template ID.</p>
+                     * @param _definition <p>Time point screenshot template ID.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -71,23 +71,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
-                     * @return ExtTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+                     * 获取<p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+                     * @return ExtTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
                      * 
                      */
                     std::vector<std::string> GetExtTimeOffsetSet() const;
 
                     /**
-                     * 设置List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
-                     * @param _extTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+                     * 设置<p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+                     * @param _extTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
                      * 
                      */
                     void SetExtTimeOffsetSet(const std::vector<std::string>& _extTimeOffsetSet);
@@ -100,15 +92,15 @@ namespace TencentCloud
                     bool ExtTimeOffsetSetHasBeenSet() const;
 
                     /**
-                     * 获取List of time points of screenshots in <font color=red>seconds</font>.
-                     * @return TimeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
+                     * 获取<p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      * 
                      */
                     std::vector<double> GetTimeOffsetSet() const;
 
                     /**
-                     * 设置List of time points of screenshots in <font color=red>seconds</font>.
-                     * @param _timeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
+                     * 设置<p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * @param _timeOffsetSet <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      * 
                      */
                     void SetTimeOffsetSet(const std::vector<double>& _timeOffsetSet);
@@ -121,19 +113,15 @@ namespace TencentCloud
                     bool TimeOffsetSetHasBeenSet() const;
 
                     /**
-                     * 获取List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _watermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @param _watermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -146,18 +134,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 获取<p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @return OutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * 设置<p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -171,43 +159,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
-                     * @return OutputObjectPath Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * 获取<p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
+                     * @return OutputObjectPath <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
-                     * @param _outputObjectPath Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * 设置<p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
+                     * @param _outputObjectPath <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -220,18 +180,18 @@ If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOf
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取Rule of the `{number}` variable in the time point screenshot output path.
+                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
+                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置Rule of the `{number}` variable in the time point screenshot output path.
+                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _objectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
+                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -244,61 +204,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectNumberFormatHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return ExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _extInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of a time point screenshot template.
+                     * <p>Time point screenshot template ID.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * List of screenshot time points in the format of `s` or `%`:
-<li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
-<li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+                     * <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
                      */
                     std::vector<std::string> m_extTimeOffsetSet;
                     bool m_extTimeOffsetSetHasBeenSet;
 
                     /**
-                     * List of time points of screenshots in <font color=red>seconds</font>.
+                     * <p>List of screenshot time points, in <font color="red">seconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      */
                     std::vector<double> m_timeOffsetSet;
                     bool m_timeOffsetSetHasBeenSet;
 
                     /**
-                     * List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Output path for an image file of screenshots taken at specific time points, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * <p>Output path of the image file after the time point screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}</code>.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * Rule of the `{number}` variable in the time point screenshot output path.
+                     * <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

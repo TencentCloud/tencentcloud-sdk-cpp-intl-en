@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameters related to the adaptive bitrate streaming template.
+                * Stream parameters of the adaptive bitrate streaming task.
                 */
                 class ComplexAdaptiveDynamicStreamingTaskStreamPara : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming template ID.
-                     * @return Definition Adaptive bitrate streaming template ID.
+                     * 获取Adaptive bitrate template ID.
+                     * @return Definition Adaptive bitrate template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming template ID.
-                     * @param _definition Adaptive bitrate streaming template ID.
+                     * 设置Adaptive bitrate template ID.
+                     * @param _definition Adaptive bitrate template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Adaptive bitrate streaming template ID.
+                     * Adaptive bitrate template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Speech keyword recognition task output information.
+                     * @return Output Speech keyword recognition task output information.
                      * 
                      */
                     AiRecognitionTaskAsrWordsResultOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Speech keyword recognition task output information.
+                     * @param _output Speech keyword recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskAsrWordsResultOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Speech keyword recognition task output information.
                      */
                     AiRecognitionTaskAsrWordsResultOutput m_output;
                     bool m_outputHasBeenSet;

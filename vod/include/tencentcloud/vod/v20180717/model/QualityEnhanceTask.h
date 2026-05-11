@@ -196,19 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Input Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Input of the audio and video quality regeneration task.
+                     * @return Input Input of the audio and video quality regeneration task.
                      * 
                      */
                     QualityEnhanceTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _input Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Input of the audio and video quality regeneration task.
+                     * @param _input Input of the audio and video quality regeneration task.
                      * 
                      */
                     void SetInput(const QualityEnhanceTaskInput& _input);
@@ -221,19 +217,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Output of the audio and video quality regeneration task.
+                     * @return Output Output of the audio and video quality regeneration task.
                      * 
                      */
                     QualityEnhanceTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Output of the audio and video quality regeneration task.
+                     * @param _output Output of the audio and video quality regeneration task.
                      * 
                      */
                     void SetOutput(const QualityEnhanceTaskOutput& _output);
@@ -246,19 +238,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return MetaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Metadata of the output video after audio and video quality revival.
+                     * @return MetaData Metadata of the output video after audio and video quality revival.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _metaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Metadata of the output video after audio and video quality revival.
+                     * @param _metaData Metadata of the output video after audio and video quality revival.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -356,22 +344,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Input of the audio and video quality regeneration task.
                      */
                     QualityEnhanceTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Output of the audio and video quality regeneration task.
                      */
                     QualityEnhanceTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Metadata of the output video after audio and video quality revival.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

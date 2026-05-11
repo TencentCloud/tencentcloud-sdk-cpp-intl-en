@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent frame-specific tagging task output.
+                     * @return Output Intelligent frame-specific tagging task output.
                      * 
                      */
                     AiAnalysisTaskFrameTagOutput GetOutput() const;
 
                     /**
-                     * 设置Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent frame-specific tagging task output.
+                     * @param _output Intelligent frame-specific tagging task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskFrameTagOutput& _output);
@@ -274,8 +270,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent frame-specific tagging task output.
                      */
                     AiAnalysisTaskFrameTagOutput m_output;
                     bool m_outputHasBeenSet;

@@ -32,10 +32,12 @@ PullUploadRequest::PullUploadRequest() :
     m_expireTimeHasBeenSet(false),
     m_storageRegionHasBeenSet(false),
     m_classIdHasBeenSet(false),
+    m_tasksPriorityHasBeenSet(false),
     m_sessionContextHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
     m_extInfoHasBeenSet(false),
-    m_sourceContextHasBeenSet(false)
+    m_sourceContextHasBeenSet(false),
+    m_mediaStoragePathHasBeenSet(false)
 {
 }
 
@@ -118,6 +120,14 @@ string PullUploadRequest::ToJsonString() const
         d.AddMember(iKey, m_classId, allocator);
     }
 
+    if (m_tasksPriorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TasksPriority";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_tasksPriority, allocator);
+    }
+
     if (m_sessionContextHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -148,6 +158,14 @@ string PullUploadRequest::ToJsonString() const
         string key = "SourceContext";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sourceContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mediaStoragePathHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MediaStoragePath";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_mediaStoragePath.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -302,6 +320,22 @@ bool PullUploadRequest::ClassIdHasBeenSet() const
     return m_classIdHasBeenSet;
 }
 
+int64_t PullUploadRequest::GetTasksPriority() const
+{
+    return m_tasksPriority;
+}
+
+void PullUploadRequest::SetTasksPriority(const int64_t& _tasksPriority)
+{
+    m_tasksPriority = _tasksPriority;
+    m_tasksPriorityHasBeenSet = true;
+}
+
+bool PullUploadRequest::TasksPriorityHasBeenSet() const
+{
+    return m_tasksPriorityHasBeenSet;
+}
+
 string PullUploadRequest::GetSessionContext() const
 {
     return m_sessionContext;
@@ -364,6 +398,22 @@ void PullUploadRequest::SetSourceContext(const string& _sourceContext)
 bool PullUploadRequest::SourceContextHasBeenSet() const
 {
     return m_sourceContextHasBeenSet;
+}
+
+string PullUploadRequest::GetMediaStoragePath() const
+{
+    return m_mediaStoragePath;
+}
+
+void PullUploadRequest::SetMediaStoragePath(const string& _mediaStoragePath)
+{
+    m_mediaStoragePath = _mediaStoragePath;
+    m_mediaStoragePathHasBeenSet = true;
+}
+
+bool PullUploadRequest::MediaStoragePathHasBeenSet() const
+{
+    return m_mediaStoragePathHasBeenSet;
 }
 
 

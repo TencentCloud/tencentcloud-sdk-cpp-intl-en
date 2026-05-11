@@ -98,15 +98,15 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -208,6 +208,27 @@ The default is `VOD`.
                      * 
                      */
                     bool DrmKeyProviderHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DrmEncryptType 
+                     * 
+                     */
+                    std::string GetDrmEncryptType() const;
+
+                    /**
+                     * 设置
+                     * @param _drmEncryptType 
+                     * 
+                     */
+                    void SetDrmEncryptType(const std::string& _drmEncryptType);
+
+                    /**
+                     * 判断参数 DrmEncryptType 是否已赋值
+                     * @return DrmEncryptType 是否已赋值
+                     * 
+                     */
+                    bool DrmEncryptTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
@@ -347,7 +368,7 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -376,6 +397,12 @@ The default is `VOD`.
                      */
                     std::string m_drmKeyProvider;
                     bool m_drmKeyProviderHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_drmEncryptType;
+                    bool m_drmEncryptTypeHasBeenSet;
 
                     /**
                      * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Execution information of the adaptive bitrate streaming task.
+                * Adaptive bitrate task information.
                 */
                 class ComplexAdaptiveDynamicStreamingTask : public AbstractModel
                 {
@@ -70,22 +70,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
                      * @return Status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
                      * @param _status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -98,15 +102,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
-                     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+                     * 获取Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+                     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
                      * 
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskResult> GetComplexAdaptiveDynamicStreamingTaskResultSet() const;
 
                     /**
-                     * 设置Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
-                     * @param _complexAdaptiveDynamicStreamingTaskResultSet Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+                     * 设置Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+                     * @param _complexAdaptiveDynamicStreamingTaskResultSet Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
                      * 
                      */
                     void SetComplexAdaptiveDynamicStreamingTaskResultSet(const std::vector<ComplexAdaptiveDynamicStreamingTaskResult>& _complexAdaptiveDynamicStreamingTaskResultSet);
@@ -128,14 +132,15 @@ namespace TencentCloud
 
                     /**
                      * Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+                     * Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskResult> m_complexAdaptiveDynamicStreamingTaskResultSet;
                     bool m_complexAdaptiveDynamicStreamingTaskResultSetHasBeenSet;

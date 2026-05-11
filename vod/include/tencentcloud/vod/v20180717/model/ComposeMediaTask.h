@@ -183,19 +183,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Input Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Input of the media file creation task.
+                     * @return Input Input of the media file creation task.
                      * 
                      */
                     ComposeMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _input Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Input of the media file creation task.
+                     * @param _input Input of the media file creation task.
                      * 
                      */
                     void SetInput(const ComposeMediaTaskInput& _input);
@@ -208,19 +204,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output of the media file creation task.
+                     * @return Output Output of the media file creation task.
                      * 
                      */
                     ComposeMediaTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output of the media file creation task.
+                     * @param _output Output of the media file creation task.
                      * 
                      */
                     void SetOutput(const ComposeMediaTaskOutput& _output);
@@ -339,15 +331,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Input of the media file creation task.
                      */
                     ComposeMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output of the media file creation task.
                      */
                     ComposeMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;
