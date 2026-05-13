@@ -1540,56 +1540,6 @@ LighthouseClient::DescribeImagesToShareOutcomeCallable LighthouseClient::Describ
     return prom->get_future();
 }
 
-LighthouseClient::DescribeInstanceLoginKeyPairAttributeOutcome LighthouseClient::DescribeInstanceLoginKeyPairAttribute(const DescribeInstanceLoginKeyPairAttributeRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeInstanceLoginKeyPairAttribute");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeInstanceLoginKeyPairAttributeResponse rsp = DescribeInstanceLoginKeyPairAttributeResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeInstanceLoginKeyPairAttributeOutcome(rsp);
-        else
-            return DescribeInstanceLoginKeyPairAttributeOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeInstanceLoginKeyPairAttributeOutcome(outcome.GetError());
-    }
-}
-
-void LighthouseClient::DescribeInstanceLoginKeyPairAttributeAsync(const DescribeInstanceLoginKeyPairAttributeRequest& request, const DescribeInstanceLoginKeyPairAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeInstanceLoginKeyPairAttributeRequest&;
-    using Resp = DescribeInstanceLoginKeyPairAttributeResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeInstanceLoginKeyPairAttribute", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LighthouseClient::DescribeInstanceLoginKeyPairAttributeOutcomeCallable LighthouseClient::DescribeInstanceLoginKeyPairAttributeCallable(const DescribeInstanceLoginKeyPairAttributeRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeInstanceLoginKeyPairAttributeOutcome>>();
-    DescribeInstanceLoginKeyPairAttributeAsync(
-    request,
-    [prom](
-        const LighthouseClient*,
-        const DescribeInstanceLoginKeyPairAttributeRequest&,
-        DescribeInstanceLoginKeyPairAttributeOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 LighthouseClient::DescribeInstanceVncUrlOutcome LighthouseClient::DescribeInstanceVncUrl(const DescribeInstanceVncUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceVncUrl");
@@ -3232,56 +3182,6 @@ LighthouseClient::ModifyInstancesBundleOutcomeCallable LighthouseClient::ModifyI
         const LighthouseClient*,
         const ModifyInstancesBundleRequest&,
         ModifyInstancesBundleOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-LighthouseClient::ModifyInstancesLoginKeyPairAttributeOutcome LighthouseClient::ModifyInstancesLoginKeyPairAttribute(const ModifyInstancesLoginKeyPairAttributeRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyInstancesLoginKeyPairAttribute");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyInstancesLoginKeyPairAttributeResponse rsp = ModifyInstancesLoginKeyPairAttributeResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyInstancesLoginKeyPairAttributeOutcome(rsp);
-        else
-            return ModifyInstancesLoginKeyPairAttributeOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyInstancesLoginKeyPairAttributeOutcome(outcome.GetError());
-    }
-}
-
-void LighthouseClient::ModifyInstancesLoginKeyPairAttributeAsync(const ModifyInstancesLoginKeyPairAttributeRequest& request, const ModifyInstancesLoginKeyPairAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const ModifyInstancesLoginKeyPairAttributeRequest&;
-    using Resp = ModifyInstancesLoginKeyPairAttributeResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "ModifyInstancesLoginKeyPairAttribute", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LighthouseClient::ModifyInstancesLoginKeyPairAttributeOutcomeCallable LighthouseClient::ModifyInstancesLoginKeyPairAttributeCallable(const ModifyInstancesLoginKeyPairAttributeRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<ModifyInstancesLoginKeyPairAttributeOutcome>>();
-    ModifyInstancesLoginKeyPairAttributeAsync(
-    request,
-    [prom](
-        const LighthouseClient*,
-        const ModifyInstancesLoginKeyPairAttributeRequest&,
-        ModifyInstancesLoginKeyPairAttributeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -93,14 +93,14 @@ namespace TencentCloud
                      * @return Discount Discount.
                      * 
                      */
-                    int64_t GetDiscount() const;
+                    double GetDiscount() const;
 
                     /**
                      * 设置Discount.
                      * @param _discount Discount.
                      * 
                      */
-                    void SetDiscount(const int64_t& _discount);
+                    void SetDiscount(const double& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
@@ -147,7 +147,7 @@ namespace TencentCloud
                     /**
                      * Discount.
                      */
-                    int64_t m_discount;
+                    double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**

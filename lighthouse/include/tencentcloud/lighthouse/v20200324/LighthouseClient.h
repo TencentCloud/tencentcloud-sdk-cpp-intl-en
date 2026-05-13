@@ -83,8 +83,6 @@
 #include <tencentcloud/lighthouse/v20200324/model/DescribeGeneralResourceQuotasResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeImagesToShareRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeImagesToShareResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesRequest.h>
@@ -151,8 +149,6 @@
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesLoginKeyPairAttributeRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesLoginKeyPairAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesRenewFlagRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesRenewFlagResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifySnapshotAttributeRequest.h>
@@ -287,9 +283,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeImagesToShareResponse> DescribeImagesToShareOutcome;
                 typedef std::future<DescribeImagesToShareOutcome> DescribeImagesToShareOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeImagesToShareRequest&, DescribeImagesToShareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImagesToShareAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttributeOutcome;
-                typedef std::future<DescribeInstanceLoginKeyPairAttributeOutcome> DescribeInstanceLoginKeyPairAttributeOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::DescribeInstanceLoginKeyPairAttributeRequest&, DescribeInstanceLoginKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceLoginKeyPairAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceVncUrlResponse> DescribeInstanceVncUrlOutcome;
                 typedef std::future<DescribeInstanceVncUrlOutcome> DescribeInstanceVncUrlOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeInstanceVncUrlRequest&, DescribeInstanceVncUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceVncUrlAsyncHandler;
@@ -389,9 +382,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstancesBundleResponse> ModifyInstancesBundleOutcome;
                 typedef std::future<ModifyInstancesBundleOutcome> ModifyInstancesBundleOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesBundleRequest&, ModifyInstancesBundleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesBundleAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyInstancesLoginKeyPairAttributeResponse> ModifyInstancesLoginKeyPairAttributeOutcome;
-                typedef std::future<ModifyInstancesLoginKeyPairAttributeOutcome> ModifyInstancesLoginKeyPairAttributeOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesLoginKeyPairAttributeRequest&, ModifyInstancesLoginKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesLoginKeyPairAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesRenewFlagResponse> ModifyInstancesRenewFlagOutcome;
                 typedef std::future<ModifyInstancesRenewFlagOutcome> ModifyInstancesRenewFlagOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesRenewFlagRequest&, ModifyInstancesRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesRenewFlagAsyncHandler;
@@ -739,15 +729,6 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
                 DescribeImagesToShareOutcome DescribeImagesToShare(const Model::DescribeImagesToShareRequest &request);
                 void DescribeImagesToShareAsync(const Model::DescribeImagesToShareRequest& request, const DescribeImagesToShareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeImagesToShareOutcomeCallable DescribeImagesToShareCallable(const Model::DescribeImagesToShareRequest& request);
-
-                /**
-                 *This API is used to query the attributes of the default login key of an instance.
-                 * @param req DescribeInstanceLoginKeyPairAttributeRequest
-                 * @return DescribeInstanceLoginKeyPairAttributeOutcome
-                 */
-                DescribeInstanceLoginKeyPairAttributeOutcome DescribeInstanceLoginKeyPairAttribute(const Model::DescribeInstanceLoginKeyPairAttributeRequest &request);
-                void DescribeInstanceLoginKeyPairAttributeAsync(const Model::DescribeInstanceLoginKeyPairAttributeRequest& request, const DescribeInstanceLoginKeyPairAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeInstanceLoginKeyPairAttributeOutcomeCallable DescribeInstanceLoginKeyPairAttributeCallable(const Model::DescribeInstanceLoginKeyPairAttributeRequest& request);
 
                 /**
                  *This API is used to query the URL for VNC login.
@@ -1110,17 +1091,6 @@ Sharing CVM images to Lighthouse requires the following conditions to be met:
                 ModifyInstancesBundleOutcome ModifyInstancesBundle(const Model::ModifyInstancesBundleRequest &request);
                 void ModifyInstancesBundleAsync(const Model::ModifyInstancesBundleRequest& request, const ModifyInstancesBundleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstancesBundleOutcomeCallable ModifyInstancesBundleCallable(const Model::ModifyInstancesBundleRequest& request);
-
-                /**
-                 *This API is used to set the attributes of the default login key pair of an instance.
-
-
-                 * @param req ModifyInstancesLoginKeyPairAttributeRequest
-                 * @return ModifyInstancesLoginKeyPairAttributeOutcome
-                 */
-                ModifyInstancesLoginKeyPairAttributeOutcome ModifyInstancesLoginKeyPairAttribute(const Model::ModifyInstancesLoginKeyPairAttributeRequest &request);
-                void ModifyInstancesLoginKeyPairAttributeAsync(const Model::ModifyInstancesLoginKeyPairAttributeRequest& request, const ModifyInstancesLoginKeyPairAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyInstancesLoginKeyPairAttributeOutcomeCallable ModifyInstancesLoginKeyPairAttributeCallable(const Model::ModifyInstancesLoginKeyPairAttributeRequest& request);
 
                 /**
                  *This API is used to change the auto-renewal setting of monthly-subscribed instances. 

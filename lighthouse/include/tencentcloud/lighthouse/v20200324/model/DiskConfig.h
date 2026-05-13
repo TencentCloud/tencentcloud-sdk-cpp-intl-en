@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone.
-                     * @return Zone Availability zone.
+                     * 获取<P>Availability zone.</p>.
+                     * @return Zone <P>Availability zone.</p>.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone.
-                     * @param _zone Availability zone.
+                     * 设置<P>Availability zone.</p>.
+                     * @param _zone <P>Availability zone.</p>.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -68,31 +68,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-                     * @return DiskType Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+                     * 获取<p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+                     * @return DiskType <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-                     * @param _diskType Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+                     * 设置<p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+                     * @param _diskType <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -105,15 +89,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk sale status.
-                     * @return DiskSalesState Cloud disk sale status.
+                     * 获取<P>Cloud block storage (cbs) saleable state.</p>.
+                     * @return DiskSalesState <P>Cloud block storage (cbs) saleable state.</p>.
                      * 
                      */
                     std::string GetDiskSalesState() const;
 
                     /**
-                     * 设置Cloud disk sale status.
-                     * @param _diskSalesState Cloud disk sale status.
+                     * 设置<P>Cloud block storage (cbs) saleable state.</p>.
+                     * @param _diskSalesState <P>Cloud block storage (cbs) saleable state.</p>.
                      * 
                      */
                     void SetDiskSalesState(const std::string& _diskSalesState);
@@ -126,15 +110,15 @@ namespace TencentCloud
                     bool DiskSalesStateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum cloud disk size.
-                     * @return MaxDiskSize Maximum cloud disk size.
+                     * 获取<p>Maximum CBS size.</p><p>unit: GB</p>.
+                     * @return MaxDiskSize <p>Maximum CBS size.</p><p>unit: GB</p>.
                      * 
                      */
                     int64_t GetMaxDiskSize() const;
 
                     /**
-                     * 设置Maximum cloud disk size.
-                     * @param _maxDiskSize Maximum cloud disk size.
+                     * 设置<p>Maximum CBS size.</p><p>unit: GB</p>.
+                     * @param _maxDiskSize <p>Maximum CBS size.</p><p>unit: GB</p>.
                      * 
                      */
                     void SetMaxDiskSize(const int64_t& _maxDiskSize);
@@ -147,15 +131,15 @@ namespace TencentCloud
                     bool MaxDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum cloud disk size.
-                     * @return MinDiskSize Minimum cloud disk size.
+                     * 获取<p>Minimum CBS disk size.</p><p>unit: GB</p>.
+                     * @return MinDiskSize <p>Minimum CBS disk size.</p><p>unit: GB</p>.
                      * 
                      */
                     int64_t GetMinDiskSize() const;
 
                     /**
-                     * 设置Minimum cloud disk size.
-                     * @param _minDiskSize Minimum cloud disk size.
+                     * 设置<p>Minimum CBS disk size.</p><p>unit: GB</p>.
+                     * @param _minDiskSize <p>Minimum CBS disk size.</p><p>unit: GB</p>.
                      * 
                      */
                     void SetMinDiskSize(const int64_t& _minDiskSize);
@@ -168,15 +152,15 @@ namespace TencentCloud
                     bool MinDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk increment.
-                     * @return DiskStepSize Cloud disk increment.
+                     * 获取<p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
+                     * @return DiskStepSize <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
                      * 
                      */
                     int64_t GetDiskStepSize() const;
 
                     /**
-                     * 设置Cloud disk increment.
-                     * @param _diskStepSize Cloud disk increment.
+                     * 设置<p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
+                     * @param _diskStepSize <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
                      * 
                      */
                     void SetDiskStepSize(const int64_t& _diskStepSize);
@@ -191,41 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone.
+                     * <P>Availability zone.</p>.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+                     * <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Cloud disk sale status.
+                     * <P>Cloud block storage (cbs) saleable state.</p>.
                      */
                     std::string m_diskSalesState;
                     bool m_diskSalesStateHasBeenSet;
 
                     /**
-                     * Maximum cloud disk size.
+                     * <p>Maximum CBS size.</p><p>unit: GB</p>.
                      */
                     int64_t m_maxDiskSize;
                     bool m_maxDiskSizeHasBeenSet;
 
                     /**
-                     * Minimum cloud disk size.
+                     * <p>Minimum CBS disk size.</p><p>unit: GB</p>.
                      */
                     int64_t m_minDiskSize;
                     bool m_minDiskSizeHasBeenSet;
 
                     /**
-                     * Cloud disk increment.
+                     * <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
                      */
                     int64_t m_diskStepSize;
                     bool m_diskStepSizeHasBeenSet;

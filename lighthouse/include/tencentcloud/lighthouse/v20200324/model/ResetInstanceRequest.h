@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lighthouse/v20200324/model/DockerContainerConfiguration.h>
 
 
 namespace TencentCloud
@@ -84,6 +85,27 @@ namespace TencentCloud
                      */
                     bool BlueprintIdHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Containers 
+                     * 
+                     */
+                    std::vector<DockerContainerConfiguration> GetContainers() const;
+
+                    /**
+                     * 设置
+                     * @param _containers 
+                     * 
+                     */
+                    void SetContainers(const std::vector<DockerContainerConfiguration>& _containers);
+
+                    /**
+                     * 判断参数 Containers 是否已赋值
+                     * @return Containers 是否已赋值
+                     * 
+                     */
+                    bool ContainersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +119,12 @@ namespace TencentCloud
                      */
                     std::string m_blueprintId;
                     bool m_blueprintIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<DockerContainerConfiguration> m_containers;
+                    bool m_containersHasBeenSet;
 
                 };
             }
