@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of cloud disk IDs required to be returned.
-                     * @return DiskIds List of cloud disk IDs required to be returned.
+                     * 获取List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @return DiskIds List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置List of cloud disk IDs required to be returned.
-                     * @param _diskIds List of cloud disk IDs required to be returned.
+                     * 设置List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @param _diskIds List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of cloud disk IDs required to be returned.
+                     * List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;

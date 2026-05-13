@@ -88,27 +88,6 @@ namespace TencentCloud
                     bool SpecHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes. Value range: 2–20.
-                     * @return NodeCount Number of nodes. Value range: 2–20.
-                     * 
-                     */
-                    int64_t GetNodeCount() const;
-
-                    /**
-                     * 设置Number of nodes. Value range: 2–20.
-                     * @param _nodeCount Number of nodes. Value range: 2–20.
-                     * 
-                     */
-                    void SetNodeCount(const int64_t& _nodeCount);
-
-                    /**
-                     * 判断参数 NodeCount 是否已赋值
-                     * @return NodeCount 是否已赋值
-                     * 
-                     */
-                    bool NodeCountHasBeenSet() const;
-
-                    /**
                      * 获取Single-node storage space, in GB. The minimum space is 200 GB.
                      * @return StorageSize Single-node storage space, in GB. The minimum space is 200 GB.
                      * 
@@ -191,6 +170,48 @@ namespace TencentCloud
                      * 
                      */
                     bool TimeSpanHasBeenSet() const;
+
+                    /**
+                     * 获取Node count, required when creating a dedicated cluster
+                     * @return NodeCount Node count, required when creating a dedicated cluster
+                     * 
+                     */
+                    int64_t GetNodeCount() const;
+
+                    /**
+                     * 设置Node count, required when creating a dedicated cluster
+                     * @param _nodeCount Node count, required when creating a dedicated cluster
+                     * 
+                     */
+                    void SetNodeCount(const int64_t& _nodeCount);
+
+                    /**
+                     * 判断参数 NodeCount 是否已赋值
+                     * @return NodeCount 是否已赋值
+                     * 
+                     */
+                    bool NodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+                     * @return GeneralSkuCode Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+                     * 
+                     */
+                    std::string GetGeneralSkuCode() const;
+
+                    /**
+                     * 设置Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+                     * @param _generalSkuCode Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetGeneralSkuCode(const std::string& _generalSkuCode);
+
+                    /**
+                     * 判断参数 GeneralSkuCode 是否已赋值
+                     * @return GeneralSkuCode 是否已赋值
+                     * 
+                     */
+                    bool GeneralSkuCodeHasBeenSet() const;
 
                     /**
                      * 获取Whether it is used for cloud migration. The default value is false.
@@ -312,12 +333,6 @@ namespace TencentCloud
                     bool m_specHasBeenSet;
 
                     /**
-                     * Number of nodes. Value range: 2–20.
-                     */
-                    int64_t m_nodeCount;
-                    bool m_nodeCountHasBeenSet;
-
-                    /**
                      * Single-node storage space, in GB. The minimum space is 200 GB.
                      */
                     int64_t m_storageSize;
@@ -340,6 +355,18 @@ namespace TencentCloud
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
+
+                    /**
+                     * Node count, required when creating a dedicated cluster
+                     */
+                    int64_t m_nodeCount;
+                    bool m_nodeCountHasBeenSet;
+
+                    /**
+                     * Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+                     */
+                    std::string m_generalSkuCode;
+                    bool m_generalSkuCodeHasBeenSet;
 
                     /**
                      * Whether it is used for cloud migration. The default value is false.

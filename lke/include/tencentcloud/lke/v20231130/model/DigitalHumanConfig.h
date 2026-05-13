@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Digital Human Configuration
+                * 
                 */
                 class DigitalHumanConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Digital Human Asset key
-                     * @return AssetKey Digital Human Asset key
+                     * 获取
+                     * @return AssetKey 
                      * 
                      */
                     std::string GetAssetKey() const;
 
                     /**
-                     * 设置Digital Human Asset key
-                     * @param _assetKey Digital Human Asset key
+                     * 设置
+                     * @param _assetKey 
                      * 
                      */
                     void SetAssetKey(const std::string& _assetKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AssetKeyHasBeenSet() const;
 
                     /**
-                     * 获取Digital Human Name
-                     * @return Name Digital Human Name
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Digital Human Name
-                     * @param _name Digital Human Name
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Image
-                     * @return Avatar Image
+                     * 获取
+                     * @return Avatar 
                      * 
                      */
                     std::string GetAvatar() const;
 
                     /**
-                     * 设置Image
-                     * @param _avatar Image
+                     * 设置
+                     * @param _avatar 
                      * 
                      */
                     void SetAvatar(const std::string& _avatar);
@@ -109,25 +109,52 @@ namespace TencentCloud
                      */
                     bool AvatarHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return PreviewUrl 
+                     * 
+                     */
+                    std::string GetPreviewUrl() const;
+
+                    /**
+                     * 设置
+                     * @param _previewUrl 
+                     * 
+                     */
+                    void SetPreviewUrl(const std::string& _previewUrl);
+
+                    /**
+                     * 判断参数 PreviewUrl 是否已赋值
+                     * @return PreviewUrl 是否已赋值
+                     * 
+                     */
+                    bool PreviewUrlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Digital Human Asset key
+                     * 
                      */
                     std::string m_assetKey;
                     bool m_assetKeyHasBeenSet;
 
                     /**
-                     * Digital Human Name
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Image
+                     * 
                      */
                     std::string m_avatar;
                     bool m_avatarHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_previewUrl;
+                    bool m_previewUrlHasBeenSet;
 
                 };
             }

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The offset value
-                     * @return Offset The offset value
+                     * 获取<p>Offset</p>
+                     * @return Offset <p>Offset</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The offset value
-                     * @param _offset The offset value
+                     * 设置<p>Offset</p>
+                     * @param _offset <p>Offset</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of results returned
-                     * @return Limit The maximum number of results returned
+                     * 获取<p>Return the maximum number of results</p>
+                     * @return Limit <p>Return the maximum number of results</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of results returned
-                     * @param _limit The maximum number of results returned
+                     * 设置<p>Return the maximum number of results</p>
+                     * @param _limit <p>Return the maximum number of results</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Business field, which can be ignored.
-                     * @return Business Business field, which can be ignored.
+                     * 获取<p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+                     * @return Business <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
                      * 
                      */
                     std::string GetBusiness() const;
 
                     /**
-                     * 设置Business field, which can be ignored.
-                     * @param _business Business field, which can be ignored.
+                     * 设置<p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+                     * @param _business <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
                      * 
                      */
                     void SetBusiness(const std::string& _business);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool BusinessHasBeenSet() const;
 
                     /**
-                     * 获取CDC business field, which can be ignored.
-                     * @return CdcId CDC business field, which can be ignored.
+                     * 获取<p>cdc dedicated cluster business field, can be ignored</p>
+                     * @return CdcId <p>cdc dedicated cluster business field, can be ignored</p>
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置CDC business field, which can be ignored.
-                     * @param _cdcId CDC business field, which can be ignored.
+                     * 设置<p>cdc dedicated cluster business field, can be ignored</p>
+                     * @param _cdcId <p>cdc dedicated cluster business field, can be ignored</p>
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The offset value
+                     * <p>Offset</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The maximum number of results returned
+                     * <p>Return the maximum number of results</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Business field, which can be ignored.
+                     * <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
                      */
                     std::string m_business;
                     bool m_businessHasBeenSet;
 
                     /**
-                     * CDC business field, which can be ignored.
+                     * <p>cdc dedicated cluster business field, can be ignored</p>
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;

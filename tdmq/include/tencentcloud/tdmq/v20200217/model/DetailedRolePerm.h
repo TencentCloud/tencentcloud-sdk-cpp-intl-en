@@ -110,15 +110,27 @@ namespace TencentCloud
                     bool PermReadHasBeenSet() const;
 
                     /**
-                     * 获取Authorized resource type (Topic: topic; Group: consumer group).
-                     * @return ResourceType Authorized resource type (Topic: topic; Group: consumer group).
+                     * 获取Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
+                     * @return ResourceType Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Authorized resource type (Topic: topic; Group: consumer group).
-                     * @param _resourceType Authorized resource type (Topic: topic; Group: consumer group).
+                     * 设置Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
+                     * @param _resourceType Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -172,7 +184,10 @@ namespace TencentCloud
                     bool m_permReadHasBeenSet;
 
                     /**
-                     * Authorized resource type (Topic: topic; Group: consumer group).
+                     * Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

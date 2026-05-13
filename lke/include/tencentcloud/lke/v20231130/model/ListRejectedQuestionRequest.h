@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lke/v20231130/model/FilterItem.h>
 
 
 namespace TencentCloud
@@ -142,6 +143,27 @@ namespace TencentCloud
                      */
                     bool QueryHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+                     * @return Filters <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+                     * 
+                     */
+                    std::vector<FilterItem> GetFilters() const;
+
+                    /**
+                     * 设置<p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+                     * @param _filters <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+                     * 
+                     */
+                    void SetFilters(const std::vector<FilterItem>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -171,6 +193,12 @@ namespace TencentCloud
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
+
+                    /**
+                     * <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+                     */
+                    std::vector<FilterItem> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

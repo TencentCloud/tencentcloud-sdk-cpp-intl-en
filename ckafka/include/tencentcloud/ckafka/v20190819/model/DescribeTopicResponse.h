@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned result.
-                     * @return Result Returned result.
+                     * 获取<p>Returned result</p>
+                     * @return Result <p>Returned result</p>
                      * 
                      */
                     TopicResult GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned result.
+                     * <p>Returned result</p>
                      */
                     TopicResult m_result;
                     bool m_resultHasBeenSet;

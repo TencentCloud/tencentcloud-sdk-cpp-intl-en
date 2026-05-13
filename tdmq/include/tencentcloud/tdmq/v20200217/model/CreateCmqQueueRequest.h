@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return QueueName Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
+                     * @return QueueName Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _queueName Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
+                     * @param _queueName Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -403,7 +403,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;

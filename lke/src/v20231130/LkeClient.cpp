@@ -240,56 +240,6 @@ LkeClient::CreateAttributeLabelOutcomeCallable LkeClient::CreateAttributeLabelCa
     return prom->get_future();
 }
 
-LkeClient::CreateCorpOutcome LkeClient::CreateCorp(const CreateCorpRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateCorp");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateCorpResponse rsp = CreateCorpResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateCorpOutcome(rsp);
-        else
-            return CreateCorpOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateCorpOutcome(outcome.GetError());
-    }
-}
-
-void LkeClient::CreateCorpAsync(const CreateCorpRequest& request, const CreateCorpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const CreateCorpRequest&;
-    using Resp = CreateCorpResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "CreateCorp", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LkeClient::CreateCorpOutcomeCallable LkeClient::CreateCorpCallable(const CreateCorpRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<CreateCorpOutcome>>();
-    CreateCorpAsync(
-    request,
-    [prom](
-        const LkeClient*,
-        const CreateCorpRequest&,
-        CreateCorpOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 LkeClient::CreateDocCateOutcome LkeClient::CreateDocCate(const CreateDocCateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateDocCate");
@@ -432,56 +382,6 @@ LkeClient::CreateQACateOutcomeCallable LkeClient::CreateQACateCallable(const Cre
         const LkeClient*,
         const CreateQACateRequest&,
         CreateQACateOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-LkeClient::CreateReconstructDocumentFlowOutcome LkeClient::CreateReconstructDocumentFlow(const CreateReconstructDocumentFlowRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateReconstructDocumentFlow");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateReconstructDocumentFlowResponse rsp = CreateReconstructDocumentFlowResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateReconstructDocumentFlowOutcome(rsp);
-        else
-            return CreateReconstructDocumentFlowOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateReconstructDocumentFlowOutcome(outcome.GetError());
-    }
-}
-
-void LkeClient::CreateReconstructDocumentFlowAsync(const CreateReconstructDocumentFlowRequest& request, const CreateReconstructDocumentFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const CreateReconstructDocumentFlowRequest&;
-    using Resp = CreateReconstructDocumentFlowResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "CreateReconstructDocumentFlow", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LkeClient::CreateReconstructDocumentFlowOutcomeCallable LkeClient::CreateReconstructDocumentFlowCallable(const CreateReconstructDocumentFlowRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<CreateReconstructDocumentFlowOutcome>>();
-    CreateReconstructDocumentFlowAsync(
-    request,
-    [prom](
-        const LkeClient*,
-        const CreateReconstructDocumentFlowRequest&,
-        CreateReconstructDocumentFlowOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1182,56 +1082,6 @@ LkeClient::DescribeConcurrencyUsageGraphOutcomeCallable LkeClient::DescribeConcu
         const LkeClient*,
         const DescribeConcurrencyUsageGraphRequest&,
         DescribeConcurrencyUsageGraphOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-LkeClient::DescribeCorpOutcome LkeClient::DescribeCorp(const DescribeCorpRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeCorp");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeCorpResponse rsp = DescribeCorpResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeCorpOutcome(rsp);
-        else
-            return DescribeCorpOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeCorpOutcome(outcome.GetError());
-    }
-}
-
-void LkeClient::DescribeCorpAsync(const DescribeCorpRequest& request, const DescribeCorpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeCorpRequest&;
-    using Resp = DescribeCorpResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeCorp", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LkeClient::DescribeCorpOutcomeCallable LkeClient::DescribeCorpCallable(const DescribeCorpRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeCorpOutcome>>();
-    DescribeCorpAsync(
-    request,
-    [prom](
-        const LkeClient*,
-        const DescribeCorpRequest&,
-        DescribeCorpOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2440,56 +2290,6 @@ LkeClient::GetMsgRecordOutcomeCallable LkeClient::GetMsgRecordCallable(const Get
     return prom->get_future();
 }
 
-LkeClient::GetReconstructDocumentResultOutcome LkeClient::GetReconstructDocumentResult(const GetReconstructDocumentResultRequest &request)
-{
-    auto outcome = MakeRequest(request, "GetReconstructDocumentResult");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        GetReconstructDocumentResultResponse rsp = GetReconstructDocumentResultResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return GetReconstructDocumentResultOutcome(rsp);
-        else
-            return GetReconstructDocumentResultOutcome(o.GetError());
-    }
-    else
-    {
-        return GetReconstructDocumentResultOutcome(outcome.GetError());
-    }
-}
-
-void LkeClient::GetReconstructDocumentResultAsync(const GetReconstructDocumentResultRequest& request, const GetReconstructDocumentResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const GetReconstructDocumentResultRequest&;
-    using Resp = GetReconstructDocumentResultResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "GetReconstructDocumentResult", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LkeClient::GetReconstructDocumentResultOutcomeCallable LkeClient::GetReconstructDocumentResultCallable(const GetReconstructDocumentResultRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<GetReconstructDocumentResultOutcome>>();
-    GetReconstructDocumentResultAsync(
-    request,
-    [prom](
-        const LkeClient*,
-        const GetReconstructDocumentResultRequest&,
-        GetReconstructDocumentResultOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 LkeClient::GetTaskStatusOutcome LkeClient::GetTaskStatus(const GetTaskStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "GetTaskStatus");
@@ -2740,6 +2540,56 @@ LkeClient::IgnoreUnsatisfiedReplyOutcomeCallable LkeClient::IgnoreUnsatisfiedRep
     return prom->get_future();
 }
 
+LkeClient::IsTransferIntentOutcome LkeClient::IsTransferIntent(const IsTransferIntentRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsTransferIntent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsTransferIntentResponse rsp = IsTransferIntentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsTransferIntentOutcome(rsp);
+        else
+            return IsTransferIntentOutcome(o.GetError());
+    }
+    else
+    {
+        return IsTransferIntentOutcome(outcome.GetError());
+    }
+}
+
+void LkeClient::IsTransferIntentAsync(const IsTransferIntentRequest& request, const IsTransferIntentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const IsTransferIntentRequest&;
+    using Resp = IsTransferIntentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "IsTransferIntent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LkeClient::IsTransferIntentOutcomeCallable LkeClient::IsTransferIntentCallable(const IsTransferIntentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<IsTransferIntentOutcome>>();
+    IsTransferIntentAsync(
+    request,
+    [prom](
+        const LkeClient*,
+        const IsTransferIntentRequest&,
+        IsTransferIntentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LkeClient::ListAppOutcome LkeClient::ListApp(const ListAppRequest &request)
 {
     auto outcome = MakeRequest(request, "ListApp");
@@ -2782,56 +2632,6 @@ LkeClient::ListAppOutcomeCallable LkeClient::ListAppCallable(const ListAppReques
         const LkeClient*,
         const ListAppRequest&,
         ListAppOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-LkeClient::ListAppCategoryOutcome LkeClient::ListAppCategory(const ListAppCategoryRequest &request)
-{
-    auto outcome = MakeRequest(request, "ListAppCategory");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ListAppCategoryResponse rsp = ListAppCategoryResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ListAppCategoryOutcome(rsp);
-        else
-            return ListAppCategoryOutcome(o.GetError());
-    }
-    else
-    {
-        return ListAppCategoryOutcome(outcome.GetError());
-    }
-}
-
-void LkeClient::ListAppCategoryAsync(const ListAppCategoryRequest& request, const ListAppCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const ListAppCategoryRequest&;
-    using Resp = ListAppCategoryResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "ListAppCategory", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-LkeClient::ListAppCategoryOutcomeCallable LkeClient::ListAppCategoryCallable(const ListAppCategoryRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<ListAppCategoryOutcome>>();
-    ListAppCategoryAsync(
-    request,
-    [prom](
-        const LkeClient*,
-        const ListAppCategoryRequest&,
-        ListAppCategoryOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -235,6 +235,27 @@ namespace TencentCloud
                      */
                     bool AckTimeOutHasBeenSet() const;
 
+                    /**
+                     * 获取defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * 
+                     */
+                    std::string GetDelayMessagePolicy() const;
+
+                    /**
+                     * 设置defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * @param _delayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * 
+                     */
+                    void SetDelayMessagePolicy(const std::string& _delayMessagePolicy);
+
+                    /**
+                     * 判断参数 DelayMessagePolicy 是否已赋值
+                     * @return DelayMessagePolicy 是否已赋值
+                     * 
+                     */
+                    bool DelayMessagePolicyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -291,6 +312,12 @@ namespace TencentCloud
                      */
                     int64_t m_ackTimeOut;
                     bool m_ackTimeOutHasBeenSet;
+
+                    /**
+                     * defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     */
+                    std::string m_delayMessagePolicy;
+                    bool m_delayMessagePolicyHasBeenSet;
 
                 };
             }

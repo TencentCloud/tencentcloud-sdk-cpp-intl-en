@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
-                     * @return DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+                     * 获取Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
+                     * @return DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
                      * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
-                     * 设置Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
-                     * @param _databaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+                     * 设置Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
+                     * @param _databaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
                      * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+                     * Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
                      */
                     std::string m_databaseName;
                     bool m_databaseNameHasBeenSet;

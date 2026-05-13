@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+                     * @return Days Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
                      * 
                      */
                     uint64_t GetDays() const;
 
                     /**
-                     * 设置Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+                     * @param _days Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
                      * 
                      */
                     void SetDays(const uint64_t& _days);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DaysHasBeenSet() const;
 
                     /**
-                     * 获取Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+                     * @return Weeks Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
                      * 
                      */
                     uint64_t GetWeeks() const;
 
                     /**
-                     * 设置Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+                     * @param _weeks Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
                      * 
                      */
                     void SetWeeks(const uint64_t& _weeks);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WeeksHasBeenSet() const;
 
                     /**
-                     * 获取Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+                     * @return Months Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
                      * 
                      */
                     uint64_t GetMonths() const;
 
                     /**
-                     * 设置Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+                     * @param _months Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
                      * 
                      */
                     void SetMonths(const uint64_t& _months);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonthsHasBeenSet() const;
 
                     /**
-                     * 获取Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
+                     * @return Years Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
                      * 
                      */
                     uint64_t GetYears() const;
 
                     /**
-                     * 设置Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
+                     * @param _years Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
                      * 
                      */
                     void SetYears(const uint64_t& _years);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
                      */
                     uint64_t m_days;
                     bool m_daysHasBeenSet;
 
                     /**
-                     * Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
                      */
                     uint64_t m_weeks;
                     bool m_weeksHasBeenSet;
 
                     /**
-                     * Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
                      */
                     uint64_t m_months;
                     bool m_monthsHasBeenSet;
 
                     /**
-                     * Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
                      */
                     uint64_t m_years;
                     bool m_yearsHasBeenSet;

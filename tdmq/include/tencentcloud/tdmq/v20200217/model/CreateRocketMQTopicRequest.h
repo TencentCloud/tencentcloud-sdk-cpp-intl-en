@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Topic namespace. Currently, you can create topics only in one single namespace.
-                     * @return Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+                     * 获取Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
+                     * @return Namespaces Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
                      * 
                      */
                     std::vector<std::string> GetNamespaces() const;
 
                     /**
-                     * 设置Topic namespace. Currently, you can create topics only in one single namespace.
-                     * @param _namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+                     * 设置Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
+                     * @param _namespaces Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
                      * 
                      */
                     void SetNamespaces(const std::vector<std::string>& _namespaces);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Topic namespace. Currently, you can create topics only in one single namespace.
+                     * Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
                      */
                     std::vector<std::string> m_namespaces;
                     bool m_namespacesHasBeenSet;

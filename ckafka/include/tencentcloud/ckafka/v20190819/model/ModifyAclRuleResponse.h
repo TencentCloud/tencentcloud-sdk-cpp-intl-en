@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique key of a rule
-                     * @return Result Unique key of a rule
+                     * 获取<p>Unique representation Key of the rule</p>
+                     * @return Result <p>Unique representation Key of the rule</p>
                      * 
                      */
                     int64_t GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique key of a rule
+                     * <p>Unique representation Key of the rule</p>
                      */
                     int64_t m_result;
                     bool m_resultHasBeenSet;

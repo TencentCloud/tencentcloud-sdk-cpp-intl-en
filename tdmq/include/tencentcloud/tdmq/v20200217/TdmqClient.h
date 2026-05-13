@@ -29,8 +29,6 @@
 #include <tencentcloud/tdmq/v20200217/model/ClearCmqQueueResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ClearCmqSubscriptionFilterTagsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ClearCmqSubscriptionFilterTagsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/CreateClusterRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/CreateClusterResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateCmqQueueRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateCmqQueueResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateCmqSubscribeRequest.h>
@@ -57,12 +55,16 @@
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQEnvironmentRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupV2Request.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupV2Response.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQRoleRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQRoleResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicV2Request.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQTopicV2Response.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQVipInstanceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQVipInstanceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRoleRequest.h>
@@ -179,6 +181,8 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQEnvironmentRolesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQEnvironmentRolesResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGeneralSKUsRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGeneralSKUsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQMsgRequest.h>
@@ -310,9 +314,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ClearCmqSubscriptionFilterTagsResponse> ClearCmqSubscriptionFilterTagsOutcome;
                 typedef std::future<ClearCmqSubscriptionFilterTagsOutcome> ClearCmqSubscriptionFilterTagsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ClearCmqSubscriptionFilterTagsRequest&, ClearCmqSubscriptionFilterTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearCmqSubscriptionFilterTagsAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateClusterResponse> CreateClusterOutcome;
-                typedef std::future<CreateClusterOutcome> CreateClusterOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::CreateClusterRequest&, CreateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCmqQueueResponse> CreateCmqQueueOutcome;
                 typedef std::future<CreateCmqQueueOutcome> CreateCmqQueueOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateCmqQueueRequest&, CreateCmqQueueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCmqQueueAsyncHandler;
@@ -352,6 +353,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRocketMQGroupResponse> CreateRocketMQGroupOutcome;
                 typedef std::future<CreateRocketMQGroupOutcome> CreateRocketMQGroupOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQGroupRequest&, CreateRocketMQGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQGroupV2Response> CreateRocketMQGroupV2Outcome;
+                typedef std::future<CreateRocketMQGroupV2Outcome> CreateRocketMQGroupV2OutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQGroupV2Request&, CreateRocketMQGroupV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQGroupV2AsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQNamespaceResponse> CreateRocketMQNamespaceOutcome;
                 typedef std::future<CreateRocketMQNamespaceOutcome> CreateRocketMQNamespaceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQNamespaceRequest&, CreateRocketMQNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQNamespaceAsyncHandler;
@@ -361,6 +365,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRocketMQTopicResponse> CreateRocketMQTopicOutcome;
                 typedef std::future<CreateRocketMQTopicOutcome> CreateRocketMQTopicOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQTopicRequest&, CreateRocketMQTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQTopicV2Response> CreateRocketMQTopicV2Outcome;
+                typedef std::future<CreateRocketMQTopicV2Outcome> CreateRocketMQTopicV2OutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQTopicV2Request&, CreateRocketMQTopicV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQTopicV2AsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQVipInstanceResponse> CreateRocketMQVipInstanceOutcome;
                 typedef std::future<CreateRocketMQVipInstanceOutcome> CreateRocketMQVipInstanceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQVipInstanceRequest&, CreateRocketMQVipInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQVipInstanceAsyncHandler;
@@ -535,6 +542,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRocketMQEnvironmentRolesResponse> DescribeRocketMQEnvironmentRolesOutcome;
                 typedef std::future<DescribeRocketMQEnvironmentRolesOutcome> DescribeRocketMQEnvironmentRolesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQEnvironmentRolesRequest&, DescribeRocketMQEnvironmentRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQEnvironmentRolesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQGeneralSKUsResponse> DescribeRocketMQGeneralSKUsOutcome;
+                typedef std::future<DescribeRocketMQGeneralSKUsOutcome> DescribeRocketMQGeneralSKUsOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQGeneralSKUsRequest&, DescribeRocketMQGeneralSKUsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQGeneralSKUsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQGroupsResponse> DescribeRocketMQGroupsOutcome;
                 typedef std::future<DescribeRocketMQGroupsOutcome> DescribeRocketMQGroupsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQGroupsRequest&, DescribeRocketMQGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQGroupsAsyncHandler;
@@ -728,15 +738,6 @@ namespace TencentCloud
                 ClearCmqSubscriptionFilterTagsOutcomeCallable ClearCmqSubscriptionFilterTagsCallable(const Model::ClearCmqSubscriptionFilterTagsRequest& request);
 
                 /**
-                 *This API is used to create a cluster.
-                 * @param req CreateClusterRequest
-                 * @return CreateClusterOutcome
-                 */
-                CreateClusterOutcome CreateCluster(const Model::CreateClusterRequest &request);
-                void CreateClusterAsync(const Model::CreateClusterRequest& request, const CreateClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateClusterOutcomeCallable CreateClusterCallable(const Model::CreateClusterRequest& request);
-
-                /**
                  *This API is used to create a CMQ queue.
                  * @param req CreateCmqQueueRequest
                  * @return CreateCmqQueueOutcome
@@ -827,7 +828,8 @@ namespace TencentCloud
                 CreateRabbitMQVirtualHostOutcomeCallable CreateRabbitMQVirtualHostCallable(const Model::CreateRabbitMQVirtualHostRequest& request);
 
                 /**
-                 *This API is used to create a RocketMQ cluster.
+                 *Create a RocketMQ cluster.
+This API is applicable to clusters: 4.x virtual cluster. For 4.x dedicated or generic clusters, refer to the API documentation [CreateRocketMQVipInstance](https://www.tencentcloud.com/document/api/1179/95721?from_cn_redirect=1). For 5.x clusters, refer to the API documentation [CreateInstance](https://www.tencentcloud.com/document/api/1493/97868?from_cn_redirect=1).
                  * @param req CreateRocketMQClusterRequest
                  * @return CreateRocketMQClusterOutcome
                  */
@@ -836,7 +838,8 @@ namespace TencentCloud
                 CreateRocketMQClusterOutcomeCallable CreateRocketMQClusterCallable(const Model::CreateRocketMQClusterRequest& request);
 
                 /**
-                 *Creates environment role authorization
+                 *Grant access by role.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateRole](https://www.tencentcloud.com/document/api/1493/98864?from_cn_redirect=1).
                  * @param req CreateRocketMQEnvironmentRoleRequest
                  * @return CreateRocketMQEnvironmentRoleOutcome
                  */
@@ -845,7 +848,8 @@ namespace TencentCloud
                 CreateRocketMQEnvironmentRoleOutcomeCallable CreateRocketMQEnvironmentRoleCallable(const Model::CreateRocketMQEnvironmentRoleRequest& request);
 
                 /**
-                 *This API is used to create a RocketMQ consumer group.
+                 *This API is used to create a RocketMQ consumption group.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateConsumerGroup](https://www.tencentcloud.com/document/api/1493/97943?from_cn_redirect=1) to create a consumer group.
                  * @param req CreateRocketMQGroupRequest
                  * @return CreateRocketMQGroupOutcome
                  */
@@ -854,7 +858,18 @@ namespace TencentCloud
                 CreateRocketMQGroupOutcomeCallable CreateRocketMQGroupCallable(const Model::CreateRocketMQGroupRequest& request);
 
                 /**
+                 *This API is used to create a RocketMQ consumption group.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateConsumerGroup](https://www.tencentcloud.com/document/api/1493/97943?from_cn_redirect=1) to create a consumer group.
+                 * @param req CreateRocketMQGroupV2Request
+                 * @return CreateRocketMQGroupV2Outcome
+                 */
+                CreateRocketMQGroupV2Outcome CreateRocketMQGroupV2(const Model::CreateRocketMQGroupV2Request &request);
+                void CreateRocketMQGroupV2Async(const Model::CreateRocketMQGroupV2Request& request, const CreateRocketMQGroupV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQGroupV2OutcomeCallable CreateRocketMQGroupV2Callable(const Model::CreateRocketMQGroupV2Request& request);
+
+                /**
                  *This API is used to create a RocketMQ namespace.
+This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
                  * @param req CreateRocketMQNamespaceRequest
                  * @return CreateRocketMQNamespaceOutcome
                  */
@@ -863,7 +878,8 @@ namespace TencentCloud
                 CreateRocketMQNamespaceOutcomeCallable CreateRocketMQNamespaceCallable(const Model::CreateRocketMQNamespaceRequest& request);
 
                 /**
-                 *This API is used to create a role.
+                 *Create a role.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateRole](https://www.tencentcloud.com/document/api/1493/98864?from_cn_redirect=1).
                  * @param req CreateRocketMQRoleRequest
                  * @return CreateRocketMQRoleOutcome
                  */
@@ -872,7 +888,8 @@ namespace TencentCloud
                 CreateRocketMQRoleOutcomeCallable CreateRocketMQRoleCallable(const Model::CreateRocketMQRoleRequest& request);
 
                 /**
-                 *This API is used to create a RocketMQ topic.
+                 *Create RocketMQ topics in batches.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateTopic](https://www.tencentcloud.com/document/api/1493/97947?from_cn_redirect=1).
                  * @param req CreateRocketMQTopicRequest
                  * @return CreateRocketMQTopicOutcome
                  */
@@ -881,7 +898,18 @@ namespace TencentCloud
                 CreateRocketMQTopicOutcomeCallable CreateRocketMQTopicCallable(const Model::CreateRocketMQTopicRequest& request);
 
                 /**
-                 *This API is used to create a RocketMQ Exclusive Edition instance.
+                 *This API is used to create a RocketMQ topic.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateTopic](https://www.tencentcloud.com/document/api/1493/97947?from_cn_redirect=1).
+                 * @param req CreateRocketMQTopicV2Request
+                 * @return CreateRocketMQTopicV2Outcome
+                 */
+                CreateRocketMQTopicV2Outcome CreateRocketMQTopicV2(const Model::CreateRocketMQTopicV2Request &request);
+                void CreateRocketMQTopicV2Async(const Model::CreateRocketMQTopicV2Request& request, const CreateRocketMQTopicV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQTopicV2OutcomeCallable CreateRocketMQTopicV2Callable(const Model::CreateRocketMQTopicV2Request& request);
+
+                /**
+                 *This API is used to create a RocketMQ 4.x cluster.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateInstance](https://www.tencentcloud.com/document/api/1493/97868?from_cn_redirect=1).
                  * @param req CreateRocketMQVipInstanceRequest
                  * @return CreateRocketMQVipInstanceOutcome
                  */
@@ -1026,6 +1054,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to delete a RocketMQ cluster.
+This API is applicable to clusters: 4.x virtual cluster. For 4.x dedicated or generic clusters, refer to the API documentation [DeleteRocketMQVipInstance](https://www.tencentcloud.com/document/api/1179/95802?from_cn_redirect=1). For 5.x clusters, refer to [DeleteInstance](https://www.tencentcloud.com/document/product/1493/97867?from_cn_redirect=1).
                  * @param req DeleteRocketMQClusterRequest
                  * @return DeleteRocketMQClusterOutcome
                  */
@@ -1034,7 +1063,8 @@ namespace TencentCloud
                 DeleteRocketMQClusterOutcomeCallable DeleteRocketMQClusterCallable(const Model::DeleteRocketMQClusterRequest& request);
 
                 /**
-                 *Deletes environment role authorization
+                 *Delete role authorizations in batches.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DeleteRole](https://www.tencentcloud.com/document/api/1493/98863?from_cn_redirect=1).
                  * @param req DeleteRocketMQEnvironmentRolesRequest
                  * @return DeleteRocketMQEnvironmentRolesOutcome
                  */
@@ -1043,7 +1073,8 @@ namespace TencentCloud
                 DeleteRocketMQEnvironmentRolesOutcomeCallable DeleteRocketMQEnvironmentRolesCallable(const Model::DeleteRocketMQEnvironmentRolesRequest& request);
 
                 /**
-                 *This API is used to delete a RocketMQ consumer group.
+                 *This API is used to delete a RocketMQ consumption group.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DeleteConsumerGroup](https://www.tencentcloud.com/document/api/1493/97942?from_cn_redirect=1) to delete the consumer group.
                  * @param req DeleteRocketMQGroupRequest
                  * @return DeleteRocketMQGroupOutcome
                  */
@@ -1053,6 +1084,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to delete a RocketMQ namespace.
+This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
                  * @param req DeleteRocketMQNamespaceRequest
                  * @return DeleteRocketMQNamespaceOutcome
                  */
@@ -1061,7 +1093,8 @@ namespace TencentCloud
                 DeleteRocketMQNamespaceOutcomeCallable DeleteRocketMQNamespaceCallable(const Model::DeleteRocketMQNamespaceRequest& request);
 
                 /**
-                 *Deletes roles. Batch deletion is supported.
+                 *Delete roles in batches.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DeleteRole](https://www.tencentcloud.com/document/api/1493/98863?from_cn_redirect=1).
                  * @param req DeleteRocketMQRolesRequest
                  * @return DeleteRocketMQRolesOutcome
                  */
@@ -1070,7 +1103,8 @@ namespace TencentCloud
                 DeleteRocketMQRolesOutcomeCallable DeleteRocketMQRolesCallable(const Model::DeleteRocketMQRolesRequest& request);
 
                 /**
-                 *This API is used to delete a RocketMQ topic.
+                 *Delete a RocketMQ topic.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DeleteTopic](https://www.tencentcloud.com/document/api/1493/97946?from_cn_redirect=1).
                  * @param req DeleteRocketMQTopicRequest
                  * @return DeleteRocketMQTopicOutcome
                  */
@@ -1079,7 +1113,8 @@ namespace TencentCloud
                 DeleteRocketMQTopicOutcomeCallable DeleteRocketMQTopicCallable(const Model::DeleteRocketMQTopicRequest& request);
 
                 /**
-                 *This API is used to delete a RocketMQ Exclusive Edition instance.
+                 *This API is used to delete a RocketMQ dedicated or generic cluster.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DeleteInstance](https://www.tencentcloud.com/document/api/1493/97867?from_cn_redirect=1).
                  * @param req DeleteRocketMQVipInstanceRequest
                  * @return DeleteRocketMQVipInstanceOutcome
                  */
@@ -1241,7 +1276,7 @@ namespace TencentCloud
                 DescribeMsgOutcomeCallable DescribeMsgCallable(const Model::DescribeMsgRequest& request);
 
                 /**
-                 *Queries message trajectory
+                 *Query the message trace of a single message
                  * @param req DescribeMsgTraceRequest
                  * @return DescribeMsgTraceOutcome
                  */
@@ -1376,7 +1411,8 @@ namespace TencentCloud
                 DescribeRabbitMQVirtualHostOutcomeCallable DescribeRabbitMQVirtualHostCallable(const Model::DescribeRabbitMQVirtualHostRequest& request);
 
                 /**
-                 *This API is used to get the information of a specific RocketMQ cluster.
+                 *Query RocketMQ virtual cluster information.
+Current API applicable clusters: 4.x virtual cluster. For 4.x dedicated or generic clusters, see the REST API documentation for querying cluster information at [DescribeRocketMQVipInstanceDetail](https://www.tencentcloud.com/document/api/1179/86725?from_cn_redirect=1). For 5.x clusters, see the REST API documentation for querying cluster information at [DescribeInstance](https://www.tencentcloud.com/document/api/1493/97866?from_cn_redirect=1).
                  * @param req DescribeRocketMQClusterRequest
                  * @return DescribeRocketMQClusterOutcome
                  */
@@ -1385,7 +1421,8 @@ namespace TencentCloud
                 DescribeRocketMQClusterOutcomeCallable DescribeRocketMQClusterCallable(const Model::DescribeRocketMQClusterRequest& request);
 
                 /**
-                 *This API is used to get the list of RocketMQ clusters.
+                 *Query the RocketMQ virtual cluster list.
+This API is applicable to clusters: 4.x virtual cluster. For querying 5.x cluster list, see List API Documentation [DescribeInstanceList](https://www.tencentcloud.com/document/api/1493/96028?from_cn_redirect=1), or use [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) applicable to all cluster types.
                  * @param req DescribeRocketMQClustersRequest
                  * @return DescribeRocketMQClustersOutcome
                  */
@@ -1394,7 +1431,8 @@ namespace TencentCloud
                 DescribeRocketMQClustersOutcomeCallable DescribeRocketMQClustersCallable(const Model::DescribeRocketMQClustersRequest& request);
 
                 /**
-                 *Obtains the namespace role list
+                 *Query a role-based license list.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the List API Documentation [DescribeRoleList](https://www.tencentcloud.com/document/api/1493/98862?from_cn_redirect=1).
                  * @param req DescribeRocketMQEnvironmentRolesRequest
                  * @return DescribeRocketMQEnvironmentRolesOutcome
                  */
@@ -1403,7 +1441,18 @@ namespace TencentCloud
                 DescribeRocketMQEnvironmentRolesOutcomeCallable DescribeRocketMQEnvironmentRolesCallable(const Model::DescribeRocketMQEnvironmentRolesRequest& request);
 
                 /**
-                 *This API is used to get the list of RocketMQ consumer groups.
+                 *Query the sales specification of a generic cluster.
+This API is applicable to clusters: 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
+                 * @param req DescribeRocketMQGeneralSKUsRequest
+                 * @return DescribeRocketMQGeneralSKUsOutcome
+                 */
+                DescribeRocketMQGeneralSKUsOutcome DescribeRocketMQGeneralSKUs(const Model::DescribeRocketMQGeneralSKUsRequest &request);
+                void DescribeRocketMQGeneralSKUsAsync(const Model::DescribeRocketMQGeneralSKUsRequest& request, const DescribeRocketMQGeneralSKUsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQGeneralSKUsOutcomeCallable DescribeRocketMQGeneralSKUsCallable(const Model::DescribeRocketMQGeneralSKUsRequest& request);
+
+                /**
+                 *Query the RocketMQ consumer group list.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) to query the consumption group list.
                  * @param req DescribeRocketMQGroupsRequest
                  * @return DescribeRocketMQGroupsOutcome
                  */
@@ -1412,7 +1461,8 @@ namespace TencentCloud
                 DescribeRocketMQGroupsOutcomeCallable DescribeRocketMQGroupsCallable(const Model::DescribeRocketMQGroupsRequest& request);
 
                 /**
-                 *This API is used to query the TDMQ for RocketMQ message details.
+                 *Query RocketMQ message details.
+Current API applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, see the REST API documentation for query message details at [DescribeMessage](https://www.tencentcloud.com/document/api/1493/114594?from_cn_redirect=1).
                  * @param req DescribeRocketMQMsgRequest
                  * @return DescribeRocketMQMsgOutcome
                  */
@@ -1421,7 +1471,8 @@ namespace TencentCloud
                 DescribeRocketMQMsgOutcomeCallable DescribeRocketMQMsgCallable(const Model::DescribeRocketMQMsgRequest& request);
 
                 /**
-                 *Queries message trajectory
+                 *Query message trajectory.
+Current API applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, see the REST API documentation for query message trajectory at [DescribeMessageTrace](https://www.tencentcloud.com/document/api/1493/114302?from_cn_redirect=1).
                  * @param req DescribeRocketMQMsgTraceRequest
                  * @return DescribeRocketMQMsgTraceOutcome
                  */
@@ -1430,7 +1481,8 @@ namespace TencentCloud
                 DescribeRocketMQMsgTraceOutcomeCallable DescribeRocketMQMsgTraceCallable(const Model::DescribeRocketMQMsgTraceRequest& request);
 
                 /**
-                 *This API is used to get the list of RocketMQ namespaces.
+                 *Query the RocketMQ namespace list.
+This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
                  * @param req DescribeRocketMQNamespacesRequest
                  * @return DescribeRocketMQNamespacesOutcome
                  */
@@ -1440,6 +1492,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to query the producer client list under a specified topic in RocketMQ.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the List API Documentation [DescribeProducerList](https://www.tencentcloud.com/document/api/1493/122548?from_cn_redirect=1) for producer clients.
                  * @param req DescribeRocketMQProducersRequest
                  * @return DescribeRocketMQProducersOutcome
                  */
@@ -1448,7 +1501,8 @@ namespace TencentCloud
                 DescribeRocketMQProducersOutcomeCallable DescribeRocketMQProducersCallable(const Model::DescribeRocketMQProducersRequest& request);
 
                 /**
-                 *This API is used to pull public network metric monitoring data from TCOP. Currently, only inbound bandwidth and outbound bandwidth metrics from client to LB are supported.
+                 *Query public network metric monitoring data. Currently only support inbound bandwidth and outbound bandwidth metrics for Client to LB.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. 5.x clusters are not supported yet.
                  * @param req DescribeRocketMQPublicAccessMonitorDataRequest
                  * @return DescribeRocketMQPublicAccessMonitorDataOutcome
                  */
@@ -1457,7 +1511,8 @@ namespace TencentCloud
                 DescribeRocketMQPublicAccessMonitorDataOutcomeCallable DescribeRocketMQPublicAccessMonitorDataCallable(const Model::DescribeRocketMQPublicAccessMonitorDataRequest& request);
 
                 /**
-                 *This API is used to query the public network access information of RocketMQ instances.
+                 *Query the public network access point information of a RocketMQ cluster.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For public network access point information of 5.x clusters, refer to the API Documentation [DescribeInstance](https://www.tencentcloud.com/document/api/1493/97866?from_cn_redirect=1).
                  * @param req DescribeRocketMQPublicAccessPointRequest
                  * @return DescribeRocketMQPublicAccessPointOutcome
                  */
@@ -1466,7 +1521,8 @@ namespace TencentCloud
                 DescribeRocketMQPublicAccessPointOutcomeCallable DescribeRocketMQPublicAccessPointCallable(const Model::DescribeRocketMQPublicAccessPointRequest& request);
 
                 /**
-                 *Obtains the list of roles
+                 *This API is used to query the list of roles.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the List API Documentation [DescribeRoleList](https://www.tencentcloud.com/document/api/1493/98862?from_cn_redirect=1).
                  * @param req DescribeRocketMQRolesRequest
                  * @return DescribeRocketMQRolesOutcome
                  */
@@ -1476,6 +1532,7 @@ namespace TencentCloud
 
                 /**
                  *Used to obtain the RocketMQ metric sorting list, such as sorting topics under a cluster instance by the most occupied storage space.
+This API is used for applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. The feature is not supported yet for 5.x clusters.
                  * @param req DescribeRocketMQTopUsagesRequest
                  * @return DescribeRocketMQTopUsagesOutcome
                  */
@@ -1493,7 +1550,8 @@ namespace TencentCloud
                 DescribeRocketMQTopicOutcomeCallable DescribeRocketMQTopicCallable(const Model::DescribeRocketMQTopicRequest& request);
 
                 /**
-                 *Query RocketMQ messages.
+                 *Query the RocketMQ message list.
+Current API applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, see the List API Documentation for query messages at [DescribeMessageList](https://www.tencentcloud.com/document/api/1493/114593?from_cn_redirect=1).
                  * @param req DescribeRocketMQTopicMsgsRequest
                  * @return DescribeRocketMQTopicMsgsOutcome
                  */
@@ -1502,7 +1560,8 @@ namespace TencentCloud
                 DescribeRocketMQTopicMsgsOutcomeCallable DescribeRocketMQTopicMsgsCallable(const Model::DescribeRocketMQTopicMsgsRequest& request);
 
                 /**
-                 *This API is used to obtain the topic production details list.
+                 *Query the production detail list of RocketMQ topics.
+This API is used for applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. The feature is not supported yet for 5.x clusters.
                  * @param req DescribeRocketMQTopicStatsRequest
                  * @return DescribeRocketMQTopicStatsOutcome
                  */
@@ -1511,7 +1570,8 @@ namespace TencentCloud
                 DescribeRocketMQTopicStatsOutcomeCallable DescribeRocketMQTopicStatsCallable(const Model::DescribeRocketMQTopicStatsRequest& request);
 
                 /**
-                 *This API is used to get the list of RocketMQ topics.
+                 *Query the RocketMQ topic list.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1).
                  * @param req DescribeRocketMQTopicsRequest
                  * @return DescribeRocketMQTopicsOutcome
                  */
@@ -1520,7 +1580,8 @@ namespace TencentCloud
                 DescribeRocketMQTopicsOutcomeCallable DescribeRocketMQTopicsCallable(const Model::DescribeRocketMQTopicsRequest& request);
 
                 /**
-                 *Obtains the list of topics subscribed under a specified consumer group
+                 *This API is used to query the list of subscribed topics for a RocketMQ consumption group.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeTopicListByGroup](https://www.tencentcloud.com/document/api/1493/115314?from_cn_redirect=1) to query the list of subscribed topics for a consumption group.
                  * @param req DescribeRocketMQTopicsByGroupRequest
                  * @return DescribeRocketMQTopicsByGroupOutcome
                  */
@@ -1529,7 +1590,8 @@ namespace TencentCloud
                 DescribeRocketMQTopicsByGroupOutcomeCallable DescribeRocketMQTopicsByGroupCallable(const Model::DescribeRocketMQTopicsByGroupRequest& request);
 
                 /**
-                 *This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
+                 *Query RocketMQ cluster info.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeInstance](https://www.tencentcloud.com/document/api/1493/97866?from_cn_redirect=1).
                  * @param req DescribeRocketMQVipInstanceDetailRequest
                  * @return DescribeRocketMQVipInstanceDetailOutcome
                  */
@@ -1538,7 +1600,8 @@ namespace TencentCloud
                 DescribeRocketMQVipInstanceDetailOutcomeCallable DescribeRocketMQVipInstanceDetailCallable(const Model::DescribeRocketMQVipInstanceDetailRequest& request);
 
                 /**
-                 *This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
+                 *Query the RocketMQ 4.x cluster list.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [DescribeInstanceList](https://www.tencentcloud.com/document/api/1493/96028?from_cn_redirect=1), or use the [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) API applicable to all cluster types.
                  * @param req DescribeRocketMQVipInstancesRequest
                  * @return DescribeRocketMQVipInstancesOutcome
                  */
@@ -1682,7 +1745,8 @@ namespace TencentCloud
                 ModifyRabbitMQVirtualHostOutcomeCallable ModifyRabbitMQVirtualHostCallable(const Model::ModifyRabbitMQVirtualHostRequest& request);
 
                 /**
-                 *This API is used to update a RocketMQ cluster.
+                 *This API is used to modify the attributes of a RocketMQ cluster.
+This API is applicable to clusters: 4.x virtual cluster. For 4.x dedicated or generic clusters, refer to the API documentation [ModifyRocketMQInstance](https://www.tencentcloud.com/document/api/1179/108862?from_cn_redirect=1). For 5.x clusters, refer to the API documentation [ModifyInstance](https://www.tencentcloud.com/document/api/1493/97865?from_cn_redirect=1).
                  * @param req ModifyRocketMQClusterRequest
                  * @return ModifyRocketMQClusterOutcome
                  */
@@ -1691,7 +1755,8 @@ namespace TencentCloud
                 ModifyRocketMQClusterOutcomeCallable ModifyRocketMQClusterCallable(const Model::ModifyRocketMQClusterRequest& request);
 
                 /**
-                 *Modifies environment role authorization
+                 *Modify role authorization.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyRole](https://www.tencentcloud.com/document/api/1493/98861?from_cn_redirect=1).
                  * @param req ModifyRocketMQEnvironmentRoleRequest
                  * @return ModifyRocketMQEnvironmentRoleOutcome
                  */
@@ -1700,7 +1765,8 @@ namespace TencentCloud
                 ModifyRocketMQEnvironmentRoleOutcomeCallable ModifyRocketMQEnvironmentRoleCallable(const Model::ModifyRocketMQEnvironmentRoleRequest& request);
 
                 /**
-                 *This API is used to update a RocketMQ consumer group.
+                 *Modify a RocketMQ consumption group property.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyConsumerGroup](https://www.tencentcloud.com/document/api/1493/97940?from_cn_redirect=1) to modify the consumer group's attributes.
                  * @param req ModifyRocketMQGroupRequest
                  * @return ModifyRocketMQGroupOutcome
                  */
@@ -1709,7 +1775,8 @@ namespace TencentCloud
                 ModifyRocketMQGroupOutcomeCallable ModifyRocketMQGroupCallable(const Model::ModifyRocketMQGroupRequest& request);
 
                 /**
-                 *Modify the RocketMQ dedicated instance.
+                 *Modify RocketMQ Dedicated or Generic Cluster Property.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyInstance](https://www.tencentcloud.com/document/api/1493/97865?from_cn_redirect=1).
                  * @param req ModifyRocketMQInstanceRequest
                  * @return ModifyRocketMQInstanceOutcome
                  */
@@ -1718,7 +1785,8 @@ namespace TencentCloud
                 ModifyRocketMQInstanceOutcomeCallable ModifyRocketMQInstanceCallable(const Model::ModifyRocketMQInstanceRequest& request);
 
                 /**
-                 *This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
+                 *This API is used to modify the RocketMQ dedicated cluster configuration, supporting upgrades of instance specification, number of nodes and storage, as well as downgrades of instance specification. After initiating order and completing payment, it will enter the instance configuration change process. You can check whether the change is completed via [DescribeRocketMQVipInstances](https://www.tencentcloud.com/document/api/1179/80903?from_cn_redirect=1).
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyInstance](https://www.tencentcloud.com/document/api/1493/97865?from_cn_redirect=1).
                  * @param req ModifyRocketMQInstanceSpecRequest
                  * @return ModifyRocketMQInstanceSpecOutcome
                  */
@@ -1728,6 +1796,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to update a RocketMQ namespace.
+This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
                  * @param req ModifyRocketMQNamespaceRequest
                  * @return ModifyRocketMQNamespaceOutcome
                  */
@@ -1736,7 +1805,8 @@ namespace TencentCloud
                 ModifyRocketMQNamespaceOutcomeCallable ModifyRocketMQNamespaceCallable(const Model::ModifyRocketMQNamespaceRequest& request);
 
                 /**
-                 *Modifies roles
+                 *Modify a role.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyRole](https://www.tencentcloud.com/document/api/1493/98861?from_cn_redirect=1).
                  * @param req ModifyRocketMQRoleRequest
                  * @return ModifyRocketMQRoleOutcome
                  */
@@ -1745,7 +1815,8 @@ namespace TencentCloud
                 ModifyRocketMQRoleOutcomeCallable ModifyRocketMQRoleCallable(const Model::ModifyRocketMQRoleRequest& request);
 
                 /**
-                 *This API is used to update a RocketMQ topic.
+                 *This API is used to modify RocketMQ topic attributes.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ModifyTopic](https://www.tencentcloud.com/document/api/1493/97944?from_cn_redirect=1).
                  * @param req ModifyRocketMQTopicRequest
                  * @return ModifyRocketMQTopicOutcome
                  */
@@ -1818,7 +1889,8 @@ Multiple MessageIDs use the special character '###' to separate with each other.
                 ResetMsgSubOffsetByTimestampOutcomeCallable ResetMsgSubOffsetByTimestampCallable(const Model::ResetMsgSubOffsetByTimestampRequest& request);
 
                 /**
-                 *This API is used to reset the consumption offset of a specified consumer group to a specified timestamp.
+                 *Reset consumer offset.
+This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [ResetConsumerGroupOffset](https://www.tencentcloud.com/document/api/1493/116942?from_cn_redirect=1) to reset the consumer offset.
                  * @param req ResetRocketMQConsumerOffSetRequest
                  * @return ResetRocketMQConsumerOffSetOutcome
                  */
@@ -1827,7 +1899,8 @@ Multiple MessageIDs use the special character '###' to separate with each other.
                 ResetRocketMQConsumerOffSetOutcomeCallable ResetRocketMQConsumerOffSetCallable(const Model::ResetRocketMQConsumerOffSetRequest& request);
 
                 /**
-                 *Resend the RocketMQ dead letter messages.
+                 *Resend a RocketMQ dead letter message.
+Current API applicable clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, see the REST API documentation for resending dead letter messages at [ResendDeadLetterMessage](https://www.tencentcloud.com/document/api/1493/114592?from_cn_redirect=1).
                  * @param req RetryRocketMQDlqMessageRequest
                  * @return RetryRocketMQDlqMessageOutcome
                  */
@@ -1893,7 +1966,8 @@ The message cannot be sent to a persistent topic.
                 SendRocketMQMessageOutcomeCallable SendRocketMQMessageCallable(const Model::SendRocketMQMessageRequest& request);
 
                 /**
-                 *This API is used to enable/disable public network access, and set the security access policy.
+                 *Enable or disable public network access, set security access policy.
+This API is applicable to clusters: 4.x dedicated cluster and 4.x generic cluster. For public network access point settings of 5.x clusters, refer to the API Documentation [ModifyInstanceEndpoint](https://www.tencentcloud.com/document/api/1493/115981?from_cn_redirect=1).
                  * @param req SetRocketMQPublicAccessPointRequest
                  * @return SetRocketMQPublicAccessPointOutcome
                  */

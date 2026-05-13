@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returns topic replica details
-                     * @return Result Returns topic replica details
+                     * 获取<p>Return topic replica detail</p>
+                     * @return Result <p>Return topic replica detail</p>
                      * 
                      */
                     TopicInSyncReplicaResult GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returns topic replica details
+                     * <p>Return topic replica detail</p>
                      */
                     TopicInSyncReplicaResult m_result;
                     bool m_resultHasBeenSet;

@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
-                     * @return PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+                     * 获取Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
+                     * @return PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
-                     * @param _payMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+                     * 设置Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
+                     * @param _payMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -574,7 +574,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+                     * Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;

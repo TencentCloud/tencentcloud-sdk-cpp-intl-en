@@ -85,6 +85,48 @@ namespace TencentCloud
                      */
                     bool BaseConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+                     * @return Pattern <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+                     * 
+                     */
+                    std::string GetPattern() const;
+
+                    /**
+                     * 设置<p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+                     * @param _pattern <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+                     * 
+                     */
+                    void SetPattern(const std::string& _pattern);
+
+                    /**
+                     * 判断参数 Pattern 是否已赋值
+                     * @return Pattern 是否已赋值
+                     * 
+                     */
+                    bool PatternHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+                     * @return AgentType <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+                     * 
+                     */
+                    std::string GetAgentType() const;
+
+                    /**
+                     * 设置<p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+                     * @param _agentType <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+                     * 
+                     */
+                    void SetAgentType(const std::string& _agentType);
+
+                    /**
+                     * 判断参数 AgentType 是否已赋值
+                     * @return AgentType 是否已赋值
+                     * 
+                     */
+                    bool AgentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -98,6 +140,18 @@ namespace TencentCloud
                      */
                     BaseConfig m_baseConfig;
                     bool m_baseConfigHasBeenSet;
+
+                    /**
+                     * <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+                     */
+                    std::string m_pattern;
+                    bool m_patternHasBeenSet;
+
+                    /**
+                     * <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+                     */
+                    std::string m_agentType;
+                    bool m_agentTypeHasBeenSet;
 
                 };
             }

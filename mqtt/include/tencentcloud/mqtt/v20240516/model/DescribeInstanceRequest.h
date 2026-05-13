@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
-                     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+                     * 获取<p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
+                     * @return InstanceId <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
-                     * @param _instanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+                     * 设置<p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
+                     * @param _instanceId <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+                     * <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

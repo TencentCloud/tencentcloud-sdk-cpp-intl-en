@@ -48,7 +48,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeLBOperateProtectRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeIdleLoadBalancersResponse.h
-  include/tencentcloud/clb/v20180317/model/BindItem.h
+  include/tencentcloud/clb/v20180317/model/AssociateTargetGroupsRequest.h
   include/tencentcloud/clb/v20180317/model/AddCustomizedConfigRequest.h
   include/tencentcloud/clb/v20180317/model/ClassicalTarget.h
   include/tencentcloud/clb/v20180317/model/ListenerItem.h
@@ -183,7 +183,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/TypeInfo.h
   include/tencentcloud/clb/v20180317/model/DisassociateTargetGroupsRequest.h
   include/tencentcloud/clb/v20180317/model/Filter.h
-  include/tencentcloud/clb/v20180317/model/AssociateTargetGroupsRequest.h
+  include/tencentcloud/clb/v20180317/model/BindItem.h
   include/tencentcloud/clb/v20180317/model/ModifyDomainResponse.h
   include/tencentcloud/clb/v20180317/model/RegisterTargetsResponse.h
   include/tencentcloud/clb/v20180317/model/DeregisterTargetsFromClassicalLBResponse.h
@@ -240,6 +240,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/ModifyFunctionTargetsRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeRewriteResponse.h
   include/tencentcloud/clb/v20180317/model/Quota.h
+  include/tencentcloud/clb/v20180317/model/AvailableZoneAffinityInfo.h
   include/tencentcloud/clb/v20180317/model/SetLoadBalancerClsLogRequest.h
   include/tencentcloud/clb/v20180317/model/LBItem.h
   include/tencentcloud/clb/v20180317/model/DeleteCustomizedConfigRequest.h
@@ -301,7 +302,7 @@ set(clb_src
   src/v20180317/model/DescribeTargetGroupInstancesRequest.cpp
   src/v20180317/model/DescribeLBOperateProtectRequest.cpp
   src/v20180317/model/DescribeIdleLoadBalancersResponse.cpp
-  src/v20180317/model/BindItem.cpp
+  src/v20180317/model/AssociateTargetGroupsRequest.cpp
   src/v20180317/model/AddCustomizedConfigRequest.cpp
   src/v20180317/model/ClassicalTarget.cpp
   src/v20180317/model/ListenerItem.cpp
@@ -436,7 +437,7 @@ set(clb_src
   src/v20180317/model/TypeInfo.cpp
   src/v20180317/model/DisassociateTargetGroupsRequest.cpp
   src/v20180317/model/Filter.cpp
-  src/v20180317/model/AssociateTargetGroupsRequest.cpp
+  src/v20180317/model/BindItem.cpp
   src/v20180317/model/ModifyDomainResponse.cpp
   src/v20180317/model/RegisterTargetsResponse.cpp
   src/v20180317/model/DeregisterTargetsFromClassicalLBResponse.cpp
@@ -493,6 +494,7 @@ set(clb_src
   src/v20180317/model/ModifyFunctionTargetsRequest.cpp
   src/v20180317/model/DescribeRewriteResponse.cpp
   src/v20180317/model/Quota.cpp
+  src/v20180317/model/AvailableZoneAffinityInfo.cpp
   src/v20180317/model/SetLoadBalancerClsLogRequest.cpp
   src/v20180317/model/LBItem.cpp
   src/v20180317/model/DeleteCustomizedConfigRequest.cpp

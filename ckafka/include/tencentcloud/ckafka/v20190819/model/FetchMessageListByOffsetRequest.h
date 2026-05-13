@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return Topic Topic name
+                     * 获取<p>Topic name</p>
+                     * @return Topic <p>Topic name</p>
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topic Topic name
+                     * 设置<p>Topic name</p>
+                     * @param _topic <p>Topic name</p>
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Partition ID
-                     * @return Partition Partition ID
+                     * 获取<p>Partition id</p>
+                     * @return Partition <p>Partition id</p>
                      * 
                      */
                     int64_t GetPartition() const;
 
                     /**
-                     * 设置Partition ID
-                     * @param _partition Partition ID
+                     * 设置<p>Partition id</p>
+                     * @param _partition <p>Partition id</p>
                      * 
                      */
                     void SetPartition(const int64_t& _partition);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Offset information
-                     * @return Offset Offset information
+                     * 获取<p>Location info</p>
+                     * @return Offset <p>Location info</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset information
-                     * @param _offset Offset information
+                     * 设置<p>Location info</p>
+                     * @param _offset <p>Location info</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
-                     * @return SinglePartitionRecordNumber The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+                     * 获取<p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
+                     * @return SinglePartitionRecordNumber <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
                      * 
                      */
                     int64_t GetSinglePartitionRecordNumber() const;
 
                     /**
-                     * 设置The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
-                     * @param _singlePartitionRecordNumber The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+                     * 设置<p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
+                     * @param _singlePartitionRecordNumber <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
                      * 
                      */
                     void SetSinglePartitionRecordNumber(const int64_t& _singlePartitionRecordNumber);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * <p>Topic name</p>
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Partition ID
+                     * <p>Partition id</p>
                      */
                     int64_t m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Offset information
+                     * <p>Location info</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+                     * <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
                      */
                     int64_t m_singlePartitionRecordNumber;
                     bool m_singlePartitionRecordNumberHasBeenSet;

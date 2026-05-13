@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DeleteWithInstanceHasBeenSet() const;
 
                     /**
-                     * 获取(Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
-                     * @return AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     * 获取Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
+                     * @return AttachMode Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
                      * 
                      */
                     std::string GetAttachMode() const;
 
                     /**
-                     * 设置(Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
-                     * @param _attachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     * 设置Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
+                     * @param _attachMode Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
                      * 
                      */
                     void SetAttachMode(const std::string& _attachMode);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_deleteWithInstanceHasBeenSet;
 
                     /**
-                     * (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     * Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
                      */
                     std::string m_attachMode;
                     bool m_attachModeHasBeenSet;

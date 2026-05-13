@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool DeadlineHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
-                     * @return DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+                     * 获取Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
+                     * @return DiskBackupId Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
                      * 
                      */
                     std::string GetDiskBackupId() const;
 
                     /**
-                     * 设置ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
-                     * @param _diskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+                     * 设置Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
+                     * @param _diskBackupId Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
                      * 
                      */
                     void SetDiskBackupId(const std::string& _diskBackupId);
@@ -148,6 +148,27 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+                     * @return DiskUsage Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+                     * 
+                     */
+                    std::string GetDiskUsage() const;
+
+                    /**
+                     * 设置Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+                     * @param _diskUsage Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+                     * 
+                     */
+                    void SetDiskUsage(const std::string& _diskUsage);
+
+                    /**
+                     * 判断参数 DiskUsage 是否已赋值
+                     * @return DiskUsage 是否已赋值
+                     * 
+                     */
+                    bool DiskUsageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -169,7 +190,7 @@ namespace TencentCloud
                     bool m_deadlineHasBeenSet;
 
                     /**
-                     * ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+                     * Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
                      */
                     std::string m_diskBackupId;
                     bool m_diskBackupIdHasBeenSet;
@@ -179,6 +200,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+                     */
+                    std::string m_diskUsage;
+                    bool m_diskUsageHasBeenSet;
 
                 };
             }

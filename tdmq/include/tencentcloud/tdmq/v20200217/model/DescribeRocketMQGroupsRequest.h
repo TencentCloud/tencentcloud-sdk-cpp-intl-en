@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace.
-                     * @return NamespaceId Namespace.
+                     * 获取Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @return NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
-                     * 设置Namespace.
-                     * @param _namespaceId Namespace.
+                     * 设置Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @param _namespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The max number of returned results.
-                     * @return Limit The max number of returned results.
+                     * 获取Maximum number of entries per request. Range: [0–100]. Default value: 20.
+                     * @return Limit Maximum number of entries per request. Range: [0–100]. Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The max number of returned results.
-                     * @param _limit The max number of returned results.
+                     * 设置Maximum number of entries per request. Range: [0–100]. Default value: 20.
+                     * @param _limit Maximum number of entries per request. Range: [0–100]. Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -283,7 +283,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Namespace.
+                     * Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      */
                     std::string m_namespaceId;
                     bool m_namespaceIdHasBeenSet;
@@ -295,7 +295,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The max number of returned results.
+                     * Maximum number of entries per request. Range: [0–100]. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

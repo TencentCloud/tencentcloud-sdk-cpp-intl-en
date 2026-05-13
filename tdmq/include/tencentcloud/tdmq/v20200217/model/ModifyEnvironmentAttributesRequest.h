@@ -169,6 +169,48 @@ namespace TencentCloud
                      */
                     bool AutoSubscriptionCreationHasBeenSet() const;
 
+                    /**
+                     * 获取Offline subscription automatic expiration cleanup time
+                     * @return SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+                     * 
+                     */
+                    uint64_t GetSubscriptionExpirationTime() const;
+
+                    /**
+                     * 设置Offline subscription automatic expiration cleanup time
+                     * @param _subscriptionExpirationTime Offline subscription automatic expiration cleanup time
+                     * 
+                     */
+                    void SetSubscriptionExpirationTime(const uint64_t& _subscriptionExpirationTime);
+
+                    /**
+                     * 判断参数 SubscriptionExpirationTime 是否已赋值
+                     * @return SubscriptionExpirationTime 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionExpirationTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Offline subscription automatic expiration cleanup time switch
+                     * @return SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+                     * 
+                     */
+                    bool GetSubscriptionExpirationTimeEnable() const;
+
+                    /**
+                     * 设置Offline subscription automatic expiration cleanup time switch
+                     * @param _subscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+                     * 
+                     */
+                    void SetSubscriptionExpirationTimeEnable(const bool& _subscriptionExpirationTimeEnable);
+
+                    /**
+                     * 判断参数 SubscriptionExpirationTimeEnable 是否已赋值
+                     * @return SubscriptionExpirationTimeEnable 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionExpirationTimeEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +248,18 @@ namespace TencentCloud
                      */
                     bool m_autoSubscriptionCreation;
                     bool m_autoSubscriptionCreationHasBeenSet;
+
+                    /**
+                     * Offline subscription automatic expiration cleanup time
+                     */
+                    uint64_t m_subscriptionExpirationTime;
+                    bool m_subscriptionExpirationTimeHasBeenSet;
+
+                    /**
+                     * Offline subscription automatic expiration cleanup time switch
+                     */
+                    bool m_subscriptionExpirationTimeEnable;
+                    bool m_subscriptionExpirationTimeEnableHasBeenSet;
 
                 };
             }

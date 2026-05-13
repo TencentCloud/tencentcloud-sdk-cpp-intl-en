@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
-                     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * 获取<p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+                     * @return InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
-                     * @param _instanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * 设置<p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+                     * @param _instanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
-
-                     * @return DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
-
+                     * 获取<p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
+                     * @return DiskSize <p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
-
-                     * @param _diskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
-
+                     * 设置<p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
+                     * @param _diskSize <p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -93,23 +85,15 @@ Specification limits can be viewed through the following link: https://www.tence
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
-
-                     * @return BandWidth Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
-
+                     * 获取<p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
+                     * @return BandWidth <p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
                      * 
                      */
                     int64_t GetBandWidth() const;
 
                     /**
-                     * 设置Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
-
-                     * @param _bandWidth Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
-
+                     * 设置<p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
+                     * @param _bandWidth <p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
                      * 
                      */
                     void SetBandWidth(const int64_t& _bandWidth);
@@ -122,19 +106,15 @@ Specifies the specification limits and corresponding step length through the fol
                     bool BandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
-                     * @return Partition Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
+                     * 获取<p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
+                     * @return Partition <p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
                      * 
                      */
                     int64_t GetPartition() const;
 
                     /**
-                     * 设置Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
-                     * @param _partition Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
+                     * 设置<p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
+                     * @param _partition <p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
                      * 
                      */
                     void SetPartition(const int64_t& _partition);
@@ -149,30 +129,25 @@ Specifies the specifications and limits that can be viewed through the following
                 private:
 
                     /**
-                     * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
-
+                     * <p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
-
+                     * <p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
                      */
                     int64_t m_bandWidth;
                     bool m_bandWidthHasBeenSet;
 
                     /**
-                     * Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
+                     * <p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
                      */
                     int64_t m_partition;
                     bool m_partitionHasBeenSet;

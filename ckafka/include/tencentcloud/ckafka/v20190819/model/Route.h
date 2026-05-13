@@ -48,31 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-                     * @return AccessType Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+                     * 获取<p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
+                     * @return AccessType <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
                      * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
-                     * 设置Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-                     * @param _accessType Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+                     * 设置<p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
+                     * @param _accessType <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
                      * 
                      */
                     void SetAccessType(const int64_t& _accessType);
@@ -85,15 +69,15 @@ namespace TencentCloud
                     bool AccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Route ID
-                     * @return RouteId Route ID
+                     * 获取<p>Route Id</p>
+                     * @return RouteId <p>Route Id</p>
                      * 
                      */
                     int64_t GetRouteId() const;
 
                     /**
-                     * 设置Route ID
-                     * @param _routeId Route ID
+                     * 设置<p>Route Id</p>
+                     * @param _routeId <p>Route Id</p>
                      * 
                      */
                     void SetRouteId(const int64_t& _routeId);
@@ -106,15 +90,15 @@ namespace TencentCloud
                     bool RouteIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
-                     * @return VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+                     * 获取<p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
+                     * @return VipType <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
                      * 
                      */
                     int64_t GetVipType() const;
 
                     /**
-                     * 设置Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
-                     * @param _vipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+                     * 设置<p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
+                     * @param _vipType <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
                      * 
                      */
                     void SetVipType(const int64_t& _vipType);
@@ -127,15 +111,15 @@ namespace TencentCloud
                     bool VipTypeHasBeenSet() const;
 
                     /**
-                     * 获取Virtual IP list
-                     * @return VipList Virtual IP list
+                     * 获取<p>Virtual IP list</p>
+                     * @return VipList <p>Virtual IP list</p>
                      * 
                      */
                     std::vector<VipEntity> GetVipList() const;
 
                     /**
-                     * 设置Virtual IP list
-                     * @param _vipList Virtual IP list
+                     * 设置<p>Virtual IP list</p>
+                     * @param _vipList <p>Virtual IP list</p>
                      * 
                      */
                     void SetVipList(const std::vector<VipEntity>& _vipList);
@@ -148,19 +132,19 @@ namespace TencentCloud
                     bool VipListHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Domain <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _domain Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _domain <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -173,19 +157,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DomainPort Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DomainPort <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDomainPort() const;
 
                     /**
-                     * 设置Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _domainPort Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _domainPort <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDomainPort(const int64_t& _domainPort);
@@ -198,15 +182,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainPortHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp.
-                     * @return DeleteTimestamp Timestamp.
+                     * 获取<p>Timestamp</p>
+                     * @return DeleteTimestamp <p>Timestamp</p>
                      * 
                      */
                     std::string GetDeleteTimestamp() const;
 
                     /**
-                     * 设置Timestamp.
-                     * @param _deleteTimestamp Timestamp.
+                     * 设置<p>Timestamp</p>
+                     * @param _deleteTimestamp <p>Timestamp</p>
                      * 
                      */
                     void SetDeleteTimestamp(const std::string& _deleteTimestamp);
@@ -219,18 +203,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DeleteTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subnet Id.
+                     * 获取<p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Subnet Specifies the subnet Id.
+                     * @return Subnet <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubnet() const;
 
                     /**
-                     * 设置Specifies the subnet Id.
+                     * 设置<p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subnet Specifies the subnet Id.
+                     * @param _subnet <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -244,15 +228,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubnetHasBeenSet() const;
 
                     /**
-                     * 获取Virtual IP list (1:1 broker node).
-                     * @return BrokerVipList Virtual IP list (1:1 broker node).
+                     * 获取<p>Virtual IP list (1:1 broker node)</p>
+                     * @return BrokerVipList <p>Virtual IP list (1:1 broker node)</p>
                      * 
                      */
                     std::vector<VipEntity> GetBrokerVipList() const;
 
                     /**
-                     * 设置Virtual IP list (1:1 broker node).
-                     * @param _brokerVipList Virtual IP list (1:1 broker node).
+                     * 设置<p>Virtual IP list (1:1 broker node)</p>
+                     * @param _brokerVipList <p>Virtual IP list (1:1 broker node)</p>
                      * 
                      */
                     void SetBrokerVipList(const std::vector<VipEntity>& _brokerVipList);
@@ -265,18 +249,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BrokerVipListHasBeenSet() const;
 
                     /**
-                     * 获取VPC Id. specifies the Id of the vpc.
+                     * 获取<p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VpcId VPC Id. specifies the Id of the vpc.
+                     * @return VpcId <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC Id. specifies the Id of the vpc.
+                     * 设置<p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vpcId VPC Id. specifies the Id of the vpc.
+                     * @param _vpcId <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -290,18 +274,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
+                     * 获取<p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Note Remarks
+                     * @return Note <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Remarks
+                     * 设置<p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _note Remarks
+                     * @param _note <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -315,18 +299,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+                     * 获取<p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+                     * @return Status <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+                     * 设置<p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+                     * @param _status <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -342,82 +326,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+                     * <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
                      */
                     int64_t m_accessType;
                     bool m_accessTypeHasBeenSet;
 
                     /**
-                     * Route ID
+                     * <p>Route Id</p>
                      */
                     int64_t m_routeId;
                     bool m_routeIdHasBeenSet;
 
                     /**
-                     * Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+                     * <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
                      */
                     int64_t m_vipType;
                     bool m_vipTypeHasBeenSet;
 
                     /**
-                     * Virtual IP list
+                     * <p>Virtual IP list</p>
                      */
                     std::vector<VipEntity> m_vipList;
                     bool m_vipListHasBeenSet;
 
                     /**
-                     * Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_domainPort;
                     bool m_domainPortHasBeenSet;
 
                     /**
-                     * Timestamp.
+                     * <p>Timestamp</p>
                      */
                     std::string m_deleteTimestamp;
                     bool m_deleteTimestampHasBeenSet;
 
                     /**
-                     * Specifies the subnet Id.
+                     * <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subnet;
                     bool m_subnetHasBeenSet;
 
                     /**
-                     * Virtual IP list (1:1 broker node).
+                     * <p>Virtual IP list (1:1 broker node)</p>
                      */
                     std::vector<VipEntity> m_brokerVipList;
                     bool m_brokerVipListHasBeenSet;
 
                     /**
-                     * VPC Id. specifies the Id of the vpc.
+                     * <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Remarks
+                     * <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
 
                     /**
-                     * Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+                     * <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;

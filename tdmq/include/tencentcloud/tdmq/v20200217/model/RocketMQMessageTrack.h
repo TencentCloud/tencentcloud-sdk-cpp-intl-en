@@ -158,6 +158,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExceptionDescHasBeenSet() const;
 
+                    /**
+                     * 获取Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+                     * @return ConsumeStatusSource Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+                     * 
+                     */
+                    std::string GetConsumeStatusSource() const;
+
+                    /**
+                     * 设置Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+                     * @param _consumeStatusSource Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+                     * 
+                     */
+                    void SetConsumeStatusSource(const std::string& _consumeStatusSource);
+
+                    /**
+                     * 判断参数 ConsumeStatusSource 是否已赋值
+                     * @return ConsumeStatusSource 是否已赋值
+                     * 
+                     */
+                    bool ConsumeStatusSourceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,6 +223,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_exceptionDesc;
                     bool m_exceptionDescHasBeenSet;
+
+                    /**
+                     * Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+                     */
+                    std::string m_consumeStatusSource;
+                    bool m_consumeStatusSourceHasBeenSet;
 
                 };
             }

@@ -720,6 +720,27 @@ namespace TencentCloud
                      */
                     bool FeaturesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * 
+                     */
+                    int64_t GetRetentionBytes() const;
+
+                    /**
+                     * 设置<p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * @param _retentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * 
+                     */
+                    void SetRetentionBytes(const int64_t& _retentionBytes);
+
+                    /**
+                     * 判断参数 RetentionBytes 是否已赋值
+                     * @return RetentionBytes 是否已赋值
+                     * 
+                     */
+                    bool RetentionBytesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -913,6 +934,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_features;
                     bool m_featuresHasBeenSet;
+
+                    /**
+                     * <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     */
+                    int64_t m_retentionBytes;
+                    bool m_retentionBytesHasBeenSet;
 
                 };
             }

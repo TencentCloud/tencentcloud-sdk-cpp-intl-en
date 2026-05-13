@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of cloud disk IDs scheduled snapshot policy to be unbound from.
-                     * @return DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
-                     * 
-                     */
-                    std::vector<std::string> GetDiskIds() const;
-
-                    /**
-                     * 设置List of cloud disk IDs scheduled snapshot policy to be unbound from.
-                     * @param _diskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
-                     * 
-                     */
-                    void SetDiskIds(const std::vector<std::string>& _diskIds);
-
-                    /**
-                     * 判断参数 DiskIds 是否已赋值
-                     * @return DiskIds 是否已赋值
-                     * 
-                     */
-                    bool DiskIdsHasBeenSet() const;
-
-                    /**
                      * 获取ID of scheduled snapshot policy to be unbound.
                      * @return AutoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
                      * 
@@ -84,19 +63,67 @@ namespace TencentCloud
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+                     * @return DiskIds ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+                     * 
+                     */
+                    std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * List of cloud disk IDs scheduled snapshot policy to be unbound from.
+                     * 设置ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+                     * @param _diskIds ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+                     * 
                      */
-                    std::vector<std::string> m_diskIds;
-                    bool m_diskIdsHasBeenSet;
+                    void SetDiskIds(const std::vector<std::string>& _diskIds);
+
+                    /**
+                     * 判断参数 DiskIds 是否已赋值
+                     * @return DiskIds 是否已赋值
+                     * 
+                     */
+                    bool DiskIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+                     * @return InstanceIds Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+                     * 
+                     */
+                    std::vector<std::string> GetInstanceIds() const;
+
+                    /**
+                     * 设置Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+                     * @param _instanceIds Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+                     * 
+                     */
+                    void SetInstanceIds(const std::vector<std::string>& _instanceIds);
+
+                    /**
+                     * 判断参数 InstanceIds 是否已赋值
+                     * @return InstanceIds 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdsHasBeenSet() const;
+
+                private:
 
                     /**
                      * ID of scheduled snapshot policy to be unbound.
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;
+
+                    /**
+                     * ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+                     */
+                    std::vector<std::string> m_diskIds;
+                    bool m_diskIdsHasBeenSet;
+
+                    /**
+                     * Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+                     */
+                    std::vector<std::string> m_instanceIds;
+                    bool m_instanceIdsHasBeenSet;
 
                 };
             }

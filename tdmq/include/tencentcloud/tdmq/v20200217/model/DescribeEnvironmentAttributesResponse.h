@@ -155,6 +155,34 @@ namespace TencentCloud
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取Offline subscription automatic expiration cleanup time
+                     * @return SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+                     * 
+                     */
+                    uint64_t GetSubscriptionExpirationTime() const;
+
+                    /**
+                     * 判断参数 SubscriptionExpirationTime 是否已赋值
+                     * @return SubscriptionExpirationTime 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionExpirationTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Offline subscription automatic expiration cleanup time switch
+                     * @return SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+                     * 
+                     */
+                    bool GetSubscriptionExpirationTimeEnable() const;
+
+                    /**
+                     * 判断参数 SubscriptionExpirationTimeEnable 是否已赋值
+                     * @return SubscriptionExpirationTimeEnable 是否已赋值
+                     * 
+                     */
+                    bool SubscriptionExpirationTimeEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -204,6 +232,18 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Offline subscription automatic expiration cleanup time
+                     */
+                    uint64_t m_subscriptionExpirationTime;
+                    bool m_subscriptionExpirationTimeHasBeenSet;
+
+                    /**
+                     * Offline subscription automatic expiration cleanup time switch
+                     */
+                    bool m_subscriptionExpirationTimeEnable;
+                    bool m_subscriptionExpirationTimeEnableHasBeenSet;
 
                 };
             }

@@ -43,15 +43,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
-                     * @return AccountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+                     * 获取The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+                     * @return SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+                     * 
+                     */
+                    std::vector<std::string> GetSnapshotIds() const;
+
+                    /**
+                     * 设置The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+                     * @param _snapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
+
+                    /**
+                     * 判断参数 SnapshotIds 是否已赋值
+                     * @return SnapshotIds 是否已赋值
+                     * 
+                     */
+                    bool SnapshotIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+                     * @return AccountIds Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
                      * 
                      */
                     std::vector<std::string> GetAccountIds() const;
 
                     /**
-                     * 设置List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
-                     * @param _accountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+                     * 设置Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+                     * @param _accountIds Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
                      * 
                      */
                     void SetAccountIds(const std::vector<std::string>& _accountIds);
@@ -84,31 +105,16 @@ namespace TencentCloud
                      */
                     bool PermissionHasBeenSet() const;
 
-                    /**
-                     * 获取The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-                     * @return SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-                     * 
-                     */
-                    std::vector<std::string> GetSnapshotIds() const;
-
-                    /**
-                     * 设置The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-                     * @param _snapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
-
-                    /**
-                     * 判断参数 SnapshotIds 是否已赋值
-                     * @return SnapshotIds 是否已赋值
-                     * 
-                     */
-                    bool SnapshotIdsHasBeenSet() const;
-
                 private:
 
                     /**
-                     * List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+                     * The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+                     */
+                    std::vector<std::string> m_snapshotIds;
+                    bool m_snapshotIdsHasBeenSet;
+
+                    /**
+                     * Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
                      */
                     std::vector<std::string> m_accountIds;
                     bool m_accountIdsHasBeenSet;
@@ -118,12 +124,6 @@ namespace TencentCloud
                      */
                     std::string m_permission;
                     bool m_permissionHasBeenSet;
-
-                    /**
-                     * The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-                     */
-                    std::vector<std::string> m_snapshotIds;
-                    bool m_snapshotIdsHasBeenSet;
 
                 };
             }

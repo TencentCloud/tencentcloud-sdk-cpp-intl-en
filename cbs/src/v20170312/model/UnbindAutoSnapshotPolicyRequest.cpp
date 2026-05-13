@@ -23,8 +23,9 @@ using namespace TencentCloud::Cbs::V20170312::Model;
 using namespace std;
 
 UnbindAutoSnapshotPolicyRequest::UnbindAutoSnapshotPolicyRequest() :
+    m_autoSnapshotPolicyIdHasBeenSet(false),
     m_diskIdsHasBeenSet(false),
-    m_autoSnapshotPolicyIdHasBeenSet(false)
+    m_instanceIdsHasBeenSet(false)
 {
 }
 
@@ -34,6 +35,14 @@ string UnbindAutoSnapshotPolicyRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_autoSnapshotPolicyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoSnapshotPolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_autoSnapshotPolicyId.c_str(), allocator).Move(), allocator);
+    }
 
     if (m_diskIdsHasBeenSet)
     {
@@ -48,12 +57,17 @@ string UnbindAutoSnapshotPolicyRequest::ToJsonString() const
         }
     }
 
-    if (m_autoSnapshotPolicyIdHasBeenSet)
+    if (m_instanceIdsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AutoSnapshotPolicyId";
+        string key = "InstanceIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_autoSnapshotPolicyId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_instanceIds.begin(); itr != m_instanceIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -63,6 +77,22 @@ string UnbindAutoSnapshotPolicyRequest::ToJsonString() const
     return buffer.GetString();
 }
 
+
+string UnbindAutoSnapshotPolicyRequest::GetAutoSnapshotPolicyId() const
+{
+    return m_autoSnapshotPolicyId;
+}
+
+void UnbindAutoSnapshotPolicyRequest::SetAutoSnapshotPolicyId(const string& _autoSnapshotPolicyId)
+{
+    m_autoSnapshotPolicyId = _autoSnapshotPolicyId;
+    m_autoSnapshotPolicyIdHasBeenSet = true;
+}
+
+bool UnbindAutoSnapshotPolicyRequest::AutoSnapshotPolicyIdHasBeenSet() const
+{
+    return m_autoSnapshotPolicyIdHasBeenSet;
+}
 
 vector<string> UnbindAutoSnapshotPolicyRequest::GetDiskIds() const
 {
@@ -80,20 +110,20 @@ bool UnbindAutoSnapshotPolicyRequest::DiskIdsHasBeenSet() const
     return m_diskIdsHasBeenSet;
 }
 
-string UnbindAutoSnapshotPolicyRequest::GetAutoSnapshotPolicyId() const
+vector<string> UnbindAutoSnapshotPolicyRequest::GetInstanceIds() const
 {
-    return m_autoSnapshotPolicyId;
+    return m_instanceIds;
 }
 
-void UnbindAutoSnapshotPolicyRequest::SetAutoSnapshotPolicyId(const string& _autoSnapshotPolicyId)
+void UnbindAutoSnapshotPolicyRequest::SetInstanceIds(const vector<string>& _instanceIds)
 {
-    m_autoSnapshotPolicyId = _autoSnapshotPolicyId;
-    m_autoSnapshotPolicyIdHasBeenSet = true;
+    m_instanceIds = _instanceIds;
+    m_instanceIdsHasBeenSet = true;
 }
 
-bool UnbindAutoSnapshotPolicyRequest::AutoSnapshotPolicyIdHasBeenSet() const
+bool UnbindAutoSnapshotPolicyRequest::InstanceIdsHasBeenSet() const
 {
-    return m_autoSnapshotPolicyIdHasBeenSet;
+    return m_instanceIdsHasBeenSet;
 }
 
 

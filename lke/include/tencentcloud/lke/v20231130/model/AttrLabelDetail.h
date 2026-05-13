@@ -70,21 +70,21 @@ namespace TencentCloud
                     /**
                      * 获取Label identification.
                      * @return AttrKey Label identification.
-                     * 
+                     * @deprecated
                      */
                     std::string GetAttrKey() const;
 
                     /**
                      * 设置Label identification.
                      * @param _attrKey Label identification.
-                     * 
+                     * @deprecated
                      */
                     void SetAttrKey(const std::string& _attrKey);
 
                     /**
                      * 判断参数 AttrKey 是否已赋值
                      * @return AttrKey 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AttrKeyHasBeenSet() const;
 

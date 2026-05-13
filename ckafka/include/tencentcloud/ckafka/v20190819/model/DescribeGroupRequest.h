@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Search keyword
-                     * @return SearchWord Search keyword
+                     * 获取<p>Search keywords</p>
+                     * @return SearchWord <p>Search keywords</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Search keyword
-                     * @param _searchWord Search keyword
+                     * 设置<p>Search keywords</p>
+                     * @param _searchWord <p>Search keywords</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取<p>Offset</p>
+                     * @return Offset <p>Offset</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置<p>Offset</p>
+                     * @param _offset <p>Offset</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results to be returned
-                     * @return Limit Maximum number of results to be returned
+                     * 获取<p>Maximum return quantity</p><p>Default value: 20</p>
+                     * @return Limit <p>Maximum return quantity</p><p>Default value: 20</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results to be returned
-                     * @param _limit Maximum number of results to be returned
+                     * 设置<p>Maximum return quantity</p><p>Default value: 20</p>
+                     * @param _limit <p>Maximum return quantity</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
-                     * @return Filters Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+                     * 获取<p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
+                     * @return Filters <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
-                     * @param _filters Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+                     * 设置<p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
+                     * @param _filters <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Search keyword
+                     * <p>Search keywords</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Offset
+                     * <p>Offset</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of results to be returned
+                     * <p>Maximum return quantity</p><p>Default value: 20</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+                     * <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

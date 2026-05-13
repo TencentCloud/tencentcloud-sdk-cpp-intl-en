@@ -65,10 +65,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Log set ID of cloud log service (CLS).
-<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/42778?from_cn_redirect=1) API when adding or updating a log topic.</li>.
 <Li>When deleting a log topic, set this parameter to an empty string.</li>.
                      * @return LogSetId Log set ID of cloud log service (CLS).
-<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/42778?from_cn_redirect=1) API when adding or updating a log topic.</li>.
 <Li>When deleting a log topic, set this parameter to an empty string.</li>.
                      * 
                      */
@@ -76,10 +76,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Log set ID of cloud log service (CLS).
-<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/42778?from_cn_redirect=1) API when adding or updating a log topic.</li>.
 <Li>When deleting a log topic, set this parameter to an empty string.</li>.
                      * @param _logSetId Log set ID of cloud log service (CLS).
-<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/42778?from_cn_redirect=1) API when adding or updating a log topic.</li>.
 <Li>When deleting a log topic, set this parameter to an empty string.</li>.
                      * 
                      */
@@ -164,7 +164,7 @@ Default: `ACCESS`
 
                     /**
                      * Log set ID of cloud log service (CLS).
-<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/42778?from_cn_redirect=1) API when adding or updating a log topic.</li>.
 <Li>When deleting a log topic, set this parameter to an empty string.</li>.
                      */
                     std::string m_logSetId;

@@ -375,6 +375,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PublicEndPointHasBeenSet() const;
 
                     /**
+                     * 获取Old public network access point
+                     * @return OldPublicEndPoint Old public network access point
+                     * 
+                     */
+                    std::string GetOldPublicEndPoint() const;
+
+                    /**
+                     * 设置Old public network access point
+                     * @param _oldPublicEndPoint Old public network access point
+                     * 
+                     */
+                    void SetOldPublicEndPoint(const std::string& _oldPublicEndPoint);
+
+                    /**
+                     * 判断参数 OldPublicEndPoint 是否已赋值
+                     * @return OldPublicEndPoint 是否已赋值
+                     * 
+                     */
+                    bool OldPublicEndPointHasBeenSet() const;
+
+                    /**
                      * 获取VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VpcEndPoint VPC access point
@@ -398,6 +419,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool VpcEndPointHasBeenSet() const;
+
+                    /**
+                     * 获取Old VPC access point
+                     * @return OldVpcEndPoint Old VPC access point
+                     * 
+                     */
+                    std::string GetOldVpcEndPoint() const;
+
+                    /**
+                     * 设置Old VPC access point
+                     * @param _oldVpcEndPoint Old VPC access point
+                     * 
+                     */
+                    void SetOldVpcEndPoint(const std::string& _oldVpcEndPoint);
+
+                    /**
+                     * 判断参数 OldVpcEndPoint 是否已赋值
+                     * @return OldVpcEndPoint 是否已赋值
+                     * 
+                     */
+                    bool OldVpcEndPointHasBeenSet() const;
 
                     /**
                      * 获取Number of namespaces
@@ -650,13 +692,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
+                     * 获取Old support network Pulsar access point
+                     * @return OldInternalPulsarEndPoint Old support network Pulsar access point
+                     * 
+                     */
+                    std::string GetOldInternalPulsarEndPoint() const;
+
+                    /**
+                     * 设置Old support network Pulsar access point
+                     * @param _oldInternalPulsarEndPoint Old support network Pulsar access point
+                     * 
+                     */
+                    void SetOldInternalPulsarEndPoint(const std::string& _oldInternalPulsarEndPoint);
+
+                    /**
+                     * 判断参数 OldInternalPulsarEndPoint 是否已赋值
+                     * @return OldInternalPulsarEndPoint 是否已赋值
+                     * 
+                     */
+                    bool OldInternalPulsarEndPointHasBeenSet() const;
+
+                    /**
+                     * 获取Old support network HTTP access point
+                     * @return OldInternalHttpEndPoint Old support network HTTP access point
+                     * 
+                     */
+                    std::string GetOldInternalHttpEndPoint() const;
+
+                    /**
+                     * 设置Old support network HTTP access point
+                     * @param _oldInternalHttpEndPoint Old support network HTTP access point
+                     * 
+                     */
+                    void SetOldInternalHttpEndPoint(const std::string& _oldInternalHttpEndPoint);
+
+                    /**
+                     * 判断参数 OldInternalHttpEndPoint 是否已赋值
+                     * @return OldInternalHttpEndPoint 是否已赋值
+                     * 
+                     */
+                    bool OldInternalHttpEndPointHasBeenSet() const;
+
+                    /**
                      * 获取Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PayMode Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -665,11 +749,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     /**
                      * 设置Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _payMode Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -849,11 +933,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_publicEndPointHasBeenSet;
 
                     /**
+                     * Old public network access point
+                     */
+                    std::string m_oldPublicEndPoint;
+                    bool m_oldPublicEndPointHasBeenSet;
+
+                    /**
                      * VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcEndPoint;
                     bool m_vpcEndPointHasBeenSet;
+
+                    /**
+                     * Old VPC access point
+                     */
+                    std::string m_oldVpcEndPoint;
+                    bool m_oldVpcEndPointHasBeenSet;
 
                     /**
                      * Number of namespaces
@@ -926,9 +1022,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_tagsHasBeenSet;
 
                     /**
+                     * Old support network Pulsar access point
+                     */
+                    std::string m_oldInternalPulsarEndPoint;
+                    bool m_oldInternalPulsarEndPointHasBeenSet;
+
+                    /**
+                     * Old support network HTTP access point
+                     */
+                    std::string m_oldInternalHttpEndPoint;
+                    bool m_oldInternalHttpEndPointHasBeenSet;
+
+                    /**
                      * Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_payMode;

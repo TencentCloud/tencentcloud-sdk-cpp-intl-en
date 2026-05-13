@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Name
-                     * @return ClusterName Cluster Name
+                     * 获取
+                     * @return ClusterName 
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster Name
-                     * @param _clusterName Cluster Name
+                     * 设置
+                     * @param _clusterName 
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Region Information
-                     * @return Region Region Information
+                     * 获取
+                     * @return Region 
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region Information
-                     * @param _region Region Information
+                     * 设置
+                     * @param _region 
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取VPC and network information
-                     * @return Vpcs VPC and network information
+                     * 获取
+                     * @return Vpcs 
                      * 
                      */
                     std::vector<VpcEndpointInfo> GetVpcs() const;
 
                     /**
-                     * 设置VPC and network information
-                     * @param _vpcs VPC and network information
+                     * 设置
+                     * @param _vpcs 
                      * 
                      */
                     void SetVpcs(const std::vector<VpcEndpointInfo>& _vpcs);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Virtual Host Quantity
-                     * @return VirtualHostNumber Virtual Host Quantity
+                     * 获取
+                     * @return VirtualHostNumber 
                      * 
                      */
                     int64_t GetVirtualHostNumber() const;
 
                     /**
-                     * 设置Virtual Host Quantity
-                     * @param _virtualHostNumber Virtual Host Quantity
+                     * 设置
+                     * @param _virtualHostNumber 
                      * 
                      */
                     void SetVirtualHostNumber(const int64_t& _virtualHostNumber);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool VirtualHostNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of Queues
-                     * @return QueueNumber Number of Queues
+                     * 获取
+                     * @return QueueNumber 
                      * 
                      */
                     int64_t GetQueueNumber() const;
 
                     /**
-                     * 设置Number of Queues
-                     * @param _queueNumber Number of Queues
+                     * 设置
+                     * @param _queueNumber 
                      * 
                      */
                     void SetQueueNumber(const int64_t& _queueNumber);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool QueueNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages produced per second Unit: messages/second
-                     * @return MessagePublishRate Number of messages produced per second Unit: messages/second
+                     * 获取
+                     * @return MessagePublishRate 
                      * 
                      */
                     double GetMessagePublishRate() const;
 
                     /**
-                     * 设置Number of messages produced per second Unit: messages/second
-                     * @param _messagePublishRate Number of messages produced per second Unit: messages/second
+                     * 设置
+                     * @param _messagePublishRate 
                      * 
                      */
                     void SetMessagePublishRate(const double& _messagePublishRate);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool MessagePublishRateHasBeenSet() const;
 
                     /**
-                     * 获取Number of backlogged messages Unit: messages
-                     * @return MessageStackNumber Number of backlogged messages Unit: messages
+                     * 获取
+                     * @return MessageStackNumber 
                      * 
                      */
                     int64_t GetMessageStackNumber() const;
 
                     /**
-                     * 设置Number of backlogged messages Unit: messages
-                     * @param _messageStackNumber Number of backlogged messages Unit: messages
+                     * 设置
+                     * @param _messageStackNumber 
                      * 
                      */
                     void SetMessageStackNumber(const int64_t& _messageStackNumber);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Channel Count
-                     * @return ChannelNumber Channel Count
+                     * 获取
+                     * @return ChannelNumber 
                      * 
                      */
                     int64_t GetChannelNumber() const;
 
                     /**
-                     * 设置Channel Count
-                     * @param _channelNumber Channel Count
+                     * 设置
+                     * @param _channelNumber 
                      * 
                      */
                     void SetChannelNumber(const int64_t& _channelNumber);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool ChannelNumberHasBeenSet() const;
 
                     /**
-                     * 获取Connection Count
-                     * @return ConnectionNumber Connection Count
+                     * 获取
+                     * @return ConnectionNumber 
                      * 
                      */
                     int64_t GetConnectionNumber() const;
 
                     /**
-                     * 设置Connection Count
-                     * @param _connectionNumber Connection Count
+                     * 设置
+                     * @param _connectionNumber 
                      * 
                      */
                     void SetConnectionNumber(const int64_t& _connectionNumber);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool ConnectionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Consumer Count
-                     * @return ConsumerNumber Consumer Count
+                     * 获取
+                     * @return ConsumerNumber 
                      * 
                      */
                     int64_t GetConsumerNumber() const;
 
                     /**
-                     * 设置Consumer Count
-                     * @param _consumerNumber Consumer Count
+                     * 设置
+                     * @param _consumerNumber 
                      * 
                      */
                     void SetConsumerNumber(const int64_t& _consumerNumber);
@@ -364,15 +364,15 @@ namespace TencentCloud
                     bool ConsumerNumberHasBeenSet() const;
 
                     /**
-                     * 获取Exchange Count
-                     * @return ExchangeNumber Exchange Count
+                     * 获取
+                     * @return ExchangeNumber 
                      * 
                      */
                     int64_t GetExchangeNumber() const;
 
                     /**
-                     * 设置Exchange Count
-                     * @param _exchangeNumber Exchange Count
+                     * 设置
+                     * @param _exchangeNumber 
                      * 
                      */
                     void SetExchangeNumber(const int64_t& _exchangeNumber);
@@ -640,6 +640,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnableDeletionProtectionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether there is a risk of vhost without mirror queue enabled
+                     * @return MirroredQueueRisk Whether there is a risk of vhost without mirror queue enabled
+                     * 
+                     */
+                    bool GetMirroredQueueRisk() const;
+
+                    /**
+                     * 设置Whether there is a risk of vhost without mirror queue enabled
+                     * @param _mirroredQueueRisk Whether there is a risk of vhost without mirror queue enabled
+                     * 
+                     */
+                    void SetMirroredQueueRisk(const bool& _mirroredQueueRisk);
+
+                    /**
+                     * 判断参数 MirroredQueueRisk 是否已赋值
+                     * @return MirroredQueueRisk 是否已赋值
+                     * 
+                     */
+                    bool MirroredQueueRiskHasBeenSet() const;
+
+                    /**
+                     * 获取whether to indicate risk
+                     * @return EnableRiskWarning whether to indicate risk
+                     * 
+                     */
+                    bool GetEnableRiskWarning() const;
+
+                    /**
+                     * 设置whether to indicate risk
+                     * @param _enableRiskWarning whether to indicate risk
+                     * 
+                     */
+                    void SetEnableRiskWarning(const bool& _enableRiskWarning);
+
+                    /**
+                     * 判断参数 EnableRiskWarning 是否已赋值
+                     * @return EnableRiskWarning 是否已赋值
+                     * 
+                     */
+                    bool EnableRiskWarningHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout period for consumption
+                     * @return ConsumeTimeout Timeout period for consumption
+                     * 
+                     */
+                    uint64_t GetConsumeTimeout() const;
+
+                    /**
+                     * 设置Timeout period for consumption
+                     * @param _consumeTimeout Timeout period for consumption
+                     * 
+                     */
+                    void SetConsumeTimeout(const uint64_t& _consumeTimeout);
+
+                    /**
+                     * 判断参数 ConsumeTimeout 是否已赋值
+                     * @return ConsumeTimeout 是否已赋值
+                     * 
+                     */
+                    bool ConsumeTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of channels
+                     * @return ChannelMax Maximum number of channels
+                     * 
+                     */
+                    uint64_t GetChannelMax() const;
+
+                    /**
+                     * 设置Maximum number of channels
+                     * @param _channelMax Maximum number of channels
+                     * 
+                     */
+                    void SetChannelMax(const uint64_t& _channelMax);
+
+                    /**
+                     * 判断参数 ChannelMax 是否已赋值
+                     * @return ChannelMax 是否已赋值
+                     * 
+                     */
+                    bool ChannelMaxHasBeenSet() const;
+
                 private:
 
                     /**
@@ -649,13 +733,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster Name
+                     * 
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Region Information
+                     * 
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -673,7 +757,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * VPC and network information
+                     * 
                      */
                     std::vector<VpcEndpointInfo> m_vpcs;
                     bool m_vpcsHasBeenSet;
@@ -685,25 +769,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Virtual Host Quantity
+                     * 
                      */
                     int64_t m_virtualHostNumber;
                     bool m_virtualHostNumberHasBeenSet;
 
                     /**
-                     * Number of Queues
+                     * 
                      */
                     int64_t m_queueNumber;
                     bool m_queueNumberHasBeenSet;
 
                     /**
-                     * Number of messages produced per second Unit: messages/second
+                     * 
                      */
                     double m_messagePublishRate;
                     bool m_messagePublishRateHasBeenSet;
 
                     /**
-                     * Number of backlogged messages Unit: messages
+                     * 
                      */
                     int64_t m_messageStackNumber;
                     bool m_messageStackNumberHasBeenSet;
@@ -715,25 +799,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Channel Count
+                     * 
                      */
                     int64_t m_channelNumber;
                     bool m_channelNumberHasBeenSet;
 
                     /**
-                     * Connection Count
+                     * 
                      */
                     int64_t m_connectionNumber;
                     bool m_connectionNumberHasBeenSet;
 
                     /**
-                     * Consumer Count
+                     * 
                      */
                     int64_t m_consumerNumber;
                     bool m_consumerNumberHasBeenSet;
 
                     /**
-                     * Exchange Count
+                     * 
                      */
                     int64_t m_exchangeNumber;
                     bool m_exchangeNumberHasBeenSet;
@@ -810,6 +894,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_enableDeletionProtection;
                     bool m_enableDeletionProtectionHasBeenSet;
+
+                    /**
+                     * Whether there is a risk of vhost without mirror queue enabled
+                     */
+                    bool m_mirroredQueueRisk;
+                    bool m_mirroredQueueRiskHasBeenSet;
+
+                    /**
+                     * whether to indicate risk
+                     */
+                    bool m_enableRiskWarning;
+                    bool m_enableRiskWarningHasBeenSet;
+
+                    /**
+                     * Timeout period for consumption
+                     */
+                    uint64_t m_consumeTimeout;
+                    bool m_consumeTimeoutHasBeenSet;
+
+                    /**
+                     * Maximum number of channels
+                     */
+                    uint64_t m_channelMax;
+                    bool m_channelMaxHasBeenSet;
 
                 };
             }

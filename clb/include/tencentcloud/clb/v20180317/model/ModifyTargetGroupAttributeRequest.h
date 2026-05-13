@@ -215,6 +215,27 @@ namespace TencentCloud
                      */
                     bool SessionExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SnatEnable 
+                     * 
+                     */
+                    bool GetSnatEnable() const;
+
+                    /**
+                     * 设置
+                     * @param _snatEnable 
+                     * 
+                     */
+                    void SetSnatEnable(const bool& _snatEnable);
+
+                    /**
+                     * 判断参数 SnatEnable 是否已赋值
+                     * @return SnatEnable 是否已赋值
+                     * 
+                     */
+                    bool SnatEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -265,6 +286,12 @@ namespace TencentCloud
                      */
                     uint64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_snatEnable;
+                    bool m_snatEnableHasBeenSet;
 
                 };
             }

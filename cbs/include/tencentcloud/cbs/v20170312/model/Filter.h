@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key-value pair filters for conditional filtering queries.
+                * Filter criteria
                 */
                 class Filter : public AbstractModel
                 {

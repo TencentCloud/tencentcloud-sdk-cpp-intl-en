@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
-                     * @return InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * 获取Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * @return InstanceChargeType Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
-                     * @param _instanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * 设置Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * @param _instanceChargeType Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
-                     * @return DiskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * 获取List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
+                     * @return DiskIds List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
-                     * @param _diskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * 设置List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
+                     * @param _diskIds List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mapping between orders and CKafka instances for monthly subscribed and pay-as-you-go instance APIs.
+                * Mapping between orders and CKafka instances for yearly/monthly subscribed and pay-as-you-go instance APIs.
                 */
                 class DealInstanceDTO : public AbstractModel
                 {

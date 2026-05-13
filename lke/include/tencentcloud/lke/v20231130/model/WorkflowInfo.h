@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lke/v20231130/model/Content.h>
 
 
 namespace TencentCloud
@@ -35,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Workflow Information
+                * 
                 */
                 class WorkflowInfo : public AbstractModel
                 {
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Workflow ID
-                     * @return WorkflowId Workflow ID
+                     * 获取
+                     * @return WorkflowId 
                      * 
                      */
                     std::string GetWorkflowId() const;
 
                     /**
-                     * 设置Workflow ID
-                     * @param _workflowId Workflow ID
+                     * 设置
+                     * @param _workflowId 
                      * 
                      */
                     void SetWorkflowId(const std::string& _workflowId);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool WorkflowIdHasBeenSet() const;
 
                     /**
-                     * 获取Workflow Name
-                     * @return WorkflowName Workflow Name
+                     * 获取
+                     * @return WorkflowName 
                      * 
                      */
                     std::string GetWorkflowName() const;
 
                     /**
-                     * 设置Workflow Name
-                     * @param _workflowName Workflow Name
+                     * 设置
+                     * @param _workflowName 
                      * 
                      */
                     void SetWorkflowName(const std::string& _workflowName);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool WorkflowNameHasBeenSet() const;
 
                     /**
-                     * 获取Workflow Run ID
-                     * @return WorkflowRunId Workflow Run ID
+                     * 获取
+                     * @return WorkflowRunId 
                      * 
                      */
                     std::string GetWorkflowRunId() const;
 
                     /**
-                     * 设置Workflow Run ID
-                     * @param _workflowRunId Workflow Run ID
+                     * 设置
+                     * @param _workflowRunId 
                      * 
                      */
                     void SetWorkflowRunId(const std::string& _workflowRunId);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool WorkflowRunIdHasBeenSet() const;
 
                     /**
-                     * 获取Tab
-                     * @return OptionCards Tab
+                     * 获取
+                     * @return OptionCards 
                      * 
                      */
                     std::vector<std::string> GetOptionCards() const;
 
                     /**
-                     * 设置Tab
-                     * @param _optionCards Tab
+                     * 设置
+                     * @param _optionCards 
                      * 
                      */
                     void SetOptionCards(const std::vector<std::string>& _optionCards);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool OptionCardsHasBeenSet() const;
 
                     /**
-                     * 获取Multi-bubble output results
-                     * @return Outputs Multi-bubble output results
+                     * 获取
+                     * @return Outputs 
                      * 
                      */
                     std::vector<std::string> GetOutputs() const;
 
                     /**
-                     * 设置Multi-bubble output results
-                     * @param _outputs Multi-bubble output results
+                     * 设置
+                     * @param _outputs 
                      * 
                      */
                     void SetOutputs(const std::vector<std::string>& _outputs);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool OutputsHasBeenSet() const;
 
                     /**
-                     * 获取Workflow Publish Time, unix timestamp
-                     * @return WorkflowReleaseTime Workflow Publish Time, unix timestamp
+                     * 获取
+                     * @return WorkflowReleaseTime 
                      * 
                      */
                     std::string GetWorkflowReleaseTime() const;
 
                     /**
-                     * 设置Workflow Publish Time, unix timestamp
-                     * @param _workflowReleaseTime Workflow Publish Time, unix timestamp
+                     * 设置
+                     * @param _workflowReleaseTime 
                      * 
                      */
                     void SetWorkflowReleaseTime(const std::string& _workflowReleaseTime);
@@ -172,43 +173,97 @@ namespace TencentCloud
                      */
                     bool WorkflowReleaseTimeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Contents 
+                     * 
+                     */
+                    std::vector<Content> GetContents() const;
+
+                    /**
+                     * 设置
+                     * @param _contents 
+                     * 
+                     */
+                    void SetContents(const std::vector<Content>& _contents);
+
+                    /**
+                     * 判断参数 Contents 是否已赋值
+                     * @return Contents 是否已赋值
+                     * 
+                     */
+                    bool ContentsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OptionMode 
+                     * 
+                     */
+                    int64_t GetOptionMode() const;
+
+                    /**
+                     * 设置
+                     * @param _optionMode 
+                     * 
+                     */
+                    void SetOptionMode(const int64_t& _optionMode);
+
+                    /**
+                     * 判断参数 OptionMode 是否已赋值
+                     * @return OptionMode 是否已赋值
+                     * 
+                     */
+                    bool OptionModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Workflow ID
+                     * 
                      */
                     std::string m_workflowId;
                     bool m_workflowIdHasBeenSet;
 
                     /**
-                     * Workflow Name
+                     * 
                      */
                     std::string m_workflowName;
                     bool m_workflowNameHasBeenSet;
 
                     /**
-                     * Workflow Run ID
+                     * 
                      */
                     std::string m_workflowRunId;
                     bool m_workflowRunIdHasBeenSet;
 
                     /**
-                     * Tab
+                     * 
                      */
                     std::vector<std::string> m_optionCards;
                     bool m_optionCardsHasBeenSet;
 
                     /**
-                     * Multi-bubble output results
+                     * 
                      */
                     std::vector<std::string> m_outputs;
                     bool m_outputsHasBeenSet;
 
                     /**
-                     * Workflow Publish Time, unix timestamp
+                     * 
                      */
                     std::string m_workflowReleaseTime;
                     bool m_workflowReleaseTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<Content> m_contents;
+                    bool m_contentsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_optionMode;
+                    bool m_optionModeHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Execution policy for scheduled snapshot. It indicates that a scheduled snapshot policy is executed at the specified `Hour` in the days specified by `DayOfWeek` or `DayOfMonth` or once every `IntervalDays` days. Note: `DayOfWeek`, `DayOfMonth`, and `IntervalDays` are mutually exclusive, and only one policy rule can be set.
+                * Describes the execution strategy of regular snapshots. it can be understood as executing this scheduled snapshot policy at the moment specified by Hour on the days designated by DayOfWeek/DayOfMonth or at the interval set by IntervalDays. note: DayOfWeek/DayOfMonth/IntervalDays are mutual exclusion rules, required and only one policy rule can be set. if mutual exclusion rules are imported at the same time, only one takes effect, with priority following the sequence listed in the previous context: for example, if all three rules are set, only DayOfWeek comes into effect.
                 */
                 class Policy : public AbstractModel
                 {

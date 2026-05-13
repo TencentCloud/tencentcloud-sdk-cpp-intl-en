@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
-                     * @return InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+                     * 获取For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
+                     * @return InstanceId For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
-                     * @param _instanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+                     * 设置For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
+                     * @param _instanceId For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+                     * For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

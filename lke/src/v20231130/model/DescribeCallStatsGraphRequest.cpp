@@ -31,7 +31,11 @@ DescribeCallStatsGraphRequest::DescribeCallStatsGraphRequest() :
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_appBizIdsHasBeenSet(false),
-    m_subScenesHasBeenSet(false)
+    m_subScenesHasBeenSet(false),
+    m_appTypeHasBeenSet(false),
+    m_spaceIdHasBeenSet(false),
+    m_statStartTimeHasBeenSet(false),
+    m_statEndTimeHasBeenSet(false)
 {
 }
 
@@ -127,6 +131,38 @@ string DescribeCallStatsGraphRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_appTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_appType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_spaceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpaceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_spaceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_statStartTime, allocator);
+    }
+
+    if (m_statEndTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatEndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_statEndTime, allocator);
     }
 
 
@@ -279,6 +315,70 @@ void DescribeCallStatsGraphRequest::SetSubScenes(const vector<string>& _subScene
 bool DescribeCallStatsGraphRequest::SubScenesHasBeenSet() const
 {
     return m_subScenesHasBeenSet;
+}
+
+string DescribeCallStatsGraphRequest::GetAppType() const
+{
+    return m_appType;
+}
+
+void DescribeCallStatsGraphRequest::SetAppType(const string& _appType)
+{
+    m_appType = _appType;
+    m_appTypeHasBeenSet = true;
+}
+
+bool DescribeCallStatsGraphRequest::AppTypeHasBeenSet() const
+{
+    return m_appTypeHasBeenSet;
+}
+
+string DescribeCallStatsGraphRequest::GetSpaceId() const
+{
+    return m_spaceId;
+}
+
+void DescribeCallStatsGraphRequest::SetSpaceId(const string& _spaceId)
+{
+    m_spaceId = _spaceId;
+    m_spaceIdHasBeenSet = true;
+}
+
+bool DescribeCallStatsGraphRequest::SpaceIdHasBeenSet() const
+{
+    return m_spaceIdHasBeenSet;
+}
+
+int64_t DescribeCallStatsGraphRequest::GetStatStartTime() const
+{
+    return m_statStartTime;
+}
+
+void DescribeCallStatsGraphRequest::SetStatStartTime(const int64_t& _statStartTime)
+{
+    m_statStartTime = _statStartTime;
+    m_statStartTimeHasBeenSet = true;
+}
+
+bool DescribeCallStatsGraphRequest::StatStartTimeHasBeenSet() const
+{
+    return m_statStartTimeHasBeenSet;
+}
+
+int64_t DescribeCallStatsGraphRequest::GetStatEndTime() const
+{
+    return m_statEndTime;
+}
+
+void DescribeCallStatsGraphRequest::SetStatEndTime(const int64_t& _statEndTime)
+{
+    m_statEndTime = _statEndTime;
+    m_statEndTimeHasBeenSet = true;
+}
+
+bool DescribeCallStatsGraphRequest::StatEndTimeHasBeenSet() const
+{
+    return m_statEndTimeHasBeenSet;
 }
 
 

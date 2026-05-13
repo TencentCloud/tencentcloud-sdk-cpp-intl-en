@@ -121,21 +121,21 @@ How to Obtain It:</br>
                     /**
                      * 获取Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
                      * @return VisitorLabels Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
-                     * 
+                     * @deprecated
                      */
                     std::vector<GetWsTokenReq_Label> GetVisitorLabels() const;
 
                     /**
                      * 设置Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
                      * @param _visitorLabels Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
-                     * 
+                     * @deprecated
                      */
                     void SetVisitorLabels(const std::vector<GetWsTokenReq_Label>& _visitorLabels);
 
                     /**
                      * 判断参数 VisitorLabels 是否已赋值
                      * @return VisitorLabels 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VisitorLabelsHasBeenSet() const;
 

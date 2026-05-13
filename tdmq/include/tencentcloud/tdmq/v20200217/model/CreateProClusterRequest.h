@@ -99,31 +99,6 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @return StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * 
-                     */
-                    int64_t GetStorageSize() const;
-
-                    /**
-                     * 设置Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @param _storageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetStorageSize(const int64_t& _storageSize);
-
-                    /**
-                     * 判断参数 StorageSize 是否已赋值
-                     * @return StorageSize 是否已赋值
-                     * 
-                     */
-                    bool StorageSizeHasBeenSet() const;
-
-                    /**
                      * 获取`1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.
@@ -216,6 +191,31 @@ false. disables automatic monthly renewal.
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
+                     * 获取Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * @return StorageSize Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 
+                     */
+                    int64_t GetStorageSize() const;
+
+                    /**
+                     * 设置Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * @param _storageSize Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetStorageSize(const int64_t& _storageSize);
+
+                    /**
+                     * 判断参数 StorageSize 是否已赋值
+                     * @return StorageSize 是否已赋值
+                     * 
+                     */
+                    bool StorageSizeHasBeenSet() const;
+
+                    /**
                      * 获取Specifies the vpc network tag.
                      * @return Vpc Specifies the vpc network tag.
                      * 
@@ -275,13 +275,6 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     */
-                    int64_t m_storageSize;
-                    bool m_storageSizeHasBeenSet;
-
-                    /**
                      * `1`: true. enables automatic monthly renewal.
 
 false. disables automatic monthly renewal.
@@ -306,6 +299,13 @@ false. disables automatic monthly renewal.
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
+
+                    /**
+                     * Specifies the storage specification.
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     */
+                    int64_t m_storageSize;
+                    bool m_storageSizeHasBeenSet;
 
                     /**
                      * Specifies the vpc network tag.

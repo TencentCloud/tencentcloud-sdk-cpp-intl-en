@@ -44,14 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
-                     * @return InstanceType Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+                     * 获取<p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
+                     * @return InstanceType <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
                      * 
                      */
                     std::string GetInstanceType() const;
@@ -64,8 +58,8 @@ PLATINUM edition.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID</p>
+                     * @return InstanceId <p>Instance ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -78,8 +72,8 @@ PLATINUM edition.
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
@@ -92,8 +86,8 @@ PLATINUM edition.
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of topics
-                     * @return TopicNum Number of topics
+                     * 获取<p>Number of topics</p>
+                     * @return TopicNum <p>Number of topics</p>
                      * 
                      */
                     int64_t GetTopicNum() const;
@@ -106,8 +100,8 @@ PLATINUM edition.
                     bool TopicNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of topics per instance
-                     * @return TopicNumLimit Maximum number of topics per instance
+                     * 获取<p>Maximum number of topics per instance</p>
+                     * @return TopicNumLimit <p>Maximum number of topics per instance</p>
                      * 
                      */
                     int64_t GetTopicNumLimit() const;
@@ -120,8 +114,8 @@ PLATINUM edition.
                     bool TopicNumLimitHasBeenSet() const;
 
                     /**
-                     * 获取TPS throttle value
-                     * @return TpsLimit TPS throttle value
+                     * 获取<p>TPS throttle value</p>
+                     * @return TpsLimit <p>TPS throttle value</p>
                      * 
                      */
                     int64_t GetTpsLimit() const;
@@ -134,8 +128,8 @@ PLATINUM edition.
                     bool TpsLimitHasBeenSet() const;
 
                     /**
-                     * 获取Creation time, in seconds
-                     * @return CreatedTime Creation time, in seconds
+                     * 获取<p>createTime, in seconds</p>
+                     * @return CreatedTime <p>createTime, in seconds</p>
                      * 
                      */
                     int64_t GetCreatedTime() const;
@@ -148,8 +142,8 @@ PLATINUM edition.
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Remark Remarks
+                     * 获取<p>Remarks</p>
+                     * @return Remark <p>Remarks</p>
                      * 
                      */
                     std::string GetRemark() const;
@@ -162,8 +156,8 @@ PLATINUM edition.
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
-                     * @return InstanceStatus Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+                     * 获取<p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
+                     * @return InstanceStatus <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
                      * 
                      */
                     std::string GetInstanceStatus() const;
@@ -176,8 +170,8 @@ PLATINUM edition.
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the instance specification.
-                     * @return SkuCode Specifies the instance specification.
+                     * 获取<p>Instance specification</p>
+                     * @return SkuCode <p>Instance specification</p>
                      * 
                      */
                     std::string GetSkuCode() const;
@@ -190,8 +184,8 @@ PLATINUM edition.
                     bool SkuCodeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of subscriptions for a single client.
-                     * @return MaxSubscriptionPerClient Maximum number of subscriptions for a single client.
+                     * 获取<p>Maximum number of subscriptions for a single client</p>
+                     * @return MaxSubscriptionPerClient <p>Maximum number of subscriptions for a single client</p>
                      * 
                      */
                     int64_t GetMaxSubscriptionPerClient() const;
@@ -204,8 +198,8 @@ PLATINUM edition.
                     bool MaxSubscriptionPerClientHasBeenSet() const;
 
                     /**
-                     * 获取Number of authorization rules.
-                     * @return AuthorizationPolicyLimit Number of authorization rules.
+                     * 获取<p>Number of authorization rule entries</p>
+                     * @return AuthorizationPolicyLimit <p>Number of authorization rule entries</p>
                      * 
                      */
                     int64_t GetAuthorizationPolicyLimit() const;
@@ -218,8 +212,8 @@ PLATINUM edition.
                     bool AuthorizationPolicyLimitHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of clients.
-                     * @return ClientNumLimit Maximum number of clients.
+                     * 获取<p>Number of clients cap</p>
+                     * @return ClientNumLimit <p>Number of clients cap</p>
                      * 
                      */
                     int64_t GetClientNumLimit() const;
@@ -232,12 +226,8 @@ PLATINUM edition.
                     bool ClientNumLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
-                     * @return DeviceCertificateProvisionType Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+                     * 获取<p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
+                     * @return DeviceCertificateProvisionType <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
                      * 
                      */
                     std::string GetDeviceCertificateProvisionType() const;
@@ -250,8 +240,8 @@ API: register manually through api.
                     bool DeviceCertificateProvisionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to automatically activate the device certificate during automatic registration.
-                     * @return AutomaticActivation Specifies whether to automatically activate the device certificate during automatic registration.
+                     * 获取<p>Whether to automatically activate when automatically registering a device certificate</p>
+                     * @return AutomaticActivation <p>Whether to automatically activate when automatically registering a device certificate</p>
                      * 
                      */
                     bool GetAutomaticActivation() const;
@@ -264,8 +254,8 @@ API: register manually through api.
                     bool AutomaticActivationHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
-                     * @return RenewFlag Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+                     * 获取<p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
+                     * @return RenewFlag <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
@@ -278,8 +268,8 @@ API: register manually through api.
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
-                     * @return PayMode Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+                     * 获取<p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
+                     * @return PayMode <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
                      * 
                      */
                     std::string GetPayMode() const;
@@ -292,8 +282,8 @@ API: register manually through api.
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Expiry time. millisecond-level timestamp.
-                     * @return ExpiryTime Expiry time. millisecond-level timestamp.
+                     * 获取<p>Expiry time, millisecond-level timestamp</p>
+                     * @return ExpiryTime <p>Expiry time, millisecond-level timestamp</p>
                      * 
                      */
                     int64_t GetExpiryTime() const;
@@ -306,8 +296,8 @@ API: register manually through api.
                     bool ExpiryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled destruction time. millisecond-level timestamp.
-                     * @return DestroyTime Scheduled destruction time. millisecond-level timestamp.
+                     * 获取<p>Predestruction time, millisecond-level timestamp</p>
+                     * @return DestroyTime <p>Predestruction time, millisecond-level timestamp</p>
                      * 
                      */
                     int64_t GetDestroyTime() const;
@@ -320,8 +310,8 @@ API: register manually through api.
                     bool DestroyTimeHasBeenSet() const;
 
                     /**
-                     * 获取TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
-                     * @return X509Mode TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+                     * 获取<p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
+                     * @return X509Mode <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
                      * 
                      */
                     std::string GetX509Mode() const;
@@ -334,8 +324,8 @@ API: register manually through api.
                     bool X509ModeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum Ca quota.
-                     * @return MaxCaNum Specifies the maximum Ca quota.
+                     * 获取<p>Maximum Ca quota</p>
+                     * @return MaxCaNum <p>Maximum Ca quota</p>
                      * 
                      */
                     int64_t GetMaxCaNum() const;
@@ -348,8 +338,8 @@ API: register manually through api.
                     bool MaxCaNumHasBeenSet() const;
 
                     /**
-                     * 获取FPS cert registration code.
-                     * @return RegistrationCode FPS cert registration code.
+                     * 获取<p>FPS Cert Registration Code</p>
+                     * @return RegistrationCode <p>FPS Cert Registration Code</p>
                      * 
                      */
                     std::string GetRegistrationCode() const;
@@ -362,8 +352,8 @@ API: register manually through api.
                     bool RegistrationCodeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of subscriptions for a cluster.
-                     * @return MaxSubscription Maximum number of subscriptions for a cluster.
+                     * 获取<p>Maximum number of subscriptions for a cluster</p>
+                     * @return MaxSubscription <p>Maximum number of subscriptions for a cluster</p>
                      * 
                      */
                     int64_t GetMaxSubscription() const;
@@ -376,8 +366,8 @@ API: register manually through api.
                     bool MaxSubscriptionHasBeenSet() const;
 
                     /**
-                     * 获取Authorization policy switch.
-                     * @return AuthorizationPolicy Authorization policy switch.
+                     * 获取<p>Authorization policy switch</p>
+                     * @return AuthorizationPolicy <p>Authorization policy switch</p>
                      * 
                      */
                     bool GetAuthorizationPolicy() const;
@@ -390,8 +380,8 @@ API: register manually through api.
                     bool AuthorizationPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Maximum limit of shared subscription groups.
-                     * @return SharedSubscriptionGroupLimit Maximum limit of shared subscription groups.
+                     * 获取<p>Maximum limit of shared subscription groups</p>
+                     * @return SharedSubscriptionGroupLimit <p>Maximum limit of shared subscription groups</p>
                      * 
                      */
                     int64_t GetSharedSubscriptionGroupLimit() const;
@@ -404,22 +394,22 @@ API: register manually through api.
                     bool SharedSubscriptionGroupLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the topic filter number limit for each shared subscription group.
-                     * @return MaxTopicFilterPerSharedSubscriptionGroup Specifies the topic filter number limit for each shared subscription group.
-                     * 
+                     * 获取<p>Number limit of TopicFilter in one shared subscription group</p>
+                     * @return MaxTopicFilterPerSharedSubscriptionGroup <p>Number limit of TopicFilter in one shared subscription group</p>
+                     * @deprecated
                      */
                     int64_t GetMaxTopicFilterPerSharedSubscriptionGroup() const;
 
                     /**
                      * 判断参数 MaxTopicFilterPerSharedSubscriptionGroup 是否已赋值
                      * @return MaxTopicFilterPerSharedSubscriptionGroup 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool MaxTopicFilterPerSharedSubscriptionGroupHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the limit on number of auto-subscription rules.
-                     * @return AutoSubscriptionPolicyLimit Specifies the limit on number of auto-subscription rules.
+                     * 获取<p>Limit on number of auto subscription rules</p>
+                     * @return AutoSubscriptionPolicyLimit <p>Limit on number of auto subscription rules</p>
                      * 
                      */
                     int64_t GetAutoSubscriptionPolicyLimit() const;
@@ -432,8 +422,8 @@ API: register manually through api.
                     bool AutoSubscriptionPolicyLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the number limit of TopicFilter in a single auto-subscription rule.
-                     * @return MaxTopicFilterPerAutoSubscriptionPolicy Specifies the number limit of TopicFilter in a single auto-subscription rule.
+                     * 获取<p>Number limit of TopicFilter in a single auto subscription rule</p>
+                     * @return MaxTopicFilterPerAutoSubscriptionPolicy <p>Number limit of TopicFilter in a single auto subscription rule</p>
                      * 
                      */
                     int64_t GetMaxTopicFilterPerAutoSubscriptionPolicy() const;
@@ -446,8 +436,8 @@ API: register manually through api.
                     bool MaxTopicFilterPerAutoSubscriptionPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to use the default server certificate.
-                     * @return UseDefaultServerCert Specifies whether to use the default server certificate.
+                     * 获取<p>Whether to use the default server certificate</p>
+                     * @return UseDefaultServerCert <p>Whether to use the default server certificate</p>
                      * 
                      */
                     bool GetUseDefaultServerCert() const;
@@ -460,8 +450,8 @@ API: register manually through api.
                     bool UseDefaultServerCertHasBeenSet() const;
 
                     /**
-                     * 获取Maximum allowed number of server cas.
-                     * @return TrustedCaLimit Maximum allowed number of server cas.
+                     * 获取<p>Maximum number of server CAs</p>
+                     * @return TrustedCaLimit <p>Maximum number of server CAs</p>
                      * 
                      */
                     int64_t GetTrustedCaLimit() const;
@@ -474,8 +464,8 @@ API: register manually through api.
                     bool TrustedCaLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum allowed number of server certificates.
-                     * @return ServerCertLimit Specifies the maximum allowed number of server certificates.
+                     * 获取<p>Maximum number of server certificates</p>
+                     * @return ServerCertLimit <p>Maximum number of server certificates</p>
                      * 
                      */
                     int64_t GetServerCertLimit() const;
@@ -488,8 +478,8 @@ API: register manually through api.
                     bool ServerCertLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the max level of the topic prefix.
-                     * @return TopicPrefixSlashLimit Specifies the max level of the topic prefix.
+                     * 获取<p>Max level of topic prefix</p>
+                     * @return TopicPrefixSlashLimit <p>Max level of topic prefix</p>
                      * 
                      */
                     int64_t GetTopicPrefixSlashLimit() const;
@@ -502,8 +492,8 @@ API: register manually through api.
                     bool TopicPrefixSlashLimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the speed limit for sending messages by a single client in messages per second.
-                     * @return MessageRate Specifies the speed limit for sending messages by a single client in messages per second.
+                     * 获取<p>Single client send message rate limiting, unit messages/second</p>
+                     * @return MessageRate <p>Single client send message rate limiting, unit messages/second</p>
                      * 
                      */
                     int64_t GetMessageRate() const;
@@ -516,8 +506,8 @@ API: register manually through api.
                     bool MessageRateHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
-                     * @return TransportLayerSecurity Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+                     * 获取<p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+                     * @return TransportLayerSecurity <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
                      * 
                      */
                     std::string GetTransportLayerSecurity() const;
@@ -530,8 +520,8 @@ API: register manually through api.
                     bool TransportLayerSecurityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the message property enrichment rule quota.
-                     * @return MessageEnrichmentRuleLimit Specifies the message property enrichment rule quota.
+                     * 获取<p>Message property enhancement rule quota</p>
+                     * @return MessageEnrichmentRuleLimit <p>Message property enhancement rule quota</p>
                      * 
                      */
                     int64_t GetMessageEnrichmentRuleLimit() const;
@@ -543,222 +533,237 @@ API: register manually through api.
                      */
                     bool MessageEnrichmentRuleLimitHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Maximum allowed number of blocking rules</p>
+                     * @return BlockRuleLimit <p>Maximum allowed number of blocking rules</p>
+                     * 
+                     */
+                    int64_t GetBlockRuleLimit() const;
+
+                    /**
+                     * 判断参数 BlockRuleLimit 是否已赋值
+                     * @return BlockRuleLimit 是否已赋值
+                     * 
+                     */
+                    bool BlockRuleLimitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+                     * <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Number of topics
+                     * <p>Number of topics</p>
                      */
                     int64_t m_topicNum;
                     bool m_topicNumHasBeenSet;
 
                     /**
-                     * Maximum number of topics per instance
+                     * <p>Maximum number of topics per instance</p>
                      */
                     int64_t m_topicNumLimit;
                     bool m_topicNumLimitHasBeenSet;
 
                     /**
-                     * TPS throttle value
+                     * <p>TPS throttle value</p>
                      */
                     int64_t m_tpsLimit;
                     bool m_tpsLimitHasBeenSet;
 
                     /**
-                     * Creation time, in seconds
+                     * <p>createTime, in seconds</p>
                      */
                     int64_t m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Remarks
+                     * <p>Remarks</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+                     * <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Specifies the instance specification.
+                     * <p>Instance specification</p>
                      */
                     std::string m_skuCode;
                     bool m_skuCodeHasBeenSet;
 
                     /**
-                     * Maximum number of subscriptions for a single client.
+                     * <p>Maximum number of subscriptions for a single client</p>
                      */
                     int64_t m_maxSubscriptionPerClient;
                     bool m_maxSubscriptionPerClientHasBeenSet;
 
                     /**
-                     * Number of authorization rules.
+                     * <p>Number of authorization rule entries</p>
                      */
                     int64_t m_authorizationPolicyLimit;
                     bool m_authorizationPolicyLimitHasBeenSet;
 
                     /**
-                     * Maximum number of clients.
+                     * <p>Number of clients cap</p>
                      */
                     int64_t m_clientNumLimit;
                     bool m_clientNumLimitHasBeenSet;
 
                     /**
-                     * Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+                     * <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
                      */
                     std::string m_deviceCertificateProvisionType;
                     bool m_deviceCertificateProvisionTypeHasBeenSet;
 
                     /**
-                     * Specifies whether to automatically activate the device certificate during automatic registration.
+                     * <p>Whether to automatically activate when automatically registering a device certificate</p>
                      */
                     bool m_automaticActivation;
                     bool m_automaticActivationHasBeenSet;
 
                     /**
-                     * Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+                     * <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+                     * <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Expiry time. millisecond-level timestamp.
+                     * <p>Expiry time, millisecond-level timestamp</p>
                      */
                     int64_t m_expiryTime;
                     bool m_expiryTimeHasBeenSet;
 
                     /**
-                     * Scheduled destruction time. millisecond-level timestamp.
+                     * <p>Predestruction time, millisecond-level timestamp</p>
                      */
                     int64_t m_destroyTime;
                     bool m_destroyTimeHasBeenSet;
 
                     /**
-                     * TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+                     * <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
                      */
                     std::string m_x509Mode;
                     bool m_x509ModeHasBeenSet;
 
                     /**
-                     * Specifies the maximum Ca quota.
+                     * <p>Maximum Ca quota</p>
                      */
                     int64_t m_maxCaNum;
                     bool m_maxCaNumHasBeenSet;
 
                     /**
-                     * FPS cert registration code.
+                     * <p>FPS Cert Registration Code</p>
                      */
                     std::string m_registrationCode;
                     bool m_registrationCodeHasBeenSet;
 
                     /**
-                     * Maximum number of subscriptions for a cluster.
+                     * <p>Maximum number of subscriptions for a cluster</p>
                      */
                     int64_t m_maxSubscription;
                     bool m_maxSubscriptionHasBeenSet;
 
                     /**
-                     * Authorization policy switch.
+                     * <p>Authorization policy switch</p>
                      */
                     bool m_authorizationPolicy;
                     bool m_authorizationPolicyHasBeenSet;
 
                     /**
-                     * Maximum limit of shared subscription groups.
+                     * <p>Maximum limit of shared subscription groups</p>
                      */
                     int64_t m_sharedSubscriptionGroupLimit;
                     bool m_sharedSubscriptionGroupLimitHasBeenSet;
 
                     /**
-                     * Specifies the topic filter number limit for each shared subscription group.
+                     * <p>Number limit of TopicFilter in one shared subscription group</p>
                      */
                     int64_t m_maxTopicFilterPerSharedSubscriptionGroup;
                     bool m_maxTopicFilterPerSharedSubscriptionGroupHasBeenSet;
 
                     /**
-                     * Specifies the limit on number of auto-subscription rules.
+                     * <p>Limit on number of auto subscription rules</p>
                      */
                     int64_t m_autoSubscriptionPolicyLimit;
                     bool m_autoSubscriptionPolicyLimitHasBeenSet;
 
                     /**
-                     * Specifies the number limit of TopicFilter in a single auto-subscription rule.
+                     * <p>Number limit of TopicFilter in a single auto subscription rule</p>
                      */
                     int64_t m_maxTopicFilterPerAutoSubscriptionPolicy;
                     bool m_maxTopicFilterPerAutoSubscriptionPolicyHasBeenSet;
 
                     /**
-                     * Specifies whether to use the default server certificate.
+                     * <p>Whether to use the default server certificate</p>
                      */
                     bool m_useDefaultServerCert;
                     bool m_useDefaultServerCertHasBeenSet;
 
                     /**
-                     * Maximum allowed number of server cas.
+                     * <p>Maximum number of server CAs</p>
                      */
                     int64_t m_trustedCaLimit;
                     bool m_trustedCaLimitHasBeenSet;
 
                     /**
-                     * Specifies the maximum allowed number of server certificates.
+                     * <p>Maximum number of server certificates</p>
                      */
                     int64_t m_serverCertLimit;
                     bool m_serverCertLimitHasBeenSet;
 
                     /**
-                     * Specifies the max level of the topic prefix.
+                     * <p>Max level of topic prefix</p>
                      */
                     int64_t m_topicPrefixSlashLimit;
                     bool m_topicPrefixSlashLimitHasBeenSet;
 
                     /**
-                     * Specifies the speed limit for sending messages by a single client in messages per second.
+                     * <p>Single client send message rate limiting, unit messages/second</p>
                      */
                     int64_t m_messageRate;
                     bool m_messageRateHasBeenSet;
 
                     /**
-                     * Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+                     * <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
                      */
                     std::string m_transportLayerSecurity;
                     bool m_transportLayerSecurityHasBeenSet;
 
                     /**
-                     * Specifies the message property enrichment rule quota.
+                     * <p>Message property enhancement rule quota</p>
                      */
                     int64_t m_messageEnrichmentRuleLimit;
                     bool m_messageEnrichmentRuleLimitHasBeenSet;
+
+                    /**
+                     * <p>Maximum allowed number of blocking rules</p>
+                     */
+                    int64_t m_blockRuleLimit;
+                    bool m_blockRuleLimitHasBeenSet;
 
                 };
             }

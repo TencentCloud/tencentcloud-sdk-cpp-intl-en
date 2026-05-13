@@ -108,42 +108,42 @@ namespace TencentCloud
                     /**
                      * 获取Start timestamp, in seconds.
                      * @return StartTime Start timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start timestamp, in seconds.
                      * @param _startTime Start timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End timestamp, in seconds.
                      * @return EndTime End timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End timestamp, in seconds.
                      * @param _endTime End timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AppBizIdsHasBeenSet() const;
 
                     /**
-                     * 获取Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
-                     * @return AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+                     * 获取
+                     * @return AppType 
                      * 
                      */
                     std::string GetAppType() const;
 
                     /**
-                     * 设置Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
-                     * @param _appType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+                     * 设置
+                     * @param _appType 
                      * 
                      */
                     void SetAppType(const std::string& _appType);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool AppTypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter Sub-scenarios
-                     * @return SubScenes Filter Sub-scenarios
+                     * 获取
+                     * @return SubScenes 
                      * 
                      */
                     std::vector<std::string> GetSubScenes() const;
 
                     /**
-                     * 设置Filter Sub-scenarios
-                     * @param _subScenes Filter Sub-scenarios
+                     * 设置
+                     * @param _subScenes 
                      * 
                      */
                     void SetSubScenes(const std::vector<std::string>& _subScenes);
@@ -249,13 +249,13 @@ namespace TencentCloud
                     bool m_appBizIdsHasBeenSet;
 
                     /**
-                     * Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+                     * 
                      */
                     std::string m_appType;
                     bool m_appTypeHasBeenSet;
 
                     /**
-                     * Filter Sub-scenarios
+                     * 
                      */
                     std::vector<std::string> m_subScenes;
                     bool m_subScenesHasBeenSet;

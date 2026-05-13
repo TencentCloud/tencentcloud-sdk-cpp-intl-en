@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
-                     * @return TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+                     * 获取Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
+                     * @return TopicName Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
-                     * @param _topicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+                     * 设置Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
+                     * @param _topicName Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -172,7 +172,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+                     * Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;

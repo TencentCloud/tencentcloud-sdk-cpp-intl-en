@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
-                     * @return InquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+                     * 获取INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
+                     * @return InquiryType INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
                      * 
                      */
                     std::string GetInquiryType() const;
 
                     /**
-                     * 设置Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
-                     * @param _inquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+                     * 设置INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
+                     * @param _inquiryType INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
                      * 
                      */
                     void SetInquiryType(const std::string& _inquiryType);
@@ -62,27 +62,6 @@ namespace TencentCloud
                      * 
                      */
                     bool InquiryTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-                     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-                     * 
-                     */
-                    std::vector<std::string> GetZones() const;
-
-                    /**
-                     * 设置Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-                     * @param _zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-                     * 
-                     */
-                    void SetZones(const std::vector<std::string>& _zones);
-
-                    /**
-                     * 判断参数 Zones 是否已赋值
-                     * @return Zones 是否已赋值
-                     * 
-                     */
-                    bool ZonesHasBeenSet() const;
 
                     /**
                      * 获取Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
@@ -106,48 +85,6 @@ namespace TencentCloud
                     bool DiskChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-                     * @return DiskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-                     * 
-                     */
-                    std::vector<std::string> GetDiskTypes() const;
-
-                    /**
-                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-                     * @param _diskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-                     * 
-                     */
-                    void SetDiskTypes(const std::vector<std::string>& _diskTypes);
-
-                    /**
-                     * 判断参数 DiskTypes 是否已赋值
-                     * @return DiskTypes 是否已赋值
-                     * 
-                     */
-                    bool DiskTypesHasBeenSet() const;
-
-                    /**
-                     * 获取The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @return DiskUsage The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * 
-                     */
-                    std::string GetDiskUsage() const;
-
-                    /**
-                     * 设置The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @param _diskUsage The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * 
-                     */
-                    void SetDiskUsage(const std::string& _diskUsage);
-
-                    /**
-                     * 判断参数 DiskUsage 是否已赋值
-                     * @return DiskUsage 是否已赋值
-                     * 
-                     */
-                    bool DiskUsageHasBeenSet() const;
-
-                    /**
                      * 获取Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
                      * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
                      * 
@@ -167,6 +104,90 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceFamiliesHasBeenSet() const;
+
+                    /**
+                     * 获取Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+                     * @return DiskTypes Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+                     * 
+                     */
+                    std::vector<std::string> GetDiskTypes() const;
+
+                    /**
+                     * 设置Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+                     * @param _diskTypes Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+                     * 
+                     */
+                    void SetDiskTypes(const std::vector<std::string>& _diskTypes);
+
+                    /**
+                     * 判断参数 DiskTypes 是否已赋值
+                     * @return DiskTypes 是否已赋值
+                     * 
+                     */
+                    bool DiskTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * @param _zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
+                     * 
+                     */
+                    uint64_t GetMemory() const;
+
+                    /**
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
+                     * 
+                     */
+                    void SetMemory(const uint64_t& _memory);
+
+                    /**
+                     * 判断参数 Memory 是否已赋值
+                     * @return Memory 是否已赋值
+                     * 
+                     */
+                    bool MemoryHasBeenSet() const;
+
+                    /**
+                     * 获取SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+                     * @return DiskUsage SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+                     * 
+                     */
+                    std::string GetDiskUsage() const;
+
+                    /**
+                     * 设置SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+                     * @param _diskUsage SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+                     * 
+                     */
+                    void SetDiskUsage(const std::string& _diskUsage);
+
+                    /**
+                     * 判断参数 DiskUsage 是否已赋值
+                     * @return DiskUsage 是否已赋值
+                     * 
+                     */
+                    bool DiskUsageHasBeenSet() const;
 
                     /**
                      * 获取Instance CPU cores.
@@ -190,39 +211,33 @@ namespace TencentCloud
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size.
-                     * @return Memory Instance memory size.
+                     * 获取Dedicated cluster ID.
+                     * @return DedicatedClusterId Dedicated cluster ID.
                      * 
                      */
-                    uint64_t GetMemory() const;
+                    std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置Instance memory size.
-                     * @param _memory Instance memory size.
+                     * 设置Dedicated cluster ID.
+                     * @param _dedicatedClusterId Dedicated cluster ID.
                      * 
                      */
-                    void SetMemory(const uint64_t& _memory);
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
 
                     /**
-                     * 判断参数 Memory 是否已赋值
-                     * @return Memory 是否已赋值
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
                      * 
                      */
-                    bool MemoryHasBeenSet() const;
+                    bool DedicatedClusterIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+                     * INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
                      */
                     std::string m_inquiryType;
                     bool m_inquiryTypeHasBeenSet;
-
-                    /**
-                     * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-                     */
-                    std::vector<std::string> m_zones;
-                    bool m_zonesHasBeenSet;
 
                     /**
                      * Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
@@ -231,22 +246,34 @@ namespace TencentCloud
                     bool m_diskChargeTypeHasBeenSet;
 
                     /**
-                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+                     * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+                     */
+                    std::vector<std::string> m_instanceFamilies;
+                    bool m_instanceFamiliesHasBeenSet;
+
+                    /**
+                     * Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
                      */
                     std::vector<std::string> m_diskTypes;
                     bool m_diskTypesHasBeenSet;
 
                     /**
-                     * The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
+
+                    /**
+                     * Instance memory size in GB.
+                     */
+                    uint64_t m_memory;
+                    bool m_memoryHasBeenSet;
+
+                    /**
+                     * SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
                      */
                     std::string m_diskUsage;
                     bool m_diskUsageHasBeenSet;
-
-                    /**
-                     * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-                     */
-                    std::vector<std::string> m_instanceFamilies;
-                    bool m_instanceFamiliesHasBeenSet;
 
                     /**
                      * Instance CPU cores.
@@ -255,10 +282,10 @@ namespace TencentCloud
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Instance memory size.
+                     * Dedicated cluster ID.
                      */
-                    uint64_t m_memory;
-                    bool m_memoryHasBeenSet;
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

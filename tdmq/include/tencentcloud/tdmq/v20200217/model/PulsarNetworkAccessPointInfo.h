@@ -380,6 +380,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CustomUrlHasBeenSet() const;
 
+                    /**
+                     * 获取id list of the bound security group for the access point. Only valid for vpc access points.
+                     * @return SecurityGroupIds id list of the bound security group for the access point. Only valid for vpc access points.
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置id list of the bound security group for the access point. Only valid for vpc access points.
+                     * @param _securityGroupIds id list of the bound security group for the access point. Only valid for vpc access points.
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -474,6 +495,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_customUrl;
                     bool m_customUrlHasBeenSet;
+
+                    /**
+                     * id list of the bound security group for the access point. Only valid for vpc access points.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

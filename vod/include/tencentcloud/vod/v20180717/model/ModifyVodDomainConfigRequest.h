@@ -24,6 +24,7 @@
 #include <tencentcloud/vod/v20180717/model/RefererAuthPolicy.h>
 #include <tencentcloud/vod/v20180717/model/UrlSignatureAuthPolicy.h>
 #include <tencentcloud/vod/v20180717/model/DomainQUICConfig.h>
+#include <tencentcloud/vod/v20180717/model/IPFilterPolicy.h>
 
 
 namespace TencentCloud
@@ -67,15 +68,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -150,6 +151,27 @@ namespace TencentCloud
                      */
                     bool QUICConfigHasBeenSet() const;
 
+                    /**
+                     * 获取IP access restriction rules.
+                     * @return IPFilterPolicy IP access restriction rules.
+                     * 
+                     */
+                    IPFilterPolicy GetIPFilterPolicy() const;
+
+                    /**
+                     * 设置IP access restriction rules.
+                     * @param _iPFilterPolicy IP access restriction rules.
+                     * 
+                     */
+                    void SetIPFilterPolicy(const IPFilterPolicy& _iPFilterPolicy);
+
+                    /**
+                     * 判断参数 IPFilterPolicy 是否已赋值
+                     * @return IPFilterPolicy 是否已赋值
+                     * 
+                     */
+                    bool IPFilterPolicyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -159,7 +181,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -181,6 +203,12 @@ namespace TencentCloud
                      */
                     DomainQUICConfig m_qUICConfig;
                     bool m_qUICConfigHasBeenSet;
+
+                    /**
+                     * IP access restriction rules.
+                     */
+                    IPFilterPolicy m_iPFilterPolicy;
+                    bool m_iPFilterPolicyHasBeenSet;
 
                 };
             }

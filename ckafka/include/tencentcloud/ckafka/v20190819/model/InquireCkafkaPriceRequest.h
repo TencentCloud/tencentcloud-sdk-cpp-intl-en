@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
-                     * @return InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+                     * 获取Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
+                     * @return InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
                      * 
                      */
                     InstanceChargeParam GetInstanceChargeParam() const;
 
                     /**
-                     * 设置Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
-                     * @param _instanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+                     * 设置Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
+                     * @param _instanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
                      * 
                      */
                     void SetInstanceChargeParam(const InstanceChargeParam& _instanceChargeParam);
@@ -343,7 +343,7 @@ Specifies the specifications and limits that can be viewed through the following
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+                     * Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
                      */
                     InstanceChargeParam m_instanceChargeParam;
                     bool m_instanceChargeParamHasBeenSet;

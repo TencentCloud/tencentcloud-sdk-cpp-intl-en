@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AvailableHasBeenSet() const;
 
                     /**
-                     * 获取Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
-                     * @return DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+                     * 获取Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+                     * @return DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
                      * 
                      */
                     std::string GetDiskChargeType() const;
 
                     /**
-                     * 设置Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
-                     * @param _diskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+                     * 设置Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+                     * @param _diskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
                      * 
                      */
                     void SetDiskChargeType(const std::string& _diskChargeType);
@@ -136,15 +136,39 @@ Note: This field may return null, indicating that no valid value was found.
                     bool InstanceFamilyHasBeenSet() const;
 
                     /**
-                     * 获取Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * 获取Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+                     * @return DiskType Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @param _diskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * 设置Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+                     * @param _diskType Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -157,19 +181,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
-                     * @return StepSize Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the minimum step size for disk size change in GiB.
+                     * @return StepSize Specifies the minimum step size for disk size change in GiB.
                      * 
                      */
                     uint64_t GetStepSize() const;
 
                     /**
-                     * 设置Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
-                     * @param _stepSize Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the minimum step size for disk size change in GiB.
+                     * @param _stepSize Specifies the minimum step size for disk size change in GiB.
                      * 
                      */
                     void SetStepSize(const uint64_t& _stepSize);
@@ -232,15 +252,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DeviceClassHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * 获取Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+                     * @return DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
                      * 
                      */
                     std::string GetDiskUsage() const;
 
                     /**
-                     * 设置Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @param _diskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * 设置Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+                     * @param _diskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
                      * 
                      */
                     void SetDiskUsage(const std::string& _diskUsage);
@@ -253,15 +273,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DiskUsageHasBeenSet() const;
 
                     /**
-                     * 获取The minimum configurable cloud disk size (in GB).
-                     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
+                     * 获取Specifies the minimum configurable cloud disk size in GiB.
+                     * @return MinDiskSize Specifies the minimum configurable cloud disk size in GiB.
                      * 
                      */
                     uint64_t GetMinDiskSize() const;
 
                     /**
-                     * 设置The minimum configurable cloud disk size (in GB).
-                     * @param _minDiskSize The minimum configurable cloud disk size (in GB).
+                     * 设置Specifies the minimum configurable cloud disk size in GiB.
+                     * @param _minDiskSize Specifies the minimum configurable cloud disk size in GiB.
                      * 
                      */
                     void SetMinDiskSize(const uint64_t& _minDiskSize);
@@ -274,15 +294,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool MinDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum configurable cloud disk size (in GB).
-                     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
+                     * 获取Specifies the maximum configurable cloud disk size in GiB.
+                     * @return MaxDiskSize Specifies the maximum configurable cloud disk size in GiB.
                      * 
                      */
                     uint64_t GetMaxDiskSize() const;
 
                     /**
-                     * 设置The maximum configurable cloud disk size (in GB).
-                     * @param _maxDiskSize The maximum configurable cloud disk size (in GB).
+                     * 设置Specifies the maximum configurable cloud disk size in GiB.
+                     * @param _maxDiskSize Specifies the maximum configurable cloud disk size in GiB.
                      * 
                      */
                     void SetMaxDiskSize(const uint64_t& _maxDiskSize);
@@ -295,19 +315,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool MaxDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price of a prepaid or postpaid cloud disk.
+                     * @return Price Price of a prepaid or postpaid cloud disk.
                      * 
                      */
                     Price GetPrice() const;
 
                     /**
-                     * 设置Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Price of a prepaid or postpaid cloud disk.
+                     * @param _price Price of a prepaid or postpaid cloud disk.
                      * 
                      */
                     void SetPrice(const Price& _price);
@@ -328,7 +344,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_availableHasBeenSet;
 
                     /**
-                     * Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+                     * Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
                      */
                     std::string m_diskChargeType;
                     bool m_diskChargeTypeHasBeenSet;
@@ -347,14 +363,19 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_instanceFamilyHasBeenSet;
 
                     /**
-                     * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+                     * Specifies the minimum step size for disk size change in GiB.
                      */
                     uint64_t m_stepSize;
                     bool m_stepSizeHasBeenSet;
@@ -374,26 +395,25 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_deviceClassHasBeenSet;
 
                     /**
-                     * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
                      */
                     std::string m_diskUsage;
                     bool m_diskUsageHasBeenSet;
 
                     /**
-                     * The minimum configurable cloud disk size (in GB).
+                     * Specifies the minimum configurable cloud disk size in GiB.
                      */
                     uint64_t m_minDiskSize;
                     bool m_minDiskSizeHasBeenSet;
 
                     /**
-                     * The maximum configurable cloud disk size (in GB).
+                     * Specifies the maximum configurable cloud disk size in GiB.
                      */
                     uint64_t m_maxDiskSize;
                     bool m_maxDiskSizeHasBeenSet;
 
                     /**
-                     * Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price of a prepaid or postpaid cloud disk.
                      */
                     Price m_price;
                     bool m_priceHasBeenSet;

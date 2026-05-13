@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
-                     * @return MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+                     * 获取<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
+                     * @return MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
                      * 
                      */
                     std::string GetMPSProcessMediaParams() const;
 
                     /**
-                     * 设置<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
-                     * @param _mPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+                     * 设置<p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
+                     * @param _mPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
                      * 
                      */
                     void SetMPSProcessMediaParams(const std::string& _mPSProcessMediaParams);
@@ -207,7 +207,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+                     * <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
                      */
                     std::string m_mPSProcessMediaParams;
                     bool m_mPSProcessMediaParamsHasBeenSet;

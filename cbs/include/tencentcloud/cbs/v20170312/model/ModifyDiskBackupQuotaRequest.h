@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk ID.
-                     * @return DiskId Cloud disk ID.
+                     * 获取Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @return DiskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置Cloud disk ID.
-                     * @param _diskId Cloud disk ID.
+                     * 设置Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @param _diskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk backup point quota after the adjustment
-                     * @return DiskBackupQuota Cloud disk backup point quota after the adjustment
+                     * 获取Adjusted cloud disk backup point quota. value range: 1-1024.
+                     * @return DiskBackupQuota Adjusted cloud disk backup point quota. value range: 1-1024.
                      * 
                      */
                     uint64_t GetDiskBackupQuota() const;
 
                     /**
-                     * 设置Cloud disk backup point quota after the adjustment
-                     * @param _diskBackupQuota Cloud disk backup point quota after the adjustment
+                     * 设置Adjusted cloud disk backup point quota. value range: 1-1024.
+                     * @param _diskBackupQuota Adjusted cloud disk backup point quota. value range: 1-1024.
                      * 
                      */
                     void SetDiskBackupQuota(const uint64_t& _diskBackupQuota);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk ID.
+                     * Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Cloud disk backup point quota after the adjustment
+                     * Adjusted cloud disk backup point quota. value range: 1-1024.
                      */
                     uint64_t m_diskBackupQuota;
                     bool m_diskBackupQuotaHasBeenSet;

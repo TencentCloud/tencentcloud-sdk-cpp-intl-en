@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by `topicName`. Fuzzy search is supported
-                     * @return SearchWord Filter by `topicName`. Fuzzy search is supported
+                     * 获取<p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+                     * @return SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Filter by `topicName`. Fuzzy search is supported
-                     * @param _searchWord Filter by `topicName`. Fuzzy search is supported
+                     * 设置<p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+                     * @param _searchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, 0 will be used by default
-                     * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 获取<p>Offset, which is 0 by default</p>
+                     * @return Offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, 0 will be used by default
-                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 设置<p>Offset, which is 0 by default</p>
+                     * @param _offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
-                     * @return Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+                     * 获取<p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+                     * @return Limit <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
-                     * @param _limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+                     * 设置<p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+                     * @param _limit <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Name of the preset ACL rule.
-                     * @return AclRuleName Name of the preset ACL rule.
+                     * 获取<p>Acl preset policy name</p>
+                     * @return AclRuleName <p>Acl preset policy name</p>
                      * 
                      */
                     std::string GetAclRuleName() const;
 
                     /**
-                     * 设置Name of the preset ACL rule.
-                     * @param _aclRuleName Name of the preset ACL rule.
+                     * 设置<p>Acl preset policy name</p>
+                     * @param _aclRuleName <p>Acl preset policy name</p>
                      * 
                      */
                     void SetAclRuleName(const std::string& _aclRuleName);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter by `topicName`. Fuzzy search is supported
+                     * <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, 0 will be used by default
+                     * <p>Offset, which is 0 by default</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+                     * <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Name of the preset ACL rule.
+                     * <p>Acl preset policy name</p>
                      */
                     std::string m_aclRuleName;
                     bool m_aclRuleNameHasBeenSet;

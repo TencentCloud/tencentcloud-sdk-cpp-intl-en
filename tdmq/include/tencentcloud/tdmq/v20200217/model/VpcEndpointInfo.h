@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VPC Access Point Information
+                * 
                 */
                 class VpcEndpointInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取vpc id
-                     * @return VpcId vpc id
+                     * 获取
+                     * @return VpcId 
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置vpc id
-                     * @param _vpcId vpc id
+                     * 设置
+                     * @param _vpcId 
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取subnet id
-                     * @return SubnetId subnet id
+                     * 获取
+                     * @return SubnetId 
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置subnet id
-                     * @param _subnetId subnet id
+                     * 设置
+                     * @param _subnetId 
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取vpc Access Point Information
-                     * @return VpcEndpoint vpc Access Point Information
+                     * 获取
+                     * @return VpcEndpoint 
                      * 
                      */
                     std::string GetVpcEndpoint() const;
 
                     /**
-                     * 设置vpc Access Point Information
-                     * @param _vpcEndpoint vpc Access Point Information
+                     * 设置
+                     * @param _vpcEndpoint 
                      * 
                      */
                     void SetVpcEndpoint(const std::string& _vpcEndpoint);
@@ -151,22 +151,43 @@ namespace TencentCloud
                      */
                     bool VpcTlsEndpointHasBeenSet() const;
 
+                    /**
+                     * 获取Error message for VPC access point operations.
+                     * @return VpcErrorMessage Error message for VPC access point operations.
+                     * 
+                     */
+                    std::string GetVpcErrorMessage() const;
+
+                    /**
+                     * 设置Error message for VPC access point operations.
+                     * @param _vpcErrorMessage Error message for VPC access point operations.
+                     * 
+                     */
+                    void SetVpcErrorMessage(const std::string& _vpcErrorMessage);
+
+                    /**
+                     * 判断参数 VpcErrorMessage 是否已赋值
+                     * @return VpcErrorMessage 是否已赋值
+                     * 
+                     */
+                    bool VpcErrorMessageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * vpc id
+                     * 
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * subnet id
+                     * 
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * vpc Access Point Information
+                     * 
                      */
                     std::string m_vpcEndpoint;
                     bool m_vpcEndpointHasBeenSet;
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     std::string m_vpcTlsEndpoint;
                     bool m_vpcTlsEndpointHasBeenSet;
+
+                    /**
+                     * Error message for VPC access point operations.
+                     */
+                    std::string m_vpcErrorMessage;
+                    bool m_vpcErrorMessageHasBeenSet;
 
                 };
             }

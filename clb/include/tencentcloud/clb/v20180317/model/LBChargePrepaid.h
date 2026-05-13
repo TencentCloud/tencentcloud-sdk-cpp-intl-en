@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Monthly subscription configuration of a CLB instance
+                * Yearly/monthly subscription configuration of a CLB instance
                 */
                 class LBChargePrepaid : public AbstractModel
                 {

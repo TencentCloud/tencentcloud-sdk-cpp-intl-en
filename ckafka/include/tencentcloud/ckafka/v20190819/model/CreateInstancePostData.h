@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
-                     * @return FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+                     * 获取<p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+                     * @return FlowId <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
                      * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
-                     * 设置CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
-                     * @param _flowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+                     * 设置<p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+                     * @param _flowId <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
                      * 
                      */
                     void SetFlowId(const int64_t& _flowId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Order ID list
-                     * @return DealNames Order ID list
+                     * 获取<p>Order number list</p>
+                     * @return DealNames <p>Order number list</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
-                     * 设置Order ID list
-                     * @param _dealNames Order ID list
+                     * 设置<p>Order number list</p>
+                     * @param _dealNames <p>Order number list</p>
                      * 
                      */
                     void SetDealNames(const std::vector<std::string>& _dealNames);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
-                     * @return InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+                     * 获取<p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+                     * @return InstanceId <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
-                     * @param _instanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+                     * 设置<p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+                     * @param _instanceId <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Order and purchase mapping list corresponding to the instance.
-                     * @return DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
+                     * 获取<p>Order and purchase mapping list corresponding to the instance</p>
+                     * @return DealNameInstanceIdMapping <p>Order and purchase mapping list corresponding to the instance</p>
                      * 
                      */
                     std::vector<DealInstanceDTO> GetDealNameInstanceIdMapping() const;
 
                     /**
-                     * 设置Order and purchase mapping list corresponding to the instance.
-                     * @param _dealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
+                     * 设置<p>Order and purchase mapping list corresponding to the instance</p>
+                     * @param _dealNameInstanceIdMapping <p>Order and purchase mapping list corresponding to the instance</p>
                      * 
                      */
                     void SetDealNameInstanceIdMapping(const std::vector<DealInstanceDTO>& _dealNameInstanceIdMapping);
@@ -131,31 +131,58 @@ namespace TencentCloud
                      */
                     bool DealNameInstanceIdMappingHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Event ID returned by CAM authentication</p>
+                     * @return EventId <p>Event ID returned by CAM authentication</p>
+                     * 
+                     */
+                    std::string GetEventId() const;
+
+                    /**
+                     * 设置<p>Event ID returned by CAM authentication</p>
+                     * @param _eventId <p>Event ID returned by CAM authentication</p>
+                     * 
+                     */
+                    void SetEventId(const std::string& _eventId);
+
+                    /**
+                     * 判断参数 EventId 是否已赋值
+                     * @return EventId 是否已赋值
+                     * 
+                     */
+                    bool EventIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+                     * <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Order ID list
+                     * <p>Order number list</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+                     * <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Order and purchase mapping list corresponding to the instance.
+                     * <p>Order and purchase mapping list corresponding to the instance</p>
                      */
                     std::vector<DealInstanceDTO> m_dealNameInstanceIdMapping;
                     bool m_dealNameInstanceIdMappingHasBeenSet;
+
+                    /**
+                     * <p>Event ID returned by CAM authentication</p>
+                     */
+                    std::string m_eventId;
+                    bool m_eventIdHasBeenSet;
 
                 };
             }

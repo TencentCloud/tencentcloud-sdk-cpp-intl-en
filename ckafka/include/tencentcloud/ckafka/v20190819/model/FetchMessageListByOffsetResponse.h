@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
-                     * @return Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+                     * 获取<p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
+                     * @return Result <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
                      * 
                      */
                     std::vector<ConsumerRecord> GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+                     * <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
                      */
                     std::vector<ConsumerRecord> m_result;
                     bool m_resultHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the structure of the returned renewal type.
-                     * @return Result Specifies the structure of the returned renewal type.
+                     * 获取<p>Returned scaling type structure</p>
+                     * @return Result <p>Returned scaling type structure</p>
                      * 
                      */
                     DescModifyType GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the structure of the returned renewal type.
+                     * <p>Returned scaling type structure</p>
                      */
                     DescModifyType m_result;
                     bool m_resultHasBeenSet;

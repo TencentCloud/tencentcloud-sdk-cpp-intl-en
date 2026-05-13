@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace. Currently, only one namespace is supported
-                     * @return Namespaces Namespace. Currently, only one namespace is supported
+                     * 获取Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @return Namespaces Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     std::vector<std::string> GetNamespaces() const;
 
                     /**
-                     * 设置Namespace. Currently, only one namespace is supported
-                     * @param _namespaces Namespace. Currently, only one namespace is supported
+                     * 设置Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @param _namespaces Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     void SetNamespaces(const std::vector<std::string>& _namespaces);
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Namespace. Currently, only one namespace is supported
+                     * Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      */
                     std::vector<std::string> m_namespaces;
                     bool m_namespacesHasBeenSet;

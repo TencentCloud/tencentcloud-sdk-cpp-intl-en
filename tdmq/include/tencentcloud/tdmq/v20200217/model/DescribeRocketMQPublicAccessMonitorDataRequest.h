@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exclusive Edition cluster ID.
-                     * @return InstanceId Exclusive Edition cluster ID.
+                     * 获取Cluster ID
+                     * @return InstanceId Cluster ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Exclusive Edition cluster ID.
-                     * @param _instanceId Exclusive Edition cluster ID.
+                     * 设置Cluster ID
+                     * @param _instanceId Cluster ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,27 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
-                     * @return MetricName Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+                     * 获取Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
+                     * @return MetricName Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
                      * 
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
-                     * @param _metricName Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+                     * 设置Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
+                     * @param _metricName Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
                      * 
                      */
                     void SetMetricName(const std::string& _metricName);
@@ -150,13 +162,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Exclusive Edition cluster ID.
+                     * Cluster ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+                     * Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;

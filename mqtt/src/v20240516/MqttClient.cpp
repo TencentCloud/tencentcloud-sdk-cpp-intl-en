@@ -140,6 +140,56 @@ MqttClient::CreateAuthorizationPolicyOutcomeCallable MqttClient::CreateAuthoriza
     return prom->get_future();
 }
 
+MqttClient::CreateDeviceIdentityOutcome MqttClient::CreateDeviceIdentity(const CreateDeviceIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDeviceIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDeviceIdentityResponse rsp = CreateDeviceIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDeviceIdentityOutcome(rsp);
+        else
+            return CreateDeviceIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDeviceIdentityOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::CreateDeviceIdentityAsync(const CreateDeviceIdentityRequest& request, const CreateDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDeviceIdentityRequest&;
+    using Resp = CreateDeviceIdentityResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDeviceIdentity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::CreateDeviceIdentityOutcomeCallable MqttClient::CreateDeviceIdentityCallable(const CreateDeviceIdentityRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDeviceIdentityOutcome>>();
+    CreateDeviceIdentityAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const CreateDeviceIdentityRequest&,
+        CreateDeviceIdentityOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MqttClient::CreateInstanceOutcome MqttClient::CreateInstance(const CreateInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateInstance");
@@ -382,6 +432,56 @@ MqttClient::DeleteClientSubscriptionOutcomeCallable MqttClient::DeleteClientSubs
         const MqttClient*,
         const DeleteClientSubscriptionRequest&,
         DeleteClientSubscriptionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DeleteDeviceIdentityOutcome MqttClient::DeleteDeviceIdentity(const DeleteDeviceIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDeviceIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDeviceIdentityResponse rsp = DeleteDeviceIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDeviceIdentityOutcome(rsp);
+        else
+            return DeleteDeviceIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDeviceIdentityOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DeleteDeviceIdentityAsync(const DeleteDeviceIdentityRequest& request, const DeleteDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDeviceIdentityRequest&;
+    using Resp = DeleteDeviceIdentityResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDeviceIdentity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DeleteDeviceIdentityOutcomeCallable MqttClient::DeleteDeviceIdentityCallable(const DeleteDeviceIdentityRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDeviceIdentityOutcome>>();
+    DeleteDeviceIdentityAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DeleteDeviceIdentityRequest&,
+        DeleteDeviceIdentityOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -690,6 +790,156 @@ MqttClient::DescribeClientListOutcomeCallable MqttClient::DescribeClientListCall
     return prom->get_future();
 }
 
+MqttClient::DescribeDeviceCertificatesOutcome MqttClient::DescribeDeviceCertificates(const DescribeDeviceCertificatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeviceCertificates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeviceCertificatesResponse rsp = DescribeDeviceCertificatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeviceCertificatesOutcome(rsp);
+        else
+            return DescribeDeviceCertificatesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeviceCertificatesOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeDeviceCertificatesAsync(const DescribeDeviceCertificatesRequest& request, const DescribeDeviceCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDeviceCertificatesRequest&;
+    using Resp = DescribeDeviceCertificatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceCertificates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeDeviceCertificatesOutcomeCallable MqttClient::DescribeDeviceCertificatesCallable(const DescribeDeviceCertificatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDeviceCertificatesOutcome>>();
+    DescribeDeviceCertificatesAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeDeviceCertificatesRequest&,
+        DescribeDeviceCertificatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeDeviceIdentitiesOutcome MqttClient::DescribeDeviceIdentities(const DescribeDeviceIdentitiesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeviceIdentities");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeviceIdentitiesResponse rsp = DescribeDeviceIdentitiesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeviceIdentitiesOutcome(rsp);
+        else
+            return DescribeDeviceIdentitiesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeviceIdentitiesOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeDeviceIdentitiesAsync(const DescribeDeviceIdentitiesRequest& request, const DescribeDeviceIdentitiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDeviceIdentitiesRequest&;
+    using Resp = DescribeDeviceIdentitiesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceIdentities", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeDeviceIdentitiesOutcomeCallable MqttClient::DescribeDeviceIdentitiesCallable(const DescribeDeviceIdentitiesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDeviceIdentitiesOutcome>>();
+    DescribeDeviceIdentitiesAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeDeviceIdentitiesRequest&,
+        DescribeDeviceIdentitiesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeDeviceIdentityOutcome MqttClient::DescribeDeviceIdentity(const DescribeDeviceIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeviceIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeviceIdentityResponse rsp = DescribeDeviceIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeviceIdentityOutcome(rsp);
+        else
+            return DescribeDeviceIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeviceIdentityOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeDeviceIdentityAsync(const DescribeDeviceIdentityRequest& request, const DescribeDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDeviceIdentityRequest&;
+    using Resp = DescribeDeviceIdentityResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceIdentity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeDeviceIdentityOutcomeCallable MqttClient::DescribeDeviceIdentityCallable(const DescribeDeviceIdentityRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDeviceIdentityOutcome>>();
+    DescribeDeviceIdentityAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeDeviceIdentityRequest&,
+        DescribeDeviceIdentityOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MqttClient::DescribeInstanceOutcome MqttClient::DescribeInstance(const DescribeInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstance");
@@ -732,6 +982,56 @@ MqttClient::DescribeInstanceOutcomeCallable MqttClient::DescribeInstanceCallable
         const MqttClient*,
         const DescribeInstanceRequest&,
         DescribeInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeInstanceListOutcome MqttClient::DescribeInstanceList(const DescribeInstanceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceListResponse rsp = DescribeInstanceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceListOutcome(rsp);
+        else
+            return DescribeInstanceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceListOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeInstanceListAsync(const DescribeInstanceListRequest& request, const DescribeInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceListRequest&;
+    using Resp = DescribeInstanceListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeInstanceListOutcomeCallable MqttClient::DescribeInstanceListCallable(const DescribeInstanceListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceListOutcome>>();
+    DescribeInstanceListAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeInstanceListRequest&,
+        DescribeInstanceListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -882,6 +1182,206 @@ MqttClient::DescribeMessageEnrichmentRulesOutcomeCallable MqttClient::DescribeMe
         const MqttClient*,
         const DescribeMessageEnrichmentRulesRequest&,
         DescribeMessageEnrichmentRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeProductSKUListOutcome MqttClient::DescribeProductSKUList(const DescribeProductSKUListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProductSKUList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProductSKUListResponse rsp = DescribeProductSKUListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProductSKUListOutcome(rsp);
+        else
+            return DescribeProductSKUListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProductSKUListOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeProductSKUListAsync(const DescribeProductSKUListRequest& request, const DescribeProductSKUListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeProductSKUListRequest&;
+    using Resp = DescribeProductSKUListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeProductSKUList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeProductSKUListOutcomeCallable MqttClient::DescribeProductSKUListCallable(const DescribeProductSKUListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeProductSKUListOutcome>>();
+    DescribeProductSKUListAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeProductSKUListRequest&,
+        DescribeProductSKUListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeSharedSubscriptionClientOutcome MqttClient::DescribeSharedSubscriptionClient(const DescribeSharedSubscriptionClientRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSharedSubscriptionClient");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSharedSubscriptionClientResponse rsp = DescribeSharedSubscriptionClientResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSharedSubscriptionClientOutcome(rsp);
+        else
+            return DescribeSharedSubscriptionClientOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSharedSubscriptionClientOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeSharedSubscriptionClientAsync(const DescribeSharedSubscriptionClientRequest& request, const DescribeSharedSubscriptionClientAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSharedSubscriptionClientRequest&;
+    using Resp = DescribeSharedSubscriptionClientResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSharedSubscriptionClient", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeSharedSubscriptionClientOutcomeCallable MqttClient::DescribeSharedSubscriptionClientCallable(const DescribeSharedSubscriptionClientRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSharedSubscriptionClientOutcome>>();
+    DescribeSharedSubscriptionClientAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeSharedSubscriptionClientRequest&,
+        DescribeSharedSubscriptionClientOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeSharedSubscriptionGroupsOutcome MqttClient::DescribeSharedSubscriptionGroups(const DescribeSharedSubscriptionGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSharedSubscriptionGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSharedSubscriptionGroupsResponse rsp = DescribeSharedSubscriptionGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSharedSubscriptionGroupsOutcome(rsp);
+        else
+            return DescribeSharedSubscriptionGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSharedSubscriptionGroupsOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeSharedSubscriptionGroupsAsync(const DescribeSharedSubscriptionGroupsRequest& request, const DescribeSharedSubscriptionGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSharedSubscriptionGroupsRequest&;
+    using Resp = DescribeSharedSubscriptionGroupsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSharedSubscriptionGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeSharedSubscriptionGroupsOutcomeCallable MqttClient::DescribeSharedSubscriptionGroupsCallable(const DescribeSharedSubscriptionGroupsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSharedSubscriptionGroupsOutcome>>();
+    DescribeSharedSubscriptionGroupsAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeSharedSubscriptionGroupsRequest&,
+        DescribeSharedSubscriptionGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::DescribeSharedSubscriptionsOutcome MqttClient::DescribeSharedSubscriptions(const DescribeSharedSubscriptionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSharedSubscriptions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSharedSubscriptionsResponse rsp = DescribeSharedSubscriptionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSharedSubscriptionsOutcome(rsp);
+        else
+            return DescribeSharedSubscriptionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSharedSubscriptionsOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeSharedSubscriptionsAsync(const DescribeSharedSubscriptionsRequest& request, const DescribeSharedSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSharedSubscriptionsRequest&;
+    using Resp = DescribeSharedSubscriptionsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSharedSubscriptions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeSharedSubscriptionsOutcomeCallable MqttClient::DescribeSharedSubscriptionsCallable(const DescribeSharedSubscriptionsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSharedSubscriptionsOutcome>>();
+    DescribeSharedSubscriptionsAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeSharedSubscriptionsRequest&,
+        DescribeSharedSubscriptionsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1082,6 +1582,56 @@ MqttClient::ModifyAuthorizationPolicyOutcomeCallable MqttClient::ModifyAuthoriza
         const MqttClient*,
         const ModifyAuthorizationPolicyRequest&,
         ModifyAuthorizationPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MqttClient::ModifyDeviceIdentityOutcome MqttClient::ModifyDeviceIdentity(const ModifyDeviceIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDeviceIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDeviceIdentityResponse rsp = ModifyDeviceIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDeviceIdentityOutcome(rsp);
+        else
+            return ModifyDeviceIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDeviceIdentityOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::ModifyDeviceIdentityAsync(const ModifyDeviceIdentityRequest& request, const ModifyDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDeviceIdentityRequest&;
+    using Resp = ModifyDeviceIdentityResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDeviceIdentity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::ModifyDeviceIdentityOutcomeCallable MqttClient::ModifyDeviceIdentityCallable(const ModifyDeviceIdentityRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDeviceIdentityOutcome>>();
+    ModifyDeviceIdentityAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const ModifyDeviceIdentityRequest&,
+        ModifyDeviceIdentityOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

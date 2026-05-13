@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
-                     * @return SubscriptionName Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+                     * 获取Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
+                     * @return SubscriptionName Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
                      * 
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
-                     * 设置Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
-                     * @param _subscriptionName Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+                     * 设置Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
+                     * @param _subscriptionName Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
                      * 
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+                     * Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
                      */
                     std::string m_subscriptionName;
                     bool m_subscriptionNameHasBeenSet;

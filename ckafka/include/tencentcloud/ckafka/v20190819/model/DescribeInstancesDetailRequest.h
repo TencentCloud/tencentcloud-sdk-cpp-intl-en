@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取(Filter) filter by instance ID
-                     * @return InstanceId (Filter) filter by instance ID
+                     * 获取<p>(Filtering Conditions) Filter by instance ID</p>
+                     * @return InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置(Filter) filter by instance ID
-                     * @param _instanceId (Filter) filter by instance ID
+                     * 设置<p>(Filtering Conditions) Filter by instance ID</p>
+                     * @param _instanceId <p>(Filtering Conditions) Filter by instance ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
-                     * @return SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+                     * 获取<p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+                     * @return SearchWord <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
-                     * @param _searchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+                     * 设置<p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+                     * @param _searchWord <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-                     * @return Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 获取<p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+                     * @return Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-                     * @param _status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 设置<p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+                     * @param _status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, `0` will be used by default.
-                     * @return Offset Offset. If this parameter is left empty, `0` will be used by default.
+                     * 获取<p>Offset, which is 0 by default.</p>
+                     * @return Offset <p>Offset, which is 0 by default.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, `0` will be used by default.
-                     * @param _offset Offset. If this parameter is left empty, `0` will be used by default.
+                     * 设置<p>Offset, which is 0 by default.</p>
+                     * @param _offset <p>Offset, which is 0 by default.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
-                     * @return Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+                     * 获取<p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+                     * @return Limit <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
-                     * @param _limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+                     * 设置<p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+                     * @param _limit <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Tag key match.
-                     * @return TagKey Tag key match.
+                     * 获取<p>Match the tag key.</p>
+                     * @return TagKey <p>Match the tag key.</p>
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key match.
-                     * @param _tagKey Tag key match.
+                     * 设置<p>Match the tag key.</p>
+                     * @param _tagKey <p>Match the tag key.</p>
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
-                     * @return Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+                     * 获取<p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+                     * @return Filters <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
-                     * @param _filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+                     * 设置<p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+                     * @param _filters <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated and replaced with `InstanceIdList`.
-                     * @return InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+                     * 获取<p>Deprecated. Use InstanceIdList.</p>
+                     * @return InstanceIds <p>Deprecated. Use InstanceIdList.</p>
                      * @deprecated
                      */
                     std::string GetInstanceIds() const;
 
                     /**
-                     * 设置This parameter has been deprecated and replaced with `InstanceIdList`.
-                     * @param _instanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+                     * 设置<p>Deprecated. Use InstanceIdList.</p>
+                     * @param _instanceIds <p>Deprecated. Use InstanceIdList.</p>
                      * @deprecated
                      */
                     void SetInstanceIds(const std::string& _instanceIds);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter by instance ID.
-                     * @return InstanceIdList Filter by instance ID.
+                     * 获取<p>Filter by instance ID</p>
+                     * @return InstanceIdList <p>Filter by instance ID</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
-                     * 设置Filter by instance ID.
-                     * @param _instanceIdList Filter by instance ID.
+                     * 设置<p>Filter by instance ID</p>
+                     * @param _instanceIdList <p>Filter by instance ID</p>
                      * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool InstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取Filter instances by a set of tags
-                     * @return TagList Filter instances by a set of tags
+                     * 获取<p>Filter instances based on tag list (take the intersection)</p>
+                     * @return TagList <p>Filter instances based on tag list (take the intersection)</p>
                      * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
-                     * 设置Filter instances by a set of tags
-                     * @param _tagList Filter instances by a set of tags
+                     * 设置<p>Filter instances based on tag list (take the intersection)</p>
+                     * @param _tagList <p>Filter instances based on tag list (take the intersection)</p>
                      * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
@@ -257,61 +257,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * (Filter) filter by instance ID
+                     * <p>(Filtering Conditions) Filter by instance ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+                     * <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, `0` will be used by default.
+                     * <p>Offset, which is 0 by default.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+                     * <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Tag key match.
+                     * <p>Match the tag key.</p>
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+                     * <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated and replaced with `InstanceIdList`.
+                     * <p>Deprecated. Use InstanceIdList.</p>
                      */
                     std::string m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Filter by instance ID.
+                     * <p>Filter by instance ID</p>
                      */
                     std::vector<std::string> m_instanceIdList;
                     bool m_instanceIdListHasBeenSet;
 
                     /**
-                     * Filter instances by a set of tags
+                     * <p>Filter instances based on tag list (take the intersection)</p>
                      */
                     std::vector<Tag> m_tagList;
                     bool m_tagListHasBeenSet;

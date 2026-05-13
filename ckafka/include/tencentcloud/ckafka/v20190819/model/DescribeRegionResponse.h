@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returns the region enumeration result list.
-                     * @return Result Returns the region enumeration result list.
+                     * 获取<p>Return the region enumeration result list</p>
+                     * @return Result <p>Return the region enumeration result list</p>
                      * 
                      */
                     std::vector<Region> GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returns the region enumeration result list.
+                     * <p>Return the region enumeration result list</p>
                      */
                     std::vector<Region> m_result;
                     bool m_resultHasBeenSet;

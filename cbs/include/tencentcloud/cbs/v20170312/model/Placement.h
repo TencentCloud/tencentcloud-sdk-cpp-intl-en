@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return CageId Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CageId CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCageId() const;
 
                     /**
-                     * 设置Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param _cageId Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cageId CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCageId(const std::string& _cageId);
@@ -93,15 +93,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool CageIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-                     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+                     * 获取Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+                     * @return ProjectId Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-                     * @param _projectId ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+                     * 设置Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+                     * @param _projectId Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -114,18 +114,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Project name of the instance.
+                     * 获取Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectName Project name of the instance.
+                     * @return ProjectName Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name of the instance.
+                     * 设置Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectName Project name of the instance.
+                     * @param _projectName Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -164,19 +164,19 @@ Note: This field may return null, indicating that no valid value was found.
                     bool CdcNameHasBeenSet() const;
 
                     /**
-                     * 获取ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return CdcId ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CdcId The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param _cdcId ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cdcId The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -218,20 +218,20 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cageId;
                     bool m_cageIdHasBeenSet;
 
                     /**
-                     * ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+                     * Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Project name of the instance.
+                     * Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectName;
@@ -245,8 +245,8 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_cdcNameHasBeenSet;
 
                     /**
-                     * ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+                     * The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return TopicName Topic name
+                     * 获取<p>Topic name</p>
+                     * @return TopicName <p>Topic name</p>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topicName Topic name
+                     * 设置<p>Topic name</p>
+                     * @param _topicName <p>Topic name</p>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-                     * @return Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * 获取<p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+                     * @return Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-                     * @param _note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * 设置<p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+                     * @param _note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist switch. 1: enabled, 0: disabled.
-                     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
+                     * 获取<p>IP allowlist switch, 1: on; 0: off.</p>
+                     * @return EnableWhiteList <p>IP allowlist switch, 1: on; 0: off.</p>
                      * 
                      */
                     int64_t GetEnableWhiteList() const;
 
                     /**
-                     * 设置IP allowlist switch. 1: enabled, 0: disabled.
-                     * @param _enableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
+                     * 设置<p>IP allowlist switch, 1: on; 0: off.</p>
+                     * @param _enableWhiteList <p>IP allowlist switch, 1: on; 0: off.</p>
                      * 
                      */
                     void SetEnableWhiteList(const int64_t& _enableWhiteList);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool EnableWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取Default value: 1.
-                     * @return MinInsyncReplicas Default value: 1.
+                     * 获取<p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+                     * @return MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
                      * 
                      */
                     int64_t GetMinInsyncReplicas() const;
 
                     /**
-                     * 设置Default value: 1.
-                     * @param _minInsyncReplicas Default value: 1.
+                     * 设置<p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+                     * @param _minInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
                      * 
                      */
                     void SetMinInsyncReplicas(const int64_t& _minInsyncReplicas);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool MinInsyncReplicasHasBeenSet() const;
 
                     /**
-                     * 获取0: false, 1: true. Default value: 0.
-                     * @return UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
+                     * 获取<p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+                     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetUncleanLeaderElectionEnable() const;
 
                     /**
-                     * 设置0: false, 1: true. Default value: 0.
-                     * @param _uncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
+                     * 设置<p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+                     * @param _uncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in ms. The current minimum value is 60,000 ms.
-                     * @return RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 获取<p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+                     * @return RetentionMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
                      * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Message retention period in ms. The current minimum value is 60,000 ms.
-                     * @param _retentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 设置<p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+                     * @param _retentionMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
                      * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
-                     * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+                     * 获取<p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+                     * @return MaxMessageBytes <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
                      * 
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
-                     * 设置Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
-                     * @param _maxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+                     * 设置<p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+                     * @param _maxMessageBytes <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
                      * 
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool MaxMessageBytesHasBeenSet() const;
 
                     /**
-                     * 获取Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
-                     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * 获取<p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+                     * @return SegmentMs <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
                      * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
-                     * 设置Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
-                     * @param _segmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * 设置<p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+                     * @param _segmentMs <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
                      * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool SegmentMsHasBeenSet() const;
 
                     /**
-                     * 获取Message deletion policy. Valid values: delete, compact
-                     * @return CleanUpPolicy Message deletion policy. Valid values: delete, compact
+                     * 获取<p>Message deletion strategy: choose delete or compact</p>
+                     * @return CleanUpPolicy <p>Message deletion strategy: choose delete or compact</p>
                      * 
                      */
                     std::string GetCleanUpPolicy() const;
 
                     /**
-                     * 设置Message deletion policy. Valid values: delete, compact
-                     * @param _cleanUpPolicy Message deletion policy. Valid values: delete, compact
+                     * 设置<p>Message deletion strategy: choose delete or compact</p>
+                     * @param _cleanUpPolicy <p>Message deletion strategy: choose delete or compact</p>
                      * 
                      */
                     void SetCleanUpPolicy(const std::string& _cleanUpPolicy);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool CleanUpPolicyHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist, which is required if the value of `enableWhileList` is 1.
-                     * @return IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     * 获取<p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+                     * @return IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
                      * 
                      */
                     std::vector<std::string> GetIpWhiteList() const;
 
                     /**
-                     * 设置IP allowlist, which is required if the value of `enableWhileList` is 1.
-                     * @param _ipWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     * 设置<p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+                     * @param _ipWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
                      * 
                      */
                     void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool IpWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-                     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * 获取<p>Preset ACL rule, 1: on 0: off, default is off</p>
+                     * @return EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
                      * 
                      */
                     int64_t GetEnableAclRule() const;
 
                     /**
-                     * 设置Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-                     * @param _enableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * 设置<p>Preset ACL rule, 1: on 0: off, default is off</p>
+                     * @param _enableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
                      * 
                      */
                     void SetEnableAclRule(const int64_t& _enableAclRule);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool EnableAclRuleHasBeenSet() const;
 
                     /**
-                     * 获取ACL rule name.
-                     * @return AclRuleName ACL rule name.
+                     * 获取<p>ACL rule name</p>
+                     * @return AclRuleName <p>ACL rule name</p>
                      * 
                      */
                     std::string GetAclRuleName() const;
 
                     /**
-                     * 设置ACL rule name.
-                     * @param _aclRuleName ACL rule name.
+                     * 设置<p>ACL rule name</p>
+                     * @param _aclRuleName <p>ACL rule name</p>
                      * 
                      */
                     void SetAclRuleName(const std::string& _aclRuleName);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool AclRuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-                     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * 获取<p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+                     * @return RetentionBytes <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-                     * @param _retentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * 设置<p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+                     * @param _retentionBytes <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool RetentionBytesHasBeenSet() const;
 
                     /**
-                     * 获取Tag list.
-                     * @return Tags Tag list.
+                     * 获取<p>Tag list</p>
+                     * @return Tags <p>Tag list</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list.
-                     * @param _tags Tag list.
+                     * 设置<p>Tag list</p>
+                     * @param _tags <p>Tag list</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Production traffic throttling in MB/s. set to -1 to disable throttling.
-                     * @return QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
+                     * 获取<p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+                     * @return QuotaProducerByteRate <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
                      * 
                      */
                     int64_t GetQuotaProducerByteRate() const;
 
                     /**
-                     * 设置Production traffic throttling in MB/s. set to -1 to disable throttling.
-                     * @param _quotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
+                     * 设置<p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+                     * @param _quotaProducerByteRate <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
                      * 
                      */
                     void SetQuotaProducerByteRate(const int64_t& _quotaProducerByteRate);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool QuotaProducerByteRateHasBeenSet() const;
 
                     /**
-                     * 获取Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
-                     * @return QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+                     * 获取<p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+                     * @return QuotaConsumerByteRate <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
                      * 
                      */
                     int64_t GetQuotaConsumerByteRate() const;
 
                     /**
-                     * 设置Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
-                     * @param _quotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+                     * 设置<p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+                     * @param _quotaConsumerByteRate <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
                      * 
                      */
                     void SetQuotaConsumerByteRate(const int64_t& _quotaConsumerByteRate);
@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool QuotaConsumerByteRateHasBeenSet() const;
 
                     /**
-                     * 获取Number of topic replicas. valid values: 1, 3.
-                     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
+                     * 获取<p>topic replica count Minimum value: 1, Maximum value: 3</p>
+                     * @return ReplicaNum <p>topic replica count Minimum value: 1, Maximum value: 3</p>
                      * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
-                     * 设置Number of topic replicas. valid values: 1, 3.
-                     * @param _replicaNum Number of topic replicas. valid values: 1, 3.
+                     * 设置<p>topic replica count Minimum value: 1, Maximum value: 3</p>
+                     * @param _replicaNum <p>topic replica count Minimum value: 1, Maximum value: 3</p>
                      * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
@@ -422,15 +422,15 @@ namespace TencentCloud
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the time type for message saving: CreateTime/LogAppendTime.
-                     * @return LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+                     * 获取<p>Time type for message saving: CreateTime/LogAppendTime</p>
+                     * @return LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
                      * 
                      */
                     std::string GetLogMsgTimestampType() const;
 
                     /**
-                     * 设置Specifies the time type for message saving: CreateTime/LogAppendTime.
-                     * @param _logMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+                     * 设置<p>Time type for message saving: CreateTime/LogAppendTime</p>
+                     * @param _logMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
                      * 
                      */
                     void SetLogMsgTimestampType(const std::string& _logMsgTimestampType);
@@ -445,115 +445,115 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * <p>Topic name</p>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
 
                     /**
-                     * IP allowlist switch. 1: enabled, 0: disabled.
+                     * <p>IP allowlist switch, 1: on; 0: off.</p>
                      */
                     int64_t m_enableWhiteList;
                     bool m_enableWhiteListHasBeenSet;
 
                     /**
-                     * Default value: 1.
+                     * <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
                      */
                     int64_t m_minInsyncReplicas;
                     bool m_minInsyncReplicasHasBeenSet;
 
                     /**
-                     * 0: false, 1: true. Default value: 0.
+                     * <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
                      */
                     int64_t m_uncleanLeaderElectionEnable;
                     bool m_uncleanLeaderElectionEnableHasBeenSet;
 
                     /**
-                     * Message retention period in ms. The current minimum value is 60,000 ms.
+                     * <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
                      */
                     int64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+                     * <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
 
                     /**
-                     * Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
 
                     /**
-                     * Message deletion policy. Valid values: delete, compact
+                     * <p>Message deletion strategy: choose delete or compact</p>
                      */
                     std::string m_cleanUpPolicy;
                     bool m_cleanUpPolicyHasBeenSet;
 
                     /**
-                     * IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     * <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
                      */
                     std::vector<std::string> m_ipWhiteList;
                     bool m_ipWhiteListHasBeenSet;
 
                     /**
-                     * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * <p>Preset ACL rule, 1: on 0: off, default is off</p>
                      */
                     int64_t m_enableAclRule;
                     bool m_enableAclRuleHasBeenSet;
 
                     /**
-                     * ACL rule name.
+                     * <p>ACL rule name</p>
                      */
                     std::string m_aclRuleName;
                     bool m_aclRuleNameHasBeenSet;
 
                     /**
-                     * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;
 
                     /**
-                     * Tag list.
+                     * <p>Tag list</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Production traffic throttling in MB/s. set to -1 to disable throttling.
+                     * <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
                      */
                     int64_t m_quotaProducerByteRate;
                     bool m_quotaProducerByteRateHasBeenSet;
 
                     /**
-                     * Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+                     * <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
                      */
                     int64_t m_quotaConsumerByteRate;
                     bool m_quotaConsumerByteRateHasBeenSet;
 
                     /**
-                     * Number of topic replicas. valid values: 1, 3.
+                     * <p>topic replica count Minimum value: 1, Maximum value: 3</p>
                      */
                     int64_t m_replicaNum;
                     bool m_replicaNumHasBeenSet;
 
                     /**
-                     * Specifies the time type for message saving: CreateTime/LogAppendTime.
+                     * <p>Time type for message saving: CreateTime/LogAppendTime</p>
                      */
                     std::string m_logMsgTimestampType;
                     bool m_logMsgTimestampTypeHasBeenSet;

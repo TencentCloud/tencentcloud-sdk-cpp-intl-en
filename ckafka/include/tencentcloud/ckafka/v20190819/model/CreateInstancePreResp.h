@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data structure returned by monthly subscribed instance APIs
+                * Data structure returned by yearly/monthly subscribed instance APIs
                 */
                 class CreateInstancePreResp : public AbstractModel
                 {

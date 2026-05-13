@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CKafka cluster instance ID.
-                     * @return InstanceId CKafka cluster instance ID.
+                     * 获取<p>ckafka cluster instance Id</p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置CKafka cluster instance ID.
-                     * @param _instanceId CKafka cluster instance ID.
+                     * 设置<p>ckafka cluster instance Id</p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the bandwidth after upgrade. measurement unit: mb.
-                     * @return BandWidth Specifies the bandwidth after upgrade. measurement unit: mb.
+                     * 获取<p>Bandwidth after upgrade, unit mb</p>
+                     * @return BandWidth <p>Bandwidth after upgrade, unit mb</p>
                      * 
                      */
                     int64_t GetBandWidth() const;
 
                     /**
-                     * 设置Specifies the bandwidth after upgrade. measurement unit: mb.
-                     * @param _bandWidth Specifies the bandwidth after upgrade. measurement unit: mb.
+                     * 设置<p>Bandwidth after upgrade, unit mb</p>
+                     * @param _bandWidth <p>Bandwidth after upgrade, unit mb</p>
                      * 
                      */
                     void SetBandWidth(const int64_t& _bandWidth);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the disk after upgrade, in gb.
-                     * @return DiskSize Specifies the disk after upgrade, in gb.
+                     * 获取<p>Disk capacity after upgrade, in GB</p>
+                     * @return DiskSize <p>Disk capacity after upgrade, in GB</p>
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Specifies the disk after upgrade, in gb.
-                     * @param _diskSize Specifies the disk after upgrade, in gb.
+                     * 设置<p>Disk capacity after upgrade, in GB</p>
+                     * @param _diskSize <p>Disk capacity after upgrade, in GB</p>
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk type, such as CLOUD_PREMIUM.
-                     * @return DiskType Disk type, such as CLOUD_PREMIUM.
+                     * 获取<p>Disk type, such as CLOUD_PREMIUM</p>
+                     * @return DiskType <p>Disk type, such as CLOUD_PREMIUM</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Disk type, such as CLOUD_PREMIUM.
-                     * @param _diskType Disk type, such as CLOUD_PREMIUM.
+                     * 设置<p>Disk type, such as CLOUD_PREMIUM</p>
+                     * @param _diskType <p>Disk type, such as CLOUD_PREMIUM</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of partitions.
-                     * @return Partition Number of partitions.
+                     * 获取<p>Number of partitions</p>
+                     * @return Partition <p>Number of partitions</p>
                      * 
                      */
                     int64_t GetPartition() const;
 
                     /**
-                     * 设置Number of partitions.
-                     * @param _partition Number of partitions.
+                     * 设置<p>Number of partitions</p>
+                     * @param _partition <p>Number of partitions</p>
                      * 
                      */
                     void SetPartition(const int64_t& _partition);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Number of Topics
-                     * @return Topic Number of Topics
+                     * 获取<p>topic count</p>
+                     * @return Topic <p>topic count</p>
                      * 
                      */
                     int64_t GetTopic() const;
 
                     /**
-                     * 设置Number of Topics
-                     * @param _topic Number of Topics
+                     * 设置<p>topic count</p>
+                     * @param _topic <p>topic count</p>
                      * 
                      */
                     void SetTopic(const int64_t& _topic);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Instance type, such as sp_ckafka_profession.
-                     * @return Type Instance type, such as sp_ckafka_profession.
+                     * 获取<p>Instance type such as sp_ckafka_profession</p>
+                     * @return Type <p>Instance type such as sp_ckafka_profession</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Instance type, such as sp_ckafka_profession.
-                     * @param _type Instance type, such as sp_ckafka_profession.
+                     * 设置<p>Instance type such as sp_ckafka_profession</p>
+                     * @param _type <p>Instance type such as sp_ckafka_profession</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration change portal.
-                     * @return ModifyEntry Configuration change portal.
+                     * 获取<p>Resize portal</p>
+                     * @return ModifyEntry <p>Resize portal</p>
                      * 
                      */
                     std::string GetModifyEntry() const;
 
                     /**
-                     * 设置Configuration change portal.
-                     * @param _modifyEntry Configuration change portal.
+                     * 设置<p>Resize portal</p>
+                     * @param _modifyEntry <p>Resize portal</p>
                      * 
                      */
                     void SetModifyEntry(const std::string& _modifyEntry);
@@ -210,55 +210,82 @@ namespace TencentCloud
                      */
                     bool ModifyEntryHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+                     * @return ModifyZone <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+                     * 
+                     */
+                    bool GetModifyZone() const;
+
+                    /**
+                     * 设置<p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+                     * @param _modifyZone <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+                     * 
+                     */
+                    void SetModifyZone(const bool& _modifyZone);
+
+                    /**
+                     * 判断参数 ModifyZone 是否已赋值
+                     * @return ModifyZone 是否已赋值
+                     * 
+                     */
+                    bool ModifyZoneHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CKafka cluster instance ID.
+                     * <p>ckafka cluster instance Id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies the bandwidth after upgrade. measurement unit: mb.
+                     * <p>Bandwidth after upgrade, unit mb</p>
                      */
                     int64_t m_bandWidth;
                     bool m_bandWidthHasBeenSet;
 
                     /**
-                     * Specifies the disk after upgrade, in gb.
+                     * <p>Disk capacity after upgrade, in GB</p>
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Disk type, such as CLOUD_PREMIUM.
+                     * <p>Disk type, such as CLOUD_PREMIUM</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Number of partitions.
+                     * <p>Number of partitions</p>
                      */
                     int64_t m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Number of Topics
+                     * <p>topic count</p>
                      */
                     int64_t m_topic;
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Instance type, such as sp_ckafka_profession.
+                     * <p>Instance type such as sp_ckafka_profession</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Configuration change portal.
+                     * <p>Resize portal</p>
                      */
                     std::string m_modifyEntry;
                     bool m_modifyEntryHasBeenSet;
+
+                    /**
+                     * <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+                     */
+                    bool m_modifyZone;
+                    bool m_modifyZoneHasBeenSet;
 
                 };
             }

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by name
-                     * @return SearchWord Filter by name
+                     * 获取<p>Filter by name</p><p>Support fuzzy matching</p>
+                     * @return SearchWord <p>Filter by name</p><p>Support fuzzy matching</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Filter by name
-                     * @param _searchWord Filter by name
+                     * 设置<p>Filter by name</p><p>Support fuzzy matching</p>
+                     * @param _searchWord <p>Filter by name</p><p>Support fuzzy matching</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取<p>Offset</p>
+                     * @return Offset <p>Offset</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param _offset Offset.
+                     * 设置<p>Offset</p>
+                     * @param _offset <p>Offset</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of returns.
-                     * @return Limit The number of returns.
+                     * 获取<p>Number of returned results</p><p>Default value: 20</p>
+                     * @return Limit <p>Number of returned results</p><p>Default value: 20</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of returns.
-                     * @param _limit The number of returns.
+                     * 设置<p>Number of returned results</p><p>Default value: 20</p>
+                     * @param _limit <p>Number of returned results</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter by name
+                     * <p>Filter by name</p><p>Support fuzzy matching</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Offset.
+                     * <p>Offset</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of returns.
+                     * <p>Number of returned results</p><p>Default value: 20</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

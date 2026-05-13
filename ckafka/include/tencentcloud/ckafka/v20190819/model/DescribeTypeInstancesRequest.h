@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取(Filter condition) filter by instance ID.
-                     * @return InstanceId (Filter condition) filter by instance ID.
+                     * 获取<p>(Filtering Conditions) Filter by instance ID</p>
+                     * @return InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置(Filter condition) filter by instance ID.
-                     * @param _instanceId (Filter condition) filter by instance ID.
+                     * 设置<p>(Filtering Conditions) Filter by instance ID</p>
+                     * @param _instanceId <p>(Filtering Conditions) Filter by instance ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取(Filter condition) filter by instance name. fuzzy query is supported.
-                     * @return SearchWord (Filter condition) filter by instance name. fuzzy query is supported.
+                     * 获取<p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
+                     * @return SearchWord <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置(Filter condition) filter by instance name. fuzzy query is supported.
-                     * @param _searchWord (Filter condition) filter by instance name. fuzzy query is supported.
+                     * 设置<p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
+                     * @param _searchWord <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
-                     * @return Status Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+                     * 获取<p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+                     * @return Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
-                     * @param _status Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+                     * 设置<p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+                     * @param _status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Offset. default value: 0.
-                     * @return Offset Offset. default value: 0.
+                     * 获取<p>Offset, which is 0 by default</p>
+                     * @return Offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. default value: 0.
-                     * @param _offset Offset. default value: 0.
+                     * 设置<p>Offset, which is 0 by default</p>
+                     * @param _offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. default: 10. maximum value: 100.
-                     * @return Limit Number of returned results. default: 10. maximum value: 100.
+                     * 获取<p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. default: 10. maximum value: 100.
-                     * @param _limit Number of returned results. default: 10. maximum value: 100.
+                     * 设置<p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Matches the Tag key.
-                     * @return TagKey Matches the Tag key.
+                     * 获取<p>Match the tag key.</p>
+                     * @return TagKey <p>Match the tag key.</p>
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Matches the Tag key.
-                     * @param _tagKey Matches the Tag key.
+                     * 设置<p>Match the tag key.</p>
+                     * @param _tagKey <p>Match the tag key.</p>
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * (Filter condition) filter by instance ID.
+                     * <p>(Filtering Conditions) Filter by instance ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * (Filter condition) filter by instance name. fuzzy query is supported.
+                     * <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+                     * <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Offset. default value: 0.
+                     * <p>Offset, which is 0 by default</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. default: 10. maximum value: 100.
+                     * <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Matches the Tag key.
+                     * <p>Match the tag key.</p>
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;

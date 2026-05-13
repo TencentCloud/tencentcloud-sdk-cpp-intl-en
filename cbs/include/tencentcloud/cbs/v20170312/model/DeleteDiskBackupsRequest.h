@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk backup point to be deleted.
-                     * @return DiskBackupIds ID of the cloud disk backup point to be deleted.
+                     * 获取Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+                     * @return DiskBackupIds Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetDiskBackupIds() const;
 
                     /**
-                     * 设置ID of the cloud disk backup point to be deleted.
-                     * @param _diskBackupIds ID of the cloud disk backup point to be deleted.
+                     * 设置Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+                     * @param _diskBackupIds Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDiskBackupIds(const std::vector<std::string>& _diskBackupIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the cloud disk backup point to be deleted.
+                     * Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_diskBackupIds;
                     bool m_diskBackupIdsHasBeenSet;

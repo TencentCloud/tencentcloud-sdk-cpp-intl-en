@@ -24,14 +24,19 @@ using namespace std;
 
 ListUsageCallDetailRequest::ListUsageCallDetailRequest() :
     m_modelNameHasBeenSet(false),
-    m_startTimeHasBeenSet(false),
-    m_endTimeHasBeenSet(false),
     m_pageNumberHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
+    m_startTimeHasBeenSet(false),
+    m_endTimeHasBeenSet(false),
     m_uinAccountHasBeenSet(false),
     m_appBizIdsHasBeenSet(false),
     m_callTypeHasBeenSet(false),
-    m_subScenesHasBeenSet(false)
+    m_subScenesHasBeenSet(false),
+    m_appTypeHasBeenSet(false),
+    m_billingTagHasBeenSet(false),
+    m_spaceIdHasBeenSet(false),
+    m_statStartTimeHasBeenSet(false),
+    m_statEndTimeHasBeenSet(false)
 {
 }
 
@@ -50,22 +55,6 @@ string ListUsageCallDetailRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_modelName.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_startTimeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "StartTime";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_endTimeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EndTime";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_pageNumberHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -80,6 +69,22 @@ string ListUsageCallDetailRequest::ToJsonString() const
         string key = "PageSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pageSize, allocator);
+    }
+
+    if (m_startTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uinAccountHasBeenSet)
@@ -129,6 +134,46 @@ string ListUsageCallDetailRequest::ToJsonString() const
         }
     }
 
+    if (m_appTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_appType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_billingTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BillingTag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_billingTag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_spaceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpaceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_spaceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_statStartTime, allocator);
+    }
+
+    if (m_statEndTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatEndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_statEndTime, allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -151,38 +196,6 @@ void ListUsageCallDetailRequest::SetModelName(const string& _modelName)
 bool ListUsageCallDetailRequest::ModelNameHasBeenSet() const
 {
     return m_modelNameHasBeenSet;
-}
-
-string ListUsageCallDetailRequest::GetStartTime() const
-{
-    return m_startTime;
-}
-
-void ListUsageCallDetailRequest::SetStartTime(const string& _startTime)
-{
-    m_startTime = _startTime;
-    m_startTimeHasBeenSet = true;
-}
-
-bool ListUsageCallDetailRequest::StartTimeHasBeenSet() const
-{
-    return m_startTimeHasBeenSet;
-}
-
-string ListUsageCallDetailRequest::GetEndTime() const
-{
-    return m_endTime;
-}
-
-void ListUsageCallDetailRequest::SetEndTime(const string& _endTime)
-{
-    m_endTime = _endTime;
-    m_endTimeHasBeenSet = true;
-}
-
-bool ListUsageCallDetailRequest::EndTimeHasBeenSet() const
-{
-    return m_endTimeHasBeenSet;
 }
 
 uint64_t ListUsageCallDetailRequest::GetPageNumber() const
@@ -215,6 +228,38 @@ void ListUsageCallDetailRequest::SetPageSize(const uint64_t& _pageSize)
 bool ListUsageCallDetailRequest::PageSizeHasBeenSet() const
 {
     return m_pageSizeHasBeenSet;
+}
+
+string ListUsageCallDetailRequest::GetStartTime() const
+{
+    return m_startTime;
+}
+
+void ListUsageCallDetailRequest::SetStartTime(const string& _startTime)
+{
+    m_startTime = _startTime;
+    m_startTimeHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::StartTimeHasBeenSet() const
+{
+    return m_startTimeHasBeenSet;
+}
+
+string ListUsageCallDetailRequest::GetEndTime() const
+{
+    return m_endTime;
+}
+
+void ListUsageCallDetailRequest::SetEndTime(const string& _endTime)
+{
+    m_endTime = _endTime;
+    m_endTimeHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::EndTimeHasBeenSet() const
+{
+    return m_endTimeHasBeenSet;
 }
 
 vector<string> ListUsageCallDetailRequest::GetUinAccount() const
@@ -279,6 +324,86 @@ void ListUsageCallDetailRequest::SetSubScenes(const vector<string>& _subScenes)
 bool ListUsageCallDetailRequest::SubScenesHasBeenSet() const
 {
     return m_subScenesHasBeenSet;
+}
+
+string ListUsageCallDetailRequest::GetAppType() const
+{
+    return m_appType;
+}
+
+void ListUsageCallDetailRequest::SetAppType(const string& _appType)
+{
+    m_appType = _appType;
+    m_appTypeHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::AppTypeHasBeenSet() const
+{
+    return m_appTypeHasBeenSet;
+}
+
+string ListUsageCallDetailRequest::GetBillingTag() const
+{
+    return m_billingTag;
+}
+
+void ListUsageCallDetailRequest::SetBillingTag(const string& _billingTag)
+{
+    m_billingTag = _billingTag;
+    m_billingTagHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::BillingTagHasBeenSet() const
+{
+    return m_billingTagHasBeenSet;
+}
+
+string ListUsageCallDetailRequest::GetSpaceId() const
+{
+    return m_spaceId;
+}
+
+void ListUsageCallDetailRequest::SetSpaceId(const string& _spaceId)
+{
+    m_spaceId = _spaceId;
+    m_spaceIdHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::SpaceIdHasBeenSet() const
+{
+    return m_spaceIdHasBeenSet;
+}
+
+int64_t ListUsageCallDetailRequest::GetStatStartTime() const
+{
+    return m_statStartTime;
+}
+
+void ListUsageCallDetailRequest::SetStatStartTime(const int64_t& _statStartTime)
+{
+    m_statStartTime = _statStartTime;
+    m_statStartTimeHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::StatStartTimeHasBeenSet() const
+{
+    return m_statStartTimeHasBeenSet;
+}
+
+int64_t ListUsageCallDetailRequest::GetStatEndTime() const
+{
+    return m_statEndTime;
+}
+
+void ListUsageCallDetailRequest::SetStatEndTime(const int64_t& _statEndTime)
+{
+    m_statEndTime = _statEndTime;
+    m_statEndTimeHasBeenSet = true;
+}
+
+bool ListUsageCallDetailRequest::StatEndTimeHasBeenSet() const
+{
+    return m_statEndTimeHasBeenSet;
 }
 
 

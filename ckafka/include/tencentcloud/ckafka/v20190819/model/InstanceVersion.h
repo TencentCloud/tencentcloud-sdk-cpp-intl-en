@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CKafka cluster instance version.
-                     * @return KafkaVersion CKafka cluster instance version.
+                     * 获取<p>ckafka cluster instance version</p>
+                     * @return KafkaVersion <p>ckafka cluster instance version</p>
                      * 
                      */
                     std::string GetKafkaVersion() const;
 
                     /**
-                     * 设置CKafka cluster instance version.
-                     * @param _kafkaVersion CKafka cluster instance version.
+                     * 设置<p>ckafka cluster instance version</p>
+                     * @param _kafkaVersion <p>ckafka cluster instance version</p>
                      * 
                      */
                     void SetKafkaVersion(const std::string& _kafkaVersion);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
-                     * 获取Broker version information.
-                     * @return CurBrokerVersion Broker version information.
+                     * 获取<p>broker version info</p>
+                     * @return CurBrokerVersion <p>broker version info</p>
                      * 
                      */
                     std::string GetCurBrokerVersion() const;
 
                     /**
-                     * 设置Broker version information.
-                     * @param _curBrokerVersion Broker version information.
+                     * 设置<p>broker version info</p>
+                     * @param _curBrokerVersion <p>broker version info</p>
                      * 
                      */
                     void SetCurBrokerVersion(const std::string& _curBrokerVersion);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CurBrokerVersionHasBeenSet() const;
 
                     /**
-                     * 获取Latest version information.
-                     * @return LatestBrokerVersion Latest version information.
+                     * 获取<p>latest version info</p>
+                     * @return LatestBrokerVersion <p>latest version info</p>
                      * 
                      */
                     std::vector<LatestBrokerVersion> GetLatestBrokerVersion() const;
 
                     /**
-                     * 设置Latest version information.
-                     * @param _latestBrokerVersion Latest version information.
+                     * 设置<p>latest version info</p>
+                     * @param _latestBrokerVersion <p>latest version info</p>
                      * 
                      */
                     void SetLatestBrokerVersion(const std::vector<LatestBrokerVersion>& _latestBrokerVersion);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool LatestBrokerVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow kernel upgrades across major versions.
-                     * @return AllowUpgradeHighVersion Whether to allow kernel upgrades across major versions.
+                     * 获取<p>Permission for cross-major version kernel upgrade</p>
+                     * @return AllowUpgradeHighVersion <p>Permission for cross-major version kernel upgrade</p>
                      * 
                      */
                     bool GetAllowUpgradeHighVersion() const;
 
                     /**
-                     * 设置Whether to allow kernel upgrades across major versions.
-                     * @param _allowUpgradeHighVersion Whether to allow kernel upgrades across major versions.
+                     * 设置<p>Permission for cross-major version kernel upgrade</p>
+                     * @param _allowUpgradeHighVersion <p>Permission for cross-major version kernel upgrade</p>
                      * 
                      */
                     void SetAllowUpgradeHighVersion(const bool& _allowUpgradeHighVersion);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AllowUpgradeHighVersionHasBeenSet() const;
 
                     /**
-                     * 获取Major version allowed for upgrades.
-                     * @return HighVersionSet Major version allowed for upgrades.
+                     * 获取<p>Permission for major version upgrade</p>
+                     * @return HighVersionSet <p>Permission for major version upgrade</p>
                      * 
                      */
                     std::vector<std::string> GetHighVersionSet() const;
 
                     /**
-                     * 设置Major version allowed for upgrades.
-                     * @param _highVersionSet Major version allowed for upgrades.
+                     * 设置<p>Permission for major version upgrade</p>
+                     * @param _highVersionSet <p>Permission for major version upgrade</p>
                      * 
                      */
                     void SetHighVersionSet(const std::vector<std::string>& _highVersionSet);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool HighVersionSetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow automatic deletion of consumer groups during minor version configuration.
-                     * @return AllowAutoDeleteTimestamp Whether to allow automatic deletion of consumer groups during minor version configuration.
+                     * 获取<p>Permission to configure auto deletion of consumer group for minor version number</p>
+                     * @return AllowAutoDeleteTimestamp <p>Permission to configure auto deletion of consumer group for minor version number</p>
                      * 
                      */
                     bool GetAllowAutoDeleteTimestamp() const;
 
                     /**
-                     * 设置Whether to allow automatic deletion of consumer groups during minor version configuration.
-                     * @param _allowAutoDeleteTimestamp Whether to allow automatic deletion of consumer groups during minor version configuration.
+                     * 设置<p>Permission to configure auto deletion of consumer group for minor version number</p>
+                     * @param _allowAutoDeleteTimestamp <p>Permission to configure auto deletion of consumer group for minor version number</p>
                      * 
                      */
                     void SetAllowAutoDeleteTimestamp(const bool& _allowAutoDeleteTimestamp);
@@ -173,43 +173,70 @@ namespace TencentCloud
                      */
                     bool AllowAutoDeleteTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Allow the modification of transaction ID expiration time configuration</p>
+                     * @return AllowModifyTxnIdExpiration <p>Allow the modification of transaction ID expiration time configuration</p>
+                     * 
+                     */
+                    bool GetAllowModifyTxnIdExpiration() const;
+
+                    /**
+                     * 设置<p>Allow the modification of transaction ID expiration time configuration</p>
+                     * @param _allowModifyTxnIdExpiration <p>Allow the modification of transaction ID expiration time configuration</p>
+                     * 
+                     */
+                    void SetAllowModifyTxnIdExpiration(const bool& _allowModifyTxnIdExpiration);
+
+                    /**
+                     * 判断参数 AllowModifyTxnIdExpiration 是否已赋值
+                     * @return AllowModifyTxnIdExpiration 是否已赋值
+                     * 
+                     */
+                    bool AllowModifyTxnIdExpirationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CKafka cluster instance version.
+                     * <p>ckafka cluster instance version</p>
                      */
                     std::string m_kafkaVersion;
                     bool m_kafkaVersionHasBeenSet;
 
                     /**
-                     * Broker version information.
+                     * <p>broker version info</p>
                      */
                     std::string m_curBrokerVersion;
                     bool m_curBrokerVersionHasBeenSet;
 
                     /**
-                     * Latest version information.
+                     * <p>latest version info</p>
                      */
                     std::vector<LatestBrokerVersion> m_latestBrokerVersion;
                     bool m_latestBrokerVersionHasBeenSet;
 
                     /**
-                     * Whether to allow kernel upgrades across major versions.
+                     * <p>Permission for cross-major version kernel upgrade</p>
                      */
                     bool m_allowUpgradeHighVersion;
                     bool m_allowUpgradeHighVersionHasBeenSet;
 
                     /**
-                     * Major version allowed for upgrades.
+                     * <p>Permission for major version upgrade</p>
                      */
                     std::vector<std::string> m_highVersionSet;
                     bool m_highVersionSetHasBeenSet;
 
                     /**
-                     * Whether to allow automatic deletion of consumer groups during minor version configuration.
+                     * <p>Permission to configure auto deletion of consumer group for minor version number</p>
                      */
                     bool m_allowAutoDeleteTimestamp;
                     bool m_allowAutoDeleteTimestampHasBeenSet;
+
+                    /**
+                     * <p>Allow the modification of transaction ID expiration time configuration</p>
+                     */
+                    bool m_allowModifyTxnIdExpiration;
+                    bool m_allowModifyTxnIdExpirationHasBeenSet;
 
                 };
             }

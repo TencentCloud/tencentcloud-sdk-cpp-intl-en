@@ -50,15 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-                     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * 获取It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
+                     * @return DiskIdSet It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
                      * 
                      */
                     std::vector<std::string> GetDiskIdSet() const;
 
                     /**
-                     * 设置The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-                     * @param _diskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * 设置It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
+                     * @param _diskIdSet It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
                      * 
                      */
                     void SetDiskIdSet(const std::vector<std::string>& _diskIdSet);
@@ -92,15 +100,31 @@ namespace TencentCloud
                     bool IsActivatedHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     * 获取Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+                     * @return AutoSnapshotPolicyState Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
                      * 
                      */
                     std::string GetAutoSnapshotPolicyState() const;
 
                     /**
-                     * 设置Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     * @param _autoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     * 设置Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+                     * @param _autoSnapshotPolicyState Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
                      * 
                      */
                     void SetAutoSnapshotPolicyState(const std::string& _autoSnapshotPolicyState);
@@ -113,19 +137,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyStateHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
+                     * @return IsCopyToRemote Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
                      * 
                      */
                     uint64_t GetIsCopyToRemote() const;
 
                     /**
-                     * 设置Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
+                     * @param _isCopyToRemote Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
                      * 
                      */
                     void SetIsCopyToRemote(const uint64_t& _isCopyToRemote);
@@ -310,19 +330,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CopyToAccountUinHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Lists instance ids that are bound to the current periodic snapshot policy.
+                     * @return InstanceIdSet Lists instance ids that are bound to the current periodic snapshot policy.
                      * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
-                     * 设置List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Lists instance ids that are bound to the current periodic snapshot policy.
+                     * @param _instanceIdSet Lists instance ids that are bound to the current periodic snapshot policy.
                      * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
@@ -335,19 +351,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the number of months snapshot can be retained.
+                     * @return RetentionMonths Specifies the number of months snapshot can be retained.
                      * 
                      */
                     uint64_t GetRetentionMonths() const;
 
                     /**
-                     * 设置The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _retentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the number of months snapshot can be retained.
+                     * @param _retentionMonths Specifies the number of months snapshot can be retained.
                      * 
                      */
                     void SetRetentionMonths(const uint64_t& _retentionMonths);
@@ -360,19 +372,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RetentionMonthsHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the maximum retention number of snapshots created by scheduled snapshot.
+                     * @return RetentionAmount Specifies the maximum retention number of snapshots created by scheduled snapshot.
                      * 
                      */
                     uint64_t GetRetentionAmount() const;
 
                     /**
-                     * 设置The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _retentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the maximum retention number of snapshots created by scheduled snapshot.
+                     * @param _retentionAmount Specifies the maximum retention number of snapshots created by scheduled snapshot.
                      * 
                      */
                     void SetRetentionAmount(const uint64_t& _retentionAmount);
@@ -436,18 +444,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -462,7 +466,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
                      */
                     std::vector<std::string> m_diskIdSet;
                     bool m_diskIdSetHasBeenSet;
@@ -474,14 +480,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isActivatedHasBeenSet;
 
                     /**
-                     * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     * Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
                      */
                     std::string m_autoSnapshotPolicyState;
                     bool m_autoSnapshotPolicyStateHasBeenSet;
 
                     /**
-                     * Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
                      */
                     uint64_t m_isCopyToRemote;
                     bool m_isCopyToRemoteHasBeenSet;
@@ -536,22 +545,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_copyToAccountUinHasBeenSet;
 
                     /**
-                     * List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Lists instance ids that are bound to the current periodic snapshot policy.
                      */
                     std::vector<std::string> m_instanceIdSet;
                     bool m_instanceIdSetHasBeenSet;
 
                     /**
-                     * The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the number of months snapshot can be retained.
                      */
                     uint64_t m_retentionMonths;
                     bool m_retentionMonthsHasBeenSet;
 
                     /**
-                     * The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the maximum retention number of snapshots created by scheduled snapshot.
                      */
                     uint64_t m_retentionAmount;
                     bool m_retentionAmountHasBeenSet;
@@ -572,7 +578,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

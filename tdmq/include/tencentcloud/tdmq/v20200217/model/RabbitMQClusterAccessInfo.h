@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RabbitMQ Cluster Access Information
+                * 
                 */
                 class RabbitMQClusterAccessInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster Public Network Access Address
-                     * @return PublicAccessEndpoint Cluster Public Network Access Address
+                     * 获取
+                     * @return PublicAccessEndpoint 
                      * 
                      */
                     std::string GetPublicAccessEndpoint() const;
 
                     /**
-                     * 设置Cluster Public Network Access Address
-                     * @param _publicAccessEndpoint Cluster Public Network Access Address
+                     * 设置
+                     * @param _publicAccessEndpoint 
                      * 
                      */
                     void SetPublicAccessEndpoint(const std::string& _publicAccessEndpoint);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool PublicAccessEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Console Access Address
-                     * @return WebConsoleEndpoint Cluster Console Access Address
+                     * 获取
+                     * @return WebConsoleEndpoint 
                      * 
                      */
                     std::string GetWebConsoleEndpoint() const;
 
                     /**
-                     * 设置Cluster Console Access Address
-                     * @param _webConsoleEndpoint Cluster Console Access Address
+                     * 设置
+                     * @param _webConsoleEndpoint 
                      * 
                      */
                     void SetWebConsoleEndpoint(const std::string& _webConsoleEndpoint);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool WebConsoleEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Console Login Username
-                     * @return WebConsoleUsername Cluster Console Login Username
+                     * 获取
+                     * @return WebConsoleUsername 
                      * 
                      */
                     std::string GetWebConsoleUsername() const;
 
                     /**
-                     * 设置Cluster Console Login Username
-                     * @param _webConsoleUsername Cluster Console Login Username
+                     * 设置
+                     * @param _webConsoleUsername 
                      * 
                      */
                     void SetWebConsoleUsername(const std::string& _webConsoleUsername);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool WebConsoleUsernameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Console Login Password
-                     * @return WebConsolePassword Cluster Console Login Password
+                     * 获取
+                     * @return WebConsolePassword 
                      * 
                      */
                     std::string GetWebConsolePassword() const;
 
                     /**
-                     * 设置Cluster Console Login Password
-                     * @param _webConsolePassword Cluster Console Login Password
+                     * 设置
+                     * @param _webConsolePassword 
                      * 
                      */
                     void SetWebConsolePassword(const std::string& _webConsolePassword);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool WebConsolePasswordHasBeenSet() const;
 
                     /**
-                     * 获取Deprecated
-                     * @return PublicAccessEndpointStatus Deprecated
+                     * 获取
+                     * @return PublicAccessEndpointStatus 
                      * 
                      */
                     bool GetPublicAccessEndpointStatus() const;
 
                     /**
-                     * 设置Deprecated
-                     * @param _publicAccessEndpointStatus Deprecated
+                     * 设置
+                     * @param _publicAccessEndpointStatus 
                      * 
                      */
                     void SetPublicAccessEndpointStatus(const bool& _publicAccessEndpointStatus);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool PublicAccessEndpointStatusHasBeenSet() const;
 
                     /**
-                     * 获取Deprecated
-                     * @return PublicControlConsoleSwitchStatus Deprecated
+                     * 获取
+                     * @return PublicControlConsoleSwitchStatus 
                      * 
                      */
                     bool GetPublicControlConsoleSwitchStatus() const;
 
                     /**
-                     * 设置Deprecated
-                     * @param _publicControlConsoleSwitchStatus Deprecated
+                     * 设置
+                     * @param _publicControlConsoleSwitchStatus 
                      * 
                      */
                     void SetPublicControlConsoleSwitchStatus(const bool& _publicControlConsoleSwitchStatus);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool PublicControlConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取Deprecated
-                     * @return VpcControlConsoleSwitchStatus Deprecated
+                     * 获取
+                     * @return VpcControlConsoleSwitchStatus 
                      * 
                      */
                     bool GetVpcControlConsoleSwitchStatus() const;
 
                     /**
-                     * 设置Deprecated
-                     * @param _vpcControlConsoleSwitchStatus Deprecated
+                     * 设置
+                     * @param _vpcControlConsoleSwitchStatus 
                      * 
                      */
                     void SetVpcControlConsoleSwitchStatus(const bool& _vpcControlConsoleSwitchStatus);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool VpcControlConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取Vpc management console access address, example value: http://1.1.1.1:15672
-                     * @return VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
+                     * 获取
+                     * @return VpcWebConsoleEndpoint 
                      * 
                      */
                     std::string GetVpcWebConsoleEndpoint() const;
 
                     /**
-                     * 设置Vpc management console access address, example value: http://1.1.1.1:15672
-                     * @param _vpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
+                     * 设置
+                     * @param _vpcWebConsoleEndpoint 
                      * 
                      */
                     void SetVpcWebConsoleEndpoint(const std::string& _vpcWebConsoleEndpoint);
@@ -388,52 +388,115 @@ OFF/ON/CREATING/DELETING
                      */
                     bool PublicIpReusedHasBeenSet() const;
 
+                    /**
+                     * 获取Error message for public network console access point operations.
+                     * @return PublicWebConsoleErrorMessage Error message for public network console access point operations.
+                     * 
+                     */
+                    std::string GetPublicWebConsoleErrorMessage() const;
+
+                    /**
+                     * 设置Error message for public network console access point operations.
+                     * @param _publicWebConsoleErrorMessage Error message for public network console access point operations.
+                     * 
+                     */
+                    void SetPublicWebConsoleErrorMessage(const std::string& _publicWebConsoleErrorMessage);
+
+                    /**
+                     * 判断参数 PublicWebConsoleErrorMessage 是否已赋值
+                     * @return PublicWebConsoleErrorMessage 是否已赋值
+                     * 
+                     */
+                    bool PublicWebConsoleErrorMessageHasBeenSet() const;
+
+                    /**
+                     * 获取Error message for private network console access point operations.
+                     * @return VpcWebConsoleErrorMessage Error message for private network console access point operations.
+                     * 
+                     */
+                    std::string GetVpcWebConsoleErrorMessage() const;
+
+                    /**
+                     * 设置Error message for private network console access point operations.
+                     * @param _vpcWebConsoleErrorMessage Error message for private network console access point operations.
+                     * 
+                     */
+                    void SetVpcWebConsoleErrorMessage(const std::string& _vpcWebConsoleErrorMessage);
+
+                    /**
+                     * 判断参数 VpcWebConsoleErrorMessage 是否已赋值
+                     * @return VpcWebConsoleErrorMessage 是否已赋值
+                     * 
+                     */
+                    bool VpcWebConsoleErrorMessageHasBeenSet() const;
+
+                    /**
+                     * 获取Error message for public network access point operation failure.
+                     * @return PublicDataStreamErrorMessage Error message for public network access point operation failure.
+                     * 
+                     */
+                    std::string GetPublicDataStreamErrorMessage() const;
+
+                    /**
+                     * 设置Error message for public network access point operation failure.
+                     * @param _publicDataStreamErrorMessage Error message for public network access point operation failure.
+                     * 
+                     */
+                    void SetPublicDataStreamErrorMessage(const std::string& _publicDataStreamErrorMessage);
+
+                    /**
+                     * 判断参数 PublicDataStreamErrorMessage 是否已赋值
+                     * @return PublicDataStreamErrorMessage 是否已赋值
+                     * 
+                     */
+                    bool PublicDataStreamErrorMessageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster Public Network Access Address
+                     * 
                      */
                     std::string m_publicAccessEndpoint;
                     bool m_publicAccessEndpointHasBeenSet;
 
                     /**
-                     * Cluster Console Access Address
+                     * 
                      */
                     std::string m_webConsoleEndpoint;
                     bool m_webConsoleEndpointHasBeenSet;
 
                     /**
-                     * Cluster Console Login Username
+                     * 
                      */
                     std::string m_webConsoleUsername;
                     bool m_webConsoleUsernameHasBeenSet;
 
                     /**
-                     * Cluster Console Login Password
+                     * 
                      */
                     std::string m_webConsolePassword;
                     bool m_webConsolePasswordHasBeenSet;
 
                     /**
-                     * Deprecated
+                     * 
                      */
                     bool m_publicAccessEndpointStatus;
                     bool m_publicAccessEndpointStatusHasBeenSet;
 
                     /**
-                     * Deprecated
+                     * 
                      */
                     bool m_publicControlConsoleSwitchStatus;
                     bool m_publicControlConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * Deprecated
+                     * 
                      */
                     bool m_vpcControlConsoleSwitchStatus;
                     bool m_vpcControlConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * Vpc management console access address, example value: http://1.1.1.1:15672
+                     * 
                      */
                     std::string m_vpcWebConsoleEndpoint;
                     bool m_vpcWebConsoleEndpointHasBeenSet;
@@ -486,6 +549,24 @@ OFF/ON/CREATING/DELETING
                      */
                     bool m_publicIpReused;
                     bool m_publicIpReusedHasBeenSet;
+
+                    /**
+                     * Error message for public network console access point operations.
+                     */
+                    std::string m_publicWebConsoleErrorMessage;
+                    bool m_publicWebConsoleErrorMessageHasBeenSet;
+
+                    /**
+                     * Error message for private network console access point operations.
+                     */
+                    std::string m_vpcWebConsoleErrorMessage;
+                    bool m_vpcWebConsoleErrorMessageHasBeenSet;
+
+                    /**
+                     * Error message for public network access point operation failure.
+                     */
+                    std::string m_publicDataStreamErrorMessage;
+                    bool m_publicDataStreamErrorMessageHasBeenSet;
 
                 };
             }

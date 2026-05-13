@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return TopicName Topic name
+                     * 获取<p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+                     * @return TopicName <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topicName Topic name
+                     * 设置<p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+                     * @param _topicName <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, 0 will be used by default.
-                     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 获取<p>Offset, which is 0 by default</p>
+                     * @return Offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, 0 will be used by default.
-                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 设置<p>Offset, which is 0 by default</p>
+                     * @param _offset <p>Offset, which is 0 by default</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. default value: 20. must be greater than 0.
-                     * @return Limit Number of returned results. default value: 20. must be greater than 0.
+                     * 获取<p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+                     * @return Limit <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. default value: 20. must be greater than 0.
-                     * @param _limit Number of returned results. default value: 20. must be greater than 0.
+                     * 设置<p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+                     * @param _limit <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filters unsynced replicas only
-                     * @return OutOfSyncReplicaOnly Filters unsynced replicas only
+                     * 获取<p>Only filter unsynced replicas</p>
+                     * @return OutOfSyncReplicaOnly <p>Only filter unsynced replicas</p>
                      * 
                      */
                     bool GetOutOfSyncReplicaOnly() const;
 
                     /**
-                     * 设置Filters unsynced replicas only
-                     * @param _outOfSyncReplicaOnly Filters unsynced replicas only
+                     * 设置<p>Only filter unsynced replicas</p>
+                     * @param _outOfSyncReplicaOnly <p>Only filter unsynced replicas</p>
                      * 
                      */
                     void SetOutOfSyncReplicaOnly(const bool& _outOfSyncReplicaOnly);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, 0 will be used by default.
+                     * <p>Offset, which is 0 by default</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. default value: 20. must be greater than 0.
+                     * <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filters unsynced replicas only
+                     * <p>Only filter unsynced replicas</p>
                      */
                     bool m_outOfSyncReplicaOnly;
                     bool m_outOfSyncReplicaOnlyHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scheduled snapshot policy ID.
-                     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+                     * 获取Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+                     * @return AutoSnapshotPolicyId Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置Scheduled snapshot policy ID.
-                     * @param _autoSnapshotPolicyId Scheduled snapshot policy ID.
+                     * 设置Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+                     * @param _autoSnapshotPolicyId Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
-                     * @return IsActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+                     * 获取Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+                     * @return IsActivated Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
                      * 
                      */
                     bool GetIsActivated() const;
 
                     /**
-                     * 设置Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
-                     * @param _isActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+                     * 设置Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+                     * @param _isActivated Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
                      * 
                      */
                     void SetIsActivated(const bool& _isActivated);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool IsActivatedHasBeenSet() const;
 
                     /**
-                     * 获取Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
-                     * @return IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+                     * 获取Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
+                     * @return IsPermanent Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
                      * 
                      */
                     bool GetIsPermanent() const;
 
                     /**
-                     * 设置Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
-                     * @param _isPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+                     * 设置Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
+                     * @param _isPermanent Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
                      * 
                      */
                     void SetIsPermanent(const bool& _isPermanent);
@@ -172,19 +172,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scheduled snapshot policy ID.
+                     * Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;
 
                     /**
-                     * Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+                     * Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
                      */
                     bool m_isActivated;
                     bool m_isActivatedHasBeenSet;
 
                     /**
-                     * Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+                     * Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
                      */
                     bool m_isPermanent;
                     bool m_isPermanentHasBeenSet;

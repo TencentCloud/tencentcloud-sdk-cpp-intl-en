@@ -69,19 +69,19 @@ namespace TencentCloud
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ChargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetChargeUnit() const;
 
                     /**
-                     * 设置Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _chargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _chargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetChargeUnit(const std::string& _chargeUnit);
@@ -257,19 +257,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetailPrices Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Details list of billable items.
+                     * @return DetailPrices Details list of billable items.
                      * 
                      */
                     std::vector<DetailPrice> GetDetailPrices() const;
 
                     /**
-                     * 设置Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detailPrices Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Details list of billable items.
+                     * @param _detailPrices Details list of billable items.
                      * 
                      */
                     void SetDetailPrices(const std::vector<DetailPrice>& _detailPrices);
@@ -290,8 +286,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_chargeUnit;
                     bool m_chargeUnitHasBeenSet;
@@ -343,8 +339,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Details list of billable items.
                      */
                     std::vector<DetailPrice> m_detailPrices;
                     bool m_detailPricesHasBeenSet;

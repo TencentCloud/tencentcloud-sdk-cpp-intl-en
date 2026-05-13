@@ -210,6 +210,69 @@ namespace TencentCloud
                      */
                     bool AppBizIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Space ID
+                     * @return SpaceId Space ID
+                     * 
+                     */
+                    std::string GetSpaceId() const;
+
+                    /**
+                     * 设置Space ID
+                     * @param _spaceId Space ID
+                     * 
+                     */
+                    void SetSpaceId(const std::string& _spaceId);
+
+                    /**
+                     * 判断参数 SpaceId 是否已赋值
+                     * @return SpaceId 是否已赋值
+                     * 
+                     */
+                    bool SpaceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Start timestamp, unit: seconds
+                     * @return StatStartTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    int64_t GetStatStartTime() const;
+
+                    /**
+                     * 设置Start timestamp, unit: seconds
+                     * @param _statStartTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    void SetStatStartTime(const int64_t& _statStartTime);
+
+                    /**
+                     * 判断参数 StatStartTime 是否已赋值
+                     * @return StatStartTime 是否已赋值
+                     * 
+                     */
+                    bool StatStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End timestamp, unit: seconds
+                     * @return StatEndTime End timestamp, unit: seconds
+                     * 
+                     */
+                    int64_t GetStatEndTime() const;
+
+                    /**
+                     * 设置End timestamp, unit: seconds
+                     * @param _statEndTime End timestamp, unit: seconds
+                     * 
+                     */
+                    void SetStatEndTime(const int64_t& _statEndTime);
+
+                    /**
+                     * 判断参数 StatEndTime 是否已赋值
+                     * @return StatEndTime 是否已赋值
+                     * 
+                     */
+                    bool StatEndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +322,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_appBizIds;
                     bool m_appBizIdsHasBeenSet;
+
+                    /**
+                     * Space ID
+                     */
+                    std::string m_spaceId;
+                    bool m_spaceIdHasBeenSet;
+
+                    /**
+                     * Start timestamp, unit: seconds
+                     */
+                    int64_t m_statStartTime;
+                    bool m_statStartTimeHasBeenSet;
+
+                    /**
+                     * End timestamp, unit: seconds
+                     */
+                    int64_t m_statEndTime;
+                    bool m_statEndTimeHasBeenSet;
 
                 };
             }

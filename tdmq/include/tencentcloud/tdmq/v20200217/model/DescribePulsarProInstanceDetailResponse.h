@@ -24,6 +24,7 @@
 #include <tencentcloud/tdmq/v20200217/model/PulsarProClusterInfo.h>
 #include <tencentcloud/tdmq/v20200217/model/PulsarNetworkAccessPointInfo.h>
 #include <tencentcloud/tdmq/v20200217/model/PulsarProClusterSpecInfo.h>
+#include <tencentcloud/tdmq/v20200217/model/CertificateInfo.h>
 
 
 namespace TencentCloud
@@ -92,6 +93,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterSpecInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate list of the cluster
+                     * @return CertificateList Certificate list of the cluster
+                     * 
+                     */
+                    std::vector<CertificateInfo> GetCertificateList() const;
+
+                    /**
+                     * 判断参数 CertificateList 是否已赋值
+                     * @return CertificateList 是否已赋值
+                     * 
+                     */
+                    bool CertificateListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -113,6 +128,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     PulsarProClusterSpecInfo m_clusterSpecInfo;
                     bool m_clusterSpecInfoHasBeenSet;
+
+                    /**
+                     * Certificate list of the cluster
+                     */
+                    std::vector<CertificateInfo> m_certificateList;
+                    bool m_certificateListHasBeenSet;
 
                 };
             }

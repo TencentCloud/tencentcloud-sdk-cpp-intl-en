@@ -28,7 +28,10 @@ CreateEnvironmentRequest::CreateEnvironmentRequest() :
     m_clusterIdHasBeenSet(false),
     m_remarkHasBeenSet(false),
     m_retentionPolicyHasBeenSet(false),
-    m_autoSubscriptionCreationHasBeenSet(false)
+    m_autoSubscriptionCreationHasBeenSet(false),
+    m_subscriptionExpirationTimeHasBeenSet(false),
+    m_subscriptionExpirationTimeEnableHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -86,6 +89,37 @@ string CreateEnvironmentRequest::ToJsonString() const
         string key = "AutoSubscriptionCreation";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoSubscriptionCreation, allocator);
+    }
+
+    if (m_subscriptionExpirationTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscriptionExpirationTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subscriptionExpirationTime, allocator);
+    }
+
+    if (m_subscriptionExpirationTimeEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscriptionExpirationTimeEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subscriptionExpirationTimeEnable, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -190,6 +224,54 @@ void CreateEnvironmentRequest::SetAutoSubscriptionCreation(const bool& _autoSubs
 bool CreateEnvironmentRequest::AutoSubscriptionCreationHasBeenSet() const
 {
     return m_autoSubscriptionCreationHasBeenSet;
+}
+
+uint64_t CreateEnvironmentRequest::GetSubscriptionExpirationTime() const
+{
+    return m_subscriptionExpirationTime;
+}
+
+void CreateEnvironmentRequest::SetSubscriptionExpirationTime(const uint64_t& _subscriptionExpirationTime)
+{
+    m_subscriptionExpirationTime = _subscriptionExpirationTime;
+    m_subscriptionExpirationTimeHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::SubscriptionExpirationTimeHasBeenSet() const
+{
+    return m_subscriptionExpirationTimeHasBeenSet;
+}
+
+bool CreateEnvironmentRequest::GetSubscriptionExpirationTimeEnable() const
+{
+    return m_subscriptionExpirationTimeEnable;
+}
+
+void CreateEnvironmentRequest::SetSubscriptionExpirationTimeEnable(const bool& _subscriptionExpirationTimeEnable)
+{
+    m_subscriptionExpirationTimeEnable = _subscriptionExpirationTimeEnable;
+    m_subscriptionExpirationTimeEnableHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::SubscriptionExpirationTimeEnableHasBeenSet() const
+{
+    return m_subscriptionExpirationTimeEnableHasBeenSet;
+}
+
+vector<Tag> CreateEnvironmentRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateEnvironmentRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

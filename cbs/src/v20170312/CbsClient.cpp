@@ -140,6 +140,56 @@ CbsClient::ApplySnapshotOutcomeCallable CbsClient::ApplySnapshotCallable(const A
     return prom->get_future();
 }
 
+CbsClient::ApplySnapshotGroupOutcome CbsClient::ApplySnapshotGroup(const ApplySnapshotGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplySnapshotGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplySnapshotGroupResponse rsp = ApplySnapshotGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplySnapshotGroupOutcome(rsp);
+        else
+            return ApplySnapshotGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplySnapshotGroupOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::ApplySnapshotGroupAsync(const ApplySnapshotGroupRequest& request, const ApplySnapshotGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApplySnapshotGroupRequest&;
+    using Resp = ApplySnapshotGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApplySnapshotGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::ApplySnapshotGroupOutcomeCallable CbsClient::ApplySnapshotGroupCallable(const ApplySnapshotGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApplySnapshotGroupOutcome>>();
+    ApplySnapshotGroupAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const ApplySnapshotGroupRequest&,
+        ApplySnapshotGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CbsClient::AttachDisksOutcome CbsClient::AttachDisks(const AttachDisksRequest &request)
 {
     auto outcome = MakeRequest(request, "AttachDisks");
@@ -490,6 +540,56 @@ CbsClient::CreateSnapshotOutcomeCallable CbsClient::CreateSnapshotCallable(const
     return prom->get_future();
 }
 
+CbsClient::CreateSnapshotGroupOutcome CbsClient::CreateSnapshotGroup(const CreateSnapshotGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSnapshotGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSnapshotGroupResponse rsp = CreateSnapshotGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSnapshotGroupOutcome(rsp);
+        else
+            return CreateSnapshotGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSnapshotGroupOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::CreateSnapshotGroupAsync(const CreateSnapshotGroupRequest& request, const CreateSnapshotGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSnapshotGroupRequest&;
+    using Resp = CreateSnapshotGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSnapshotGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::CreateSnapshotGroupOutcomeCallable CbsClient::CreateSnapshotGroupCallable(const CreateSnapshotGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSnapshotGroupOutcome>>();
+    CreateSnapshotGroupAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const CreateSnapshotGroupRequest&,
+        CreateSnapshotGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CbsClient::DeleteAutoSnapshotPoliciesOutcome CbsClient::DeleteAutoSnapshotPolicies(const DeleteAutoSnapshotPoliciesRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAutoSnapshotPolicies");
@@ -582,6 +682,56 @@ CbsClient::DeleteDiskBackupsOutcomeCallable CbsClient::DeleteDiskBackupsCallable
         const CbsClient*,
         const DeleteDiskBackupsRequest&,
         DeleteDiskBackupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CbsClient::DeleteSnapshotGroupOutcome CbsClient::DeleteSnapshotGroup(const DeleteSnapshotGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSnapshotGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSnapshotGroupResponse rsp = DeleteSnapshotGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSnapshotGroupOutcome(rsp);
+        else
+            return DeleteSnapshotGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSnapshotGroupOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::DeleteSnapshotGroupAsync(const DeleteSnapshotGroupRequest& request, const DeleteSnapshotGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteSnapshotGroupRequest&;
+    using Resp = DeleteSnapshotGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteSnapshotGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::DeleteSnapshotGroupOutcomeCallable CbsClient::DeleteSnapshotGroupCallable(const DeleteSnapshotGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteSnapshotGroupOutcome>>();
+    DeleteSnapshotGroupAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const DeleteSnapshotGroupRequest&,
+        DeleteSnapshotGroupOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -840,56 +990,6 @@ CbsClient::DescribeDiskConfigQuotaOutcomeCallable CbsClient::DescribeDiskConfigQ
     return prom->get_future();
 }
 
-CbsClient::DescribeDiskOperationLogsOutcome CbsClient::DescribeDiskOperationLogs(const DescribeDiskOperationLogsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeDiskOperationLogs");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeDiskOperationLogsResponse rsp = DescribeDiskOperationLogsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeDiskOperationLogsOutcome(rsp);
-        else
-            return DescribeDiskOperationLogsOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeDiskOperationLogsOutcome(outcome.GetError());
-    }
-}
-
-void CbsClient::DescribeDiskOperationLogsAsync(const DescribeDiskOperationLogsRequest& request, const DescribeDiskOperationLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeDiskOperationLogsRequest&;
-    using Resp = DescribeDiskOperationLogsResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeDiskOperationLogs", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CbsClient::DescribeDiskOperationLogsOutcomeCallable CbsClient::DescribeDiskOperationLogsCallable(const DescribeDiskOperationLogsRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeDiskOperationLogsOutcome>>();
-    DescribeDiskOperationLogsAsync(
-    request,
-    [prom](
-        const CbsClient*,
-        const DescribeDiskOperationLogsRequest&,
-        DescribeDiskOperationLogsOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CbsClient::DescribeDisksOutcome CbsClient::DescribeDisks(const DescribeDisksRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDisks");
@@ -990,48 +1090,98 @@ CbsClient::DescribeInstancesDiskNumOutcomeCallable CbsClient::DescribeInstancesD
     return prom->get_future();
 }
 
-CbsClient::DescribeSnapshotOperationLogsOutcome CbsClient::DescribeSnapshotOperationLogs(const DescribeSnapshotOperationLogsRequest &request)
+CbsClient::DescribeSnapshotGroupsOutcome CbsClient::DescribeSnapshotGroups(const DescribeSnapshotGroupsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeSnapshotOperationLogs");
+    auto outcome = MakeRequest(request, "DescribeSnapshotGroups");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeSnapshotOperationLogsResponse rsp = DescribeSnapshotOperationLogsResponse();
+        DescribeSnapshotGroupsResponse rsp = DescribeSnapshotGroupsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeSnapshotOperationLogsOutcome(rsp);
+            return DescribeSnapshotGroupsOutcome(rsp);
         else
-            return DescribeSnapshotOperationLogsOutcome(o.GetError());
+            return DescribeSnapshotGroupsOutcome(o.GetError());
     }
     else
     {
-        return DescribeSnapshotOperationLogsOutcome(outcome.GetError());
+        return DescribeSnapshotGroupsOutcome(outcome.GetError());
     }
 }
 
-void CbsClient::DescribeSnapshotOperationLogsAsync(const DescribeSnapshotOperationLogsRequest& request, const DescribeSnapshotOperationLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void CbsClient::DescribeSnapshotGroupsAsync(const DescribeSnapshotGroupsRequest& request, const DescribeSnapshotGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    using Req = const DescribeSnapshotOperationLogsRequest&;
-    using Resp = DescribeSnapshotOperationLogsResponse;
+    using Req = const DescribeSnapshotGroupsRequest&;
+    using Resp = DescribeSnapshotGroupsResponse;
 
     DoRequestAsync<Req, Resp>(
-        "DescribeSnapshotOperationLogs", request, {{{"Content-Type", "application/json"}}},
+        "DescribeSnapshotGroups", request, {{{"Content-Type", "application/json"}}},
         [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
         {
             handler(this, req, std::move(resp), context);
         });
 }
 
-CbsClient::DescribeSnapshotOperationLogsOutcomeCallable CbsClient::DescribeSnapshotOperationLogsCallable(const DescribeSnapshotOperationLogsRequest &request)
+CbsClient::DescribeSnapshotGroupsOutcomeCallable CbsClient::DescribeSnapshotGroupsCallable(const DescribeSnapshotGroupsRequest &request)
 {
-    const auto prom = std::make_shared<std::promise<DescribeSnapshotOperationLogsOutcome>>();
-    DescribeSnapshotOperationLogsAsync(
+    const auto prom = std::make_shared<std::promise<DescribeSnapshotGroupsOutcome>>();
+    DescribeSnapshotGroupsAsync(
     request,
     [prom](
         const CbsClient*,
-        const DescribeSnapshotOperationLogsRequest&,
-        DescribeSnapshotOperationLogsOutcome resp,
+        const DescribeSnapshotGroupsRequest&,
+        DescribeSnapshotGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CbsClient::DescribeSnapshotOverviewOutcome CbsClient::DescribeSnapshotOverview(const DescribeSnapshotOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSnapshotOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSnapshotOverviewResponse rsp = DescribeSnapshotOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSnapshotOverviewOutcome(rsp);
+        else
+            return DescribeSnapshotOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSnapshotOverviewOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::DescribeSnapshotOverviewAsync(const DescribeSnapshotOverviewRequest& request, const DescribeSnapshotOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSnapshotOverviewRequest&;
+    using Resp = DescribeSnapshotOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSnapshotOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::DescribeSnapshotOverviewOutcomeCallable CbsClient::DescribeSnapshotOverviewCallable(const DescribeSnapshotOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSnapshotOverviewOutcome>>();
+    DescribeSnapshotOverviewAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const DescribeSnapshotOverviewRequest&,
+        DescribeSnapshotOverviewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1432,6 +1582,56 @@ CbsClient::InquiryPriceCreateDisksOutcomeCallable CbsClient::InquiryPriceCreateD
         const CbsClient*,
         const InquiryPriceCreateDisksRequest&,
         InquiryPriceCreateDisksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CbsClient::InquiryPriceRenewDisksOutcome CbsClient::InquiryPriceRenewDisks(const InquiryPriceRenewDisksRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceRenewDisks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceRenewDisksResponse rsp = InquiryPriceRenewDisksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceRenewDisksOutcome(rsp);
+        else
+            return InquiryPriceRenewDisksOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceRenewDisksOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::InquiryPriceRenewDisksAsync(const InquiryPriceRenewDisksRequest& request, const InquiryPriceRenewDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const InquiryPriceRenewDisksRequest&;
+    using Resp = InquiryPriceRenewDisksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "InquiryPriceRenewDisks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::InquiryPriceRenewDisksOutcomeCallable CbsClient::InquiryPriceRenewDisksCallable(const InquiryPriceRenewDisksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<InquiryPriceRenewDisksOutcome>>();
+    InquiryPriceRenewDisksAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const InquiryPriceRenewDisksRequest&,
+        InquiryPriceRenewDisksOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

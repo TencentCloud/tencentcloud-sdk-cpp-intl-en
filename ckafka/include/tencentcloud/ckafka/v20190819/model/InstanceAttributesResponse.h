@@ -829,15 +829,15 @@ namespace TencentCloud
                     bool MaxMessageByteHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
-                     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+                     * 获取<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
+                     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
-                     * @param _instanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+                     * 设置<p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
+                     * @param _instanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -1016,6 +1016,48 @@ namespace TencentCloud
                      * 
                      */
                     bool DeleteProtectionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * 
+                     */
+                    int64_t GetRetentionBytes() const;
+
+                    /**
+                     * 设置<p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * @param _retentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * 
+                     */
+                    void SetRetentionBytes(const int64_t& _retentionBytes);
+
+                    /**
+                     * 判断参数 RetentionBytes 是否已赋值
+                     * @return RetentionBytes 是否已赋值
+                     * 
+                     */
+                    bool RetentionBytesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * @return TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * 
+                     */
+                    int64_t GetTransactionalIdExpirationMs() const;
+
+                    /**
+                     * 设置<p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * @param _transactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * 
+                     */
+                    void SetTransactionalIdExpirationMs(const int64_t& _transactionalIdExpirationMs);
+
+                    /**
+                     * 判断参数 TransactionalIdExpirationMs 是否已赋值
+                     * @return TransactionalIdExpirationMs 是否已赋值
+                     * 
+                     */
+                    bool TransactionalIdExpirationMsHasBeenSet() const;
 
                 private:
 
@@ -1242,7 +1284,7 @@ namespace TencentCloud
                     bool m_maxMessageByteHasBeenSet;
 
                     /**
-                     * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+                     * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -1294,6 +1336,18 @@ namespace TencentCloud
                      */
                     int64_t m_deleteProtectionEnable;
                     bool m_deleteProtectionEnableHasBeenSet;
+
+                    /**
+                     * <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     */
+                    int64_t m_retentionBytes;
+                    bool m_retentionBytesHasBeenSet;
+
+                    /**
+                     * <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     */
+                    int64_t m_transactionalIdExpirationMs;
+                    bool m_transactionalIdExpirationMsHasBeenSet;
 
                 };
             }

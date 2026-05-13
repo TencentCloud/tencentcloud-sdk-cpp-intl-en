@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
-                     * @return DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * 获取Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+                     * @return DiskBackupId Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDiskBackupId() const;
 
                     /**
-                     * 设置ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
-                     * @param _diskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * 设置Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+                     * @param _diskBackupId Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDiskBackupId(const std::string& _diskBackupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DiskBackupIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
-                     * @return DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * 获取Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @return DiskId Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
-                     * @param _diskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * 设置Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+                     * @param _diskId Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -84,19 +84,73 @@ namespace TencentCloud
                      */
                     bool DiskIdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+                     * @return AutoStopInstance Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+                     * 
+                     */
+                    bool GetAutoStopInstance() const;
+
+                    /**
+                     * 设置Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+                     * @param _autoStopInstance Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+                     * 
+                     */
+                    void SetAutoStopInstance(const bool& _autoStopInstance);
+
+                    /**
+                     * 判断参数 AutoStopInstance 是否已赋值
+                     * @return AutoStopInstance 是否已赋值
+                     * 
+                     */
+                    bool AutoStopInstanceHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+                     * @return AutoStartInstance Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+                     * 
+                     */
+                    bool GetAutoStartInstance() const;
+
+                    /**
+                     * 设置Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+                     * @param _autoStartInstance Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+                     * 
+                     */
+                    void SetAutoStartInstance(const bool& _autoStartInstance);
+
+                    /**
+                     * 判断参数 AutoStartInstance 是否已赋值
+                     * @return AutoStartInstance 是否已赋值
+                     * 
+                     */
+                    bool AutoStartInstanceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
                      */
                     std::string m_diskBackupId;
                     bool m_diskBackupIdHasBeenSet;
 
                     /**
-                     * ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+                     */
+                    bool m_autoStopInstance;
+                    bool m_autoStopInstanceHasBeenSet;
+
+                    /**
+                     * Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+                     */
+                    bool m_autoStartInstance;
+                    bool m_autoStartInstanceHasBeenSet;
 
                 };
             }

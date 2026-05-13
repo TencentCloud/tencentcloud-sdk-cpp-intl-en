@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned entity of topic details
-                     * @return Result Returned entity of topic details
+                     * 获取<p>Returned topic detail entity</p>
+                     * @return Result <p>Returned topic detail entity</p>
                      * 
                      */
                     TopicDetailResponse GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned entity of topic details
+                     * <p>Returned topic detail entity</p>
                      */
                     TopicDetailResponse m_result;
                     bool m_resultHasBeenSet;

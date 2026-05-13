@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Consumer group name.
-                     * @return GroupName Consumer group name.
+                     * 获取<p>Consumer group name</p>
+                     * @return GroupName <p>Consumer group name</p>
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Consumer group name.
-                     * @param _groupName Consumer group name.
+                     * 设置<p>Consumer group name</p>
+                     * @param _groupName <p>Consumer group name</p>
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Partition information.
-                     * @return Partitions Partition information.
+                     * 获取<p>partition info</p>
+                     * @return Partitions <p>partition info</p>
                      * 
                      */
                     std::vector<Partitions> GetPartitions() const;
 
                     /**
-                     * 设置Partition information.
-                     * @param _partitions Partition information.
+                     * 设置<p>partition info</p>
+                     * @param _partitions <p>partition info</p>
                      * 
                      */
                     void SetPartitions(const std::vector<Partitions>& _partitions);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool PartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Name of the specified topic. Default value: names of all topics.
-                     * @return TopicName Name of the specified topic. Default value: names of all topics.
+                     * 获取<p>Specify topic, default to all topics</p>
+                     * @return TopicName <p>Specify topic, default to all topics</p>
                      * 
                      */
                     std::vector<std::string> GetTopicName() const;
 
                     /**
-                     * 设置Name of the specified topic. Default value: names of all topics.
-                     * @param _topicName Name of the specified topic. Default value: names of all topics.
+                     * 设置<p>Specify topic, default to all topics</p>
+                     * @param _topicName <p>Specify topic, default to all topics</p>
                      * 
                      */
                     void SetTopicName(const std::vector<std::string>& _topicName);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Consumer group name.
+                     * <p>Consumer group name</p>
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Partition information.
+                     * <p>partition info</p>
                      */
                     std::vector<Partitions> m_partitions;
                     bool m_partitionsHasBeenSet;
 
                     /**
-                     * Name of the specified topic. Default value: names of all topics.
+                     * <p>Specify topic, default to all topics</p>
                      */
                     std::vector<std::string> m_topicName;
                     bool m_topicNameHasBeenSet;

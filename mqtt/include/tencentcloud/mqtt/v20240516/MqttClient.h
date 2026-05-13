@@ -27,6 +27,8 @@
 #include <tencentcloud/mqtt/v20240516/model/AddClientSubscriptionResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/CreateAuthorizationPolicyRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/CreateAuthorizationPolicyResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/CreateDeviceIdentityRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/CreateDeviceIdentityResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/CreateInstanceRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/CreateInstanceResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/CreateMessageEnrichmentRuleRequest.h>
@@ -37,6 +39,8 @@
 #include <tencentcloud/mqtt/v20240516/model/DeleteAuthorizationPolicyResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DeleteClientSubscriptionRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DeleteClientSubscriptionResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DeleteDeviceIdentityRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DeleteDeviceIdentityResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DeleteInstanceRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DeleteInstanceResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DeleteMessageEnrichmentRuleRequest.h>
@@ -49,14 +53,30 @@
 #include <tencentcloud/mqtt/v20240516/model/DescribeAuthorizationPoliciesResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeClientListRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeClientListResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificatesRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificatesResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceIdentitiesRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceIdentitiesResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceIdentityRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceIdentityResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeInstanceRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeInstanceResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeInstanceListRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeInstanceListResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageByTopicRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageByTopicResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageDetailsRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageDetailsResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageEnrichmentRulesRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeMessageEnrichmentRulesResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeProductSKUListRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeProductSKUListResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionClientRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionClientResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionGroupsRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionGroupsResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionsRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeSharedSubscriptionsResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeTopicRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeTopicResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeUserListRequest.h>
@@ -65,6 +85,8 @@
 #include <tencentcloud/mqtt/v20240516/model/KickOutClientResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/ModifyAuthorizationPolicyRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/ModifyAuthorizationPolicyResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/ModifyDeviceIdentityRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/ModifyDeviceIdentityResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/ModifyInstanceRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/ModifyInstanceResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/ModifyMessageEnrichmentRuleRequest.h>
@@ -95,6 +117,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAuthorizationPolicyResponse> CreateAuthorizationPolicyOutcome;
                 typedef std::future<CreateAuthorizationPolicyOutcome> CreateAuthorizationPolicyOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::CreateAuthorizationPolicyRequest&, CreateAuthorizationPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuthorizationPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDeviceIdentityResponse> CreateDeviceIdentityOutcome;
+                typedef std::future<CreateDeviceIdentityOutcome> CreateDeviceIdentityOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::CreateDeviceIdentityRequest&, CreateDeviceIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDeviceIdentityAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
                 typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
@@ -110,6 +135,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteClientSubscriptionResponse> DeleteClientSubscriptionOutcome;
                 typedef std::future<DeleteClientSubscriptionOutcome> DeleteClientSubscriptionOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DeleteClientSubscriptionRequest&, DeleteClientSubscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClientSubscriptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDeviceIdentityResponse> DeleteDeviceIdentityOutcome;
+                typedef std::future<DeleteDeviceIdentityOutcome> DeleteDeviceIdentityOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DeleteDeviceIdentityRequest&, DeleteDeviceIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDeviceIdentityAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstanceResponse> DeleteInstanceOutcome;
                 typedef std::future<DeleteInstanceOutcome> DeleteInstanceOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DeleteInstanceRequest&, DeleteInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstanceAsyncHandler;
@@ -128,9 +156,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClientListResponse> DescribeClientListOutcome;
                 typedef std::future<DescribeClientListOutcome> DescribeClientListOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeClientListRequest&, DescribeClientListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClientListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeviceCertificatesResponse> DescribeDeviceCertificatesOutcome;
+                typedef std::future<DescribeDeviceCertificatesOutcome> DescribeDeviceCertificatesOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeDeviceCertificatesRequest&, DescribeDeviceCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeviceIdentitiesResponse> DescribeDeviceIdentitiesOutcome;
+                typedef std::future<DescribeDeviceIdentitiesOutcome> DescribeDeviceIdentitiesOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeDeviceIdentitiesRequest&, DescribeDeviceIdentitiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceIdentitiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeviceIdentityResponse> DescribeDeviceIdentityOutcome;
+                typedef std::future<DescribeDeviceIdentityOutcome> DescribeDeviceIdentityOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeDeviceIdentityRequest&, DescribeDeviceIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceIdentityAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceResponse> DescribeInstanceOutcome;
                 typedef std::future<DescribeInstanceOutcome> DescribeInstanceOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeInstanceRequest&, DescribeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceListResponse> DescribeInstanceListOutcome;
+                typedef std::future<DescribeInstanceListOutcome> DescribeInstanceListOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeInstanceListRequest&, DescribeInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMessageByTopicResponse> DescribeMessageByTopicOutcome;
                 typedef std::future<DescribeMessageByTopicOutcome> DescribeMessageByTopicOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeMessageByTopicRequest&, DescribeMessageByTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMessageByTopicAsyncHandler;
@@ -140,6 +180,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMessageEnrichmentRulesResponse> DescribeMessageEnrichmentRulesOutcome;
                 typedef std::future<DescribeMessageEnrichmentRulesOutcome> DescribeMessageEnrichmentRulesOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeMessageEnrichmentRulesRequest&, DescribeMessageEnrichmentRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMessageEnrichmentRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProductSKUListResponse> DescribeProductSKUListOutcome;
+                typedef std::future<DescribeProductSKUListOutcome> DescribeProductSKUListOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeProductSKUListRequest&, DescribeProductSKUListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProductSKUListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSharedSubscriptionClientResponse> DescribeSharedSubscriptionClientOutcome;
+                typedef std::future<DescribeSharedSubscriptionClientOutcome> DescribeSharedSubscriptionClientOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeSharedSubscriptionClientRequest&, DescribeSharedSubscriptionClientOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSharedSubscriptionClientAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSharedSubscriptionGroupsResponse> DescribeSharedSubscriptionGroupsOutcome;
+                typedef std::future<DescribeSharedSubscriptionGroupsOutcome> DescribeSharedSubscriptionGroupsOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeSharedSubscriptionGroupsRequest&, DescribeSharedSubscriptionGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSharedSubscriptionGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSharedSubscriptionsResponse> DescribeSharedSubscriptionsOutcome;
+                typedef std::future<DescribeSharedSubscriptionsOutcome> DescribeSharedSubscriptionsOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeSharedSubscriptionsRequest&, DescribeSharedSubscriptionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSharedSubscriptionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopicResponse> DescribeTopicOutcome;
                 typedef std::future<DescribeTopicOutcome> DescribeTopicOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeTopicRequest&, DescribeTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicAsyncHandler;
@@ -152,6 +204,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAuthorizationPolicyResponse> ModifyAuthorizationPolicyOutcome;
                 typedef std::future<ModifyAuthorizationPolicyOutcome> ModifyAuthorizationPolicyOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::ModifyAuthorizationPolicyRequest&, ModifyAuthorizationPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuthorizationPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDeviceIdentityResponse> ModifyDeviceIdentityOutcome;
+                typedef std::future<ModifyDeviceIdentityOutcome> ModifyDeviceIdentityOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::ModifyDeviceIdentityRequest&, ModifyDeviceIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDeviceIdentityAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceResponse> ModifyInstanceOutcome;
                 typedef std::future<ModifyInstanceOutcome> ModifyInstanceOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::ModifyInstanceRequest&, ModifyInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceAsyncHandler;
@@ -187,6 +242,15 @@ namespace TencentCloud
                 CreateAuthorizationPolicyOutcome CreateAuthorizationPolicy(const Model::CreateAuthorizationPolicyRequest &request);
                 void CreateAuthorizationPolicyAsync(const Model::CreateAuthorizationPolicyRequest& request, const CreateAuthorizationPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAuthorizationPolicyOutcomeCallable CreateAuthorizationPolicyCallable(const Model::CreateAuthorizationPolicyRequest& request);
+
+                /**
+                 *Create a device signature for per-device secret
+                 * @param req CreateDeviceIdentityRequest
+                 * @return CreateDeviceIdentityOutcome
+                 */
+                CreateDeviceIdentityOutcome CreateDeviceIdentity(const Model::CreateDeviceIdentityRequest &request);
+                void CreateDeviceIdentityAsync(const Model::CreateDeviceIdentityRequest& request, const CreateDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDeviceIdentityOutcomeCallable CreateDeviceIdentityCallable(const Model::CreateDeviceIdentityRequest& request);
 
                 /**
                  *This API is used to purchase a new MQTT instance.
@@ -232,6 +296,15 @@ namespace TencentCloud
                 DeleteClientSubscriptionOutcome DeleteClientSubscription(const Model::DeleteClientSubscriptionRequest &request);
                 void DeleteClientSubscriptionAsync(const Model::DeleteClientSubscriptionRequest& request, const DeleteClientSubscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteClientSubscriptionOutcomeCallable DeleteClientSubscriptionCallable(const Model::DeleteClientSubscriptionRequest& request);
+
+                /**
+                 *Delete a device signature
+                 * @param req DeleteDeviceIdentityRequest
+                 * @return DeleteDeviceIdentityOutcome
+                 */
+                DeleteDeviceIdentityOutcome DeleteDeviceIdentity(const Model::DeleteDeviceIdentityRequest &request);
+                void DeleteDeviceIdentityAsync(const Model::DeleteDeviceIdentityRequest& request, const DeleteDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDeviceIdentityOutcomeCallable DeleteDeviceIdentityCallable(const Model::DeleteDeviceIdentityRequest& request);
 
                 /**
                  *This API is used to delete an MQTT instance.
@@ -288,6 +361,33 @@ namespace TencentCloud
                 DescribeClientListOutcomeCallable DescribeClientListCallable(const Model::DescribeClientListRequest& request);
 
                 /**
+                 *Query device certificates with paging
+                 * @param req DescribeDeviceCertificatesRequest
+                 * @return DescribeDeviceCertificatesOutcome
+                 */
+                DescribeDeviceCertificatesOutcome DescribeDeviceCertificates(const Model::DescribeDeviceCertificatesRequest &request);
+                void DescribeDeviceCertificatesAsync(const Model::DescribeDeviceCertificatesRequest& request, const DescribeDeviceCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeviceCertificatesOutcomeCallable DescribeDeviceCertificatesCallable(const Model::DescribeDeviceCertificatesRequest& request);
+
+                /**
+                 *Query the list of device identifiers in a cluster
+                 * @param req DescribeDeviceIdentitiesRequest
+                 * @return DescribeDeviceIdentitiesOutcome
+                 */
+                DescribeDeviceIdentitiesOutcome DescribeDeviceIdentities(const Model::DescribeDeviceIdentitiesRequest &request);
+                void DescribeDeviceIdentitiesAsync(const Model::DescribeDeviceIdentitiesRequest& request, const DescribeDeviceIdentitiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeviceIdentitiesOutcomeCallable DescribeDeviceIdentitiesCallable(const Model::DescribeDeviceIdentitiesRequest& request);
+
+                /**
+                 *Query device identification
+                 * @param req DescribeDeviceIdentityRequest
+                 * @return DescribeDeviceIdentityOutcome
+                 */
+                DescribeDeviceIdentityOutcome DescribeDeviceIdentity(const Model::DescribeDeviceIdentityRequest &request);
+                void DescribeDeviceIdentityAsync(const Model::DescribeDeviceIdentityRequest& request, const DescribeDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeviceIdentityOutcomeCallable DescribeDeviceIdentityCallable(const Model::DescribeDeviceIdentityRequest& request);
+
+                /**
                  *This API is used to query instance information.
                  * @param req DescribeInstanceRequest
                  * @return DescribeInstanceOutcome
@@ -295,6 +395,20 @@ namespace TencentCloud
                 DescribeInstanceOutcome DescribeInstance(const Model::DescribeInstanceRequest &request);
                 void DescribeInstanceAsync(const Model::DescribeInstanceRequest& request, const DescribeInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceOutcomeCallable DescribeInstanceCallable(const Model::DescribeInstanceRequest& request);
+
+                /**
+                 *Get instance list. Description of the Filters parameter use is as follows:
+1. InstanceName, fuzzy search by name
+2. InstanceId, query by instance ID
+3. InstanceStatus, instance status query, supports multiple selections
+
+When using the TagFilters parameter for search, the filters parameter is invalid.
+                 * @param req DescribeInstanceListRequest
+                 * @return DescribeInstanceListOutcome
+                 */
+                DescribeInstanceListOutcome DescribeInstanceList(const Model::DescribeInstanceListRequest &request);
+                void DescribeInstanceListAsync(const Model::DescribeInstanceListRequest& request, const DescribeInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceListOutcomeCallable DescribeInstanceListCallable(const Model::DescribeInstanceListRequest& request);
 
                 /**
                  *This API is used to query messages based on subscription.
@@ -322,6 +436,42 @@ namespace TencentCloud
                 DescribeMessageEnrichmentRulesOutcome DescribeMessageEnrichmentRules(const Model::DescribeMessageEnrichmentRulesRequest &request);
                 void DescribeMessageEnrichmentRulesAsync(const Model::DescribeMessageEnrichmentRulesRequest& request, const DescribeMessageEnrichmentRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMessageEnrichmentRulesOutcomeCallable DescribeMessageEnrichmentRulesCallable(const Model::DescribeMessageEnrichmentRulesRequest& request);
+
+                /**
+                 *This API is used to obtain product sales specifications.
+                 * @param req DescribeProductSKUListRequest
+                 * @return DescribeProductSKUListOutcome
+                 */
+                DescribeProductSKUListOutcome DescribeProductSKUList(const Model::DescribeProductSKUListRequest &request);
+                void DescribeProductSKUListAsync(const Model::DescribeProductSKUListRequest& request, const DescribeProductSKUListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProductSKUListOutcomeCallable DescribeProductSKUListCallable(const Model::DescribeProductSKUListRequest& request);
+
+                /**
+                 *Query shared subscription group detailed information
+                 * @param req DescribeSharedSubscriptionClientRequest
+                 * @return DescribeSharedSubscriptionClientOutcome
+                 */
+                DescribeSharedSubscriptionClientOutcome DescribeSharedSubscriptionClient(const Model::DescribeSharedSubscriptionClientRequest &request);
+                void DescribeSharedSubscriptionClientAsync(const Model::DescribeSharedSubscriptionClientRequest& request, const DescribeSharedSubscriptionClientAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSharedSubscriptionClientOutcomeCallable DescribeSharedSubscriptionClientCallable(const Model::DescribeSharedSubscriptionClientRequest& request);
+
+                /**
+                 *This API is used to query the subscription group list shared within the cluster.
+                 * @param req DescribeSharedSubscriptionGroupsRequest
+                 * @return DescribeSharedSubscriptionGroupsOutcome
+                 */
+                DescribeSharedSubscriptionGroupsOutcome DescribeSharedSubscriptionGroups(const Model::DescribeSharedSubscriptionGroupsRequest &request);
+                void DescribeSharedSubscriptionGroupsAsync(const Model::DescribeSharedSubscriptionGroupsRequest& request, const DescribeSharedSubscriptionGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSharedSubscriptionGroupsOutcomeCallable DescribeSharedSubscriptionGroupsCallable(const Model::DescribeSharedSubscriptionGroupsRequest& request);
+
+                /**
+                 *Query the subscription list of a shared subscription group
+                 * @param req DescribeSharedSubscriptionsRequest
+                 * @return DescribeSharedSubscriptionsOutcome
+                 */
+                DescribeSharedSubscriptionsOutcome DescribeSharedSubscriptions(const Model::DescribeSharedSubscriptionsRequest &request);
+                void DescribeSharedSubscriptionsAsync(const Model::DescribeSharedSubscriptionsRequest& request, const DescribeSharedSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSharedSubscriptionsOutcomeCallable DescribeSharedSubscriptionsCallable(const Model::DescribeSharedSubscriptionsRequest& request);
 
                 /**
                  *This API is used to query the MQTT topic details.
@@ -360,6 +510,15 @@ This API is used to perform Username fuzzy search.
                 ModifyAuthorizationPolicyOutcome ModifyAuthorizationPolicy(const Model::ModifyAuthorizationPolicyRequest &request);
                 void ModifyAuthorizationPolicyAsync(const Model::ModifyAuthorizationPolicyRequest& request, const ModifyAuthorizationPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAuthorizationPolicyOutcomeCallable ModifyAuthorizationPolicyCallable(const Model::ModifyAuthorizationPolicyRequest& request);
+
+                /**
+                 *Modify the device signature
+                 * @param req ModifyDeviceIdentityRequest
+                 * @return ModifyDeviceIdentityOutcome
+                 */
+                ModifyDeviceIdentityOutcome ModifyDeviceIdentity(const Model::ModifyDeviceIdentityRequest &request);
+                void ModifyDeviceIdentityAsync(const Model::ModifyDeviceIdentityRequest& request, const ModifyDeviceIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDeviceIdentityOutcomeCallable ModifyDeviceIdentityCallable(const Model::ModifyDeviceIdentityRequest& request);
 
                 /**
                  *This API is used to modify instance attributes. Only running clusters can call this API to perform configuration change.

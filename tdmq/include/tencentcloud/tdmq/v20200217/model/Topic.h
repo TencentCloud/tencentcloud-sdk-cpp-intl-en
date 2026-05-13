@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tdmq/v20200217/model/PartitionsTopic.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
 
 
 namespace TencentCloud
@@ -750,6 +751,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AckTimeOutHasBeenSet() const;
 
+                    /**
+                     * 获取Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+                     * @return PulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+                     * 
+                     */
+                    int64_t GetPulsarTopicMessageType() const;
+
+                    /**
+                     * 设置Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+                     * @param _pulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+                     * 
+                     */
+                    void SetPulsarTopicMessageType(const int64_t& _pulsarTopicMessageType);
+
+                    /**
+                     * 判断参数 PulsarTopicMessageType 是否已赋值
+                     * @return PulsarTopicMessageType 是否已赋值
+                     * 
+                     */
+                    bool PulsarTopicMessageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Theme tag
+                     * @return Tags Theme tag
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Theme tag
+                     * @param _tags Theme tag
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * 
+                     */
+                    std::string GetDelayMessagePolicy() const;
+
+                    /**
+                     * 设置defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * @param _delayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     * 
+                     */
+                    void SetDelayMessagePolicy(const std::string& _delayMessagePolicy);
+
+                    /**
+                     * 判断参数 DelayMessagePolicy 是否已赋值
+                     * @return DelayMessagePolicy 是否已赋值
+                     * 
+                     */
+                    bool DelayMessagePolicyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -947,6 +1011,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_ackTimeOut;
                     bool m_ackTimeOutHasBeenSet;
+
+                    /**
+                     * Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+                     */
+                    int64_t m_pulsarTopicMessageType;
+                    bool m_pulsarTopicMessageTypeHasBeenSet;
+
+                    /**
+                     * Theme tag
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+                     */
+                    std::string m_delayMessagePolicy;
+                    bool m_delayMessagePolicyHasBeenSet;
 
                 };
             }

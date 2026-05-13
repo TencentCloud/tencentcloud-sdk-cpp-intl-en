@@ -150,42 +150,42 @@ namespace TencentCloud
                     /**
                      * 获取Start timestamp, in seconds.
                      * @return StartTime Start timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start timestamp, in seconds.
                      * @param _startTime Start timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End timestamp, in seconds.
                      * @return EndTime End timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End timestamp, in seconds.
                      * @param _endTime End timestamp, in seconds.
-                     * 
+                     * @deprecated
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -209,6 +209,69 @@ namespace TencentCloud
                      * 
                      */
                     bool AppBizIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+                     * @return SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+                     * 
+                     */
+                    std::string GetSpaceId() const;
+
+                    /**
+                     * 设置Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+                     * @param _spaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+                     * 
+                     */
+                    void SetSpaceId(const std::string& _spaceId);
+
+                    /**
+                     * 判断参数 SpaceId 是否已赋值
+                     * @return SpaceId 是否已赋值
+                     * 
+                     */
+                    bool SpaceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Start time. Unix timestamp in seconds, empty by default.
+                     * @return StatStartTime Start time. Unix timestamp in seconds, empty by default.
+                     * 
+                     */
+                    int64_t GetStatStartTime() const;
+
+                    /**
+                     * 设置Start time. Unix timestamp in seconds, empty by default.
+                     * @param _statStartTime Start time. Unix timestamp in seconds, empty by default.
+                     * 
+                     */
+                    void SetStatStartTime(const int64_t& _statStartTime);
+
+                    /**
+                     * 判断参数 StatStartTime 是否已赋值
+                     * @return StatStartTime 是否已赋值
+                     * 
+                     */
+                    bool StatStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time. Unix timestamp in seconds, empty by default.
+                     * @return StatEndTime End time. Unix timestamp in seconds, empty by default.
+                     * 
+                     */
+                    int64_t GetStatEndTime() const;
+
+                    /**
+                     * 设置End time. Unix timestamp in seconds, empty by default.
+                     * @param _statEndTime End time. Unix timestamp in seconds, empty by default.
+                     * 
+                     */
+                    void SetStatEndTime(const int64_t& _statEndTime);
+
+                    /**
+                     * 判断参数 StatEndTime 是否已赋值
+                     * @return StatEndTime 是否已赋值
+                     * 
+                     */
+                    bool StatEndTimeHasBeenSet() const;
 
                 private:
 
@@ -259,6 +322,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_appBizIds;
                     bool m_appBizIdsHasBeenSet;
+
+                    /**
+                     * Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+                     */
+                    std::string m_spaceId;
+                    bool m_spaceIdHasBeenSet;
+
+                    /**
+                     * Start time. Unix timestamp in seconds, empty by default.
+                     */
+                    int64_t m_statStartTime;
+                    bool m_statStartTimeHasBeenSet;
+
+                    /**
+                     * End time. Unix timestamp in seconds, empty by default.
+                     */
+                    int64_t m_statEndTime;
+                    bool m_statEndTimeHasBeenSet;
 
                 };
             }

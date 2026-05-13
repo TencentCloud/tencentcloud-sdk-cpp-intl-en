@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Agent Debugging Information
+                * 
                 */
                 class AgentDebugInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input Information for Tools and Large Models, json
-                     * @return Input Input Information for Tools and Large Models, json
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置Input Information for Tools and Large Models, json
-                     * @param _input Input Information for Tools and Large Models, json
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output Information for Tools and Large Models, json
-                     * @return Output Output Information for Tools and Large Models, json
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置Output Information for Tools and Large Models, json
-                     * @param _output Output Information for Tools and Large Models, json
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -88,19 +88,46 @@ namespace TencentCloud
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ModelName 
+                     * 
+                     */
+                    std::string GetModelName() const;
+
+                    /**
+                     * 设置
+                     * @param _modelName 
+                     * 
+                     */
+                    void SetModelName(const std::string& _modelName);
+
+                    /**
+                     * 判断参数 ModelName 是否已赋值
+                     * @return ModelName 是否已赋值
+                     * 
+                     */
+                    bool ModelNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Input Information for Tools and Large Models, json
+                     * 
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output Information for Tools and Large Models, json
+                     * 
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_modelName;
+                    bool m_modelNameHasBeenSet;
 
                 };
             }

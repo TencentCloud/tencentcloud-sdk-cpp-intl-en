@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool TopicDistributionHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of queues per topic
-                     * @return MaxQueuesPerTopic Maximum number of queues per topic
+                     * 获取
+                     * @return MaxQueuesPerTopic 
                      * 
                      */
                     uint64_t GetMaxQueuesPerTopic() const;
 
                     /**
-                     * 设置Maximum number of queues per topic
-                     * @param _maxQueuesPerTopic Maximum number of queues per topic
+                     * 设置
+                     * @param _maxQueuesPerTopic 
                      * 
                      */
                     void SetMaxQueuesPerTopic(const uint64_t& _maxQueuesPerTopic);
@@ -446,6 +446,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SendReceiveRatioHasBeenSet() const;
 
+                    /**
+                     * 获取Send and receive TPS peak cap
+                     * @return TpsLimit Send and receive TPS peak cap
+                     * 
+                     */
+                    int64_t GetTpsLimit() const;
+
+                    /**
+                     * 设置Send and receive TPS peak cap
+                     * @param _tpsLimit Send and receive TPS peak cap
+                     * 
+                     */
+                    void SetTpsLimit(const int64_t& _tpsLimit);
+
+                    /**
+                     * 判断参数 TpsLimit 是否已赋值
+                     * @return TpsLimit 是否已赋值
+                     * 
+                     */
+                    bool TpsLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GeneralSkuCode Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGeneralSkuCode() const;
+
+                    /**
+                     * 设置Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _generalSkuCode Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGeneralSkuCode(const std::string& _generalSkuCode);
+
+                    /**
+                     * 判断参数 GeneralSkuCode 是否已赋值
+                     * @return GeneralSkuCode 是否已赋值
+                     * 
+                     */
+                    bool GeneralSkuCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -515,7 +561,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicDistributionHasBeenSet;
 
                     /**
-                     * Maximum number of queues per topic
+                     * 
                      */
                     uint64_t m_maxQueuesPerTopic;
                     bool m_maxQueuesPerTopicHasBeenSet;
@@ -560,6 +606,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     double m_sendReceiveRatio;
                     bool m_sendReceiveRatioHasBeenSet;
+
+                    /**
+                     * Send and receive TPS peak cap
+                     */
+                    int64_t m_tpsLimit;
+                    bool m_tpsLimitHasBeenSet;
+
+                    /**
+                     * Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_generalSkuCode;
+                    bool m_generalSkuCodeHasBeenSet;
 
                 };
             }

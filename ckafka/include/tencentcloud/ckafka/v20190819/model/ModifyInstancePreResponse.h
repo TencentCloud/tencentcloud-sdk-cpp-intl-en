@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response structure of modifying the configurations of a prepaid instance.
-                     * @return Result Response structure of modifying the configurations of a prepaid instance.
+                     * 获取<p>Return structure for updating prepaid instance configuration</p>
+                     * @return Result <p>Return structure for updating prepaid instance configuration</p>
                      * 
                      */
                     CreateInstancePreResp GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response structure of modifying the configurations of a prepaid instance.
+                     * <p>Return structure for updating prepaid instance configuration</p>
                      */
                     CreateInstancePreResp m_result;
                     bool m_resultHasBeenSet;

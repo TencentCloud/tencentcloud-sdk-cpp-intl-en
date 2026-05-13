@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Environment (namespace) name.
-                     * @return EnvironmentId Environment (namespace) name.
+                     * 获取namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @return EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
-                     * 设置Environment (namespace) name.
-                     * @param _environmentId Environment (namespace) name.
+                     * 设置namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+                     * @param _environmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Environment (namespace) name.
+                     * namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
                      */
                     std::string m_environmentId;
                     bool m_environmentIdHasBeenSet;

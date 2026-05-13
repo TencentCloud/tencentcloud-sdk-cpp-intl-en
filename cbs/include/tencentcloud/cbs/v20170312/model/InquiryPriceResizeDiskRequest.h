@@ -43,36 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     * @return DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     * 
-                     */
-                    std::string GetDiskId() const;
-
-                    /**
-                     * 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     * @param _diskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetDiskId(const std::string& _diskId);
-
-                    /**
-                     * 判断参数 DiskId 是否已赋值
-                     * @return DiskId 是否已赋值
-                     * 
-                     */
-                    bool DiskIdHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-                     * @return DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * 获取Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+                     * @return DiskSize Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-                     * @param _diskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * 设置Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+                     * @param _diskSize Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -85,15 +64,36 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
-                     * @return ProjectId ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+                     * 获取Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+                     * @return DiskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+                     * 
+                     */
+                    std::string GetDiskId() const;
+
+                    /**
+                     * 设置Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+                     * @param _diskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+                     * 
+                     */
+                    void SetDiskId(const std::string& _diskId);
+
+                    /**
+                     * 判断参数 DiskId 是否已赋值
+                     * @return DiskId 是否已赋值
+                     * 
+                     */
+                    bool DiskIdHasBeenSet() const;
+
+                    /**
+                     * 获取cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
+                     * @return ProjectId cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
-                     * @param _projectId ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+                     * 设置cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
+                     * @param _projectId cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -105,25 +105,52 @@ namespace TencentCloud
                      */
                     bool ProjectIdHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+                     * @return DiskIds Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+                     * 
+                     */
+                    std::vector<std::string> GetDiskIds() const;
+
+                    /**
+                     * 设置Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+                     * @param _diskIds Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+                     * 
+                     */
+                    void SetDiskIds(const std::vector<std::string>& _diskIds);
+
+                    /**
+                     * 判断参数 DiskIds 是否已赋值
+                     * @return DiskIds 是否已赋值
+                     * 
+                     */
+                    bool DiskIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     */
-                    std::string m_diskId;
-                    bool m_diskIdHasBeenSet;
-
-                    /**
-                     * Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+                     * Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+                     */
+                    std::string m_diskId;
+                    bool m_diskIdHasBeenSet;
+
+                    /**
+                     * cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+                     */
+                    std::vector<std::string> m_diskIds;
+                    bool m_diskIdsHasBeenSet;
 
                 };
             }

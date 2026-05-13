@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return TopicName Topic name
+                     * 获取<p>Topic name</p>
+                     * @return TopicName <p>Topic name</p>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topicName Topic name
+                     * 设置<p>Topic name</p>
+                     * @param _topicName <p>Topic name</p>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Starting position of paging
-                     * @return Offset Starting position of paging
+                     * 获取<p>Starting position for pagination</p>
+                     * @return Offset <p>Starting position for pagination</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting position of paging
-                     * @param _offset Starting position of paging
+                     * 设置<p>Starting position for pagination</p>
+                     * @param _offset <p>Starting position for pagination</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page
-                     * @return Limit Number of results per page
+                     * 获取<p>Count per page</p><p>Default value: 20</p>
+                     * @return Limit <p>Count per page</p><p>Default value: 20</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page
-                     * @param _limit Number of results per page
+                     * 设置<p>Count per page</p><p>Default value: 20</p>
+                     * @param _limit <p>Count per page</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * <p>Topic name</p>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Starting position of paging
+                     * <p>Starting position for pagination</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page
+                     * <p>Count per page</p><p>Default value: 20</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

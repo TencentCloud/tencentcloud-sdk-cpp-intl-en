@@ -43,36 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     * @return DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     * 
-                     */
-                    std::string GetDiskId() const;
-
-                    /**
-                     * 设置ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     * @param _diskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     * 
-                     */
-                    void SetDiskId(const std::string& _diskId);
-
-                    /**
-                     * 判断参数 DiskId 是否已赋值
-                     * @return DiskId 是否已赋值
-                     * 
-                     */
-                    bool DiskIdHasBeenSet() const;
-
-                    /**
-                     * 获取The extra throughput to purchase, in MB/s
-                     * @return ThroughputPerformance The extra throughput to purchase, in MB/s
+                     * 获取Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+                     * @return ThroughputPerformance Specifies the hard disk performance of the additional CBS purchase in MiB/s.
                      * 
                      */
                     uint64_t GetThroughputPerformance() const;
 
                     /**
-                     * 设置The extra throughput to purchase, in MB/s
-                     * @param _throughputPerformance The extra throughput to purchase, in MB/s
+                     * 设置Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+                     * @param _throughputPerformance Specifies the hard disk performance of the additional CBS purchase in MiB/s.
                      * 
                      */
                     void SetThroughputPerformance(const uint64_t& _throughputPerformance);
@@ -84,19 +63,40 @@ namespace TencentCloud
                      */
                     bool ThroughputPerformanceHasBeenSet() const;
 
+                    /**
+                     * 获取The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+                     * @return DiskId The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+                     * 
+                     */
+                    std::string GetDiskId() const;
+
+                    /**
+                     * 设置The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+                     * @param _diskId The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+                     * 
+                     */
+                    void SetDiskId(const std::string& _diskId);
+
+                    /**
+                     * 判断参数 DiskId 是否已赋值
+                     * @return DiskId 是否已赋值
+                     * 
+                     */
+                    bool DiskIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     */
-                    std::string m_diskId;
-                    bool m_diskIdHasBeenSet;
-
-                    /**
-                     * The extra throughput to purchase, in MB/s
+                     * Specifies the hard disk performance of the additional CBS purchase in MiB/s.
                      */
                     uint64_t m_throughputPerformance;
                     bool m_throughputPerformanceHasBeenSet;
+
+                    /**
+                     * The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+                     */
+                    std::string m_diskId;
+                    bool m_diskIdHasBeenSet;
 
                 };
             }

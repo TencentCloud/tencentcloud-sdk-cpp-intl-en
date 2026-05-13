@@ -88,81 +88,6 @@ namespace TencentCloud
                      */
                     bool MigrateFlagHasBeenSet() const;
 
-                    /**
-                     * 获取Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MigrateCostTime Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    int64_t GetMigrateCostTime() const;
-
-                    /**
-                     * 设置Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _migrateCostTime Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetMigrateCostTime(const int64_t& _migrateCostTime);
-
-                    /**
-                     * 判断参数 MigrateCostTime 是否已赋值
-                     * @return MigrateCostTime 是否已赋值
-                     * 
-                     */
-                    bool MigrateCostTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpgradeStrategy Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    int64_t GetUpgradeStrategy() const;
-
-                    /**
-                     * 设置Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _upgradeStrategy Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetUpgradeStrategy(const int64_t& _upgradeStrategy);
-
-                    /**
-                     * 判断参数 UpgradeStrategy 是否已赋值
-                     * @return UpgradeStrategy 是否已赋值
-                     * 
-                     */
-                    bool UpgradeStrategyHasBeenSet() const;
-
-                    /**
-                     * 获取Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MigrateCostTimeHighSpeed Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    int64_t GetMigrateCostTimeHighSpeed() const;
-
-                    /**
-                     * 设置Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _migrateCostTimeHighSpeed Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetMigrateCostTimeHighSpeed(const int64_t& _migrateCostTimeHighSpeed);
-
-                    /**
-                     * 判断参数 MigrateCostTimeHighSpeed 是否已赋值
-                     * @return MigrateCostTimeHighSpeed 是否已赋值
-                     * 
-                     */
-                    bool MigrateCostTimeHighSpeedHasBeenSet() const;
-
                 private:
 
                     /**
@@ -176,27 +101,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_migrateFlag;
                     bool m_migrateFlagHasBeenSet;
-
-                    /**
-                     * Estimated duration of migration in stable mode (seconds).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    int64_t m_migrateCostTime;
-                    bool m_migrateCostTimeHasBeenSet;
-
-                    /**
-                     * Upgrade mode (1: stable mode, 2: high-speed mode).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    int64_t m_upgradeStrategy;
-                    bool m_upgradeStrategyHasBeenSet;
-
-                    /**
-                     * Indicates the estimated time for migration in high-speed mode, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    int64_t m_migrateCostTimeHighSpeed;
-                    bool m_migrateCostTimeHighSpeedHasBeenSet;
 
                 };
             }

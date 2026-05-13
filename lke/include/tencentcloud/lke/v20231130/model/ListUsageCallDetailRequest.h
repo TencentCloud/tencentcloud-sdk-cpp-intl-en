@@ -64,48 +64,6 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取Start time.
-                     * @return StartTime Start time.
-                     * 
-                     */
-                    std::string GetStartTime() const;
-
-                    /**
-                     * 设置Start time.
-                     * @param _startTime Start time.
-                     * 
-                     */
-                    void SetStartTime(const std::string& _startTime);
-
-                    /**
-                     * 判断参数 StartTime 是否已赋值
-                     * @return StartTime 是否已赋值
-                     * 
-                     */
-                    bool StartTimeHasBeenSet() const;
-
-                    /**
-                     * 获取End time.
-                     * @return EndTime End time.
-                     * 
-                     */
-                    std::string GetEndTime() const;
-
-                    /**
-                     * 设置End time.
-                     * @param _endTime End time.
-                     * 
-                     */
-                    void SetEndTime(const std::string& _endTime);
-
-                    /**
-                     * 判断参数 EndTime 是否已赋值
-                     * @return EndTime 是否已赋值
-                     * 
-                     */
-                    bool EndTimeHasBeenSet() const;
-
-                    /**
                      * 获取Page number.
                      * @return PageNumber Page number.
                      * 
@@ -146,6 +104,48 @@ namespace TencentCloud
                      * 
                      */
                     bool PageSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Start time.
+                     * @return StartTime Start time.
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Start time.
+                     * @param _startTime Start time.
+                     * 
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time.
+                     * @return EndTime End time.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置End time.
+                     * @param _endTime End time.
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Uin list.
@@ -231,6 +231,111 @@ namespace TencentCloud
                      */
                     bool SubScenesHasBeenSet() const;
 
+                    /**
+                     * 获取Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+                     * @return AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+                     * 
+                     */
+                    std::string GetAppType() const;
+
+                    /**
+                     * 设置Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+                     * @param _appType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+                     * 
+                     */
+                    void SetAppType(const std::string& _appType);
+
+                    /**
+                     * 判断参数 AppType 是否已赋值
+                     * @return AppType 是否已赋值
+                     * 
+                     */
+                    bool AppTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Custom tag corresponding to bill details
+                     * @return BillingTag Custom tag corresponding to bill details
+                     * 
+                     */
+                    std::string GetBillingTag() const;
+
+                    /**
+                     * 设置Custom tag corresponding to bill details
+                     * @param _billingTag Custom tag corresponding to bill details
+                     * 
+                     */
+                    void SetBillingTag(const std::string& _billingTag);
+
+                    /**
+                     * 判断参数 BillingTag 是否已赋值
+                     * @return BillingTag 是否已赋值
+                     * 
+                     */
+                    bool BillingTagHasBeenSet() const;
+
+                    /**
+                     * 获取Space ID
+                     * @return SpaceId Space ID
+                     * 
+                     */
+                    std::string GetSpaceId() const;
+
+                    /**
+                     * 设置Space ID
+                     * @param _spaceId Space ID
+                     * 
+                     */
+                    void SetSpaceId(const std::string& _spaceId);
+
+                    /**
+                     * 判断参数 SpaceId 是否已赋值
+                     * @return SpaceId 是否已赋值
+                     * 
+                     */
+                    bool SpaceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Start timestamp, unit: seconds
+                     * @return StatStartTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    int64_t GetStatStartTime() const;
+
+                    /**
+                     * 设置Start timestamp, unit: seconds
+                     * @param _statStartTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    void SetStatStartTime(const int64_t& _statStartTime);
+
+                    /**
+                     * 判断参数 StatStartTime 是否已赋值
+                     * @return StatStartTime 是否已赋值
+                     * 
+                     */
+                    bool StatStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Start timestamp, unit: seconds
+                     * @return StatEndTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    int64_t GetStatEndTime() const;
+
+                    /**
+                     * 设置Start timestamp, unit: seconds
+                     * @param _statEndTime Start timestamp, unit: seconds
+                     * 
+                     */
+                    void SetStatEndTime(const int64_t& _statEndTime);
+
+                    /**
+                     * 判断参数 StatEndTime 是否已赋值
+                     * @return StatEndTime 是否已赋值
+                     * 
+                     */
+                    bool StatEndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,18 +343,6 @@ namespace TencentCloud
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
-
-                    /**
-                     * Start time.
-                     */
-                    std::string m_startTime;
-                    bool m_startTimeHasBeenSet;
-
-                    /**
-                     * End time.
-                     */
-                    std::string m_endTime;
-                    bool m_endTimeHasBeenSet;
 
                     /**
                      * Page number.
@@ -262,6 +355,18 @@ namespace TencentCloud
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
+
+                    /**
+                     * Start time.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                     /**
                      * Uin list.
@@ -286,6 +391,36 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_subScenes;
                     bool m_subScenesHasBeenSet;
+
+                    /**
+                     * Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+                     */
+                    std::string m_appType;
+                    bool m_appTypeHasBeenSet;
+
+                    /**
+                     * Custom tag corresponding to bill details
+                     */
+                    std::string m_billingTag;
+                    bool m_billingTagHasBeenSet;
+
+                    /**
+                     * Space ID
+                     */
+                    std::string m_spaceId;
+                    bool m_spaceIdHasBeenSet;
+
+                    /**
+                     * Start timestamp, unit: seconds
+                     */
+                    int64_t m_statStartTime;
+                    bool m_statStartTimeHasBeenSet;
+
+                    /**
+                     * Start timestamp, unit: seconds
+                     */
+                    int64_t m_statEndTime;
+                    bool m_statEndTimeHasBeenSet;
 
                 };
             }

@@ -24,6 +24,9 @@
 #include <tencentcloud/ccc/v20200210/model/Variable.h>
 #include <tencentcloud/ccc/v20200210/model/CalleeAttribute.h>
 #include <tencentcloud/ccc/v20200210/model/TimeRange.h>
+#include <tencentcloud/ccc/v20200210/model/RetryTagItem.h>
+#include <tencentcloud/ccc/v20200210/model/AvailableTimeConfig.h>
+#include <tencentcloud/ccc/v20200210/model/TriggerStrategyItem.h>
 
 
 namespace TencentCloud
@@ -402,6 +405,94 @@ namespace TencentCloud
                      */
                     bool MaxRingTimeoutSecondHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+                     * @return RetryHangupTypes <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+                     * 
+                     */
+                    std::vector<std::string> GetRetryHangupTypes() const;
+
+                    /**
+                     * 设置<p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+                     * @param _retryHangupTypes <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+                     * 
+                     */
+                    void SetRetryHangupTypes(const std::vector<std::string>& _retryHangupTypes);
+
+                    /**
+                     * 判断参数 RetryHangupTypes 是否已赋值
+                     * @return RetryHangupTypes 是否已赋值
+                     * 
+                     */
+                    bool RetryHangupTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+                     * @return RetryTags Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+                     * 
+                     */
+                    std::vector<RetryTagItem> GetRetryTags() const;
+
+                    /**
+                     * 设置Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+                     * @param _retryTags Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+                     * 
+                     */
+                    void SetRetryTags(const std::vector<RetryTagItem>& _retryTags);
+
+                    /**
+                     * 判断参数 RetryTags 是否已赋值
+                     * @return RetryTags 是否已赋值
+                     * 
+                     */
+                    bool RetryTagsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+                     * @return AvailableWorkTimeConfig <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+                     * 
+                     */
+                    std::vector<AvailableTimeConfig> GetAvailableWorkTimeConfig() const;
+
+                    /**
+                     * 设置<p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+                     * @param _availableWorkTimeConfig <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+                     * 
+                     */
+                    void SetAvailableWorkTimeConfig(const std::vector<AvailableTimeConfig>& _availableWorkTimeConfig);
+
+                    /**
+                     * 判断参数 AvailableWorkTimeConfig 是否已赋值
+                     * @return AvailableWorkTimeConfig 是否已赋值
+                     * 
+                     */
+                    bool AvailableWorkTimeConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Trigger Strategy</p>
+                     * @return TriggerStrategy <p>Trigger Strategy</p>
+                     * 
+                     */
+                    std::vector<TriggerStrategyItem> GetTriggerStrategy() const;
+
+                    /**
+                     * 设置<p>Trigger Strategy</p>
+                     * @param _triggerStrategy <p>Trigger Strategy</p>
+                     * 
+                     */
+                    void SetTriggerStrategy(const std::vector<TriggerStrategyItem>& _triggerStrategy);
+
+                    /**
+                     * 判断参数 TriggerStrategy 是否已赋值
+                     * @return TriggerStrategy 是否已赋值
+                     * 
+                     */
+                    bool TriggerStrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -505,6 +596,31 @@ namespace TencentCloud
                      */
                     int64_t m_maxRingTimeoutSecond;
                     bool m_maxRingTimeoutSecondHasBeenSet;
+
+                    /**
+                     * <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+                     */
+                    std::vector<std::string> m_retryHangupTypes;
+                    bool m_retryHangupTypesHasBeenSet;
+
+                    /**
+                     * Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+                     */
+                    std::vector<RetryTagItem> m_retryTags;
+                    bool m_retryTagsHasBeenSet;
+
+                    /**
+                     * <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+                     */
+                    std::vector<AvailableTimeConfig> m_availableWorkTimeConfig;
+                    bool m_availableWorkTimeConfigHasBeenSet;
+
+                    /**
+                     * <p>Trigger Strategy</p>
+                     */
+                    std::vector<TriggerStrategyItem> m_triggerStrategy;
+                    bool m_triggerStrategyHasBeenSet;
 
                 };
             }

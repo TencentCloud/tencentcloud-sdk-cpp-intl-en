@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceTitle Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of a billable item.
+                     * @return PriceTitle Name of a billable item.
                      * 
                      */
                     std::string GetPriceTitle() const;
 
                     /**
-                     * 设置Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _priceTitle Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of a billable item.
+                     * @param _priceTitle Name of a billable item.
                      * 
                      */
                     void SetPriceTitle(const std::string& _priceTitle);
@@ -320,8 +316,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of a billable item.
                      */
                     std::string m_priceTitle;
                     bool m_priceTitleHasBeenSet;

@@ -162,6 +162,27 @@ Specifies no modification if left blank.
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return SwitchFlag 
+                     * 
+                     */
+                    uint64_t GetSwitchFlag() const;
+
+                    /**
+                     * 设置
+                     * @param _switchFlag 
+                     * 
+                     */
+                    void SetSwitchFlag(const uint64_t& _switchFlag);
+
+                    /**
+                     * 判断参数 SwitchFlag 是否已赋值
+                     * @return SwitchFlag 是否已赋值
+                     * 
+                     */
+                    bool SwitchFlagHasBeenSet() const;
+
+                    /**
                      * 获取Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
                      * @return SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
                      * 
@@ -279,6 +300,12 @@ Specifies no modification if left blank.
                      */
                     bool m_loadBalancerPassToTarget;
                     bool m_loadBalancerPassToTargetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_switchFlag;
+                    bool m_switchFlagHasBeenSet;
 
                     /**
                      * Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.

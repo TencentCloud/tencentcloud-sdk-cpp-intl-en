@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size in GB.
-                     * @return DiskSize Cloud disk size in GB.
+                     * 获取Specifies the disk capacity in GiB.
+                     * @return DiskSize Specifies the disk capacity in GiB.
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size in GB.
-                     * @param _diskSize Cloud disk size in GB.
+                     * 设置Specifies the disk capacity in GiB.
+                     * @param _diskSize Specifies the disk capacity in GiB.
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -110,15 +110,23 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
-                     * @return DiskUsage Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+                     * 获取Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+                     * @return DiskUsage Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
                      * 
                      */
                     std::string GetDiskUsage() const;
 
                     /**
-                     * 设置Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
-                     * @param _diskUsage Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+                     * 设置Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+                     * @param _diskUsage Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
                      * 
                      */
                     void SetDiskUsage(const std::string& _diskUsage);
@@ -152,15 +160,35 @@ namespace TencentCloud
                     bool DiskBackupNameHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
-                     * @return DiskBackupState Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+                     * 获取<P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+                     * @return DiskBackupState <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
                      * 
                      */
                     std::string GetDiskBackupState() const;
 
                     /**
-                     * 设置Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
-                     * @param _diskBackupState Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+                     * 设置<P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+                     * @param _diskBackupState <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
                      * 
                      */
                     void SetDiskBackupState(const std::string& _diskBackupState);
@@ -173,15 +201,15 @@ namespace TencentCloud
                     bool DiskBackupStateHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk creation progress in percentage.
-                     * @return Percent Cloud disk creation progress in percentage.
+                     * 获取Specifies the creation percentage of the cloud disk backup point.
+                     * @return Percent Specifies the creation percentage of the cloud disk backup point.
                      * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
-                     * 设置Cloud disk creation progress in percentage.
-                     * @param _percent Cloud disk creation progress in percentage.
+                     * 设置Specifies the creation percentage of the cloud disk backup point.
+                     * @param _percent Specifies the creation percentage of the cloud disk backup point.
                      * 
                      */
                     void SetPercent(const uint64_t& _percent);
@@ -215,15 +243,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
-                     * @return Encrypt Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+                     * 获取Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+                     * @return Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
                      * 
                      */
                     bool GetEncrypt() const;
 
                     /**
-                     * 设置Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
-                     * @param _encrypt Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+                     * 设置Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+                     * @param _encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
                      * 
                      */
                     void SetEncrypt(const bool& _encrypt);
@@ -250,13 +278,15 @@ namespace TencentCloud
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Cloud disk size in GB.
+                     * Specifies the disk capacity in GiB.
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+                     * Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
                      */
                     std::string m_diskUsage;
                     bool m_diskUsageHasBeenSet;
@@ -268,13 +298,18 @@ namespace TencentCloud
                     bool m_diskBackupNameHasBeenSet;
 
                     /**
-                     * Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+                     * <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
                      */
                     std::string m_diskBackupState;
                     bool m_diskBackupStateHasBeenSet;
 
                     /**
-                     * Cloud disk creation progress in percentage.
+                     * Specifies the creation percentage of the cloud disk backup point.
                      */
                     uint64_t m_percent;
                     bool m_percentHasBeenSet;
@@ -286,7 +321,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+                     * Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
                      */
                     bool m_encrypt;
                     bool m_encryptHasBeenSet;

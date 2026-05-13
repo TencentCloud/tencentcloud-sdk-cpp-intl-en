@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID.
-                     * @return BotBizId Application ID.
+                     * 获取Application ID
+                     * @return BotBizId Application ID
                      * 
                      */
                     std::string GetBotBizId() const;
 
                     /**
-                     * 设置Application ID.
-                     * @param _botBizId Application ID.
+                     * 设置Application ID
+                     * @param _botBizId Application ID
                      * 
                      */
                     void SetBotBizId(const std::string& _botBizId);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID.
+                     * Application ID
                      */
                     std::string m_botBizId;
                     bool m_botBizIdHasBeenSet;

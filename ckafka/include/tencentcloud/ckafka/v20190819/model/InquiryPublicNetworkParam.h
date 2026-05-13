@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
-                     * @return PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * 获取Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * @return PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
                      * 
                      */
                     std::string GetPublicNetworkChargeType() const;
 
                     /**
-                     * 设置Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
-                     * @param _publicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * 设置Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * @param _publicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
                      * 
                      */
                     void SetPublicNetworkChargeType(const std::string& _publicNetworkChargeType);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
                      */
                     std::string m_publicNetworkChargeType;
                     bool m_publicNetworkChargeTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of scheduled snapshot policy IDs to be deleted.
-                     * @return AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+                     * 获取Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+                     * @return AutoSnapshotPolicyIds Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetAutoSnapshotPolicyIds() const;
 
                     /**
-                     * 设置List of scheduled snapshot policy IDs to be deleted.
-                     * @param _autoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+                     * 设置Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+                     * @param _autoSnapshotPolicyIds Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
                      * 
                      */
                     void SetAutoSnapshotPolicyIds(const std::vector<std::string>& _autoSnapshotPolicyIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of scheduled snapshot policy IDs to be deleted.
+                     * Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_autoSnapshotPolicyIds;
                     bool m_autoSnapshotPolicyIdsHasBeenSet;

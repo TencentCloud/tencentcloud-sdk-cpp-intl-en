@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Record count.
-                     * @return TotalCount Record count.
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Role array.
-                     * @return RoleSets Role array.
+                     * 获取This API is used to provide the role list.
+                     * @return RoleSets This API is used to provide the role list.
                      * 
                      */
                     std::vector<Role> GetRoleSets() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Record count.
+                     * Total number.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Role array.
+                     * This API is used to provide the role list.
                      */
                     std::vector<Role> m_roleSets;
                     bool m_roleSetsHasBeenSet;

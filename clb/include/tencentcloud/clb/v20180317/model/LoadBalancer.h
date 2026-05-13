@@ -32,6 +32,7 @@
 #include <tencentcloud/clb/v20180317/model/ExtraInfo.h>
 #include <tencentcloud/clb/v20180317/model/ExclusiveCluster.h>
 #include <tencentcloud/clb/v20180317/model/SnatIp.h>
+#include <tencentcloud/clb/v20180317/model/AvailableZoneAffinityInfo.h>
 
 
 namespace TencentCloud
@@ -686,18 +687,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * 获取Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * 设置Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _chargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * @param _chargeType Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -1480,6 +1481,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AssociateEndpointHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AvailableZoneAffinityInfo 
+                     * 
+                     */
+                    AvailableZoneAffinityInfo GetAvailableZoneAffinityInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _availableZoneAffinityInfo 
+                     * 
+                     */
+                    void SetAvailableZoneAffinityInfo(const AvailableZoneAffinityInfo& _availableZoneAffinityInfo);
+
+                    /**
+                     * 判断参数 AvailableZoneAffinityInfo 是否已赋值
+                     * @return AvailableZoneAffinityInfo 是否已赋值
+                     * 
+                     */
+                    bool AvailableZoneAffinityInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1661,7 +1683,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_chargeType;
@@ -1881,6 +1903,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_associateEndpoint;
                     bool m_associateEndpointHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AvailableZoneAffinityInfo m_availableZoneAffinityInfo;
+                    bool m_availableZoneAffinityInfoHasBeenSet;
 
                 };
             }

@@ -71,15 +71,31 @@ namespace TencentCloud
                     bool PlacementHasBeenSet() const;
 
                     /**
-                     * 获取Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
-                     * @return CopyFromRemote Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+                     * 获取Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+                     * @return CopyFromRemote Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
                      * 
                      */
                     bool GetCopyFromRemote() const;
 
                     /**
-                     * 设置Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
-                     * @param _copyFromRemote Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+                     * 设置Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+                     * @param _copyFromRemote Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
                      * 
                      */
                     void SetCopyFromRemote(const bool& _copyFromRemote);
@@ -92,15 +108,47 @@ namespace TencentCloud
                     bool CopyFromRemoteHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
-                     * @return SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+                     * 获取Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+                     * @return SnapshotState Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
                      * 
                      */
                     std::string GetSnapshotState() const;
 
                     /**
-                     * 设置Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
-                     * @param _snapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+                     * 设置Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+                     * @param _snapshotState Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
                      * 
                      */
                     void SetSnapshotState(const std::string& _snapshotState);
@@ -113,15 +161,31 @@ namespace TencentCloud
                     bool SnapshotStateHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
-                     * @return IsPermanent Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+                     * 获取Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
+                     * @return IsPermanent Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
                      * 
                      */
                     bool GetIsPermanent() const;
 
                     /**
-                     * 设置Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
-                     * @param _isPermanent Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+                     * 设置Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
+                     * @param _isPermanent Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
                      * 
                      */
                     void SetIsPermanent(const bool& _isPermanent);
@@ -239,15 +303,15 @@ namespace TencentCloud
                     bool ShareReferenceHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
-                     * @return SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+                     * 获取Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+                     * @return SnapshotType Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
                      * 
                      */
                     std::string GetSnapshotType() const;
 
                     /**
-                     * 设置Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
-                     * @param _snapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+                     * 设置Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+                     * @param _snapshotType Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
                      * 
                      */
                     void SetSnapshotType(const std::string& _snapshotType);
@@ -260,15 +324,15 @@ namespace TencentCloud
                     bool SnapshotTypeHasBeenSet() const;
 
                     /**
-                     * 获取Size of the cloud disk used to create this snapshot (in GB).
-                     * @return DiskSize Size of the cloud disk used to create this snapshot (in GB).
+                     * 获取Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
+                     * @return DiskSize Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Size of the cloud disk used to create this snapshot (in GB).
-                     * @param _diskSize Size of the cloud disk used to create this snapshot (in GB).
+                     * 设置Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
+                     * @param _diskSize Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -302,15 +366,15 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取The destination region to which the snapshot is being replicated. Default value is [ ].
-                     * @return CopyingToRegions The destination region to which the snapshot is being replicated. Default value is [ ].
+                     * 获取Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+                     * @return CopyingToRegions Destination region of the snapshot currently under cross region replication. if not, return `[]`.
                      * 
                      */
                     std::vector<std::string> GetCopyingToRegions() const;
 
                     /**
-                     * 设置The destination region to which the snapshot is being replicated. Default value is [ ].
-                     * @param _copyingToRegions The destination region to which the snapshot is being replicated. Default value is [ ].
+                     * 设置Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+                     * @param _copyingToRegions Destination region of the snapshot currently under cross region replication. if not, return `[]`.
                      * 
                      */
                     void SetCopyingToRegions(const std::vector<std::string>& _copyingToRegions);
@@ -323,15 +387,31 @@ namespace TencentCloud
                     bool CopyingToRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
-                     * @return Encrypt Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+                     * 获取Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
+                     * @return Encrypt Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
                      * 
                      */
                     bool GetEncrypt() const;
 
                     /**
-                     * 设置Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
-                     * @param _encrypt Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+                     * 设置Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
+                     * @param _encrypt Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
                      * 
                      */
                     void SetEncrypt(const bool& _encrypt);
@@ -386,15 +466,35 @@ namespace TencentCloud
                     bool ImageCountHasBeenSet() const;
 
                     /**
-                     * 获取The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @return DiskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * 获取Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
+                     * @return DiskUsage Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
                      * 
                      */
                     std::string GetDiskUsage() const;
 
                     /**
-                     * 设置The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @param _diskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * 设置Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
+                     * @param _diskUsage Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
                      * 
                      */
                     void SetDiskUsage(const std::string& _diskUsage);
@@ -478,19 +578,35 @@ namespace TencentCloud
                     bool m_placementHasBeenSet;
 
                     /**
-                     * Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+                     * Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
                      */
                     bool m_copyFromRemote;
                     bool m_copyFromRemoteHasBeenSet;
 
                     /**
-                     * Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+                     * Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
                      */
                     std::string m_snapshotState;
                     bool m_snapshotStateHasBeenSet;
 
                     /**
-                     * Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+                     * Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
                      */
                     bool m_isPermanent;
                     bool m_isPermanentHasBeenSet;
@@ -526,13 +642,13 @@ namespace TencentCloud
                     bool m_shareReferenceHasBeenSet;
 
                     /**
-                     * Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+                     * Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
                      */
                     std::string m_snapshotType;
                     bool m_snapshotTypeHasBeenSet;
 
                     /**
-                     * Size of the cloud disk used to create this snapshot (in GB).
+                     * Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
@@ -544,13 +660,17 @@ namespace TencentCloud
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * The destination region to which the snapshot is being replicated. Default value is [ ].
+                     * Destination region of the snapshot currently under cross region replication. if not, return `[]`.
                      */
                     std::vector<std::string> m_copyingToRegions;
                     bool m_copyingToRegionsHasBeenSet;
 
                     /**
-                     * Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+                     * Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
                      */
                     bool m_encrypt;
                     bool m_encryptHasBeenSet;
@@ -568,7 +688,12 @@ namespace TencentCloud
                     bool m_imageCountHasBeenSet;
 
                     /**
-                     * The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
                      */
                     std::string m_diskUsage;
                     bool m_diskUsageHasBeenSet;
