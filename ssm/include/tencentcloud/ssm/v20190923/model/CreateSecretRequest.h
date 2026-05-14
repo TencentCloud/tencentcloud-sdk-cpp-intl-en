@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SecretTypeHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-                     * @return SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * 获取Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+                     * @return SecretBinary Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      * 
                      */
                     std::string GetSecretBinary() const;
 
                     /**
-                     * 设置Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-                     * @param _secretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * 设置Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+                     * @param _secretBinary Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      * 
                      */
                     void SetSecretBinary(const std::string& _secretBinary);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool SecretBinaryHasBeenSet() const;
 
                     /**
-                     * 获取Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-                     * @return SecretString Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * 获取The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+                     * @return SecretString The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      * 
                      */
                     std::string GetSecretString() const;
 
                     /**
-                     * 设置Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-                     * @param _secretString Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * 设置The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+                     * @param _secretString The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      * 
                      */
                     void SetSecretString(const std::string& _secretString);
@@ -265,13 +265,13 @@ namespace TencentCloud
                     bool m_secretTypeHasBeenSet;
 
                     /**
-                     * Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      */
                     std::string m_secretBinary;
                     bool m_secretBinaryHasBeenSet;
 
                     /**
-                     * Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+                     * The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
                      */
                     std::string m_secretString;
                     bool m_secretStringHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filtering method (=, !=, in).
-                     * @return Type Filtering method (=, !=, in).
+                     * 获取<p>Filter method (=, !=, in)</p>
+                     * @return Type <p>Filter method (=, !=, in)</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Filtering method (=, !=, in).
-                     * @param _type Filtering method (=, !=, in).
+                     * 设置<p>Filter method (=, !=, in)</p>
+                     * @param _type <p>Filter method (=, !=, in)</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter dimension name.
-                     * @return Key Filter dimension name.
+                     * 获取<p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+                     * @return Key <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Filter dimension name.
-                     * @param _key Filter dimension name.
+                     * 设置<p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+                     * @param _key <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Filter value. uses commas to separate multiple values in in filtering method.
-                     * @return Value Filter value. uses commas to separate multiple values in in filtering method.
+                     * 获取<p>Filter value. Use comma-separated multiple values for in filtering method.</p>
+                     * @return Value <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Filter value. uses commas to separate multiple values in in filtering method.
-                     * @param _value Filter value. uses commas to separate multiple values in in filtering method.
+                     * 设置<p>Filter value. Use comma-separated multiple values for in filtering method.</p>
+                     * @param _value <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filtering method (=, !=, in).
+                     * <p>Filter method (=, !=, in)</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Filter dimension name.
+                     * <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Filter value. uses commas to separate multiple values in in filtering method.
+                     * <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

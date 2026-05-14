@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cam/v20190116/model/Tag.h>
 
 
 namespace TencentCloud
@@ -171,6 +172,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsServiceLinkedRolePolicyHasBeenSet() const;
 
+                    /**
+                     * 获取List of tags associated with the policy
+                     * @return Tags List of tags associated with the policy
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -228,6 +243,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_isServiceLinkedRolePolicy;
                     bool m_isServiceLinkedRolePolicyHasBeenSet;
+
+                    /**
+                     * List of tags associated with the policy
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

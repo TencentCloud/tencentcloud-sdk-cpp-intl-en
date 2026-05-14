@@ -72,7 +72,17 @@ ApmAppConfig::ApmAppConfig() :
     m_urlLongSegmentThresholdHasBeenSet(false),
     m_urlNumberSegmentThresholdHasBeenSet(false),
     m_disableMemoryUsedHasBeenSet(false),
-    m_disableCpuUsedHasBeenSet(false)
+    m_disableCpuUsedHasBeenSet(false),
+    m_dbStatementParametersEnabledHasBeenSet(false),
+    m_slowSQLThresholdsHasBeenSet(false),
+    m_enableDesensitizationRuleHasBeenSet(false),
+    m_desensitizationRuleHasBeenSet(false),
+    m_logSpanIdKeyHasBeenSet(false),
+    m_autoProfilingConfigHasBeenSet(false),
+    m_enableThresholdConfigHasBeenSet(false),
+    m_errRateThresholdHasBeenSet(false),
+    m_responseDurationWarningThresholdHasBeenSet(false),
+    m_useDefaultFuseConfigHasBeenSet(false)
 {
 }
 
@@ -618,6 +628,123 @@ CoreInternalOutcome ApmAppConfig::Deserialize(const rapidjson::Value &value)
         m_disableCpuUsedHasBeenSet = true;
     }
 
+    if (value.HasMember("DbStatementParametersEnabled") && !value["DbStatementParametersEnabled"].IsNull())
+    {
+        if (!value["DbStatementParametersEnabled"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.DbStatementParametersEnabled` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_dbStatementParametersEnabled = value["DbStatementParametersEnabled"].GetBool();
+        m_dbStatementParametersEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("SlowSQLThresholds") && !value["SlowSQLThresholds"].IsNull())
+    {
+        if (!value["SlowSQLThresholds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.SlowSQLThresholds` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SlowSQLThresholds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ApmTag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_slowSQLThresholds.push_back(item);
+        }
+        m_slowSQLThresholdsHasBeenSet = true;
+    }
+
+    if (value.HasMember("EnableDesensitizationRule") && !value["EnableDesensitizationRule"].IsNull())
+    {
+        if (!value["EnableDesensitizationRule"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.EnableDesensitizationRule` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableDesensitizationRule = value["EnableDesensitizationRule"].GetInt64();
+        m_enableDesensitizationRuleHasBeenSet = true;
+    }
+
+    if (value.HasMember("DesensitizationRule") && !value["DesensitizationRule"].IsNull())
+    {
+        if (!value["DesensitizationRule"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.DesensitizationRule` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_desensitizationRule = string(value["DesensitizationRule"].GetString());
+        m_desensitizationRuleHasBeenSet = true;
+    }
+
+    if (value.HasMember("LogSpanIdKey") && !value["LogSpanIdKey"].IsNull())
+    {
+        if (!value["LogSpanIdKey"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.LogSpanIdKey` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_logSpanIdKey = string(value["LogSpanIdKey"].GetString());
+        m_logSpanIdKeyHasBeenSet = true;
+    }
+
+    if (value.HasMember("AutoProfilingConfig") && !value["AutoProfilingConfig"].IsNull())
+    {
+        if (!value["AutoProfilingConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.AutoProfilingConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_autoProfilingConfig.Deserialize(value["AutoProfilingConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_autoProfilingConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("EnableThresholdConfig") && !value["EnableThresholdConfig"].IsNull())
+    {
+        if (!value["EnableThresholdConfig"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.EnableThresholdConfig` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableThresholdConfig = value["EnableThresholdConfig"].GetBool();
+        m_enableThresholdConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("ErrRateThreshold") && !value["ErrRateThreshold"].IsNull())
+    {
+        if (!value["ErrRateThreshold"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.ErrRateThreshold` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_errRateThreshold = value["ErrRateThreshold"].GetInt64();
+        m_errRateThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResponseDurationWarningThreshold") && !value["ResponseDurationWarningThreshold"].IsNull())
+    {
+        if (!value["ResponseDurationWarningThreshold"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.ResponseDurationWarningThreshold` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_responseDurationWarningThreshold = value["ResponseDurationWarningThreshold"].GetInt64();
+        m_responseDurationWarningThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("UseDefaultFuseConfig") && !value["UseDefaultFuseConfig"].IsNull())
+    {
+        if (!value["UseDefaultFuseConfig"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApmAppConfig.UseDefaultFuseConfig` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_useDefaultFuseConfig = value["UseDefaultFuseConfig"].GetBool();
+        m_useDefaultFuseConfigHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1047,6 +1174,94 @@ void ApmAppConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "DisableCpuUsed";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_disableCpuUsed, allocator);
+    }
+
+    if (m_dbStatementParametersEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DbStatementParametersEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dbStatementParametersEnabled, allocator);
+    }
+
+    if (m_slowSQLThresholdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlowSQLThresholds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_slowSQLThresholds.begin(); itr != m_slowSQLThresholds.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_enableDesensitizationRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableDesensitizationRule";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableDesensitizationRule, allocator);
+    }
+
+    if (m_desensitizationRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DesensitizationRule";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desensitizationRule.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_logSpanIdKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LogSpanIdKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logSpanIdKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoProfilingConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoProfilingConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_autoProfilingConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_enableThresholdConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableThresholdConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableThresholdConfig, allocator);
+    }
+
+    if (m_errRateThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrRateThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_errRateThreshold, allocator);
+    }
+
+    if (m_responseDurationWarningThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResponseDurationWarningThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_responseDurationWarningThreshold, allocator);
+    }
+
+    if (m_useDefaultFuseConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UseDefaultFuseConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_useDefaultFuseConfig, allocator);
     }
 
 }
@@ -1882,5 +2097,165 @@ void ApmAppConfig::SetDisableCpuUsed(const int64_t& _disableCpuUsed)
 bool ApmAppConfig::DisableCpuUsedHasBeenSet() const
 {
     return m_disableCpuUsedHasBeenSet;
+}
+
+bool ApmAppConfig::GetDbStatementParametersEnabled() const
+{
+    return m_dbStatementParametersEnabled;
+}
+
+void ApmAppConfig::SetDbStatementParametersEnabled(const bool& _dbStatementParametersEnabled)
+{
+    m_dbStatementParametersEnabled = _dbStatementParametersEnabled;
+    m_dbStatementParametersEnabledHasBeenSet = true;
+}
+
+bool ApmAppConfig::DbStatementParametersEnabledHasBeenSet() const
+{
+    return m_dbStatementParametersEnabledHasBeenSet;
+}
+
+vector<ApmTag> ApmAppConfig::GetSlowSQLThresholds() const
+{
+    return m_slowSQLThresholds;
+}
+
+void ApmAppConfig::SetSlowSQLThresholds(const vector<ApmTag>& _slowSQLThresholds)
+{
+    m_slowSQLThresholds = _slowSQLThresholds;
+    m_slowSQLThresholdsHasBeenSet = true;
+}
+
+bool ApmAppConfig::SlowSQLThresholdsHasBeenSet() const
+{
+    return m_slowSQLThresholdsHasBeenSet;
+}
+
+int64_t ApmAppConfig::GetEnableDesensitizationRule() const
+{
+    return m_enableDesensitizationRule;
+}
+
+void ApmAppConfig::SetEnableDesensitizationRule(const int64_t& _enableDesensitizationRule)
+{
+    m_enableDesensitizationRule = _enableDesensitizationRule;
+    m_enableDesensitizationRuleHasBeenSet = true;
+}
+
+bool ApmAppConfig::EnableDesensitizationRuleHasBeenSet() const
+{
+    return m_enableDesensitizationRuleHasBeenSet;
+}
+
+string ApmAppConfig::GetDesensitizationRule() const
+{
+    return m_desensitizationRule;
+}
+
+void ApmAppConfig::SetDesensitizationRule(const string& _desensitizationRule)
+{
+    m_desensitizationRule = _desensitizationRule;
+    m_desensitizationRuleHasBeenSet = true;
+}
+
+bool ApmAppConfig::DesensitizationRuleHasBeenSet() const
+{
+    return m_desensitizationRuleHasBeenSet;
+}
+
+string ApmAppConfig::GetLogSpanIdKey() const
+{
+    return m_logSpanIdKey;
+}
+
+void ApmAppConfig::SetLogSpanIdKey(const string& _logSpanIdKey)
+{
+    m_logSpanIdKey = _logSpanIdKey;
+    m_logSpanIdKeyHasBeenSet = true;
+}
+
+bool ApmAppConfig::LogSpanIdKeyHasBeenSet() const
+{
+    return m_logSpanIdKeyHasBeenSet;
+}
+
+AutoProfilingConfig ApmAppConfig::GetAutoProfilingConfig() const
+{
+    return m_autoProfilingConfig;
+}
+
+void ApmAppConfig::SetAutoProfilingConfig(const AutoProfilingConfig& _autoProfilingConfig)
+{
+    m_autoProfilingConfig = _autoProfilingConfig;
+    m_autoProfilingConfigHasBeenSet = true;
+}
+
+bool ApmAppConfig::AutoProfilingConfigHasBeenSet() const
+{
+    return m_autoProfilingConfigHasBeenSet;
+}
+
+bool ApmAppConfig::GetEnableThresholdConfig() const
+{
+    return m_enableThresholdConfig;
+}
+
+void ApmAppConfig::SetEnableThresholdConfig(const bool& _enableThresholdConfig)
+{
+    m_enableThresholdConfig = _enableThresholdConfig;
+    m_enableThresholdConfigHasBeenSet = true;
+}
+
+bool ApmAppConfig::EnableThresholdConfigHasBeenSet() const
+{
+    return m_enableThresholdConfigHasBeenSet;
+}
+
+int64_t ApmAppConfig::GetErrRateThreshold() const
+{
+    return m_errRateThreshold;
+}
+
+void ApmAppConfig::SetErrRateThreshold(const int64_t& _errRateThreshold)
+{
+    m_errRateThreshold = _errRateThreshold;
+    m_errRateThresholdHasBeenSet = true;
+}
+
+bool ApmAppConfig::ErrRateThresholdHasBeenSet() const
+{
+    return m_errRateThresholdHasBeenSet;
+}
+
+int64_t ApmAppConfig::GetResponseDurationWarningThreshold() const
+{
+    return m_responseDurationWarningThreshold;
+}
+
+void ApmAppConfig::SetResponseDurationWarningThreshold(const int64_t& _responseDurationWarningThreshold)
+{
+    m_responseDurationWarningThreshold = _responseDurationWarningThreshold;
+    m_responseDurationWarningThresholdHasBeenSet = true;
+}
+
+bool ApmAppConfig::ResponseDurationWarningThresholdHasBeenSet() const
+{
+    return m_responseDurationWarningThresholdHasBeenSet;
+}
+
+bool ApmAppConfig::GetUseDefaultFuseConfig() const
+{
+    return m_useDefaultFuseConfig;
+}
+
+void ApmAppConfig::SetUseDefaultFuseConfig(const bool& _useDefaultFuseConfig)
+{
+    m_useDefaultFuseConfig = _useDefaultFuseConfig;
+    m_useDefaultFuseConfigHasBeenSet = true;
+}
+
+bool ApmAppConfig::UseDefaultFuseConfigHasBeenSet() const
+{
+    return m_useDefaultFuseConfigHasBeenSet;
 }
 

@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
+                     * 获取<p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceID Application ID
+                     * @return ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServiceID() const;
 
                     /**
-                     * 设置Application ID
+                     * 设置<p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceID Application ID
+                     * @param _serviceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +73,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceIDHasBeenSet() const;
 
                     /**
-                     * 获取Business system ID
+                     * 获取<p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceKey Business system ID
+                     * @return InstanceKey <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceKey() const;
 
                     /**
-                     * 设置Business system ID
+                     * 设置<p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceKey Business system ID
+                     * @param _instanceKey <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,18 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceKeyHasBeenSet() const;
 
                     /**
-                     * 获取User appid.
+                     * 获取<p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppID User appid.
+                     * @return AppID <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAppID() const;
 
                     /**
-                     * 设置User appid.
+                     * 设置<p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appID User appid.
+                     * @param _appID <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -123,18 +123,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Host account UIN
+                     * 获取<p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateUIN Host account UIN
+                     * @return CreateUIN <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateUIN() const;
 
                     /**
-                     * 设置Host account UIN
+                     * 设置<p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createUIN Host account UIN
+                     * @param _createUIN <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -148,18 +148,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateUINHasBeenSet() const;
 
                     /**
-                     * 获取Application name
+                     * 获取<p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceName Application name
+                     * @return ServiceName <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Application name
+                     * 设置<p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceName Application name
+                     * @param _serviceName <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -173,18 +173,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取Application description
+                     * 获取<p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceDescription Application description
+                     * @return ServiceDescription <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServiceDescription() const;
 
                     /**
-                     * 设置Application description
+                     * 设置<p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceDescription Application description
+                     * @param _serviceDescription <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -198,18 +198,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Region.
+                     * 获取<p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Region.
+                     * @return Region <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region.
+                     * 设置<p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Region.
+                     * @param _region <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -223,18 +223,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Tag.
+                     * 获取<p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag.
+                     * @return Tags <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ApmTag> GetTags() const;
 
                     /**
-                     * 设置Tag.
+                     * 设置<p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag.
+                     * @param _tags <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -248,15 +248,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Business system name.
-                     * @return InstanceName Business system name.
+                     * 获取<p>Business system name</p>
+                     * @return InstanceName <p>Business system name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Business system name.
-                     * @param _instanceName Business system name.
+                     * 设置<p>Business system name</p>
+                     * @param _instanceName <p>Business system name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -268,69 +268,165 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetEnableThresholdConfig() const;
+
+                    /**
+                     * 设置<p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _enableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEnableThresholdConfig(const bool& _enableThresholdConfig);
+
+                    /**
+                     * 判断参数 EnableThresholdConfig 是否已赋值
+                     * @return EnableThresholdConfig 是否已赋值
+                     * 
+                     */
+                    bool EnableThresholdConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetErrRateThreshold() const;
+
+                    /**
+                     * 设置<p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _errRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetErrRateThreshold(const int64_t& _errRateThreshold);
+
+                    /**
+                     * 判断参数 ErrRateThreshold 是否已赋值
+                     * @return ErrRateThreshold 是否已赋值
+                     * 
+                     */
+                    bool ErrRateThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetResponseDurationWarningThreshold() const;
+
+                    /**
+                     * 设置<p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _responseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResponseDurationWarningThreshold(const int64_t& _responseDurationWarningThreshold);
+
+                    /**
+                     * 判断参数 ResponseDurationWarningThreshold 是否已赋值
+                     * @return ResponseDurationWarningThreshold 是否已赋值
+                     * 
+                     */
+                    bool ResponseDurationWarningThresholdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Application ID
+                     * <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serviceID;
                     bool m_serviceIDHasBeenSet;
 
                     /**
-                     * Business system ID
+                     * <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceKey;
                     bool m_instanceKeyHasBeenSet;
 
                     /**
-                     * User appid.
+                     * <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Host account UIN
+                     * <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createUIN;
                     bool m_createUINHasBeenSet;
 
                     /**
-                     * Application name
+                     * <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * Application description
+                     * <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serviceDescription;
                     bool m_serviceDescriptionHasBeenSet;
 
                     /**
-                     * Region.
+                     * <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Tag.
+                     * <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ApmTag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Business system name.
+                     * <p>Business system name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_enableThresholdConfig;
+                    bool m_enableThresholdConfigHasBeenSet;
+
+                    /**
+                     * <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_errRateThreshold;
+                    bool m_errRateThresholdHasBeenSet;
+
+                    /**
+                     * <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_responseDurationWarningThreshold;
+                    bool m_responseDurationWarningThresholdHasBeenSet;
 
                 };
             }

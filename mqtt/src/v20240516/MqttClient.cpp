@@ -790,6 +790,56 @@ MqttClient::DescribeClientListOutcomeCallable MqttClient::DescribeClientListCall
     return prom->get_future();
 }
 
+MqttClient::DescribeDeviceCertificateOutcome MqttClient::DescribeDeviceCertificate(const DescribeDeviceCertificateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeviceCertificate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeviceCertificateResponse rsp = DescribeDeviceCertificateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeviceCertificateOutcome(rsp);
+        else
+            return DescribeDeviceCertificateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeviceCertificateOutcome(outcome.GetError());
+    }
+}
+
+void MqttClient::DescribeDeviceCertificateAsync(const DescribeDeviceCertificateRequest& request, const DescribeDeviceCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDeviceCertificateRequest&;
+    using Resp = DescribeDeviceCertificateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MqttClient::DescribeDeviceCertificateOutcomeCallable MqttClient::DescribeDeviceCertificateCallable(const DescribeDeviceCertificateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDeviceCertificateOutcome>>();
+    DescribeDeviceCertificateAsync(
+    request,
+    [prom](
+        const MqttClient*,
+        const DescribeDeviceCertificateRequest&,
+        DescribeDeviceCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MqttClient::DescribeDeviceCertificatesOutcome MqttClient::DescribeDeviceCertificates(const DescribeDeviceCertificatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDeviceCertificates");

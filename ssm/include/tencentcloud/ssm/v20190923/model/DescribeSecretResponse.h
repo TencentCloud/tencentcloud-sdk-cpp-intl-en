@@ -142,10 +142,8 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取`0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SecretType `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取0: custom secret; 1: database credential; 2: SSH key secret; 3: cloud API key (AKSK) secret (To use this function, you need to contact the cloud assistant to activate the allowlist separately); 4: Redis secret.Note: This field may return `null`, indicating no valid value can be obtained.
+                     * @return SecretType 0: custom secret; 1: database credential; 2: SSH key secret; 3: cloud API key (AKSK) secret (To use this function, you need to contact the cloud assistant to activate the allowlist separately); 4: Redis secret.Note: This field may return `null`, indicating no valid value can be obtained.
                      * 
                      */
                     int64_t GetSecretType() const;
@@ -346,8 +344,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 0: custom secret; 1: database credential; 2: SSH key secret; 3: cloud API key (AKSK) secret (To use this function, you need to contact the cloud assistant to activate the allowlist separately); 4: Redis secret.Note: This field may return `null`, indicating no valid value can be obtained.
                      */
                     int64_t m_secretType;
                     bool m_secretTypeHasBeenSet;

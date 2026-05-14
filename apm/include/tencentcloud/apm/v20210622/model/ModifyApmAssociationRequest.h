@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Associated product name. currently only supports Prometheus.
-                     * @return ProductName Associated product name. currently only supports Prometheus.
+                     * 获取<p>Associated product name, currently only support Prometheus, CKafka</p>
+                     * @return ProductName <p>Associated product name, currently only support Prometheus, CKafka</p>
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Associated product name. currently only supports Prometheus.
-                     * @param _productName Associated product name. currently only supports Prometheus.
+                     * 设置<p>Associated product name, currently only support Prometheus, CKafka</p>
+                     * @param _productName <p>Associated product name, currently only support Prometheus, CKafka</p>
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
-                     * @return Status Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+                     * 获取<p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+                     * @return Status <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
-                     * @param _status Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+                     * 设置<p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+                     * @param _status <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Business system ID
-                     * @return InstanceId Business system ID
+                     * 获取<p>Business system ID</p>
+                     * @return InstanceId <p>Business system ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Business system ID
-                     * @param _instanceId Business system ID
+                     * 设置<p>Business system ID</p>
+                     * @param _instanceId <p>Business system ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Associated product instance ID.
-                     * @return PeerId Associated product instance ID.
+                     * 获取<p>ID of the associated product instance</p>
+                     * @return PeerId <p>ID of the associated product instance</p>
                      * 
                      */
                     std::string GetPeerId() const;
 
                     /**
-                     * 设置Associated product instance ID.
-                     * @param _peerId Associated product instance ID.
+                     * 设置<p>ID of the associated product instance</p>
+                     * @param _peerId <p>ID of the associated product instance</p>
                      * 
                      */
                     void SetPeerId(const std::string& _peerId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PeerIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the CKafka message topic.
-                     * @return Topic Specifies the CKafka message topic.
+                     * 获取<p>CKafka message topic</p>
+                     * @return Topic <p>CKafka message topic</p>
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置Specifies the CKafka message topic.
-                     * @param _topic Specifies the CKafka message topic.
+                     * 设置<p>CKafka message topic</p>
+                     * @param _topic <p>CKafka message topic</p>
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -147,37 +147,64 @@ namespace TencentCloud
                      */
                     bool TopicHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Ckafka message topic</p>
+                     * @return MetricTopic <p>Ckafka message topic</p>
+                     * 
+                     */
+                    std::string GetMetricTopic() const;
+
+                    /**
+                     * 设置<p>Ckafka message topic</p>
+                     * @param _metricTopic <p>Ckafka message topic</p>
+                     * 
+                     */
+                    void SetMetricTopic(const std::string& _metricTopic);
+
+                    /**
+                     * 判断参数 MetricTopic 是否已赋值
+                     * @return MetricTopic 是否已赋值
+                     * 
+                     */
+                    bool MetricTopicHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Associated product name. currently only supports Prometheus.
+                     * <p>Associated product name, currently only support Prometheus, CKafka</p>
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+                     * <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Business system ID
+                     * <p>Business system ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Associated product instance ID.
+                     * <p>ID of the associated product instance</p>
                      */
                     std::string m_peerId;
                     bool m_peerIdHasBeenSet;
 
                     /**
-                     * Specifies the CKafka message topic.
+                     * <p>CKafka message topic</p>
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;
+
+                    /**
+                     * <p>Ckafka message topic</p>
+                     */
+                    std::string m_metricTopic;
+                    bool m_metricTopicHasBeenSet;
 
                 };
             }

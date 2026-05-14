@@ -1,0 +1,195 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_MNA_V20210119_MODEL_GETACTIVEDEVICECOUNTRESPONSE_H_
+#define TENCENTCLOUD_MNA_V20210119_MODEL_GETACTIVEDEVICECOUNTRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mna/v20210119/model/ActiveDeviceList.h>
+
+
+namespace TencentCloud
+{
+    namespace Mna
+    {
+        namespace V20210119
+        {
+            namespace Model
+            {
+                /**
+                * GetActiveDeviceCount response structure.
+                */
+                class GetActiveDeviceCountResponse : public AbstractModel
+                {
+                public:
+                    GetActiveDeviceCountResponse();
+                    ~GetActiveDeviceCountResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Activate device statistics
+                     * @return ActiveDeviceList Activate device statistics
+                     * 
+                     */
+                    std::vector<ActiveDeviceList> GetActiveDeviceList() const;
+
+                    /**
+                     * 判断参数 ActiveDeviceList 是否已赋值
+                     * @return ActiveDeviceList 是否已赋值
+                     * 
+                     */
+                    bool ActiveDeviceListHasBeenSet() const;
+
+                    /**
+                     * 获取Query granularity. Valid values: 0: day, 1: week, 2: month. Default is day.
+                     * @return Period Query granularity. Valid values: 0: day, 1: week, 2: month. Default is day.
+                     * 
+                     */
+                    int64_t GetPeriod() const;
+
+                    /**
+                     * 判断参数 Period 是否已赋值
+                     * @return Period 是否已赋值
+                     * 
+                     */
+                    bool PeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Start time.
+                     * @return StartTime Start time.
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time.
+                     * @return EndTime End time.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取device group
+                     * @return DevGroup device group
+                     * 
+                     */
+                    std::string GetDevGroup() const;
+
+                    /**
+                     * 判断参数 DevGroup 是否已赋值
+                     * @return DevGroup 是否已赋值
+                     * 
+                     */
+                    bool DevGroupHasBeenSet() const;
+
+                    /**
+                     * 获取License type. If not passed, query all. 1: Tenant monthly payment, 2: Manufacturer monthly payment, 3: Permanent license.
+                     * @return LicenseType License type. If not passed, query all. 1: Tenant monthly payment, 2: Manufacturer monthly payment, 3: Permanent license.
+                     * 
+                     */
+                    std::string GetLicenseType() const;
+
+                    /**
+                     * 判断参数 LicenseType 是否已赋值
+                     * @return LicenseType 是否已赋值
+                     * 
+                     */
+                    bool LicenseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取tenant ID
+                     * @return AppId tenant ID
+                     * 
+                     */
+                    std::string GetAppId() const;
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     * 
+                     */
+                    bool AppIdHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Activate device statistics
+                     */
+                    std::vector<ActiveDeviceList> m_activeDeviceList;
+                    bool m_activeDeviceListHasBeenSet;
+
+                    /**
+                     * Query granularity. Valid values: 0: day, 1: week, 2: month. Default is day.
+                     */
+                    int64_t m_period;
+                    bool m_periodHasBeenSet;
+
+                    /**
+                     * Start time.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
+
+                    /**
+                     * device group
+                     */
+                    std::string m_devGroup;
+                    bool m_devGroupHasBeenSet;
+
+                    /**
+                     * License type. If not passed, query all. 1: Tenant monthly payment, 2: Manufacturer monthly payment, 3: Permanent license.
+                     */
+                    std::string m_licenseType;
+                    bool m_licenseTypeHasBeenSet;
+
+                    /**
+                     * tenant ID
+                     */
+                    std::string m_appId;
+                    bool m_appIdHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_MNA_V20210119_MODEL_GETACTIVEDEVICECOUNTRESPONSE_H_

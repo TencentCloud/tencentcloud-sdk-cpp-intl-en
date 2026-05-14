@@ -640,6 +640,56 @@ TrocketClient::DescribeConsumerGroupOutcomeCallable TrocketClient::DescribeConsu
     return prom->get_future();
 }
 
+TrocketClient::DescribeConsumerGroupListOutcome TrocketClient::DescribeConsumerGroupList(const DescribeConsumerGroupListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsumerGroupList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsumerGroupListResponse rsp = DescribeConsumerGroupListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsumerGroupListOutcome(rsp);
+        else
+            return DescribeConsumerGroupListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsumerGroupListOutcome(outcome.GetError());
+    }
+}
+
+void TrocketClient::DescribeConsumerGroupListAsync(const DescribeConsumerGroupListRequest& request, const DescribeConsumerGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsumerGroupListRequest&;
+    using Resp = DescribeConsumerGroupListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsumerGroupList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TrocketClient::DescribeConsumerGroupListOutcomeCallable TrocketClient::DescribeConsumerGroupListCallable(const DescribeConsumerGroupListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsumerGroupListOutcome>>();
+    DescribeConsumerGroupListAsync(
+    request,
+    [prom](
+        const TrocketClient*,
+        const DescribeConsumerGroupListRequest&,
+        DescribeConsumerGroupListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TrocketClient::DescribeConsumerLagOutcome TrocketClient::DescribeConsumerLag(const DescribeConsumerLagRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConsumerLag");

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number.
-                     * @return TotalCount Total number.
+                     * 获取<p>Total number</p>
+                     * @return TotalCount <p>Total number</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -58,16 +58,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
-                     * @return Spans The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
+                     * 获取<p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
+                     * @return Spans <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
                      * 
                      */
                     std::string GetSpans() const;
@@ -82,17 +74,13 @@ Uses UTF-8 character set to convert byte[] before compression to text.
                 private:
 
                     /**
-                     * Total number.
+                     * <p>Total number</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
+                     * <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
                      */
                     std::string m_spans;
                     bool m_spansHasBeenSet;

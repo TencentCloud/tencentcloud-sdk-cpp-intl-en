@@ -26,9 +26,12 @@ set(trocket_public_header_model
   include/tencentcloud/trocket/v20230308/model/ProductSKU.h
   include/tencentcloud/trocket/v20230308/model/DescribeRoleListResponse.h
   include/tencentcloud/trocket/v20230308/model/CreateInstanceResponse.h
+  include/tencentcloud/trocket/v20230308/model/ConsumeGroupItem.h
   include/tencentcloud/trocket/v20230308/model/DescribeConsumerClientResponse.h
   include/tencentcloud/trocket/v20230308/model/DescribeMessageListRequest.h
+  include/tencentcloud/trocket/v20230308/model/RetryPolicy.h
   include/tencentcloud/trocket/v20230308/model/ModifyInstanceRequest.h
+  include/tencentcloud/trocket/v20230308/model/MigrationTaskItem.h
   include/tencentcloud/trocket/v20230308/model/FusionInstanceItem.h
   include/tencentcloud/trocket/v20230308/model/InstanceItemExtraInfo.h
   include/tencentcloud/trocket/v20230308/model/DescribeConsumerGroupResponse.h
@@ -84,7 +87,7 @@ set(trocket_public_header_model
   include/tencentcloud/trocket/v20230308/model/DescribeTopicListRequest.h
   include/tencentcloud/trocket/v20230308/model/ModifyConsumerGroupRequest.h
   include/tencentcloud/trocket/v20230308/model/DescribeConsumerGroupRequest.h
-  include/tencentcloud/trocket/v20230308/model/MigrationTaskItem.h
+  include/tencentcloud/trocket/v20230308/model/DescribeConsumerGroupListRequest.h
   include/tencentcloud/trocket/v20230308/model/TopicItem.h
   include/tencentcloud/trocket/v20230308/model/SubscriptionData.h
   include/tencentcloud/trocket/v20230308/model/CreateInstanceRequest.h
@@ -120,6 +123,7 @@ set(trocket_public_header_model
   include/tencentcloud/trocket/v20230308/model/MessageItem.h
   include/tencentcloud/trocket/v20230308/model/RoleItem.h
   include/tencentcloud/trocket/v20230308/model/TagFilter.h
+  include/tencentcloud/trocket/v20230308/model/DescribeConsumerGroupListResponse.h
   include/tencentcloud/trocket/v20230308/model/PriceTag.h
   include/tencentcloud/trocket/v20230308/model/ProducerInfo.h
   include/tencentcloud/trocket/v20230308/model/DeleteTopicResponse.h
@@ -140,9 +144,12 @@ set(trocket_src
   src/v20230308/model/ProductSKU.cpp
   src/v20230308/model/DescribeRoleListResponse.cpp
   src/v20230308/model/CreateInstanceResponse.cpp
+  src/v20230308/model/ConsumeGroupItem.cpp
   src/v20230308/model/DescribeConsumerClientResponse.cpp
   src/v20230308/model/DescribeMessageListRequest.cpp
+  src/v20230308/model/RetryPolicy.cpp
   src/v20230308/model/ModifyInstanceRequest.cpp
+  src/v20230308/model/MigrationTaskItem.cpp
   src/v20230308/model/FusionInstanceItem.cpp
   src/v20230308/model/InstanceItemExtraInfo.cpp
   src/v20230308/model/DescribeConsumerGroupResponse.cpp
@@ -198,7 +205,7 @@ set(trocket_src
   src/v20230308/model/DescribeTopicListRequest.cpp
   src/v20230308/model/ModifyConsumerGroupRequest.cpp
   src/v20230308/model/DescribeConsumerGroupRequest.cpp
-  src/v20230308/model/MigrationTaskItem.cpp
+  src/v20230308/model/DescribeConsumerGroupListRequest.cpp
   src/v20230308/model/TopicItem.cpp
   src/v20230308/model/SubscriptionData.cpp
   src/v20230308/model/CreateInstanceRequest.cpp
@@ -234,6 +241,7 @@ set(trocket_src
   src/v20230308/model/MessageItem.cpp
   src/v20230308/model/RoleItem.cpp
   src/v20230308/model/TagFilter.cpp
+  src/v20230308/model/DescribeConsumerGroupListResponse.cpp
   src/v20230308/model/PriceTag.cpp
   src/v20230308/model/ProducerInfo.cpp
   src/v20230308/model/DeleteTopicResponse.cpp

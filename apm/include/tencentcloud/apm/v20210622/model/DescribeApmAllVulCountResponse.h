@@ -1,0 +1,135 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_APM_V20210622_MODEL_DESCRIBEAPMALLVULCOUNTRESPONSE_H_
+#define TENCENTCLOUD_APM_V20210622_MODEL_DESCRIBEAPMALLVULCOUNTRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/apm/v20210622/model/ApmMetricRecord.h>
+
+
+namespace TencentCloud
+{
+    namespace Apm
+    {
+        namespace V20210622
+        {
+            namespace Model
+            {
+                /**
+                * DescribeApmAllVulCount response structure.
+                */
+                class DescribeApmAllVulCountResponse : public AbstractModel
+                {
+                public:
+                    DescribeApmAllVulCountResponse();
+                    ~DescribeApmAllVulCountResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Vulnerability metrics as well as number of business systems	
+                     * @return VulnerabilityList Vulnerability metrics as well as number of business systems	
+                     * 
+                     */
+                    std::vector<ApmMetricRecord> GetVulnerabilityList() const;
+
+                    /**
+                     * 判断参数 VulnerabilityList 是否已赋值
+                     * @return VulnerabilityList 是否已赋值
+                     * 
+                     */
+                    bool VulnerabilityListHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of vulnerabilities
+                     * @return VulnerabilityCount Total number of vulnerabilities
+                     * 
+                     */
+                    int64_t GetVulnerabilityCount() const;
+
+                    /**
+                     * 判断参数 VulnerabilityCount 是否已赋值
+                     * @return VulnerabilityCount 是否已赋值
+                     * 
+                     */
+                    bool VulnerabilityCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of critical vulnerabilities
+                     * @return ImportantVulnerabilityCount Number of critical vulnerabilities
+                     * 
+                     */
+                    int64_t GetImportantVulnerabilityCount() const;
+
+                    /**
+                     * 判断参数 ImportantVulnerabilityCount 是否已赋值
+                     * @return ImportantVulnerabilityCount 是否已赋值
+                     * 
+                     */
+                    bool ImportantVulnerabilityCountHasBeenSet() const;
+
+                    /**
+                     * 获取High-risk vulnerability count
+                     * @return CriticalVulnerabilityCount High-risk vulnerability count
+                     * 
+                     */
+                    int64_t GetCriticalVulnerabilityCount() const;
+
+                    /**
+                     * 判断参数 CriticalVulnerabilityCount 是否已赋值
+                     * @return CriticalVulnerabilityCount 是否已赋值
+                     * 
+                     */
+                    bool CriticalVulnerabilityCountHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Vulnerability metrics as well as number of business systems	
+                     */
+                    std::vector<ApmMetricRecord> m_vulnerabilityList;
+                    bool m_vulnerabilityListHasBeenSet;
+
+                    /**
+                     * Total number of vulnerabilities
+                     */
+                    int64_t m_vulnerabilityCount;
+                    bool m_vulnerabilityCountHasBeenSet;
+
+                    /**
+                     * Number of critical vulnerabilities
+                     */
+                    int64_t m_importantVulnerabilityCount;
+                    bool m_importantVulnerabilityCountHasBeenSet;
+
+                    /**
+                     * High-risk vulnerability count
+                     */
+                    int64_t m_criticalVulnerabilityCount;
+                    bool m_criticalVulnerabilityCountHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_APM_V20210622_MODEL_DESCRIBEAPMALLVULCOUNTRESPONSE_H_

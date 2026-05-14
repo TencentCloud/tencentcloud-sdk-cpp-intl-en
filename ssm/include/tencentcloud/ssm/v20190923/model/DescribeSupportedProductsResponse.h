@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of supported services.
-                     * @return Products List of supported services.
+                     * 获取List of all supported Tencent Cloud products.
+The correspondence between each cloud product and secrets type is as follows:When `SecretType` is 1, the list of supported cloud products includes: Mysql, Tdsql-mysql, Tdsql_C_Mysql;When `SecretType` is 2, the supported product list is: Cvm;When `SecretType` is 3, the supported product list is: Cam (To use this function, you need to contact the cloud assistant to activate the allowlist separately);When `SecretType` is 4, the supported product list is: Redis.
+                     * @return Products List of all supported Tencent Cloud products.
+The correspondence between each cloud product and secrets type is as follows:When `SecretType` is 1, the list of supported cloud products includes: Mysql, Tdsql-mysql, Tdsql_C_Mysql;When `SecretType` is 2, the supported product list is: Cvm;When `SecretType` is 3, the supported product list is: Cam (To use this function, you need to contact the cloud assistant to activate the allowlist separately);When `SecretType` is 4, the supported product list is: Redis.
                      * 
                      */
                     std::vector<std::string> GetProducts() const;
@@ -74,7 +76,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of supported services.
+                     * List of all supported Tencent Cloud products.
+The correspondence between each cloud product and secrets type is as follows:When `SecretType` is 1, the list of supported cloud products includes: Mysql, Tdsql-mysql, Tdsql_C_Mysql;When `SecretType` is 2, the supported product list is: Cvm;When `SecretType` is 3, the supported product list is: Cam (To use this function, you need to contact the cloud assistant to activate the allowlist separately);When `SecretType` is 4, the supported product list is: Redis.
                      */
                     std::vector<std::string> m_products;
                     bool m_productsHasBeenSet;

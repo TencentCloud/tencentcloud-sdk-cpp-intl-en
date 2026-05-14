@@ -340,6 +340,56 @@ ApmClient::DescribeApmAgentOutcomeCallable ApmClient::DescribeApmAgentCallable(c
     return prom->get_future();
 }
 
+ApmClient::DescribeApmAllVulCountOutcome ApmClient::DescribeApmAllVulCount(const DescribeApmAllVulCountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApmAllVulCount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApmAllVulCountResponse rsp = DescribeApmAllVulCountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApmAllVulCountOutcome(rsp);
+        else
+            return DescribeApmAllVulCountOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApmAllVulCountOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeApmAllVulCountAsync(const DescribeApmAllVulCountRequest& request, const DescribeApmAllVulCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeApmAllVulCountRequest&;
+    using Resp = DescribeApmAllVulCountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeApmAllVulCount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeApmAllVulCountOutcomeCallable ApmClient::DescribeApmAllVulCountCallable(const DescribeApmAllVulCountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeApmAllVulCountOutcome>>();
+    DescribeApmAllVulCountAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeApmAllVulCountRequest&,
+        DescribeApmAllVulCountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ApmClient::DescribeApmApplicationConfigOutcome ApmClient::DescribeApmApplicationConfig(const DescribeApmApplicationConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeApmApplicationConfig");
@@ -540,6 +590,56 @@ ApmClient::DescribeApmPrometheusRuleOutcomeCallable ApmClient::DescribeApmPromet
     return prom->get_future();
 }
 
+ApmClient::DescribeApmSQLInjectionDetailOutcome ApmClient::DescribeApmSQLInjectionDetail(const DescribeApmSQLInjectionDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApmSQLInjectionDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApmSQLInjectionDetailResponse rsp = DescribeApmSQLInjectionDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApmSQLInjectionDetailOutcome(rsp);
+        else
+            return DescribeApmSQLInjectionDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApmSQLInjectionDetailOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeApmSQLInjectionDetailAsync(const DescribeApmSQLInjectionDetailRequest& request, const DescribeApmSQLInjectionDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeApmSQLInjectionDetailRequest&;
+    using Resp = DescribeApmSQLInjectionDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeApmSQLInjectionDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeApmSQLInjectionDetailOutcomeCallable ApmClient::DescribeApmSQLInjectionDetailCallable(const DescribeApmSQLInjectionDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeApmSQLInjectionDetailOutcome>>();
+    DescribeApmSQLInjectionDetailAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeApmSQLInjectionDetailRequest&,
+        DescribeApmSQLInjectionDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ApmClient::DescribeApmSampleConfigOutcome ApmClient::DescribeApmSampleConfig(const DescribeApmSampleConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeApmSampleConfig");
@@ -632,6 +732,106 @@ ApmClient::DescribeApmServiceMetricOutcomeCallable ApmClient::DescribeApmService
         const ApmClient*,
         const DescribeApmServiceMetricRequest&,
         DescribeApmServiceMetricOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ApmClient::DescribeApmVulnerabilityCountOutcome ApmClient::DescribeApmVulnerabilityCount(const DescribeApmVulnerabilityCountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApmVulnerabilityCount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApmVulnerabilityCountResponse rsp = DescribeApmVulnerabilityCountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApmVulnerabilityCountOutcome(rsp);
+        else
+            return DescribeApmVulnerabilityCountOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApmVulnerabilityCountOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeApmVulnerabilityCountAsync(const DescribeApmVulnerabilityCountRequest& request, const DescribeApmVulnerabilityCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeApmVulnerabilityCountRequest&;
+    using Resp = DescribeApmVulnerabilityCountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeApmVulnerabilityCount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeApmVulnerabilityCountOutcomeCallable ApmClient::DescribeApmVulnerabilityCountCallable(const DescribeApmVulnerabilityCountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeApmVulnerabilityCountOutcome>>();
+    DescribeApmVulnerabilityCountAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeApmVulnerabilityCountRequest&,
+        DescribeApmVulnerabilityCountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ApmClient::DescribeApmVulnerabilityDetailOutcome ApmClient::DescribeApmVulnerabilityDetail(const DescribeApmVulnerabilityDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApmVulnerabilityDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApmVulnerabilityDetailResponse rsp = DescribeApmVulnerabilityDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApmVulnerabilityDetailOutcome(rsp);
+        else
+            return DescribeApmVulnerabilityDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApmVulnerabilityDetailOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeApmVulnerabilityDetailAsync(const DescribeApmVulnerabilityDetailRequest& request, const DescribeApmVulnerabilityDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeApmVulnerabilityDetailRequest&;
+    using Resp = DescribeApmVulnerabilityDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeApmVulnerabilityDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeApmVulnerabilityDetailOutcomeCallable ApmClient::DescribeApmVulnerabilityDetailCallable(const DescribeApmVulnerabilityDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeApmVulnerabilityDetailOutcome>>();
+    DescribeApmVulnerabilityDetailAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeApmVulnerabilityDetailRequest&,
+        DescribeApmVulnerabilityDetailOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -890,6 +1090,56 @@ ApmClient::DescribeMetricRecordsOutcomeCallable ApmClient::DescribeMetricRecords
     return prom->get_future();
 }
 
+ApmClient::DescribeOPRAllVulCountOutcome ApmClient::DescribeOPRAllVulCount(const DescribeOPRAllVulCountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOPRAllVulCount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOPRAllVulCountResponse rsp = DescribeOPRAllVulCountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOPRAllVulCountOutcome(rsp);
+        else
+            return DescribeOPRAllVulCountOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOPRAllVulCountOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeOPRAllVulCountAsync(const DescribeOPRAllVulCountRequest& request, const DescribeOPRAllVulCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeOPRAllVulCountRequest&;
+    using Resp = DescribeOPRAllVulCountResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeOPRAllVulCount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeOPRAllVulCountOutcomeCallable ApmClient::DescribeOPRAllVulCountCallable(const DescribeOPRAllVulCountRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeOPRAllVulCountOutcome>>();
+    DescribeOPRAllVulCountAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeOPRAllVulCountRequest&,
+        DescribeOPRAllVulCountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ApmClient::DescribeServiceOverviewOutcome ApmClient::DescribeServiceOverview(const DescribeServiceOverviewRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeServiceOverview");
@@ -982,6 +1232,56 @@ ApmClient::DescribeTagValuesOutcomeCallable ApmClient::DescribeTagValuesCallable
         const ApmClient*,
         const DescribeTagValuesRequest&,
         DescribeTagValuesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ApmClient::DescribeTopologyNewOutcome ApmClient::DescribeTopologyNew(const DescribeTopologyNewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopologyNew");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopologyNewResponse rsp = DescribeTopologyNewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopologyNewOutcome(rsp);
+        else
+            return DescribeTopologyNewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopologyNewOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::DescribeTopologyNewAsync(const DescribeTopologyNewRequest& request, const DescribeTopologyNewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTopologyNewRequest&;
+    using Resp = DescribeTopologyNewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopologyNew", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::DescribeTopologyNewOutcomeCallable ApmClient::DescribeTopologyNewCallable(const DescribeTopologyNewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTopologyNewOutcome>>();
+    DescribeTopologyNewAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const DescribeTopologyNewRequest&,
+        DescribeTopologyNewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1232,6 +1532,56 @@ ApmClient::ModifyApmSampleConfigOutcomeCallable ApmClient::ModifyApmSampleConfig
         const ApmClient*,
         const ModifyApmSampleConfigRequest&,
         ModifyApmSampleConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ApmClient::ModifyApmServiceOutcome ApmClient::ModifyApmService(const ModifyApmServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyApmService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyApmServiceResponse rsp = ModifyApmServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyApmServiceOutcome(rsp);
+        else
+            return ModifyApmServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyApmServiceOutcome(outcome.GetError());
+    }
+}
+
+void ApmClient::ModifyApmServiceAsync(const ModifyApmServiceRequest& request, const ModifyApmServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyApmServiceRequest&;
+    using Resp = ModifyApmServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyApmService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ApmClient::ModifyApmServiceOutcomeCallable ApmClient::ModifyApmServiceCallable(const ModifyApmServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyApmServiceOutcome>>();
+    ModifyApmServiceAsync(
+    request,
+    [prom](
+        const ApmClient*,
+        const ModifyApmServiceRequest&,
+        ModifyApmServiceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

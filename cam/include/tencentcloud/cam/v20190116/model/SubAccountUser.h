@@ -177,15 +177,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UserTypeHasBeenSet() const;
 
                     /**
-                     * 获取Recent Login IP
-                     * @return LastLoginIp Recent Login IP
+                     * 获取
+                     * @return LastLoginIp 
                      * 
                      */
                     std::string GetLastLoginIp() const;
 
                     /**
-                     * 设置Recent Login IP
-                     * @param _lastLoginIp Recent Login IP
+                     * 设置
+                     * @param _lastLoginIp 
                      * 
                      */
                     void SetLastLoginIp(const std::string& _lastLoginIp);
@@ -198,15 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LastLoginIpHasBeenSet() const;
 
                     /**
-                     * 获取Recent login time; if the returned value is empty, it means the console has never been logged in to.
-                     * @return LastLoginTime Recent login time; if the returned value is empty, it means the console has never been logged in to.
+                     * 获取
+                     * @return LastLoginTime 
                      * 
                      */
                     std::string GetLastLoginTime() const;
 
                     /**
-                     * 设置Recent login time; if the returned value is empty, it means the console has never been logged in to.
-                     * @param _lastLoginTime Recent login time; if the returned value is empty, it means the console has never been logged in to.
+                     * 设置
+                     * @param _lastLoginTime 
                      * 
                      */
                     void SetLastLoginTime(const std::string& _lastLoginTime);
@@ -258,13 +258,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_userTypeHasBeenSet;
 
                     /**
-                     * Recent Login IP
+                     * 
                      */
                     std::string m_lastLoginIp;
                     bool m_lastLoginIpHasBeenSet;
 
                     /**
-                     * Recent login time; if the returned value is empty, it means the console has never been logged in to.
+                     * 
                      */
                     std::string m_lastLoginTime;
                     bool m_lastLoginTimeHasBeenSet;

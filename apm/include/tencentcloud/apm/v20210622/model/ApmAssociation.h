@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Associated product instance ID.
+                     * 获取<p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PeerId Associated product instance ID.
+                     * @return PeerId <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPeerId() const;
 
                     /**
-                     * 设置Associated product instance ID.
+                     * 设置<p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _peerId Associated product instance ID.
+                     * @param _peerId <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeerIdHasBeenSet() const;
 
                     /**
-                     * 获取Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+                     * 获取<p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+                     * @return Status <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+                     * 设置<p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+                     * @param _status <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,15 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the CKafka message topic.
-                     * @return Topic Specifies the CKafka message topic.
+                     * 获取<p>CKafka message topic</p>
+                     * @return Topic <p>CKafka message topic</p>
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置Specifies the CKafka message topic.
-                     * @param _topic Specifies the CKafka message topic.
+                     * 设置<p>CKafka message topic</p>
+                     * @param _topic <p>CKafka message topic</p>
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -117,27 +117,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TopicHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+                     * @return MetricTopic <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+                     * 
+                     */
+                    std::string GetMetricTopic() const;
+
+                    /**
+                     * 设置<p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+                     * @param _metricTopic <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+                     * 
+                     */
+                    void SetMetricTopic(const std::string& _metricTopic);
+
+                    /**
+                     * 判断参数 MetricTopic 是否已赋值
+                     * @return MetricTopic 是否已赋值
+                     * 
+                     */
+                    bool MetricTopicHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Associated product instance ID.
+                     * <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_peerId;
                     bool m_peerIdHasBeenSet;
 
                     /**
-                     * Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+                     * <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Specifies the CKafka message topic.
+                     * <p>CKafka message topic</p>
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;
+
+                    /**
+                     * <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+                     */
+                    std::string m_metricTopic;
+                    bool m_metricTopicHasBeenSet;
 
                 };
             }

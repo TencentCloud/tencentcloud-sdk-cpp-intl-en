@@ -1,0 +1,556 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/trocket/v20230308/model/ConsumeGroupItem.h>
+
+using TencentCloud::CoreInternalOutcome;
+using namespace TencentCloud::Trocket::V20230308::Model;
+using namespace std;
+
+ConsumeGroupItem::ConsumeGroupItem() :
+    m_instanceIdHasBeenSet(false),
+    m_consumerGroupHasBeenSet(false),
+    m_consumeEnableHasBeenSet(false),
+    m_consumeMessageOrderlyHasBeenSet(false),
+    m_maxRetryTimesHasBeenSet(false),
+    m_remarkHasBeenSet(false),
+    m_clusterIdV4HasBeenSet(false),
+    m_namespaceV4HasBeenSet(false),
+    m_consumerGroupV4HasBeenSet(false),
+    m_fullNamespaceV4HasBeenSet(false),
+    m_subscribeTopicNumHasBeenSet(false),
+    m_createTimeHasBeenSet(false),
+    m_tagListHasBeenSet(false),
+    m_retryPolicyHasBeenSet(false)
+{
+}
+
+CoreInternalOutcome ConsumeGroupItem::Deserialize(const rapidjson::Value &value)
+{
+    string requestId = "";
+
+
+    if (value.HasMember("InstanceId") && !value["InstanceId"].IsNull())
+    {
+        if (!value["InstanceId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceId = string(value["InstanceId"].GetString());
+        m_instanceIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ConsumerGroup") && !value["ConsumerGroup"].IsNull())
+    {
+        if (!value["ConsumerGroup"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.ConsumerGroup` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_consumerGroup = string(value["ConsumerGroup"].GetString());
+        m_consumerGroupHasBeenSet = true;
+    }
+
+    if (value.HasMember("ConsumeEnable") && !value["ConsumeEnable"].IsNull())
+    {
+        if (!value["ConsumeEnable"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.ConsumeEnable` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_consumeEnable = value["ConsumeEnable"].GetBool();
+        m_consumeEnableHasBeenSet = true;
+    }
+
+    if (value.HasMember("ConsumeMessageOrderly") && !value["ConsumeMessageOrderly"].IsNull())
+    {
+        if (!value["ConsumeMessageOrderly"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.ConsumeMessageOrderly` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_consumeMessageOrderly = value["ConsumeMessageOrderly"].GetBool();
+        m_consumeMessageOrderlyHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxRetryTimes") && !value["MaxRetryTimes"].IsNull())
+    {
+        if (!value["MaxRetryTimes"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.MaxRetryTimes` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxRetryTimes = value["MaxRetryTimes"].GetInt64();
+        m_maxRetryTimesHasBeenSet = true;
+    }
+
+    if (value.HasMember("Remark") && !value["Remark"].IsNull())
+    {
+        if (!value["Remark"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.Remark` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_remark = string(value["Remark"].GetString());
+        m_remarkHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterIdV4") && !value["ClusterIdV4"].IsNull())
+    {
+        if (!value["ClusterIdV4"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.ClusterIdV4` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterIdV4 = string(value["ClusterIdV4"].GetString());
+        m_clusterIdV4HasBeenSet = true;
+    }
+
+    if (value.HasMember("NamespaceV4") && !value["NamespaceV4"].IsNull())
+    {
+        if (!value["NamespaceV4"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.NamespaceV4` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_namespaceV4 = string(value["NamespaceV4"].GetString());
+        m_namespaceV4HasBeenSet = true;
+    }
+
+    if (value.HasMember("ConsumerGroupV4") && !value["ConsumerGroupV4"].IsNull())
+    {
+        if (!value["ConsumerGroupV4"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.ConsumerGroupV4` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_consumerGroupV4 = string(value["ConsumerGroupV4"].GetString());
+        m_consumerGroupV4HasBeenSet = true;
+    }
+
+    if (value.HasMember("FullNamespaceV4") && !value["FullNamespaceV4"].IsNull())
+    {
+        if (!value["FullNamespaceV4"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.FullNamespaceV4` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullNamespaceV4 = string(value["FullNamespaceV4"].GetString());
+        m_fullNamespaceV4HasBeenSet = true;
+    }
+
+    if (value.HasMember("SubscribeTopicNum") && !value["SubscribeTopicNum"].IsNull())
+    {
+        if (!value["SubscribeTopicNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.SubscribeTopicNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_subscribeTopicNum = value["SubscribeTopicNum"].GetInt64();
+        m_subscribeTopicNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
+    {
+        if (!value["CreateTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.CreateTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_createTime = value["CreateTime"].GetInt64();
+        m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("TagList") && !value["TagList"].IsNull())
+    {
+        if (!value["TagList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.TagList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TagList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagList.push_back(item);
+        }
+        m_tagListHasBeenSet = true;
+    }
+
+    if (value.HasMember("RetryPolicy") && !value["RetryPolicy"].IsNull())
+    {
+        if (!value["RetryPolicy"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ConsumeGroupItem.RetryPolicy` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_retryPolicy.Deserialize(value["RetryPolicy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_retryPolicyHasBeenSet = true;
+    }
+
+
+    return CoreInternalOutcome(true);
+}
+
+void ConsumeGroupItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+{
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consumerGroupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumerGroup";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_consumerGroup.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consumeEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumeEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_consumeEnable, allocator);
+    }
+
+    if (m_consumeMessageOrderlyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumeMessageOrderly";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_consumeMessageOrderly, allocator);
+    }
+
+    if (m_maxRetryTimesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxRetryTimes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxRetryTimes, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterIdV4HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterIdV4";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterIdV4.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_namespaceV4HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NamespaceV4";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_namespaceV4.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consumerGroupV4HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumerGroupV4";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_consumerGroupV4.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fullNamespaceV4HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullNamespaceV4";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullNamespaceV4.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subscribeTopicNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscribeTopicNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_subscribeTopicNum, allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_createTime, allocator);
+    }
+
+    if (m_tagListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagList.begin(); itr != m_tagList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_retryPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetryPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_retryPolicy.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+}
+
+
+string ConsumeGroupItem::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void ConsumeGroupItem::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
+}
+
+string ConsumeGroupItem::GetConsumerGroup() const
+{
+    return m_consumerGroup;
+}
+
+void ConsumeGroupItem::SetConsumerGroup(const string& _consumerGroup)
+{
+    m_consumerGroup = _consumerGroup;
+    m_consumerGroupHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::ConsumerGroupHasBeenSet() const
+{
+    return m_consumerGroupHasBeenSet;
+}
+
+bool ConsumeGroupItem::GetConsumeEnable() const
+{
+    return m_consumeEnable;
+}
+
+void ConsumeGroupItem::SetConsumeEnable(const bool& _consumeEnable)
+{
+    m_consumeEnable = _consumeEnable;
+    m_consumeEnableHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::ConsumeEnableHasBeenSet() const
+{
+    return m_consumeEnableHasBeenSet;
+}
+
+bool ConsumeGroupItem::GetConsumeMessageOrderly() const
+{
+    return m_consumeMessageOrderly;
+}
+
+void ConsumeGroupItem::SetConsumeMessageOrderly(const bool& _consumeMessageOrderly)
+{
+    m_consumeMessageOrderly = _consumeMessageOrderly;
+    m_consumeMessageOrderlyHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::ConsumeMessageOrderlyHasBeenSet() const
+{
+    return m_consumeMessageOrderlyHasBeenSet;
+}
+
+int64_t ConsumeGroupItem::GetMaxRetryTimes() const
+{
+    return m_maxRetryTimes;
+}
+
+void ConsumeGroupItem::SetMaxRetryTimes(const int64_t& _maxRetryTimes)
+{
+    m_maxRetryTimes = _maxRetryTimes;
+    m_maxRetryTimesHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::MaxRetryTimesHasBeenSet() const
+{
+    return m_maxRetryTimesHasBeenSet;
+}
+
+string ConsumeGroupItem::GetRemark() const
+{
+    return m_remark;
+}
+
+void ConsumeGroupItem::SetRemark(const string& _remark)
+{
+    m_remark = _remark;
+    m_remarkHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::RemarkHasBeenSet() const
+{
+    return m_remarkHasBeenSet;
+}
+
+string ConsumeGroupItem::GetClusterIdV4() const
+{
+    return m_clusterIdV4;
+}
+
+void ConsumeGroupItem::SetClusterIdV4(const string& _clusterIdV4)
+{
+    m_clusterIdV4 = _clusterIdV4;
+    m_clusterIdV4HasBeenSet = true;
+}
+
+bool ConsumeGroupItem::ClusterIdV4HasBeenSet() const
+{
+    return m_clusterIdV4HasBeenSet;
+}
+
+string ConsumeGroupItem::GetNamespaceV4() const
+{
+    return m_namespaceV4;
+}
+
+void ConsumeGroupItem::SetNamespaceV4(const string& _namespaceV4)
+{
+    m_namespaceV4 = _namespaceV4;
+    m_namespaceV4HasBeenSet = true;
+}
+
+bool ConsumeGroupItem::NamespaceV4HasBeenSet() const
+{
+    return m_namespaceV4HasBeenSet;
+}
+
+string ConsumeGroupItem::GetConsumerGroupV4() const
+{
+    return m_consumerGroupV4;
+}
+
+void ConsumeGroupItem::SetConsumerGroupV4(const string& _consumerGroupV4)
+{
+    m_consumerGroupV4 = _consumerGroupV4;
+    m_consumerGroupV4HasBeenSet = true;
+}
+
+bool ConsumeGroupItem::ConsumerGroupV4HasBeenSet() const
+{
+    return m_consumerGroupV4HasBeenSet;
+}
+
+string ConsumeGroupItem::GetFullNamespaceV4() const
+{
+    return m_fullNamespaceV4;
+}
+
+void ConsumeGroupItem::SetFullNamespaceV4(const string& _fullNamespaceV4)
+{
+    m_fullNamespaceV4 = _fullNamespaceV4;
+    m_fullNamespaceV4HasBeenSet = true;
+}
+
+bool ConsumeGroupItem::FullNamespaceV4HasBeenSet() const
+{
+    return m_fullNamespaceV4HasBeenSet;
+}
+
+int64_t ConsumeGroupItem::GetSubscribeTopicNum() const
+{
+    return m_subscribeTopicNum;
+}
+
+void ConsumeGroupItem::SetSubscribeTopicNum(const int64_t& _subscribeTopicNum)
+{
+    m_subscribeTopicNum = _subscribeTopicNum;
+    m_subscribeTopicNumHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::SubscribeTopicNumHasBeenSet() const
+{
+    return m_subscribeTopicNumHasBeenSet;
+}
+
+int64_t ConsumeGroupItem::GetCreateTime() const
+{
+    return m_createTime;
+}
+
+void ConsumeGroupItem::SetCreateTime(const int64_t& _createTime)
+{
+    m_createTime = _createTime;
+    m_createTimeHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::CreateTimeHasBeenSet() const
+{
+    return m_createTimeHasBeenSet;
+}
+
+vector<Tag> ConsumeGroupItem::GetTagList() const
+{
+    return m_tagList;
+}
+
+void ConsumeGroupItem::SetTagList(const vector<Tag>& _tagList)
+{
+    m_tagList = _tagList;
+    m_tagListHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::TagListHasBeenSet() const
+{
+    return m_tagListHasBeenSet;
+}
+
+RetryPolicy ConsumeGroupItem::GetRetryPolicy() const
+{
+    return m_retryPolicy;
+}
+
+void ConsumeGroupItem::SetRetryPolicy(const RetryPolicy& _retryPolicy)
+{
+    m_retryPolicy = _retryPolicy;
+    m_retryPolicyHasBeenSet = true;
+}
+
+bool ConsumeGroupItem::RetryPolicyHasBeenSet() const
+{
+    return m_retryPolicyHasBeenSet;
+}
+

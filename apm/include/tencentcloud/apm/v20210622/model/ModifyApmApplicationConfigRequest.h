@@ -23,6 +23,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/apm/v20210622/model/Instrument.h>
 #include <tencentcloud/apm/v20210622/model/AgentOperationConfigView.h>
+#include <tencentcloud/apm/v20210622/model/ApmTag.h>
+#include <tencentcloud/apm/v20210622/model/AutoProfilingConfig.h>
 
 
 namespace TencentCloud
@@ -45,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Business system ID.
-                     * @return InstanceId Business system ID.
+                     * 获取<p>Business system ID</p>
+                     * @return InstanceId <p>Business system ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Business system ID.
-                     * @param _instanceId Business system ID.
+                     * 设置<p>Business system ID</p>
+                     * @param _instanceId <p>Business system ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ServiceName Application name
+                     * 获取<p>Application name</p>
+                     * @return ServiceName <p>Application name</p>
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _serviceName Application name
+                     * 设置<p>Application name</p>
+                     * @param _serviceName <p>Application name</p>
                      * 
                      */
                     void SetServiceName(const std::string& _serviceName);
@@ -87,15 +89,15 @@ namespace TencentCloud
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取URL convergence switch. 0: Off; 1: On
-                     * @return UrlConvergenceSwitch URL convergence switch. 0: Off; 1: On
+                     * 获取<p>URL convergence switch, 0 Off | 1 On</p>
+                     * @return UrlConvergenceSwitch <p>URL convergence switch, 0 Off | 1 On</p>
                      * 
                      */
                     int64_t GetUrlConvergenceSwitch() const;
 
                     /**
-                     * 设置URL convergence switch. 0: Off; 1: On
-                     * @param _urlConvergenceSwitch URL convergence switch. 0: Off; 1: On
+                     * 设置<p>URL convergence switch, 0 Off | 1 On</p>
+                     * @param _urlConvergenceSwitch <p>URL convergence switch, 0 Off | 1 On</p>
                      * 
                      */
                     void SetUrlConvergenceSwitch(const int64_t& _urlConvergenceSwitch);
@@ -108,15 +110,15 @@ namespace TencentCloud
                     bool UrlConvergenceSwitchHasBeenSet() const;
 
                     /**
-                     * 获取URL convergence threshold
-                     * @return UrlConvergenceThreshold URL convergence threshold
+                     * 获取<p>URL convergence threshold</p>
+                     * @return UrlConvergenceThreshold <p>URL convergence threshold</p>
                      * 
                      */
                     int64_t GetUrlConvergenceThreshold() const;
 
                     /**
-                     * 设置URL convergence threshold
-                     * @param _urlConvergenceThreshold URL convergence threshold
+                     * 设置<p>URL convergence threshold</p>
+                     * @param _urlConvergenceThreshold <p>URL convergence threshold</p>
                      * 
                      */
                     void SetUrlConvergenceThreshold(const int64_t& _urlConvergenceThreshold);
@@ -129,15 +131,15 @@ namespace TencentCloud
                     bool UrlConvergenceThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Regex rules for exception filtering, separated by commas
-                     * @return ExceptionFilter Regex rules for exception filtering, separated by commas
+                     * 获取<p>Exception filtering regex rules, comma-separated</p>
+                     * @return ExceptionFilter <p>Exception filtering regex rules, comma-separated</p>
                      * 
                      */
                     std::string GetExceptionFilter() const;
 
                     /**
-                     * 设置Regex rules for exception filtering, separated by commas
-                     * @param _exceptionFilter Regex rules for exception filtering, separated by commas
+                     * 设置<p>Exception filtering regex rules, comma-separated</p>
+                     * @param _exceptionFilter <p>Exception filtering regex rules, comma-separated</p>
                      * 
                      */
                     void SetExceptionFilter(const std::string& _exceptionFilter);
@@ -150,15 +152,15 @@ namespace TencentCloud
                     bool ExceptionFilterHasBeenSet() const;
 
                     /**
-                     * 获取Regex rules for URL convergence, separated by commas
-                     * @return UrlConvergence Regex rules for URL convergence, separated by commas
+                     * 获取<p>URL convergence regex rules, comma-separated</p>
+                     * @return UrlConvergence <p>URL convergence regex rules, comma-separated</p>
                      * 
                      */
                     std::string GetUrlConvergence() const;
 
                     /**
-                     * 设置Regex rules for URL convergence, separated by commas
-                     * @param _urlConvergence Regex rules for URL convergence, separated by commas
+                     * 设置<p>URL convergence regex rules, comma-separated</p>
+                     * @param _urlConvergence <p>URL convergence regex rules, comma-separated</p>
                      * 
                      */
                     void SetUrlConvergence(const std::string& _urlConvergence);
@@ -171,15 +173,15 @@ namespace TencentCloud
                     bool UrlConvergenceHasBeenSet() const;
 
                     /**
-                     * 获取Error code filtering, separated by commas
-                     * @return ErrorCodeFilter Error code filtering, separated by commas
+                     * 获取<p>Error code filtering, comma-separated</p>
+                     * @return ErrorCodeFilter <p>Error code filtering, comma-separated</p>
                      * 
                      */
                     std::string GetErrorCodeFilter() const;
 
                     /**
-                     * 设置Error code filtering, separated by commas
-                     * @param _errorCodeFilter Error code filtering, separated by commas
+                     * 设置<p>Error code filtering, comma-separated</p>
+                     * @param _errorCodeFilter <p>Error code filtering, comma-separated</p>
                      * 
                      */
                     void SetErrorCodeFilter(const std::string& _errorCodeFilter);
@@ -192,15 +194,15 @@ namespace TencentCloud
                     bool ErrorCodeFilterHasBeenSet() const;
 
                     /**
-                     * 获取Regex rules for URL exclusion, separated by commas
-                     * @return UrlExclude Regex rules for URL exclusion, separated by commas
+                     * 获取<p>URL exclusion regex rule, comma-separated</p>
+                     * @return UrlExclude <p>URL exclusion regex rule, comma-separated</p>
                      * 
                      */
                     std::string GetUrlExclude() const;
 
                     /**
-                     * 设置Regex rules for URL exclusion, separated by commas
-                     * @param _urlExclude Regex rules for URL exclusion, separated by commas
+                     * 设置<p>URL exclusion regex rule, comma-separated</p>
+                     * @param _urlExclude <p>URL exclusion regex rule, comma-separated</p>
                      * 
                      */
                     void SetUrlExclude(const std::string& _urlExclude);
@@ -213,15 +215,15 @@ namespace TencentCloud
                     bool UrlExcludeHasBeenSet() const;
 
                     /**
-                     * 获取Log switch. 0: Off; 1: On
-                     * @return IsRelatedLog Log switch. 0: Off; 1: On
+                     * 获取<p>Log switch 0 Disabled 1 Enabled</p>
+                     * @return IsRelatedLog <p>Log switch 0 Disabled 1 Enabled</p>
                      * 
                      */
                     int64_t GetIsRelatedLog() const;
 
                     /**
-                     * 设置Log switch. 0: Off; 1: On
-                     * @param _isRelatedLog Log switch. 0: Off; 1: On
+                     * 设置<p>Log switch 0 Disabled 1 Enabled</p>
+                     * @param _isRelatedLog <p>Log switch 0 Disabled 1 Enabled</p>
                      * 
                      */
                     void SetIsRelatedLog(const int64_t& _isRelatedLog);
@@ -234,15 +236,15 @@ namespace TencentCloud
                     bool IsRelatedLogHasBeenSet() const;
 
                     /**
-                     * 获取Log region.
-                     * @return LogRegion Log region.
+                     * 获取<p>Log region</p>
+                     * @return LogRegion <p>Log region</p>
                      * 
                      */
                     std::string GetLogRegion() const;
 
                     /**
-                     * 设置Log region.
-                     * @param _logRegion Log region.
+                     * 设置<p>Log region</p>
+                     * @param _logRegion <p>Log region</p>
                      * 
                      */
                     void SetLogRegion(const std::string& _logRegion);
@@ -255,15 +257,15 @@ namespace TencentCloud
                     bool LogRegionHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID
-                     * @return LogTopicID Log topic ID
+                     * 获取<p>Log topic ID</p>
+                     * @return LogTopicID <p>Log topic ID</p>
                      * 
                      */
                     std::string GetLogTopicID() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _logTopicID Log topic ID
+                     * 设置<p>Log topic ID</p>
+                     * @param _logTopicID <p>Log topic ID</p>
                      * 
                      */
                     void SetLogTopicID(const std::string& _logTopicID);
@@ -276,15 +278,15 @@ namespace TencentCloud
                     bool LogTopicIDHasBeenSet() const;
 
                     /**
-                     * 获取CLS log set/ES cluster ID
-                     * @return LogSet CLS log set/ES cluster ID
+                     * 获取<p>CLS logset | ES cluster ID</p>
+                     * @return LogSet <p>CLS logset | ES cluster ID</p>
                      * 
                      */
                     std::string GetLogSet() const;
 
                     /**
-                     * 设置CLS log set/ES cluster ID
-                     * @param _logSet CLS log set/ES cluster ID
+                     * 设置<p>CLS logset | ES cluster ID</p>
+                     * @param _logSet <p>CLS logset | ES cluster ID</p>
                      * 
                      */
                     void SetLogSet(const std::string& _logSet);
@@ -297,15 +299,15 @@ namespace TencentCloud
                     bool LogSetHasBeenSet() const;
 
                     /**
-                     * 获取Log source: CLS or ES
-                     * @return LogSource Log source: CLS or ES
+                     * 获取<p>Log source CLS | ES</p>
+                     * @return LogSource <p>Log source CLS | ES</p>
                      * 
                      */
                     std::string GetLogSource() const;
 
                     /**
-                     * 设置Log source: CLS or ES
-                     * @param _logSource Log source: CLS or ES
+                     * 设置<p>Log source CLS | ES</p>
+                     * @param _logSource <p>Log source CLS | ES</p>
                      * 
                      */
                     void SetLogSource(const std::string& _logSource);
@@ -318,15 +320,15 @@ namespace TencentCloud
                     bool LogSourceHasBeenSet() const;
 
                     /**
-                     * 获取APIs to be filtered
-                     * @return IgnoreOperationName APIs to be filtered
+                     * 获取<p>Interfaces to Filter</p>
+                     * @return IgnoreOperationName <p>Interfaces to Filter</p>
                      * 
                      */
                     std::string GetIgnoreOperationName() const;
 
                     /**
-                     * 设置APIs to be filtered
-                     * @param _ignoreOperationName APIs to be filtered
+                     * 设置<p>Interfaces to Filter</p>
+                     * @param _ignoreOperationName <p>Interfaces to Filter</p>
                      * 
                      */
                     void SetIgnoreOperationName(const std::string& _ignoreOperationName);
@@ -339,15 +341,15 @@ namespace TencentCloud
                     bool IgnoreOperationNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether thread profiling is enabled.
-                     * @return EnableSnapshot Whether thread profiling is enabled.
+                     * 获取<p>Whether thread profiling is enabled</p>
+                     * @return EnableSnapshot <p>Whether thread profiling is enabled</p>
                      * 
                      */
                     bool GetEnableSnapshot() const;
 
                     /**
-                     * 设置Whether thread profiling is enabled.
-                     * @param _enableSnapshot Whether thread profiling is enabled.
+                     * 设置<p>Whether thread profiling is enabled</p>
+                     * @param _enableSnapshot <p>Whether thread profiling is enabled</p>
                      * 
                      */
                     void SetEnableSnapshot(const bool& _enableSnapshot);
@@ -360,15 +362,15 @@ namespace TencentCloud
                     bool EnableSnapshotHasBeenSet() const;
 
                     /**
-                     * 获取Timeout threshold for thread profiling.
-                     * @return SnapshotTimeout Timeout threshold for thread profiling.
+                     * 获取<p>Timeout threshold for thread profiling</p>
+                     * @return SnapshotTimeout <p>Timeout threshold for thread profiling</p>
                      * 
                      */
                     int64_t GetSnapshotTimeout() const;
 
                     /**
-                     * 设置Timeout threshold for thread profiling.
-                     * @param _snapshotTimeout Timeout threshold for thread profiling.
+                     * 设置<p>Timeout threshold for thread profiling</p>
+                     * @param _snapshotTimeout <p>Timeout threshold for thread profiling</p>
                      * 
                      */
                     void SetSnapshotTimeout(const int64_t& _snapshotTimeout);
@@ -381,15 +383,15 @@ namespace TencentCloud
                     bool SnapshotTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Whether agent is enabled.
-                     * @return AgentEnable Whether agent is enabled.
+                     * 获取<p>Whether to enable agent</p>
+                     * @return AgentEnable <p>Whether to enable agent</p>
                      * 
                      */
                     bool GetAgentEnable() const;
 
                     /**
-                     * 设置Whether agent is enabled.
-                     * @param _agentEnable Whether agent is enabled.
+                     * 设置<p>Whether to enable agent</p>
+                     * @param _agentEnable <p>Whether to enable agent</p>
                      * 
                      */
                     void SetAgentEnable(const bool& _agentEnable);
@@ -402,15 +404,15 @@ namespace TencentCloud
                     bool AgentEnableHasBeenSet() const;
 
                     /**
-                     * 获取Whether link compression is enabled.
-                     * @return TraceSquash Whether link compression is enabled.
+                     * 获取<p>Whether to enable link compression</p>
+                     * @return TraceSquash <p>Whether to enable link compression</p>
                      * 
                      */
                     bool GetTraceSquash() const;
 
                     /**
-                     * 设置Whether link compression is enabled.
-                     * @param _traceSquash Whether link compression is enabled.
+                     * 设置<p>Whether to enable link compression</p>
+                     * @param _traceSquash <p>Whether to enable link compression</p>
                      * 
                      */
                     void SetTraceSquash(const bool& _traceSquash);
@@ -423,15 +425,15 @@ namespace TencentCloud
                     bool TraceSquashHasBeenSet() const;
 
                     /**
-                     * 获取Switch for enabling application diagnosis.
-                     * @return EventEnable Switch for enabling application diagnosis.
+                     * 获取<p>Whether the switch for enabling application diagnosis is enabled</p>
+                     * @return EventEnable <p>Whether the switch for enabling application diagnosis is enabled</p>
                      * 
                      */
                     bool GetEventEnable() const;
 
                     /**
-                     * 设置Switch for enabling application diagnosis.
-                     * @param _eventEnable Switch for enabling application diagnosis.
+                     * 设置<p>Whether the switch for enabling application diagnosis is enabled</p>
+                     * @param _eventEnable <p>Whether the switch for enabling application diagnosis is enabled</p>
                      * 
                      */
                     void SetEventEnable(const bool& _eventEnable);
@@ -444,15 +446,15 @@ namespace TencentCloud
                     bool EventEnableHasBeenSet() const;
 
                     /**
-                     * 获取Component List
-                     * @return InstrumentList Component List
+                     * 获取<p>Component list</p>
+                     * @return InstrumentList <p>Component list</p>
                      * 
                      */
                     std::vector<Instrument> GetInstrumentList() const;
 
                     /**
-                     * 设置Component List
-                     * @param _instrumentList Component List
+                     * 设置<p>Component list</p>
+                     * @param _instrumentList <p>Component list</p>
                      * 
                      */
                     void SetInstrumentList(const std::vector<Instrument>& _instrumentList);
@@ -465,15 +467,15 @@ namespace TencentCloud
                     bool InstrumentListHasBeenSet() const;
 
                     /**
-                     * 获取Related configurations of the probe APIs.
-                     * @return AgentOperationConfigView Related configurations of the probe APIs.
+                     * 获取<p>probe API related configuration</p>
+                     * @return AgentOperationConfigView <p>probe API related configuration</p>
                      * 
                      */
                     AgentOperationConfigView GetAgentOperationConfigView() const;
 
                     /**
-                     * 设置Related configurations of the probe APIs.
-                     * @param _agentOperationConfigView Related configurations of the probe APIs.
+                     * 设置<p>probe API related configuration</p>
+                     * @param _agentOperationConfigView <p>probe API related configuration</p>
                      * 
                      */
                     void SetAgentOperationConfigView(const AgentOperationConfigView& _agentOperationConfigView);
@@ -486,15 +488,15 @@ namespace TencentCloud
                     bool AgentOperationConfigViewHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable application log configuration.
-                     * @return EnableLogConfig Whether to enable application log configuration.
+                     * 获取<p>Whether the application log configuration is enabled</p>
+                     * @return EnableLogConfig <p>Whether the application log configuration is enabled</p>
                      * 
                      */
                     bool GetEnableLogConfig() const;
 
                     /**
-                     * 设置Whether to enable application log configuration.
-                     * @param _enableLogConfig Whether to enable application log configuration.
+                     * 设置<p>Whether the application log configuration is enabled</p>
+                     * @param _enableLogConfig <p>Whether the application log configuration is enabled</p>
                      * 
                      */
                     void SetEnableLogConfig(const bool& _enableLogConfig);
@@ -507,15 +509,15 @@ namespace TencentCloud
                     bool EnableLogConfigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
-                     * @return EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+                     * 获取<p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
+                     * @return EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
                      * 
                      */
                     bool GetEnableDashboardConfig() const;
 
                     /**
-                     * 设置Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
-                     * @param _enableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+                     * 设置<p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
+                     * @param _enableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
                      * 
                      */
                     void SetEnableDashboardConfig(const bool& _enableDashboardConfig);
@@ -528,15 +530,15 @@ namespace TencentCloud
                     bool EnableDashboardConfigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to associate with Dashboard. 0: disabled; 1: enabled.
-                     * @return IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+                     * 获取<p>Whether to associate with dashboard: 0 off 1 on</p>
+                     * @return IsRelatedDashboard <p>Whether to associate with dashboard: 0 off 1 on</p>
                      * 
                      */
                     int64_t GetIsRelatedDashboard() const;
 
                     /**
-                     * 设置Whether to associate with Dashboard. 0: disabled; 1: enabled.
-                     * @param _isRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+                     * 设置<p>Whether to associate with dashboard: 0 off 1 on</p>
+                     * @param _isRelatedDashboard <p>Whether to associate with dashboard: 0 off 1 on</p>
                      * 
                      */
                     void SetIsRelatedDashboard(const int64_t& _isRelatedDashboard);
@@ -549,15 +551,15 @@ namespace TencentCloud
                     bool IsRelatedDashboardHasBeenSet() const;
 
                     /**
-                     * 获取dashboard ID
-                     * @return DashboardTopicID dashboard ID
+                     * 获取<p>dashboard ID</p>
+                     * @return DashboardTopicID <p>dashboard ID</p>
                      * 
                      */
                     std::string GetDashboardTopicID() const;
 
                     /**
-                     * 设置dashboard ID
-                     * @param _dashboardTopicID dashboard ID
+                     * 设置<p>dashboard ID</p>
+                     * @param _dashboardTopicID <p>dashboard ID</p>
                      * 
                      */
                     void SetDashboardTopicID(const std::string& _dashboardTopicID);
@@ -570,15 +572,15 @@ namespace TencentCloud
                     bool DashboardTopicIDHasBeenSet() const;
 
                     /**
-                     * 获取CLS index type. (0 = full-text index; 1 = key-value index).
-                     * @return LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+                     * 获取<p>CLS index type (0=full-text index, 1=key-value index)</p>
+                     * @return LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
                      * 
                      */
                     int64_t GetLogIndexType() const;
 
                     /**
-                     * 设置CLS index type. (0 = full-text index; 1 = key-value index).
-                     * @param _logIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+                     * 设置<p>CLS index type (0=full-text index, 1=key-value index)</p>
+                     * @param _logIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
                      * 
                      */
                     void SetLogIndexType(const int64_t& _logIndexType);
@@ -591,15 +593,15 @@ namespace TencentCloud
                     bool LogIndexTypeHasBeenSet() const;
 
                     /**
-                     * 获取Index key of traceId. It is valid when the CLS index type is key-value index.
-                     * @return LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * 获取<p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * @return LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
                      * 
                      */
                     std::string GetLogTraceIdKey() const;
 
                     /**
-                     * 设置Index key of traceId. It is valid when the CLS index type is key-value index.
-                     * @param _logTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * 设置<p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * @param _logTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
                      * 
                      */
                     void SetLogTraceIdKey(const std::string& _logTraceIdKey);
@@ -612,15 +614,15 @@ namespace TencentCloud
                     bool LogTraceIdKeyHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the application security configuration.
-                     * @return EnableSecurityConfig Whether to enable the application security configuration.
+                     * 获取<p>Whether application security configuration is enabled</p>
+                     * @return EnableSecurityConfig <p>Whether application security configuration is enabled</p>
                      * 
                      */
                     bool GetEnableSecurityConfig() const;
 
                     /**
-                     * 设置Whether to enable the application security configuration.
-                     * @param _enableSecurityConfig Whether to enable the application security configuration.
+                     * 设置<p>Whether application security configuration is enabled</p>
+                     * @param _enableSecurityConfig <p>Whether application security configuration is enabled</p>
                      * 
                      */
                     void SetEnableSecurityConfig(const bool& _enableSecurityConfig);
@@ -633,15 +635,15 @@ namespace TencentCloud
                     bool EnableSecurityConfigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SQL injection analysis.
-                     * @return IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+                     * 获取<p>Whether SQL injection analysis is enabled</p>
+                     * @return IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
                      * 
                      */
                     int64_t GetIsSqlInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable SQL injection analysis.
-                     * @param _isSqlInjectionAnalysis Whether to enable SQL injection analysis.
+                     * 设置<p>Whether SQL injection analysis is enabled</p>
+                     * @param _isSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
                      * 
                      */
                     void SetIsSqlInjectionAnalysis(const int64_t& _isSqlInjectionAnalysis);
@@ -654,15 +656,15 @@ namespace TencentCloud
                     bool IsSqlInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable detection of component vulnerability.
-                     * @return IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+                     * 获取<p>Whether component vulnerability detection is enabled</p>
+                     * @return IsInstrumentationVulnerabilityScan <p>Whether component vulnerability detection is enabled</p>
                      * 
                      */
                     int64_t GetIsInstrumentationVulnerabilityScan() const;
 
                     /**
-                     * 设置Whether to enable detection of component vulnerability.
-                     * @param _isInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+                     * 设置<p>Whether component vulnerability detection is enabled</p>
+                     * @param _isInstrumentationVulnerabilityScan <p>Whether component vulnerability detection is enabled</p>
                      * 
                      */
                     void SetIsInstrumentationVulnerabilityScan(const int64_t& _isInstrumentationVulnerabilityScan);
@@ -675,15 +677,15 @@ namespace TencentCloud
                     bool IsInstrumentationVulnerabilityScanHasBeenSet() const;
 
                     /**
-                     * 获取Whether remote command detection is enabled.
-                     * @return IsRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+                     * 获取<p>Whether remote command detection is enabled</p>
+                     * @return IsRemoteCommandExecutionAnalysis <p>Whether remote command detection is enabled</p>
                      * 
                      */
                     int64_t GetIsRemoteCommandExecutionAnalysis() const;
 
                     /**
-                     * 设置Whether remote command detection is enabled.
-                     * @param _isRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+                     * 设置<p>Whether remote command detection is enabled</p>
+                     * @param _isRemoteCommandExecutionAnalysis <p>Whether remote command detection is enabled</p>
                      * 
                      */
                     void SetIsRemoteCommandExecutionAnalysis(const int64_t& _isRemoteCommandExecutionAnalysis);
@@ -696,15 +698,15 @@ namespace TencentCloud
                     bool IsRemoteCommandExecutionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable detection of Java webshell.
-                     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+                     * 获取<p>Whether Java Webshell detection is enabled</p>
+                     * @return IsMemoryHijackingAnalysis <p>Whether Java Webshell detection is enabled</p>
                      * 
                      */
                     int64_t GetIsMemoryHijackingAnalysis() const;
 
                     /**
-                     * 设置Whether to enable detection of Java webshell.
-                     * @param _isMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+                     * 设置<p>Whether Java Webshell detection is enabled</p>
+                     * @param _isMemoryHijackingAnalysis <p>Whether Java Webshell detection is enabled</p>
                      * 
                      */
                     void SetIsMemoryHijackingAnalysis(const int64_t& _isMemoryHijackingAnalysis);
@@ -717,15 +719,15 @@ namespace TencentCloud
                     bool IsMemoryHijackingAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
-                     * @return IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * 获取<p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
+                     * @return IsDeleteAnyFileAnalysis <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
                      * 
                      */
                     int64_t GetIsDeleteAnyFileAnalysis() const;
 
                     /**
-                     * 设置Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
-                     * @param _isDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * 设置<p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
+                     * @param _isDeleteAnyFileAnalysis <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
                      * 
                      */
                     void SetIsDeleteAnyFileAnalysis(const int64_t& _isDeleteAnyFileAnalysis);
@@ -738,15 +740,15 @@ namespace TencentCloud
                     bool IsDeleteAnyFileAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
-                     * @return IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 获取<p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
+                     * @return IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     int64_t GetIsReadAnyFileAnalysis() const;
 
                     /**
-                     * 设置Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
-                     * @param _isReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 设置<p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
+                     * @param _isReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     void SetIsReadAnyFileAnalysis(const int64_t& _isReadAnyFileAnalysis);
@@ -759,15 +761,15 @@ namespace TencentCloud
                     bool IsReadAnyFileAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
-                     * @return IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 获取<p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
+                     * @return IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
                      * 
                      */
                     int64_t GetIsUploadAnyFileAnalysis() const;
 
                     /**
-                     * 设置Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
-                     * @param _isUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 设置<p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
+                     * @param _isUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
                      * 
                      */
                     void SetIsUploadAnyFileAnalysis(const int64_t& _isUploadAnyFileAnalysis);
@@ -780,15 +782,15 @@ namespace TencentCloud
                     bool IsUploadAnyFileAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
-                     * @return IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * 获取<p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
+                     * @return IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     int64_t GetIsIncludeAnyFileAnalysis() const;
 
                     /**
-                     * 设置Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
-                     * @param _isIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * 设置<p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
+                     * @param _isIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     void SetIsIncludeAnyFileAnalysis(const int64_t& _isIncludeAnyFileAnalysis);
@@ -801,15 +803,15 @@ namespace TencentCloud
                     bool IsIncludeAnyFileAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
-                     * @return IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * 获取<p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
+                     * @return IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     int64_t GetIsDirectoryTraversalAnalysis() const;
 
                     /**
-                     * 设置Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
-                     * @param _isDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * 设置<p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
+                     * @param _isDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     void SetIsDirectoryTraversalAnalysis(const int64_t& _isDirectoryTraversalAnalysis);
@@ -822,15 +824,15 @@ namespace TencentCloud
                     bool IsDirectoryTraversalAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
-                     * @return IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * 获取<p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
+                     * @return IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
                      * 
                      */
                     int64_t GetIsTemplateEngineInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
-                     * @param _isTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * 设置<p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
+                     * @param _isTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
                      * 
                      */
                     void SetIsTemplateEngineInjectionAnalysis(const int64_t& _isTemplateEngineInjectionAnalysis);
@@ -843,15 +845,15 @@ namespace TencentCloud
                     bool IsTemplateEngineInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
-                     * @return IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * 获取<p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
+                     * @return IsScriptEngineInjectionAnalysis <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
                      * 
                      */
                     int64_t GetIsScriptEngineInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
-                     * @param _isScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * 设置<p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
+                     * @param _isScriptEngineInjectionAnalysis <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
                      * 
                      */
                     void SetIsScriptEngineInjectionAnalysis(const int64_t& _isScriptEngineInjectionAnalysis);
@@ -864,15 +866,15 @@ namespace TencentCloud
                     bool IsScriptEngineInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
-                     * @return IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * 获取<p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
+                     * @return IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     int64_t GetIsExpressionInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
-                     * @param _isExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * 设置<p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
+                     * @param _isExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     void SetIsExpressionInjectionAnalysis(const int64_t& _isExpressionInjectionAnalysis);
@@ -885,15 +887,15 @@ namespace TencentCloud
                     bool IsExpressionInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
-                     * @return IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * 获取<p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
+                     * @return IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     int64_t GetIsJNDIInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
-                     * @param _isJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * 设置<p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
+                     * @param _isJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     void SetIsJNDIInjectionAnalysis(const int64_t& _isJNDIInjectionAnalysis);
@@ -906,15 +908,15 @@ namespace TencentCloud
                     bool IsJNDIInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
-                     * @return IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * 获取<p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
+                     * @return IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     int64_t GetIsJNIInjectionAnalysis() const;
 
                     /**
-                     * 设置Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
-                     * @param _isJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * 设置<p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
+                     * @param _isJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     void SetIsJNIInjectionAnalysis(const int64_t& _isJNIInjectionAnalysis);
@@ -927,15 +929,15 @@ namespace TencentCloud
                     bool IsJNIInjectionAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
-                     * @return IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * 获取<p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
+                     * @return IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     int64_t GetIsWebshellBackdoorAnalysis() const;
 
                     /**
-                     * 设置Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
-                     * @param _isWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * 设置<p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
+                     * @param _isWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
                      * 
                      */
                     void SetIsWebshellBackdoorAnalysis(const int64_t& _isWebshellBackdoorAnalysis);
@@ -948,15 +950,15 @@ namespace TencentCloud
                     bool IsWebshellBackdoorAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
-                     * @return IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * 获取<p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
+                     * @return IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     int64_t GetIsDeserializationAnalysis() const;
 
                     /**
-                     * 设置Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
-                     * @param _isDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * 设置<p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
+                     * @param _isDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
                      * 
                      */
                     void SetIsDeserializationAnalysis(const int64_t& _isDeserializationAnalysis);
@@ -969,15 +971,15 @@ namespace TencentCloud
                     bool IsDeserializationAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Automatic convergence switch for APIs. 0: disabled | 1: enabled.
-                     * @return UrlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+                     * 获取<p>API auto convergence switch, 0-off | 1-on</p>
+                     * @return UrlAutoConvergenceEnable <p>API auto convergence switch, 0-off | 1-on</p>
                      * 
                      */
                     bool GetUrlAutoConvergenceEnable() const;
 
                     /**
-                     * 设置Automatic convergence switch for APIs. 0: disabled | 1: enabled.
-                     * @param _urlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+                     * 设置<p>API auto convergence switch, 0-off | 1-on</p>
+                     * @param _urlAutoConvergenceEnable <p>API auto convergence switch, 0-off | 1-on</p>
                      * 
                      */
                     void SetUrlAutoConvergenceEnable(const bool& _urlAutoConvergenceEnable);
@@ -990,15 +992,15 @@ namespace TencentCloud
                     bool UrlAutoConvergenceEnableHasBeenSet() const;
 
                     /**
-                     * 获取Convergence threshold for URL long segments.
-                     * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
+                     * 获取<p>URL long segment convergence threshold</p>
+                     * @return UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
                      * 
                      */
                     int64_t GetUrlLongSegmentThreshold() const;
 
                     /**
-                     * 设置Convergence threshold for URL long segments.
-                     * @param _urlLongSegmentThreshold Convergence threshold for URL long segments.
+                     * 设置<p>URL long segment convergence threshold</p>
+                     * @param _urlLongSegmentThreshold <p>URL long segment convergence threshold</p>
                      * 
                      */
                     void SetUrlLongSegmentThreshold(const int64_t& _urlLongSegmentThreshold);
@@ -1011,15 +1013,15 @@ namespace TencentCloud
                     bool UrlLongSegmentThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Convergence threshold for URL numerical segments.
-                     * @return UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+                     * 获取<p>URL digit segment convergence threshold</p>
+                     * @return UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
                      * 
                      */
                     int64_t GetUrlNumberSegmentThreshold() const;
 
                     /**
-                     * 设置Convergence threshold for URL numerical segments.
-                     * @param _urlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+                     * 设置<p>URL digit segment convergence threshold</p>
+                     * @param _urlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
                      * 
                      */
                     void SetUrlNumberSegmentThreshold(const int64_t& _urlNumberSegmentThreshold);
@@ -1032,15 +1034,15 @@ namespace TencentCloud
                     bool UrlNumberSegmentThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the memory threshold for probe fusing.
-                     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+                     * 获取<p>Fuse memory threshold of the probe</p>
+                     * @return DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
                      * 
                      */
                     int64_t GetDisableMemoryUsed() const;
 
                     /**
-                     * 设置Specifies the memory threshold for probe fusing.
-                     * @param _disableMemoryUsed Specifies the memory threshold for probe fusing.
+                     * 设置<p>Fuse memory threshold of the probe</p>
+                     * @param _disableMemoryUsed <p>Fuse memory threshold of the probe</p>
                      * 
                      */
                     void SetDisableMemoryUsed(const int64_t& _disableMemoryUsed);
@@ -1053,15 +1055,15 @@ namespace TencentCloud
                     bool DisableMemoryUsedHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the CPU threshold for probe fusing.
-                     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+                     * 获取<p>Probe fuse CPU threshold</p>
+                     * @return DisableCpuUsed <p>Probe fuse CPU threshold</p>
                      * 
                      */
                     int64_t GetDisableCpuUsed() const;
 
                     /**
-                     * 设置Specifies the CPU threshold for probe fusing.
-                     * @param _disableCpuUsed Specifies the CPU threshold for probe fusing.
+                     * 设置<p>Probe fuse CPU threshold</p>
+                     * @param _disableCpuUsed <p>Probe fuse CPU threshold</p>
                      * 
                      */
                     void SetDisableCpuUsed(const int64_t& _disableCpuUsed);
@@ -1073,301 +1075,571 @@ namespace TencentCloud
                      */
                     bool DisableCpuUsedHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether SQL parameter access is enabled</p>
+                     * @return DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+                     * 
+                     */
+                    bool GetDbStatementParametersEnabled() const;
+
+                    /**
+                     * 设置<p>Whether SQL parameter access is enabled</p>
+                     * @param _dbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+                     * 
+                     */
+                    void SetDbStatementParametersEnabled(const bool& _dbStatementParametersEnabled);
+
+                    /**
+                     * 判断参数 DbStatementParametersEnabled 是否已赋值
+                     * @return DbStatementParametersEnabled 是否已赋值
+                     * 
+                     */
+                    bool DbStatementParametersEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Slow SQL threshold</p>
+                     * @return SlowSQLThresholds <p>Slow SQL threshold</p>
+                     * 
+                     */
+                    std::vector<ApmTag> GetSlowSQLThresholds() const;
+
+                    /**
+                     * 设置<p>Slow SQL threshold</p>
+                     * @param _slowSQLThresholds <p>Slow SQL threshold</p>
+                     * 
+                     */
+                    void SetSlowSQLThresholds(const std::vector<ApmTag>& _slowSQLThresholds);
+
+                    /**
+                     * 判断参数 SlowSQLThresholds 是否已赋值
+                     * @return SlowSQLThresholds 是否已赋值
+                     * 
+                     */
+                    bool SlowSQLThresholdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether the masking rule is enabled</p>
+                     * @return EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+                     * 
+                     */
+                    int64_t GetEnableDesensitizationRule() const;
+
+                    /**
+                     * 设置<p>Whether the masking rule is enabled</p>
+                     * @param _enableDesensitizationRule <p>Whether the masking rule is enabled</p>
+                     * 
+                     */
+                    void SetEnableDesensitizationRule(const int64_t& _enableDesensitizationRule);
+
+                    /**
+                     * 判断参数 EnableDesensitizationRule 是否已赋值
+                     * @return EnableDesensitizationRule 是否已赋值
+                     * 
+                     */
+                    bool EnableDesensitizationRuleHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Masking rule</p>
+                     * @return DesensitizationRule <p>Masking rule</p>
+                     * 
+                     */
+                    std::string GetDesensitizationRule() const;
+
+                    /**
+                     * 设置<p>Masking rule</p>
+                     * @param _desensitizationRule <p>Masking rule</p>
+                     * 
+                     */
+                    void SetDesensitizationRule(const std::string& _desensitizationRule);
+
+                    /**
+                     * 判断参数 DesensitizationRule 是否已赋值
+                     * @return DesensitizationRule 是否已赋值
+                     * 
+                     */
+                    bool DesensitizationRuleHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * @return LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * 
+                     */
+                    std::string GetLogSpanIdKey() const;
+
+                    /**
+                     * 设置<p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * @param _logSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     * 
+                     */
+                    void SetLogSpanIdKey(const std::string& _logSpanIdKey);
+
+                    /**
+                     * 判断参数 LogSpanIdKey 是否已赋值
+                     * @return LogSpanIdKey 是否已赋值
+                     * 
+                     */
+                    bool LogSpanIdKeyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Automated performance analysis task configuration</p>
+                     * @return AutoProfilingConfig <p>Automated performance analysis task configuration</p>
+                     * 
+                     */
+                    AutoProfilingConfig GetAutoProfilingConfig() const;
+
+                    /**
+                     * 设置<p>Automated performance analysis task configuration</p>
+                     * @param _autoProfilingConfig <p>Automated performance analysis task configuration</p>
+                     * 
+                     */
+                    void SetAutoProfilingConfig(const AutoProfilingConfig& _autoProfilingConfig);
+
+                    /**
+                     * 判断参数 AutoProfilingConfig 是否已赋值
+                     * @return AutoProfilingConfig 是否已赋值
+                     * 
+                     */
+                    bool AutoProfilingConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+                     * @return EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+                     * 
+                     */
+                    bool GetEnableThresholdConfig() const;
+
+                    /**
+                     * 设置<p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+                     * @param _enableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+                     * 
+                     */
+                    void SetEnableThresholdConfig(const bool& _enableThresholdConfig);
+
+                    /**
+                     * 判断参数 EnableThresholdConfig 是否已赋值
+                     * @return EnableThresholdConfig 是否已赋值
+                     * 
+                     */
+                    bool EnableThresholdConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Error rate threshold (%) used to judge the application health status as "red".</p>
+                     * @return ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+                     * 
+                     */
+                    int64_t GetErrRateThreshold() const;
+
+                    /**
+                     * 设置<p>Error rate threshold (%) used to judge the application health status as "red".</p>
+                     * @param _errRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+                     * 
+                     */
+                    void SetErrRateThreshold(const int64_t& _errRateThreshold);
+
+                    /**
+                     * 判断参数 ErrRateThreshold 是否已赋值
+                     * @return ErrRateThreshold 是否已赋值
+                     * 
+                     */
+                    bool ErrRateThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+                     * @return ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+                     * 
+                     */
+                    int64_t GetResponseDurationWarningThreshold() const;
+
+                    /**
+                     * 设置<p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+                     * @param _responseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+                     * 
+                     */
+                    void SetResponseDurationWarningThreshold(const int64_t& _responseDurationWarningThreshold);
+
+                    /**
+                     * 判断参数 ResponseDurationWarningThreshold 是否已赋值
+                     * @return ResponseDurationWarningThreshold 是否已赋值
+                     * 
+                     */
+                    bool ResponseDurationWarningThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to use the default fuse threshold of the probe</p>
+                     * @return UseDefaultFuseConfig <p>Whether to use the default fuse threshold of the probe</p>
+                     * 
+                     */
+                    bool GetUseDefaultFuseConfig() const;
+
+                    /**
+                     * 设置<p>Whether to use the default fuse threshold of the probe</p>
+                     * @param _useDefaultFuseConfig <p>Whether to use the default fuse threshold of the probe</p>
+                     * 
+                     */
+                    void SetUseDefaultFuseConfig(const bool& _useDefaultFuseConfig);
+
+                    /**
+                     * 判断参数 UseDefaultFuseConfig 是否已赋值
+                     * @return UseDefaultFuseConfig 是否已赋值
+                     * 
+                     */
+                    bool UseDefaultFuseConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Business system ID.
+                     * <p>Business system ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Application name
+                     * <p>Application name</p>
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * URL convergence switch. 0: Off; 1: On
+                     * <p>URL convergence switch, 0 Off | 1 On</p>
                      */
                     int64_t m_urlConvergenceSwitch;
                     bool m_urlConvergenceSwitchHasBeenSet;
 
                     /**
-                     * URL convergence threshold
+                     * <p>URL convergence threshold</p>
                      */
                     int64_t m_urlConvergenceThreshold;
                     bool m_urlConvergenceThresholdHasBeenSet;
 
                     /**
-                     * Regex rules for exception filtering, separated by commas
+                     * <p>Exception filtering regex rules, comma-separated</p>
                      */
                     std::string m_exceptionFilter;
                     bool m_exceptionFilterHasBeenSet;
 
                     /**
-                     * Regex rules for URL convergence, separated by commas
+                     * <p>URL convergence regex rules, comma-separated</p>
                      */
                     std::string m_urlConvergence;
                     bool m_urlConvergenceHasBeenSet;
 
                     /**
-                     * Error code filtering, separated by commas
+                     * <p>Error code filtering, comma-separated</p>
                      */
                     std::string m_errorCodeFilter;
                     bool m_errorCodeFilterHasBeenSet;
 
                     /**
-                     * Regex rules for URL exclusion, separated by commas
+                     * <p>URL exclusion regex rule, comma-separated</p>
                      */
                     std::string m_urlExclude;
                     bool m_urlExcludeHasBeenSet;
 
                     /**
-                     * Log switch. 0: Off; 1: On
+                     * <p>Log switch 0 Disabled 1 Enabled</p>
                      */
                     int64_t m_isRelatedLog;
                     bool m_isRelatedLogHasBeenSet;
 
                     /**
-                     * Log region.
+                     * <p>Log region</p>
                      */
                     std::string m_logRegion;
                     bool m_logRegionHasBeenSet;
 
                     /**
-                     * Log topic ID
+                     * <p>Log topic ID</p>
                      */
                     std::string m_logTopicID;
                     bool m_logTopicIDHasBeenSet;
 
                     /**
-                     * CLS log set/ES cluster ID
+                     * <p>CLS logset | ES cluster ID</p>
                      */
                     std::string m_logSet;
                     bool m_logSetHasBeenSet;
 
                     /**
-                     * Log source: CLS or ES
+                     * <p>Log source CLS | ES</p>
                      */
                     std::string m_logSource;
                     bool m_logSourceHasBeenSet;
 
                     /**
-                     * APIs to be filtered
+                     * <p>Interfaces to Filter</p>
                      */
                     std::string m_ignoreOperationName;
                     bool m_ignoreOperationNameHasBeenSet;
 
                     /**
-                     * Whether thread profiling is enabled.
+                     * <p>Whether thread profiling is enabled</p>
                      */
                     bool m_enableSnapshot;
                     bool m_enableSnapshotHasBeenSet;
 
                     /**
-                     * Timeout threshold for thread profiling.
+                     * <p>Timeout threshold for thread profiling</p>
                      */
                     int64_t m_snapshotTimeout;
                     bool m_snapshotTimeoutHasBeenSet;
 
                     /**
-                     * Whether agent is enabled.
+                     * <p>Whether to enable agent</p>
                      */
                     bool m_agentEnable;
                     bool m_agentEnableHasBeenSet;
 
                     /**
-                     * Whether link compression is enabled.
+                     * <p>Whether to enable link compression</p>
                      */
                     bool m_traceSquash;
                     bool m_traceSquashHasBeenSet;
 
                     /**
-                     * Switch for enabling application diagnosis.
+                     * <p>Whether the switch for enabling application diagnosis is enabled</p>
                      */
                     bool m_eventEnable;
                     bool m_eventEnableHasBeenSet;
 
                     /**
-                     * Component List
+                     * <p>Component list</p>
                      */
                     std::vector<Instrument> m_instrumentList;
                     bool m_instrumentListHasBeenSet;
 
                     /**
-                     * Related configurations of the probe APIs.
+                     * <p>probe API related configuration</p>
                      */
                     AgentOperationConfigView m_agentOperationConfigView;
                     bool m_agentOperationConfigViewHasBeenSet;
 
                     /**
-                     * Whether to enable application log configuration.
+                     * <p>Whether the application log configuration is enabled</p>
                      */
                     bool m_enableLogConfig;
                     bool m_enableLogConfigHasBeenSet;
 
                     /**
-                     * Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+                     * <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
                      */
                     bool m_enableDashboardConfig;
                     bool m_enableDashboardConfigHasBeenSet;
 
                     /**
-                     * Whether to associate with Dashboard. 0: disabled; 1: enabled.
+                     * <p>Whether to associate with dashboard: 0 off 1 on</p>
                      */
                     int64_t m_isRelatedDashboard;
                     bool m_isRelatedDashboardHasBeenSet;
 
                     /**
-                     * dashboard ID
+                     * <p>dashboard ID</p>
                      */
                     std::string m_dashboardTopicID;
                     bool m_dashboardTopicIDHasBeenSet;
 
                     /**
-                     * CLS index type. (0 = full-text index; 1 = key-value index).
+                     * <p>CLS index type (0=full-text index, 1=key-value index)</p>
                      */
                     int64_t m_logIndexType;
                     bool m_logIndexTypeHasBeenSet;
 
                     /**
-                     * Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
                      */
                     std::string m_logTraceIdKey;
                     bool m_logTraceIdKeyHasBeenSet;
 
                     /**
-                     * Whether to enable the application security configuration.
+                     * <p>Whether application security configuration is enabled</p>
                      */
                     bool m_enableSecurityConfig;
                     bool m_enableSecurityConfigHasBeenSet;
 
                     /**
-                     * Whether to enable SQL injection analysis.
+                     * <p>Whether SQL injection analysis is enabled</p>
                      */
                     int64_t m_isSqlInjectionAnalysis;
                     bool m_isSqlInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable detection of component vulnerability.
+                     * <p>Whether component vulnerability detection is enabled</p>
                      */
                     int64_t m_isInstrumentationVulnerabilityScan;
                     bool m_isInstrumentationVulnerabilityScanHasBeenSet;
 
                     /**
-                     * Whether remote command detection is enabled.
+                     * <p>Whether remote command detection is enabled</p>
                      */
                     int64_t m_isRemoteCommandExecutionAnalysis;
                     bool m_isRemoteCommandExecutionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable detection of Java webshell.
+                     * <p>Whether Java Webshell detection is enabled</p>
                      */
                     int64_t m_isMemoryHijackingAnalysis;
                     bool m_isMemoryHijackingAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
                      */
                     int64_t m_isDeleteAnyFileAnalysis;
                     bool m_isDeleteAnyFileAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
                      */
                     int64_t m_isReadAnyFileAnalysis;
                     bool m_isReadAnyFileAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
                      */
                     int64_t m_isUploadAnyFileAnalysis;
                     bool m_isUploadAnyFileAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
                      */
                     int64_t m_isIncludeAnyFileAnalysis;
                     bool m_isIncludeAnyFileAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
                      */
                     int64_t m_isDirectoryTraversalAnalysis;
                     bool m_isDirectoryTraversalAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
                      */
                     int64_t m_isTemplateEngineInjectionAnalysis;
                     bool m_isTemplateEngineInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
                      */
                     int64_t m_isScriptEngineInjectionAnalysis;
                     bool m_isScriptEngineInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
                      */
                     int64_t m_isExpressionInjectionAnalysis;
                     bool m_isExpressionInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
                      */
                     int64_t m_isJNDIInjectionAnalysis;
                     bool m_isJNDIInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
                      */
                     int64_t m_isJNIInjectionAnalysis;
                     bool m_isJNIInjectionAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
                      */
                     int64_t m_isWebshellBackdoorAnalysis;
                     bool m_isWebshellBackdoorAnalysisHasBeenSet;
 
                     /**
-                     * Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
                      */
                     int64_t m_isDeserializationAnalysis;
                     bool m_isDeserializationAnalysisHasBeenSet;
 
                     /**
-                     * Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+                     * <p>API auto convergence switch, 0-off | 1-on</p>
                      */
                     bool m_urlAutoConvergenceEnable;
                     bool m_urlAutoConvergenceEnableHasBeenSet;
 
                     /**
-                     * Convergence threshold for URL long segments.
+                     * <p>URL long segment convergence threshold</p>
                      */
                     int64_t m_urlLongSegmentThreshold;
                     bool m_urlLongSegmentThresholdHasBeenSet;
 
                     /**
-                     * Convergence threshold for URL numerical segments.
+                     * <p>URL digit segment convergence threshold</p>
                      */
                     int64_t m_urlNumberSegmentThreshold;
                     bool m_urlNumberSegmentThresholdHasBeenSet;
 
                     /**
-                     * Specifies the memory threshold for probe fusing.
+                     * <p>Fuse memory threshold of the probe</p>
                      */
                     int64_t m_disableMemoryUsed;
                     bool m_disableMemoryUsedHasBeenSet;
 
                     /**
-                     * Specifies the CPU threshold for probe fusing.
+                     * <p>Probe fuse CPU threshold</p>
                      */
                     int64_t m_disableCpuUsed;
                     bool m_disableCpuUsedHasBeenSet;
+
+                    /**
+                     * <p>Whether SQL parameter access is enabled</p>
+                     */
+                    bool m_dbStatementParametersEnabled;
+                    bool m_dbStatementParametersEnabledHasBeenSet;
+
+                    /**
+                     * <p>Slow SQL threshold</p>
+                     */
+                    std::vector<ApmTag> m_slowSQLThresholds;
+                    bool m_slowSQLThresholdsHasBeenSet;
+
+                    /**
+                     * <p>Whether the masking rule is enabled</p>
+                     */
+                    int64_t m_enableDesensitizationRule;
+                    bool m_enableDesensitizationRuleHasBeenSet;
+
+                    /**
+                     * <p>Masking rule</p>
+                     */
+                    std::string m_desensitizationRule;
+                    bool m_desensitizationRuleHasBeenSet;
+
+                    /**
+                     * <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+                     */
+                    std::string m_logSpanIdKey;
+                    bool m_logSpanIdKeyHasBeenSet;
+
+                    /**
+                     * <p>Automated performance analysis task configuration</p>
+                     */
+                    AutoProfilingConfig m_autoProfilingConfig;
+                    bool m_autoProfilingConfigHasBeenSet;
+
+                    /**
+                     * <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+                     */
+                    bool m_enableThresholdConfig;
+                    bool m_enableThresholdConfigHasBeenSet;
+
+                    /**
+                     * <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+                     */
+                    int64_t m_errRateThreshold;
+                    bool m_errRateThresholdHasBeenSet;
+
+                    /**
+                     * <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+                     */
+                    int64_t m_responseDurationWarningThreshold;
+                    bool m_responseDurationWarningThresholdHasBeenSet;
+
+                    /**
+                     * <p>Whether to use the default fuse threshold of the probe</p>
+                     */
+                    bool m_useDefaultFuseConfig;
+                    bool m_useDefaultFuseConfigHasBeenSet;
 
                 };
             }

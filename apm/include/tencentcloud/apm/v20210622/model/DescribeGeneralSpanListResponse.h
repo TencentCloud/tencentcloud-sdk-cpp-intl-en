@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number.
-                     * @return TotalCount Total number.
+                     * 获取<p>Total number</p>
+                     * @return TotalCount <p>Total number</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Span pagination list.
-                     * @return Spans Span pagination list.
+                     * 获取<p>Span pagination list</p>
+                     * @return Spans <p>Span pagination list</p>
                      * 
                      */
                     std::vector<Span> GetSpans() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number.
+                     * <p>Total number</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Span pagination list.
+                     * <p>Span pagination list</p>
                      */
                     std::vector<Span> m_spans;
                     bool m_spansHasBeenSet;

@@ -19,19 +19,23 @@ set(aiart_public_header
   )
 
 set(aiart_public_header_model
-  include/tencentcloud/aiart/v20221229/model/ImageToImageRequest.h
   include/tencentcloud/aiart/v20221229/model/ImageToImageResponse.h
-  include/tencentcloud/aiart/v20221229/model/LogoRect.h
   include/tencentcloud/aiart/v20221229/model/LogoParam.h
+  include/tencentcloud/aiart/v20221229/model/ImageToImageRequest.h
+  include/tencentcloud/aiart/v20221229/model/LogoRect.h
+  include/tencentcloud/aiart/v20221229/model/ChangeClothesRequest.h
+  include/tencentcloud/aiart/v20221229/model/ChangeClothesResponse.h
   include/tencentcloud/aiart/v20221229/model/ResultConfig.h
   )
 
 set(aiart_src
   src/v20221229/AiartClient.cpp
-  src/v20221229/model/ImageToImageRequest.cpp
   src/v20221229/model/ImageToImageResponse.cpp
-  src/v20221229/model/LogoRect.cpp
   src/v20221229/model/LogoParam.cpp
+  src/v20221229/model/ImageToImageRequest.cpp
+  src/v20221229/model/LogoRect.cpp
+  src/v20221229/model/ChangeClothesRequest.cpp
+  src/v20221229/model/ChangeClothesResponse.cpp
   src/v20221229/model/ResultConfig.cpp
   )
 

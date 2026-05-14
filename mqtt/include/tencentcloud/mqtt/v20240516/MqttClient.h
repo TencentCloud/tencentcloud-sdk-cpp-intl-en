@@ -53,6 +53,8 @@
 #include <tencentcloud/mqtt/v20240516/model/DescribeAuthorizationPoliciesResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeClientListRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeClientListResponse.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificateRequest.h>
+#include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificateResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificatesRequest.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeDeviceCertificatesResponse.h>
 #include <tencentcloud/mqtt/v20240516/model/DescribeDeviceIdentitiesRequest.h>
@@ -156,6 +158,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClientListResponse> DescribeClientListOutcome;
                 typedef std::future<DescribeClientListOutcome> DescribeClientListOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeClientListRequest&, DescribeClientListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClientListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeviceCertificateResponse> DescribeDeviceCertificateOutcome;
+                typedef std::future<DescribeDeviceCertificateOutcome> DescribeDeviceCertificateOutcomeCallable;
+                typedef std::function<void(const MqttClient*, const Model::DescribeDeviceCertificateRequest&, DescribeDeviceCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceCertificateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDeviceCertificatesResponse> DescribeDeviceCertificatesOutcome;
                 typedef std::future<DescribeDeviceCertificatesOutcome> DescribeDeviceCertificatesOutcomeCallable;
                 typedef std::function<void(const MqttClient*, const Model::DescribeDeviceCertificatesRequest&, DescribeDeviceCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceCertificatesAsyncHandler;
@@ -359,6 +364,15 @@ namespace TencentCloud
                 DescribeClientListOutcome DescribeClientList(const Model::DescribeClientListRequest &request);
                 void DescribeClientListAsync(const Model::DescribeClientListRequest& request, const DescribeClientListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClientListOutcomeCallable DescribeClientListCallable(const Model::DescribeClientListRequest& request);
+
+                /**
+                 *This API is used to query device certificate details.
+                 * @param req DescribeDeviceCertificateRequest
+                 * @return DescribeDeviceCertificateOutcome
+                 */
+                DescribeDeviceCertificateOutcome DescribeDeviceCertificate(const Model::DescribeDeviceCertificateRequest &request);
+                void DescribeDeviceCertificateAsync(const Model::DescribeDeviceCertificateRequest& request, const DescribeDeviceCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeviceCertificateOutcomeCallable DescribeDeviceCertificateCallable(const Model::DescribeDeviceCertificateRequest& request);
 
                 /**
                  *Query device certificates with paging

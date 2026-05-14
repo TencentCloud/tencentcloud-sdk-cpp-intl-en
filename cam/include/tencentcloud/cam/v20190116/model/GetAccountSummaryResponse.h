@@ -74,14 +74,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of identity providers
                      * @return Idps Number of identity providers
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetIdps() const;
 
                     /**
                      * 判断参数 Idps 是否已赋值
                      * @return Idps 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IdpsHasBeenSet() const;
 

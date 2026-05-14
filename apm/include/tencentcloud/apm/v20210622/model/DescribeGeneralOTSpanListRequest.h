@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Business system id.
-                     * @return InstanceId Business system id.
+                     * 获取<p>Business system ID</p>
+                     * @return InstanceId <p>Business system ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Business system id.
-                     * @param _instanceId Business system id.
+                     * 设置<p>Business system ID</p>
+                     * @param _instanceId <p>Business system ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Span query start timestamp (unit: seconds).
-                     * @return StartTime Span query start timestamp (unit: seconds).
+                     * 获取<p>Span query start timestamp (unit: seconds)</p>
+                     * @return StartTime <p>Span query start timestamp (unit: seconds)</p>
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Span query start timestamp (unit: seconds).
-                     * @param _startTime Span query start timestamp (unit: seconds).
+                     * 设置<p>Span query start timestamp (unit: seconds)</p>
+                     * @param _startTime <p>Span query start timestamp (unit: seconds)</p>
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Span query end timestamp (unit: seconds).
-                     * @return EndTime Span query end timestamp (unit: seconds).
+                     * 获取<p>Span query end timestamp (unit: s)</p>
+                     * @return EndTime <p>Span query end timestamp (unit: s)</p>
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Span query end timestamp (unit: seconds).
-                     * @param _endTime Span query end timestamp (unit: seconds).
+                     * 设置<p>Span query end timestamp (unit: s)</p>
+                     * @param _endTime <p>Span query end timestamp (unit: s)</p>
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Universal filter parameters.
-                     * @return Filters Universal filter parameters.
+                     * 获取<p>Universal filter parameters supported filter key such as service.name</p>
+                     * @return Filters <p>Universal filter parameters supported filter key such as service.name</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Universal filter parameters.
-                     * @param _filters Universal filter parameters.
+                     * 设置<p>Universal filter parameters supported filter key such as service.name</p>
+                     * @param _filters <p>Universal filter parameters supported filter key such as service.name</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -129,59 +129,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
-                     * @return OrderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+                     * 获取<p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+                     * @return OrderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
                      * 
                      */
                     OrderBy GetOrderBy() const;
 
                     /**
-                     * 设置Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
-                     * @param _orderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+                     * 设置<p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+                     * @param _orderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
                      * 
                      */
                     void SetOrderBy(const OrderBy& _orderBy);
@@ -194,15 +150,15 @@ The currently supported values are:.
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取The service name of the business itself. console users should fill in taw.
-                     * @return BusinessName The service name of the business itself. console users should fill in taw.
+                     * 获取<p>Business service name. Console users please enter taw</p>
+                     * @return BusinessName <p>Business service name. Console users please enter taw</p>
                      * 
                      */
                     std::string GetBusinessName() const;
 
                     /**
-                     * 设置The service name of the business itself. console users should fill in taw.
-                     * @param _businessName The service name of the business itself. console users should fill in taw.
+                     * 设置<p>Business service name. Console users please enter taw</p>
+                     * @param _businessName <p>Business service name. Console users please enter taw</p>
                      * 
                      */
                     void SetBusinessName(const std::string& _businessName);
@@ -215,15 +171,15 @@ The currently supported values are:.
                     bool BusinessNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
-                     * @return Limit Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
+                     * 获取<p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
+                     * @return Limit <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
-                     * @param _limit Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
+                     * 设置<p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
+                     * @param _limit <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -236,15 +192,15 @@ The currently supported values are:.
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination.
-                     * @return Offset Pagination.
+                     * 获取<p>Page</p>
+                     * @return Offset <p>Page</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination.
-                     * @param _offset Pagination.
+                     * 设置<p>Page</p>
+                     * @param _offset <p>Page</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -259,60 +215,49 @@ The currently supported values are:.
                 private:
 
                     /**
-                     * Business system id.
+                     * <p>Business system ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Span query start timestamp (unit: seconds).
+                     * <p>Span query start timestamp (unit: seconds)</p>
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Span query end timestamp (unit: seconds).
+                     * <p>Span query end timestamp (unit: s)</p>
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Universal filter parameters.
+                     * <p>Universal filter parameters supported filter key such as service.name</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+                     * <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
                      */
                     OrderBy m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * The service name of the business itself. console users should fill in taw.
+                     * <p>Business service name. Console users please enter taw</p>
                      */
                     std::string m_businessName;
                     bool m_businessNameHasBeenSet;
 
                     /**
-                     * Number of items per page, defaults to 10,000, valid value range is 0 – 10,000.
+                     * <p>Count of single-page projects. Defaults to 10000. Valid value range is 0–10000.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination.
+                     * <p>Page</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

@@ -1247,6 +1247,27 @@ Account in arrears.
                      */
                     bool UrlNumberSegmentThresholdHasBeenSet() const;
 
+                    /**
+                     * 获取Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+                     * @return LogSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+                     * 
+                     */
+                    std::string GetLogSpanIdKey() const;
+
+                    /**
+                     * 设置Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+                     * @param _logSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+                     * 
+                     */
+                    void SetLogSpanIdKey(const std::string& _logSpanIdKey);
+
+                    /**
+                     * 判断参数 LogSpanIdKey 是否已赋值
+                     * @return LogSpanIdKey 是否已赋值
+                     * 
+                     */
+                    bool LogSpanIdKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1590,6 +1611,12 @@ Account in arrears.
                      */
                     int64_t m_urlNumberSegmentThreshold;
                     bool m_urlNumberSegmentThresholdHasBeenSet;
+
+                    /**
+                     * Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+                     */
+                    std::string m_logSpanIdKey;
+                    bool m_logSpanIdKeyHasBeenSet;
 
                 };
             }

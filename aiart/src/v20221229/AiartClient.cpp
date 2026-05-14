@@ -40,6 +40,56 @@ AiartClient::AiartClient(const Credential &credential, const string &region, con
 }
 
 
+AiartClient::ChangeClothesOutcome AiartClient::ChangeClothes(const ChangeClothesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChangeClothes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChangeClothesResponse rsp = ChangeClothesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChangeClothesOutcome(rsp);
+        else
+            return ChangeClothesOutcome(o.GetError());
+    }
+    else
+    {
+        return ChangeClothesOutcome(outcome.GetError());
+    }
+}
+
+void AiartClient::ChangeClothesAsync(const ChangeClothesRequest& request, const ChangeClothesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ChangeClothesRequest&;
+    using Resp = ChangeClothesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ChangeClothes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+AiartClient::ChangeClothesOutcomeCallable AiartClient::ChangeClothesCallable(const ChangeClothesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ChangeClothesOutcome>>();
+    ChangeClothesAsync(
+    request,
+    [prom](
+        const AiartClient*,
+        const ChangeClothesRequest&,
+        ChangeClothesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 AiartClient::ImageToImageOutcome AiartClient::ImageToImage(const ImageToImageRequest &request)
 {
     auto outcome = MakeRequest(request, "ImageToImage");

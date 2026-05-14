@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-user username
-                     * @return Name Sub-user username
+                     * 获取Sub-user username.
+                     * @return Name Sub-user username.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Sub-user username
-                     * @param _name Sub-user username
+                     * 设置Sub-user username.
+                     * @param _name Sub-user username.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -234,7 +234,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sub-user username
+                     * Sub-user username.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
