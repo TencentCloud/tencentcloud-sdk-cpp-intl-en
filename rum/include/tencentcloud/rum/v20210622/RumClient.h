@@ -153,6 +153,8 @@
 #include <tencentcloud/rum/v20210622/model/DescribeScoresV2Response.h>
 #include <tencentcloud/rum/v20210622/model/DescribeTawAreasRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeTawAreasResponse.h>
+#include <tencentcloud/rum/v20210622/model/DescribeTawInstancesRequest.h>
+#include <tencentcloud/rum/v20210622/model/DescribeTawInstancesResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeUvListRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeUvListResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeWhitelistsRequest.h>
@@ -380,6 +382,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTawAreasResponse> DescribeTawAreasOutcome;
                 typedef std::future<DescribeTawAreasOutcome> DescribeTawAreasOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeTawAreasRequest&, DescribeTawAreasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTawAreasAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTawInstancesResponse> DescribeTawInstancesOutcome;
+                typedef std::future<DescribeTawInstancesOutcome> DescribeTawInstancesOutcomeCallable;
+                typedef std::function<void(const RumClient*, const Model::DescribeTawInstancesRequest&, DescribeTawInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTawInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUvListResponse> DescribeUvListOutcome;
                 typedef std::future<DescribeUvListOutcome> DescribeUvListOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeUvListRequest&, DescribeUvListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUvListAsyncHandler;
@@ -1008,6 +1013,15 @@ Default API request rate limit: 20 requests/sec.
                 DescribeTawAreasOutcome DescribeTawAreas(const Model::DescribeTawAreasRequest &request);
                 void DescribeTawAreasAsync(const Model::DescribeTawAreasRequest& request, const DescribeTawAreasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTawAreasOutcomeCallable DescribeTawAreasCallable(const Model::DescribeTawAreasRequest& request);
+
+                /**
+                 *This API is used to query instance information.
+                 * @param req DescribeTawInstancesRequest
+                 * @return DescribeTawInstancesOutcome
+                 */
+                DescribeTawInstancesOutcome DescribeTawInstances(const Model::DescribeTawInstancesRequest &request);
+                void DescribeTawInstancesAsync(const Model::DescribeTawInstancesRequest& request, const DescribeTawInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTawInstancesOutcomeCallable DescribeTawInstancesCallable(const Model::DescribeTawInstancesRequest& request);
 
                 /**
                  *This API is used to get the list of UVs under a project.

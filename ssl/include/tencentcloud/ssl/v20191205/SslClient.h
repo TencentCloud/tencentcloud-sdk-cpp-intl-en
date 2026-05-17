@@ -61,6 +61,8 @@
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateOperateLogsResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCompaniesRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCompaniesResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordRequest.h>
@@ -71,6 +73,8 @@
 #include <tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordDetailRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordDetailResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeManagersRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeManagersResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCSRRequest.h>
@@ -174,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCertificatesResponse> DescribeCertificatesOutcome;
                 typedef std::future<DescribeCertificatesOutcome> DescribeCertificatesOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificatesRequest&, DescribeCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCompaniesResponse> DescribeCompaniesOutcome;
+                typedef std::future<DescribeCompaniesOutcome> DescribeCompaniesOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeCompaniesRequest&, DescribeCompaniesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCompaniesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceListOutcome;
                 typedef std::future<DescribeHostTeoInstanceListOutcome> DescribeHostTeoInstanceListOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeHostTeoInstanceListRequest&, DescribeHostTeoInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostTeoInstanceListAsyncHandler;
@@ -189,6 +196,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHostUploadUpdateRecordDetailResponse> DescribeHostUploadUpdateRecordDetailOutcome;
                 typedef std::future<DescribeHostUploadUpdateRecordDetailOutcome> DescribeHostUploadUpdateRecordDetailOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeHostUploadUpdateRecordDetailRequest&, DescribeHostUploadUpdateRecordDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostUploadUpdateRecordDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeManagersResponse> DescribeManagersOutcome;
+                typedef std::future<DescribeManagersOutcome> DescribeManagersOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeManagersRequest&, DescribeManagersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeManagersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
                 typedef std::future<DownloadCertificateOutcome> DownloadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DownloadCertificateRequest&, DownloadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadCertificateAsyncHandler;
@@ -412,6 +422,15 @@ namespace TencentCloud
                 DescribeCertificatesOutcomeCallable DescribeCertificatesCallable(const Model::DescribeCertificatesRequest& request);
 
                 /**
+                 *Query company list
+                 * @param req DescribeCompaniesRequest
+                 * @return DescribeCompaniesOutcome
+                 */
+                DescribeCompaniesOutcome DescribeCompanies(const Model::DescribeCompaniesRequest &request);
+                void DescribeCompaniesAsync(const Model::DescribeCompaniesRequest& request, const DescribeCompaniesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCompaniesOutcomeCallable DescribeCompaniesCallable(const Model::DescribeCompaniesRequest& request);
+
+                /**
                  *This API is used to query the list of EdgeOne instances to which a certificate can be deployed.
                  * @param req DescribeHostTeoInstanceListRequest
                  * @return DescribeHostTeoInstanceListOutcome
@@ -455,6 +474,15 @@ namespace TencentCloud
                 DescribeHostUploadUpdateRecordDetailOutcome DescribeHostUploadUpdateRecordDetail(const Model::DescribeHostUploadUpdateRecordDetailRequest &request);
                 void DescribeHostUploadUpdateRecordDetailAsync(const Model::DescribeHostUploadUpdateRecordDetailRequest& request, const DescribeHostUploadUpdateRecordDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeHostUploadUpdateRecordDetailOutcomeCallable DescribeHostUploadUpdateRecordDetailCallable(const Model::DescribeHostUploadUpdateRecordDetailRequest& request);
+
+                /**
+                 *Query the list of people in charge
+                 * @param req DescribeManagersRequest
+                 * @return DescribeManagersOutcome
+                 */
+                DescribeManagersOutcome DescribeManagers(const Model::DescribeManagersRequest &request);
+                void DescribeManagersAsync(const Model::DescribeManagersRequest& request, const DescribeManagersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeManagersOutcomeCallable DescribeManagersCallable(const Model::DescribeManagersRequest& request);
 
                 /**
                  *This API is used to download a certificate.

@@ -25,6 +25,7 @@ set(rum_public_header_model
   include/tencentcloud/rum/v20210622/model/CreateTawInstanceResponse.h
   include/tencentcloud/rum/v20210622/model/DeleteProjectRequest.h
   include/tencentcloud/rum/v20210622/model/DescribeProjectLimitsResponse.h
+  include/tencentcloud/rum/v20210622/model/DescribeTawInstancesRequest.h
   include/tencentcloud/rum/v20210622/model/DeleteOfflineLogConfigResponse.h
   include/tencentcloud/rum/v20210622/model/ResumeProjectResponse.h
   include/tencentcloud/rum/v20210622/model/DescribeRumLogListResponse.h
@@ -168,6 +169,7 @@ set(rum_public_header_model
   include/tencentcloud/rum/v20210622/model/DescribeRumLogListRequest.h
   include/tencentcloud/rum/v20210622/model/DescribeDataPerformancePageV2Request.h
   include/tencentcloud/rum/v20210622/model/DescribeDataStaticResourceRequest.h
+  include/tencentcloud/rum/v20210622/model/DescribeTawInstancesResponse.h
   include/tencentcloud/rum/v20210622/model/DescribePvListRequest.h
   include/tencentcloud/rum/v20210622/model/DescribeDataPvUrlInfoRequest.h
   include/tencentcloud/rum/v20210622/model/CreateReleaseFileResponse.h
@@ -179,6 +181,7 @@ set(rum_public_header_model
   include/tencentcloud/rum/v20210622/model/RumProject.h
   include/tencentcloud/rum/v20210622/model/DescribeDataStaticResourceV2Response.h
   include/tencentcloud/rum/v20210622/model/DescribeDataSetUrlStatisticsResponse.h
+  include/tencentcloud/rum/v20210622/model/RumInstanceInfo.h
   )
 
 set(rum_src
@@ -189,6 +192,7 @@ set(rum_src
   src/v20210622/model/CreateTawInstanceResponse.cpp
   src/v20210622/model/DeleteProjectRequest.cpp
   src/v20210622/model/DescribeProjectLimitsResponse.cpp
+  src/v20210622/model/DescribeTawInstancesRequest.cpp
   src/v20210622/model/DeleteOfflineLogConfigResponse.cpp
   src/v20210622/model/ResumeProjectResponse.cpp
   src/v20210622/model/DescribeRumLogListResponse.cpp
@@ -332,6 +336,7 @@ set(rum_src
   src/v20210622/model/DescribeRumLogListRequest.cpp
   src/v20210622/model/DescribeDataPerformancePageV2Request.cpp
   src/v20210622/model/DescribeDataStaticResourceRequest.cpp
+  src/v20210622/model/DescribeTawInstancesResponse.cpp
   src/v20210622/model/DescribePvListRequest.cpp
   src/v20210622/model/DescribeDataPvUrlInfoRequest.cpp
   src/v20210622/model/CreateReleaseFileResponse.cpp
@@ -343,6 +348,7 @@ set(rum_src
   src/v20210622/model/RumProject.cpp
   src/v20210622/model/DescribeDataStaticResourceV2Response.cpp
   src/v20210622/model/DescribeDataSetUrlStatisticsResponse.cpp
+  src/v20210622/model/RumInstanceInfo.cpp
   )
 
 set(rum_include

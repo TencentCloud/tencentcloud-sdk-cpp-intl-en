@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
-                     * @return DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+                     * 获取Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
+                     * @return DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
                      * 
                      */
                     std::vector<std::string> GetDestinationRegions() const;
 
                     /**
-                     * 设置Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
-                     * @param _destinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+                     * 设置Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
+                     * @param _destinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
                      * 
                      */
                     void SetDestinationRegions(const std::vector<std::string>& _destinationRegions);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
-                     * @return SnapshotName Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+                     * 获取Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
+                     * @return SnapshotName Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
-                     * @param _snapshotName Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+                     * 设置Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
+                     * @param _snapshotName Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+                     * Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
                      */
                     std::vector<std::string> m_destinationRegions;
                     bool m_destinationRegionsHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+                     * Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;

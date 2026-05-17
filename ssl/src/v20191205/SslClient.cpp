@@ -990,6 +990,56 @@ SslClient::DescribeCertificatesOutcomeCallable SslClient::DescribeCertificatesCa
     return prom->get_future();
 }
 
+SslClient::DescribeCompaniesOutcome SslClient::DescribeCompanies(const DescribeCompaniesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCompanies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCompaniesResponse rsp = DescribeCompaniesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCompaniesOutcome(rsp);
+        else
+            return DescribeCompaniesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCompaniesOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeCompaniesAsync(const DescribeCompaniesRequest& request, const DescribeCompaniesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCompaniesRequest&;
+    using Resp = DescribeCompaniesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCompanies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::DescribeCompaniesOutcomeCallable SslClient::DescribeCompaniesCallable(const DescribeCompaniesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCompaniesOutcome>>();
+    DescribeCompaniesAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const DescribeCompaniesRequest&,
+        DescribeCompaniesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SslClient::DescribeHostTeoInstanceListOutcome SslClient::DescribeHostTeoInstanceList(const DescribeHostTeoInstanceListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeHostTeoInstanceList");
@@ -1232,6 +1282,56 @@ SslClient::DescribeHostUploadUpdateRecordDetailOutcomeCallable SslClient::Descri
         const SslClient*,
         const DescribeHostUploadUpdateRecordDetailRequest&,
         DescribeHostUploadUpdateRecordDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SslClient::DescribeManagersOutcome SslClient::DescribeManagers(const DescribeManagersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeManagers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeManagersResponse rsp = DescribeManagersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeManagersOutcome(rsp);
+        else
+            return DescribeManagersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeManagersOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeManagersAsync(const DescribeManagersRequest& request, const DescribeManagersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeManagersRequest&;
+    using Resp = DescribeManagersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeManagers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::DescribeManagersOutcomeCallable SslClient::DescribeManagersCallable(const DescribeManagersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeManagersOutcome>>();
+    DescribeManagersAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const DescribeManagersRequest&,
+        DescribeManagersOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

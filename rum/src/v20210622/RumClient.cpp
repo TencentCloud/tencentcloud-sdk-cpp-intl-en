@@ -3290,6 +3290,56 @@ RumClient::DescribeTawAreasOutcomeCallable RumClient::DescribeTawAreasCallable(c
     return prom->get_future();
 }
 
+RumClient::DescribeTawInstancesOutcome RumClient::DescribeTawInstances(const DescribeTawInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTawInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTawInstancesResponse rsp = DescribeTawInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTawInstancesOutcome(rsp);
+        else
+            return DescribeTawInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTawInstancesOutcome(outcome.GetError());
+    }
+}
+
+void RumClient::DescribeTawInstancesAsync(const DescribeTawInstancesRequest& request, const DescribeTawInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTawInstancesRequest&;
+    using Resp = DescribeTawInstancesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTawInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+RumClient::DescribeTawInstancesOutcomeCallable RumClient::DescribeTawInstancesCallable(const DescribeTawInstancesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTawInstancesOutcome>>();
+    DescribeTawInstancesAsync(
+    request,
+    [prom](
+        const RumClient*,
+        const DescribeTawInstancesRequest&,
+        DescribeTawInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 RumClient::DescribeUvListOutcome RumClient::DescribeUvList(const DescribeUvListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeUvList");
