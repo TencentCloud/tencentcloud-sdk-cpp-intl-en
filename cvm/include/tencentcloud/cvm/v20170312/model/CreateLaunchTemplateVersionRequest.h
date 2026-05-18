@@ -141,10 +141,10 @@ namespace TencentCloud
                     /**
                      * 获取Instance model. Different instance models specify different resource specifications.
 
-<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
+<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
                      * @return InstanceType Instance model. Different instance models specify different resource specifications.
 
-<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
+<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
                      * 
                      */
                     std::string GetInstanceType() const;
@@ -152,10 +152,10 @@ namespace TencentCloud
                     /**
                      * 设置Instance model. Different instance models specify different resource specifications.
 
-<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
+<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
                      * @param _instanceType Instance model. Different instance models specify different resource specifications.
 
-<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
+<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -667,15 +667,35 @@ If the dry run succeeds, the RequestId will be returned.
                     bool DisableApiTerminationHasBeenSet() const;
 
                     /**
-                     * 获取Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
-                     * @return EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * 获取Whether jumbo frames are enabled for the instance. Valid values:
+- true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+- false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+
+
+ Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
+                     * @return EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values:
+- true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+- false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+
+
+ Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
                      * 
                      */
                     bool GetEnableJumboFrame() const;
 
                     /**
-                     * 设置Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
-                     * @param _enableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * 设置Whether jumbo frames are enabled for the instance. Valid values:
+- true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+- false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+
+
+ Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
+                     * @param _enableJumboFrame Whether jumbo frames are enabled for the instance. Valid values:
+- true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+- false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+
+
+ Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
                      * 
                      */
                     void SetEnableJumboFrame(const bool& _enableJumboFrame);
@@ -778,7 +798,7 @@ Note: this field is in beta test.
                     /**
                      * Instance model. Different instance models specify different resource specifications.
 
-<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
+<br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs API for the latest specification table or referring to [Instance Specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><br><li>For instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. The specific format is: CDH_XCXG. For example, for creating a CDH instance with 1 CPU core and 1 GB memory, this parameter should be CDH_1C1G.</li>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -926,7 +946,12 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_disableApiTerminationHasBeenSet;
 
                     /**
-                     * Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * Whether jumbo frames are enabled for the instance. Valid values:
+- true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+- false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+
+
+ Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
                      */
                     bool m_enableJumboFrame;
                     bool m_enableJumboFrameHasBeenSet;

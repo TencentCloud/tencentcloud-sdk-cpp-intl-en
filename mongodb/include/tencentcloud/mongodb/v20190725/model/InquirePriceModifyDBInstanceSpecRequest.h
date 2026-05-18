@@ -163,6 +163,31 @@ namespace TencentCloud
                      */
                     bool ReplicateSetNumHasBeenSet() const;
 
+                    /**
+                     * 获取CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+                     * @return Cpu CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+                     * 
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+                     * @param _cpu CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+                     * 
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     * 
+                     */
+                    bool CpuHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,6 +223,13 @@ namespace TencentCloud
                      */
                     int64_t m_replicateSetNum;
                     bool m_replicateSetNumHasBeenSet;
+
+                    /**
+                     * CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
 
                 };
             }

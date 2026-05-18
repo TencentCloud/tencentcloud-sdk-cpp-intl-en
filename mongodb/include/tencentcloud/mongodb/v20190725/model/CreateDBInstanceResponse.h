@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID.
-                     * @return DealId Order ID.
+                     * 获取<p>Order ID</p>
+                     * @return DealId <p>Order ID</p>
                      * 
                      */
                     std::string GetDealId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DealIdHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of created instances.
-                     * @return InstanceIds List of IDs of created instances.
+                     * 获取<p>List of instance created IDs</p>
+                     * @return InstanceIds <p>List of instance created IDs</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order ID.
+                     * <p>Order ID</p>
                      */
                     std::string m_dealId;
                     bool m_dealIdHasBeenSet;
 
                     /**
-                     * List of IDs of created instances.
+                     * <p>List of instance created IDs</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

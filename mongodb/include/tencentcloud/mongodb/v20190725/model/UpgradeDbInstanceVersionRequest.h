@@ -64,15 +64,43 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
-                     * @return MongoVersion Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+                     * 获取The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+                     * @return MongoVersion The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
                      * 
                      */
                     std::string GetMongoVersion() const;
 
                     /**
-                     * 设置Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
-                     * @param _mongoVersion Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+                     * 设置The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+                     * @param _mongoVersion The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
                      * 
                      */
                     void SetMongoVersion(const std::string& _mongoVersion);
@@ -85,15 +113,23 @@ namespace TencentCloud
                     bool MongoVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
-                     * @return InMaintenance Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+                     * 获取Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
+                     * @return InMaintenance Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
                      * 
                      */
                     int64_t GetInMaintenance() const;
 
                     /**
-                     * 设置Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
-                     * @param _inMaintenance Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+                     * 设置Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
+                     * @param _inMaintenance Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
                      * 
                      */
                     void SetInMaintenance(const int64_t& _inMaintenance);
@@ -114,13 +150,22 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+                     * The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
                      */
                     std::string m_mongoVersion;
                     bool m_mongoVersionHasBeenSet;
 
                     /**
-                     * Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+                     * Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
                      */
                     int64_t m_inMaintenance;
                     bool m_inMaintenanceHasBeenSet;

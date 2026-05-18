@@ -1990,6 +1990,56 @@ ScfClient::UpdateFunctionCodeOutcomeCallable ScfClient::UpdateFunctionCodeCallab
     return prom->get_future();
 }
 
+ScfClient::UpdateFunctionConfigurationOutcome ScfClient::UpdateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateFunctionConfiguration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateFunctionConfigurationResponse rsp = UpdateFunctionConfigurationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateFunctionConfigurationOutcome(rsp);
+        else
+            return UpdateFunctionConfigurationOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateFunctionConfigurationOutcome(outcome.GetError());
+    }
+}
+
+void ScfClient::UpdateFunctionConfigurationAsync(const UpdateFunctionConfigurationRequest& request, const UpdateFunctionConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateFunctionConfigurationRequest&;
+    using Resp = UpdateFunctionConfigurationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateFunctionConfiguration", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ScfClient::UpdateFunctionConfigurationOutcomeCallable ScfClient::UpdateFunctionConfigurationCallable(const UpdateFunctionConfigurationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateFunctionConfigurationOutcome>>();
+    UpdateFunctionConfigurationAsync(
+    request,
+    [prom](
+        const ScfClient*,
+        const UpdateFunctionConfigurationRequest&,
+        UpdateFunctionConfigurationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ScfClient::UpdateFunctionEventInvokeConfigOutcome ScfClient::UpdateFunctionEventInvokeConfig(const UpdateFunctionEventInvokeConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateFunctionEventInvokeConfig");

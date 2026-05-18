@@ -81,22 +81,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
                      * @return Status Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
                      * @param _status Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -263,6 +263,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * @return MongoVersionCode Storage engine version information on instances.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
@@ -270,6 +271,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * 
                      */
                     std::string GetMongoVersionCode() const;
@@ -282,6 +284,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * @param _mongoVersionCode Storage engine version information on instances.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
@@ -289,6 +292,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * 
                      */
                     void SetMongoVersionCode(const std::string& _mongoVersionCode);
@@ -302,14 +306,50 @@ namespace TencentCloud
 
                     /**
                      * 获取Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
                      * @return MongoVersionValue Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
                      * 
                      */
                     uint64_t GetMongoVersionValue() const;
 
                     /**
                      * 设置Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
                      * @param _mongoVersionValue Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
                      * 
                      */
                     void SetMongoVersionValue(const uint64_t& _mongoVersionValue);
@@ -322,15 +362,15 @@ namespace TencentCloud
                     bool MongoVersionValueHasBeenSet() const;
 
                     /**
-                     * 获取Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
-                     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+                     * 获取Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+                     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
-                     * @param _version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+                     * 设置Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+                     * @param _version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -343,15 +383,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Storage engine.
-                     * @return EngineName Storage engine.
+                     * 获取Storage engine. Only WiredTiger is supported.
+                     * @return EngineName Storage engine. Only WiredTiger is supported.
                      * 
                      */
                     std::string GetEngineName() const;
 
                     /**
-                     * 设置Storage engine.
-                     * @param _engineName Storage engine.
+                     * 设置Storage engine. Only WiredTiger is supported.
+                     * @param _engineName Storage engine. Only WiredTiger is supported.
                      * 
                      */
                     void SetEngineName(const std::string& _engineName);
@@ -560,8 +600,8 @@ namespace TencentCloud
 
                     /**
                      * Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -616,24 +656,34 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      */
                     std::string m_mongoVersionCode;
                     bool m_mongoVersionCodeHasBeenSet;
 
                     /**
                      * Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
                      */
                     uint64_t m_mongoVersionValue;
                     bool m_mongoVersionValueHasBeenSet;
 
                     /**
-                     * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+                     * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Storage engine.
+                     * Storage engine. Only WiredTiger is supported.
                      */
                     std::string m_engineName;
                     bool m_engineNameHasBeenSet;

@@ -49,6 +49,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateAigcVideoTaskResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateBlindWatermarkTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassRequest.h>
@@ -113,6 +115,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteAigcApiTokenResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteBlindWatermarkTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteClassRequest.h>
@@ -173,6 +177,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeAllClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeBlindWatermarkTemplatesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeBlindWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNDomainsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNDomainsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsRequest.h>
@@ -265,6 +271,8 @@
 #include <tencentcloud/vod/v20180717/model/EnhanceMediaQualityResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h>
+#include <tencentcloud/vod/v20180717/model/ExtractBlindWatermarkRequest.h>
+#include <tencentcloud/vod/v20180717/model/ExtractBlindWatermarkResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkRequest.h>
@@ -291,6 +299,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyAdaptiveDynamicStreamingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyBlindWatermarkTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyCDNDomainConfigRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyCDNDomainConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyClassRequest.h>
@@ -446,6 +456,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAnimatedGraphicsTemplateResponse> CreateAnimatedGraphicsTemplateOutcome;
                 typedef std::future<CreateAnimatedGraphicsTemplateOutcome> CreateAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAnimatedGraphicsTemplateRequest&, CreateAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBlindWatermarkTemplateResponse> CreateBlindWatermarkTemplateOutcome;
+                typedef std::future<CreateBlindWatermarkTemplateOutcome> CreateBlindWatermarkTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateBlindWatermarkTemplateRequest&, CreateBlindWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBlindWatermarkTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCDNDomainResponse> CreateCDNDomainOutcome;
                 typedef std::future<CreateCDNDomainOutcome> CreateCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateCDNDomainRequest&, CreateCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCDNDomainAsyncHandler;
@@ -542,6 +555,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAnimatedGraphicsTemplateResponse> DeleteAnimatedGraphicsTemplateOutcome;
                 typedef std::future<DeleteAnimatedGraphicsTemplateOutcome> DeleteAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAnimatedGraphicsTemplateRequest&, DeleteAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBlindWatermarkTemplateResponse> DeleteBlindWatermarkTemplateOutcome;
+                typedef std::future<DeleteBlindWatermarkTemplateOutcome> DeleteBlindWatermarkTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteBlindWatermarkTemplateRequest&, DeleteBlindWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBlindWatermarkTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCDNDomainResponse> DeleteCDNDomainOutcome;
                 typedef std::future<DeleteCDNDomainOutcome> DeleteCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteCDNDomainRequest&, DeleteCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCDNDomainAsyncHandler;
@@ -632,6 +648,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAnimatedGraphicsTemplatesResponse> DescribeAnimatedGraphicsTemplatesOutcome;
                 typedef std::future<DescribeAnimatedGraphicsTemplatesOutcome> DescribeAnimatedGraphicsTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAnimatedGraphicsTemplatesRequest&, DescribeAnimatedGraphicsTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAnimatedGraphicsTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBlindWatermarkTemplatesResponse> DescribeBlindWatermarkTemplatesOutcome;
+                typedef std::future<DescribeBlindWatermarkTemplatesOutcome> DescribeBlindWatermarkTemplatesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeBlindWatermarkTemplatesRequest&, DescribeBlindWatermarkTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlindWatermarkTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCDNDomainsResponse> DescribeCDNDomainsOutcome;
                 typedef std::future<DescribeCDNDomainsOutcome> DescribeCDNDomainsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCDNDomainsRequest&, DescribeCDNDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNDomainsAsyncHandler;
@@ -770,6 +789,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExtractBlindWatermarkResponse> ExtractBlindWatermarkOutcome;
+                typedef std::future<ExtractBlindWatermarkOutcome> ExtractBlindWatermarkOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ExtractBlindWatermarkRequest&, ExtractBlindWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExtractBlindWatermarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExtractCopyRightWatermarkResponse> ExtractCopyRightWatermarkOutcome;
                 typedef std::future<ExtractCopyRightWatermarkOutcome> ExtractCopyRightWatermarkOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExtractCopyRightWatermarkRequest&, ExtractCopyRightWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExtractCopyRightWatermarkAsyncHandler;
@@ -809,6 +831,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAnimatedGraphicsTemplateResponse> ModifyAnimatedGraphicsTemplateOutcome;
                 typedef std::future<ModifyAnimatedGraphicsTemplateOutcome> ModifyAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAnimatedGraphicsTemplateRequest&, ModifyAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBlindWatermarkTemplateResponse> ModifyBlindWatermarkTemplateOutcome;
+                typedef std::future<ModifyBlindWatermarkTemplateOutcome> ModifyBlindWatermarkTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyBlindWatermarkTemplateRequest&, ModifyBlindWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBlindWatermarkTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCDNDomainConfigResponse> ModifyCDNDomainConfigOutcome;
                 typedef std::future<ModifyCDNDomainConfigOutcome> ModifyCDNDomainConfigOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyCDNDomainConfigRequest&, ModifyCDNDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDNDomainConfigAsyncHandler;
@@ -1095,6 +1120,15 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateAnimatedGraphicsTemplateOutcome CreateAnimatedGraphicsTemplate(const Model::CreateAnimatedGraphicsTemplateRequest &request);
                 void CreateAnimatedGraphicsTemplateAsync(const Model::CreateAnimatedGraphicsTemplateRequest& request, const CreateAnimatedGraphicsTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAnimatedGraphicsTemplateOutcomeCallable CreateAnimatedGraphicsTemplateCallable(const Model::CreateAnimatedGraphicsTemplateRequest& request);
+
+                /**
+                 *This API is used to create a user-defined digital watermark template.
+                 * @param req CreateBlindWatermarkTemplateRequest
+                 * @return CreateBlindWatermarkTemplateOutcome
+                 */
+                CreateBlindWatermarkTemplateOutcome CreateBlindWatermarkTemplate(const Model::CreateBlindWatermarkTemplateRequest &request);
+                void CreateBlindWatermarkTemplateAsync(const Model::CreateBlindWatermarkTemplateRequest& request, const CreateBlindWatermarkTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateBlindWatermarkTemplateOutcomeCallable CreateBlindWatermarkTemplateCallable(const Model::CreateBlindWatermarkTemplateRequest& request);
 
                 /**
                  *This API is used for adding domain names to VOD. A user can add up to 20 domain names. 1. After the domain name is added successfully, VOD will carry out the deployment of the domain name. It takes approximately 2 minutes for the domain name to change from the deployment status to the online status.
@@ -1408,6 +1442,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteAnimatedGraphicsTemplateOutcomeCallable DeleteAnimatedGraphicsTemplateCallable(const Model::DeleteAnimatedGraphicsTemplateRequest& request);
 
                 /**
+                 *This API is used to delete a user-defined digital watermark template.
+                 * @param req DeleteBlindWatermarkTemplateRequest
+                 * @return DeleteBlindWatermarkTemplateOutcome
+                 */
+                DeleteBlindWatermarkTemplateOutcome DeleteBlindWatermarkTemplate(const Model::DeleteBlindWatermarkTemplateRequest &request);
+                void DeleteBlindWatermarkTemplateAsync(const Model::DeleteBlindWatermarkTemplateRequest& request, const DeleteBlindWatermarkTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBlindWatermarkTemplateOutcomeCallable DeleteBlindWatermarkTemplateCallable(const Model::DeleteBlindWatermarkTemplateRequest& request);
+
+                /**
                  *Delete CDN Domain
                  * @param req DeleteCDNDomainRequest
                  * @return DeleteCDNDomainOutcome
@@ -1689,6 +1732,15 @@ This API is used to delete a player configuration.
                 DescribeAnimatedGraphicsTemplatesOutcome DescribeAnimatedGraphicsTemplates(const Model::DescribeAnimatedGraphicsTemplatesRequest &request);
                 void DescribeAnimatedGraphicsTemplatesAsync(const Model::DescribeAnimatedGraphicsTemplatesRequest& request, const DescribeAnimatedGraphicsTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAnimatedGraphicsTemplatesOutcomeCallable DescribeAnimatedGraphicsTemplatesCallable(const Model::DescribeAnimatedGraphicsTemplatesRequest& request);
+
+                /**
+                 *Query user-customized digital watermark templates.
+                 * @param req DescribeBlindWatermarkTemplatesRequest
+                 * @return DescribeBlindWatermarkTemplatesOutcome
+                 */
+                DescribeBlindWatermarkTemplatesOutcome DescribeBlindWatermarkTemplates(const Model::DescribeBlindWatermarkTemplatesRequest &request);
+                void DescribeBlindWatermarkTemplatesAsync(const Model::DescribeBlindWatermarkTemplatesRequest& request, const DescribeBlindWatermarkTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBlindWatermarkTemplatesOutcomeCallable DescribeBlindWatermarkTemplatesCallable(const Model::DescribeBlindWatermarkTemplatesRequest& request);
 
                 /**
                  *Describe CDN Domains
@@ -2179,6 +2231,15 @@ If event notification is used, the type of event notification is [Video editing 
                 ExecuteFunctionOutcomeCallable ExecuteFunctionCallable(const Model::ExecuteFunctionRequest& request);
 
                 /**
+                 *This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+                 * @param req ExtractBlindWatermarkRequest
+                 * @return ExtractBlindWatermarkOutcome
+                 */
+                ExtractBlindWatermarkOutcome ExtractBlindWatermark(const Model::ExtractBlindWatermarkRequest &request);
+                void ExtractBlindWatermarkAsync(const Model::ExtractBlindWatermarkRequest& request, const ExtractBlindWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExtractBlindWatermarkOutcomeCallable ExtractBlindWatermarkCallable(const Model::ExtractBlindWatermarkRequest& request);
+
+                /**
                  *Extract CopyRight Watermark.
                  * @param req ExtractCopyRightWatermarkRequest
                  * @return ExtractCopyRightWatermarkOutcome
@@ -2322,6 +2383,15 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyAnimatedGraphicsTemplateOutcome ModifyAnimatedGraphicsTemplate(const Model::ModifyAnimatedGraphicsTemplateRequest &request);
                 void ModifyAnimatedGraphicsTemplateAsync(const Model::ModifyAnimatedGraphicsTemplateRequest& request, const ModifyAnimatedGraphicsTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAnimatedGraphicsTemplateOutcomeCallable ModifyAnimatedGraphicsTemplateCallable(const Model::ModifyAnimatedGraphicsTemplateRequest& request);
+
+                /**
+                 *This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+                 * @param req ModifyBlindWatermarkTemplateRequest
+                 * @return ModifyBlindWatermarkTemplateOutcome
+                 */
+                ModifyBlindWatermarkTemplateOutcome ModifyBlindWatermarkTemplate(const Model::ModifyBlindWatermarkTemplateRequest &request);
+                void ModifyBlindWatermarkTemplateAsync(const Model::ModifyBlindWatermarkTemplateRequest& request, const ModifyBlindWatermarkTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBlindWatermarkTemplateOutcomeCallable ModifyBlindWatermarkTemplateCallable(const Model::ModifyBlindWatermarkTemplateRequest& request);
 
                 /**
                  *Modify CDN Domain Config.

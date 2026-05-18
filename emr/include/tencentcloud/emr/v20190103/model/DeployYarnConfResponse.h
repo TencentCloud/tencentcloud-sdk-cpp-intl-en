@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://intl.cloud.tencent.com/document/product/589/107224?from_cn_redirect=1) API to obtain the process status.
-                     * @return FlowId Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://intl.cloud.tencent.com/document/product/589/107224?from_cn_redirect=1) API to obtain the process status.
+                     * 获取Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
+                     * @return FlowId Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
                      * 
                      */
                     uint64_t GetFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://intl.cloud.tencent.com/document/product/589/107224?from_cn_redirect=1) API to obtain the process status.
+                     * Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
                      */
                     uint64_t m_flowId;
                     bool m_flowIdHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance model. Different resource specifications are specified for different models. For specific values, call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-                     * @return InstanceType Instance model. Different resource specifications are specified for different models. For specific values, call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * 获取Instance model. Different resource specifications are specified for different models. For specific values, call DescribeInstanceTypeConfigs to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @return InstanceType Instance model. Different resource specifications are specified for different models. For specific values, call DescribeInstanceTypeConfigs to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance model. Different resource specifications are specified for different models. For specific values, call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-                     * @param _instanceType Instance model. Different resource specifications are specified for different models. For specific values, call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * 设置Instance model. Different resource specifications are specified for different models. For specific values, call DescribeInstanceTypeConfigs to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @param _instanceType Instance model. Different resource specifications are specified for different models. For specific values, call DescribeInstanceTypeConfigs to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance model. Different resource specifications are specified for different models. For specific values, call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * Instance model. Different resource specifications are specified for different models. For specific values, call DescribeInstanceTypeConfigs to get the latest specification list or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

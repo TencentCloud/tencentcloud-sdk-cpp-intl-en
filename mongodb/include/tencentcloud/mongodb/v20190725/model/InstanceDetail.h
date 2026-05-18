@@ -409,6 +409,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * @return MongoVersion Storage engine version information on instances.
 - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
@@ -417,6 +418,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * 
                      */
                     std::string GetMongoVersion() const;
@@ -430,6 +432,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * @param _mongoVersion Storage engine version information on instances.
 - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
@@ -438,6 +441,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      * 
                      */
                     void SetMongoVersion(const std::string& _mongoVersion);
@@ -1229,6 +1233,7 @@ namespace TencentCloud
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
                      */
                     std::string m_mongoVersion;
                     bool m_mongoVersionHasBeenSet;
