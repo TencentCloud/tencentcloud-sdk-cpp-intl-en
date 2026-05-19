@@ -73,19 +73,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio volume adjustment parameter. Valid when Type = Volume.
+                     * @return VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
                      * 
                      */
                     AudioVolumeParam GetVolumeParam() const;
 
                     /**
-                     * 设置Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _volumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio volume adjustment parameter. Valid when Type = Volume.
+                     * @param _volumeParam Audio volume adjustment parameter. Valid when Type = Volume.
                      * 
                      */
                     void SetVolumeParam(const AudioVolumeParam& _volumeParam);
@@ -107,8 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Audio volume adjustment parameter. Valid when Type = Volume.
                      */
                     AudioVolumeParam m_volumeParam;
                     bool m_volumeParamHasBeenSet;

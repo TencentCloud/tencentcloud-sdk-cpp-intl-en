@@ -76,6 +76,48 @@ Only supports FBX format
                      */
                     bool FileHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+                     * @return PartSegmentationInfo <p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+                     * 
+                     */
+                    std::string GetPartSegmentationInfo() const;
+
+                    /**
+                     * 设置<p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+                     * @param _partSegmentationInfo <p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+                     * 
+                     */
+                    void SetPartSegmentationInfo(const std::string& _partSegmentationInfo);
+
+                    /**
+                     * 判断参数 PartSegmentationInfo 是否已赋值
+                     * @return PartSegmentationInfo 是否已赋值
+                     * 
+                     */
+                    bool PartSegmentationInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+                     * @return EnableStagedGeneration <p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+                     * 
+                     */
+                    bool GetEnableStagedGeneration() const;
+
+                    /**
+                     * 设置<p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+                     * @param _enableStagedGeneration <p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+                     * 
+                     */
+                    void SetEnableStagedGeneration(const bool& _enableStagedGeneration);
+
+                    /**
+                     * 判断参数 EnableStagedGeneration 是否已赋值
+                     * @return EnableStagedGeneration 是否已赋值
+                     * 
+                     */
+                    bool EnableStagedGenerationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -86,6 +128,18 @@ Only supports FBX format
                      */
                     InputFile3D m_file;
                     bool m_fileHasBeenSet;
+
+                    /**
+                     * <p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+                     */
+                    std::string m_partSegmentationInfo;
+                    bool m_partSegmentationInfoHasBeenSet;
+
+                    /**
+                     * <p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+                     */
+                    bool m_enableStagedGeneration;
+                    bool m_enableStagedGenerationHasBeenSet;
 
                 };
             }

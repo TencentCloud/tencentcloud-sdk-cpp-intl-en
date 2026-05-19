@@ -23,7 +23,9 @@ using namespace TencentCloud::Hunyuan::V20230901::Model;
 using namespace std;
 
 SubmitHunyuan3DPartJobRequest::SubmitHunyuan3DPartJobRequest() :
-    m_fileHasBeenSet(false)
+    m_fileHasBeenSet(false),
+    m_partSegmentationInfoHasBeenSet(false),
+    m_enableStagedGenerationHasBeenSet(false)
 {
 }
 
@@ -41,6 +43,22 @@ string SubmitHunyuan3DPartJobRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_file.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_partSegmentationInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartSegmentationInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_partSegmentationInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_enableStagedGenerationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableStagedGeneration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableStagedGeneration, allocator);
     }
 
 
@@ -65,6 +83,38 @@ void SubmitHunyuan3DPartJobRequest::SetFile(const InputFile3D& _file)
 bool SubmitHunyuan3DPartJobRequest::FileHasBeenSet() const
 {
     return m_fileHasBeenSet;
+}
+
+string SubmitHunyuan3DPartJobRequest::GetPartSegmentationInfo() const
+{
+    return m_partSegmentationInfo;
+}
+
+void SubmitHunyuan3DPartJobRequest::SetPartSegmentationInfo(const string& _partSegmentationInfo)
+{
+    m_partSegmentationInfo = _partSegmentationInfo;
+    m_partSegmentationInfoHasBeenSet = true;
+}
+
+bool SubmitHunyuan3DPartJobRequest::PartSegmentationInfoHasBeenSet() const
+{
+    return m_partSegmentationInfoHasBeenSet;
+}
+
+bool SubmitHunyuan3DPartJobRequest::GetEnableStagedGeneration() const
+{
+    return m_enableStagedGeneration;
+}
+
+void SubmitHunyuan3DPartJobRequest::SetEnableStagedGeneration(const bool& _enableStagedGeneration)
+{
+    m_enableStagedGeneration = _enableStagedGeneration;
+    m_enableStagedGenerationHasBeenSet = true;
+}
+
+bool SubmitHunyuan3DPartJobRequest::EnableStagedGenerationHasBeenSet() const
+{
+    return m_enableStagedGenerationHasBeenSet;
 }
 
 

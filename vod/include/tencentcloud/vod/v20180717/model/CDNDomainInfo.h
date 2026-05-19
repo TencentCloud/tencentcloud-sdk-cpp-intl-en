@@ -132,19 +132,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Config CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取cdn domain configuration information.
+                     * @return Config cdn domain configuration information.
                      * 
                      */
                     CDNDomainConfig GetConfig() const;
 
                     /**
-                     * 设置CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _config CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置cdn domain configuration information.
+                     * @param _config cdn domain configuration information.
                      * 
                      */
                     void SetConfig(const CDNDomainConfig& _config);
@@ -183,8 +179,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * cdn domain configuration information.
                      */
                     CDNDomainConfig m_config;
                     bool m_configHasBeenSet;

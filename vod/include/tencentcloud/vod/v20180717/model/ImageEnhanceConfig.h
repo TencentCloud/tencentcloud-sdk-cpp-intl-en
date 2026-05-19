@@ -43,7 +43,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image enhancement parameters
                 */
                 class ImageEnhanceConfig : public AbstractModel
                 {
@@ -55,15 +55,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SuperResolution 
+                     * 获取Super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SuperResolution Super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SuperResolutionInfo GetSuperResolution() const;
 
                     /**
-                     * 设置
-                     * @param _superResolution 
+                     * 设置Super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _superResolution Super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSuperResolution(const SuperResolutionInfo& _superResolution);
@@ -76,15 +80,19 @@ namespace TencentCloud
                     bool SuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdvancedSuperResolution 
+                     * 获取Advanced super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvancedSuperResolution Advanced super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AdvancedSuperResolutionConfig GetAdvancedSuperResolution() const;
 
                     /**
-                     * 设置
-                     * @param _advancedSuperResolution 
+                     * 设置Advanced super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _advancedSuperResolution Advanced super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAdvancedSuperResolution(const AdvancedSuperResolutionConfig& _advancedSuperResolution);
@@ -97,15 +105,19 @@ namespace TencentCloud
                     bool AdvancedSuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Denoise 
+                     * 获取Denoising configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Denoise Denoising configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageDenoiseConfig GetDenoise() const;
 
                     /**
-                     * 设置
-                     * @param _denoise 
+                     * 设置Denoising configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _denoise Denoising configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDenoise(const ImageDenoiseConfig& _denoise);
@@ -118,15 +130,19 @@ namespace TencentCloud
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageQualityEnhance 
+                     * 获取Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImageQualityEnhance Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageQualityEnhanceInfo GetImageQualityEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _imageQualityEnhance 
+                     * 设置Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _imageQualityEnhance Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageQualityEnhance(const ImageQualityEnhanceInfo& _imageQualityEnhance);
@@ -139,15 +155,19 @@ namespace TencentCloud
                     bool ImageQualityEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorEnhance 
+                     * 获取Color enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ColorEnhance Color enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ColorEnhanceInfo GetColorEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _colorEnhance 
+                     * 设置Color enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _colorEnhance Color enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetColorEnhance(const ColorEnhanceInfo& _colorEnhance);
@@ -160,15 +180,19 @@ namespace TencentCloud
                     bool ColorEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SharpEnhance 
+                     * 获取Detail enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SharpEnhance Detail enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SharpEnhanceInfo GetSharpEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _sharpEnhance 
+                     * 设置Detail enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sharpEnhance Detail enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSharpEnhance(const SharpEnhanceInfo& _sharpEnhance);
@@ -181,15 +205,19 @@ namespace TencentCloud
                     bool SharpEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceEnhance 
+                     * 获取Face enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FaceEnhance Face enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FaceEnhanceInfo GetFaceEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _faceEnhance 
+                     * 设置Face enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _faceEnhance Face enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFaceEnhance(const FaceEnhanceInfo& _faceEnhance);
@@ -202,15 +230,19 @@ namespace TencentCloud
                     bool FaceEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LowLightEnhance 
+                     * 获取Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LowLightEnhance Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LowLightEnhanceInfo GetLowLightEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _lowLightEnhance 
+                     * 设置Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _lowLightEnhance Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLowLightEnhance(const LowLightEnhanceInfo& _lowLightEnhance);
@@ -225,49 +257,57 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SuperResolutionInfo m_superResolution;
                     bool m_superResolutionHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced super-resolution configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AdvancedSuperResolutionConfig m_advancedSuperResolution;
                     bool m_advancedSuperResolutionHasBeenSet;
 
                     /**
-                     * 
+                     * Denoising configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageDenoiseConfig m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * 
+                     * Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageQualityEnhanceInfo m_imageQualityEnhance;
                     bool m_imageQualityEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Color enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ColorEnhanceInfo m_colorEnhance;
                     bool m_colorEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Detail enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SharpEnhanceInfo m_sharpEnhance;
                     bool m_sharpEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Face enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FaceEnhanceInfo m_faceEnhance;
                     bool m_faceEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LowLightEnhanceInfo m_lowLightEnhance;
                     bool m_lowLightEnhanceHasBeenSet;

@@ -44,6 +44,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Remaster template ID, please contact Tencent Cloud for details
+                     * @return Definition Remaster template ID, please contact Tencent Cloud for details
+                     * 
+                     */
+                    uint64_t GetDefinition() const;
+
+                    /**
+                     * 设置Remaster template ID, please contact Tencent Cloud for details
+                     * @param _definition Remaster template ID, please contact Tencent Cloud for details
+                     * 
+                     */
+                    void SetDefinition(const uint64_t& _definition);
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     * 
+                     */
+                    bool DefinitionHasBeenSet() const;
+
+                    /**
                      * 获取Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
                      * @return FileId Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
                      * 
@@ -65,25 +86,33 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Remaster template ID, please contact Tencent Cloud for details
-                     * @return Definition Remaster template ID, please contact Tencent Cloud for details
+                     * 获取Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
+                     * @return MediaStoragePath Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
                      * 
                      */
-                    uint64_t GetDefinition() const;
+                    std::string GetMediaStoragePath() const;
 
                     /**
-                     * 设置Remaster template ID, please contact Tencent Cloud for details
-                     * @param _definition Remaster template ID, please contact Tencent Cloud for details
+                     * 设置Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
+                     * @param _mediaStoragePath Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
                      * 
                      */
-                    void SetDefinition(const uint64_t& _definition);
+                    void SetMediaStoragePath(const std::string& _mediaStoragePath);
 
                     /**
-                     * 判断参数 Definition 是否已赋值
-                     * @return Definition 是否已赋值
+                     * 判断参数 MediaStoragePath 是否已赋值
+                     * @return MediaStoragePath 是否已赋值
                      * 
                      */
-                    bool DefinitionHasBeenSet() const;
+                    bool MediaStoragePathHasBeenSet() const;
 
                     /**
                      * 获取<b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
@@ -193,16 +222,24 @@ namespace TencentCloud
                 private:
 
                     /**
+                     * Remaster template ID, please contact Tencent Cloud for details
+                     */
+                    uint64_t m_definition;
+                    bool m_definitionHasBeenSet;
+
+                    /**
                      * Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Remaster template ID, please contact Tencent Cloud for details
+                     * Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
                      */
-                    uint64_t m_definition;
-                    bool m_definitionHasBeenSet;
+                    std::string m_mediaStoragePath;
+                    bool m_mediaStoragePathHasBeenSet;
 
                     /**
                      * <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>

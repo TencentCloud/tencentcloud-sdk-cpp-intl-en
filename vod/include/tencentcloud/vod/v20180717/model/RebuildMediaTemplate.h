@@ -143,19 +143,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio-visual quality revival video control info.
+                     * @return RebuildVideoInfo Audio-visual quality revival video control info.
                      * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
-                     * 设置The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio-visual quality revival video control info.
+                     * @param _rebuildVideoInfo Audio-visual quality revival video control info.
                      * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
@@ -168,19 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio-visual quality revival audio control info.
+                     * @return RebuildAudioInfo Audio-visual quality revival audio control info.
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio-visual quality revival audio control info.
+                     * @param _rebuildAudioInfo Audio-visual quality revival audio control info.
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -193,19 +185,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RebuildAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetVideoInfo The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output video control information.
+                     * @return TargetVideoInfo Output video control information.
                      * 
                      */
                     RebuildMediaTargetVideoStream GetTargetVideoInfo() const;
 
                     /**
-                     * 设置The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetVideoInfo The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output video control information.
+                     * @param _targetVideoInfo Output video control information.
                      * 
                      */
                     void SetTargetVideoInfo(const RebuildMediaTargetVideoStream& _targetVideoInfo);
@@ -218,19 +206,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TargetAudioInfo The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output audio control information.
+                     * @return TargetAudioInfo Output audio control information.
                      * 
                      */
                     RebuildMediaTargetAudioStream GetTargetAudioInfo() const;
 
                     /**
-                     * 设置The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _targetAudioInfo The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output audio control information.
+                     * @param _targetAudioInfo Output audio control information.
                      * 
                      */
                     void SetTargetAudioInfo(const RebuildMediaTargetAudioStream& _targetAudioInfo);
@@ -400,29 +384,25 @@ Default value: 0.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio-visual quality revival video control info.
                      */
                     RebuildVideoInfo m_rebuildVideoInfo;
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio-visual quality revival audio control info.
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;
 
                     /**
-                     * The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output video control information.
                      */
                     RebuildMediaTargetVideoStream m_targetVideoInfo;
                     bool m_targetVideoInfoHasBeenSet;
 
                     /**
-                     * The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output audio control information.
                      */
                     RebuildMediaTargetAudioStream m_targetAudioInfo;
                     bool m_targetAudioInfoHasBeenSet;

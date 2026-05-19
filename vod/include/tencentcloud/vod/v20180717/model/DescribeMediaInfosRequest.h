@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of media file IDs. N starts from 0 and can be up to 19.
-                     * @return FileIds List of media file IDs. N starts from 0 and can be up to 19.
+                     * 获取<p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+                     * @return FileIds <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置List of media file IDs. N starts from 0 and can be up to 19.
-                     * @param _fileIds List of media file IDs. N starts from 0 and can be up to 19.
+                     * 设置<p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+                     * @param _fileIds <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,63 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
-                     * @return Filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+                     * 获取<p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
+                     * @return Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
-                     * @param _filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+                     * 设置<p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
+                     * @param _filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -156,31 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of media file IDs. N starts from 0 and can be up to 19.
+                     * <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+                     * <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;

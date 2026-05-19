@@ -44,23 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-                     * @return Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * 获取<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+                     * @return Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-                     * @param _format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * 设置<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+                     * @param _format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -73,19 +65,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
-                     * @return StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+                     * 获取<p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+                     * @return StreamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
                      * 
                      */
                     std::vector<AdaptiveStreamTemplate> GetStreamInfos() const;
 
                     /**
-                     * 设置Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
-                     * @param _streamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+                     * 设置<p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+                     * @param _streamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
                      * 
                      */
                     void SetStreamInfos(const std::vector<AdaptiveStreamTemplate>& _streamInfos);
@@ -98,15 +86,15 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -119,15 +107,15 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Template name. Length limit: 64 characters.
-                     * @return Name Template name. Length limit: 64 characters.
+                     * 获取<p>Template name. The length cannot exceed 64 characters.</p>
+                     * @return Name <p>Template name. The length cannot exceed 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name. Length limit: 64 characters.
-                     * @param _name Template name. Length limit: 64 characters.
+                     * 设置<p>Template name. The length cannot exceed 64 characters.</p>
+                     * @param _name <p>Template name. The length cannot exceed 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -140,31 +128,15 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
-                     * @return DrmType DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+                     * 获取<p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+                     * @return DrmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
-                     * @param _drmType DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+                     * 设置<p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+                     * @param _drmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -177,27 +149,15 @@ The default value is an empty string. It is an empty string, indicating that the
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
-                     * @return DrmKeyProvider The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+                     * 获取<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * @return DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
                      * 
                      */
                     std::string GetDrmKeyProvider() const;
 
                     /**
-                     * 设置The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
-                     * @param _drmKeyProvider The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+                     * 设置<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * @param _drmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
                      * 
                      */
                     void SetDrmKeyProvider(const std::string& _drmKeyProvider);
@@ -210,15 +170,15 @@ The default is `VOD`.
                     bool DrmKeyProviderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DrmEncryptType 
+                     * 获取<p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+                     * @return DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
                      * 
                      */
                     std::string GetDrmEncryptType() const;
 
                     /**
-                     * 设置
-                     * @param _drmEncryptType 
+                     * 设置<p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+                     * @param _drmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
                      * 
                      */
                     void SetDrmEncryptType(const std::string& _drmEncryptType);
@@ -231,27 +191,15 @@ The default is `VOD`.
                     bool DrmEncryptTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-                     * @return DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * 获取<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * @return DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      * 
                      */
                     uint64_t GetDisableHigherVideoBitrate() const;
 
                     /**
-                     * 设置Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-                     * @param _disableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * 设置<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * @param _disableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      * 
                      */
                     void SetDisableHigherVideoBitrate(const uint64_t& _disableHigherVideoBitrate);
@@ -264,27 +212,15 @@ Default value: no.
                     bool DisableHigherVideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-                     * @return DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * 获取<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * @return DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      * 
                      */
                     uint64_t GetDisableHigherVideoResolution() const;
 
                     /**
-                     * 设置Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-                     * @param _disableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * 设置<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * @param _disableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      * 
                      */
                     void SetDisableHigherVideoResolution(const uint64_t& _disableHigherVideoResolution);
@@ -297,15 +233,15 @@ Default value: no.
                     bool DisableHigherVideoResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 characters.
-                     * @return Comment Template description. Length limit: 256 characters.
+                     * 获取<p>Template description, with a length limit of 256 characters.</p>
+                     * @return Comment <p>Template description, with a length limit of 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 characters.
-                     * @param _comment Template description. Length limit: 256 characters.
+                     * 设置<p>Template description, with a length limit of 256 characters.</p>
+                     * @param _comment <p>Template description, with a length limit of 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -318,27 +254,15 @@ Default value: no.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-                     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * 获取<p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * @return SegmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-                     * @param _segmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * 设置<p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * @param _segmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -353,86 +277,67 @@ Default: ts
                 private:
 
                     /**
-                     * The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+                     * <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
                      */
                     std::vector<AdaptiveStreamTemplate> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Template name. Length limit: 64 characters.
+                     * <p>Template name. The length cannot exceed 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+                     * <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+                     * <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
                      */
                     std::string m_drmKeyProvider;
                     bool m_drmKeyProviderHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
                      */
                     std::string m_drmEncryptType;
                     bool m_drmEncryptTypeHasBeenSet;
 
                     /**
-                     * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      */
                     uint64_t m_disableHigherVideoBitrate;
                     bool m_disableHigherVideoBitrateHasBeenSet;
 
                     /**
-                     * Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+                     * <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
                      */
                     uint64_t m_disableHigherVideoResolution;
                     bool m_disableHigherVideoResolutionHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 characters.
+                     * <p>Template description, with a length limit of 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;

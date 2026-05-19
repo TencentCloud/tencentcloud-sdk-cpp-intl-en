@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bucket for uploading the API URL bucket_name.
-                     * @return StorageBucket Bucket for uploading the API URL bucket_name.
+                     * 获取<p>Bucket for uploading the API URL bucket_name.</p>
+                     * @return StorageBucket <p>Bucket for uploading the API URL bucket_name.</p>
                      * 
                      */
                     std::string GetStorageBucket() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool StorageBucketHasBeenSet() const;
 
                     /**
-                     * 获取Storage campus for uploading the Host Region of the port.
-                     * @return StorageRegion Storage campus for uploading the Host Region of the port.
+                     * 获取<p>Storage campus for uploading the Host Region of the port.</p>
+                     * @return StorageRegion <p>Storage campus for uploading the Host Region of the port.</p>
                      * 
                      */
                     std::string GetStorageRegion() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取VOD session for confirmation of API parameters VodSessionKey.
-                     * @return VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
+                     * 获取<p>VOD session for confirmation of API parameters VodSessionKey.</p>
+                     * @return VodSessionKey <p>VOD session for confirmation of API parameters VodSessionKey.</p>
                      * 
                      */
                     std::string GetVodSessionKey() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool VodSessionKeyHasBeenSet() const;
 
                     /**
-                     * 获取Media storage path for the object key (Key) used by the upload API to store media.
-                     * @return MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
+                     * 获取<p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
+                     * @return MediaStoragePath <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
                      * 
                      */
                     std::string GetMediaStoragePath() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool MediaStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取Cover storage path for uploading the object Key of the cover via API.
-                     * @return CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
+                     * 获取<p>Cover storage path for uploading the object Key of the cover via API.</p>
+                     * @return CoverStoragePath <p>Cover storage path for uploading the object Key of the cover via API.</p>
                      * 
                      */
                     std::string GetCoverStoragePath() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool CoverStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credentials for uploading API permission verification.
-                     * @return TempCertificate Temporary credentials for uploading API permission verification.
+                     * 获取<p>Temporary credentials for uploading API access verification.</p>
+                     * @return TempCertificate <p>Temporary credentials for uploading API access verification.</p>
                      * 
                      */
                     TempCertificate GetTempCertificate() const;
@@ -131,37 +131,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bucket for uploading the API URL bucket_name.
+                     * <p>Bucket for uploading the API URL bucket_name.</p>
                      */
                     std::string m_storageBucket;
                     bool m_storageBucketHasBeenSet;
 
                     /**
-                     * Storage campus for uploading the Host Region of the port.
+                     * <p>Storage campus for uploading the Host Region of the port.</p>
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * VOD session for confirmation of API parameters VodSessionKey.
+                     * <p>VOD session for confirmation of API parameters VodSessionKey.</p>
                      */
                     std::string m_vodSessionKey;
                     bool m_vodSessionKeyHasBeenSet;
 
                     /**
-                     * Media storage path for the object key (Key) used by the upload API to store media.
+                     * <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;
 
                     /**
-                     * Cover storage path for uploading the object Key of the cover via API.
+                     * <p>Cover storage path for uploading the object Key of the cover via API.</p>
                      */
                     std::string m_coverStoragePath;
                     bool m_coverStoragePathHasBeenSet;
 
                     /**
-                     * Temporary credentials for uploading API permission verification.
+                     * <p>Temporary credentials for uploading API access verification.</p>
                      */
                     TempCertificate m_tempCertificate;
                     bool m_tempCertificateHasBeenSet;

@@ -43,6 +43,8 @@
 #include <tencentcloud/mongodb/v20190725/model/DeleteAccountUserResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeAccountUsersRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeAccountUsersResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAuditConfigRequest.h>
@@ -189,6 +191,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLogDownloadTaskResponse> DeleteLogDownloadTaskOutcome;
                 typedef std::future<DeleteLogDownloadTaskOutcome> DeleteLogDownloadTaskOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DeleteLogDownloadTaskRequest&, DeleteLogDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogDownloadTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccountUsersResponse> DescribeAccountUsersOutcome;
+                typedef std::future<DescribeAccountUsersOutcome> DescribeAccountUsersOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeAccountUsersRequest&, DescribeAccountUsersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountUsersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
@@ -434,6 +439,15 @@ namespace TencentCloud
                 DeleteLogDownloadTaskOutcome DeleteLogDownloadTask(const Model::DeleteLogDownloadTaskRequest &request);
                 void DeleteLogDownloadTaskAsync(const Model::DeleteLogDownloadTaskRequest& request, const DeleteLogDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLogDownloadTaskOutcomeCallable DeleteLogDownloadTaskCallable(const Model::DeleteLogDownloadTaskRequest& request);
+
+                /**
+                 *This API is used to obtain all accounts of the current instance.
+                 * @param req DescribeAccountUsersRequest
+                 * @return DescribeAccountUsersOutcome
+                 */
+                DescribeAccountUsersOutcome DescribeAccountUsers(const Model::DescribeAccountUsersRequest &request);
+                void DescribeAccountUsersAsync(const Model::DescribeAccountUsersRequest& request, const DescribeAccountUsersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccountUsersOutcomeCallable DescribeAccountUsersCallable(const Model::DescribeAccountUsersRequest& request);
 
                 /**
                  *This API is used to query the asynchronous task status.

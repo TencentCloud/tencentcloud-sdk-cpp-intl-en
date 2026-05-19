@@ -47,14 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
                      * @return TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records that meet the conditions.
-                     * @return TotalCount The total number of records that meet the conditions.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The details of the moderation templates.
-                     * @return ReviewTemplateSet The details of the moderation templates.
+                     * 获取Review template detail list.
+                     * @return ReviewTemplateSet Review template detail list.
                      * 
                      */
                     std::vector<ReviewTemplate> GetReviewTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of records that meet the conditions.
+                     * Total number of records that meet the filtering conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The details of the moderation templates.
+                     * Review template detail list.
                      */
                     std::vector<ReviewTemplate> m_reviewTemplateSet;
                     bool m_reviewTemplateSetHasBeenSet;

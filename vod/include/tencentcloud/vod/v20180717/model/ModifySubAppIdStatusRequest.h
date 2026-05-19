@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,31 +64,31 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
-                     * @return Status Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
+                     * 获取Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: Disabled.</li>
+<li>Destroyed: Terminate.</li>
+If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+                     * @return Status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: Disabled.</li>
+<li>Destroyed: Terminate.</li>
+If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
-                     * @param _status Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
+                     * 设置Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: Disabled.</li>
+<li>Destroyed: Terminate.</li>
+If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+                     * @param _status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: Disabled.</li>
+<li>Destroyed: Terminate.</li>
+If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -103,17 +103,17 @@ You cannot enable a subapplication whose status is "Destroying". You can enable 
                 private:
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
+                     * Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: Disabled.</li>
+<li>Destroyed: Terminate.</li>
+If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

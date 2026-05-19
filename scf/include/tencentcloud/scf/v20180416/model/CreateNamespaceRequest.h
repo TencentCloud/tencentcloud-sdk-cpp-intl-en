@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/scf/v20180416/model/NamespaceResourceEnv.h>
 
 
 namespace TencentCloud
@@ -84,6 +85,27 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ResourceEnv 
+                     * 
+                     */
+                    NamespaceResourceEnv GetResourceEnv() const;
+
+                    /**
+                     * 设置
+                     * @param _resourceEnv 
+                     * 
+                     */
+                    void SetResourceEnv(const NamespaceResourceEnv& _resourceEnv);
+
+                    /**
+                     * 判断参数 ResourceEnv 是否已赋值
+                     * @return ResourceEnv 是否已赋值
+                     * 
+                     */
+                    bool ResourceEnvHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +119,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    NamespaceResourceEnv m_resourceEnv;
+                    bool m_resourceEnvHasBeenSet;
 
                 };
             }

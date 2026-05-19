@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
-                     * @return Switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+                     * 获取Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
+                     * @return Switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
-                     * @param _switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+                     * 设置Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
+                     * @param _switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The modification information of the subtitle format list.
-                     * @return SubtitleFormatsOperation The modification information of the subtitle format list.
+                     * 获取Subtitle format list operation information.
+                     * @return SubtitleFormatsOperation Subtitle format list operation information.
                      * 
                      */
                     SubtitleFormatsOperation GetSubtitleFormatsOperation() const;
 
                     /**
-                     * 设置The modification information of the subtitle format list.
-                     * @param _subtitleFormatsOperation The modification information of the subtitle format list.
+                     * 设置Subtitle format list operation information.
+                     * @param _subtitleFormatsOperation Subtitle format list operation information.
                      * 
                      */
                     void SetSubtitleFormatsOperation(const SubtitleFormatsOperation& _subtitleFormatsOperation);
@@ -98,27 +98,27 @@ namespace TencentCloud
                     bool SubtitleFormatsOperationHasBeenSet() const;
 
                     /**
-                     * 获取The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-                     * @return SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+                     * 获取Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
+                     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
                      * @deprecated
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-                     * @param _subtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+                     * 设置Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
+                     * @param _subtitleFormat Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
                      * @deprecated
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -131,15 +131,31 @@ namespace TencentCloud
                     bool SubtitleFormatHasBeenSet() const;
 
                     /**
-                     * 获取Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
-                     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * 获取Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+                     * @return SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
                      * 
                      */
                     std::string GetSrcLanguage() const;
 
                     /**
-                     * 设置Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
-                     * @param _srcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * 设置Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+                     * @param _srcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
                      * 
                      */
                     void SetSrcLanguage(const std::string& _srcLanguage);
@@ -152,15 +168,15 @@ namespace TencentCloud
                     bool SrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Specify subtitle name, length limit: 64 characters. This value will be used for player display.
-                     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * 获取Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置Specify subtitle name, length limit: 64 characters. This value will be used for player display.
-                     * @param _subtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * 设置Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * @param _subtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      * 
                      */
                     void SetSubtitleName(const std::string& _subtitleName);
@@ -175,36 +191,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+                     * Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The modification information of the subtitle format list.
+                     * Subtitle format list operation information.
                      */
                     SubtitleFormatsOperation m_subtitleFormatsOperation;
                     bool m_subtitleFormatsOperationHasBeenSet;
 
                     /**
-                     * The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+                     * Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
 
                     /**
-                     * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
                      */
                     std::string m_srcLanguage;
                     bool m_srcLanguageHasBeenSet;
 
                     /**
-                     * Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;

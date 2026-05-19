@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name
-                     * @return Domain Domain name
+                     * 获取<p>Domain name.</p>
+                     * @return Domain <p>Domain name.</p>
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name
-                     * @param _domain Domain name
+                     * 设置<p>Domain name.</p>
+                     * @param _domain <p>Domain name.</p>
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -74,19 +74,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return AccelerateAreaInfos Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取<p>Acceleration region information.</p>
+                     * @return AccelerateAreaInfos <p>Acceleration region information.</p>
                      * 
                      */
                     std::vector<AccelerateAreaInfo> GetAccelerateAreaInfos() const;
 
                     /**
-                     * 设置Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param _accelerateAreaInfos Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置<p>Acceleration region information.</p>
+                     * @param _accelerateAreaInfos <p>Acceleration region information.</p>
                      * 
                      */
                     void SetAccelerateAreaInfos(const std::vector<AccelerateAreaInfo>& _accelerateAreaInfos);
@@ -99,27 +95,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool AccelerateAreaInfosHasBeenSet() const;
 
                     /**
-                     * 获取Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
-                     * @return DeployStatus Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+                     * 获取<p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+                     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
                      * 
                      */
                     std::string GetDeployStatus() const;
 
                     /**
-                     * 设置Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
-                     * @param _deployStatus Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+                     * 设置<p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+                     * @param _deployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
                      * 
                      */
                     void SetDeployStatus(const std::string& _deployStatus);
@@ -132,19 +116,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool DeployStatusHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return HTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取<p>HTTPS configuration message.</p>
+                     * @return HTTPSConfig <p>HTTPS configuration message.</p>
                      * 
                      */
                     DomainHTTPSConfig GetHTTPSConfig() const;
 
                     /**
-                     * 设置HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param _hTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置<p>HTTPS configuration message.</p>
+                     * @param _hTTPSConfig <p>HTTPS configuration message.</p>
                      * 
                      */
                     void SetHTTPSConfig(const DomainHTTPSConfig& _hTTPSConfig);
@@ -157,19 +137,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool HTTPSConfigHasBeenSet() const;
 
                     /**
-                     * 获取[Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+                     * @return UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
                      * 
                      */
                     UrlSignatureAuthPolicy GetUrlSignatureAuthPolicy() const;
 
                     /**
-                     * 设置[Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param _urlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+                     * @param _urlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
                      * 
                      */
                     void SetUrlSignatureAuthPolicy(const UrlSignatureAuthPolicy& _urlSignatureAuthPolicy);
@@ -182,19 +158,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool UrlSignatureAuthPolicyHasBeenSet() const;
 
                     /**
-                     * 获取[Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+                     * @return RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
                      * 
                      */
                     RefererAuthPolicy GetRefererAuthPolicy() const;
 
                     /**
-                     * 设置[Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param _refererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+                     * @param _refererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
                      * 
                      */
                     void SetRefererAuthPolicy(const RefererAuthPolicy& _refererAuthPolicy);
@@ -207,19 +179,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool RefererAuthPolicyHasBeenSet() const;
 
                     /**
-                     * 获取The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-                     * @return CreateTime The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 获取<p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+                     * @return CreateTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-                     * @param _createTime The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 设置<p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+                     * @param _createTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -232,19 +200,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Domain name QUIC configuration message.</p>
+                     * @return QUICConfig <p>Domain name QUIC configuration message.</p>
                      * 
                      */
                     DomainQUICConfig GetQUICConfig() const;
 
                     /**
-                     * 设置The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Domain name QUIC configuration message.</p>
+                     * @param _qUICConfig <p>Domain name QUIC configuration message.</p>
                      * 
                      */
                     void SetQUICConfig(const DomainQUICConfig& _qUICConfig);
@@ -257,15 +221,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QUICConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPFilterPolicy 
+                     * 获取<p>IP access restriction configuration message.</p>
+                     * @return IPFilterPolicy <p>IP access restriction configuration message.</p>
                      * 
                      */
                     IPFilterPolicy GetIPFilterPolicy() const;
 
                     /**
-                     * 设置
-                     * @param _iPFilterPolicy 
+                     * 设置<p>IP access restriction configuration message.</p>
+                     * @param _iPFilterPolicy <p>IP access restriction configuration message.</p>
                      * 
                      */
                     void SetIPFilterPolicy(const IPFilterPolicy& _iPFilterPolicy);
@@ -278,19 +242,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IPFilterPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
-                     * @return Type Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * 获取<p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+                     * @return Type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
-                     * @param _type Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * 设置<p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+                     * @param _type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -305,71 +265,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Domain name
+                     * <p>Domain name.</p>
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * <p>Acceleration region information.</p>
                      */
                     std::vector<AccelerateAreaInfo> m_accelerateAreaInfos;
                     bool m_accelerateAreaInfosHasBeenSet;
 
                     /**
-                     * Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+                     * <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
                      */
                     std::string m_deployStatus;
                     bool m_deployStatusHasBeenSet;
 
                     /**
-                     * HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * <p>HTTPS configuration message.</p>
                      */
                     DomainHTTPSConfig m_hTTPSConfig;
                     bool m_hTTPSConfigHasBeenSet;
 
                     /**
-                     * [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
                      */
                     UrlSignatureAuthPolicy m_urlSignatureAuthPolicy;
                     bool m_urlSignatureAuthPolicyHasBeenSet;
 
                     /**
-                     * [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
                      */
                     RefererAuthPolicy m_refererAuthPolicy;
                     bool m_refererAuthPolicyHasBeenSet;
 
                     /**
-                     * The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Domain name QUIC configuration message.</p>
                      */
                     DomainQUICConfig m_qUICConfig;
                     bool m_qUICConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>IP access restriction configuration message.</p>
                      */
                     IPFilterPolicy m_iPFilterPolicy;
                     bool m_iPFilterPolicyHasBeenSet;
 
                     /**
-                     * Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

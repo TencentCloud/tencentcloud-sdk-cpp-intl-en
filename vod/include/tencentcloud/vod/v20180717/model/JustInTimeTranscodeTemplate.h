@@ -113,18 +113,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return VideoConfigure Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     VideoConfigureInfo GetVideoConfigure() const;
 
                     /**
                      * 设置Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _videoConfigure Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetVideoConfigure(const VideoConfigureInfo& _videoConfigure);
@@ -137,19 +133,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool VideoConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WatermarkConfigure Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Watermark parameter configuration.
+                     * @return WatermarkConfigure Watermark parameter configuration.
                      * 
                      */
                     WatermarkConfigureData GetWatermarkConfigure() const;
 
                     /**
-                     * 设置Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _watermarkConfigure Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Watermark parameter configuration.
+                     * @param _watermarkConfigure Watermark parameter configuration.
                      * 
                      */
                     void SetWatermarkConfigure(const WatermarkConfigureData& _watermarkConfigure);
@@ -183,14 +175,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     VideoConfigureInfo m_videoConfigure;
                     bool m_videoConfigureHasBeenSet;
 
                     /**
-                     * Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Watermark parameter configuration.
                      */
                     WatermarkConfigureData m_watermarkConfigure;
                     bool m_watermarkConfigureHasBeenSet;

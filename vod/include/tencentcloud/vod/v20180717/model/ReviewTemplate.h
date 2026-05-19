@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of a moderation template.
+                * Review template detail
                 */
                 class ReviewTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of the moderation template.
-                     * @return Definition The unique ID of the moderation template.
+                     * 获取Unique tag of the moderation template.
+                     * @return Definition Unique tag of the moderation template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The unique ID of the moderation template.
-                     * @param _definition The unique ID of the moderation template.
+                     * 设置Unique tag of the moderation template.
+                     * @param _definition Unique tag of the moderation template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -204,7 +204,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of the moderation template.
+                     * Unique tag of the moderation template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return FaceReviewInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取User-defined character video moderation control parameter.
+                     * @return FaceReviewInfo User-defined character video moderation control parameter.
                      * 
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _faceReviewInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置User-defined character video moderation control parameter.
+                     * @param _faceReviewInfo User-defined character video moderation control parameter.
                      * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
@@ -75,19 +71,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return AsrReviewInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取User custom voice video moderation control parameter.
+                     * @return AsrReviewInfo User custom voice video moderation control parameter.
                      * 
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _asrReviewInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置User custom voice video moderation control parameter.
+                     * @param _asrReviewInfo User custom voice video moderation control parameter.
                      * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
@@ -100,19 +92,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return OcrReviewInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取User custom text video moderation control parameter.
+                     * @return OcrReviewInfo User custom text video moderation control parameter.
                      * 
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _ocrReviewInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置User custom text video moderation control parameter.
+                     * @param _ocrReviewInfo User custom text video moderation control parameter.
                      * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
@@ -127,22 +115,19 @@ Note: This field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * User-defined character video moderation control parameter.
                      */
                     UserDefineFaceReviewTemplateInfo m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * User custom voice video moderation control parameter.
                      */
                     UserDefineAsrTextReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * User custom text video moderation control parameter.
                      */
                     UserDefineOcrTextReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

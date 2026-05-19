@@ -110,6 +110,24 @@ Example value: RUN
                      */
                     bool ResultFile3DsHasBeenSet() const;
 
+                    /**
+                     * 获取Component segmentation data;
+Output format: {"MeshName_part_1": {"face_ids": [1,2,3..], "color": "#FF805C"}}
+Here, face_idsis an integer array representing a set of face IDs for the segment, and colorspecifies the display color.
+                     * @return PartSegmentationInfo Component segmentation data;
+Output format: {"MeshName_part_1": {"face_ids": [1,2,3..], "color": "#FF805C"}}
+Here, face_idsis an integer array representing a set of face IDs for the segment, and colorspecifies the display color.
+                     * 
+                     */
+                    std::string GetPartSegmentationInfo() const;
+
+                    /**
+                     * 判断参数 PartSegmentationInfo 是否已赋值
+                     * @return PartSegmentationInfo 是否已赋值
+                     * 
+                     */
+                    bool PartSegmentationInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +158,14 @@ Example value: RUN
                      */
                     std::vector<File3D> m_resultFile3Ds;
                     bool m_resultFile3DsHasBeenSet;
+
+                    /**
+                     * Component segmentation data;
+Output format: {"MeshName_part_1": {"face_ids": [1,2,3..], "color": "#FF805C"}}
+Here, face_idsis an integer array representing a set of face IDs for the segment, and colorspecifies the display color.
+                     */
+                    std::string m_partSegmentationInfo;
+                    bool m_partSegmentationInfoHasBeenSet;
 
                 };
             }

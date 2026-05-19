@@ -56,15 +56,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The file ID.
-                     * @return FileId The file ID.
+                     * 获取Media File ID.
+                     * @return FileId Media File ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The file ID.
-                     * @param _fileId The file ID.
+                     * 设置Media File ID.
+                     * @param _fileId Media File ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-                     * @return StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * 获取Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * @return StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-                     * @param _startTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * 设置Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * @param _startTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-                     * @return EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * 获取End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
+                     * @return EndTimeOffset End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-                     * @param _endTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * 设置End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
+                     * @param _endTimeOffset End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -140,15 +140,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The video quality remastering parameters.
-                     * @return RepairInfo The video quality remastering parameters.
+                     * 获取Image quality restoration control parameters.
+                     * @return RepairInfo Image quality restoration control parameters.
                      * 
                      */
                     RepairInfo GetRepairInfo() const;
 
                     /**
-                     * 设置The video quality remastering parameters.
-                     * @param _repairInfo The video quality remastering parameters.
+                     * 设置Image quality restoration control parameters.
+                     * @param _repairInfo Image quality restoration control parameters.
                      * 
                      */
                     void SetRepairInfo(const RepairInfo& _repairInfo);
@@ -161,15 +161,15 @@ namespace TencentCloud
                     bool RepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取The smart frame interpolation parameters.
-                     * @return VideoFrameInterpolationInfo The smart frame interpolation parameters.
+                     * 获取Intelligent Frame Interpolation Control Parameters.
+                     * @return VideoFrameInterpolationInfo Intelligent Frame Interpolation Control Parameters.
                      * 
                      */
                     VideoFrameInterpolationInfo GetVideoFrameInterpolationInfo() const;
 
                     /**
-                     * 设置The smart frame interpolation parameters.
-                     * @param _videoFrameInterpolationInfo The smart frame interpolation parameters.
+                     * 设置Intelligent Frame Interpolation Control Parameters.
+                     * @param _videoFrameInterpolationInfo Intelligent Frame Interpolation Control Parameters.
                      * 
                      */
                     void SetVideoFrameInterpolationInfo(const VideoFrameInterpolationInfo& _videoFrameInterpolationInfo);
@@ -182,15 +182,15 @@ namespace TencentCloud
                     bool VideoFrameInterpolationInfoHasBeenSet() const;
 
                     /**
-                     * 获取The super resolution parameters.
-                     * @return SuperResolutionInfo The super resolution parameters.
+                     * 获取Image super-resolution control parameters.
+                     * @return SuperResolutionInfo Image super-resolution control parameters.
                      * 
                      */
                     SuperResolutionInfo GetSuperResolutionInfo() const;
 
                     /**
-                     * 设置The super resolution parameters.
-                     * @param _superResolutionInfo The super resolution parameters.
+                     * 设置Image super-resolution control parameters.
+                     * @param _superResolutionInfo Image super-resolution control parameters.
                      * 
                      */
                     void SetSuperResolutionInfo(const SuperResolutionInfo& _superResolutionInfo);
@@ -203,15 +203,15 @@ namespace TencentCloud
                     bool SuperResolutionInfoHasBeenSet() const;
 
                     /**
-                     * 获取The high dynamic range (HDR) parameters.
-                     * @return HDRInfo The high dynamic range (HDR) parameters.
+                     * 获取High dynamic range type control parameter.
+                     * @return HDRInfo High dynamic range type control parameter.
                      * 
                      */
                     HDRInfo GetHDRInfo() const;
 
                     /**
-                     * 设置The high dynamic range (HDR) parameters.
-                     * @param _hDRInfo The high dynamic range (HDR) parameters.
+                     * 设置High dynamic range type control parameter.
+                     * @param _hDRInfo High dynamic range type control parameter.
                      * 
                      */
                     void SetHDRInfo(const HDRInfo& _hDRInfo);
@@ -224,15 +224,15 @@ namespace TencentCloud
                     bool HDRInfoHasBeenSet() const;
 
                     /**
-                     * 获取The image noise removal parameters.
-                     * @return VideoDenoiseInfo The image noise removal parameters.
+                     * 获取Video noise reduction control parameters.
+                     * @return VideoDenoiseInfo Video noise reduction control parameters.
                      * 
                      */
                     VideoDenoiseInfo GetVideoDenoiseInfo() const;
 
                     /**
-                     * 设置The image noise removal parameters.
-                     * @param _videoDenoiseInfo The image noise removal parameters.
+                     * 设置Video noise reduction control parameters.
+                     * @param _videoDenoiseInfo Video noise reduction control parameters.
                      * 
                      */
                     void SetVideoDenoiseInfo(const VideoDenoiseInfo& _videoDenoiseInfo);
@@ -245,15 +245,15 @@ namespace TencentCloud
                     bool VideoDenoiseInfoHasBeenSet() const;
 
                     /**
-                     * 获取The noise removal parameters.
-                     * @return AudioDenoiseInfo The noise removal parameters.
+                     * 获取Audio noise reduction control parameters.
+                     * @return AudioDenoiseInfo Audio noise reduction control parameters.
                      * 
                      */
                     AudioDenoiseInfo GetAudioDenoiseInfo() const;
 
                     /**
-                     * 设置The noise removal parameters.
-                     * @param _audioDenoiseInfo The noise removal parameters.
+                     * 设置Audio noise reduction control parameters.
+                     * @param _audioDenoiseInfo Audio noise reduction control parameters.
                      * 
                      */
                     void SetAudioDenoiseInfo(const AudioDenoiseInfo& _audioDenoiseInfo);
@@ -266,15 +266,15 @@ namespace TencentCloud
                     bool AudioDenoiseInfoHasBeenSet() const;
 
                     /**
-                     * 获取The color enhancement parameters.
-                     * @return ColorInfo The color enhancement parameters.
+                     * 获取Color enhancement control parameters.
+                     * @return ColorInfo Color enhancement control parameters.
                      * 
                      */
                     ColorEnhanceInfo GetColorInfo() const;
 
                     /**
-                     * 设置The color enhancement parameters.
-                     * @param _colorInfo The color enhancement parameters.
+                     * 设置Color enhancement control parameters.
+                     * @param _colorInfo Color enhancement control parameters.
                      * 
                      */
                     void SetColorInfo(const ColorEnhanceInfo& _colorInfo);
@@ -287,15 +287,15 @@ namespace TencentCloud
                     bool ColorInfoHasBeenSet() const;
 
                     /**
-                     * 获取The detail enhancement parameters.
-                     * @return SharpInfo The detail enhancement parameters.
+                     * 获取Detail enhancement control parameters.
+                     * @return SharpInfo Detail enhancement control parameters.
                      * 
                      */
                     SharpEnhanceInfo GetSharpInfo() const;
 
                     /**
-                     * 设置The detail enhancement parameters.
-                     * @param _sharpInfo The detail enhancement parameters.
+                     * 设置Detail enhancement control parameters.
+                     * @param _sharpInfo Detail enhancement control parameters.
                      * 
                      */
                     void SetSharpInfo(const SharpEnhanceInfo& _sharpInfo);
@@ -308,15 +308,15 @@ namespace TencentCloud
                     bool SharpInfoHasBeenSet() const;
 
                     /**
-                     * 获取The face enhancement parameters.
-                     * @return FaceInfo The face enhancement parameters.
+                     * 获取Face enhancement control parameters.
+                     * @return FaceInfo Face enhancement control parameters.
                      * 
                      */
                     FaceEnhanceInfo GetFaceInfo() const;
 
                     /**
-                     * 设置The face enhancement parameters.
-                     * @param _faceInfo The face enhancement parameters.
+                     * 设置Face enhancement control parameters.
+                     * @param _faceInfo Face enhancement control parameters.
                      * 
                      */
                     void SetFaceInfo(const FaceEnhanceInfo& _faceInfo);
@@ -329,15 +329,15 @@ namespace TencentCloud
                     bool FaceInfoHasBeenSet() const;
 
                     /**
-                     * 获取The low-light enhancement parameters.
-                     * @return LowLightInfo The low-light enhancement parameters.
+                     * 获取Low-light control parameters.
+                     * @return LowLightInfo Low-light control parameters.
                      * 
                      */
                     LowLightEnhanceInfo GetLowLightInfo() const;
 
                     /**
-                     * 设置The low-light enhancement parameters.
-                     * @param _lowLightInfo The low-light enhancement parameters.
+                     * 设置Low-light control parameters.
+                     * @param _lowLightInfo Low-light control parameters.
                      * 
                      */
                     void SetLowLightInfo(const LowLightEnhanceInfo& _lowLightInfo);
@@ -350,15 +350,15 @@ namespace TencentCloud
                     bool LowLightInfoHasBeenSet() const;
 
                     /**
-                     * 获取The banding removal parameters.
-                     * @return ScratchRepairInfo The banding removal parameters.
+                     * 获取Scratch removal control parameter.
+                     * @return ScratchRepairInfo Scratch removal control parameter.
                      * 
                      */
                     ScratchRepairInfo GetScratchRepairInfo() const;
 
                     /**
-                     * 设置The banding removal parameters.
-                     * @param _scratchRepairInfo The banding removal parameters.
+                     * 设置Scratch removal control parameter.
+                     * @param _scratchRepairInfo Scratch removal control parameter.
                      * 
                      */
                     void SetScratchRepairInfo(const ScratchRepairInfo& _scratchRepairInfo);
@@ -371,15 +371,15 @@ namespace TencentCloud
                     bool ScratchRepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取The artifact removal (smoothing) parameters.
-                     * @return ArtifactRepairInfo The artifact removal (smoothing) parameters.
+                     * 获取Deburring control parameter.
+                     * @return ArtifactRepairInfo Deburring control parameter.
                      * 
                      */
                     ArtifactRepairInfo GetArtifactRepairInfo() const;
 
                     /**
-                     * 设置The artifact removal (smoothing) parameters.
-                     * @param _artifactRepairInfo The artifact removal (smoothing) parameters.
+                     * 设置Deburring control parameter.
+                     * @param _artifactRepairInfo Deburring control parameter.
                      * 
                      */
                     void SetArtifactRepairInfo(const ArtifactRepairInfo& _artifactRepairInfo);
@@ -392,15 +392,15 @@ namespace TencentCloud
                     bool ArtifactRepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output parameters of the file.
-                     * @return TargetInfo The output parameters of the file.
+                     * 获取Audio-Visual Quality Rebirth Output Target Parameters.
+                     * @return TargetInfo Audio-Visual Quality Rebirth Output Target Parameters.
                      * 
                      */
                     RebuildMediaTargetInfo GetTargetInfo() const;
 
                     /**
-                     * 设置The output parameters of the file.
-                     * @param _targetInfo The output parameters of the file.
+                     * 设置Audio-Visual Quality Rebirth Output Target Parameters.
+                     * @param _targetInfo Audio-Visual Quality Rebirth Output Target Parameters.
                      * 
                      */
                     void SetTargetInfo(const RebuildMediaTargetInfo& _targetInfo);
@@ -413,15 +413,15 @@ namespace TencentCloud
                     bool TargetInfoHasBeenSet() const;
 
                     /**
-                     * 获取The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-                     * @return SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-                     * @param _sessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -434,15 +434,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-                     * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-                     * @param _sessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -455,15 +455,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
-                     * @return TasksPriority The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
+                     * 获取Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * @return TasksPriority Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
-                     * @param _tasksPriority The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
+                     * 设置Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * @param _tasksPriority Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -476,15 +476,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取A reserved parameter.
-                     * @return ExtInfo A reserved parameter.
+                     * 获取Reserved field, used when special purpose.
+                     * @return ExtInfo Reserved field, used when special purpose.
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置A reserved parameter.
-                     * @param _extInfo A reserved parameter.
+                     * 设置Reserved field, used when special purpose.
+                     * @param _extInfo Reserved field, used when special purpose.
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -499,127 +499,127 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The file ID.
+                     * Media File ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The video quality remastering parameters.
+                     * Image quality restoration control parameters.
                      */
                     RepairInfo m_repairInfo;
                     bool m_repairInfoHasBeenSet;
 
                     /**
-                     * The smart frame interpolation parameters.
+                     * Intelligent Frame Interpolation Control Parameters.
                      */
                     VideoFrameInterpolationInfo m_videoFrameInterpolationInfo;
                     bool m_videoFrameInterpolationInfoHasBeenSet;
 
                     /**
-                     * The super resolution parameters.
+                     * Image super-resolution control parameters.
                      */
                     SuperResolutionInfo m_superResolutionInfo;
                     bool m_superResolutionInfoHasBeenSet;
 
                     /**
-                     * The high dynamic range (HDR) parameters.
+                     * High dynamic range type control parameter.
                      */
                     HDRInfo m_hDRInfo;
                     bool m_hDRInfoHasBeenSet;
 
                     /**
-                     * The image noise removal parameters.
+                     * Video noise reduction control parameters.
                      */
                     VideoDenoiseInfo m_videoDenoiseInfo;
                     bool m_videoDenoiseInfoHasBeenSet;
 
                     /**
-                     * The noise removal parameters.
+                     * Audio noise reduction control parameters.
                      */
                     AudioDenoiseInfo m_audioDenoiseInfo;
                     bool m_audioDenoiseInfoHasBeenSet;
 
                     /**
-                     * The color enhancement parameters.
+                     * Color enhancement control parameters.
                      */
                     ColorEnhanceInfo m_colorInfo;
                     bool m_colorInfoHasBeenSet;
 
                     /**
-                     * The detail enhancement parameters.
+                     * Detail enhancement control parameters.
                      */
                     SharpEnhanceInfo m_sharpInfo;
                     bool m_sharpInfoHasBeenSet;
 
                     /**
-                     * The face enhancement parameters.
+                     * Face enhancement control parameters.
                      */
                     FaceEnhanceInfo m_faceInfo;
                     bool m_faceInfoHasBeenSet;
 
                     /**
-                     * The low-light enhancement parameters.
+                     * Low-light control parameters.
                      */
                     LowLightEnhanceInfo m_lowLightInfo;
                     bool m_lowLightInfoHasBeenSet;
 
                     /**
-                     * The banding removal parameters.
+                     * Scratch removal control parameter.
                      */
                     ScratchRepairInfo m_scratchRepairInfo;
                     bool m_scratchRepairInfoHasBeenSet;
 
                     /**
-                     * The artifact removal (smoothing) parameters.
+                     * Deburring control parameter.
                      */
                     ArtifactRepairInfo m_artifactRepairInfo;
                     bool m_artifactRepairInfoHasBeenSet;
 
                     /**
-                     * The output parameters of the file.
+                     * Audio-Visual Quality Rebirth Output Target Parameters.
                      */
                     RebuildMediaTargetInfo m_targetInfo;
                     bool m_targetInfoHasBeenSet;
 
                     /**
-                     * The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
+                     * Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * A reserved parameter.
+                     * Reserved field, used when special purpose.
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -109,15 +109,15 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
                     bool AuthTypeHasBeenSet() const;
 
                     /**
-                     * 获取The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
-                     * @return Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+                     * 获取Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+                     * @return Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
                      * 
                      */
                     std::vector<std::string> GetReferers() const;
 
                     /**
-                     * 设置The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
-                     * @param _referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+                     * 设置Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+                     * @param _referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
                      * 
                      */
                     void SetReferers(const std::vector<std::string>& _referers);
@@ -182,7 +182,7 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
                     bool m_authTypeHasBeenSet;
 
                     /**
-                     * The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+                     * Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
                      */
                     std::vector<std::string> m_referers;
                     bool m_referersHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task ID of video splitting. You can use this ID to query the status of the splitting task (task type is SplitMedia).
-                     * @return TaskId The task ID of video splitting. You can use this ID to query the status of the splitting task (task type is SplitMedia).
+                     * 获取The task ID of the video splitting task. You can query the status of the splitting task (task type is SplitMedia) through this ID.
+                     * @return TaskId The task ID of the video splitting task. You can query the status of the splitting task (task type is SplitMedia) through this ID.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The task ID of video splitting. You can use this ID to query the status of the splitting task (task type is SplitMedia).
+                     * The task ID of the video splitting task. You can query the status of the splitting task (task type is SplitMedia) through this ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

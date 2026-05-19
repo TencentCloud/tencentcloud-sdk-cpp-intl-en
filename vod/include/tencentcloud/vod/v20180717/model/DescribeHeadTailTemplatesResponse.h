@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records matching the filter criteria.
-                     * @return TotalCount The total number of records matching the filter criteria.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Head Tail Template Details.
-                     * @return HeadTailTemplateSet Head Tail Template Details.
+                     * 获取Header and trailer template detail list.
+                     * @return HeadTailTemplateSet Header and trailer template detail list.
                      * 
                      */
                     std::vector<HeadTailTemplate> GetHeadTailTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of records matching the filter criteria.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Head Tail Template Details.
+                     * Header and trailer template detail list.
                      */
                     std::vector<HeadTailTemplate> m_headTailTemplateSet;
                     bool m_headTailTemplateSetHasBeenSet;

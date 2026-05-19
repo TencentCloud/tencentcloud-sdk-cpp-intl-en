@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records matching the filter criteria.
-                     * @return TotalCount The total number of records matching the filter criteria.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Detailed list of Rebuild Media templates.
-                     * @return RebuildMediaTemplateSet Detailed list of Rebuild Media templates.
+                     * 获取Audio and video quality rebirth template detail list.
+                     * @return RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
                      * 
                      */
                     std::vector<RebuildMediaTemplate> GetRebuildMediaTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of records matching the filter criteria.
+                     * Total number of records that meet the filtering conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Detailed list of Rebuild Media templates.
+                     * Audio and video quality rebirth template detail list.
                      */
                     std::vector<RebuildMediaTemplate> m_rebuildMediaTemplateSet;
                     bool m_rebuildMediaTemplateSetHasBeenSet;

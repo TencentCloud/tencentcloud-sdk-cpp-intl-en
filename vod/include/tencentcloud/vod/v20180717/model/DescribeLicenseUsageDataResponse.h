@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The license request statistics (the number of license requests in the time period specified)
-                     * @return LicenseUsageDataSet The license request statistics (the number of license requests in the time period specified)
+                     * 获取License query count stats show detailed data of the queried license.
+                     * @return LicenseUsageDataSet License query count stats show detailed data of the queried license.
                      * 
                      */
                     std::vector<LicenseUsageDataItem> GetLicenseUsageDataSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The license request statistics (the number of license requests in the time period specified)
+                     * License query count stats show detailed data of the queried license.
                      */
                     std::vector<LicenseUsageDataItem> m_licenseUsageDataSet;
                     bool m_licenseUsageDataSetHasBeenSet;

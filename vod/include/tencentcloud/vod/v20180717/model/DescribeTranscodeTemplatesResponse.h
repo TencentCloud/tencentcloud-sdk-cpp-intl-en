@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeTemplateSet List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Transcoding template detail list.
+                     * @return TranscodeTemplateSet Transcoding template detail list.
                      * 
                      */
                     std::vector<TranscodeTemplate> GetTranscodeTemplateSet() const;
@@ -77,14 +75,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Transcoding template detail list.
                      */
                     std::vector<TranscodeTemplate> m_transcodeTemplateSet;
                     bool m_transcodeTemplateSetHasBeenSet;

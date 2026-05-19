@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Comply with the filter conditions, the total number of records.
-                     * @return TotalCount Comply with the filter conditions, the total number of records.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspect template details list.
-                     * @return QualityInspectTemplateSet Media quality inspect template details list.
+                     * 获取Audio and video quality detection template details list.
+                     * @return QualityInspectTemplateSet Audio and video quality detection template details list.
                      * 
                      */
                     std::vector<QualityInspectTemplateItem> GetQualityInspectTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Comply with the filter conditions, the total number of records.
+                     * Total number of records that meet the filtering conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Media quality inspect template details list.
+                     * Audio and video quality detection template details list.
                      */
                     std::vector<QualityInspectTemplateItem> m_qualityInspectTemplateSet;
                     bool m_qualityInspectTemplateSetHasBeenSet;

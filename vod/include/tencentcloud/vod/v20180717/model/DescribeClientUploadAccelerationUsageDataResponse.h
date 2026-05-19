@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The usage of client upload acceleration.
-                     * @return ClientUploadAccelerationUsageDataSet The usage of client upload acceleration.
+                     * 获取Client upload acceleration statistics data.
+                     * @return ClientUploadAccelerationUsageDataSet Client upload acceleration statistics data.
                      * 
                      */
                     std::vector<StatDataItem> GetClientUploadAccelerationUsageDataSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The usage of client upload acceleration.
+                     * Client upload acceleration statistics data.
                      */
                     std::vector<StatDataItem> m_clientUploadAccelerationUsageDataSet;
                     bool m_clientUploadAccelerationUsageDataSetHasBeenSet;

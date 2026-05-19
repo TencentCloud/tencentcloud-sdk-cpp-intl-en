@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI-generated product 360-degree show video parameter configuration
                 */
                 class ProductShowcaseConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CameraMovement 
+                     * 获取Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
+                     * @return CameraMovement Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
                      * 
                      */
                     std::string GetCameraMovement() const;
 
                     /**
-                     * 设置
-                     * @param _cameraMovement 
+                     * 设置Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
+                     * @param _cameraMovement Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
                      * 
                      */
                     void SetCameraMovement(const std::string& _cameraMovement);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Camera movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
                      */
                     std::string m_cameraMovement;
                     bool m_cameraMovementHasBeenSet;

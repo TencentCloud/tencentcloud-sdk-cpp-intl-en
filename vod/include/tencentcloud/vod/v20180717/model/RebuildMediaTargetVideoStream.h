@@ -84,19 +84,19 @@ The default codec is H.264.
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
-                     * @return Bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+                     * 获取Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
-                     * @param _bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+                     * 设置Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -331,8 +331,8 @@ The default codec is H.264.
                     bool m_codecHasBeenSet;
 
                     /**
-                     * The video bitrate (Kbps). Value range: 0 and 128-35000.
-If the value is `0`, the original video bitrate will be used.
+                     * Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

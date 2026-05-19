@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image asynchronous processing extension parameter.
                 */
                 class ProcessImageAsyncInputExtendedParameter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Prompts 
+                     * 获取Prompt for model input.
+                     * @return Prompts Prompt for model input.
                      * 
                      */
                     std::vector<std::string> GetPrompts() const;
 
                     /**
-                     * 设置
-                     * @param _prompts 
+                     * 设置Prompt for model input.
+                     * @param _prompts Prompt for model input.
                      * 
                      */
                     void SetPrompts(const std::vector<std::string>& _prompts);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Prompt for model input.
                      */
                     std::vector<std::string> m_prompts;
                     bool m_promptsHasBeenSet;

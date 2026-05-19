@@ -90,18 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return FileVerifyName File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFileVerifyName() const;
 
                     /**
                      * 设置File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _fileVerifyName File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFileVerifyName(const std::string& _fileVerifyName);
@@ -129,7 +125,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_fileVerifyName;
                     bool m_fileVerifyNameHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,35 +64,35 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+                     * 获取Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
-                     * @return Type Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+                     * @return Type Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+                     * 设置Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
-                     * @param _type Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+                     * @param _type Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -105,15 +105,15 @@ Note: samples from the default library can only be pulled by providing the name 
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取IDs of samples. Array length limit: 100.
-                     * @return PersonIds IDs of samples. Array length limit: 100.
+                     * 获取Material ID, with an array length limit of 100.
+                     * @return PersonIds Material ID, with an array length limit of 100.
                      * 
                      */
                     std::vector<std::string> GetPersonIds() const;
 
                     /**
-                     * 设置IDs of samples. Array length limit: 100.
-                     * @param _personIds IDs of samples. Array length limit: 100.
+                     * 设置Material ID, with an array length limit of 100.
+                     * @param _personIds Material ID, with an array length limit of 100.
                      * 
                      */
                     void SetPersonIds(const std::vector<std::string>& _personIds);
@@ -126,15 +126,15 @@ Note: samples from the default library can only be pulled by providing the name 
                     bool PersonIdsHasBeenSet() const;
 
                     /**
-                     * 获取Names of samples. Array length limit: 20.
-                     * @return Names Names of samples. Array length limit: 20.
+                     * 获取Material name. Array length limit: 20.
+                     * @return Names Material name. Array length limit: 20.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Names of samples. Array length limit: 20.
-                     * @param _names Names of samples. Array length limit: 20.
+                     * 设置Material name. Array length limit: 20.
+                     * @param _names Material name. Array length limit: 20.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -147,15 +147,15 @@ Note: samples from the default library can only be pulled by providing the name 
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Tags of a sample. Array length limit: 20.
-                     * @return Tags Tags of a sample. Array length limit: 20.
+                     * 获取Material tag. Array length limit: 20.
+                     * @return Tags Material tag. Array length limit: 20.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tags of a sample. Array length limit: 20.
-                     * @param _tags Tags of a sample. Array length limit: 20.
+                     * 设置Material tag. Array length limit: 20.
+                     * @param _tags Material tag. Array length limit: 20.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -189,15 +189,15 @@ Note: samples from the default library can only be pulled by providing the name 
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries to be returned. Default value: 100. Maximum value: 100.
-                     * @return Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * 获取Number of returned entries. Default value: 100. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries to be returned. Default value: 100. Maximum value: 100.
-                     * @param _limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * 设置Number of returned entries. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 100. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -212,36 +212,36 @@ Note: samples from the default library can only be pulled by providing the name 
                 private:
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+                     * Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * IDs of samples. Array length limit: 100.
+                     * Material ID, with an array length limit of 100.
                      */
                     std::vector<std::string> m_personIds;
                     bool m_personIdsHasBeenSet;
 
                     /**
-                     * Names of samples. Array length limit: 20.
+                     * Material name. Array length limit: 20.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Tags of a sample. Array length limit: 20.
+                     * Material tag. Array length limit: 20.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
@@ -253,7 +253,7 @@ Note: samples from the default library can only be pulled by providing the name 
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * Number of returned entries. Default value: 100. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

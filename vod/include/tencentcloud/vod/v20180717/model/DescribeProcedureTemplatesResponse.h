@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取<p>Total number of records that meet filter conditions.</p>
+                     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of task flow template details.
-                     * @return ProcedureTemplateSet List of task flow template details.
+                     * 获取<p>Task flow template detail list.</p>
+                     * @return ProcedureTemplateSet <p>Task flow template detail list.</p>
                      * 
                      */
                     std::vector<ProcedureTemplate> GetProcedureTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * <p>Total number of records that meet filter conditions.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of task flow template details.
+                     * <p>Task flow template detail list.</p>
                      */
                     std::vector<ProcedureTemplate> m_procedureTemplateSet;
                     bool m_procedureTemplateSetHasBeenSet;

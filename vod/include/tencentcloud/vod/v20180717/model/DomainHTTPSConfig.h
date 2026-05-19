@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-                     * @return CertExpireTime Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 获取<p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+                     * @return CertExpireTime <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
                      * 
                      */
                     std::string GetCertExpireTime() const;
 
                     /**
-                     * 设置Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-                     * @param _certExpireTime Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 设置<p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+                     * @param _certExpireTime <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
                      * 
                      */
                     void SetCertExpireTime(const std::string& _certExpireTime);
@@ -72,15 +68,15 @@ namespace TencentCloud
                     bool CertExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate ID in Tencent Cloud SSL product.
-                     * @return CloudCertId Certificate ID in Tencent Cloud SSL product.
+                     * 获取<p>Certificate ID in Tencent Cloud SSL product.</p>
+                     * @return CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
                      * 
                      */
                     std::string GetCloudCertId() const;
 
                     /**
-                     * 设置Certificate ID in Tencent Cloud SSL product.
-                     * @param _cloudCertId Certificate ID in Tencent Cloud SSL product.
+                     * 设置<p>Certificate ID in Tencent Cloud SSL product.</p>
+                     * @param _cloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
                      * 
                      */
                     void SetCloudCertId(const std::string& _cloudCertId);
@@ -95,14 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
                      */
                     std::string m_certExpireTime;
                     bool m_certExpireTimeHasBeenSet;
 
                     /**
-                     * Certificate ID in Tencent Cloud SSL product.
+                     * <p>Certificate ID in Tencent Cloud SSL product.</p>
                      */
                     std::string m_cloudCertId;
                     bool m_cloudCertIdHasBeenSet;

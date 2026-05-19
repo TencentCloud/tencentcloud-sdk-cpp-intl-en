@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Times of initiating intelligent content recognition tasks.
-                     * @return TotalCount Times of initiating intelligent content recognition tasks.
+                     * 获取Trigger content intelligent identification count.
+                     * @return TotalCount Trigger content intelligent identification count.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Duration of intelligent recognition content.
-                     * @return TotalDuration Duration of intelligent recognition content.
+                     * 获取Content intelligent identification duration.
+                     * @return TotalDuration Content intelligent identification duration.
                      * 
                      */
                     int64_t GetTotalDuration() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalDurationHasBeenSet() const;
 
                     /**
-                     * 获取Data of intelligent recognition content duration. One piece of data is collected every day.
-                     * @return Data Data of intelligent recognition content duration. One piece of data is collected every day.
+                     * 获取Content intelligent identification duration stats, one data point per day.
+                     * @return Data Content intelligent identification duration stats, one data point per day.
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Times of initiating intelligent content recognition tasks.
+                     * Trigger content intelligent identification count.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Duration of intelligent recognition content.
+                     * Content intelligent identification duration.
                      */
                     int64_t m_totalDuration;
                     bool m_totalDurationHasBeenSet;
 
                     /**
-                     * Data of intelligent recognition content duration. One piece of data is collected every day.
+                     * Content intelligent identification duration stats, one data point per day.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

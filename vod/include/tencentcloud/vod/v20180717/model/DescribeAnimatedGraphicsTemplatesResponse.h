@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of animated image generating template details.
-                     * @return AnimatedGraphicsTemplateSet List of animated image generating template details.
+                     * 获取Rotation diagram template details list.
+                     * @return AnimatedGraphicsTemplateSet Rotation diagram template details list.
                      * 
                      */
                     std::vector<AnimatedGraphicsTemplate> GetAnimatedGraphicsTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of animated image generating template details.
+                     * Rotation diagram template details list.
                      */
                     std::vector<AnimatedGraphicsTemplate> m_animatedGraphicsTemplateSet;
                     bool m_animatedGraphicsTemplateSetHasBeenSet;

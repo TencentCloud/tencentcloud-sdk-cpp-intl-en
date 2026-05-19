@@ -146,15 +146,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-                     * @return Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * 获取Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+                     * @return Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-                     * @param _offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * 设置Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+                     * @param _offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -167,15 +167,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-                     * @return Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * 获取Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+                     * @return Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-                     * @param _limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * 设置Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+                     * @param _limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -238,13 +238,13 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+                     * Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

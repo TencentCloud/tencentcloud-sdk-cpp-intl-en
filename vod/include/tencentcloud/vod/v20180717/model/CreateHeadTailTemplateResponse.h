@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Head Tail Template Number
-                     * @return Definition Head Tail Template Number
+                     * 获取Opening and ending template ID.
+                     * @return Definition Opening and ending template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Head Tail Template Number
+                     * Opening and ending template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

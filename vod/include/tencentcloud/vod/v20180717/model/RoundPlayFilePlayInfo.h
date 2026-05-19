@@ -111,18 +111,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * @return Duration Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * @param _duration Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -136,18 +132,14 @@ Note: this field may return null, indicating that no valid value was found.
 
                     /**
                      * 获取Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * @return Progress Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * 
                      */
                     double GetProgress() const;
 
                     /**
                      * 设置Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * @param _progress Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetProgress(const double& _progress);
@@ -181,14 +173,12 @@ Note: this field may return null, indicating that no valid value was found.
 
                     /**
                      * Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
                      * Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
                      */
                     double m_progress;
                     bool m_progressHasBeenSet;

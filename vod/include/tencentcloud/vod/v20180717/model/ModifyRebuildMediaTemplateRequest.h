@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rebuild Media Template ID.
-                     * @return Definition Rebuild Media Template ID.
+                     * 获取Video rebirth template number.
+                     * @return Definition Video rebirth template number.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Rebuild Media Template ID.
-                     * @param _definition Rebuild Media Template ID.
+                     * 设置Video rebirth template number.
+                     * @param _definition Video rebirth template number.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Rebuild Media Template Name.
-                     * @return Name Rebuild Media Template Name.
+                     * 获取Video rebirth template name.
+                     * @return Name Video rebirth template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Rebuild Media Template Name.
-                     * @param _name Rebuild Media Template Name.
+                     * 设置Video rebirth template name.
+                     * @param _name Video rebirth template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Rebuild media template description.
-                     * @return Comment Rebuild media template description.
+                     * 获取Video rebirth template description.
+                     * @return Comment Video rebirth template description.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Rebuild media template description.
-                     * @param _comment Rebuild media template description.
+                     * 设置Video rebirth template description.
+                     * @param _comment Video rebirth template description.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Rebuild media video control information.
-                     * @return RebuildVideoInfo Rebuild media video control information.
+                     * 获取Video Rebirth Video Control Information.
+                     * @return RebuildVideoInfo Video Rebirth Video Control Information.
                      * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
-                     * 设置Rebuild media video control information.
-                     * @param _rebuildVideoInfo Rebuild media video control information.
+                     * 设置Video Rebirth Video Control Information.
+                     * @param _rebuildVideoInfo Video Rebirth Video Control Information.
                      * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取Rebuild media audio control information.
-                     * @return RebuildAudioInfo Rebuild media audio control information.
+                     * 获取Video Rebirth Audio Control Information.
+                     * @return RebuildAudioInfo Video Rebirth Audio Control Information.
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置Rebuild media audio control information.
-                     * @param _rebuildAudioInfo Rebuild media audio control information.
+                     * 设置Video Rebirth Audio Control Information.
+                     * @param _rebuildAudioInfo Video Rebirth Audio Control Information.
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RebuildAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output video parameters.
-                     * @return TargetVideoInfo The output video parameters.
+                     * 获取Output target video control information.
+                     * @return TargetVideoInfo Output target video control information.
                      * 
                      */
                     RebuildMediaTargetVideoStream GetTargetVideoInfo() const;
 
                     /**
-                     * 设置The output video parameters.
-                     * @param _targetVideoInfo The output video parameters.
+                     * 设置Output target video control information.
+                     * @param _targetVideoInfo Output target video control information.
                      * 
                      */
                     void SetTargetVideoInfo(const RebuildMediaTargetVideoStream& _targetVideoInfo);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TargetVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output audio parameters.
-                     * @return TargetAudioInfo The output audio parameters.
+                     * 获取Output target audio control information.
+                     * @return TargetAudioInfo Output target audio control information.
                      * 
                      */
                     RebuildMediaTargetAudioStream GetTargetAudioInfo() const;
 
                     /**
-                     * 设置The output audio parameters.
-                     * @param _targetAudioInfo The output audio parameters.
+                     * 设置Output target audio control information.
+                     * @param _targetAudioInfo Output target audio control information.
                      * 
                      */
                     void SetTargetAudioInfo(const RebuildMediaTargetAudioStream& _targetAudioInfo);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool TargetAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取The output container format. Valid values: `mp4`, `flv`, `hls`.
-                     * @return Container The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * 获取Container format. Available values: mp4, flv, and hls.
+                     * @return Container Container format. Available values: mp4, flv, and hls.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置The output container format. Valid values: `mp4`, `flv`, `hls`.
-                     * @param _container The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * 设置Container format. Available values: mp4, flv, and hls.
+                     * @param _container Container format. Available values: mp4, flv, and hls.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -236,23 +236,23 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-                     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * 获取Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+                     * @return RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-                     * @param _removeVideo Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * 设置Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+                     * @param _removeVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -265,23 +265,23 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-                     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * 获取Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+                     * @return RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      * 
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-                     * @param _removeAudio Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * 设置Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+                     * @param _removeAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
@@ -296,71 +296,71 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rebuild Media Template ID.
+                     * Video rebirth template number.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Rebuild Media Template Name.
+                     * Video rebirth template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Rebuild media template description.
+                     * Video rebirth template description.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Rebuild media video control information.
+                     * Video Rebirth Video Control Information.
                      */
                     RebuildVideoInfo m_rebuildVideoInfo;
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * Rebuild media audio control information.
+                     * Video Rebirth Audio Control Information.
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;
 
                     /**
-                     * The output video parameters.
+                     * Output target video control information.
                      */
                     RebuildMediaTargetVideoStream m_targetVideoInfo;
                     bool m_targetVideoInfoHasBeenSet;
 
                     /**
-                     * The output audio parameters.
+                     * Output target audio control information.
                      */
                     RebuildMediaTargetAudioStream m_targetAudioInfo;
                     bool m_targetAudioInfoHasBeenSet;
 
                     /**
-                     * The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * Container format. Available values: mp4, flv, and hls.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+                     * Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;

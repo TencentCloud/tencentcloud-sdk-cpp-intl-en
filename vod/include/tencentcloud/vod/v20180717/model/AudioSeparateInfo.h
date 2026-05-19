@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The audio separation configuration.
+                * Audio separation configuration.
                 */
                 class AudioSeparateInfo : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-                     * @return Switch Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * 获取Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+                     * @return Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-                     * @param _switch Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * 设置Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+                     * @param _switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,27 +76,27 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-                     * @return Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+                     * 获取Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+                     * @return Type Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-                     * @param _type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+                     * 设置Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+                     * @param _type Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -113,27 +109,27 @@ Default value: `normal`.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-                     * @return Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+                     * 获取Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
+                     * @return Track Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
                      * 
                      */
                     std::string GetTrack() const;
 
                     /**
-                     * 设置The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-                     * @param _track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+                     * 设置Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
+                     * @param _track Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -148,28 +144,27 @@ Default value: `vocal`.
                 private:
 
                     /**
-                     * Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+                     * Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+                     * Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;

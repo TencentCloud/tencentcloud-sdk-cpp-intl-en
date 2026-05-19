@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return TotalCount Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取<p>Total number of log download links.</p>
+                     * @return TotalCount <p>Total number of log download links.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -61,10 +59,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OverseaCdnLogs Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+                     * @return OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
                      * 
                      */
                     std::vector<CdnLogInfo> GetOverseaCdnLogs() const;
@@ -77,10 +73,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OverseaCdnLogsHasBeenSet() const;
 
                     /**
-                     * 获取Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DomesticCdnLogs Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Log Download List of Domestic CDN Nodes.</p>
+                     * @return DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
                      * 
                      */
                     std::vector<CdnLogInfo> GetDomesticCdnLogs() const;
@@ -95,22 +89,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * <p>Total number of log download links.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
                      */
                     std::vector<CdnLogInfo> m_overseaCdnLogs;
                     bool m_overseaCdnLogsHasBeenSet;
 
                     /**
-                     * Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Log Download List of Domestic CDN Nodes.</p>
                      */
                     std::vector<CdnLogInfo> m_domesticCdnLogs;
                     bool m_domesticCdnLogsHasBeenSet;

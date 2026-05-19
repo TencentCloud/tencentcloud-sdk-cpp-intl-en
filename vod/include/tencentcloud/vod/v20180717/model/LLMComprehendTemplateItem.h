@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/LLMComprehendSummary.h>
 #include <tencentcloud/vod/v20180717/model/LLMComprehendAsr.h>
+#include <tencentcloud/vod/v20180717/model/LLMComprehendFaceRecognition.h>
 
 
 namespace TencentCloud
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the image asynchronous processing template.
-                     * @return Definition Unique identifier of the image asynchronous processing template.
+                     * 获取<p>Unique identifier of the image asynchronous processing template.</p>
+                     * @return Definition <p>Unique identifier of the image asynchronous processing template.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the image asynchronous processing template.
-                     * @param _definition Unique identifier of the image asynchronous processing template.
+                     * 设置<p>Unique identifier of the image asynchronous processing template.</p>
+                     * @param _definition <p>Unique identifier of the image asynchronous processing template.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,15 +71,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Image async processing template name.
-                     * @return Name Image async processing template name.
+                     * 获取<p>Image asynchronous processing template name.</p>
+                     * @return Name <p>Image asynchronous processing template name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Image async processing template name.
-                     * @param _name Image async processing template name.
+                     * 设置<p>Image asynchronous processing template name.</p>
+                     * @param _name <p>Image asynchronous processing template name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,15 +92,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description information of the image asynchronous processing template.
-                     * @return Comment Description information of the image asynchronous processing template.
+                     * 获取<p>Description information of the image asynchronous processing template.</p>
+                     * @return Comment <p>Description information of the image asynchronous processing template.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description information of the image asynchronous processing template.
-                     * @param _comment Description information of the image asynchronous processing template.
+                     * 设置<p>Description information of the image asynchronous processing template.</p>
+                     * @param _comment <p>Description information of the image asynchronous processing template.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -112,23 +113,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Parsing level. Optional values:
--Audio: Audio-level parsing
--Video: Video-level parsing
-                     * @return Level Parsing level. Optional values:
--Audio: Audio-level parsing
--Video: Video-level parsing
+                     * 获取<p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+                     * @return Level <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Parsing level. Optional values:
--Audio: Audio-level parsing
--Video: Video-level parsing
-                     * @param _level Parsing level. Optional values:
--Audio: Audio-level parsing
--Video: Video-level parsing
+                     * 设置<p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+                     * @param _level <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -141,15 +134,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Segment summary parsing configuration
-                     * @return Summary Segment summary parsing configuration
+                     * 获取<p>Segment summary parse configuration</p>
+                     * @return Summary <p>Segment summary parse configuration</p>
                      * 
                      */
                     LLMComprehendSummary GetSummary() const;
 
                     /**
-                     * 设置Segment summary parsing configuration
-                     * @param _summary Segment summary parsing configuration
+                     * 设置<p>Segment summary parse configuration</p>
+                     * @param _summary <p>Segment summary parse configuration</p>
                      * 
                      */
                     void SetSummary(const LLMComprehendSummary& _summary);
@@ -162,15 +155,15 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取Text transcription parsing configuration
-                     * @return Asr Text transcription parsing configuration
+                     * 获取<p>Text transcription parse configuration</p>
+                     * @return Asr <p>Text transcription parse configuration</p>
                      * 
                      */
                     LLMComprehendAsr GetAsr() const;
 
                     /**
-                     * 设置Text transcription parsing configuration
-                     * @param _asr Text transcription parsing configuration
+                     * 设置<p>Text transcription parse configuration</p>
+                     * @param _asr <p>Text transcription parse configuration</p>
                      * 
                      */
                     void SetAsr(const LLMComprehendAsr& _asr);
@@ -183,15 +176,36 @@ namespace TencentCloud
                     bool AsrHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Template creation time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取<p>Face recognition parse configuration</p>
+                     * @return FaceRecognition <p>Face recognition parse configuration</p>
+                     * 
+                     */
+                    LLMComprehendFaceRecognition GetFaceRecognition() const;
+
+                    /**
+                     * 设置<p>Face recognition parse configuration</p>
+                     * @param _faceRecognition <p>Face recognition parse configuration</p>
+                     * 
+                     */
+                    void SetFaceRecognition(const LLMComprehendFaceRecognition& _faceRecognition);
+
+                    /**
+                     * 判断参数 FaceRecognition 是否已赋值
+                     * @return FaceRecognition 是否已赋值
+                     * 
+                     */
+                    bool FaceRecognitionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Template creation time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _createTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -204,15 +218,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _updateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -227,51 +241,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the image asynchronous processing template.
+                     * <p>Unique identifier of the image asynchronous processing template.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Image async processing template name.
+                     * <p>Image asynchronous processing template name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description information of the image asynchronous processing template.
+                     * <p>Description information of the image asynchronous processing template.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Parsing level. Optional values:
--Audio: Audio-level parsing
--Video: Video-level parsing
+                     * <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Segment summary parsing configuration
+                     * <p>Segment summary parse configuration</p>
                      */
                     LLMComprehendSummary m_summary;
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * Text transcription parsing configuration
+                     * <p>Text transcription parse configuration</p>
                      */
                     LLMComprehendAsr m_asr;
                     bool m_asrHasBeenSet;
 
                     /**
-                     * Template creation time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * <p>Face recognition parse configuration</p>
+                     */
+                    LLMComprehendFaceRecognition m_faceRecognition;
+                    bool m_faceRecognitionHasBeenSet;
+
+                    /**
+                     * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

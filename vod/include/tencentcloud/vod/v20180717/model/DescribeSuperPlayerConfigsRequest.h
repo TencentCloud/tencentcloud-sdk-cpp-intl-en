@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Player configuration name filter. Array length limit: 100.
-                     * @return Names Player configuration name filter. Array length limit: 100.
+                     * 获取Player configuration name filter condition, with a maximum array length of 100.
+                     * @return Names Player configuration name filter condition, with a maximum array length of 100.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Player configuration name filter. Array length limit: 100.
-                     * @param _names Player configuration name filter. Array length limit: 100.
+                     * 设置Player configuration name filter condition, with a maximum array length of 100.
+                     * @param _names Player configuration name filter condition, with a maximum array length of 100.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries to be returned. Default value: 10. Maximum value: 100.
-                     * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries to be returned. Default value: 10. Maximum value: 100.
-                     * @param _limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -127,23 +127,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
-                     * @return Type Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+                     * 获取Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
+                     * @return Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
-                     * @param _type Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+                     * 设置Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
+                     * @param _type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -158,13 +158,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Player configuration name filter. Array length limit: 100.
+                     * Player configuration name filter condition, with a maximum array length of 100.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * Number of returned entries. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+                     * Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

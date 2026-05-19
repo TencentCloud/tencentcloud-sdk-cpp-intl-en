@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of adaptive bitrate streaming template.
-                     * @return Definition Unique ID of adaptive bitrate streaming template.
+                     * 获取Unique identifier of the adaptive transcoding template.
+                     * @return Definition Unique identifier of the adaptive transcoding template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of adaptive bitrate streaming template.
-                     * @param _definition Unique ID of adaptive bitrate streaming template.
+                     * 设置Unique identifier of the adaptive transcoding template.
+                     * @param _definition Unique identifier of the adaptive transcoding template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Template name. Length limit: 64 characters.
-                     * @return Name Template name. Length limit: 64 characters.
+                     * 获取Template name. The length cannot exceed 64 characters.
+                     * @return Name Template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name. Length limit: 64 characters.
-                     * @param _name Template name. Length limit: 64 characters.
+                     * 设置Template name. The length cannot exceed 64 characters.
+                     * @param _name Template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-                     * @return Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * 获取Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
+                     * @return Format Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-                     * @param _format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * 设置Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
+                     * @param _format Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -136,23 +136,23 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @return DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 获取Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+                     * @return DisableHigherVideoBitrate Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetDisableHigherVideoBitrate() const;
 
                     /**
-                     * 设置Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @param _disableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 设置Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+                     * @param _disableHigherVideoBitrate Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      * 
                      */
                     void SetDisableHigherVideoBitrate(const uint64_t& _disableHigherVideoBitrate);
@@ -165,23 +165,23 @@ namespace TencentCloud
                     bool DisableHigherVideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @return DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 获取Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+                     * @return DisableHigherVideoResolution Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetDisableHigherVideoResolution() const;
 
                     /**
-                     * 设置Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @param _disableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 设置Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+                     * @param _disableHigherVideoResolution Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      * 
                      */
                     void SetDisableHigherVideoResolution(const uint64_t& _disableHigherVideoResolution);
@@ -194,19 +194,19 @@ namespace TencentCloud
                     bool DisableHigherVideoResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
-                     * @return StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+                     * 获取Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
+                     * @return StreamInfos Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
                      * 
                      */
                     std::vector<AdaptiveStreamTemplate> GetStreamInfos() const;
 
                     /**
-                     * 设置Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
-                     * @param _streamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+                     * 设置Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
+                     * @param _streamInfos Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
                      * 
                      */
                     void SetStreamInfos(const std::vector<AdaptiveStreamTemplate>& _streamInfos);
@@ -219,15 +219,15 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 characters.
-                     * @return Comment Template description. Length limit: 256 characters.
+                     * 获取Template description, with a length limit of 256 characters.
+                     * @return Comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 characters.
-                     * @param _comment Template description. Length limit: 256 characters.
+                     * 设置Template description, with a length limit of 256 characters.
+                     * @param _comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -240,23 +240,23 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-                     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+                     * 获取Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
+                     * @return SegmentType Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-                     * @param _segmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+                     * 设置Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
+                     * @param _segmentType Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -271,64 +271,64 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
                 private:
 
                     /**
-                     * Unique ID of adaptive bitrate streaming template.
+                     * Unique identifier of the adaptive transcoding template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Template name. Length limit: 64 characters.
+                     * Template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+                     * Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      */
                     uint64_t m_disableHigherVideoBitrate;
                     bool m_disableHigherVideoBitrateHasBeenSet;
 
                     /**
-                     * Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
                      */
                     uint64_t m_disableHigherVideoResolution;
                     bool m_disableHigherVideoResolutionHasBeenSet;
 
                     /**
-                     * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+                     * Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
                      */
                     std::vector<AdaptiveStreamTemplate> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 characters.
+                     * Template description, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+                     * Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;

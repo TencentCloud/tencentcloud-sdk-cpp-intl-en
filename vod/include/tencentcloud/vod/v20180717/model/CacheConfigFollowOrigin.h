@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Heuristic cache configuration
-                     * @return HeuristicCache Heuristic cache configuration
+                     * 获取Heuristic cache configuration.
+                     * @return HeuristicCache Heuristic cache configuration.
                      * 
                      */
                     HeuristicCache GetHeuristicCache() const;
 
                     /**
-                     * 设置Heuristic cache configuration
-                     * @param _heuristicCache Heuristic cache configuration
+                     * 设置Heuristic cache configuration.
+                     * @param _heuristicCache Heuristic cache configuration.
                      * 
                      */
                     void SetHeuristicCache(const HeuristicCache& _heuristicCache);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Heuristic cache configuration
+                     * Heuristic cache configuration.
                      */
                     HeuristicCache m_heuristicCache;
                     bool m_heuristicCacheHasBeenSet;

@@ -115,19 +115,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return PornConfigure Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Authentication involves control parameters for offensive information.
+                     * @return PornConfigure Authentication involves control parameters for offensive information.
                      * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
-                     * 设置Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _pornConfigure Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Authentication involves control parameters for offensive information.
+                     * @param _pornConfigure Authentication involves control parameters for offensive information.
                      * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
@@ -140,19 +136,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return TerrorismConfigure Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Authentication involves control parameters for unsafe information.
+                     * @return TerrorismConfigure Authentication involves control parameters for unsafe information.
                      * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _terrorismConfigure Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Authentication involves control parameters for unsafe information.
+                     * @param _terrorismConfigure Authentication involves control parameters for unsafe information.
                      * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
@@ -165,19 +157,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return PoliticalConfigure Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Authentication involves control parameters for inappropriate information.
+                     * @return PoliticalConfigure Authentication involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _politicalConfigure Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Authentication involves control parameters for inappropriate information.
+                     * @param _politicalConfigure Authentication involves control parameters for inappropriate information.
                      * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
@@ -190,27 +178,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+                     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
                      * 
                      */
                     ProhibitedConfigureInfo GetProhibitedConfigure() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+                     * @param _prohibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
                      * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfo& _prohibitedConfigure);
@@ -223,19 +207,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return UserDefineConfigure Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Customize video moderation control parameters.
+                     * @return UserDefineConfigure Customize video moderation control parameters.
                      * 
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _userDefineConfigure Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Customize video moderation control parameters.
+                     * @param _userDefineConfigure Customize video moderation control parameters.
                      * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
@@ -360,38 +340,33 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Authentication involves control parameters for offensive information.
                      */
                     PornConfigureInfo m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Authentication involves control parameters for unsafe information.
                      */
                     TerrorismConfigureInfo m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Authentication involves control parameters for inappropriate information.
                      */
                     PoliticalConfigureInfo m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
                      */
                     ProhibitedConfigureInfo m_prohibitedConfigure;
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Customize video moderation control parameters.
                      */
                     UserDefineConfigureInfo m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;

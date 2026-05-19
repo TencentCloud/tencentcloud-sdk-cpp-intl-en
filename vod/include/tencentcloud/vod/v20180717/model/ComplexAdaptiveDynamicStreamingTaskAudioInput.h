@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameters for audio streams in the adaptive bitrate streaming task.
+                * Input parameter of multilingual audio stream for adaptive bitrate streaming.
                 */
                 class ComplexAdaptiveDynamicStreamingTaskAudioInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
-                     * @return FileId Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+                     * 获取<p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+                     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
-                     * @param _fileId Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+                     * 设置<p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+                     * @param _fileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream name in the output, supporting up to 16 characters.
-                     * @return Name Audio stream name in the output, supporting up to 16 characters.
+                     * 获取<p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+                     * @return Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio stream name in the output, supporting up to 16 characters.
-                     * @param _name Audio stream name in the output, supporting up to 16 characters.
+                     * 设置<p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+                     * @param _name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
-                     * @return Language The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+                     * 获取<p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+                     * @return Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
-                     * @param _language The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+                     * 设置<p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+                     * @param _language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -110,23 +110,15 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
-                     * @return Default Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+                     * 获取<p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+                     * @return Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
                      * 
                      */
                     std::string GetDefault() const;
 
                     /**
-                     * 设置Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
-                     * @param _default Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+                     * 设置<p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+                     * @param _default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
                      * 
                      */
                     void SetDefault(const std::string& _default);
@@ -138,33 +130,58 @@ namespace TencentCloud
                      */
                     bool DefaultHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+                     * @return AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+                     * 
+                     */
+                    uint64_t GetAudioTrackIdx() const;
+
+                    /**
+                     * 设置<p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+                     * @param _audioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+                     * 
+                     */
+                    void SetAudioTrackIdx(const uint64_t& _audioTrackIdx);
+
+                    /**
+                     * 判断参数 AudioTrackIdx 是否已赋值
+                     * @return AudioTrackIdx 是否已赋值
+                     * 
+                     */
+                    bool AudioTrackIdxHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+                     * <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Audio stream name in the output, supporting up to 16 characters.
+                     * <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+                     * <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+                     * <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
                      */
                     std::string m_default;
                     bool m_defaultHasBeenSet;
+
+                    /**
+                     * <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+                     */
+                    uint64_t m_audioTrackIdx;
+                    bool m_audioTrackIdxHasBeenSet;
 
                 };
             }

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of a sample.
-                     * @return PersonId ID of a sample.
+                     * 获取Material ID.
+                     * @return PersonId Material ID.
                      * 
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置ID of a sample.
-                     * @param _personId ID of a sample.
+                     * 设置Material ID.
+                     * @param _personId Material ID.
                      * 
                      */
                     void SetPersonId(const std::string& _personId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description. Length limit: 1,024 characters.
-                     * @return Description Description. Length limit: 1,024 characters.
+                     * 获取Description. Length limit: 1024 characters.
+                     * @return Description Description. Length limit: 1024 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description. Length limit: 1,024 characters.
-                     * @param _description Description. Length limit: 1,024 characters.
+                     * 设置Description. Length limit: 1024 characters.
+                     * @param _description Description. Length limit: 1024 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -129,27 +129,27 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
-                     * @return Usages Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * 获取Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+                     * @return Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
-                     * @param _usages Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * 设置Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+                     * @param _usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -162,15 +162,15 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取Information of operations on facial features.
-                     * @return FaceOperationInfo Information of operations on facial features.
+                     * 获取Facial operation information.
+                     * @return FaceOperationInfo Facial operation information.
                      * 
                      */
                     AiSampleFaceOperation GetFaceOperationInfo() const;
 
                     /**
-                     * 设置Information of operations on facial features.
-                     * @param _faceOperationInfo Information of operations on facial features.
+                     * 设置Facial operation information.
+                     * @param _faceOperationInfo Facial operation information.
                      * 
                      */
                     void SetFaceOperationInfo(const AiSampleFaceOperation& _faceOperationInfo);
@@ -206,13 +206,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of a sample.
+                     * Material ID.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -224,22 +224,22 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description. Length limit: 1,024 characters.
+                     * Description. Length limit: 1024 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * Information of operations on facial features.
+                     * Facial operation information.
                      */
                     AiSampleFaceOperation m_faceOperationInfo;
                     bool m_faceOperationInfoHasBeenSet;

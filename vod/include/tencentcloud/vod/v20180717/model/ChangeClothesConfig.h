@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
-                     * @return ClothesFileInfos Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+                     * 获取<p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> GetClothesFileInfos() const;
 
                     /**
-                     * 设置Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
-                     * @param _clothesFileInfos Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+                     * 设置<p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * @param _clothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      * 
                      */
                     void SetClothesFileInfos(const std::vector<SceneAigcImageTaskInputFileInfo>& _clothesFileInfos);
@@ -68,13 +68,40 @@ namespace TencentCloud
                      */
                     bool ClothesFileInfosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+                     * @return Prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+                     * 
+                     */
+                    std::string GetPrompt() const;
+
+                    /**
+                     * 设置<p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+                     * @param _prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+                     * 
+                     */
+                    void SetPrompt(const std::string& _prompt);
+
+                    /**
+                     * 判断参数 Prompt 是否已赋值
+                     * @return Prompt 是否已赋值
+                     * 
+                     */
+                    bool PromptHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Manually input the image list of **clothing** that needs to be replaced. currently support a maximum of 4 images.
+                     * <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> m_clothesFileInfos;
                     bool m_clothesFileInfosHasBeenSet;
+
+                    /**
+                     * <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+                     */
+                    std::string m_prompt;
+                    bool m_promptHasBeenSet;
 
                 };
             }

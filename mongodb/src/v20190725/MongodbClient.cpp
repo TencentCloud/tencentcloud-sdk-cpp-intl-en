@@ -540,6 +540,56 @@ MongodbClient::DeleteLogDownloadTaskOutcomeCallable MongodbClient::DeleteLogDown
     return prom->get_future();
 }
 
+MongodbClient::DescribeAccountUsersOutcome MongodbClient::DescribeAccountUsers(const DescribeAccountUsersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountUsers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountUsersResponse rsp = DescribeAccountUsersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountUsersOutcome(rsp);
+        else
+            return DescribeAccountUsersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountUsersOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DescribeAccountUsersAsync(const DescribeAccountUsersRequest& request, const DescribeAccountUsersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAccountUsersRequest&;
+    using Resp = DescribeAccountUsersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccountUsers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MongodbClient::DescribeAccountUsersOutcomeCallable MongodbClient::DescribeAccountUsersCallable(const DescribeAccountUsersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAccountUsersOutcome>>();
+    DescribeAccountUsersAsync(
+    request,
+    [prom](
+        const MongodbClient*,
+        const DescribeAccountUsersRequest&,
+        DescribeAccountUsersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MongodbClient::DescribeAsyncRequestInfoOutcome MongodbClient::DescribeAsyncRequestInfo(const DescribeAsyncRequestInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAsyncRequestInfo");

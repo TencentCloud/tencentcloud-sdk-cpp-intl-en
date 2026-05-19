@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClassInfoSet Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Classification information collection
+                     * @return ClassInfoSet Classification information collection
                      * 
                      */
                     std::vector<MediaClassInfo> GetClassInfoSet() const;
@@ -63,8 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Classification information collection
                      */
                     std::vector<MediaClassInfo> m_classInfoSet;
                     bool m_classInfoSetHasBeenSet;

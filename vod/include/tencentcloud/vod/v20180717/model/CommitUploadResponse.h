@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of media file.
-                     * @return FileId Unique ID of media file.
+                     * 获取<p>Unique identifier of the media file.</p>
+                     * @return FileId <p>Unique identifier of the media file.</p>
                      * 
                      */
                     std::string GetFileId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取The media playback URL.
-                     * @return MediaUrl The media playback URL.
+                     * 获取<p>Media playback address.</p>
+                     * @return MediaUrl <p>Media playback address.</p>
                      * 
                      */
                     std::string GetMediaUrl() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MediaUrlHasBeenSet() const;
 
                     /**
-                     * 获取The thumbnail URL.
-                     * @return CoverUrl The thumbnail URL.
+                     * 获取<p>Media cover address.</p>
+                     * @return CoverUrl <p>Media cover address.</p>
                      * 
                      */
                     std::string GetCoverUrl() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of media file.
+                     * <p>Unique identifier of the media file.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * The media playback URL.
+                     * <p>Media playback address.</p>
                      */
                     std::string m_mediaUrl;
                     bool m_mediaUrlHasBeenSet;
 
                     /**
-                     * The thumbnail URL.
+                     * <p>Media cover address.</p>
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;

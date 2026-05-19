@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameters for subtitles in the complex adaptive bitrate streaming task.
+                * Input parameter of adaptive bitrate task multilingual subtitles.
                 */
                 class ComplexAdaptiveDynamicStreamingTaskSubtitleInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle ID, which must belongs to the main media.
-                     * @return Id Subtitle ID, which must belongs to the main media.
+                     * 获取Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+                     * @return Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Subtitle ID, which must belongs to the main media.
-                     * @param _id Subtitle ID, which must belongs to the main media.
+                     * 设置Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+                     * @param _id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,23 +68,23 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
-                     * @return Default Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+                     * 获取Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
+                     * @return Default Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
                      * 
                      */
                     std::string GetDefault() const;
 
                     /**
-                     * 设置Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
-                     * @param _default Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+                     * 设置Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
+                     * @param _default Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
                      * 
                      */
                     void SetDefault(const std::string& _default);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subtitle ID, which must belongs to the main media.
+                     * Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Whether to set as the default subtitle for adaptive bitrate streaming.
-<li>YES: Set as the default subtitle;</li>
-<li>NO: Not set as the default subtitle (default value).</li>
+                     * Set as the default subtitle for adaptive bitrate. Value:
+<li>YES: Set as default subtitle;</li>
+<li>NO: Not set as default subtitle (default value).</li>
                      */
                     std::string m_default;
                     bool m_defaultHasBeenSet;

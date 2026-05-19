@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Image recognition involves control parameters for inappropriate information.
+                     * @return ImgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _imgReviewInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Image recognition involves control parameters for inappropriate information.
+                     * @param _imgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfo& _imgReviewInfo);
@@ -75,19 +71,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取ASR-based recognition involves control parameters for inappropriate information.
+                     * @return AsrReviewInfo ASR-based recognition involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _asrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置ASR-based recognition involves control parameters for inappropriate information.
+                     * @param _asrReviewInfo ASR-based recognition involves control parameters for inappropriate information.
                      * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfo& _asrReviewInfo);
@@ -100,19 +92,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Text recognition involves control parameters for inappropriate information.
+                     * @return OcrReviewInfo Text recognition involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _ocrReviewInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Text recognition involves control parameters for inappropriate information.
+                     * @param _ocrReviewInfo Text recognition involves control parameters for inappropriate information.
                      * 
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -127,22 +115,19 @@ Note: This field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Image recognition involves control parameters for inappropriate information.
                      */
                     PoliticalImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * ASR-based recognition involves control parameters for inappropriate information.
                      */
                     PoliticalAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Text recognition involves control parameters for inappropriate information.
                      */
                     PoliticalOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

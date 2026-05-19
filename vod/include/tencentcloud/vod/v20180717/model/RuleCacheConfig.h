@@ -51,18 +51,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Cache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     CacheConfigCache GetCache() const;
 
                     /**
                      * 设置Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _cache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCache(const CacheConfigCache& _cache);
@@ -75,19 +71,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CacheHasBeenSet() const;
 
                     /**
-                     * 获取Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NoCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取No cache configuration.
+                     * @return NoCache No cache configuration.
                      * 
                      */
                     CacheConfigNoCache GetNoCache() const;
 
                     /**
-                     * 设置Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _noCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置No cache configuration.
+                     * @param _noCache No cache configuration.
                      * 
                      */
                     void SetNoCache(const CacheConfigNoCache& _noCache);
@@ -100,19 +92,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FollowOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Follow the origin site.
+                     * @return FollowOrigin Follow the origin site.
                      * 
                      */
                     CacheConfigFollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _followOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Follow the origin site.
+                     * @param _followOrigin Follow the origin site.
                      * 
                      */
                     void SetFollowOrigin(const CacheConfigFollowOrigin& _followOrigin);
@@ -128,21 +116,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     CacheConfigCache m_cache;
                     bool m_cacheHasBeenSet;
 
                     /**
-                     * Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * No cache configuration.
                      */
                     CacheConfigNoCache m_noCache;
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Follow the origin site.
                      */
                     CacheConfigFollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;

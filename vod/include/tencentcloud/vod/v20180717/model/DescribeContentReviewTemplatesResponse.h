@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of intelligent content recognition template details.
-                     * @return ContentReviewTemplateSet List of intelligent content recognition template details.
+                     * 获取Review template detail list.
+                     * @return ContentReviewTemplateSet Review template detail list.
                      * 
                      */
                     std::vector<ContentReviewTemplateItem> GetContentReviewTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of intelligent content recognition template details.
+                     * Review template detail list.
                      */
                     std::vector<ContentReviewTemplateItem> m_contentReviewTemplateSet;
                     bool m_contentReviewTemplateSetHasBeenSet;

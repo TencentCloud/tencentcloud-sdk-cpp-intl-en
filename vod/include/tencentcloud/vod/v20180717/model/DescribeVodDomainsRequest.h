@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
-                     * @return Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+                     * 获取Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
+                     * @return Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
-                     * @param _domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+                     * 设置Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
+                     * @param _domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum results to return for pulling paginated queries. Default value: 20
-                     * @return Limit Maximum results to return for pulling paginated queries. Default value: 20
+                     * 获取Maximum number of results returned for pagination pull. Default value: 20.
+                     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum results to return for pulling paginated queries. Default value: 20
-                     * @param _limit Maximum results to return for pulling paginated queries. Default value: 20
+                     * 设置Maximum number of results returned for pagination pull. Default value: 20.
+                     * @param _limit Maximum number of results returned for pagination pull. Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page number offset from the beginning of paginated queries. Default value: 0
-                     * @return Offset Page number offset from the beginning of paginated queries. Default value: 0
+                     * 获取Starting offset for pagination pull. Default value: 0.
+                     * @return Offset Starting offset for pagination pull. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page number offset from the beginning of paginated queries. Default value: 0
-                     * @param _offset Page number offset from the beginning of paginated queries. Default value: 0
+                     * 设置Starting offset for pagination pull. Default value: 0.
+                     * @param _offset Starting offset for pagination pull. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -133,26 +133,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+                     * Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * Maximum results to return for pulling paginated queries. Default value: 20
+                     * Maximum number of results returned for pagination pull. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page number offset from the beginning of paginated queries. Default value: 0
+                     * Starting offset for pagination pull. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

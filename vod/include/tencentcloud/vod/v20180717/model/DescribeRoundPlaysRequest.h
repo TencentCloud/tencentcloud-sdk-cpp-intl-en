@@ -172,21 +172,21 @@ namespace TencentCloud
                     /**
                      * 获取Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
                      * @return Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
                      * @param _offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
-                     * 
+                     * @deprecated
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool OffsetHasBeenSet() const;
 

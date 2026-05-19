@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subapplication name. Length limit: 40 characters.
-                     * @return Name Subapplication name. Length limit: 40 characters.
+                     * 获取<p>Application name, length limited to 40 characters.</p>
+                     * @return Name <p>Application name, length limited to 40 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subapplication name. Length limit: 40 characters.
-                     * @param _name Subapplication name. Length limit: 40 characters.
+                     * 设置<p>Application name, length limited to 40 characters.</p>
+                     * @param _name <p>Application name, length limited to 40 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication overview. Length limit: 300 characters.
-                     * @return Description Subapplication overview. Length limit: 300 characters.
+                     * 获取<p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+                     * @return Description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Subapplication overview. Length limit: 300 characters.
-                     * @param _description Subapplication overview. Length limit: 300 characters.
+                     * 设置<p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+                     * @param _description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
-                     * @return Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+                     * 获取<p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+                     * @return Type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
-                     * @param _type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+                     * 设置<p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+                     * @param _type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -105,25 +106,106 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+                     * @return Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+                     * 
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置<p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+                     * @param _mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+                     * 
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     * 
+                     */
+                    bool ModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+                     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+                     * 
+                     */
+                    std::string GetStorageRegion() const;
+
+                    /**
+                     * 设置<p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+                     * @param _storageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+                     * 
+                     */
+                    void SetStorageRegion(const std::string& _storageRegion);
+
+                    /**
+                     * 判断参数 StorageRegion 是否已赋值
+                     * @return StorageRegion 是否已赋值
+                     * 
+                     */
+                    bool StorageRegionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>tag that needs to be bound to this application</p>
+                     * @return Tags <p>tag that needs to be bound to this application</p>
+                     * 
+                     */
+                    std::vector<ResourceTag> GetTags() const;
+
+                    /**
+                     * 设置<p>tag that needs to be bound to this application</p>
+                     * @param _tags <p>tag that needs to be bound to this application</p>
+                     * 
+                     */
+                    void SetTags(const std::vector<ResourceTag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Subapplication name. Length limit: 40 characters.
+                     * <p>Application name, length limited to 40 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Subapplication overview. Length limit: 300 characters.
+                     * <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+                     * <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
+
+                    /**
+                     * <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+                     */
+                    std::string m_storageRegion;
+                    bool m_storageRegionHasBeenSet;
+
+                    /**
+                     * <p>tag that needs to be bound to this application</p>
+                     */
+                    std::vector<ResourceTag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -67,6 +67,31 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+                     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+                     * 
+                     */
+                    uint64_t GetMaxVideoBitrate() const;
+
+                    /**
+                     * 设置Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+                     * @param _maxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+                     * 
+                     */
+                    void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
+
+                    /**
+                     * 判断参数 MaxVideoBitrate 是否已赋值
+                     * @return MaxVideoBitrate 是否已赋值
+                     * 
+                     */
+                    bool MaxVideoBitrateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +99,13 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+                     */
+                    uint64_t m_maxVideoBitrate;
+                    bool m_maxVideoBitrateHasBeenSet;
 
                 };
             }

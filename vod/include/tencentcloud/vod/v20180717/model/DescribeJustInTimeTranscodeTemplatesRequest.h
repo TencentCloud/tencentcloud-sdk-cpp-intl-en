@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template name filter condition, array length limit: 100.
-                     * @return Names Template name filter condition, array length limit: 100.
+                     * 获取Filter condition for template name, with an array length limit of 100.
+                     * @return Names Filter condition for template name, with an array length limit of 100.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Template name filter condition, array length limit: 100.
-                     * @param _names Template name filter condition, array length limit: 100.
+                     * 设置Filter condition for template name, with an array length limit of 100.
+                     * @param _names Filter condition for template name, with an array length limit of 100.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -85,23 +85,23 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Template type filter conditions, optional values:
+                     * 获取Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
-                     * @return Type Template type filter conditions, optional values:
+<li>Custom: User-defined task flow template.</li>
+                     * @return Type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type filter conditions, optional values:
+                     * 设置Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
-                     * @param _type Template type filter conditions, optional values:
+<li>Custom: User-defined task flow template.</li>
+                     * @param _type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset, default value: 0.
-                     * @return Offset Paging offset, default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset, default value: 0.
-                     * @param _offset Paging offset, default value: 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Returns the number of records, default value: 10, maximum value: 100.
-                     * @return Limit Returns the number of records, default value: 10, maximum value: 100.
+                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Returns the number of records, default value: 10, maximum value: 100.
-                     * @param _limit Returns the number of records, default value: 10, maximum value: 100.
+                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -158,33 +158,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template name filter condition, array length limit: 100.
+                     * Filter condition for template name, with an array length limit of 100.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Template type filter conditions, optional values:
+                     * Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Paging offset, default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Returns the number of records, default value: 10, maximum value: 100.
+                     * Number of returned entries. Default value: 10. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -203,19 +203,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AiRecognitionTask Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for the AI content recognition task.
+                     * @return AiRecognitionTaskSet Parameters for the AI content recognition task.
+                     * 
+                     */
+                    std::vector<AiRecognitionTaskInput> GetAiRecognitionTaskSet() const;
+
+                    /**
+                     * 设置Parameters for the AI content recognition task.
+                     * @param _aiRecognitionTaskSet Parameters for the AI content recognition task.
+                     * 
+                     */
+                    void SetAiRecognitionTaskSet(const std::vector<AiRecognitionTaskInput>& _aiRecognitionTaskSet);
+
+                    /**
+                     * 判断参数 AiRecognitionTaskSet 是否已赋值
+                     * @return AiRecognitionTaskSet 是否已赋值
+                     * 
+                     */
+                    bool AiRecognitionTaskSetHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _aiRecognitionTask Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _aiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -364,8 +385,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for the AI content recognition task.
+                     */
+                    std::vector<AiRecognitionTaskInput> m_aiRecognitionTaskSet;
+                    bool m_aiRecognitionTaskSetHasBeenSet;
+
+                    /**
+                     * This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;

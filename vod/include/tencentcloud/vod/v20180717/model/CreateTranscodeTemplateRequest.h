@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
-                     * @return Container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+                     * 获取<p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+                     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
-                     * @param _container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+                     * 设置<p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+                     * @param _container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding template name. Length limit: 64 characters.
-                     * @return Name Transcoding template name. Length limit: 64 characters.
+                     * 获取<p>Transcoding template name. The length cannot exceed 64 characters.</p>
+                     * @return Name <p>Transcoding template name. The length cannot exceed 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Transcoding template name. Length limit: 64 characters.
-                     * @param _name Transcoding template name. Length limit: 64 characters.
+                     * 设置<p>Transcoding template name. The length cannot exceed 64 characters.</p>
+                     * @param _name <p>Transcoding template name. The length cannot exceed 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 characters.
-                     * @return Comment Template description. Length limit: 256 characters.
+                     * 获取<p>Template description, with a length limit of 256 characters.</p>
+                     * @return Comment <p>Template description, with a length limit of 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 characters.
-                     * @param _comment Template description. Length limit: 256 characters.
+                     * 设置<p>Template description, with a length limit of 256 characters.</p>
+                     * @param _comment <p>Template description, with a length limit of 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -131,27 +131,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-                     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * 获取<p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+                     * @return RemoveVideo <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-                     * @param _removeVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * 设置<p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+                     * @param _removeVideo <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -164,27 +152,15 @@ Default value: 0.
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-                     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * 获取<p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+                     * @return RemoveAudio <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
                      * 
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-                     * @param _removeAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * 设置<p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+                     * @param _removeAudio <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
                      * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
@@ -197,15 +173,15 @@ Default value: 0.
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-                     * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 获取<p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+                     * @return VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
-                     * 设置Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-                     * @param _videoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 设置<p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+                     * @param _videoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
@@ -218,15 +194,15 @@ Default value: 0.
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-                     * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 获取<p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+                     * @return AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
-                     * 设置Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-                     * @param _audioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 设置<p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+                     * @param _audioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
@@ -239,15 +215,15 @@ Default value: 0.
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取TESHD transcoding parameter.
-                     * @return TEHDConfig TESHD transcoding parameter.
+                     * 获取<p>TSC transcoding parameter.</p>
+                     * @return TEHDConfig <p>TSC transcoding parameter.</p>
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置TESHD transcoding parameter.
-                     * @param _tEHDConfig TESHD transcoding parameter.
+                     * 设置<p>TSC transcoding parameter.</p>
+                     * @param _tEHDConfig <p>TSC transcoding parameter.</p>
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -260,15 +236,15 @@ Default value: 0.
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video enhancement parameter.
-                     * @return EnhanceConfig Audio/Video enhancement parameter.
+                     * 获取<p>Audio/Video enhancement configuration.</p>
+                     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Audio/Video enhancement parameter.
-                     * @param _enhanceConfig Audio/Video enhancement parameter.
+                     * 设置<p>Audio/Video enhancement configuration.</p>
+                     * @param _enhanceConfig <p>Audio/Video enhancement configuration.</p>
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -281,27 +257,15 @@ Default value: 0.
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-                     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * 获取<p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * @return SegmentType <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-                     * @param _segmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * 设置<p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * @param _segmentType <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -314,15 +278,15 @@ Default: ts
                     bool SegmentTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StdExtInfo 
+                     * 获取<p>Extended parameter.</p>
+                     * @return StdExtInfo <p>Extended parameter.</p>
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _stdExtInfo 
+                     * 设置<p>Extended parameter.</p>
+                     * @param _stdExtInfo <p>Extended parameter.</p>
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -337,82 +301,73 @@ Default: ts
                 private:
 
                     /**
-                     * The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+                     * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Transcoding template name. Length limit: 64 characters.
+                     * <p>Transcoding template name. The length cannot exceed 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 characters.
+                     * <p>Template description, with a length limit of 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+                     * <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      */
                     VideoTemplateInfo m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      */
                     AudioTemplateInfo m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * TESHD transcoding parameter.
+                     * <p>TSC transcoding parameter.</p>
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * Audio/Video enhancement parameter.
+                     * <p>Audio/Video enhancement configuration.</p>
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+                     * <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameter.</p>
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

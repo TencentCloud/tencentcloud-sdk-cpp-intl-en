@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media file unique identifier list, maximum length: 100.
-                     * @return FileIds Media file unique identifier list, maximum length: 100.
+                     * 获取Unique identifier list of media files. Maximum length: 100.
+                     * @return FileIds Unique identifier list of media files. Maximum length: 100.
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置Media file unique identifier list, maximum length: 100.
-                     * @param _fileIds Media file unique identifier list, maximum length: 100.
+                     * 设置Unique identifier list of media files. Maximum length: 100.
+                     * @param _fileIds Unique identifier list of media files. Maximum length: 100.
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -64,31 +64,31 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取The target storage class. Valid values:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
-                     * @return StorageClass The target storage class. Valid values:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+                     * 获取Target storage type. Valid values:
+<li> STANDARD: Standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li>ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
+                     * @return StorageClass Target storage type. Valid values:
+<li> STANDARD: Standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li>ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
                      * 
                      */
                     std::string GetStorageClass() const;
 
                     /**
-                     * 设置The target storage class. Valid values:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
-                     * @param _storageClass The target storage class. Valid values:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+                     * 设置Target storage type. Valid values:
+<li> STANDARD: Standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li>ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
+                     * @param _storageClass Target storage type. Valid values:
+<li> STANDARD: Standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li>ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
                      * 
                      */
                     void SetStorageClass(const std::string& _storageClass);
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool StorageClassHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -122,43 +122,43 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
-If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard</li>
-<li>Bulk</li>
-                     * @return RestoreTier The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
-If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard</li>
-<li>Bulk</li>
+                     * 获取Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
+<li>Expedited: Speed mode.</li>
+<li>Standard: Standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: Standard mode.</li>
+<li>Bulk: Batch mode.</li>
+                     * @return RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
+<li>Expedited: Speed mode.</li>
+<li>Standard: Standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: Standard mode.</li>
+<li>Bulk: Batch mode.</li>
                      * 
                      */
                     std::string GetRestoreTier() const;
 
                     /**
-                     * 设置The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
-If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard</li>
-<li>Bulk</li>
-                     * @param _restoreTier The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
-If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard</li>
-<li>Bulk</li>
+                     * 设置Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
+<li>Expedited: Speed mode.</li>
+<li>Standard: Standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: Standard mode.</li>
+<li>Bulk: Batch mode.</li>
+                     * @param _restoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
+<li>Expedited: Speed mode.</li>
+<li>Standard: Standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: Standard mode.</li>
+<li>Bulk: Batch mode.</li>
                      * 
                      */
                     void SetRestoreTier(const std::string& _restoreTier);
@@ -173,36 +173,36 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 private:
 
                     /**
-                     * Media file unique identifier list, maximum length: 100.
+                     * Unique identifier list of media files. Maximum length: 100.
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * The target storage class. Valid values:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+                     * Target storage type. Valid values:
+<li> STANDARD: Standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li>ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
                      */
                     std::string m_storageClass;
                     bool m_storageClassHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
-If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard</li>
-<li>Bulk</li>
+                     * Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of a media file is archive storage, the following values are available:
+<li>Expedited: Speed mode.</li>
+<li>Standard: Standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: Standard mode.</li>
+<li>Bulk: Batch mode.</li>
                      */
                     std::string m_restoreTier;
                     bool m_restoreTierHasBeenSet;

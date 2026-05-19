@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of video content recognition template details.
-                     * @return AIRecognitionTemplateSet List of video content recognition template details.
+                     * 获取Audio/video content recognition template detail list.
+                     * @return AIRecognitionTemplateSet Audio/video content recognition template detail list.
                      * 
                      */
                     std::vector<AIRecognitionTemplateItem> GetAIRecognitionTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of video content recognition template details.
+                     * Audio/video content recognition template detail list.
                      */
                     std::vector<AIRecognitionTemplateItem> m_aIRecognitionTemplateSet;
                     bool m_aIRecognitionTemplateSetHasBeenSet;

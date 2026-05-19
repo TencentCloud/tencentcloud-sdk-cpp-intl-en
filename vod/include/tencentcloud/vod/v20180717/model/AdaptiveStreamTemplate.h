@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video parameter information.
-                     * @return Video Video parameter information.
+                     * 获取<p>Video parameter information.</p>
+                     * @return Video <p>Video parameter information.</p>
                      * 
                      */
                     VideoTemplateInfo GetVideo() const;
 
                     /**
-                     * 设置Video parameter information.
-                     * @param _video Video parameter information.
+                     * 设置<p>Video parameter information.</p>
+                     * @param _video <p>Video parameter information.</p>
                      * 
                      */
                     void SetVideo(const VideoTemplateInfo& _video);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取Audio parameter information.
-                     * @return Audio Audio parameter information.
+                     * 获取<p>Audio parameter info.</p>
+                     * @return Audio <p>Audio parameter info.</p>
                      * 
                      */
                     AudioTemplateInfo GetAudio() const;
 
                     /**
-                     * 设置Audio parameter information.
-                     * @param _audio Audio parameter information.
+                     * 设置<p>Audio parameter info.</p>
+                     * @param _audio <p>Audio parameter info.</p>
                      * 
                      */
                     void SetAudio(const AudioTemplateInfo& _audio);
@@ -93,23 +93,15 @@ namespace TencentCloud
                     bool AudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @return RemoveAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 获取<p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * @return RemoveAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-                     * @param _removeAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * 设置<p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * @param _removeAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -122,23 +114,15 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove a video stream. Valid values:
-<li>0: no</li>
-<li>1: yes</li>
-                     * @return RemoveVideo Whether to remove a video stream. Valid values:
-<li>0: no</li>
-<li>1: yes</li>
+                     * 获取<p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * @return RemoveVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Whether to remove a video stream. Valid values:
-<li>0: no</li>
-<li>1: yes</li>
-                     * @param _removeVideo Whether to remove a video stream. Valid values:
-<li>0: no</li>
-<li>1: yes</li>
+                     * 设置<p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * @param _removeVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -151,19 +135,19 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取TESHD transcoding parameters
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return TEHDConfig TESHD transcoding parameters
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TEHDConfig <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置TESHD transcoding parameters
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _tEHDConfig TESHD transcoding parameters
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tEHDConfig <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -176,18 +160,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video enhancement configuration.
+                     * 获取<p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnhanceConfig Audio/Video enhancement configuration.
+                     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Audio/Video enhancement configuration.
+                     * 设置<p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enhanceConfig Audio/Video enhancement configuration.
+                     * @param _enhanceConfig <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -200,49 +184,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Extended parameter.</p>
+                     * @return StdExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置<p>Extended parameter.</p>
+                     * @param _stdExtInfo <p>Extended parameter.</p>
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Video parameter information.
+                     * <p>Video parameter information.</p>
                      */
                     VideoTemplateInfo m_video;
                     bool m_videoHasBeenSet;
 
                     /**
-                     * Audio parameter information.
+                     * <p>Audio parameter info.</p>
                      */
                     AudioTemplateInfo m_audio;
                     bool m_audioHasBeenSet;
 
                     /**
-                     * Whether to remove audio stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+                     * <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Whether to remove a video stream. Valid values:
-<li>0: no</li>
-<li>1: yes</li>
+                     * <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * TESHD transcoding parameters
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * Audio/Video enhancement configuration.
+                     * <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * <p>Extended parameter.</p>
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
 
                 };
             }

@@ -140,19 +140,19 @@ If `Container` is `wav`, the valid value is:
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @return Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 获取Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
-                     * 设置Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @param _bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 设置Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
@@ -273,8 +273,8 @@ If `Container` is `wav`, the valid value is:
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      */
                     uint64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

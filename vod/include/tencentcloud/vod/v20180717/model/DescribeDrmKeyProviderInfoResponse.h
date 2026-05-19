@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SDMCInfo The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+                     * @return SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
                      * 
                      */
                     SDMCDrmKeyProviderInfo GetSDMCInfo() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
                      */
                     SDMCDrmKeyProviderInfo m_sDMCInfo;
                     bool m_sDMCInfoHasBeenSet;

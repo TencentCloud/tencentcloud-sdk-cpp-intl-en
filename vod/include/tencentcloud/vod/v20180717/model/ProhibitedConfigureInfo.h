@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AsrReviewInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Voice prohibition control parameter.
+                     * @return AsrReviewInfo Voice prohibition control parameter.
                      * 
                      */
                     ProhibitedAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _asrReviewInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Voice prohibition control parameter.
+                     * @param _asrReviewInfo Voice prohibition control parameter.
                      * 
                      */
                     void SetAsrReviewInfo(const ProhibitedAsrReviewTemplateInfo& _asrReviewInfo);
@@ -74,19 +70,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OcrReviewInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Text prohibited control parameters.
+                     * @return OcrReviewInfo Text prohibited control parameters.
                      * 
                      */
                     ProhibitedOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ocrReviewInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Text prohibited control parameters.
+                     * @param _ocrReviewInfo Text prohibited control parameters.
                      * 
                      */
                     void SetOcrReviewInfo(const ProhibitedOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -101,15 +93,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Voice prohibition control parameter.
                      */
                     ProhibitedAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Text prohibited control parameters.
                      */
                     ProhibitedOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

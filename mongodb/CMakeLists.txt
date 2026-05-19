@@ -22,7 +22,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/DescribeSpecInfoRequest.h
   include/tencentcloud/mongodb/v20190725/model/CreateDBInstanceRequest.h
   include/tencentcloud/mongodb/v20190725/model/DescribeCurrentOpResponse.h
-  include/tencentcloud/mongodb/v20190725/model/ModifyInstanceParamsResponse.h
+  include/tencentcloud/mongodb/v20190725/model/DescribeAccountUsersRequest.h
   include/tencentcloud/mongodb/v20190725/model/SetInstanceMaintenanceResponse.h
   include/tencentcloud/mongodb/v20190725/model/CreateBackupDBInstanceResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeAuditLogsRequest.h
@@ -37,6 +37,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/SetDBInstanceDeletionProtectionRequest.h
   include/tencentcloud/mongodb/v20190725/model/InstanceMultiParam.h
   include/tencentcloud/mongodb/v20190725/model/DescribeSRVConnectionDomainResponse.h
+  include/tencentcloud/mongodb/v20190725/model/ModifyInstanceParamsResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeInstanceSSLRequest.h
   include/tencentcloud/mongodb/v20190725/model/DescribeBackupRulesResponse.h
   include/tencentcloud/mongodb/v20190725/model/SlowLogPattern.h
@@ -92,6 +93,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/CreateAccountUserRequest.h
   include/tencentcloud/mongodb/v20190725/model/InstanceTextParam.h
   include/tencentcloud/mongodb/v20190725/model/ModifyDBInstanceSecurityGroupRequest.h
+  include/tencentcloud/mongodb/v20190725/model/DescribeAccountUsersResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeBackupDownloadTaskRequest.h
   include/tencentcloud/mongodb/v20190725/model/ModifySRVConnectionUrlRequest.h
@@ -100,6 +102,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/DescribeSRVConnectionDomainRequest.h
   include/tencentcloud/mongodb/v20190725/model/DescribeDBBackupsResponse.h
   include/tencentcloud/mongodb/v20190725/model/ModifyDBInstanceSecurityGroupResponse.h
+  include/tencentcloud/mongodb/v20190725/model/UserInfo.h
   include/tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsRequest.h
   include/tencentcloud/mongodb/v20190725/model/NodeTag.h
   include/tencentcloud/mongodb/v20190725/model/InquirePriceCreateDBInstancesResponse.h
@@ -188,7 +191,7 @@ set(mongodb_src
   src/v20190725/model/DescribeSpecInfoRequest.cpp
   src/v20190725/model/CreateDBInstanceRequest.cpp
   src/v20190725/model/DescribeCurrentOpResponse.cpp
-  src/v20190725/model/ModifyInstanceParamsResponse.cpp
+  src/v20190725/model/DescribeAccountUsersRequest.cpp
   src/v20190725/model/SetInstanceMaintenanceResponse.cpp
   src/v20190725/model/CreateBackupDBInstanceResponse.cpp
   src/v20190725/model/DescribeAuditLogsRequest.cpp
@@ -203,6 +206,7 @@ set(mongodb_src
   src/v20190725/model/SetDBInstanceDeletionProtectionRequest.cpp
   src/v20190725/model/InstanceMultiParam.cpp
   src/v20190725/model/DescribeSRVConnectionDomainResponse.cpp
+  src/v20190725/model/ModifyInstanceParamsResponse.cpp
   src/v20190725/model/DescribeInstanceSSLRequest.cpp
   src/v20190725/model/DescribeBackupRulesResponse.cpp
   src/v20190725/model/SlowLogPattern.cpp
@@ -258,6 +262,7 @@ set(mongodb_src
   src/v20190725/model/CreateAccountUserRequest.cpp
   src/v20190725/model/InstanceTextParam.cpp
   src/v20190725/model/ModifyDBInstanceSecurityGroupRequest.cpp
+  src/v20190725/model/DescribeAccountUsersResponse.cpp
   src/v20190725/model/DescribeDBInstanceNamespaceResponse.cpp
   src/v20190725/model/DescribeBackupDownloadTaskRequest.cpp
   src/v20190725/model/ModifySRVConnectionUrlRequest.cpp
@@ -266,6 +271,7 @@ set(mongodb_src
   src/v20190725/model/DescribeSRVConnectionDomainRequest.cpp
   src/v20190725/model/DescribeDBBackupsResponse.cpp
   src/v20190725/model/ModifyDBInstanceSecurityGroupResponse.cpp
+  src/v20190725/model/UserInfo.cpp
   src/v20190725/model/DescribeInstanceParamsRequest.cpp
   src/v20190725/model/NodeTag.cpp
   src/v20190725/model/InquirePriceCreateDBInstancesResponse.cpp

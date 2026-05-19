@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageUrl Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
+                     * @return ImageUrl Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
                      * 
                      */
                     std::string GetImageUrl() const;
@@ -62,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;

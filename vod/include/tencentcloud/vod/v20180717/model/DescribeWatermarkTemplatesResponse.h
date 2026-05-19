@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WatermarkTemplateSet List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Watermark template details list.
+                     * @return WatermarkTemplateSet Watermark template details list.
                      * 
                      */
                     std::vector<WatermarkTemplate> GetWatermarkTemplateSet() const;
@@ -77,14 +75,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Watermark template details list.
                      */
                     std::vector<WatermarkTemplate> m_watermarkTemplateSet;
                     bool m_watermarkTemplateSetHasBeenSet;

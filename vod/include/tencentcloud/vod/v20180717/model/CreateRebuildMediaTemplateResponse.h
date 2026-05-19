@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rebuild Media Template ID.
-                     * @return Definition Rebuild Media Template ID.
+                     * 获取Video rebirth template ID.
+                     * @return Definition Video rebirth template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rebuild Media Template ID.
+                     * Video rebirth template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

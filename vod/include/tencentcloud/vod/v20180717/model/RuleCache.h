@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取Cache configuration
-                     * @return CacheConfig Cache configuration
+                     * 获取Cache configuration.
+                     * @return CacheConfig Cache configuration.
                      * 
                      */
                     RuleCacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置Cache configuration
-                     * @param _cacheConfig Cache configuration
+                     * 设置Cache configuration.
+                     * @param _cacheConfig Cache configuration.
                      * 
                      */
                     void SetCacheConfig(const RuleCacheConfig& _cacheConfig);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * Cache configuration
+                     * Cache configuration.
                      */
                     RuleCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

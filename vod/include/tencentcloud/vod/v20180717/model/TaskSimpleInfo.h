@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
-                     * @return Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * 获取Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+                     * @return Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
-                     * @param _status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * 设置Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+                     * @param _status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -288,7 +288,7 @@ Task types for v2017:
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

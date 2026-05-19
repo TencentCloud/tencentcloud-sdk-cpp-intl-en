@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The template ID.
-                     * @return Definition The template ID.
+                     * 获取Unique identifier of the image processing template.
+                     * @return Definition Unique identifier of the image processing template.
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The template ID.
+                     * Unique identifier of the image processing template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

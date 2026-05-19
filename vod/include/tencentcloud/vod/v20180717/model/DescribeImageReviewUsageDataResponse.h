@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
-                     * @return ImageReviewUsageDataSet The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+                     * 获取Image moderation stats show overview data of the number of moderations within a specified time range.
+                     * @return ImageReviewUsageDataSet Image moderation stats show overview data of the number of moderations within a specified time range.
                      * 
                      */
                     std::vector<ImageReviewUsageDataItem> GetImageReviewUsageDataSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+                     * Image moderation stats show overview data of the number of moderations within a specified time range.
                      */
                     std::vector<ImageReviewUsageDataItem> m_imageReviewUsageDataSet;
                     bool m_imageReviewUsageDataSetHasBeenSet;

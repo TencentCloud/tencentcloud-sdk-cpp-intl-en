@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output information of the AIGC video conversion task.
                 */
                 class AigcVideoRedrawTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileInfo 
+                     * 获取<p>Output file information for AIGC video conversion task.</p>
+                     * @return FileInfo <p>Output file information for AIGC video conversion task.</p>
                      * 
                      */
                     AigcVideoRedrawOutputFileInfo GetFileInfo() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfo 
+                     * 设置<p>Output file information for AIGC video conversion task.</p>
+                     * @param _fileInfo <p>Output file information for AIGC video conversion task.</p>
                      * 
                      */
                     void SetFileInfo(const AigcVideoRedrawOutputFileInfo& _fileInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Output file information for AIGC video conversion task.</p>
                      */
                     AigcVideoRedrawOutputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;

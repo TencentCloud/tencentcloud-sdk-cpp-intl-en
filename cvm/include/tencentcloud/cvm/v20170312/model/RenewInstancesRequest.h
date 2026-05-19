@@ -65,19 +65,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
-                     * @return InstanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+                     * 获取Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
+                     * @return InstanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
-                     * @param _instanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+                     * 设置Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
+                     * @param _instanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -119,8 +115,7 @@ Annual and monthly subscription instances. this parameter is a required paramete
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+                     * Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;

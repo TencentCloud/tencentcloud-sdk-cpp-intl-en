@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records matching the filter criteria.
-                     * @return TotalCount The total number of records matching the filter criteria.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Template details list.
-                     * @return JustInTimeTranscodeTemplateSet Template details list.
+                     * 获取Template detail list.
+                     * @return JustInTimeTranscodeTemplateSet Template detail list.
                      * 
                      */
                     std::vector<JustInTimeTranscodeTemplate> GetJustInTimeTranscodeTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of records matching the filter criteria.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Template details list.
+                     * Template detail list.
                      */
                     std::vector<JustInTimeTranscodeTemplate> m_justInTimeTranscodeTemplateSet;
                     bool m_justInTimeTranscodeTemplateSetHasBeenSet;

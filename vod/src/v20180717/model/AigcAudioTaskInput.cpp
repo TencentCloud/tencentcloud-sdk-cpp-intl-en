@@ -23,13 +23,12 @@ using namespace std;
 AigcAudioTaskInput::AigcAudioTaskInput() :
     m_modelNameHasBeenSet(false),
     m_modelVersionHasBeenSet(false),
-    m_fileInfosHasBeenSet(false),
-    m_lastFrameFileIdHasBeenSet(false),
+    m_sceneTypeHasBeenSet(false),
     m_promptHasBeenSet(false),
     m_negativePromptHasBeenSet(false),
     m_enhancePromptHasBeenSet(false),
-    m_generationModeHasBeenSet(false),
-    m_outputConfigHasBeenSet(false)
+    m_outputConfigHasBeenSet(false),
+    m_additionalParametersHasBeenSet(false)
 {
 }
 
@@ -58,34 +57,14 @@ CoreInternalOutcome AigcAudioTaskInput::Deserialize(const rapidjson::Value &valu
         m_modelVersionHasBeenSet = true;
     }
 
-    if (value.HasMember("FileInfos") && !value["FileInfos"].IsNull())
+    if (value.HasMember("SceneType") && !value["SceneType"].IsNull())
     {
-        if (!value["FileInfos"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `AigcAudioTaskInput.FileInfos` is not array type"));
-
-        const rapidjson::Value &tmpValue = value["FileInfos"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!value["SceneType"].IsString())
         {
-            AigcVideoTaskInputFileInfo item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_fileInfos.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `AigcAudioTaskInput.SceneType` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_fileInfosHasBeenSet = true;
-    }
-
-    if (value.HasMember("LastFrameFileId") && !value["LastFrameFileId"].IsNull())
-    {
-        if (!value["LastFrameFileId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `AigcAudioTaskInput.LastFrameFileId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_lastFrameFileId = string(value["LastFrameFileId"].GetString());
-        m_lastFrameFileIdHasBeenSet = true;
+        m_sceneType = string(value["SceneType"].GetString());
+        m_sceneTypeHasBeenSet = true;
     }
 
     if (value.HasMember("Prompt") && !value["Prompt"].IsNull())
@@ -118,16 +97,6 @@ CoreInternalOutcome AigcAudioTaskInput::Deserialize(const rapidjson::Value &valu
         m_enhancePromptHasBeenSet = true;
     }
 
-    if (value.HasMember("GenerationMode") && !value["GenerationMode"].IsNull())
-    {
-        if (!value["GenerationMode"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `AigcAudioTaskInput.GenerationMode` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_generationMode = string(value["GenerationMode"].GetString());
-        m_generationModeHasBeenSet = true;
-    }
-
     if (value.HasMember("OutputConfig") && !value["OutputConfig"].IsNull())
     {
         if (!value["OutputConfig"].IsObject())
@@ -143,6 +112,16 @@ CoreInternalOutcome AigcAudioTaskInput::Deserialize(const rapidjson::Value &valu
         }
 
         m_outputConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdditionalParameters") && !value["AdditionalParameters"].IsNull())
+    {
+        if (!value["AdditionalParameters"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcAudioTaskInput.AdditionalParameters` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_additionalParameters = string(value["AdditionalParameters"].GetString());
+        m_additionalParametersHasBeenSet = true;
     }
 
 
@@ -168,27 +147,12 @@ void AigcAudioTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         value.AddMember(iKey, rapidjson::Value(m_modelVersion.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_fileInfosHasBeenSet)
+    if (m_sceneTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FileInfos";
+        string key = "SceneType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_fileInfos.begin(); itr != m_fileInfos.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
-    }
-
-    if (m_lastFrameFileIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LastFrameFileId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_lastFrameFileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sceneType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_promptHasBeenSet)
@@ -215,14 +179,6 @@ void AigcAudioTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         value.AddMember(iKey, m_enhancePrompt, allocator);
     }
 
-    if (m_generationModeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "GenerationMode";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_generationMode.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_outputConfigHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -230,6 +186,14 @@ void AigcAudioTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_additionalParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdditionalParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_additionalParameters.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -267,36 +231,20 @@ bool AigcAudioTaskInput::ModelVersionHasBeenSet() const
     return m_modelVersionHasBeenSet;
 }
 
-vector<AigcVideoTaskInputFileInfo> AigcAudioTaskInput::GetFileInfos() const
+string AigcAudioTaskInput::GetSceneType() const
 {
-    return m_fileInfos;
+    return m_sceneType;
 }
 
-void AigcAudioTaskInput::SetFileInfos(const vector<AigcVideoTaskInputFileInfo>& _fileInfos)
+void AigcAudioTaskInput::SetSceneType(const string& _sceneType)
 {
-    m_fileInfos = _fileInfos;
-    m_fileInfosHasBeenSet = true;
+    m_sceneType = _sceneType;
+    m_sceneTypeHasBeenSet = true;
 }
 
-bool AigcAudioTaskInput::FileInfosHasBeenSet() const
+bool AigcAudioTaskInput::SceneTypeHasBeenSet() const
 {
-    return m_fileInfosHasBeenSet;
-}
-
-string AigcAudioTaskInput::GetLastFrameFileId() const
-{
-    return m_lastFrameFileId;
-}
-
-void AigcAudioTaskInput::SetLastFrameFileId(const string& _lastFrameFileId)
-{
-    m_lastFrameFileId = _lastFrameFileId;
-    m_lastFrameFileIdHasBeenSet = true;
-}
-
-bool AigcAudioTaskInput::LastFrameFileIdHasBeenSet() const
-{
-    return m_lastFrameFileIdHasBeenSet;
+    return m_sceneTypeHasBeenSet;
 }
 
 string AigcAudioTaskInput::GetPrompt() const
@@ -347,22 +295,6 @@ bool AigcAudioTaskInput::EnhancePromptHasBeenSet() const
     return m_enhancePromptHasBeenSet;
 }
 
-string AigcAudioTaskInput::GetGenerationMode() const
-{
-    return m_generationMode;
-}
-
-void AigcAudioTaskInput::SetGenerationMode(const string& _generationMode)
-{
-    m_generationMode = _generationMode;
-    m_generationModeHasBeenSet = true;
-}
-
-bool AigcAudioTaskInput::GenerationModeHasBeenSet() const
-{
-    return m_generationModeHasBeenSet;
-}
-
 AigcAudioOutputConfig AigcAudioTaskInput::GetOutputConfig() const
 {
     return m_outputConfig;
@@ -377,5 +309,21 @@ void AigcAudioTaskInput::SetOutputConfig(const AigcAudioOutputConfig& _outputCon
 bool AigcAudioTaskInput::OutputConfigHasBeenSet() const
 {
     return m_outputConfigHasBeenSet;
+}
+
+string AigcAudioTaskInput::GetAdditionalParameters() const
+{
+    return m_additionalParameters;
+}
+
+void AigcAudioTaskInput::SetAdditionalParameters(const string& _additionalParameters)
+{
+    m_additionalParameters = _additionalParameters;
+    m_additionalParametersHasBeenSet = true;
+}
+
+bool AigcAudioTaskInput::AdditionalParametersHasBeenSet() const
+{
+    return m_additionalParametersHasBeenSet;
 }
 

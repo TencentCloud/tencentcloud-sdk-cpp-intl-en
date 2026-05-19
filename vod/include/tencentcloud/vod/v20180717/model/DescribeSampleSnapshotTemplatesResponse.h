@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of sampled screencapturing template details.
-                     * @return SampleSnapshotTemplateSet List of sampled screencapturing template details.
+                     * 获取Sampling screenshot template detail list.
+                     * @return SampleSnapshotTemplateSet Sampling screenshot template detail list.
                      * 
                      */
                     std::vector<SampleSnapshotTemplate> GetSampleSnapshotTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of sampled screencapturing template details.
+                     * Sampling screenshot template detail list.
                      */
                     std::vector<SampleSnapshotTemplate> m_sampleSnapshotTemplateSet;
                     bool m_sampleSnapshotTemplateSetHasBeenSet;

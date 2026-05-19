@@ -78,18 +78,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     HeuristicCacheConfig GetCacheConfig() const;
 
                     /**
                      * 设置Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _cacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCacheConfig(const HeuristicCacheConfig& _cacheConfig);
@@ -113,7 +109,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     HeuristicCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取Server certificate configuration information
-                     * @return CertInfo Server certificate configuration information
+                     * 获取Cert configuration message.
+                     * @return CertInfo Cert configuration message.
                      * 
                      */
                     CDNCertInfo GetCertInfo() const;
 
                     /**
-                     * 设置Server certificate configuration information
-                     * @param _certInfo Server certificate configuration information
+                     * 设置Cert configuration message.
+                     * @param _certInfo Cert configuration message.
                      * 
                      */
                     void SetCertInfo(const CDNCertInfo& _certInfo);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_http2HasBeenSet;
 
                     /**
-                     * Server certificate configuration information
+                     * Cert configuration message.
                      */
                     CDNCertInfo m_certInfo;
                     bool m_certInfoHasBeenSet;

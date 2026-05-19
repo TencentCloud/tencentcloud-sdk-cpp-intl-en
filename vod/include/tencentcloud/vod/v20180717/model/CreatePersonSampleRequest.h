@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of a sample. Length limit: 20 characters.
-                     * @return Name Name of a sample. Length limit: 20 characters.
+                     * 获取Material name, length limited to 20 characters.
+                     * @return Name Material name, length limited to 20 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a sample. Length limit: 20 characters.
-                     * @param _name Name of a sample. Length limit: 20 characters.
+                     * 设置Material name, length limited to 20 characters.
+                     * @param _name Material name, length limited to 20 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -64,27 +64,27 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
-                     * @return Usages Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+                     * 获取Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+                     * @return Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
-                     * @param _usages Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+                     * 设置Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+                     * @param _usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Description of a sample. Length limit: 1024 characters.
-                     * @return Description Description of a sample. Length limit: 1024 characters.
+                     * 获取Material description, with a length limit of 1024 characters.
+                     * @return Description Material description, with a length limit of 1024 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description of a sample. Length limit: 1024 characters.
-                     * @param _description Description of a sample. Length limit: 1024 characters.
+                     * 设置Material description, with a length limit of 1024 characters.
+                     * @param _description Material description, with a length limit of 1024 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -139,19 +139,19 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
-                     * @return FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+                     * 获取The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+                     * @return FaceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
                      * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
-                     * 设置String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
-                     * @param _faceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+                     * 设置The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+                     * @param _faceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
                      * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
@@ -164,23 +164,23 @@ Note: the image must be a relatively clear full-face photo of a person and has a
                     bool FaceContentsHasBeenSet() const;
 
                     /**
-                     * 获取Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
-                     * @return Tags Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+                     * 获取material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
+                     * @return Tags material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
-                     * @param _tags Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+                     * 设置material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
+                     * @param _tags material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -195,43 +195,43 @@ Note: the image must be a relatively clear full-face photo of a person and has a
                 private:
 
                     /**
-                     * Name of a sample. Length limit: 20 characters.
+                     * Material name, length limited to 20 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+                     * Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Description of a sample. Length limit: 1024 characters.
+                     * Material description, with a length limit of 1024 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+                     * The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
                      */
                     std::vector<std::string> m_faceContents;
                     bool m_faceContentsHasBeenSet;
 
                     /**
-                     * Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+                     * material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of video content analysis template details.
-                     * @return AIAnalysisTemplateSet List of video content analysis template details.
+                     * 获取Audio and video content analysis template detail list.
+                     * @return AIAnalysisTemplateSet Audio and video content analysis template detail list.
                      * 
                      */
                     std::vector<AIAnalysisTemplateItem> GetAIAnalysisTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of video content analysis template details.
+                     * Audio and video content analysis template detail list.
                      */
                     std::vector<AIAnalysisTemplateItem> m_aIAnalysisTemplateSet;
                     bool m_aIAnalysisTemplateSetHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -188,6 +189,81 @@ namespace TencentCloud
                      */
                     bool NameHasBeenSet() const;
 
+                    /**
+                     * 获取Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+                     * @return Mode Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+                     * 
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+                     * @param _mode Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+                     * 
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     * 
+                     */
+                    bool ModeHasBeenSet() const;
+
+                    /**
+                     * 获取Storage regions enabled for the sub-app.
+                     * @return StorageRegions Storage regions enabled for the sub-app.
+                     * 
+                     */
+                    std::vector<std::string> GetStorageRegions() const;
+
+                    /**
+                     * 设置Storage regions enabled for the sub-app.
+                     * @param _storageRegions Storage regions enabled for the sub-app.
+                     * 
+                     */
+                    void SetStorageRegions(const std::vector<std::string>& _storageRegions);
+
+                    /**
+                     * 判断参数 StorageRegions 是否已赋值
+                     * @return StorageRegions 是否已赋值
+                     * 
+                     */
+                    bool StorageRegionsHasBeenSet() const;
+
+                    /**
+                     * 获取tag bound to the sub-application.
+                     * @return Tags tag bound to the sub-application.
+                     * 
+                     */
+                    std::vector<ResourceTag> GetTags() const;
+
+                    /**
+                     * 设置tag bound to the sub-application.
+                     * @param _tags tag bound to the sub-application.
+                     * 
+                     */
+                    void SetTags(const std::vector<ResourceTag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -229,6 +305,27 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
+
+                    /**
+                     * Storage regions enabled for the sub-app.
+                     */
+                    std::vector<std::string> m_storageRegions;
+                    bool m_storageRegionsHasBeenSet;
+
+                    /**
+                     * tag bound to the sub-application.
+                     */
+                    std::vector<ResourceTag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

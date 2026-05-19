@@ -57,15 +57,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media quality inspection template ID.
-                     * @return Definition Media quality inspection template ID.
+                     * 获取Template ID.
+                     * @return Definition Template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Media quality inspection template ID.
-                     * @param _definition Media quality inspection template ID.
+                     * 设置Template ID.
+                     * @param _definition Template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -78,15 +78,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
-                     * @return Type Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
+                     * 获取Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+                     * @return Type Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
-                     * @param _type Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
+                     * 设置Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+                     * @param _type Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -99,15 +107,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection template name.
-                     * @return Name Media quality inspection template name.
+                     * 获取Template Name
+                     * @return Name Template Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Media quality inspection template name.
-                     * @param _name Media quality inspection template name.
+                     * 设置Template Name
+                     * @param _name Template Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -120,15 +128,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description. 
-                     * @return Comment Template description. 
+                     * 获取Template description.
+                     * @return Comment Template description.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. 
-                     * @param _comment Template description. 
+                     * 设置Template description.
+                     * @param _comment Template description.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -141,15 +149,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Frame interval, unit in seconds.
-                     * @return ScreenshotInterval Frame interval, unit in seconds.
+                     * 获取Frame interception interval in seconds.
+                     * @return ScreenshotInterval Frame interception interval in seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame interval, unit in seconds.
-                     * @param _screenshotInterval Frame interval, unit in seconds.
+                     * 设置Frame interception interval in seconds.
+                     * @param _screenshotInterval Frame interception interval in seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -162,15 +170,15 @@ namespace TencentCloud
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video jitter and ghosting.
-                     * @return JitterConfigure Control parameters for detecting video jitter and ghosting.
+                     * 获取Control parameters for video frame jitter and ghosting detection.
+                     * @return JitterConfigure Control parameters for video frame jitter and ghosting detection.
                      * 
                      */
                     JitterConfigureInfo GetJitterConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video jitter and ghosting.
-                     * @param _jitterConfigure Control parameters for detecting video jitter and ghosting.
+                     * 设置Control parameters for video frame jitter and ghosting detection.
+                     * @param _jitterConfigure Control parameters for video frame jitter and ghosting detection.
                      * 
                      */
                     void SetJitterConfigure(const JitterConfigureInfo& _jitterConfigure);
@@ -183,15 +191,15 @@ namespace TencentCloud
                     bool JitterConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video blur.
-                     * @return BlurConfigure Control parameters for detecting video blur.
+                     * 获取Control parameters for video frame blur detection.
+                     * @return BlurConfigure Control parameters for video frame blur detection.
                      * 
                      */
                     BlurConfigureInfo GetBlurConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video blur.
-                     * @param _blurConfigure Control parameters for detecting video blur.
+                     * 设置Control parameters for video frame blur detection.
+                     * @param _blurConfigure Control parameters for video frame blur detection.
                      * 
                      */
                     void SetBlurConfigure(const BlurConfigureInfo& _blurConfigure);
@@ -204,15 +212,15 @@ namespace TencentCloud
                     bool BlurConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting low brightness and overexposure of video.
-                     * @return AbnormalLightingConfigure Control parameters for detecting low brightness and overexposure of video.
+                     * 获取Control parameters for low-light and overexposure detection in video frames.
+                     * @return AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
                      * 
                      */
                     AbnormalLightingConfigureInfo GetAbnormalLightingConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting low brightness and overexposure of video.
-                     * @param _abnormalLightingConfigure Control parameters for detecting low brightness and overexposure of video.
+                     * 设置Control parameters for low-light and overexposure detection in video frames.
+                     * @param _abnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
                      * 
                      */
                     void SetAbnormalLightingConfigure(const AbnormalLightingConfigureInfo& _abnormalLightingConfigure);
@@ -225,15 +233,15 @@ namespace TencentCloud
                     bool AbnormalLightingConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video crash.
-                     * @return CrashScreenConfigure Control parameters for detecting video crash.
+                     * 获取Control parameters for screen glitch detection in video footage.
+                     * @return CrashScreenConfigure Control parameters for screen glitch detection in video footage.
                      * 
                      */
                     CrashScreenConfigureInfo GetCrashScreenConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video crash.
-                     * @param _crashScreenConfigure Control parameters for detecting video crash.
+                     * 设置Control parameters for screen glitch detection in video footage.
+                     * @param _crashScreenConfigure Control parameters for screen glitch detection in video footage.
                      * 
                      */
                     void SetCrashScreenConfigure(const CrashScreenConfigureInfo& _crashScreenConfigure);
@@ -246,15 +254,15 @@ namespace TencentCloud
                     bool CrashScreenConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video black edges, white edges, black screen, and white screen.
-                     * @return BlackWhiteEdgeConfigure Control parameters for detecting video black edges, white edges, black screen, and white screen.
+                     * 获取Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+                     * @return BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
                      * 
                      */
                     BlackWhiteEdgeConfigureInfo GetBlackWhiteEdgeConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video black edges, white edges, black screen, and white screen.
-                     * @param _blackWhiteEdgeConfigure Control parameters for detecting video black edges, white edges, black screen, and white screen.
+                     * 设置Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+                     * @param _blackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
                      * 
                      */
                     void SetBlackWhiteEdgeConfigure(const BlackWhiteEdgeConfigureInfo& _blackWhiteEdgeConfigure);
@@ -267,15 +275,15 @@ namespace TencentCloud
                     bool BlackWhiteEdgeConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video noise.
-                     * @return NoiseConfigure Control parameters for detecting video noise.
+                     * 获取Control parameters for video frame noise detection.
+                     * @return NoiseConfigure Control parameters for video frame noise detection.
                      * 
                      */
                     NoiseConfigureInfo GetNoiseConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video noise.
-                     * @param _noiseConfigure Control parameters for detecting video noise.
+                     * 设置Control parameters for video frame noise detection.
+                     * @param _noiseConfigure Control parameters for video frame noise detection.
                      * 
                      */
                     void SetNoiseConfigure(const NoiseConfigureInfo& _noiseConfigure);
@@ -288,15 +296,15 @@ namespace TencentCloud
                     bool NoiseConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for detecting video mosaic.
-                     * @return MosaicConfigure Control parameters for detecting video mosaic.
+                     * 获取Control parameters for video frame mosaic detection.
+                     * @return MosaicConfigure Control parameters for video frame mosaic detection.
                      * 
                      */
                     MosaicConfigureInfo GetMosaicConfigure() const;
 
                     /**
-                     * 设置Control parameters for detecting video mosaic.
-                     * @param _mosaicConfigure Control parameters for detecting video mosaic.
+                     * 设置Control parameters for video frame mosaic detection.
+                     * @param _mosaicConfigure Control parameters for video frame mosaic detection.
                      * 
                      */
                     void SetMosaicConfigure(const MosaicConfigureInfo& _mosaicConfigure);
@@ -309,15 +317,15 @@ namespace TencentCloud
                     bool MosaicConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for QR code detection in video.
-                     * @return QRCodeConfigure Control parameters for QR code detection in video.
+                     * 获取Control parameters for video frame QR code detection.
+                     * @return QRCodeConfigure Control parameters for video frame QR code detection.
                      * 
                      */
                     QRCodeConfigureInfo GetQRCodeConfigure() const;
 
                     /**
-                     * 设置Control parameters for QR code detection in video.
-                     * @param _qRCodeConfigure Control parameters for QR code detection in video.
+                     * 设置Control parameters for video frame QR code detection.
+                     * @param _qRCodeConfigure Control parameters for video frame QR code detection.
                      * 
                      */
                     void SetQRCodeConfigure(const QRCodeConfigureInfo& _qRCodeConfigure);
@@ -330,15 +338,15 @@ namespace TencentCloud
                     bool QRCodeConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for video quality evaluation.
-                     * @return QualityEvaluationConfigure Control parameters for video quality evaluation.
+                     * 获取Control parameters for video frame quality evaluation.
+                     * @return QualityEvaluationConfigure Control parameters for video frame quality evaluation.
                      * 
                      */
                     QualityEvaluationConfigureInfo GetQualityEvaluationConfigure() const;
 
                     /**
-                     * 设置Control parameters for video quality evaluation.
-                     * @param _qualityEvaluationConfigure Control parameters for video quality evaluation.
+                     * 设置Control parameters for video frame quality evaluation.
+                     * @param _qualityEvaluationConfigure Control parameters for video frame quality evaluation.
                      * 
                      */
                     void SetQualityEvaluationConfigure(const QualityEvaluationConfigureInfo& _qualityEvaluationConfigure);
@@ -351,15 +359,15 @@ namespace TencentCloud
                     bool QualityEvaluationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for audio (mutes, bass, blast sound).
-                     * @return VoiceConfigure Control parameters for audio (mutes, bass, blast sound).
+                     * 获取Control parameters for audio (mute, bass, clipping) detection.
+                     * @return VoiceConfigure Control parameters for audio (mute, bass, clipping) detection.
                      * 
                      */
                     VoiceConfigureInfo GetVoiceConfigure() const;
 
                     /**
-                     * 设置Control parameters for audio (mutes, bass, blast sound).
-                     * @param _voiceConfigure Control parameters for audio (mutes, bass, blast sound).
+                     * 设置Control parameters for audio (mute, bass, clipping) detection.
+                     * @param _voiceConfigure Control parameters for audio (mute, bass, clipping) detection.
                      * 
                      */
                     void SetVoiceConfigure(const VoiceConfigureInfo& _voiceConfigure);
@@ -372,15 +380,15 @@ namespace TencentCloud
                     bool VoiceConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return CreateTime Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _createTime Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -393,15 +401,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return UpdateTime Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _updateTime Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -416,103 +424,105 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media quality inspection template ID.
+                     * Template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
+                     * Template type. Available values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Media quality inspection template name.
+                     * Template Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description. 
+                     * Template description.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Frame interval, unit in seconds.
+                     * Frame interception interval in seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video jitter and ghosting.
+                     * Control parameters for video frame jitter and ghosting detection.
                      */
                     JitterConfigureInfo m_jitterConfigure;
                     bool m_jitterConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video blur.
+                     * Control parameters for video frame blur detection.
                      */
                     BlurConfigureInfo m_blurConfigure;
                     bool m_blurConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting low brightness and overexposure of video.
+                     * Control parameters for low-light and overexposure detection in video frames.
                      */
                     AbnormalLightingConfigureInfo m_abnormalLightingConfigure;
                     bool m_abnormalLightingConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video crash.
+                     * Control parameters for screen glitch detection in video footage.
                      */
                     CrashScreenConfigureInfo m_crashScreenConfigure;
                     bool m_crashScreenConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video black edges, white edges, black screen, and white screen.
+                     * Control parameters for video picture black edge, white edge, black screen, and white screen detection.
                      */
                     BlackWhiteEdgeConfigureInfo m_blackWhiteEdgeConfigure;
                     bool m_blackWhiteEdgeConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video noise.
+                     * Control parameters for video frame noise detection.
                      */
                     NoiseConfigureInfo m_noiseConfigure;
                     bool m_noiseConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for detecting video mosaic.
+                     * Control parameters for video frame mosaic detection.
                      */
                     MosaicConfigureInfo m_mosaicConfigure;
                     bool m_mosaicConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for QR code detection in video.
+                     * Control parameters for video frame QR code detection.
                      */
                     QRCodeConfigureInfo m_qRCodeConfigure;
                     bool m_qRCodeConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for video quality evaluation.
+                     * Control parameters for video frame quality evaluation.
                      */
                     QualityEvaluationConfigureInfo m_qualityEvaluationConfigure;
                     bool m_qualityEvaluationConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for audio (mutes, bass, blast sound).
+                     * Control parameters for audio (mute, bass, clipping) detection.
                      */
                     VoiceConfigureInfo m_voiceConfigure;
                     bool m_voiceConfigureHasBeenSet;
 
                     /**
-                     * Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

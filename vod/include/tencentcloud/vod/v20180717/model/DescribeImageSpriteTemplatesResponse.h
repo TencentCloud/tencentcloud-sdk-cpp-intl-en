@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of image sprite generating template details.
-                     * @return ImageSpriteTemplateSet List of image sprite generating template details.
+                     * 获取Sprite template details list.
+                     * @return ImageSpriteTemplateSet Sprite template details list.
                      * 
                      */
                     std::vector<ImageSpriteTemplate> GetImageSpriteTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of image sprite generating template details.
+                     * Sprite template details list.
                      */
                     std::vector<ImageSpriteTemplate> m_imageSpriteTemplateSet;
                     bool m_imageSpriteTemplateSetHasBeenSet;

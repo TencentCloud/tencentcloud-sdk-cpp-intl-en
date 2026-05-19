@@ -58,54 +58,50 @@ namespace TencentCloud
 
                     /**
                      * 获取Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
+<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnhanceScenarioType Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
+<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEnhanceScenarioType() const;
 
                     /**
                      * 设置Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
+<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _enhanceScenarioType Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
+<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnhanceScenarioType(const std::string& _enhanceScenarioType);
@@ -118,18 +114,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnhanceScenarioTypeHasBeenSet() const;
 
                     /**
-                     * 获取Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with Large Model enhancement.
+                     * 获取Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuperResolution Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with Large Model enhancement.
+                     * @return SuperResolution Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SuperResolutionInfo GetSuperResolution() const;
 
                     /**
-                     * 设置Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with Large Model enhancement.
+                     * 设置Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _superResolution Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with Large Model enhancement.
+                     * @param _superResolution Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -168,18 +164,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HdrHasBeenSet() const;
 
                     /**
-                     * 获取Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.
+                     * 获取Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.
+                     * @return Denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     VideoDenoiseInfo GetDenoise() const;
 
                     /**
-                     * 设置Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.
+                     * 设置Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.
+                     * @param _denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -193,18 +189,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * 获取Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * @return ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageQualityEnhanceInfo GetImageQualityEnhance() const;
 
                     /**
-                     * 设置Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * 设置Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * @param _imageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -268,18 +264,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LowLightEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取Banding removal configuration.
+                     * 获取Remove scratch configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScratchRepair Banding removal configuration.
+                     * @return ScratchRepair Remove scratch configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ScratchRepairInfo GetScratchRepair() const;
 
                     /**
-                     * 设置Banding removal configuration.
+                     * 设置Remove scratch configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scratchRepair Banding removal configuration.
+                     * @param _scratchRepair Remove scratch configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -293,18 +289,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScratchRepairHasBeenSet() const;
 
                     /**
-                     * 获取Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * 获取Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ArtifactRepair Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * @return ArtifactRepair Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ArtifactRepairInfo GetArtifactRepair() const;
 
                     /**
-                     * 设置Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * 设置Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _artifactRepair Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * @param _artifactRepair Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -318,18 +314,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ArtifactRepairHasBeenSet() const;
 
                     /**
-                     * 获取Large Model enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.
+                     * 获取Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiffusionEnhance Large Model enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.
+                     * @return DiffusionEnhance Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DiffusionEnhanceInfo GetDiffusionEnhance() const;
 
                     /**
-                     * 设置Large Model enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.
+                     * 设置Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diffusionEnhance Large Model enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.
+                     * @param _diffusionEnhance Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -343,18 +339,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiffusionEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate configuration for the frame interpolation, which supports fractions. Note that it is mutually exclusive with FrameRate. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.
+                     * 获取Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FrameRateWithDen Frame rate configuration for the frame interpolation, which supports fractions. Note that it is mutually exclusive with FrameRate. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.
+                     * @return FrameRateWithDen Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FrameRateWithDenInfo GetFrameRateWithDen() const;
 
                     /**
-                     * 设置Frame rate configuration for the frame interpolation, which supports fractions. Note that it is mutually exclusive with FrameRate. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.
+                     * 设置Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _frameRateWithDen Frame rate configuration for the frame interpolation, which supports fractions. Note that it is mutually exclusive with FrameRate. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.
+                     * @param _frameRateWithDen Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -371,22 +367,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Enhancement scenario configuration. Valid values:
-<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
-<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
+<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_enhanceScenarioType;
                     bool m_enhanceScenarioTypeHasBeenSet;
 
                     /**
-                     * Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with Large Model enhancement.
+                     * Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SuperResolutionInfo m_superResolution;
@@ -400,14 +395,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hdrHasBeenSet;
 
                     /**
-                     * Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.
+                     * Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     VideoDenoiseInfo m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageQualityEnhanceInfo m_imageQualityEnhance;
@@ -428,28 +423,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lowLightEnhanceHasBeenSet;
 
                     /**
-                     * Banding removal configuration.
+                     * Remove scratch configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ScratchRepairInfo m_scratchRepair;
                     bool m_scratchRepairHasBeenSet;
 
                     /**
-                     * Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+                     * Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ArtifactRepairInfo m_artifactRepair;
                     bool m_artifactRepairHasBeenSet;
 
                     /**
-                     * Large Model enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.
+                     * Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DiffusionEnhanceInfo m_diffusionEnhance;
                     bool m_diffusionEnhanceHasBeenSet;
 
                     /**
-                     * Frame rate configuration for the frame interpolation, which supports fractions. Note that it is mutually exclusive with FrameRate. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.
+                     * Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FrameRateWithDenInfo m_frameRateWithDen;

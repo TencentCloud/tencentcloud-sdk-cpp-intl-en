@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records that meet the conditions.
-                     * @return TotalCount The total number of records that meet the conditions.
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The information of the queried image processing templates.
-                     * @return ImageProcessingTemplateSet The information of the queried image processing templates.
+                     * 获取List of image processing template details.
+                     * @return ImageProcessingTemplateSet List of image processing template details.
                      * 
                      */
                     std::vector<ImageProcessingTemplate> GetImageProcessingTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of records that meet the conditions.
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The information of the queried image processing templates.
+                     * List of image processing template details.
                      */
                     std::vector<ImageProcessingTemplate> m_imageProcessingTemplateSet;
                     bool m_imageProcessingTemplateSetHasBeenSet;

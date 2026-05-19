@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The audio improvement configuration.
+                * Audio beautification configuration.
                 */
                 class AudioBeautifyInfo : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-                     * @return Switch Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * 获取Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+                     * @return Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-                     * @param _switch Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * 设置Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+                     * @param _switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,27 +76,27 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-                     * @return Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+                     * 获取Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
+                     * @return Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
                      * 
                      */
                     std::vector<std::string> GetTypes() const;
 
                     /**
-                     * 设置The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-                     * @param _types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+                     * 设置Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
+                     * @param _types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
                      * 
                      */
                     void SetTypes(const std::vector<std::string>& _types);
@@ -115,19 +111,18 @@ Default: `declick`.
                 private:
 
                     /**
-                     * Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+                     * Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+                     * Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;

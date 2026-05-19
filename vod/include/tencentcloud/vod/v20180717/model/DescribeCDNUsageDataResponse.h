@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time granularity in minutes.
-                     * @return DataInterval Time granularity in minutes.
+                     * 获取Time granularity, unit: minute.
+                     * @return DataInterval Time granularity, unit: minute.
                      * 
                      */
                     int64_t GetDataInterval() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time granularity in minutes.
+                     * Time granularity, unit: minute.
                      */
                     int64_t m_dataInterval;
                     bool m_dataIntervalHasBeenSet;

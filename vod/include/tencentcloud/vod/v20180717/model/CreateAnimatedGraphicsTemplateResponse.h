@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of an animated image generating template.
-                     * @return Definition Unique ID of an animated image generating template.
+                     * 获取Unique identifier of the rotation diagram template.
+                     * @return Definition Unique identifier of the rotation diagram template.
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of an animated image generating template.
+                     * Unique identifier of the rotation diagram template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -115,19 +115,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClassificationConfigure Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent Classification Task Control Parameters.
+                     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
                      * 
                      */
                     ClassificationConfigureInfo GetClassificationConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _classificationConfigure Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent Classification Task Control Parameters.
+                     * @param _classificationConfigure Intelligent Classification Task Control Parameters.
                      * 
                      */
                     void SetClassificationConfigure(const ClassificationConfigureInfo& _classificationConfigure);
@@ -140,19 +136,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TagConfigure Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent tag task control parameter.
+                     * @return TagConfigure Intelligent tag task control parameter.
                      * 
                      */
                     TagConfigureInfo GetTagConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _tagConfigure Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent tag task control parameter.
+                     * @param _tagConfigure Intelligent tag task control parameter.
                      * 
                      */
                     void SetTagConfigure(const TagConfigureInfo& _tagConfigure);
@@ -165,19 +157,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CoverConfigure Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent Cover Task Control Parameters.
+                     * @return CoverConfigure Intelligent Cover Task Control Parameters.
                      * 
                      */
                     CoverConfigureInfo GetCoverConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _coverConfigure Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent Cover Task Control Parameters.
+                     * @param _coverConfigure Intelligent Cover Task Control Parameters.
                      * 
                      */
                     void SetCoverConfigure(const CoverConfigureInfo& _coverConfigure);
@@ -190,19 +178,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent frame tagging task control parameter.
+                     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
                      * 
                      */
                     FrameTagConfigureInfo GetFrameTagConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _frameTagConfigure Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent frame tagging task control parameter.
+                     * @param _frameTagConfigure Intelligent frame tagging task control parameter.
                      * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfo& _frameTagConfigure);
@@ -298,29 +282,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent Classification Task Control Parameters.
                      */
                     ClassificationConfigureInfo m_classificationConfigure;
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent tag task control parameter.
                      */
                     TagConfigureInfo m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent Cover Task Control Parameters.
                      */
                     CoverConfigureInfo m_coverConfigure;
                     bool m_coverConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent frame tagging task control parameter.
                      */
                     FrameTagConfigureInfo m_frameTagConfigure;
                     bool m_frameTagConfigureHasBeenSet;

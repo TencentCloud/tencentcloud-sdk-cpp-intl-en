@@ -29,7 +29,10 @@ AigcImageOutputConfig::AigcImageOutputConfig() :
     m_aspectRatioHasBeenSet(false),
     m_personGenerationHasBeenSet(false),
     m_inputComplianceCheckHasBeenSet(false),
-    m_outputComplianceCheckHasBeenSet(false)
+    m_outputComplianceCheckHasBeenSet(false),
+    m_outputImageCountHasBeenSet(false),
+    m_outputFormatHasBeenSet(false),
+    m_logoAddHasBeenSet(false)
 {
 }
 
@@ -128,6 +131,36 @@ CoreInternalOutcome AigcImageOutputConfig::Deserialize(const rapidjson::Value &v
         m_outputComplianceCheckHasBeenSet = true;
     }
 
+    if (value.HasMember("OutputImageCount") && !value["OutputImageCount"].IsNull())
+    {
+        if (!value["OutputImageCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcImageOutputConfig.OutputImageCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_outputImageCount = value["OutputImageCount"].GetUint64();
+        m_outputImageCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("OutputFormat") && !value["OutputFormat"].IsNull())
+    {
+        if (!value["OutputFormat"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcImageOutputConfig.OutputFormat` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_outputFormat = string(value["OutputFormat"].GetString());
+        m_outputFormatHasBeenSet = true;
+    }
+
+    if (value.HasMember("LogoAdd") && !value["LogoAdd"].IsNull())
+    {
+        if (!value["LogoAdd"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AigcImageOutputConfig.LogoAdd` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_logoAdd = string(value["LogoAdd"].GetString());
+        m_logoAddHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +238,30 @@ void AigcImageOutputConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "OutputComplianceCheck";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_outputComplianceCheck.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outputImageCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputImageCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_outputImageCount, allocator);
+    }
+
+    if (m_outputFormatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputFormat";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputFormat.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_logoAddHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LogoAdd";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logoAdd.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -352,5 +409,53 @@ void AigcImageOutputConfig::SetOutputComplianceCheck(const string& _outputCompli
 bool AigcImageOutputConfig::OutputComplianceCheckHasBeenSet() const
 {
     return m_outputComplianceCheckHasBeenSet;
+}
+
+uint64_t AigcImageOutputConfig::GetOutputImageCount() const
+{
+    return m_outputImageCount;
+}
+
+void AigcImageOutputConfig::SetOutputImageCount(const uint64_t& _outputImageCount)
+{
+    m_outputImageCount = _outputImageCount;
+    m_outputImageCountHasBeenSet = true;
+}
+
+bool AigcImageOutputConfig::OutputImageCountHasBeenSet() const
+{
+    return m_outputImageCountHasBeenSet;
+}
+
+string AigcImageOutputConfig::GetOutputFormat() const
+{
+    return m_outputFormat;
+}
+
+void AigcImageOutputConfig::SetOutputFormat(const string& _outputFormat)
+{
+    m_outputFormat = _outputFormat;
+    m_outputFormatHasBeenSet = true;
+}
+
+bool AigcImageOutputConfig::OutputFormatHasBeenSet() const
+{
+    return m_outputFormatHasBeenSet;
+}
+
+string AigcImageOutputConfig::GetLogoAdd() const
+{
+    return m_logoAdd;
+}
+
+void AigcImageOutputConfig::SetLogoAdd(const string& _logoAdd)
+{
+    m_logoAdd = _logoAdd;
+    m_logoAddHasBeenSet = true;
+}
+
+bool AigcImageOutputConfig::LogoAddHasBeenSet() const
+{
+    return m_logoAddHasBeenSet;
 }
 

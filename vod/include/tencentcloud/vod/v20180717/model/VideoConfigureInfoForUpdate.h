@@ -174,19 +174,19 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
-                     * @return Bitrate The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+                     * 获取Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
-                     * @param _bitrate The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+                     * 设置Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -235,8 +235,8 @@ Default value: open.
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+                     * Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

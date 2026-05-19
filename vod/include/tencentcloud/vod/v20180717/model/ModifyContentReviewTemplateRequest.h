@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of an intelligent content recognition template.
-                     * @return Definition Unique ID of an intelligent content recognition template.
+                     * 获取Unique identifier of a content review template.
+                     * @return Definition Unique identifier of a content review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of an intelligent content recognition template.
-                     * @param _definition Unique ID of an intelligent content recognition template.
+                     * 设置Unique identifier of a content review template.
+                     * @param _definition Unique identifier of a content review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of an intelligent content recognition template. Length limit: 64 characters.
-                     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * 获取Content review template name. The length cannot exceed 64 characters.
+                     * @return Name Content review template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of an intelligent content recognition template. Length limit: 64 characters.
-                     * @param _name Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * 设置Content review template name. The length cannot exceed 64 characters.
+                     * @param _name Content review template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of an intelligent content recognition template. Length limit: 256 characters.
-                     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * 获取Content review template description information, with a length limit of 256 characters.
+                     * @return Comment Content review template description information, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of an intelligent content recognition template. Length limit: 256 characters.
-                     * @param _comment Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * 设置Content review template description information, with a length limit of 256 characters.
+                     * @param _comment Content review template description information, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for terrorism information.
-                     * @return TerrorismConfigure Control parameter for terrorism information.
+                     * 获取Control parameters for unsafe information.
+                     * @return TerrorismConfigure Control parameters for unsafe information.
                      * 
                      */
                     TerrorismConfigureInfoForUpdate GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Control parameter for terrorism information.
-                     * @param _terrorismConfigure Control parameter for terrorism information.
+                     * 设置Control parameters for unsafe information.
+                     * @param _terrorismConfigure Control parameters for unsafe information.
                      * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfoForUpdate& _terrorismConfigure);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for porn information.
-                     * @return PornConfigure Control parameter for porn information.
+                     * 获取Control parameters for offensive information.
+                     * @return PornConfigure Control parameters for offensive information.
                      * 
                      */
                     PornConfigureInfoForUpdate GetPornConfigure() const;
 
                     /**
-                     * 设置Control parameter for porn information.
-                     * @param _pornConfigure Control parameter for porn information.
+                     * 设置Control parameters for offensive information.
+                     * @param _pornConfigure Control parameters for offensive information.
                      * 
                      */
                     void SetPornConfigure(const PornConfigureInfoForUpdate& _pornConfigure);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for politically sensitive information.
-                     * @return PoliticalConfigure Control parameter for politically sensitive information.
+                     * 获取Control parameter for inappropriate information.
+                     * @return PoliticalConfigure Control parameter for inappropriate information.
                      * 
                      */
                     PoliticalConfigureInfoForUpdate GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Control parameter for politically sensitive information.
-                     * @param _politicalConfigure Control parameter for politically sensitive information.
+                     * 设置Control parameter for inappropriate information.
+                     * @param _politicalConfigure Control parameter for inappropriate information.
                      * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfoForUpdate& _politicalConfigure);
@@ -195,23 +195,23 @@ namespace TencentCloud
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-                     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+                     * 获取Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+                     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     ProhibitedConfigureInfoForUpdate GetProhibitedConfigure() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+                     * 设置Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+                     * @param _prohibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfoForUpdate& _prohibitedConfigure);
@@ -224,15 +224,15 @@ namespace TencentCloud
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for custom intelligent content recognition tasks.
-                     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
+                     * 获取User-defined content review control parameters.
+                     * @return UserDefineConfigure User-defined content review control parameters.
                      * 
                      */
                     UserDefineConfigureInfoForUpdate GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Control parameter for custom intelligent content recognition tasks.
-                     * @param _userDefineConfigure Control parameter for custom intelligent content recognition tasks.
+                     * 设置User-defined content review control parameters.
+                     * @param _userDefineConfigure User-defined content review control parameters.
                      * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfoForUpdate& _userDefineConfigure);
@@ -245,15 +245,15 @@ namespace TencentCloud
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Frame capturing interval in seconds. Minimum value: 0.5 seconds.
-                     * @return ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * 获取Frame interception interval, unit: seconds, minimum value 0.5.
+                     * @return ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame capturing interval in seconds. Minimum value: 0.5 seconds.
-                     * @param _screenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * 设置Frame interception interval, unit: seconds, minimum value 0.5.
+                     * @param _screenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -266,23 +266,23 @@ namespace TencentCloud
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+                     * 获取Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
-                     * @return ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>OFF: No.</li>
+                     * @return ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * 
                      */
                     std::string GetReviewWallSwitch() const;
 
                     /**
-                     * 设置Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+                     * 设置Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
-                     * @param _reviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>OFF: No.</li>
+                     * @param _reviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
@@ -297,71 +297,71 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of an intelligent content recognition template.
+                     * Unique identifier of a content review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * Content review template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * Content review template description information, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameter for terrorism information.
+                     * Control parameters for unsafe information.
                      */
                     TerrorismConfigureInfoForUpdate m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for porn information.
+                     * Control parameters for offensive information.
                      */
                     PornConfigureInfoForUpdate m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for politically sensitive information.
+                     * Control parameter for inappropriate information.
                      */
                     PoliticalConfigureInfoForUpdate m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+                     * Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
                      */
                     ProhibitedConfigureInfoForUpdate m_prohibitedConfigure;
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for custom intelligent content recognition tasks.
+                     * User-defined content review control parameters.
                      */
                     UserDefineConfigureInfoForUpdate m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;
 
                     /**
-                     * Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * Frame interception interval, unit: seconds, minimum value 0.5.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;
 
                     /**
-                     * Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+                     * Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;
