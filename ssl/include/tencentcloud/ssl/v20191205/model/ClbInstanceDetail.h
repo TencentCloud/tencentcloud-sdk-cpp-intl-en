@@ -110,6 +110,27 @@ namespace TencentCloud
                      */
                     bool ListenersHasBeenSet() const;
 
+                    /**
+                     * 获取CLB type. 0 classic CLB; 1 application CLB.
+                     * @return Forward CLB type. 0 classic CLB; 1 application CLB.
+                     * 
+                     */
+                    int64_t GetForward() const;
+
+                    /**
+                     * 设置CLB type. 0 classic CLB; 1 application CLB.
+                     * @param _forward CLB type. 0 classic CLB; 1 application CLB.
+                     * 
+                     */
+                    void SetForward(const int64_t& _forward);
+
+                    /**
+                     * 判断参数 Forward 是否已赋值
+                     * @return Forward 是否已赋值
+                     * 
+                     */
+                    bool ForwardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -129,6 +150,12 @@ namespace TencentCloud
                      */
                     std::vector<ClbListener> m_listeners;
                     bool m_listenersHasBeenSet;
+
+                    /**
+                     * CLB type. 0 classic CLB; 1 application CLB.
+                     */
+                    int64_t m_forward;
+                    bool m_forwardHasBeenSet;
 
                 };
             }

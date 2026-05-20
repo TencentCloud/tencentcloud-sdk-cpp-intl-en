@@ -30,7 +30,8 @@ StartAIConversationRequest::StartAIConversationRequest() :
     m_roomIdTypeHasBeenSet(false),
     m_sTTConfigHasBeenSet(false),
     m_lLMConfigHasBeenSet(false),
-    m_tTSConfigHasBeenSet(false)
+    m_tTSConfigHasBeenSet(false),
+    m_experimentalParamsHasBeenSet(false)
 {
 }
 
@@ -105,6 +106,14 @@ string StartAIConversationRequest::ToJsonString() const
         string key = "TTSConfig";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_tTSConfig.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_experimentalParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExperimentalParams";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_experimentalParams.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -241,6 +250,22 @@ void StartAIConversationRequest::SetTTSConfig(const string& _tTSConfig)
 bool StartAIConversationRequest::TTSConfigHasBeenSet() const
 {
     return m_tTSConfigHasBeenSet;
+}
+
+string StartAIConversationRequest::GetExperimentalParams() const
+{
+    return m_experimentalParams;
+}
+
+void StartAIConversationRequest::SetExperimentalParams(const string& _experimentalParams)
+{
+    m_experimentalParams = _experimentalParams;
+    m_experimentalParamsHasBeenSet = true;
+}
+
+bool StartAIConversationRequest::ExperimentalParamsHasBeenSet() const
+{
+    return m_experimentalParamsHasBeenSet;
 }
 
 

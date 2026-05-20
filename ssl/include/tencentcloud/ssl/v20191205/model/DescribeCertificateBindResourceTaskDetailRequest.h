@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
-                     * @return TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+                     * 获取<p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+                     * @return TaskId <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
-                     * @param _taskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+                     * 设置<p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+                     * @param _taskId <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
-                     * @return Limit The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+                     * 获取<p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+                     * @return Limit <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
                      * 
                      */
                     std::string GetLimit() const;
 
                     /**
-                     * 设置The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
-                     * @param _limit The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+                     * 设置<p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+                     * @param _limit <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
                      * 
                      */
                     void SetLimit(const std::string& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Current offset, default is 0.
-                     * @return Offset Current offset, default is 0.
+                     * 获取<p>Offset, defaults to 0</p>
+                     * @return Offset <p>Offset, defaults to 0</p>
                      * 
                      */
                     std::string GetOffset() const;
 
                     /**
-                     * 设置Current offset, default is 0.
-                     * @param _offset Current offset, default is 0.
+                     * 设置<p>Offset, defaults to 0</p>
+                     * @param _offset <p>Offset, defaults to 0</p>
                      * 
                      */
                     void SetOffset(const std::string& _offset);
@@ -106,63 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
-                     * @return ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+                     * 获取<p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+                     * @return ResourceTypes <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
                      * 
                      */
                     std::vector<std::string> GetResourceTypes() const;
 
                     /**
-                     * 设置Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
-                     * @param _resourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+                     * 设置<p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+                     * @param _resourceTypes <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
                      * 
                      */
                     void SetResourceTypes(const std::vector<std::string>& _resourceTypes);
@@ -175,15 +127,15 @@ namespace TencentCloud
                     bool ResourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
-                     * @return Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+                     * 获取<p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
+                     * @return Regions <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
                      * 
                      */
                     std::vector<std::string> GetRegions() const;
 
                     /**
-                     * 设置Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
-                     * @param _regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+                     * 设置<p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
+                     * @param _regions <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
                      * 
                      */
                     void SetRegions(const std::vector<std::string>& _regions);
@@ -198,43 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+                     * <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+                     * <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Current offset, default is 0.
+                     * <p>Offset, defaults to 0</p>
                      */
                     std::string m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+                     * <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
                      */
                     std::vector<std::string> m_resourceTypes;
                     bool m_resourceTypesHasBeenSet;
 
                     /**
-                     * Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+                     * <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
                      */
                     std::vector<std::string> m_regions;
                     bool m_regionsHasBeenSet;

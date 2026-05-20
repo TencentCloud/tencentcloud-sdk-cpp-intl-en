@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * [Response parameters for obtaining recording recognition results] (https://intl.cloud.tencent.com/document/product/1093/37822?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
+                * [Response parameters for obtaining recording recognition results](https://intl.cloud.tencent.com/document/product/1093/37822?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
                 */
                 class TaskStatus : public AbstractModel
                 {

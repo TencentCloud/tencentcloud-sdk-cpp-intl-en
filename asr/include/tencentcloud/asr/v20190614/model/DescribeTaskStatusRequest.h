@@ -44,18 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
                      * @return TaskId Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
                      * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 设置Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
                      * @param _taskId Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
                      * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
@@ -71,7 +71,7 @@ namespace TencentCloud
 
                     /**
                      * Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;

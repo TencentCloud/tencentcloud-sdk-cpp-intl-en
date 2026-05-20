@@ -42,6 +42,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/DescribeManagersResponse.h
   include/tencentcloud/ssl/v20191205/model/COSInstanceList.h
   include/tencentcloud/ssl/v20191205/model/DescribeCompaniesResponse.h
+  include/tencentcloud/ssl/v20191205/model/UpdateRecordInfo.h
   include/tencentcloud/ssl/v20191205/model/DvAuths.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateAliasRequest.h
   include/tencentcloud/ssl/v20191205/model/BatchDeleteCSRRequest.h
@@ -55,13 +56,17 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/DescribeCSRSetResponse.h
   include/tencentcloud/ssl/v20191205/model/UpdateRecordDetails.h
   include/tencentcloud/ssl/v20191205/model/DescribeCSRRequest.h
+  include/tencentcloud/ssl/v20191205/model/MQTTInstanceList.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateResubmitRequest.h
   include/tencentcloud/ssl/v20191205/model/SupportDownloadType.h
   include/tencentcloud/ssl/v20191205/model/UploadUpdateCertificateRecordRollbackRequest.h
+  include/tencentcloud/ssl/v20191205/model/ModifyCSRResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskResultRequest.h
   include/tencentcloud/ssl/v20191205/model/UpdateRecordDetail.h
   include/tencentcloud/ssl/v20191205/model/BindResourceResult.h
+  include/tencentcloud/ssl/v20191205/model/TDMQInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/ApplyCertificateResponse.h
+  include/tencentcloud/ssl/v20191205/model/UpdateSyncProgressRegion.h
   include/tencentcloud/ssl/v20191205/model/CreateCertificateBindResourceSyncTaskRequest.h
   include/tencentcloud/ssl/v20191205/model/CosInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/UploadConfirmLetterResponse.h
@@ -70,6 +75,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/SyncTaskBindResourceResult.h
   include/tencentcloud/ssl/v20191205/model/ClbInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/UpdateSyncProgress.h
+  include/tencentcloud/ssl/v20191205/model/GAAPInstanceList.h
   include/tencentcloud/ssl/v20191205/model/OperationLog.h
   include/tencentcloud/ssl/v20191205/model/VodInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateResponse.h
@@ -80,7 +86,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskDetailResponse.h
   include/tencentcloud/ssl/v20191205/model/DvAuthDetail.h
-  include/tencentcloud/ssl/v20191205/model/ModifyCSRResponse.h
+  include/tencentcloud/ssl/v20191205/model/CheckCertificateDomainVerificationRequest.h
   include/tencentcloud/ssl/v20191205/model/CdnInstanceList.h
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRetryRequest.h
   include/tencentcloud/ssl/v20191205/model/DdosInstanceDetail.h
@@ -90,13 +96,14 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/CommitCertificateInformationResponse.h
   include/tencentcloud/ssl/v20191205/model/UploadCertificateResponse.h
   include/tencentcloud/ssl/v20191205/model/LiveInstanceDetail.h
-  include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h
+  include/tencentcloud/ssl/v20191205/model/SCFInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/TCBEnvironment.h
   include/tencentcloud/ssl/v20191205/model/WafInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificatesRequest.h
   include/tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackRequest.h
   include/tencentcloud/ssl/v20191205/model/ApiGatewayInstanceList.h
   include/tencentcloud/ssl/v20191205/model/TeoInstanceDetail.h
+  include/tencentcloud/ssl/v20191205/model/RevokeCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/PreAuditInfo.h
   include/tencentcloud/ssl/v20191205/model/CreateCSRResponse.h
   include/tencentcloud/ssl/v20191205/model/Certificate.h
@@ -108,17 +115,22 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/ReplaceCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/CompanyInfo.h
   include/tencentcloud/ssl/v20191205/model/TkeSecretDetail.h
+  include/tencentcloud/ssl/v20191205/model/CheckCertificateDomainVerificationResponse.h
   include/tencentcloud/ssl/v20191205/model/UploadUpdateCertificateInstanceResponse.h
   include/tencentcloud/ssl/v20191205/model/Tags.h
   include/tencentcloud/ssl/v20191205/model/DeleteCertificateResponse.h
+  include/tencentcloud/ssl/v20191205/model/RevokeCertificateResponse.h
+  include/tencentcloud/ssl/v20191205/model/RevokeDomainValidateAuths.h
   include/tencentcloud/ssl/v20191205/model/CreateCSRRequest.h
   include/tencentcloud/ssl/v20191205/model/DeployRecord.h
   include/tencentcloud/ssl/v20191205/model/UploadUpdateCertificateRecordRetryResponse.h
   include/tencentcloud/ssl/v20191205/model/ClbListener.h
+  include/tencentcloud/ssl/v20191205/model/MQTTInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/TSEInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/WafInstanceList.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificatesExpiringNotificationSwitchRequest.h
   include/tencentcloud/ssl/v20191205/model/Filter.h
+  include/tencentcloud/ssl/v20191205/model/GAAPInstanceDetail.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordDetailResponse.h
   include/tencentcloud/ssl/v20191205/model/UploadUpdateCertificateRecordRetryRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordRequest.h
@@ -127,8 +139,9 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/TCBAccessService.h
   include/tencentcloud/ssl/v20191205/model/DescribeCSRSetRequest.h
   include/tencentcloud/ssl/v20191205/model/SubmittedData.h
-  include/tencentcloud/ssl/v20191205/model/UpdateSyncProgressRegion.h
+  include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h
   include/tencentcloud/ssl/v20191205/model/TCBInstanceList.h
+  include/tencentcloud/ssl/v20191205/model/TDMQInstanceList.h
   include/tencentcloud/ssl/v20191205/model/TkeIngressDetail.h
   include/tencentcloud/ssl/v20191205/model/TkeInstanceList.h
   include/tencentcloud/ssl/v20191205/model/ApiGatewayInstanceDetail.h
@@ -147,7 +160,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/ApplyCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordRequest.h
   include/tencentcloud/ssl/v20191205/model/CreateCertificateResponse.h
-  include/tencentcloud/ssl/v20191205/model/UpdateRecordInfo.h
+  include/tencentcloud/ssl/v20191205/model/DomainValidationResult.h
   include/tencentcloud/ssl/v20191205/model/HostingConfig.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateDetailResponse.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskResultResponse.h
@@ -167,9 +180,11 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/CertificateOrderSubmitResponse.h
   include/tencentcloud/ssl/v20191205/model/TCBHostService.h
   include/tencentcloud/ssl/v20191205/model/DescribeHostUploadUpdateRecordDetailRequest.h
+  include/tencentcloud/ssl/v20191205/model/SCFInstanceList.h
   include/tencentcloud/ssl/v20191205/model/DescribeCompaniesRequest.h
   include/tencentcloud/ssl/v20191205/model/ManagerStatusInfo.h
   include/tencentcloud/ssl/v20191205/model/CancelAuditCertificateResponse.h
+  include/tencentcloud/ssl/v20191205/model/GAAPListenerDetail.h
   include/tencentcloud/ssl/v20191205/model/DescribeManagersRequest.h
   include/tencentcloud/ssl/v20191205/model/TSEInstanceList.h
   include/tencentcloud/ssl/v20191205/model/VODInstanceList.h
@@ -200,6 +215,7 @@ set(ssl_src
   src/v20191205/model/DescribeManagersResponse.cpp
   src/v20191205/model/COSInstanceList.cpp
   src/v20191205/model/DescribeCompaniesResponse.cpp
+  src/v20191205/model/UpdateRecordInfo.cpp
   src/v20191205/model/DvAuths.cpp
   src/v20191205/model/ModifyCertificateAliasRequest.cpp
   src/v20191205/model/BatchDeleteCSRRequest.cpp
@@ -213,13 +229,17 @@ set(ssl_src
   src/v20191205/model/DescribeCSRSetResponse.cpp
   src/v20191205/model/UpdateRecordDetails.cpp
   src/v20191205/model/DescribeCSRRequest.cpp
+  src/v20191205/model/MQTTInstanceList.cpp
   src/v20191205/model/ModifyCertificateResubmitRequest.cpp
   src/v20191205/model/SupportDownloadType.cpp
   src/v20191205/model/UploadUpdateCertificateRecordRollbackRequest.cpp
+  src/v20191205/model/ModifyCSRResponse.cpp
   src/v20191205/model/DescribeCertificateBindResourceTaskResultRequest.cpp
   src/v20191205/model/UpdateRecordDetail.cpp
   src/v20191205/model/BindResourceResult.cpp
+  src/v20191205/model/TDMQInstanceDetail.cpp
   src/v20191205/model/ApplyCertificateResponse.cpp
+  src/v20191205/model/UpdateSyncProgressRegion.cpp
   src/v20191205/model/CreateCertificateBindResourceSyncTaskRequest.cpp
   src/v20191205/model/CosInstanceDetail.cpp
   src/v20191205/model/UploadConfirmLetterResponse.cpp
@@ -228,6 +248,7 @@ set(ssl_src
   src/v20191205/model/SyncTaskBindResourceResult.cpp
   src/v20191205/model/ClbInstanceDetail.cpp
   src/v20191205/model/UpdateSyncProgress.cpp
+  src/v20191205/model/GAAPInstanceList.cpp
   src/v20191205/model/OperationLog.cpp
   src/v20191205/model/VodInstanceDetail.cpp
   src/v20191205/model/DescribeCertificateResponse.cpp
@@ -238,7 +259,7 @@ set(ssl_src
   src/v20191205/model/UpdateCertificateRecordRollbackResponse.cpp
   src/v20191205/model/DescribeCertificateBindResourceTaskDetailResponse.cpp
   src/v20191205/model/DvAuthDetail.cpp
-  src/v20191205/model/ModifyCSRResponse.cpp
+  src/v20191205/model/CheckCertificateDomainVerificationRequest.cpp
   src/v20191205/model/CdnInstanceList.cpp
   src/v20191205/model/UpdateCertificateRecordRetryRequest.cpp
   src/v20191205/model/DdosInstanceDetail.cpp
@@ -248,13 +269,14 @@ set(ssl_src
   src/v20191205/model/CommitCertificateInformationResponse.cpp
   src/v20191205/model/UploadCertificateResponse.cpp
   src/v20191205/model/LiveInstanceDetail.cpp
-  src/v20191205/model/SubmitCertificateInformationRequest.cpp
+  src/v20191205/model/SCFInstanceDetail.cpp
   src/v20191205/model/TCBEnvironment.cpp
   src/v20191205/model/WafInstanceDetail.cpp
   src/v20191205/model/DescribeCertificatesRequest.cpp
   src/v20191205/model/UpdateCertificateRecordRollbackRequest.cpp
   src/v20191205/model/ApiGatewayInstanceList.cpp
   src/v20191205/model/TeoInstanceDetail.cpp
+  src/v20191205/model/RevokeCertificateRequest.cpp
   src/v20191205/model/PreAuditInfo.cpp
   src/v20191205/model/CreateCSRResponse.cpp
   src/v20191205/model/Certificate.cpp
@@ -266,17 +288,22 @@ set(ssl_src
   src/v20191205/model/ReplaceCertificateRequest.cpp
   src/v20191205/model/CompanyInfo.cpp
   src/v20191205/model/TkeSecretDetail.cpp
+  src/v20191205/model/CheckCertificateDomainVerificationResponse.cpp
   src/v20191205/model/UploadUpdateCertificateInstanceResponse.cpp
   src/v20191205/model/Tags.cpp
   src/v20191205/model/DeleteCertificateResponse.cpp
+  src/v20191205/model/RevokeCertificateResponse.cpp
+  src/v20191205/model/RevokeDomainValidateAuths.cpp
   src/v20191205/model/CreateCSRRequest.cpp
   src/v20191205/model/DeployRecord.cpp
   src/v20191205/model/UploadUpdateCertificateRecordRetryResponse.cpp
   src/v20191205/model/ClbListener.cpp
+  src/v20191205/model/MQTTInstanceDetail.cpp
   src/v20191205/model/TSEInstanceDetail.cpp
   src/v20191205/model/WafInstanceList.cpp
   src/v20191205/model/ModifyCertificatesExpiringNotificationSwitchRequest.cpp
   src/v20191205/model/Filter.cpp
+  src/v20191205/model/GAAPInstanceDetail.cpp
   src/v20191205/model/DescribeHostUpdateRecordDetailResponse.cpp
   src/v20191205/model/UploadUpdateCertificateRecordRetryRequest.cpp
   src/v20191205/model/DescribeHostUpdateRecordRequest.cpp
@@ -285,8 +312,9 @@ set(ssl_src
   src/v20191205/model/TCBAccessService.cpp
   src/v20191205/model/DescribeCSRSetRequest.cpp
   src/v20191205/model/SubmittedData.cpp
-  src/v20191205/model/UpdateSyncProgressRegion.cpp
+  src/v20191205/model/SubmitCertificateInformationRequest.cpp
   src/v20191205/model/TCBInstanceList.cpp
+  src/v20191205/model/TDMQInstanceList.cpp
   src/v20191205/model/TkeIngressDetail.cpp
   src/v20191205/model/TkeInstanceList.cpp
   src/v20191205/model/ApiGatewayInstanceDetail.cpp
@@ -305,7 +333,7 @@ set(ssl_src
   src/v20191205/model/ApplyCertificateRequest.cpp
   src/v20191205/model/DescribeHostUploadUpdateRecordRequest.cpp
   src/v20191205/model/CreateCertificateResponse.cpp
-  src/v20191205/model/UpdateRecordInfo.cpp
+  src/v20191205/model/DomainValidationResult.cpp
   src/v20191205/model/HostingConfig.cpp
   src/v20191205/model/DescribeCertificateDetailResponse.cpp
   src/v20191205/model/DescribeCertificateBindResourceTaskResultResponse.cpp
@@ -325,9 +353,11 @@ set(ssl_src
   src/v20191205/model/CertificateOrderSubmitResponse.cpp
   src/v20191205/model/TCBHostService.cpp
   src/v20191205/model/DescribeHostUploadUpdateRecordDetailRequest.cpp
+  src/v20191205/model/SCFInstanceList.cpp
   src/v20191205/model/DescribeCompaniesRequest.cpp
   src/v20191205/model/ManagerStatusInfo.cpp
   src/v20191205/model/CancelAuditCertificateResponse.cpp
+  src/v20191205/model/GAAPListenerDetail.cpp
   src/v20191205/model/DescribeManagersRequest.cpp
   src/v20191205/model/TSEInstanceList.cpp
   src/v20191205/model/VODInstanceList.cpp

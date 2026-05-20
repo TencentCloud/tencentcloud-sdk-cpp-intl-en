@@ -154,6 +154,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate encryption algorithm
+                     * @return Algorithm Certificate encryption algorithm
+                     * 
+                     */
+                    std::string GetAlgorithm() const;
+
+                    /**
+                     * 设置Certificate encryption algorithm
+                     * @param _algorithm Certificate encryption algorithm
+                     * 
+                     */
+                    void SetAlgorithm(const std::string& _algorithm);
+
+                    /**
+                     * 判断参数 Algorithm 是否已赋值
+                     * @return Algorithm 是否已赋值
+                     * 
+                     */
+                    bool AlgorithmHasBeenSet() const;
+
                 private:
 
                     /**
@@ -185,6 +206,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Certificate encryption algorithm
+                     */
+                    std::string m_algorithm;
+                    bool m_algorithmHasBeenSet;
 
                 };
             }

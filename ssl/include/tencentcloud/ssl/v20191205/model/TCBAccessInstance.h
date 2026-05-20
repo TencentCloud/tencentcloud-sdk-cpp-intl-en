@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain
+                     * @return Domain Domain
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain
+                     * @param _domain Domain
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -97,23 +89,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The unified domain status.
+                     * 获取Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnionStatus The unified domain status.
+                     * @return UnionStatus Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUnionStatus() const;
 
                     /**
-                     * 设置The unified domain status.
+                     * 设置Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unionStatus The unified domain status.
+                     * @param _unionStatus Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUnionStatus(const int64_t& _unionStatus);
@@ -126,23 +114,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnionStatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+                     * 获取Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsPreempted Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+                     * @return IsPreempted Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsPreempted() const;
 
                     /**
-                     * 设置Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+                     * 设置Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isPreempted Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+                     * @param _isPreempted Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsPreempted(const bool& _isPreempted);
@@ -155,23 +139,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsPreemptedHasBeenSet() const;
 
                     /**
-                     * 获取Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+                     * 获取icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ICPStatus Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+                     * @return ICPStatus icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetICPStatus() const;
 
                     /**
-                     * 设置Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+                     * 设置icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iCPStatus Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+                     * @param _iCPStatus icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetICPStatus(const int64_t& _iCPStatus);
@@ -184,19 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ICPStatusHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bound Certificate ID
+                     * @return OldCertificateId Bound Certificate ID
                      * 
                      */
                     std::string GetOldCertificateId() const;
 
                     /**
-                     * 设置The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bound Certificate ID
+                     * @param _oldCertificateId Bound Certificate ID
                      * 
                      */
                     void SetOldCertificateId(const std::string& _oldCertificateId);
@@ -211,46 +187,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The unified domain status.
+                     * Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_unionStatus;
                     bool m_unionStatusHasBeenSet;
 
                     /**
-                     * Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+                     * Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isPreempted;
                     bool m_isPreemptedHasBeenSet;
 
                     /**
-                     * Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+                     * icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_iCPStatus;
                     bool m_iCPStatusHasBeenSet;
 
                     /**
-                     * The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bound Certificate ID
                      */
                     std::string m_oldCertificateId;
                     bool m_oldCertificateIdHasBeenSet;

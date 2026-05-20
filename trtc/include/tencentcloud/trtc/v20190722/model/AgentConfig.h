@@ -24,6 +24,9 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trtc/v20190722/model/AmbientSound.h>
+#include <tencentcloud/trtc/v20190722/model/VoicePrint.h>
+#include <tencentcloud/trtc/v20190722/model/TurnDetection.h>
 
 
 namespace TencentCloud
@@ -35,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Robot parameters
+                * Bot parameters.
                 */
                 class AgentConfig : public AbstractModel
                 {
@@ -47,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-                     * @return UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * 获取The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
+                     * @return UserId The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-                     * @param _userId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * 设置The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
+                     * @param _userId The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +71,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-                     * @return UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * 获取Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+                     * @return UserSig Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
                      * 
                      */
                     std::string GetUserSig() const;
 
                     /**
-                     * 设置The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-                     * @param _userSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * 设置Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+                     * @param _userSig Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
                      * 
                      */
                     void SetUserSig(const std::string& _userSig);
@@ -89,15 +92,15 @@ namespace TencentCloud
                     bool UserSigHasBeenSet() const;
 
                     /**
-                     * 获取The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
-                     * @return TargetUserId The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
+                     * 获取UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
+                     * @return TargetUserId UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
                      * 
                      */
                     std::string GetTargetUserId() const;
 
                     /**
-                     * 设置The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
-                     * @param _targetUserId The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
+                     * 设置UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
+                     * @param _targetUserId UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
                      * 
                      */
                     void SetTargetUserId(const std::string& _targetUserId);
@@ -110,15 +113,15 @@ namespace TencentCloud
                     bool TargetUserIdHasBeenSet() const;
 
                     /**
-                     * 获取If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
-                     * @return MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
+                     * 获取Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
+                     * @return MaxIdleTime Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
                      * 
                      */
                     uint64_t GetMaxIdleTime() const;
 
                     /**
-                     * 设置If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
-                     * @param _maxIdleTime If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
+                     * 设置Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
+                     * @param _maxIdleTime Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
                      * 
                      */
                     void SetMaxIdleTime(const uint64_t& _maxIdleTime);
@@ -131,15 +134,15 @@ namespace TencentCloud
                     bool MaxIdleTimeHasBeenSet() const;
 
                     /**
-                     * 获取Robot's welcome message
-                     * @return WelcomeMessage Robot's welcome message
+                     * 获取Robot'S greeting.
+                     * @return WelcomeMessage Robot'S greeting.
                      * 
                      */
                     std::string GetWelcomeMessage() const;
 
                     /**
-                     * 设置Robot's welcome message
-                     * @param _welcomeMessage Robot's welcome message
+                     * 设置Robot'S greeting.
+                     * @param _welcomeMessage Robot'S greeting.
                      * 
                      */
                     void SetWelcomeMessage(const std::string& _welcomeMessage);
@@ -152,15 +155,15 @@ namespace TencentCloud
                     bool WelcomeMessageHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
-                     * @return InterruptMode Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
+                     * 获取Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
+                     * @return InterruptMode Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
                      * 
                      */
                     uint64_t GetInterruptMode() const;
 
                     /**
-                     * 设置Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
-                     * @param _interruptMode Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
+                     * 设置Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
+                     * @param _interruptMode Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
                      * 
                      */
                     void SetInterruptMode(const uint64_t& _interruptMode);
@@ -173,15 +176,15 @@ namespace TencentCloud
                     bool InterruptModeHasBeenSet() const;
 
                     /**
-                     * 获取Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
-                     * @return InterruptSpeechDuration Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+                     * 获取Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
+                     * @return InterruptSpeechDuration Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
                      * 
                      */
                     uint64_t GetInterruptSpeechDuration() const;
 
                     /**
-                     * 设置Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
-                     * @param _interruptSpeechDuration Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+                     * 设置Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
+                     * @param _interruptSpeechDuration Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
                      * 
                      */
                     void SetInterruptSpeechDuration(const uint64_t& _interruptSpeechDuration);
@@ -193,49 +196,347 @@ namespace TencentCloud
                      */
                     bool InterruptSpeechDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+                     * @return TurnDetectionMode Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+                     * 
+                     */
+                    uint64_t GetTurnDetectionMode() const;
+
+                    /**
+                     * 设置Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+                     * @param _turnDetectionMode Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+                     * 
+                     */
+                    void SetTurnDetectionMode(const uint64_t& _turnDetectionMode);
+
+                    /**
+                     * 判断参数 TurnDetectionMode 是否已赋值
+                     * @return TurnDetectionMode 是否已赋值
+                     * 
+                     */
+                    bool TurnDetectionModeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+                     * @return FilterOneWord Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+                     * 
+                     */
+                    bool GetFilterOneWord() const;
+
+                    /**
+                     * 设置Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+                     * @param _filterOneWord Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+                     * 
+                     */
+                    void SetFilterOneWord(const bool& _filterOneWord);
+
+                    /**
+                     * 判断参数 FilterOneWord 是否已赋值
+                     * @return FilterOneWord 是否已赋值
+                     * 
+                     */
+                    bool FilterOneWordHasBeenSet() const;
+
+                    /**
+                     * 获取Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+                     * @return WelcomeMessagePriority Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+                     * 
+                     */
+                    uint64_t GetWelcomeMessagePriority() const;
+
+                    /**
+                     * 设置Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+                     * @param _welcomeMessagePriority Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+                     * 
+                     */
+                    void SetWelcomeMessagePriority(const uint64_t& _welcomeMessagePriority);
+
+                    /**
+                     * 判断参数 WelcomeMessagePriority 是否已赋值
+                     * @return WelcomeMessagePriority 是否已赋值
+                     * 
+                     */
+                    bool WelcomeMessagePriorityHasBeenSet() const;
+
+                    /**
+                     * 获取For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+                     * @return FilterBracketsContent For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+                     * 
+                     */
+                    uint64_t GetFilterBracketsContent() const;
+
+                    /**
+                     * 设置For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+                     * @param _filterBracketsContent For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+                     * 
+                     */
+                    void SetFilterBracketsContent(const uint64_t& _filterBracketsContent);
+
+                    /**
+                     * 判断参数 FilterBracketsContent 是否已赋值
+                     * @return FilterBracketsContent 是否已赋值
+                     * 
+                     */
+                    bool FilterBracketsContentHasBeenSet() const;
+
+                    /**
+                     * 获取Ambient sound settings.
+                     * @return AmbientSound Ambient sound settings.
+                     * 
+                     */
+                    AmbientSound GetAmbientSound() const;
+
+                    /**
+                     * 设置Ambient sound settings.
+                     * @param _ambientSound Ambient sound settings.
+                     * 
+                     */
+                    void SetAmbientSound(const AmbientSound& _ambientSound);
+
+                    /**
+                     * 判断参数 AmbientSound 是否已赋值
+                     * @return AmbientSound 是否已赋值
+                     * 
+                     */
+                    bool AmbientSoundHasBeenSet() const;
+
+                    /**
+                     * 获取Voiceprint configuration.
+                     * @return VoicePrint Voiceprint configuration.
+                     * 
+                     */
+                    VoicePrint GetVoicePrint() const;
+
+                    /**
+                     * 设置Voiceprint configuration.
+                     * @param _voicePrint Voiceprint configuration.
+                     * 
+                     */
+                    void SetVoicePrint(const VoicePrint& _voicePrint);
+
+                    /**
+                     * 判断参数 VoicePrint 是否已赋值
+                     * @return VoicePrint 是否已赋值
+                     * 
+                     */
+                    bool VoicePrintHasBeenSet() const;
+
+                    /**
+                     * 获取Semantic sentence segmentation detection.
+                     * @return TurnDetection Semantic sentence segmentation detection.
+                     * 
+                     */
+                    TurnDetection GetTurnDetection() const;
+
+                    /**
+                     * 设置Semantic sentence segmentation detection.
+                     * @param _turnDetection Semantic sentence segmentation detection.
+                     * 
+                     */
+                    void SetTurnDetection(const TurnDetection& _turnDetection);
+
+                    /**
+                     * 判断参数 TurnDetection 是否已赋值
+                     * @return TurnDetection 是否已赋值
+                     * 
+                     */
+                    bool TurnDetectionHasBeenSet() const;
+
+                    /**
+                     * 获取Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+                     * @return SubtitleMode Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+                     * 
+                     */
+                    uint64_t GetSubtitleMode() const;
+
+                    /**
+                     * 设置Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+                     * @param _subtitleMode Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+                     * 
+                     */
+                    void SetSubtitleMode(const uint64_t& _subtitleMode);
+
+                    /**
+                     * 判断参数 SubtitleMode 是否已赋值
+                     * @return SubtitleMode 是否已赋值
+                     * 
+                     */
+                    bool SubtitleModeHasBeenSet() const;
+
+                    /**
+                     * 获取Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+                     * @return InterruptWordList Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+                     * 
+                     */
+                    std::vector<std::string> GetInterruptWordList() const;
+
+                    /**
+                     * 设置Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+                     * @param _interruptWordList Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+                     * 
+                     */
+                    void SetInterruptWordList(const std::vector<std::string>& _interruptWordList);
+
+                    /**
+                     * 判断参数 InterruptWordList 是否已赋值
+                     * @return InterruptWordList 是否已赋值
+                     * 
+                     */
+                    bool InterruptWordListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * The robot's UserId is used to enter a room and initiate a task. note that this UserId cannot be duplicated with the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple tasks are initiated in a room, the robot's UserId cannot be mutually duplicated. otherwise, the previous task will be interrupted. ensure the robot's UserId is unique in the room.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
                      */
                     std::string m_userSig;
                     bool m_userSigHasBeenSet;
 
                     /**
-                     * The UserId of the robot pulling the media stream. After filling in, the robot will pull the media stream of the UserId for real-time processing
+                     * UserId for robot stream pulling. after fill, the robot performs stream pulling and processes in real time.
                      */
                     std::string m_targetUserId;
                     bool m_targetUserIdHasBeenSet;
 
                     /**
-                     * If there is no streaming in the room for more than MaxIdleTime, the Service will automatically close the task. The default value is 60s.
+                     * Exceeding MaxIdleTime in the room with no streaming automatically shuts down the backend task. default value is 60s.
                      */
                     uint64_t m_maxIdleTime;
                     bool m_maxIdleTimeHasBeenSet;
 
                     /**
-                     * Robot's welcome message
+                     * Robot'S greeting.
                      */
                     std::string m_welcomeMessage;
                     bool m_welcomeMessageHasBeenSet;
 
                     /**
-                     * Intelligent interruption mode, the default value is 0, 0 means the server automatically interrupts, 1 means the server does not interrupt, and the client sends an interrupt signal to interrupt
+                     * Intelligent interruption mode, defaults to 0. 0 means server-side automatic interruption. 1 means the server does not interrupt, and the client sends an interruption signal to perform interruption.
                      */
                     uint64_t m_interruptMode;
                     bool m_interruptModeHasBeenSet;
 
                     /**
-                     * Used when InterruptMode is 0, in milliseconds, with a default value of 500ms. This means that the server will interrupt when it detects a human voice that lasts for InterruptSpeechDuration milliseconds.
+                     * Used when InterruptMode is 0, in milliseconds, defaults to 500ms. indicates the server will interrupt when it detects continuous voice for InterruptSpeechDuration milliseconds.
                      */
                     uint64_t m_interruptSpeechDuration;
                     bool m_interruptSpeechDurationHasBeenSet;
+
+                    /**
+                     * Controls the trigger mode for a new dialogue. default is 0.
+-0 means a new dialogue is automatically triggered when the server detects a complete sentence through automatic speech recognition.
+-1 indicates the client determines whether to manually send a chat signaling trigger for a new dialogue upon receiving the caption message.
+                     */
+                    uint64_t m_turnDetectionMode;
+                    bool m_turnDetectionModeHasBeenSet;
+
+                    /**
+                     * Whether to filter out sentences where the user only says one word. true indicates filtering, false indicates no filtering. default value is true.
+                     */
+                    bool m_filterOneWord;
+                    bool m_filterOneWordHasBeenSet;
+
+                    /**
+                     * Welcome message priority. valid values: 0 (default), 1 (high priority). high priority messages cannot be interrupted.
+                     */
+                    uint64_t m_welcomeMessagePriority;
+                    bool m_welcomeMessagePriorityHasBeenSet;
+
+                    /**
+                     * For filtering LLM return content, do not play the content in brackets.
+Chinese bracket ().
+2: english parentheses.
+3: chinese square brackets [].
+4: english square brackets [].
+5: english curly braces {}.
+Empty by default, means no filtering.
+                     */
+                    uint64_t m_filterBracketsContent;
+                    bool m_filterBracketsContentHasBeenSet;
+
+                    /**
+                     * Ambient sound settings.
+                     */
+                    AmbientSound m_ambientSound;
+                    bool m_ambientSoundHasBeenSet;
+
+                    /**
+                     * Voiceprint configuration.
+                     */
+                    VoicePrint m_voicePrint;
+                    bool m_voicePrintHasBeenSet;
+
+                    /**
+                     * Semantic sentence segmentation detection.
+                     */
+                    TurnDetection m_turnDetection;
+                    bool m_turnDetectionHasBeenSet;
+
+                    /**
+                     * Robot subtitle display mode.
+-0 means display as soon as possible without synchronizing with audio playback. at this point, subtitles are fully delivered, and subsequent subtitles will include previous ones.
+-1 indicates sentence-level real-time display, which synchronizes with audio playback. only when the current sentence's corresponding audio playback is complete will the next subtitle be delivered. at this point, subtitles are delivered incrementally, and the terminal needs to concatenate the leading and trailing subtitles to form a complete subtitle.
+                     */
+                    uint64_t m_subtitleMode;
+                    bool m_subtitleModeHasBeenSet;
+
+                    /**
+                     * Interruption word list. during AI speaking, only speak words in the list to interrupt AI speaking.
+Note: interrupt words avoid triggering AI reply.
+                     */
+                    std::vector<std::string> m_interruptWordList;
+                    bool m_interruptWordListHasBeenSet;
 
                 };
             }

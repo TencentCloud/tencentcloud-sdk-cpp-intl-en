@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Id Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _id Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Name Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取gateway certificate name
+                     * @return Name gateway certificate name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _name Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置gateway certificate name
+                     * @param _name gateway certificate name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BindDomains Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Bind Domain Name
+                     * @return BindDomains Bind Domain Name
                      * 
                      */
                     std::vector<std::string> GetBindDomains() const;
 
                     /**
-                     * 设置Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _bindDomains Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Bind Domain Name
+                     * @param _bindDomains Bind Domain Name
                      * 
                      */
                     void SetBindDomains(const std::vector<std::string>& _bindDomains);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CertSource Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetCertSource() const;
 
                     /**
                      * 设置Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _certSource Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCertSource(const std::string& _certSource);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CertSourceHasBeenSet() const;
 
                     /**
-                     * 获取SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CertId SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Currently bound SSL certificate ID
+                     * @return CertId Currently bound SSL certificate ID
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _certId SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Currently bound SSL certificate ID
+                     * @param _certId Currently bound SSL certificate ID
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -175,35 +155,30 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * gateway certificate name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Bind Domain Name
                      */
                     std::vector<std::string> m_bindDomains;
                     bool m_bindDomainsHasBeenSet;
 
                     /**
                      * Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_certSource;
                     bool m_certSourceHasBeenSet;
 
                     /**
-                     * SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Currently bound SSL certificate ID
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

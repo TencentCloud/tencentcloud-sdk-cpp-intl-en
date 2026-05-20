@@ -35,6 +35,8 @@
 #include <tencentcloud/ssl/v20191205/model/CertificateInfoSubmitResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CertificateOrderSubmitRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CertificateOrderSubmitResponse.h>
+#include <tencentcloud/ssl/v20191205/model/CheckCertificateDomainVerificationRequest.h>
+#include <tencentcloud/ssl/v20191205/model/CheckCertificateDomainVerificationResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CreateCSRRequest.h>
@@ -89,6 +91,8 @@
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificatesExpiringNotificationSwitchResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ReplaceCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/ReplaceCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/RevokeCertificateRequest.h>
+#include <tencentcloud/ssl/v20191205/model/RevokeCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h>
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h>
 #include <tencentcloud/ssl/v20191205/model/UpdateCertificateInstanceRequest.h>
@@ -139,6 +143,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CertificateOrderSubmitResponse> CertificateOrderSubmitOutcome;
                 typedef std::future<CertificateOrderSubmitOutcome> CertificateOrderSubmitOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CertificateOrderSubmitRequest&, CertificateOrderSubmitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CertificateOrderSubmitAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckCertificateDomainVerificationResponse> CheckCertificateDomainVerificationOutcome;
+                typedef std::future<CheckCertificateDomainVerificationOutcome> CheckCertificateDomainVerificationOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::CheckCertificateDomainVerificationRequest&, CheckCertificateDomainVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCertificateDomainVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CommitCertificateInformationResponse> CommitCertificateInformationOutcome;
                 typedef std::future<CommitCertificateInformationOutcome> CommitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CommitCertificateInformationRequest&, CommitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitCertificateInformationAsyncHandler;
@@ -220,6 +227,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReplaceCertificateResponse> ReplaceCertificateOutcome;
                 typedef std::future<ReplaceCertificateOutcome> ReplaceCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ReplaceCertificateRequest&, ReplaceCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::RevokeCertificateResponse> RevokeCertificateOutcome;
+                typedef std::future<RevokeCertificateOutcome> RevokeCertificateOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::RevokeCertificateRequest&, RevokeCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RevokeCertificateAsyncHandler;
                 typedef Outcome<Core::Error, Model::SubmitCertificateInformationResponse> SubmitCertificateInformationOutcome;
                 typedef std::future<SubmitCertificateInformationOutcome> SubmitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::SubmitCertificateInformationRequest&, SubmitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitCertificateInformationAsyncHandler;
@@ -305,6 +315,15 @@ namespace TencentCloud
                 CertificateOrderSubmitOutcomeCallable CertificateOrderSubmitCallable(const Model::CertificateOrderSubmitRequest& request);
 
                 /**
+                 *Check the domain validation result of the cert
+                 * @param req CheckCertificateDomainVerificationRequest
+                 * @return CheckCertificateDomainVerificationOutcome
+                 */
+                CheckCertificateDomainVerificationOutcome CheckCertificateDomainVerification(const Model::CheckCertificateDomainVerificationRequest &request);
+                void CheckCertificateDomainVerificationAsync(const Model::CheckCertificateDomainVerificationRequest& request, const CheckCertificateDomainVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckCertificateDomainVerificationOutcomeCallable CheckCertificateDomainVerificationCallable(const Model::CheckCertificateDomainVerificationRequest& request);
+
+                /**
                  *Submit payment certificate orders; This API does not maintain new features, and you can use the new API to submit orders. [CertificateOrderSubmit](https://intl.cloud.tencent.com/document/product/400/116032?from_cn_redirect=1).
                  * @param req CommitCertificateInformationRequest
                  * @return CommitCertificateInformationOutcome
@@ -377,7 +396,7 @@ namespace TencentCloud
                 DescribeCertificateOutcomeCallable DescribeCertificateCallable(const Model::DescribeCertificateRequest& request);
 
                 /**
-                 *This API is used to query the task result of CreateCertificateBindResourceSyncTask, returning the asynchronous task result of the certificate associated with cloud resources, supporting the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos.
+                 *Query the task result of CreateCertificateBindResourceSyncTask, return the asynchronous task result of binding cloud resources with the certificate, support the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos, gaap, mqtt, scf, tdmq.
                  * @param req DescribeCertificateBindResourceTaskDetailRequest
                  * @return DescribeCertificateBindResourceTaskDetailOutcome
                  */
@@ -546,6 +565,15 @@ namespace TencentCloud
                 ReplaceCertificateOutcome ReplaceCertificate(const Model::ReplaceCertificateRequest &request);
                 void ReplaceCertificateAsync(const Model::ReplaceCertificateRequest& request, const ReplaceCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReplaceCertificateOutcomeCallable ReplaceCertificateCallable(const Model::ReplaceCertificateRequest& request);
+
+                /**
+                 *This API is used to revoke certificate.
+                 * @param req RevokeCertificateRequest
+                 * @return RevokeCertificateOutcome
+                 */
+                RevokeCertificateOutcome RevokeCertificate(const Model::RevokeCertificateRequest &request);
+                void RevokeCertificateAsync(const Model::RevokeCertificateRequest& request, const RevokeCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RevokeCertificateOutcomeCallable RevokeCertificateCallable(const Model::RevokeCertificateRequest& request);
 
                 /**
                  *Submit documentation for paid certificates; This API does not maintain new features, and you can use the new API to submit documentation. [CertificateInfoSubmit](https://intl.cloud.tencent.com/document/product/400/116033?from_cn_redirect=1).

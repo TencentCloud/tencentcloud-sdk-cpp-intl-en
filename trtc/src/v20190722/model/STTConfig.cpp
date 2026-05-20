@@ -23,7 +23,9 @@ using namespace std;
 STTConfig::STTConfig() :
     m_languageHasBeenSet(false),
     m_alternativeLanguageHasBeenSet(false),
-    m_vadSilenceTimeHasBeenSet(false)
+    m_customParamHasBeenSet(false),
+    m_vadSilenceTimeHasBeenSet(false),
+    m_vadLevelHasBeenSet(false)
 {
 }
 
@@ -55,6 +57,16 @@ CoreInternalOutcome STTConfig::Deserialize(const rapidjson::Value &value)
         m_alternativeLanguageHasBeenSet = true;
     }
 
+    if (value.HasMember("CustomParam") && !value["CustomParam"].IsNull())
+    {
+        if (!value["CustomParam"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `STTConfig.CustomParam` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_customParam = string(value["CustomParam"].GetString());
+        m_customParamHasBeenSet = true;
+    }
+
     if (value.HasMember("VadSilenceTime") && !value["VadSilenceTime"].IsNull())
     {
         if (!value["VadSilenceTime"].IsUint64())
@@ -63,6 +75,16 @@ CoreInternalOutcome STTConfig::Deserialize(const rapidjson::Value &value)
         }
         m_vadSilenceTime = value["VadSilenceTime"].GetUint64();
         m_vadSilenceTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("VadLevel") && !value["VadLevel"].IsNull())
+    {
+        if (!value["VadLevel"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `STTConfig.VadLevel` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_vadLevel = value["VadLevel"].GetUint64();
+        m_vadLevelHasBeenSet = true;
     }
 
 
@@ -93,12 +115,28 @@ void STTConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         }
     }
 
+    if (m_customParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customParam.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_vadSilenceTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VadSilenceTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vadSilenceTime, allocator);
+    }
+
+    if (m_vadLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VadLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vadLevel, allocator);
     }
 
 }
@@ -136,6 +174,22 @@ bool STTConfig::AlternativeLanguageHasBeenSet() const
     return m_alternativeLanguageHasBeenSet;
 }
 
+string STTConfig::GetCustomParam() const
+{
+    return m_customParam;
+}
+
+void STTConfig::SetCustomParam(const string& _customParam)
+{
+    m_customParam = _customParam;
+    m_customParamHasBeenSet = true;
+}
+
+bool STTConfig::CustomParamHasBeenSet() const
+{
+    return m_customParamHasBeenSet;
+}
+
 uint64_t STTConfig::GetVadSilenceTime() const
 {
     return m_vadSilenceTime;
@@ -150,5 +204,21 @@ void STTConfig::SetVadSilenceTime(const uint64_t& _vadSilenceTime)
 bool STTConfig::VadSilenceTimeHasBeenSet() const
 {
     return m_vadSilenceTimeHasBeenSet;
+}
+
+uint64_t STTConfig::GetVadLevel() const
+{
+    return m_vadLevel;
+}
+
+void STTConfig::SetVadLevel(const uint64_t& _vadLevel)
+{
+    m_vadLevel = _vadLevel;
+    m_vadLevelHasBeenSet = true;
+}
+
+bool STTConfig::VadLevelHasBeenSet() const
+{
+    return m_vadLevelHasBeenSet;
 }
 

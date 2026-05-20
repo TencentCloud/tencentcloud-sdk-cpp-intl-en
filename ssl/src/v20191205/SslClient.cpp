@@ -340,6 +340,56 @@ SslClient::CertificateOrderSubmitOutcomeCallable SslClient::CertificateOrderSubm
     return prom->get_future();
 }
 
+SslClient::CheckCertificateDomainVerificationOutcome SslClient::CheckCertificateDomainVerification(const CheckCertificateDomainVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckCertificateDomainVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckCertificateDomainVerificationResponse rsp = CheckCertificateDomainVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckCertificateDomainVerificationOutcome(rsp);
+        else
+            return CheckCertificateDomainVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckCertificateDomainVerificationOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CheckCertificateDomainVerificationAsync(const CheckCertificateDomainVerificationRequest& request, const CheckCertificateDomainVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckCertificateDomainVerificationRequest&;
+    using Resp = CheckCertificateDomainVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckCertificateDomainVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::CheckCertificateDomainVerificationOutcomeCallable SslClient::CheckCertificateDomainVerificationCallable(const CheckCertificateDomainVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckCertificateDomainVerificationOutcome>>();
+    CheckCertificateDomainVerificationAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const CheckCertificateDomainVerificationRequest&,
+        CheckCertificateDomainVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SslClient::CommitCertificateInformationOutcome SslClient::CommitCertificateInformation(const CommitCertificateInformationRequest &request)
 {
     auto outcome = MakeRequest(request, "CommitCertificateInformation");
@@ -1682,6 +1732,56 @@ SslClient::ReplaceCertificateOutcomeCallable SslClient::ReplaceCertificateCallab
         const SslClient*,
         const ReplaceCertificateRequest&,
         ReplaceCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SslClient::RevokeCertificateOutcome SslClient::RevokeCertificate(const RevokeCertificateRequest &request)
+{
+    auto outcome = MakeRequest(request, "RevokeCertificate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RevokeCertificateResponse rsp = RevokeCertificateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RevokeCertificateOutcome(rsp);
+        else
+            return RevokeCertificateOutcome(o.GetError());
+    }
+    else
+    {
+        return RevokeCertificateOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::RevokeCertificateAsync(const RevokeCertificateRequest& request, const RevokeCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RevokeCertificateRequest&;
+    using Resp = RevokeCertificateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RevokeCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SslClient::RevokeCertificateOutcomeCallable SslClient::RevokeCertificateCallable(const RevokeCertificateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RevokeCertificateOutcome>>();
+    RevokeCertificateAsync(
+    request,
+    [prom](
+        const SslClient*,
+        const RevokeCertificateRequest&,
+        RevokeCertificateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -33,6 +33,10 @@
 #include <tencentcloud/ssl/v20191205/model/TeoInstanceList.h>
 #include <tencentcloud/ssl/v20191205/model/TSEInstanceList.h>
 #include <tencentcloud/ssl/v20191205/model/COSInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/TDMQInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/MQTTInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/GAAPInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/SCFInstanceList.h>
 
 
 namespace TencentCloud
@@ -56,10 +60,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CLB The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>clb resource detail</p>
+                     * @return CLB <p>clb resource detail</p>
                      * 
                      */
                     std::vector<ClbInstanceList> GetCLB() const;
@@ -72,10 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CLBHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CDN The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>cdn resource detail</p>
+                     * @return CDN <p>cdn resource detail</p>
                      * 
                      */
                     std::vector<CdnInstanceList> GetCDN() const;
@@ -88,10 +88,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CDNHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WAF The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>waf resource detail</p>
+                     * @return WAF <p>waf resource detail</p>
                      * 
                      */
                     std::vector<WafInstanceList> GetWAF() const;
@@ -104,10 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WAFHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DDOS The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Associate ddos resource detail</p>
+                     * @return DDOS <p>Associate ddos resource detail</p>
                      * 
                      */
                     std::vector<DdosInstanceList> GetDDOS() const;
@@ -120,10 +116,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DDOSHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LIVE The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Associate live resource detail</p>
+                     * @return LIVE <p>Associate live resource detail</p>
                      * 
                      */
                     std::vector<LiveInstanceList> GetLIVE() const;
@@ -136,10 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LIVEHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VOD The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>vod resource detail</p>
+                     * @return VOD <p>vod resource detail</p>
                      * 
                      */
                     std::vector<VODInstanceList> GetVOD() const;
@@ -152,10 +144,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VODHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TKE The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>tke resource detail</p>
+                     * @return TKE <p>tke resource detail</p>
                      * 
                      */
                     std::vector<TkeInstanceList> GetTKE() const;
@@ -168,10 +158,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TKEHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return APIGATEWAY The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>apigateway resource detail</p>
+                     * @return APIGATEWAY <p>apigateway resource detail</p>
                      * 
                      */
                     std::vector<ApiGatewayInstanceList> GetAPIGATEWAY() const;
@@ -184,10 +172,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool APIGATEWAYHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TCB The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>tcb resource detail</p>
+                     * @return TCB <p>tcb resource detail</p>
                      * 
                      */
                     std::vector<TCBInstanceList> GetTCB() const;
@@ -200,10 +186,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TCBHasBeenSet() const;
 
                     /**
-                     * 获取The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TEO The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Associate teo resource detail</p>
+                     * @return TEO <p>Associate teo resource detail</p>
                      * 
                      */
                     std::vector<TeoInstanceList> GetTEO() const;
@@ -216,8 +200,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TEOHasBeenSet() const;
 
                     /**
-                     * 获取The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
-                     * @return Status The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
+                     * 获取<p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
+                     * @return Status <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -230,8 +214,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The cache time of the current result.
-                     * @return CacheTime The cache time of the current result.
+                     * 获取<p>Current result cache time</p>
+                     * @return CacheTime <p>Current result cache time</p>
                      * 
                      */
                     std::string GetCacheTime() const;
@@ -244,10 +228,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CacheTimeHasBeenSet() const;
 
                     /**
-                     * 获取Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TSE Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Associate tse resource detail</p>
+                     * @return TSE <p>Associate tse resource detail</p>
                      * 
                      */
                     std::vector<TSEInstanceList> GetTSE() const;
@@ -260,10 +242,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TSEHasBeenSet() const;
 
                     /**
-                     * 获取Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return COS Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Associated COS resource detail</p>
+                     * @return COS <p>Associated COS resource detail</p>
                      * 
                      */
                     std::vector<COSInstanceList> GetCOS() const;
@@ -275,103 +255,171 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool COSHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Associated TDMQ - Rabbit resource detail</p>
+                     * @return TDMQ <p>Associated TDMQ - Rabbit resource detail</p>
+                     * 
+                     */
+                    std::vector<TDMQInstanceList> GetTDMQ() const;
+
+                    /**
+                     * 判断参数 TDMQ 是否已赋值
+                     * @return TDMQ 是否已赋值
+                     * 
+                     */
+                    bool TDMQHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Associated MQTT resource detail</p>
+                     * @return MQTT <p>Associated MQTT resource detail</p>
+                     * 
+                     */
+                    std::vector<MQTTInstanceList> GetMQTT() const;
+
+                    /**
+                     * 判断参数 MQTT 是否已赋值
+                     * @return MQTT 是否已赋值
+                     * 
+                     */
+                    bool MQTTHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Associated GAAP resource detail</p>
+                     * @return GAAP <p>Associated GAAP resource detail</p>
+                     * 
+                     */
+                    std::vector<GAAPInstanceList> GetGAAP() const;
+
+                    /**
+                     * 判断参数 GAAP 是否已赋值
+                     * @return GAAP 是否已赋值
+                     * 
+                     */
+                    bool GAAPHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Associated SCF resource detail</p>
+                     * @return SCF <p>Associated SCF resource detail</p>
+                     * 
+                     */
+                    std::vector<SCFInstanceList> GetSCF() const;
+
+                    /**
+                     * 判断参数 SCF 是否已赋值
+                     * @return SCF 是否已赋值
+                     * 
+                     */
+                    bool SCFHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The details of associated CLB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>clb resource detail</p>
                      */
                     std::vector<ClbInstanceList> m_cLB;
                     bool m_cLBHasBeenSet;
 
                     /**
-                     * The details of associated CDN resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>cdn resource detail</p>
                      */
                     std::vector<CdnInstanceList> m_cDN;
                     bool m_cDNHasBeenSet;
 
                     /**
-                     * The details of associated WAF resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>waf resource detail</p>
                      */
                     std::vector<WafInstanceList> m_wAF;
                     bool m_wAFHasBeenSet;
 
                     /**
-                     * The details of associated Anti-DDS resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Associate ddos resource detail</p>
                      */
                     std::vector<DdosInstanceList> m_dDOS;
                     bool m_dDOSHasBeenSet;
 
                     /**
-                     * The details of associated LIVE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Associate live resource detail</p>
                      */
                     std::vector<LiveInstanceList> m_lIVE;
                     bool m_lIVEHasBeenSet;
 
                     /**
-                     * The details of associated VOD resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>vod resource detail</p>
                      */
                     std::vector<VODInstanceList> m_vOD;
                     bool m_vODHasBeenSet;
 
                     /**
-                     * The details of associated TKE resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>tke resource detail</p>
                      */
                     std::vector<TkeInstanceList> m_tKE;
                     bool m_tKEHasBeenSet;
 
                     /**
-                     * The details of associated APIGATEWAY resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>apigateway resource detail</p>
                      */
                     std::vector<ApiGatewayInstanceList> m_aPIGATEWAY;
                     bool m_aPIGATEWAYHasBeenSet;
 
                     /**
-                     * The details of associated TCB resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>tcb resource detail</p>
                      */
                     std::vector<TCBInstanceList> m_tCB;
                     bool m_tCBHasBeenSet;
 
                     /**
-                     * The details of associated TEO resources.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Associate teo resource detail</p>
                      */
                     std::vector<TeoInstanceList> m_tEO;
                     bool m_tEOHasBeenSet;
 
                     /**
-                     * The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
+                     * <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The cache time of the current result.
+                     * <p>Current result cache time</p>
                      */
                     std::string m_cacheTime;
                     bool m_cacheTimeHasBeenSet;
 
                     /**
-                     * Associated TSE resource details
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Associate tse resource detail</p>
                      */
                     std::vector<TSEInstanceList> m_tSE;
                     bool m_tSEHasBeenSet;
 
                     /**
-                     * Information of associated cos resource.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Associated COS resource detail</p>
                      */
                     std::vector<COSInstanceList> m_cOS;
                     bool m_cOSHasBeenSet;
+
+                    /**
+                     * <p>Associated TDMQ - Rabbit resource detail</p>
+                     */
+                    std::vector<TDMQInstanceList> m_tDMQ;
+                    bool m_tDMQHasBeenSet;
+
+                    /**
+                     * <p>Associated MQTT resource detail</p>
+                     */
+                    std::vector<MQTTInstanceList> m_mQTT;
+                    bool m_mQTTHasBeenSet;
+
+                    /**
+                     * <p>Associated GAAP resource detail</p>
+                     */
+                    std::vector<GAAPInstanceList> m_gAAP;
+                    bool m_gAAPHasBeenSet;
+
+                    /**
+                     * <p>Associated SCF resource detail</p>
+                     */
+                    std::vector<SCFInstanceList> m_sCF;
+                    bool m_sCFHasBeenSet;
 
                 };
             }

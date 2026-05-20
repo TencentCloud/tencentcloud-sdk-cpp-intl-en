@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Used to uniquely identify a conversation task.
-                     * @return TaskId Used to uniquely identify a conversation task.
+                     * 获取For uniquely identifying a conversation task.
+                     * @return TaskId For uniquely identifying a conversation task.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Used to uniquely identify a conversation task.
+                     * For uniquely identifying a conversation task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

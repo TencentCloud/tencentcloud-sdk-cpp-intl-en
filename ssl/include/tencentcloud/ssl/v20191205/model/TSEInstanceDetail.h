@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return GatewayId Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetGatewayId() const;
 
                     /**
                      * 设置Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _gatewayId Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool GatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return GatewayName Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取gateway name
+                     * @return GatewayName gateway name
                      * 
                      */
                     std::string GetGatewayName() const;
 
                     /**
-                     * 设置Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _gatewayName Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置gateway name
+                     * @param _gatewayName gateway name
                      * 
                      */
                     void SetGatewayName(const std::string& _gatewayName);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CertificateList Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<GatewayCertificate> GetCertificateList() const;
 
                     /**
                      * 设置Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _certificateList Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCertificateList(const std::vector<GatewayCertificate>& _certificateList);
@@ -126,21 +114,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;
 
                     /**
-                     * Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * gateway name
                      */
                     std::string m_gatewayName;
                     bool m_gatewayNameHasBeenSet;
 
                     /**
                      * Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<GatewayCertificate> m_certificateList;
                     bool m_certificateListHasBeenSet;

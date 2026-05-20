@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Tag List
-                     * @return Tags Tag List
+                     * 获取
+                     * @return Tags 
                      * 
                      */
                     std::vector<Tags> GetTags() const;
 
                     /**
-                     * 设置Tag List
-                     * @param _tags Tag List
+                     * 设置
+                     * @param _tags 
                      * 
                      */
                     void SetTags(const std::vector<Tags>& _tags);
@@ -391,7 +391,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Tag List
+                     * 
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;

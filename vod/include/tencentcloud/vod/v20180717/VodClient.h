@@ -67,6 +67,10 @@
 #include <tencentcloud/vod/v20180717/model/CreateBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateCDNDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateCLSLogsetRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateCLSLogsetResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateCLSTopicRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateCLSTopicResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateComplexAdaptiveDynamicStreamingTaskRequest.h>
@@ -225,6 +229,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeCurrentPlaylistResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeDefaultDistributionConfigRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeDefaultDistributionConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeEnhanceMediaTemplatesRequest.h>
@@ -525,6 +531,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCDNDomainResponse> CreateCDNDomainOutcome;
                 typedef std::future<CreateCDNDomainOutcome> CreateCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateCDNDomainRequest&, CreateCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCDNDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCLSLogsetResponse> CreateCLSLogsetOutcome;
+                typedef std::future<CreateCLSLogsetOutcome> CreateCLSLogsetOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateCLSLogsetRequest&, CreateCLSLogsetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCLSLogsetAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCLSTopicResponse> CreateCLSTopicOutcome;
+                typedef std::future<CreateCLSTopicOutcome> CreateCLSTopicOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateCLSTopicRequest&, CreateCLSTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCLSTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClassResponse> CreateClassOutcome;
                 typedef std::future<CreateClassOutcome> CreateClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateClassRequest&, CreateClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClassAsyncHandler;
@@ -762,6 +774,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDailyPlayStatFileListResponse> DescribeDailyPlayStatFileListOutcome;
                 typedef std::future<DescribeDailyPlayStatFileListOutcome> DescribeDailyPlayStatFileListOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeDailyPlayStatFileListRequest&, DescribeDailyPlayStatFileListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDailyPlayStatFileListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDefaultDistributionConfigResponse> DescribeDefaultDistributionConfigOutcome;
+                typedef std::future<DescribeDefaultDistributionConfigOutcome> DescribeDefaultDistributionConfigOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeDefaultDistributionConfigRequest&, DescribeDefaultDistributionConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultDistributionConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDrmKeyProviderInfoResponse> DescribeDrmKeyProviderInfoOutcome;
                 typedef std::future<DescribeDrmKeyProviderInfoOutcome> DescribeDrmKeyProviderInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeDrmKeyProviderInfoRequest&, DescribeDrmKeyProviderInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDrmKeyProviderInfoAsyncHandler;
@@ -1306,6 +1321,24 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateCDNDomainOutcome CreateCDNDomain(const Model::CreateCDNDomainRequest &request);
                 void CreateCDNDomainAsync(const Model::CreateCDNDomainRequest& request, const CreateCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCDNDomainOutcomeCallable CreateCDNDomainCallable(const Model::CreateCDNDomainRequest& request);
+
+                /**
+                 *Create a new logset with VOD.
+                 * @param req CreateCLSLogsetRequest
+                 * @return CreateCLSLogsetOutcome
+                 */
+                CreateCLSLogsetOutcome CreateCLSLogset(const Model::CreateCLSLogsetRequest &request);
+                void CreateCLSLogsetAsync(const Model::CreateCLSLogsetRequest& request, const CreateCLSLogsetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCLSLogsetOutcomeCallable CreateCLSLogsetCallable(const Model::CreateCLSLogsetRequest& request);
+
+                /**
+                 *Create a new CLS log topic under VOD
+                 * @param req CreateCLSTopicRequest
+                 * @return CreateCLSTopicOutcome
+                 */
+                CreateCLSTopicOutcome CreateCLSTopic(const Model::CreateCLSTopicRequest &request);
+                void CreateCLSTopicAsync(const Model::CreateCLSTopicRequest& request, const CreateCLSTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCLSTopicOutcomeCallable CreateCLSTopicCallable(const Model::CreateCLSTopicRequest& request);
 
                 /**
                  ** This API is used to categorize media assets for management;
@@ -2089,6 +2122,17 @@ Playback statistics only target VOD domains (EdgeOne domain name distribution is
                 DescribeDailyPlayStatFileListOutcome DescribeDailyPlayStatFileList(const Model::DescribeDailyPlayStatFileListRequest &request);
                 void DescribeDailyPlayStatFileListAsync(const Model::DescribeDailyPlayStatFileListRequest& request, const DescribeDailyPlayStatFileListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDailyPlayStatFileListOutcomeCallable DescribeDailyPlayStatFileListCallable(const Model::DescribeDailyPlayStatFileListRequest& request);
+
+                /**
+                 *This API is used to query the default distribution configuration.
+* Domain name and distribution protocol, which are the domain name and protocol in the media file distribution URL. Media files are distributed according to the default distribution configuration.
+Playback key, used to calculate player signature.
+                 * @param req DescribeDefaultDistributionConfigRequest
+                 * @return DescribeDefaultDistributionConfigOutcome
+                 */
+                DescribeDefaultDistributionConfigOutcome DescribeDefaultDistributionConfig(const Model::DescribeDefaultDistributionConfigRequest &request);
+                void DescribeDefaultDistributionConfigAsync(const Model::DescribeDefaultDistributionConfigRequest& request, const DescribeDefaultDistributionConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDefaultDistributionConfigOutcomeCallable DescribeDefaultDistributionConfigCallable(const Model::DescribeDefaultDistributionConfigRequest& request);
 
                 /**
                  *This API is used to query DRM key information.

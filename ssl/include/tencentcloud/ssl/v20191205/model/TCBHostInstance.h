@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain
+                     * @return Domain Domain
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain
+                     * @param _domain Domain
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DNSStatus The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parsing status
+                     * @return DNSStatus Parsing status
                      * 
                      */
                     std::string GetDNSStatus() const;
 
                     /**
-                     * 设置The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dNSStatus The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parsing status
+                     * @param _dNSStatus Parsing status
                      * 
                      */
                     void SetDNSStatus(const std::string& _dNSStatus);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DNSStatusHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bound Certificate ID
+                     * @return OldCertificateId Bound Certificate ID
                      * 
                      */
                     std::string GetOldCertificateId() const;
 
                     /**
-                     * 设置The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bound Certificate ID
+                     * @param _oldCertificateId Bound Certificate ID
                      * 
                      */
                     void SetOldCertificateId(const std::string& _oldCertificateId);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The resolution status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parsing status
                      */
                     std::string m_dNSStatus;
                     bool m_dNSStatusHasBeenSet;
 
                     /**
-                     * The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bound Certificate ID
                      */
                     std::string m_oldCertificateId;
                     bool m_oldCertificateIdHasBeenSet;

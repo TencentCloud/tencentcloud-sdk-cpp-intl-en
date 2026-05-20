@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceList The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance list
+                     * @return InstanceList Instance list
                      * 
                      */
                     std::vector<TCBHostInstance> GetInstanceList() const;
 
                     /**
-                     * 设置The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceList The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance list
+                     * @param _instanceList Instance list
                      * 
                      */
                     void SetInstanceList(const std::vector<TCBHostInstance>& _instanceList);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceListHasBeenSet() const;
 
                     /**
-                     * 获取The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Quantity.
+                     * @return TotalCount Quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Quantity.
+                     * @param _totalCount Quantity.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -100,15 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance list
                      */
                     std::vector<TCBHostInstance> m_instanceList;
                     bool m_instanceListHasBeenSet;
 
                     /**
-                     * The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

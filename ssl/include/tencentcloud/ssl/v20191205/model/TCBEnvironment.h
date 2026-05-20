@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ID The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID
+                     * @return ID Unique ID
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iD The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID
+                     * @param _iD Unique ID
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取The source.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Source The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source.
+                     * @return Source Source.
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置The source.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _source The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source.
+                     * @param _source Source.
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取The name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return Name Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _name Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source.
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

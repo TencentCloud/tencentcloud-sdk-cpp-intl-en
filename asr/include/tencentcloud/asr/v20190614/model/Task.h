@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned data of the [recording recognition] (https://intl.cloud.tencent.com/document/product/1093/37823?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) or [asynchronous real-time audio recognition] (https://intl.cloud.tencent.com/document/product/1093/52061?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) request.
+                * Returneddata of the [recording recognition](https://intl.cloud.tencent.com/document/product/1093/37823?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) request.
                 */
                 class Task : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
-                     * @return TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+                     * 获取Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
+                     * @return TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
                      * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
-                     * 设置Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
-                     * @param _taskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+                     * 设置Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
+                     * @param _taskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
                      * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
@@ -74,8 +74,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+                     * Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;
